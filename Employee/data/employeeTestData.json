@@ -1,0 +1,6 @@
+{
+  "invalidSalaries": ["-1000", "abc", "", "0"],
+  "invalidAllowances": ["-500", "xyz"],
+  "sqlInjectionPayloads": ["' OR '1'='1", "'; DROP TABLE employee; --"],
+  "xssPayloads": ["<script>alert('xss')</script>"]
+}
