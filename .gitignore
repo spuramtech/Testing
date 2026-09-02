@@ -1,28 +1,11 @@
-# Node.js
 node_modules/
-
-# Playwright
 playwright-report/
 test-results/
-
-# Environment / secrets
 .env
 .env.*
 !.env.example
-
-# Logs
 *.log
-
-# Temporary files
 *.tmp
 *.temp
-
-# Windows
-Thumbs.db
-Desktop.ini
-
-# VS Code
 .vscode/
-
-# Claude
 .claude/
