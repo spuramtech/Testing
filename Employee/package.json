@@ -1,0 +1,33 @@
+{
+  "name": "finsta-employee-automation",
+  "version": "1.0.0",
+  "description": "Playwright POM automation framework for Finsta Contact > Employees module",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:no-destructive": "playwright test --grep-invert @destructive",
+    "test:chromium": "playwright test --project=chromium",
+    "report:show": "playwright show-report reports/html-report"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "pom",
+    "finsta",
+    "employee"
+  ],
+  "author": "QA Automation Team",
+  "license": "ISC",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.47.0",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "winston": "^3.14.2"
+  }
+}

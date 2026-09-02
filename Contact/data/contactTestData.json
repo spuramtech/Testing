@@ -1,0 +1,19 @@
+{
+  "validContact": {
+    "firstName": "Automationtest",
+    "dob": "1995-05-15",
+    "gender": "Male"
+  },
+  "invalidPincodes": ["0", "12345", "1234567", "abcdef", ""],
+  "invalidIfsc": ["INVALID", "12345678901", "sbin0001234", ""],
+  "invalidGstin": ["INVALID", "27ABCDE1234", ""],
+  "invalidPan": ["INVALID", "12345ABCDE", "abcde1234f", ""],
+  "sqlInjectionPayloads": ["' OR '1'='1", "'; DROP TABLE contact; --"],
+  "xssPayloads": ["<script>alert('xss')</script>", "<img src=x onerror=alert(1)>"],
+  "boundaryAmounts": {
+    "zero": 0,
+    "negative": -1000,
+    "maxReasonable": 999999999,
+    "decimal": 12345.67
+  }
+}

@@ -1,0 +1,26 @@
+# Node 
+node_modules/ 
+ 
+# Environment / secrets 
+.env 
+.env.* 
+!.env.example 
+ 
+# Playwright 
+test-results/ 
+playwright-report/ 
+blob-report/ 
+playwright/.cache/ 
+ 
+# Logs 
+*.log 
+ 
+# Coverage 
+coverage/ 
+ 
+# OS files 
+.DS_Store 
+Thumbs.db
+
+# Claude
+.claude/
