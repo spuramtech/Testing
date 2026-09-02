@@ -1,0 +1,84 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\loanCreationTab.spec.js >> Loans Configuration - Loan Creation Tab @functional >> Clear button resets Loan Creation fields @positive
+- Location: tests\loansConfiguration\loanCreationTab.spec.js:40:3
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded while running "beforeEach" hook.
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('../../fixtures/pageFixtures');
+  2  | const { buildLoanCreationPayload, LOAN_TYPES } = require('../../constants/testData');
+  3  | 
+  4  | test.describe('Loans Configuration - Loan Creation Tab @functional', () => {
+> 5  |   test.beforeEach(async ({ authenticatedPage: page, loansConfigurationListPage }) => {
+     |        ^ Test timeout of 60000ms exceeded while running "beforeEach" hook.
+  6  |     await loansConfigurationListPage.clickNew();
+  7  |   });
+  8  | 
+  9  |   test('New button opens an empty Loan Creation tab @smoke', async ({ wizardPage }) => {
+  10 |     await expect(wizardPage.loanNameInput).toHaveValue('');
+  11 |     await expect(wizardPage.loanCodeInput).toHaveValue('');
+  12 |   });
+  13 | 
+  14 |   test('Loan Type dropdown exposes the full predefined option list', async ({ wizardPage }) => {
+  15 |     const optionTexts = await wizardPage.loanTypeDropdown.locator('option').allTextContents();
+  16 |     for (const type of LOAN_TYPES) {
+  17 |       expect(optionTexts.map((t) => t.trim())).toContain(type);
+  18 |     }
+  19 |   });
+  20 | 
+  21 |   test('blank mandatory fields block progression to next tab @negative @validation', async ({ wizardPage }) => {
+  22 |     await wizardPage.clickNext();
+  23 |     await expect(wizardPage.page.getByText(/required|mandatory/i).first()).toBeVisible();
+  24 |   });
+  25 | 
+  26 |   test('valid mandatory fields allow progression to Loan Configuration tab @positive', async ({ wizardPage }) => {
+  27 |     const payload = buildLoanCreationPayload();
+  28 |     await wizardPage.fillLoanCreation(payload);
+  29 |     await wizardPage.clickNext();
+  30 |     await expect(wizardPage.tabs['Loan Configuration']).toBeVisible();
+  31 |   });
+  32 | 
+  33 |   test('duplicate Loan Name/Loan Code is rejected @negative @duplicate', async ({ wizardPage }) => {
+  34 |     const payload = buildLoanCreationPayload({ loanName: 'GOLD', loanCode: 'CSBLG00001' });
+  35 |     await wizardPage.fillLoanCreation(payload);
+  36 |     await wizardPage.clickNext();
+  37 |     await expect(wizardPage.page.getByText(/already exists|duplicate/i)).toBeVisible();
+  38 |   });
+  39 | 
+  40 |   test('Clear button resets Loan Creation fields @positive', async ({ wizardPage }) => {
+  41 |     await wizardPage.fillLoanCreation(buildLoanCreationPayload());
+  42 |     await wizardPage.clickClear();
+  43 |     await expect(wizardPage.loanNameInput).toHaveValue('');
+  44 |     await expect(wizardPage.loanCodeInput).toHaveValue('');
+  45 |   });
+  46 | 
+  47 |   test('SQL injection payload in Loan Name is safely handled @security @negative', async ({ wizardPage }) => {
+  48 |     const payload = buildLoanCreationPayload({ loanName: "Loan'; DROP TABLE loans; --" });
+  49 |     await wizardPage.fillLoanCreation(payload);
+  50 |     await wizardPage.clickNext();
+  51 |     await expect(wizardPage.page.getByText(/error|exception|500/i)).toHaveCount(0);
+  52 |   });
+  53 | 
+  54 |   test('XSS payload in Loan Code is not executed @security @negative', async ({ wizardPage }) => {
+  55 |     const payload = buildLoanCreationPayload({ loanCode: '<script>window.__xss=true</script>' });
+  56 |     await wizardPage.fillLoanCreation(payload);
+  57 |     await wizardPage.clickNext();
+  58 |     const xssTriggered = await wizardPage.page.evaluate(() => window.__xss === true);
+  59 |     expect(xssTriggered).toBe(false);
+  60 |   });
+  61 | });
+  62 | 
+```

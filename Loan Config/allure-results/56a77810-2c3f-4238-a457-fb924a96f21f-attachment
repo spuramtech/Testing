@@ -1,0 +1,133 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\loanConfigurationTab.spec.js >> Loans Configuration - Loan Configuration Tab @functional >> Loan Amount Minimum greater than Maximum is rejected @negative @boundary
+- Location: tests\loansConfiguration\loanConfigurationTab.spec.js:49:3
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded while running "beforeEach" hook.
+```
+
+# Test source
+
+```ts
+  1   | const { test, expect } = require('../../fixtures/pageFixtures');
+  2   | const { buildLoanCreationPayload } = require('../../constants/testData');
+  3   | 
+  4   | async function reachLoanConfigurationTab(page, loansConfigurationListPage, wizardPage) {
+  5   |   await loansConfigurationListPage.clickNew();
+  6   |   await wizardPage.fillLoanCreation(buildLoanCreationPayload());
+  7   |   await wizardPage.clickNext();
+  8   | }
+  9   | 
+  10  | test.describe('Loans Configuration - Loan Configuration Tab @functional', () => {
+> 11  |   test.beforeEach(async ({ authenticatedPage: page, loansConfigurationListPage, wizardPage }) => {
+      |        ^ Test timeout of 60000ms exceeded while running "beforeEach" hook.
+  12  |     await reachLoanConfigurationTab(page, loansConfigurationListPage, wizardPage);
+  13  |   });
+  14  | 
+  15  |   test('Individual vs Business Entity toggles Applicant Type field @positive', async ({ wizardPage }) => {
+  16  |     await wizardPage.selectContactType('Business Entity');
+  17  |     await expect(wizardPage.applicantTypeInput).toBeEnabled();
+  18  |     await wizardPage.selectContactType('Individual');
+  19  |     await expect(wizardPage.applicantTypeInput).toBeVisible();
+  20  |   });
+  21  | 
+  22  |   test('Fixed vs Floating Interest Mode toggles associated fields @positive', async ({ wizardPage }) => {
+  23  |     await wizardPage.selectInterestMode('Floating');
+  24  |     await expect(wizardPage.floatingInterestRadio).toBeChecked();
+  25  |     await wizardPage.selectInterestMode('Fixed');
+  26  |     await expect(wizardPage.fixedInterestRadio).toBeChecked();
+  27  |   });
+  28  | 
+  29  |   test('"Not Applicable" disables Loan Amount inputs when checked @positive @boundary', async ({ wizardPage }) => {
+  30  |     await wizardPage.setLoanAmountNotApplicable(true);
+  31  |     await expect(wizardPage.minLoanAmountInput).toBeDisabled();
+  32  |     await expect(wizardPage.maxLoanAmountInput).toBeDisabled();
+  33  |     await wizardPage.setLoanAmountNotApplicable(false);
+  34  |     await expect(wizardPage.minLoanAmountInput).toBeEnabled();
+  35  |   });
+  36  | 
+  37  |   test('"Not Applicable" disables Tenure inputs when checked @positive @boundary', async ({ wizardPage }) => {
+  38  |     await wizardPage.setTenureNotApplicable(true);
+  39  |     await expect(wizardPage.tenureFromInput).toBeDisabled();
+  40  |     await expect(wizardPage.tenureToInput).toBeDisabled();
+  41  |   });
+  42  | 
+  43  |   test('Interest Rate Minimum greater than Maximum is rejected @negative @boundary', async ({ wizardPage }) => {
+  44  |     await wizardPage.fillLoanConfiguration({ interestRateMin: 20, interestRateMax: 10 });
+  45  |     await wizardPage.addConfigurationRow();
+  46  |     await expect(wizardPage.page.getByText(/minimum.*(cannot|must not).*exceed.*maximum/i)).toBeVisible();
+  47  |   });
+  48  | 
+  49  |   test('Loan Amount Minimum greater than Maximum is rejected @negative @boundary', async ({ wizardPage }) => {
+  50  |     await wizardPage.fillLoanConfiguration({
+  51  |       loanAmountNotApplicable: false,
+  52  |       minLoanAmount: 500000,
+  53  |       maxLoanAmount: 100000,
+  54  |     });
+  55  |     await wizardPage.addConfigurationRow();
+  56  |     await expect(wizardPage.page.getByText(/minimum.*(cannot|must not).*exceed.*maximum/i)).toBeVisible();
+  57  |   });
+  58  | 
+  59  |   test('Tenure From greater than To is rejected @negative @boundary', async ({ wizardPage }) => {
+  60  |     await wizardPage.fillLoanConfiguration({ tenureNotApplicable: false, tenureFrom: 36, tenureTo: 12 });
+  61  |     await wizardPage.addConfigurationRow();
+  62  |     await expect(wizardPage.page.getByText(/from.*(cannot|must not).*exceed.*to/i)).toBeVisible();
+  63  |   });
+  64  | 
+  65  |   test('Add button appends a new row to the configuration grid @positive', async ({ wizardPage }) => {
+  66  |     const before = await wizardPage.getConfigurationRowCount();
+  67  |     await wizardPage.fillLoanConfiguration({
+  68  |       contactType: 'Individual',
+  69  |       interestMode: 'Fixed',
+  70  |       interestRateMin: 8,
+  71  |       interestRateMax: 14,
+  72  |       loanAmountNotApplicable: true,
+  73  |       tenureNotApplicable: true,
+  74  |     });
+  75  |     await wizardPage.addConfigurationRow();
+  76  |     await expect
+  77  |       .poll(() => wizardPage.getConfigurationRowCount())
+  78  |       .toBe(before + 1);
+  79  |   });
+  80  | 
+  81  |   test('multiple configuration rows can be added @positive', async ({ wizardPage }) => {
+  82  |     for (const rate of [8, 10]) {
+  83  |       await wizardPage.fillLoanConfiguration({
+  84  |         interestMode: 'Fixed',
+  85  |         interestRateMin: rate,
+  86  |         interestRateMax: rate + 4,
+  87  |         loanAmountNotApplicable: true,
+  88  |         tenureNotApplicable: true,
+  89  |       });
+  90  |       await wizardPage.addConfigurationRow();
+  91  |     }
+  92  |     await expect
+  93  |       .poll(() => wizardPage.getConfigurationRowCount())
+  94  |       .toBeGreaterThanOrEqual(2);
+  95  |   });
+  96  | 
+  97  |   test('Clear resets Loan Configuration tab fields @positive', async ({ wizardPage }) => {
+  98  |     await wizardPage.fillLoanConfiguration({ interestRateMin: 9, interestRateMax: 15 });
+  99  |     await wizardPage.clickClear();
+  100 |     await expect(wizardPage.interestRateMinInput).toHaveValue('');
+  101 |   });
+  102 | 
+  103 |   test('Next advances to Installment Due Date tab @positive', async ({ wizardPage }) => {
+  104 |     await wizardPage.fillLoanConfiguration({
+  105 |       interestMode: 'Fixed',
+  106 |       interestRateMin: 8,
+  107 |       interestRateMax: 14,
+  108 |       loanAmountNotApplicable: true,
+  109 |       tenureNotApplicable: true,
+  110 |     });
+  111 |     await wizardPage.clickNext();
+```

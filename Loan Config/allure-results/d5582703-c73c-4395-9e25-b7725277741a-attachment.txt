@@ -1,0 +1,2 @@
+[2026-08-29 14:14:03] [INFO] Navigating to /
+[2026-08-29 14:14:08] [INFO] Logging in as admin@kapilit.com

@@ -1,0 +1,83 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\login.spec.js >> Login @smoke @sanity >> login fails with invalid password @negative
+- Location: tests\loansConfiguration\login.spec.js:11:3
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+```
+TimeoutError: page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://demonbfc.finsta.co.in/", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1  | const { logger } = require('../utils/logger');
+  2  | 
+  3  | class BasePage {
+  4  |   /**
+  5  |    * @param {import('@playwright/test').Page} page
+  6  |    */
+  7  |   constructor(page) {
+  8  |     this.page = page;
+  9  |   }
+  10 | 
+  11 |   async goto(path = '/') {
+  12 |     logger.info(`Navigating to ${path}`);
+> 13 |     await this.page.goto(path);
+     |                     ^ TimeoutError: page.goto: Timeout 30000ms exceeded.
+  14 |   }
+  15 | 
+  16 |   async clickText(text, options = {}) {
+  17 |     await this.page.getByText(text, { exact: options.exact ?? false }).first().click();
+  18 |   }
+  19 | 
+  20 |   async clickRole(role, name, options = {}) {
+  21 |     await this.page.getByRole(role, { name, ...options }).click();
+  22 |   }
+  23 | 
+  24 |   async fillByLabel(label, value) {
+  25 |     await this.page.getByLabel(label).fill(value);
+  26 |   }
+  27 | 
+  28 |   async selectDropdownOption(dropdownLocator, optionText) {
+  29 |     const tagName = await dropdownLocator.evaluate((el) => el.tagName).catch(() => null);
+  30 |     if (tagName === 'SELECT') {
+  31 |       await dropdownLocator.selectOption({ label: optionText });
+  32 |       return;
+  33 |     }
+  34 |     await dropdownLocator.click();
+  35 |     await this.page.getByRole('option', { name: optionText }).click();
+  36 |   }
+  37 | 
+  38 |   async waitForToast(expectedText) {
+  39 |     const toast = this.page.locator('.toast, .Toastify__toast, [role="alert"]').filter({ hasText: expectedText });
+  40 |     await toast.first().waitFor({ state: 'visible' });
+  41 |     return toast.first();
+  42 |   }
+  43 | 
+  44 |   async isVisible(locator) {
+  45 |     return locator.isVisible().catch(() => false);
+  46 |   }
+  47 | 
+  48 |   async takeScreenshot(name) {
+  49 |     await this.page.screenshot({ path: `screenshots/${name}-${Date.now()}.png`, fullPage: true });
+  50 |   }
+  51 | }
+  52 | 
+  53 | module.exports = { BasePage };
+  54 | 
+```

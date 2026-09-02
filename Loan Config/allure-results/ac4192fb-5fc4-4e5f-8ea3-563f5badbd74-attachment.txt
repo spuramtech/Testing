@@ -1,0 +1,3 @@
+[2026-08-28 10:13:46] [INFO] Navigating to /
+[2026-08-28 10:13:51] [INFO] Logging in as admin@kapilit.com
+[2026-08-28 10:13:51] [INFO] Navigating to Loans Configuration screen

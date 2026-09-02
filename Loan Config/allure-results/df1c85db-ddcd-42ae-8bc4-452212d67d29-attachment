@@ -1,0 +1,95 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\installmentAndPenalTabs.spec.js >> Loans Configuration - Installment Due Date Tab @functional >> only one Installment Due Date radio option is selectable at a time @positive
+- Location: tests\loansConfiguration\installmentAndPenalTabs.spec.js:29:3
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded while running "beforeEach" hook.
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('../../fixtures/pageFixtures');
+  2  | const { buildLoanCreationPayload } = require('../../constants/testData');
+  3  | 
+  4  | async function reachInstallmentDueDateTab(loansConfigurationListPage, wizardPage) {
+  5  |   await loansConfigurationListPage.clickNew();
+  6  |   await wizardPage.fillLoanCreation(buildLoanCreationPayload());
+  7  |   await wizardPage.clickNext();
+  8  |   await wizardPage.fillLoanConfiguration({
+  9  |     interestMode: 'Fixed',
+  10 |     interestRateMin: 8,
+  11 |     interestRateMax: 14,
+  12 |     loanAmountNotApplicable: true,
+  13 |     tenureNotApplicable: true,
+  14 |   });
+  15 |   await wizardPage.clickNext();
+  16 | }
+  17 | 
+  18 | test.describe('Loans Configuration - Installment Due Date Tab @functional', () => {
+> 19 |   test.beforeEach(async ({ authenticatedPage: page, loansConfigurationListPage, wizardPage }) => {
+     |        ^ Test timeout of 60000ms exceeded while running "beforeEach" hook.
+  20 |     await reachInstallmentDueDateTab(loansConfigurationListPage, wizardPage);
+  21 |   });
+  22 | 
+  23 |   test('EMI vs No EMI toggles Loan Installment Mode relevance @positive', async ({ wizardPage }) => {
+  24 |     await wizardPage.selectInstallmentTypeConfig('EMI');
+  25 |     await expect(wizardPage.loanInstallmentModeDropdown).toBeVisible();
+  26 |     await wizardPage.selectInstallmentTypeConfig('No EMI');
+  27 |   });
+  28 | 
+  29 |   test('only one Installment Due Date radio option is selectable at a time @positive', async ({ wizardPage }) => {
+  30 |     await wizardPage.selectInstallmentDueDateOption('fixedDate');
+  31 |     await expect(wizardPage.dueDateFixedDateRadio).toBeChecked();
+  32 |     await wizardPage.selectInstallmentDueDateOption('endOfMonth');
+  33 |     await expect(wizardPage.dueDateEndOfMonthRadio).toBeChecked();
+  34 |     await expect(wizardPage.dueDateFixedDateRadio).not.toBeChecked();
+  35 |   });
+  36 | 
+  37 |   test('Next advances to Penal Interest tab @positive', async ({ wizardPage }) => {
+  38 |     await wizardPage.fillInstallmentDueDate({ installmentTypeConfig: 'EMI', dueDateOption: 'fixedDate' });
+  39 |     await wizardPage.clickNext();
+  40 |     await expect(wizardPage.tabs['Penal Interest']).toBeVisible();
+  41 |   });
+  42 | });
+  43 | 
+  44 | test.describe('Loans Configuration - Penal Interest Tab @functional', () => {
+  45 |   test.beforeEach(async ({ authenticatedPage: page, loansConfigurationListPage, wizardPage }) => {
+  46 |     await reachInstallmentDueDateTab(loansConfigurationListPage, wizardPage);
+  47 |     await wizardPage.fillInstallmentDueDate({ installmentTypeConfig: 'EMI', dueDateOption: 'fixedDate' });
+  48 |     await wizardPage.clickNext();
+  49 |   });
+  50 | 
+  51 |   test('Fixed % numeric input accepts valid values @positive', async ({ wizardPage }) => {
+  52 |     await wizardPage.fillPenalInterest({ fixedPercent: 2.5 });
+  53 |     await expect(wizardPage.fixedPercentInput).toHaveValue('2.5');
+  54 |   });
+  55 | 
+  56 |   test('Grace Period numeric input accepts valid values @positive @boundary', async ({ wizardPage }) => {
+  57 |     await wizardPage.fillPenalInterest({ gracePeriodDays: 5 });
+  58 |     await expect(wizardPage.gracePeriodInput).toHaveValue('5');
+  59 |   });
+  60 | 
+  61 |   test('Clear resets both Fixed % and Grace Period panels @positive', async ({ wizardPage }) => {
+  62 |     await wizardPage.fillPenalInterest({ fixedPercent: 3, gracePeriodDays: 7 });
+  63 |     await wizardPage.clickClear();
+  64 |     await expect(wizardPage.gracePeriodInput).toHaveValue('0');
+  65 |   });
+  66 | 
+  67 |   test('Next advances to Identification Documents tab @positive', async ({ wizardPage }) => {
+  68 |     await wizardPage.fillPenalInterest({ fixedPercent: 2, gracePeriodDays: 3 });
+  69 |     await wizardPage.clickNext();
+  70 |     await expect(wizardPage.tabs['Identification Documents']).toBeVisible();
+  71 |   });
+  72 | });
+  73 | 
+```

@@ -1,0 +1,482 @@
+<testsuites id="" name="" tests="105" failures="0" skipped="105" errors="0" time="0.697708">
+<testsuite name="charge\charge.api.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="chromium" tests="4" failures="0" skipped="4" time="0" errors="0">
+<testcase name="Charge API @api @regression › fetch Charge list returns 200 and an array payload @smoke" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › create Charge via API returns 201 with the created record @positive @destructive" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › create Charge with missing mandatory fields returns 4xx @negative" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › fetch Charge by non-existent id returns 404 @negative" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.database.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="chromium" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="Charge database validation @database @regression › inserted Charge is persisted with correct values @positive" classname="charge\charge.database.spec.js">
+<properties>
+<property name="skip" value="Set RUN_DB_TESTS=true to run database validation tests">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge database validation @database @regression › deleted Charge no longer exists in the table @negative" classname="charge\charge.database.spec.js">
+<properties>
+<property name="skip" value="Set RUN_DB_TESTS=true to run database validation tests">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.functional.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="chromium" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Charge screen - functional @functional @regression › Charge list screen renders header, grid and pagination @smoke @sanity @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › New button opens an empty Charge panel @smoke @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › creating a Charge with valid data adds a new row and closes the panel @smoke @sanity @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › editing an existing Charge updates the same row without increasing row count @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › Clear button resets fields without closing the panel @regression @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › Close (X) discards changes and returns to the list @regression @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › deleting a Charge prompts for confirmation and removes the row on confirm @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › cancelling delete keeps the Charge in the grid @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › search filters the grid by Charge name (partial match) @sanity @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.negative.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="chromium" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Charge Name is blank @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Type Of Ledger is not selected @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Applicable is not selected @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when all mandatory fields are blank @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › duplicate Charge Name (exact match) is rejected @negative @destructive" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › duplicate Charge Name (case-insensitive match) is rejected @negative @destructive" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › SQL injection payload in Charge Name is safely handled @negative @security" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › XSS payload in Charge Name is not executed @negative @security" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › special characters in Charge Name are handled without crashing @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › very long Charge Name input is handled without crashing @negative @boundary" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Type Of Ledger dropdown exposes only predefined options @negative @equivalence" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Applicable dropdown exposes only predefined options @negative @equivalence" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › search with no matching Charge shows an empty grid @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.ui.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="chromium" tests="5" failures="0" skipped="5" time="0" errors="0">
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › Charge screen breadcrumb reflects the navigation path @ui @sanity" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › grid displays Charge, Type Of Ledger and Applicable columns @ui @sanity" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › Charge screen has no critical accessibility violations @accessibility" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › page renders correctly at a mobile viewport width @responsive" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › page renders correctly at a tablet viewport width @responsive" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="chromium" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="Login @smoke @sanity @functional › valid credentials log the user into the application @positive" classname="login\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login @smoke @sanity @functional › invalid credentials show an error and do not log in @negative" classname="login\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.api.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="firefox" tests="4" failures="0" skipped="4" time="0" errors="0">
+<testcase name="Charge API @api @regression › fetch Charge list returns 200 and an array payload @smoke" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › create Charge via API returns 201 with the created record @positive @destructive" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › create Charge with missing mandatory fields returns 4xx @negative" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › fetch Charge by non-existent id returns 404 @negative" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.database.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="firefox" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="Charge database validation @database @regression › inserted Charge is persisted with correct values @positive" classname="charge\charge.database.spec.js">
+<properties>
+<property name="skip" value="Set RUN_DB_TESTS=true to run database validation tests">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge database validation @database @regression › deleted Charge no longer exists in the table @negative" classname="charge\charge.database.spec.js">
+<properties>
+<property name="skip" value="Set RUN_DB_TESTS=true to run database validation tests">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.functional.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="firefox" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Charge screen - functional @functional @regression › Charge list screen renders header, grid and pagination @smoke @sanity @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › New button opens an empty Charge panel @smoke @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › creating a Charge with valid data adds a new row and closes the panel @smoke @sanity @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › editing an existing Charge updates the same row without increasing row count @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › Clear button resets fields without closing the panel @regression @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › Close (X) discards changes and returns to the list @regression @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › deleting a Charge prompts for confirmation and removes the row on confirm @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › cancelling delete keeps the Charge in the grid @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › search filters the grid by Charge name (partial match) @sanity @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.negative.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="firefox" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Charge Name is blank @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Type Of Ledger is not selected @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Applicable is not selected @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when all mandatory fields are blank @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › duplicate Charge Name (exact match) is rejected @negative @destructive" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › duplicate Charge Name (case-insensitive match) is rejected @negative @destructive" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › SQL injection payload in Charge Name is safely handled @negative @security" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › XSS payload in Charge Name is not executed @negative @security" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › special characters in Charge Name are handled without crashing @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › very long Charge Name input is handled without crashing @negative @boundary" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Type Of Ledger dropdown exposes only predefined options @negative @equivalence" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Applicable dropdown exposes only predefined options @negative @equivalence" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › search with no matching Charge shows an empty grid @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.ui.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="firefox" tests="5" failures="0" skipped="5" time="0" errors="0">
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › Charge screen breadcrumb reflects the navigation path @ui @sanity" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › grid displays Charge, Type Of Ledger and Applicable columns @ui @sanity" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › Charge screen has no critical accessibility violations @accessibility" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › page renders correctly at a mobile viewport width @responsive" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › page renders correctly at a tablet viewport width @responsive" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="firefox" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="Login @smoke @sanity @functional › valid credentials log the user into the application @positive" classname="login\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login @smoke @sanity @functional › invalid credentials show an error and do not log in @negative" classname="login\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.api.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="webkit" tests="4" failures="0" skipped="4" time="0" errors="0">
+<testcase name="Charge API @api @regression › fetch Charge list returns 200 and an array payload @smoke" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › create Charge via API returns 201 with the created record @positive @destructive" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › create Charge with missing mandatory fields returns 4xx @negative" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge API @api @regression › fetch Charge by non-existent id returns 404 @negative" classname="charge\charge.api.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.database.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="webkit" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="Charge database validation @database @regression › inserted Charge is persisted with correct values @positive" classname="charge\charge.database.spec.js">
+<properties>
+<property name="skip" value="Set RUN_DB_TESTS=true to run database validation tests">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge database validation @database @regression › deleted Charge no longer exists in the table @negative" classname="charge\charge.database.spec.js">
+<properties>
+<property name="skip" value="Set RUN_DB_TESTS=true to run database validation tests">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.functional.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="webkit" tests="9" failures="0" skipped="9" time="0" errors="0">
+<testcase name="Charge screen - functional @functional @regression › Charge list screen renders header, grid and pagination @smoke @sanity @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › New button opens an empty Charge panel @smoke @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › creating a Charge with valid data adds a new row and closes the panel @smoke @sanity @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › editing an existing Charge updates the same row without increasing row count @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › Clear button resets fields without closing the panel @regression @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › Close (X) discards changes and returns to the list @regression @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › deleting a Charge prompts for confirmation and removes the row on confirm @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › cancelling delete keeps the Charge in the grid @regression @positive @destructive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - functional @functional @regression › search filters the grid by Charge name (partial match) @sanity @positive" classname="charge\charge.functional.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.negative.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="webkit" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Charge Name is blank @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Type Of Ledger is not selected @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when Applicable is not selected @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Save is blocked when all mandatory fields are blank @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › duplicate Charge Name (exact match) is rejected @negative @destructive" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › duplicate Charge Name (case-insensitive match) is rejected @negative @destructive" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › SQL injection payload in Charge Name is safely handled @negative @security" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › XSS payload in Charge Name is not executed @negative @security" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › special characters in Charge Name are handled without crashing @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › very long Charge Name input is handled without crashing @negative @boundary" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Type Of Ledger dropdown exposes only predefined options @negative @equivalence" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › Applicable dropdown exposes only predefined options @negative @equivalence" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - negative &amp; validation @negative @regression › search with no matching Charge shows an empty grid @negative" classname="charge\charge.negative.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="charge\charge.ui.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="webkit" tests="5" failures="0" skipped="5" time="0" errors="0">
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › Charge screen breadcrumb reflects the navigation path @ui @sanity" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › grid displays Charge, Type Of Ledger and Applicable columns @ui @sanity" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › Charge screen has no critical accessibility violations @accessibility" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › page renders correctly at a mobile viewport width @responsive" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge screen - UI, accessibility &amp; cross-browser @ui @crossbrowser › page renders correctly at a tablet viewport width @responsive" classname="charge\charge.ui.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="login\login.spec.js" timestamp="2026-08-27T10:52:38.180Z" hostname="webkit" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="Login @smoke @sanity @functional › valid credentials log the user into the application @positive" classname="login\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Login @smoke @sanity @functional › invalid credentials show an error and do not log in @negative" classname="login\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

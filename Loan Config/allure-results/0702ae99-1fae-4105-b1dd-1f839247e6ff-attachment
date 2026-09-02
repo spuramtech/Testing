@@ -1,0 +1,16 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\loanCreationTab.spec.js >> Loans Configuration - Loan Creation Tab @functional >> SQL injection payload in Loan Name is safely handled @security @negative
+- Location: tests\loansConfiguration\loanCreationTab.spec.js:47:3
+
+# Error details
+
+```
+Error: browserContext.newPage: Target crashed 
+```

@@ -1,0 +1,347 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\identificationDocumentsTab.spec.js >> Loans Configuration - Identification Documents Tab @functional >> Submit button is visible on the final tab @smoke
+- Location: tests\loansConfiguration\identificationDocumentsTab.spec.js:46:3
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded while running "beforeEach" hook.
+```
+
+```
+Error: locator.click: Test timeout of 60000ms exceeded.
+Call log:
+  - waiting for getByRole('option', { name: 'Personal Loan' })
+    - locator resolved to <option value="5"> Personal Loan</option>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    28 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - navigation [ref=e5]:
+      - list [ref=e6]:
+        - generic [ref=e8] [cursor=pointer]
+        - listbox [ref=e12]:
+          - generic [ref=e13]:
+            - combobox [ref=e15]
+            - generic "Clear all" [ref=e16] [cursor=pointer]: ×
+            - generic [ref=e17] [cursor=pointer]
+        - listitem [ref=e18]:
+          - link "Dashboard" [ref=e19] [cursor=pointer]:
+            - /url: "#/Dashboard"
+        - listitem [ref=e21]:
+          - generic "Contact" [ref=e22] [cursor=pointer]
+          - generic [ref=e24]:
+            - button "Contact" [ref=e25]:
+              - generic [ref=e26] [cursor=pointer]
+            - generic [ref=e31] [cursor=pointer]:
+              - text: Contact Configuration
+              - generic [ref=e32]: 
+        - listitem [ref=e33]:
+          - generic "Loans" [ref=e34] [cursor=pointer]
+          - generic [ref=e36]:
+            - button "Loans" [ref=e37]:
+              - generic [ref=e38] [cursor=pointer]
+            - generic [ref=e40]:
+              - generic [ref=e41]:
+                - generic [ref=e43] [cursor=pointer]:
+                  - text: Loan Configuration
+                  - generic [ref=e44]: 
+                - list [ref=e47]:
+                  - listitem [ref=e48]:
+                    - link "Charge" [ref=e49] [cursor=pointer]:
+                      - /url: "#/Loans/ChargesMaster"
+                  - listitem [ref=e50]:
+                    - link "Loans Configuration" [ref=e51] [cursor=pointer]:
+                      - /url: "#/Loans/LoansCreation"
+                  - listitem [ref=e52]:
+                    - link "Charge Configuration" [ref=e53] [cursor=pointer]:
+                      - /url: "#/Loans/ChargeconfigurationMaster"
+                  - listitem [ref=e54]:
+                    - link "Pre-closure" [ref=e55] [cursor=pointer]:
+                      - /url: "#/Loans/PreclosureMaster"
+              - generic [ref=e58] [cursor=pointer]:
+                - text: Loan Origination
+                - generic [ref=e59]: 
+              - generic [ref=e62] [cursor=pointer]:
+                - text: Credit Evaluation
+                - generic [ref=e63]: 
+              - generic [ref=e66] [cursor=pointer]:
+                - text: Loan Management
+                - generic [ref=e67]: 
+              - generic [ref=e70] [cursor=pointer]:
+                - text: Reports & Letters
+                - generic [ref=e71]: 
+              - generic [ref=e74] [cursor=pointer]:
+                - text: Jobs
+                - generic [ref=e75]: 
+              - generic [ref=e78] [cursor=pointer]:
+                - text: Nach
+                - generic [ref=e79]: 
+              - generic [ref=e82] [cursor=pointer]:
+                - text: Npa
+                - generic [ref=e83]: 
+              - generic [ref=e86] [cursor=pointer]:
+                - text: Suit
+                - generic [ref=e87]: 
+              - generic [ref=e90] [cursor=pointer]:
+                - text: Digital Transactions
+                - generic [ref=e91]: 
+              - generic [ref=e94] [cursor=pointer]:
+                - text: Gold Loan
+                - generic [ref=e95]: 
+              - generic [ref=e98] [cursor=pointer]:
+                - text: Vehicle Laon
+                - generic [ref=e99]: 
+        - listitem [ref=e100]:
+          - generic "Accounting" [ref=e101] [cursor=pointer]
+          - generic [ref=e103]:
+            - button "Accounting" [ref=e104]:
+              - generic [ref=e105] [cursor=pointer]
+            - generic [ref=e107]:
+              - generic [ref=e110] [cursor=pointer]:
+                - text: Configuration
+                - generic [ref=e111]: 
+              - generic [ref=e114] [cursor=pointer]:
+                - text: Transactions
+                - generic [ref=e115]: 
+              - generic [ref=e118] [cursor=pointer]:
+                - text: Reports
+                - generic [ref=e119]: 
+        - listitem [ref=e120]:
+          - generic "Settings" [ref=e121] [cursor=pointer]
+          - generic [ref=e123]:
+            - button "Settings" [ref=e124]:
+              - generic [ref=e125] [cursor=pointer]
+            - generic [ref=e127]:
+              - generic [ref=e130] [cursor=pointer]:
+                - text: Assign Forms
+                - generic [ref=e131]: 
+              - generic [ref=e134] [cursor=pointer]:
+                - text: Audit Log
+                - generic [ref=e135]: 
+              - generic [ref=e138] [cursor=pointer]:
+                - text: Sms
+                - generic [ref=e139]: 
+    - generic [ref=e141]:
+      - generic [ref=e142]:
+        - generic [ref=e144] [cursor=pointer]
+        - navigation "breadcrumb" [ref=e146]:
+          - listitem [ref=e147]: Loans
+          - list [ref=e148]:
+            - listitem [ref=e149]: Loan Configuration
+            - listitem [ref=e150]: "| Loans Configuration"
+        - button "New Delhi" [ref=e153] [cursor=pointer]
+        - generic [ref=e155]:
+          - link [ref=e157] [cursor=pointer]:
+            - /url: "#/Dashboard"
+            - img "Home" [ref=e158]
+          - img "EMI Calculator" [ref=e161] [cursor=pointer]
+          - img "Quick Links" [ref=e164] [cursor=pointer]
+          - button [ref=e166] [cursor=pointer]
+          - paragraph [ref=e170]:
+            - emphasis [ref=e171]: HI'Gaurav
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - paragraph [ref=e176]: Loans Configuration
+          - generic [ref=e177]:
+            - link "View":
+              - /url: "#/Loans/LoansMaster"
+        - generic [ref=e180]:
+          - tablist [ref=e181]:
+            - listitem [ref=e182]:
+              - tab "Loan Creation" [selected] [ref=e183] [cursor=pointer]
+            - listitem [ref=e184]:
+              - tab "Loan Configuration" [ref=e185] [cursor=pointer]
+            - listitem [ref=e186]:
+              - tab "Installment Due Date" [ref=e187] [cursor=pointer]
+            - listitem [ref=e188]:
+              - tab "Penal Interest" [ref=e189] [cursor=pointer]
+            - listitem [ref=e190]:
+              - tab "Identification Documents" [ref=e191] [cursor=pointer]
+          - generic [ref=e192]:
+            - tabpanel [ref=e193]:
+              - generic [ref=e194]:
+                - paragraph [ref=e197]: Loan Creation
+                - generic [ref=e199]:
+                  - generic [ref=e201]:
+                    - generic "Loan Type" [ref=e202]: "* Loan Type"
+                    - combobox [ref=e203]:
+                      - option "Select" [disabled] [selected]
+                      - option "Bullet Loan"
+                      - option "Business Loan"
+                      - option "Gold Loan"
+                      - option "Loan Against Property"
+                      - option "Personal Loan"
+                      - option "Vehicle Loan"
+                  - generic [ref=e205]:
+                    - generic [ref=e206]: "* Loan Name"
+                    - textbox "Enter Loan Name" [ref=e207]
+                  - generic [ref=e209]:
+                    - generic [ref=e210]: "* Loan Code"
+                    - textbox "Loan Code" [ref=e211]
+                  - separator [ref=e212]
+                  - generic [ref=e213]: Company Code
+                  - generic [ref=e218]: Branch Code
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: Series
+                    - textbox "101" [ref=e227]: "0000001"
+                  - generic [ref=e228]: Loan ID
+                  - separator [ref=e233]
+                - generic [ref=e234]:
+                  - generic [ref=e235] [cursor=pointer]: Clear
+                  - tab "Next" [ref=e237] [cursor=pointer]
+                - generic [ref=e241]:
+                  - grid [ref=e242]:
+                    - rowgroup [ref=e243]:
+                      - row [ref=e244]:
+                        - 'columnheader "S.No.: activate to sort column ascending" [ref=e245] [cursor=pointer]': ↑ S.No. ↓
+                        - 'columnheader "Loan Type: activate to sort column descending" [ref=e246] [cursor=pointer]': ↑ Loan Type ↓
+                        - 'columnheader "Loan Name: activate to sort column ascending" [ref=e247] [cursor=pointer]': ↑ Loan Name ↓
+                        - 'columnheader "Loan ID: activate to sort column ascending" [ref=e248] [cursor=pointer]': ↑ Loan ID ↓
+                    - rowgroup [ref=e249]:
+                      - row [ref=e250]:
+                        - gridcell "1" [ref=e251]
+                        - gridcell "Bullet Loan" [ref=e252]
+                        - gridcell "Bullet Loan" [ref=e253]
+                        - gridcell "CSBL00018" [ref=e254]
+                      - row [ref=e255]:
+                        - gridcell "2" [ref=e256]
+                        - gridcell "Bullet Loan" [ref=e257]
+                        - gridcell "GOLD" [ref=e258]
+                        - gridcell "CSBLG00001" [ref=e259]
+                      - row [ref=e260]:
+                        - gridcell "3" [ref=e261]
+                        - gridcell "Bullet Loan" [ref=e262]
+                        - gridcell "Lap" [ref=e263]
+                        - gridcell "CSBLAP00001" [ref=e264]
+                      - row [ref=e265]:
+                        - gridcell "4" [ref=e266]
+                        - gridcell "Business Loan" [ref=e267]
+                        - gridcell "Daily Business Laon" [ref=e268]
+                        - gridcell "BLDBL0000001" [ref=e269]
+                      - row [ref=e270]:
+                        - gridcell "5" [ref=e271]
+                        - gridcell "Business Loan" [ref=e272]
+                        - gridcell "Go Capital Business Loan" [ref=e273]
+                        - gridcell "USBL0000001" [ref=e274]
+                      - row [ref=e275]:
+                        - gridcell "6" [ref=e276]
+                        - gridcell "Business Loan" [ref=e277]
+                        - gridcell "New Business Loan" [ref=e278]
+                        - gridcell "BLNBL0000001" [ref=e279]
+                      - row [ref=e280]:
+                        - gridcell "7" [ref=e281]
+                        - gridcell "Business Loan" [ref=e282]
+                        - gridcell "Unsecured Business Loan" [ref=e283]
+                        - gridcell "UBL0000001" [ref=e284]
+                      - row [ref=e285]:
+                        - gridcell "8" [ref=e286]
+                        - gridcell "Gold Loan" [ref=e287]
+                        - gridcell "Gold Loan" [ref=e288]
+                        - gridcell "GLGL0000001" [ref=e289]
+                      - row [ref=e290]:
+                        - gridcell "9" [ref=e291]
+                        - gridcell "Gold Loan" [ref=e292]
+                        - gridcell "New Gold Loan" [ref=e293]
+                        - gridcell "GLNGL0000001" [ref=e294]
+                      - row [ref=e295]:
+                        - gridcell "10" [ref=e296]
+                        - gridcell "Loan Against Property" [ref=e297]
+                        - gridcell "Loan Against Property" [ref=e298]
+                        - gridcell "CSAP00001" [ref=e299]
+                  - list [ref=e301]:
+                    - listitem [ref=e302]:
+                      - link "Previous":
+                        - /url: "#"
+                    - listitem [ref=e303]:
+                      - link "1" [ref=e304] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=e305]:
+                      - link "2" [ref=e306] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=e307]:
+                      - link "Next" [ref=e308] [cursor=pointer]:
+                        - /url: "#"
+            - text: ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ ↑ ↓ 
+  - generic [ref=e310] [cursor=pointer]
+  - text: 
+```
+
+# Test source
+
+```ts
+  1  | const { logger } = require('../utils/logger');
+  2  | 
+  3  | class BasePage {
+  4  |   /**
+  5  |    * @param {import('@playwright/test').Page} page
+  6  |    */
+  7  |   constructor(page) {
+  8  |     this.page = page;
+  9  |   }
+  10 | 
+  11 |   async goto(path = '/') {
+  12 |     logger.info(`Navigating to ${path}`);
+  13 |     await this.page.goto(path);
+  14 |   }
+  15 | 
+  16 |   async clickText(text, options = {}) {
+  17 |     await this.page.getByText(text, { exact: options.exact ?? false }).first().click();
+  18 |   }
+  19 | 
+  20 |   async clickRole(role, name, options = {}) {
+  21 |     await this.page.getByRole(role, { name, ...options }).click();
+  22 |   }
+  23 | 
+  24 |   async fillByLabel(label, value) {
+  25 |     await this.page.getByLabel(label).fill(value);
+  26 |   }
+  27 | 
+  28 |   async selectDropdownOption(dropdownLocator, optionText) {
+  29 |     await dropdownLocator.click();
+> 30 |     await this.page.getByRole('option', { name: optionText }).click();
+     |                                                               ^ Error: locator.click: Test timeout of 60000ms exceeded.
+  31 |   }
+  32 | 
+  33 |   async waitForToast(expectedText) {
+  34 |     const toast = this.page.locator('.toast, .Toastify__toast, [role="alert"]').filter({ hasText: expectedText });
+  35 |     await toast.first().waitFor({ state: 'visible' });
+  36 |     return toast.first();
+  37 |   }
+  38 | 
+  39 |   async isVisible(locator) {
+  40 |     return locator.isVisible().catch(() => false);
+  41 |   }
+  42 | 
+  43 |   async takeScreenshot(name) {
+  44 |     await this.page.screenshot({ path: `screenshots/${name}-${Date.now()}.png`, fullPage: true });
+  45 |   }
+  46 | }
+  47 | 
+  48 | module.exports = { BasePage };
+  49 | 
+```

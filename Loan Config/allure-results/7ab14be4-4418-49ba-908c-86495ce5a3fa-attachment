@@ -1,0 +1,239 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\list.spec.js >> Loans Configuration - List Page @functional @regression >> list page loads with title, grid, and pagination @smoke
+- Location: tests\loansConfiguration\list.spec.js:4:3
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText(/\d+\s*-\s*\d+ of \d+ items/i)
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for getByText(/\d+\s*-\s*\d+ of \d+ items/i)
+
+```
+
+```yaml
+- navigation:
+  - list:
+    - img
+    - listbox:
+      - combobox
+    - listitem:
+      - link "Dashboard":
+        - /url: "#/Dashboard"
+    - listitem:
+      - text: Contact
+      - button "Contact"
+      - text: Contact Configuration 
+    - listitem:
+      - text: Loans
+      - button "Loans"
+      - text: Loan Configuration 
+      - list:
+        - listitem:
+          - link "Charge":
+            - /url: "#/Loans/ChargesMaster"
+        - listitem:
+          - link "Loans Configuration":
+            - /url: "#/Loans/LoansCreation"
+        - listitem:
+          - link "Charge Configuration":
+            - /url: "#/Loans/ChargeconfigurationMaster"
+        - listitem:
+          - link "Pre-closure":
+            - /url: "#/Loans/PreclosureMaster"
+      - text: Loan Origination  Credit Evaluation  Loan Management  Reports & Letters  Jobs  Nach  Npa  Suit  Digital Transactions  Gold Loan  Vehicle Laon 
+    - listitem:
+      - text: Accounting
+      - button "Accounting"
+      - text: Configuration  Transactions  Reports 
+    - listitem:
+      - text: Settings
+      - button "Settings"
+      - text: Assign Forms  Audit Log  Sms 
+- img
+- navigation "breadcrumb":
+  - listitem: Loans
+  - list:
+    - listitem: Loan Configuration
+    - listitem: "| Loans Configuration"
+- button "New Delhi"
+- link "Home":
+  - /url: "#/Dashboard"
+  - img "Home"
+- img "EMI Calculator"
+- img "Quick Links"
+- button:
+  - img
+- paragraph:
+  - emphasis: HI'Gaurav
+- paragraph: Loans Configuration
+- link "View":
+  - /url: "#/Loans/LoansMaster"
+  - img
+  - text: View
+- tablist:
+  - listitem:
+    - tab "Loan Creation" [selected]
+  - listitem:
+    - tab "Loan Configuration"
+  - listitem:
+    - tab "Installment Due Date"
+  - listitem:
+    - tab "Penal Interest"
+  - listitem:
+    - tab "Identification Documents"
+- tabpanel:
+  - paragraph: Loan Creation
+  - text: "* Loan Type"
+  - combobox:
+    - option "Select" [disabled] [selected]
+    - option "Bullet Loan"
+    - option "Business Loan"
+    - option "Gold Loan"
+    - option "Loan Against Property"
+    - option "Personal Loan"
+    - option "Vehicle Loan"
+  - text: "* Loan Name"
+  - textbox "Enter Loan Name"
+  - text: "* Loan Code"
+  - textbox "Loan Code"
+  - separator
+  - text: Company Code Branch Code Series
+  - textbox "101": "0000001"
+  - text: Loan ID
+  - separator
+  - img
+  - text: Clear
+  - tab "Next":
+    - img
+    - text: Next
+  - grid:
+    - rowgroup:
+      - 'row "S.No.: activate to sort column descending Loan Type: activate to sort column ascending Loan Name: activate to sort column ascending Loan ID: activate to sort column ascending"':
+        - 'columnheader "S.No.: activate to sort column descending"': ↑ S.No. ↓
+        - 'columnheader "Loan Type: activate to sort column ascending"': ↑ Loan Type ↓
+        - 'columnheader "Loan Name: activate to sort column ascending"': ↑ Loan Name ↓
+        - 'columnheader "Loan ID: activate to sort column ascending"': ↑ Loan ID ↓
+    - rowgroup:
+      - row "1 Bullet Loan Bullet Loan CSBL00018":
+        - gridcell "1"
+        - gridcell "Bullet Loan"
+        - gridcell "Bullet Loan"
+        - gridcell "CSBL00018"
+      - row "2 Bullet Loan GOLD CSBLG00001":
+        - gridcell "2"
+        - gridcell "Bullet Loan"
+        - gridcell "GOLD"
+        - gridcell "CSBLG00001"
+      - row "3 Bullet Loan Lap CSBLAP00001":
+        - gridcell "3"
+        - gridcell "Bullet Loan"
+        - gridcell "Lap"
+        - gridcell "CSBLAP00001"
+      - row "4 Business Loan Daily Business Laon BLDBL0000001":
+        - gridcell "4"
+        - gridcell "Business Loan"
+        - gridcell "Daily Business Laon"
+        - gridcell "BLDBL0000001"
+      - row "5 Business Loan Go Capital Business Loan USBL0000001":
+        - gridcell "5"
+        - gridcell "Business Loan"
+        - gridcell "Go Capital Business Loan"
+        - gridcell "USBL0000001"
+      - row "6 Business Loan New Business Loan BLNBL0000001":
+        - gridcell "6"
+        - gridcell "Business Loan"
+        - gridcell "New Business Loan"
+        - gridcell "BLNBL0000001"
+      - row "7 Business Loan Unsecured Business Loan UBL0000001":
+        - gridcell "7"
+        - gridcell "Business Loan"
+        - gridcell "Unsecured Business Loan"
+        - gridcell "UBL0000001"
+      - row "8 Gold Loan Gold Loan GLGL0000001":
+        - gridcell "8"
+        - gridcell "Gold Loan"
+        - gridcell "Gold Loan"
+        - gridcell "GLGL0000001"
+      - row "9 Gold Loan New Gold Loan GLNGL0000001":
+        - gridcell "9"
+        - gridcell "Gold Loan"
+        - gridcell "New Gold Loan"
+        - gridcell "GLNGL0000001"
+      - row "10 Loan Against Property Loan Against Property CSAP00001":
+        - gridcell "10"
+        - gridcell "Loan Against Property"
+        - gridcell "Loan Against Property"
+        - gridcell "CSAP00001"
+  - list:
+    - listitem:
+      - link "Previous":
+        - /url: "#"
+    - listitem:
+      - link "1":
+        - /url: "#"
+    - listitem:
+      - link "2":
+        - /url: "#"
+    - listitem:
+      - link "Next":
+        - /url: "#"
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('../../fixtures/pageFixtures');
+  2  | 
+  3  | test.describe('Loans Configuration - List Page @functional @regression', () => {
+  4  |   test('list page loads with title, grid, and pagination @smoke', async ({ authenticatedPage: page, loansConfigurationListPage }) => {
+  5  |     await expect(loansConfigurationListPage.pageTitle).toBeVisible();
+  6  |     await expect(loansConfigurationListPage.newButton).toBeVisible();
+> 7  |     await expect(loansConfigurationListPage.paginationInfo).toBeVisible();
+     |                                                             ^ Error: expect(locator).toBeVisible() failed
+  8  |   });
+  9  | 
+  10 |   test('search filters grid by loan name (partial match) @search', async ({ authenticatedPage: page, loansConfigurationListPage }) => {
+  11 |     await loansConfigurationListPage.search('Gold');
+  12 |     const rows = loansConfigurationListPage.gridRows;
+  13 |     await expect(rows.first()).toContainText(/gold/i);
+  14 |   });
+  15 | 
+  16 |   test('search with no matches shows empty result @search @negative', async ({ authenticatedPage: page, loansConfigurationListPage }) => {
+  17 |     await loansConfigurationListPage.search('zzz-nonexistent-loan-zzz');
+  18 |     await expect(loansConfigurationListPage.gridRows).toHaveCount(0);
+  19 |   });
+  20 | 
+  21 |   test('clearing search restores full list @search', async ({ authenticatedPage: page, loansConfigurationListPage }) => {
+  22 |     const initialCount = await loansConfigurationListPage.getRowCount();
+  23 |     await loansConfigurationListPage.search('Gold');
+  24 |     await loansConfigurationListPage.clearSearch();
+  25 |     await expect
+  26 |       .poll(() => loansConfigurationListPage.getRowCount())
+  27 |       .toBe(initialCount);
+  28 |   });
+  29 | 
+  30 |   test('export to PDF button is available @print', async ({ authenticatedPage: page, loansConfigurationListPage }) => {
+  31 |     await expect(loansConfigurationListPage.exportPdfButton).toBeVisible();
+  32 |   });
+  33 | 
+  34 |   test('export to Excel button is available @print', async ({ authenticatedPage: page, loansConfigurationListPage }) => {
+  35 |     await expect(loansConfigurationListPage.exportExcelButton).toBeVisible();
+  36 |   });
+  37 | });
+  38 | 
+```

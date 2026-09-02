@@ -1,0 +1,939 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Loan Config\\Charge\\automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/charge/charge.api.spec.js",
+      "--project=chromium",
+      "--grep-invert",
+      "@destructive",
+      "--reporter=json"
+    ],
+    "configFile": "D:\\Loan Config\\Charge\\automation\\playwright.config.js",
+    "rootDir": "D:/Loan Config/Charge/automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 8
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Loan Config/Charge/automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Loan Config/Charge/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Loan Config/Charge/automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Loan Config/Charge/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Loan Config/Charge/automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Loan Config/Charge/automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "charge\\charge.api.spec.js",
+      "file": "charge/charge.api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Charge API @api @regression",
+          "file": "charge/charge.api.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "fetch Charge list returns 200 and an array payload @smoke",
+              "ok": false,
+              "tags": [
+                "api",
+                "regression",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 347,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:23:31",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 31,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m   test(\u001b[32m'fetch Charge list returns 200 and an array payload @smoke'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chargeApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(body\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m body))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 31,
+                            "line": 23
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n  21 |   test('fetch Charge list returns 200 and an array payload @smoke', async () => {\n  22 |     const response = await chargeApi.fetchChargeList();\n> 23 |     expect(response.status()).toBe(200);\n     |                               ^\n  24 |     const body = await response.json();\n  25 |     expect(Array.isArray(body?.data ?? body)).toBeTruthy();\n  26 |   });\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:23:31"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:42.858Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-13b01--and-an-array-payload-smoke-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-13b01--and-an-array-payload-smoke-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 31,
+                        "line": 23
+                      }
+                    },
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 203,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:23:31",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 31,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m   test(\u001b[32m'fetch Charge list returns 200 and an array payload @smoke'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chargeApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(body\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m body))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 31,
+                            "line": 23
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n  21 |   test('fetch Charge list returns 200 and an array payload @smoke', async () => {\n  22 |     const response = await chargeApi.fetchChargeList();\n> 23 |     expect(response.status()).toBe(200);\n     |                               ^\n  24 |     const body = await response.json();\n  25 |     expect(Array.isArray(body?.data ?? body)).toBeTruthy();\n  26 |   });\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:23:31"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:47] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-09-01T10:52:47.237Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-13b01--and-an-array-payload-smoke-chromium-retry1\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-13b01--and-an-array-payload-smoke-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 31,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-e46e66e453244b75988b",
+              "file": "charge/charge.api.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "create Charge with missing mandatory fields returns 4xx @negative",
+              "ok": true,
+              "tags": [
+                "api",
+                "regression",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 338,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API POST /loans/masters/ChargesMaster/SaveChargesMaster -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:42.866Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-631d2f3b85a320cff46c",
+              "file": "charge/charge.api.spec.js",
+              "line": 37,
+              "column": 3
+            },
+            {
+              "title": "fetch Charge by non-existent id returns 404 @negative",
+              "ok": true,
+              "tags": [
+                "api",
+                "regression",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 328,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName?chargeStatus=ALL&id=non-existent-id-999999 -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:42.868Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-d6eca805f1a7d601a9b7",
+              "file": "charge/charge.api.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "update Charge with missing mandatory fields returns 4xx @negative",
+              "ok": true,
+              "tags": [
+                "api",
+                "regression",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 330,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API POST /loans/masters/ChargesMaster/SaveChargesMaster -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:42.872Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-e581c91c385982915f0b",
+              "file": "charge/charge.api.spec.js",
+              "line": 68,
+              "column": 3
+            },
+            {
+              "title": "update non-existent Charge returns 404 @negative",
+              "ok": true,
+              "tags": [
+                "api",
+                "regression",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 332,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API POST /loans/masters/ChargesMaster/SaveChargesMaster -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:42.865Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-9a0c4686a575e6807896",
+              "file": "charge/charge.api.spec.js",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "delete non-existent Charge returns 404 @negative",
+              "ok": false,
+              "tags": [
+                "api",
+                "regression",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "failed",
+                      "duration": 336,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:101:31",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 31,
+                          "line": 101
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  99 |\u001b[39m   test(\u001b[32m'delete non-existent Charge returns 404 @negative'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 100 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chargeApi\u001b[33m.\u001b[39mdeleteCharge(\u001b[32m'non-existent-id-999999'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 101 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m404\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 102 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 103 |\u001b[39m\n \u001b[90m 104 |\u001b[39m   test(\u001b[32m'Charge list response conforms to the expected schema @positive'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 31,
+                            "line": 101
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n\n   99 |   test('delete non-existent Charge returns 404 @negative', async () => {\n  100 |     const response = await chargeApi.deleteCharge('non-existent-id-999999');\n> 101 |     expect(response.status()).toBe(404);\n      |                               ^\n  102 |   });\n  103 |\n  104 |   test('Charge list response conforms to the expected schema @positive', async () => {\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:101:31"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API DELETE /loans/masters/ChargesMaster/DeleteChargesMaster?id=non-existent-id-999999 -> 405\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:42.865Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-73a55-Charge-returns-404-negative-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-73a55-Charge-returns-404-negative-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 31,
+                        "line": 101
+                      }
+                    },
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 143,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:101:31",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 31,
+                          "line": 101
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  99 |\u001b[39m   test(\u001b[32m'delete non-existent Charge returns 404 @negative'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 100 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chargeApi\u001b[33m.\u001b[39mdeleteCharge(\u001b[32m'non-existent-id-999999'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 101 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m404\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 102 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 103 |\u001b[39m\n \u001b[90m 104 |\u001b[39m   test(\u001b[32m'Charge list response conforms to the expected schema @positive'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 31,
+                            "line": 101
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n\n   99 |   test('delete non-existent Charge returns 404 @negative', async () => {\n  100 |     const response = await chargeApi.deleteCharge('non-existent-id-999999');\n> 101 |     expect(response.status()).toBe(404);\n      |                               ^\n  102 |   });\n  103 |\n  104 |   test('Charge list response conforms to the expected schema @positive', async () => {\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:101:31"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:45] [\u001b[32MINFO\u001b[39M] API DELETE /loans/masters/ChargesMaster/DeleteChargesMaster?id=non-existent-id-999999 -> 405\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-09-01T10:52:45.757Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-73a55-Charge-returns-404-negative-chromium-retry1\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-73a55-Charge-returns-404-negative-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 31,
+                        "line": 101
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-1143ad3a09e55def4cc3",
+              "file": "charge/charge.api.spec.js",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "Charge list response conforms to the expected schema @positive",
+              "ok": false,
+              "tags": [
+                "api",
+                "regression",
+                "positive"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "failed",
+                      "duration": 342,
+                      "error": {
+                        "message": "SyntaxError: Unexpected end of JSON input",
+                        "stack": "SyntaxError: Unexpected end of JSON input\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:106:18",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 18,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m   test(\u001b[32m'Charge list response conforms to the expected schema @positive'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 105 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chargeApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m list \u001b[33m=\u001b[39m body\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m body\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m\n \u001b[90m 109 |\u001b[39m     expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(list))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 18,
+                            "line": 106
+                          },
+                          "message": "SyntaxError: Unexpected end of JSON input\n\n  104 |   test('Charge list response conforms to the expected schema @positive', async () => {\n  105 |     const response = await chargeApi.fetchChargeList();\n> 106 |     const body = await response.json();\n      |                  ^\n  107 |     const list = body?.data ?? body;\n  108 |\n  109 |     expect(Array.isArray(list)).toBeTruthy();\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:106:18"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:42.856Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-70767-he-expected-schema-positive-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-70767-he-expected-schema-positive-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 18,
+                        "line": 106
+                      }
+                    },
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 133,
+                      "error": {
+                        "message": "SyntaxError: Unexpected end of JSON input",
+                        "stack": "SyntaxError: Unexpected end of JSON input\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:106:18",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 18,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m   test(\u001b[32m'Charge list response conforms to the expected schema @positive'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 105 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m chargeApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m list \u001b[33m=\u001b[39m body\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m body\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m\n \u001b[90m 109 |\u001b[39m     expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(list))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 18,
+                            "line": 106
+                          },
+                          "message": "SyntaxError: Unexpected end of JSON input\n\n  104 |   test('Charge list response conforms to the expected schema @positive', async () => {\n  105 |     const response = await chargeApi.fetchChargeList();\n> 106 |     const body = await response.json();\n      |                  ^\n  107 |     const list = body?.data ?? body;\n  108 |\n  109 |     expect(Array.isArray(list)).toBeTruthy();\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:106:18"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:45] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-09-01T10:52:44.914Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-70767-he-expected-schema-positive-chromium-retry1\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-70767-he-expected-schema-positive-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 18,
+                        "line": 106
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-fe5b4a94a7e0062d03ce",
+              "file": "charge/charge.api.spec.js",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "unauthenticated request to fetch Charge list is rejected @negative @security",
+              "ok": false,
+              "tags": [
+                "api",
+                "regression",
+                "negative",
+                "security"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "failed",
+                      "duration": 170,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:127:24",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 24,
+                          "line": 127
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 125 |\u001b[39m\n \u001b[90m 126 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m unauthenticatedApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 127 |\u001b[39m     expect([\u001b[35m401\u001b[39m\u001b[33m,\u001b[39m \u001b[35m403\u001b[39m])\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 128 |\u001b[39m\n \u001b[90m 129 |\u001b[39m     \u001b[36mawait\u001b[39m unauthenticatedApi\u001b[33m.\u001b[39mdispose()\u001b[33m;\u001b[39m\n \u001b[90m 130 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 24,
+                            "line": 127
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n\n  125 |\n  126 |     const response = await unauthenticatedApi.fetchChargeList();\n> 127 |     expect([401, 403]).toContain(response.status());\n      |                        ^\n  128 |\n  129 |     await unauthenticatedApi.dispose();\n  130 |   });\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:127:24"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:43.385Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-421d2--rejected-negative-security-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-421d2--rejected-negative-security-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 24,
+                        "line": 127
+                      }
+                    },
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 96,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:127:24",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 24,
+                          "line": 127
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 125 |\u001b[39m\n \u001b[90m 126 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m unauthenticatedApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 127 |\u001b[39m     expect([\u001b[35m401\u001b[39m\u001b[33m,\u001b[39m \u001b[35m403\u001b[39m])\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 128 |\u001b[39m\n \u001b[90m 129 |\u001b[39m     \u001b[36mawait\u001b[39m unauthenticatedApi\u001b[33m.\u001b[39mdispose()\u001b[33m;\u001b[39m\n \u001b[90m 130 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 24,
+                            "line": 127
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n\n  125 |\n  126 |     const response = await unauthenticatedApi.fetchChargeList();\n> 127 |     expect([401, 403]).toContain(response.status());\n      |                        ^\n  128 |\n  129 |     await unauthenticatedApi.dispose();\n  130 |   });\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:127:24"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:46] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-09-01T10:52:46.492Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-421d2--rejected-negative-security-chromium-retry1\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-421d2--rejected-negative-security-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 24,
+                        "line": 127
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-1ef0c8bb38fb35d39d0f",
+              "file": "charge/charge.api.spec.js",
+              "line": 121,
+              "column": 3
+            },
+            {
+              "title": "request with an expired/invalid token is rejected @negative @security",
+              "ok": false,
+              "tags": [
+                "api",
+                "regression",
+                "negative",
+                "security"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 53,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:137:24",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 24,
+                          "line": 137
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 135 |\u001b[39m\n \u001b[90m 136 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m invalidTokenApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m     expect([\u001b[35m401\u001b[39m\u001b[33m,\u001b[39m \u001b[35m403\u001b[39m])\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m\n \u001b[90m 139 |\u001b[39m     \u001b[36mawait\u001b[39m invalidTokenApi\u001b[33m.\u001b[39mdispose()\u001b[33m;\u001b[39m\n \u001b[90m 140 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 24,
+                            "line": 137
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n\n  135 |\n  136 |     const response = await invalidTokenApi.fetchChargeList();\n> 137 |     expect([401, 403]).toContain(response.status());\n      |                        ^\n  138 |\n  139 |     await invalidTokenApi.dispose();\n  140 |   });\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:137:24"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:43] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-01T10:52:43.249Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-19b97--rejected-negative-security-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-19b97--rejected-negative-security-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 24,
+                        "line": 137
+                      }
+                    },
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 112,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:137:24",
+                        "location": {
+                          "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                          "column": 24,
+                          "line": 137
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 135 |\u001b[39m\n \u001b[90m 136 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m invalidTokenApi\u001b[33m.\u001b[39mfetchChargeList()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m     expect([\u001b[35m401\u001b[39m\u001b[33m,\u001b[39m \u001b[35m403\u001b[39m])\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m\n \u001b[90m 139 |\u001b[39m     \u001b[36mawait\u001b[39m invalidTokenApi\u001b[33m.\u001b[39mdispose()\u001b[33m;\u001b[39m\n \u001b[90m 140 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                            "column": 24,
+                            "line": 137
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m404\u001b[39m\nReceived array: \u001b[31m[401, 403]\u001b[39m\n\n  135 |\n  136 |     const response = await invalidTokenApi.fetchChargeList();\n> 137 |     expect([401, 403]).toContain(response.status());\n      |                        ^\n  138 |\n  139 |     await invalidTokenApi.dispose();\n  140 |   });\n    at D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js:137:24"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[16:22:47] [\u001b[32MINFO\u001b[39M] API GET /loans/masters/ChargesMaster/GetChargesName -> 404\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-09-01T10:52:47.622Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-19b97--rejected-negative-security-chromium-retry1\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\Loan Config\\Charge\\automation\\test-results\\charge-charge.api-Charge-A-19b97--rejected-negative-security-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Loan Config\\Charge\\automation\\tests\\charge\\charge.api.spec.js",
+                        "column": 24,
+                        "line": 137
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0ad1c9fd42a47817b3c8-c4dccd8253242a9a6020",
+              "file": "charge/charge.api.spec.js",
+              "line": 132,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-01T10:52:36.581Z",
+    "duration": 11275.077,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

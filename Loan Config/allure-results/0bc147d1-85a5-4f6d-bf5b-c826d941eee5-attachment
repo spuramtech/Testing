@@ -1,0 +1,72 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loansConfiguration\identificationDocumentsTab.spec.js >> Loans Configuration - Identification Documents Tab @functional >> full proof-type list is present per category @positive
+- Location: tests\loansConfiguration\identificationDocumentsTab.spec.js:39:3
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded while running "beforeEach" hook.
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('../../fixtures/pageFixtures');
+  2  | const { buildLoanCreationPayload } = require('../../constants/testData');
+  3  | 
+  4  | async function reachIdentificationDocumentsTab(loansConfigurationListPage, wizardPage) {
+  5  |   await loansConfigurationListPage.clickNew();
+  6  |   await wizardPage.fillLoanCreation(buildLoanCreationPayload());
+  7  |   await wizardPage.clickNext();
+  8  |   await wizardPage.fillLoanConfiguration({
+  9  |     interestMode: 'Fixed',
+  10 |     interestRateMin: 8,
+  11 |     interestRateMax: 14,
+  12 |     loanAmountNotApplicable: true,
+  13 |     tenureNotApplicable: true,
+  14 |   });
+  15 |   await wizardPage.clickNext();
+  16 |   await wizardPage.fillInstallmentDueDate({ installmentTypeConfig: 'EMI', dueDateOption: 'fixedDate' });
+  17 |   await wizardPage.clickNext();
+  18 |   await wizardPage.fillPenalInterest({ fixedPercent: 2, gracePeriodDays: 3 });
+  19 |   await wizardPage.clickNext();
+  20 | }
+  21 | 
+  22 | test.describe('Loans Configuration - Identification Documents Tab @functional', () => {
+> 23 |   test.beforeEach(async ({ authenticatedPage: page, loansConfigurationListPage, wizardPage }) => {
+     |        ^ Test timeout of 60000ms exceeded while running "beforeEach" hook.
+  24 |     await reachIdentificationDocumentsTab(loansConfigurationListPage, wizardPage);
+  25 |   });
+  26 | 
+  27 |   test('each accordion section expands and collapses @positive', async ({ wizardPage }) => {
+  28 |     await wizardPage.expandAccordion('panFormSixty');
+  29 |     await expect(wizardPage.page.getByText('PAN CARD')).toBeVisible();
+  30 |     await wizardPage.expandAccordion('panFormSixty');
+  31 |   });
+  32 | 
+  33 |   test('Mandatory and Required checkboxes are independently togglable @positive', async ({ wizardPage }) => {
+  34 |     await wizardPage.expandAccordion('panFormSixty');
+  35 |     await wizardPage.toggleProofCheckbox('PAN CARD', 'Mandatory');
+  36 |     await wizardPage.toggleProofCheckbox('PAN CARD', 'Required');
+  37 |   });
+  38 | 
+  39 |   test('full proof-type list is present per category @positive', async ({ wizardPage }) => {
+  40 |     await wizardPage.expandAccordion('financialDocuments');
+  41 |     for (const proof of ['Pay Slip', 'Financial Statements', 'Form 16A', 'Form 16', 'ITR', 'GSTR 1', 'GSTR 2', 'GSTR 3B']) {
+  42 |       await expect(wizardPage.page.getByText(proof, { exact: true })).toBeVisible();
+  43 |     }
+  44 |   });
+  45 | 
+  46 |   test('Submit button is visible on the final tab @smoke', async ({ wizardPage }) => {
+  47 |     await expect(wizardPage.submitButton).toBeVisible();
+  48 |   });
+  49 | });
+  50 | 
+```
