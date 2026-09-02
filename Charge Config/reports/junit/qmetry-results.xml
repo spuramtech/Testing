@@ -1,0 +1,144 @@
+<testsuites id="" name="" tests="32" failures="0" skipped="32" errors="0" time="0.18787300000000004">
+<testsuite name="chargeConfiguration\chargeAmountBoundary.spec.js" timestamp="2026-09-01T11:27:34.875Z" hostname="chromium" tests="4" failures="0" skipped="4" time="0" errors="0">
+<testcase name="Charge Configuration - Charge Amount Panel: Boundary &amp; Negative @functional @regression › Charge Type Percentage field rejects a value above 100 @negative @boundary" classname="chargeConfiguration\chargeAmountBoundary.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Boundary &amp; Negative @functional @regression › Range Percentage field rejects a negative value @negative @boundary" classname="chargeConfiguration\chargeAmountBoundary.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Boundary &amp; Negative @functional @regression › non-numeric characters are rejected by the Min/Max Loan Value fields @negative" classname="chargeConfiguration\chargeAmountBoundary.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Boundary &amp; Negative @functional @regression › toggling Dependent / Not Dependent repeatedly does not error or lose the panel @positive @regression" classname="chargeConfiguration\chargeAmountBoundary.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="chargeConfiguration\chargeAmountDependentMode.spec.js" timestamp="2026-09-01T11:27:34.875Z" hostname="chromium" tests="8" failures="0" skipped="8" time="0" errors="0">
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › Charge Amount panel heading reflects the selected Loan Type-Loan Name-Charge Name @positive" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › Dependent and Not Dependent toggles are mutually exclusive @positive" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › Dependent mode reveals On Value / On Tenure and the Range/Charge fields @positive" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › On Value and On Tenure are mutually exclusive @positive" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › Add To Grid appends a row with the entered range/charge values @positive" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › Add To Grid rejects an empty range/charge row @negative" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › Clear Grid empties the added range rows @positive" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Dependent on Loan Range @functional @regression › Min Loan Value greater than Max Loan Value is flagged by validation @negative @boundary" classname="chargeConfiguration\chargeAmountDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="chargeConfiguration\chargeAmountNotDependentMode.spec.js" timestamp="2026-09-01T11:27:34.875Z" hostname="chromium" tests="5" failures="0" skipped="5" time="0" errors="0">
+<testcase name="Charge Configuration - Charge Amount Panel: Not Dependent on Loan Range @functional @regression › Not Dependent mode reveals Charge Type and Minimum/Maximum Charge Amount fields @positive" classname="chargeConfiguration\chargeAmountNotDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Not Dependent on Loan Range @functional @regression › Fixed and Percentage Charge Type are mutually exclusive @positive" classname="chargeConfiguration\chargeAmountNotDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Not Dependent on Loan Range @functional @regression › selecting Percentage reveals the percentage input @positive" classname="chargeConfiguration\chargeAmountNotDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Not Dependent on Loan Range @functional @regression › Minimum Charge Amount and Maximum Charge Amount accept numeric input @positive" classname="chargeConfiguration\chargeAmountNotDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Charge Amount Panel: Not Dependent on Loan Range @functional @regression › non-numeric characters are rejected by the amount fields @negative" classname="chargeConfiguration\chargeAmountNotDependentMode.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="chargeConfiguration\endToEnd.spec.js" timestamp="2026-09-01T11:27:34.875Z" hostname="chromium" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="Charge Configuration - End to End @destructive @regression › configuring a Not-Dependent charge amount and submitting adds it to the master grid" classname="chargeConfiguration\endToEnd.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - End to End @destructive @regression › re-opening Config for an already-configured charge and re-submitting updates it in place, not as a duplicate" classname="chargeConfiguration\endToEnd.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="chargeConfiguration\gstAndEffectiveDate.spec.js" timestamp="2026-09-01T11:27:34.875Z" hostname="chromium" tests="4" failures="0" skipped="4" time="0" errors="0">
+<testcase name="Charge Configuration - GST Type &amp; Effective Date @functional @regression › Include / Exclude / No GST are mutually exclusive @positive" classname="chargeConfiguration\gstAndEffectiveDate.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - GST Type &amp; Effective Date @functional @regression › GST % dropdown offers the expected slabs and is usable when Exclude is selected @positive" classname="chargeConfiguration\gstAndEffectiveDate.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - GST Type &amp; Effective Date @functional @regression › This Charge is Effective From defaults to a populated date @positive" classname="chargeConfiguration\gstAndEffectiveDate.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - GST Type &amp; Effective Date @functional @regression › Effective From date field is read-only (date picker driven) @negative" classname="chargeConfiguration\gstAndEffectiveDate.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="chargeConfiguration\headerSelection.spec.js" timestamp="2026-09-01T11:27:34.875Z" hostname="chromium" tests="5" failures="0" skipped="5" time="0" errors="0">
+<testcase name="Charge Configuration - Header Section (Loan Type / Loan Name / Charge Name) @functional @regression › Loan Type dropdown lists the full expected option set @positive" classname="chargeConfiguration\headerSelection.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Header Section (Loan Type / Loan Name / Charge Name) @functional @regression › selecting a Loan Type and Loan Name populates the Charge Name dropdown @positive" classname="chargeConfiguration\headerSelection.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Header Section (Loan Type / Loan Name / Charge Name) @functional @regression › Charge Name dropdown filtering is consistent across already-configured charges @negative @regression" classname="chargeConfiguration\headerSelection.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Header Section (Loan Type / Loan Name / Charge Name) @functional @regression › Charge Name dropdown populates once a Loan Type is selected, independent of Loan Name @positive" classname="chargeConfiguration\headerSelection.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Header Section (Loan Type / Loan Name / Charge Name) @functional @regression › configured-charges grid for a loan shows previously configured Charge/Fee rows @positive" classname="chargeConfiguration\headerSelection.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="chargeConfiguration\login.spec.js" timestamp="2026-09-01T11:27:34.875Z" hostname="chromium" tests="4" failures="0" skipped="4" time="0" errors="0">
+<testcase name="Charge Configuration - Login &amp; Navigation @smoke @sanity › user can log in and navigate to the Charge Configuration screen" classname="chargeConfiguration\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Login &amp; Navigation @smoke @sanity › invalid credentials do not reach the Charge Configuration screen @negative" classname="chargeConfiguration\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Login &amp; Navigation @smoke @sanity › submitting the login form with empty credentials keeps the user on the login screen @negative" classname="chargeConfiguration\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Charge Configuration - Login &amp; Navigation @smoke @sanity › valid username with an empty password does not log in @negative" classname="chargeConfiguration\login.spec.js">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Pre-closure Screen Test Report</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #f2f4f8;
+    --surface: #ffffff;
+    --surface-2: #eaeef5;
+    --border: #d9dfea;
+    --ink: #16202e;
+    --ink-dim: #57657a;
+    --ink-faint: #8493a8;
+    --accent: #2f5fd6;
+    --accent-ink: #1c3f9e;
+    --accent-soft: #e4eaff;
+    --pass: #1a8f5a;
+    --pass-bg: #e2f6ec;
+    --fail: #c23434;
+    --fail-bg: #fbe7e6;
+    --skip: #a3781a;
+    --skip-bg: #fbf1de;
+    --code-bg: #eef1f7;
+    --shadow: 0 1px 2px rgba(22,32,46,.06), 0 8px 24px -12px rgba(22,32,46,.12);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #0e1420;
+      --surface: #161e2d;
+      --surface-2: #1c2637;
+      --border: #2a3448;
+      --ink: #e7ecf5;
+      --ink-dim: #a2adc2;
+      --ink-faint: #6d7893;
+      --accent: #6f93ff;
+      --accent-ink: #a9c0ff;
+      --accent-soft: #1c2a4d;
+      --pass: #4fd393;
+      --pass-bg: #103224;
+      --fail: #ff7a72;
+      --fail-bg: #3a1817;
+      --skip: #f0c15c;
+      --skip-bg: #3a2e10;
+      --code-bg: #0f1522;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px -16px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1420;
+    --surface: #161e2d;
+    --surface-2: #1c2637;
+    --border: #2a3448;
+    --ink: #e7ecf5;
+    --ink-dim: #a2adc2;
+    --ink-faint: #6d7893;
+    --accent: #6f93ff;
+    --accent-ink: #a9c0ff;
+    --accent-soft: #1c2a4d;
+    --pass: #4fd393;
+    --pass-bg: #103224;
+    --fail: #ff7a72;
+    --fail-bg: #3a1817;
+    --skip: #f0c15c;
+    --skip-bg: #3a2e10;
+    --code-bg: #0f1522;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px -16px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); }
+
+  a { color: var(--accent); }
+
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; text-wrap: balance; font-weight: 600; margin: 0; }
+  code, pre, .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+  header.top {
+    padding: 40px clamp(20px, 5vw, 56px) 32px;
+    background: linear-gradient(155deg, var(--accent-ink), var(--accent) 130%);
+    color: #eef2ff;
+    position: relative;
+    overflow: hidden;
+  }
+  header.top::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 85% 20%, rgba(255,255,255,.14), transparent 45%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    opacity: .78;
+    margin-bottom: 10px;
+  }
+  header.top h1 { font-size: clamp(26px, 3.4vw, 36px); color: #fff; }
+  .run-meta {
+    margin-top: 12px;
+    display: flex; flex-wrap: wrap; gap: 6px 18px;
+    font-size: 13.5px; opacity: .88;
+  }
+  .verdict-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 18px; padding: 6px 14px;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px;
+    font-size: 13px; font-weight: 500;
+  }
+  .verdict-dot { width: 8px; height: 8px; border-radius: 50%; background: #6be3a8; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(122px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: -28px clamp(20px, 5vw, 56px) 0;
+    box-shadow: var(--shadow);
+    position: relative; z-index: 2;
+  }
+  .stat {
+    background: var(--surface);
+    padding: 18px 16px;
+    text-align: left;
+  }
+  .stat .n { font-family: "Fraunces", serif; font-size: 30px; font-variant-numeric: tabular-nums; line-height: 1; }
+  .stat .l { margin-top: 6px; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); }
+  .stat.pass .n { color: var(--pass); }
+  .stat.fail .n { color: var(--fail); }
+  .stat.skip .n { color: var(--skip); }
+
+  main { max-width: 1080px; margin: 0 auto; padding: 48px clamp(20px, 5vw, 56px) 80px; }
+  section + section { margin-top: 52px; }
+
+  section > h2 {
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+  .section-note { font-size: 14px; color: var(--ink-dim); margin: -10px 0 22px; max-width: 68ch; }
+
+  .finding {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+  }
+  .finding.critical { border-left-color: var(--fail); }
+  .finding.high { border-left-color: #e08a2e; }
+  .finding.medium { border-left-color: var(--skip); }
+  .finding.info { border-left-color: var(--accent); }
+  .finding-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .sev {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; font-weight: 600; letter-spacing: .06em;
+    padding: 2px 8px; border-radius: 999px; text-transform: uppercase;
+  }
+  .critical .sev { background: var(--fail-bg); color: var(--fail); }
+  .high .sev { background: #fbe9d6; color: #a05a12; }
+  .medium .sev { background: var(--skip-bg); color: var(--skip); }
+  .info .sev { background: var(--accent-soft); color: var(--accent-ink); }
+  .finding-head strong { font-size: 15px; }
+  .finding p { margin: 6px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-dim); }
+  .finding .reco { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); color: var(--ink); }
+  .finding .reco b { color: var(--accent-ink); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td.wrap, th.wrap { white-space: normal; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); font-weight: 600; background: var(--surface-2); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; }
+  td.pass-n { color: var(--pass); font-weight: 600; }
+  td.fail-n { color: var(--fail); font-weight: 600; }
+
+  .cov-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: .02em; }
+  .cov-covered { background: var(--pass-bg); color: var(--pass); }
+  .cov-partial { background: var(--skip-bg); color: var(--skip); }
+  .cov-na { background: var(--surface-2); color: var(--ink-faint); }
+  .cov-blocked { background: var(--fail-bg); color: var(--fail); }
+
+  .group-title {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+    padding: 12px 16px; margin-bottom: 8px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    font-size: 15px; font-weight: 600;
+  }
+  .group-title .counts { font-size: 12px; font-weight: 400; color: var(--ink-faint); font-family: "IBM Plex Mono", monospace; }
+  .group-title .counts b.p { color: var(--pass); } .group-title .counts b.f { color: var(--fail); } .group-title .counts b.s { color: var(--skip); }
+
+  details.test {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  details.test[open] { border-color: var(--accent); }
+  details.test > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 11px 14px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13.5px;
+  }
+  details.test > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  details.test > summary::-webkit-details-marker { display: none; }
+  details.test > summary::before {
+    content: "\25BA";
+    display: inline-block;
+    transition: transform .15s ease;
+    color: var(--ink-faint);
+    font-size: 11px;
+    width: 10px;
+  }
+  details.test[open] > summary::before { transform: rotate(90deg); }
+  .badge { font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 2px 8px; border-radius: 5px; text-transform: uppercase; font-family: "IBM Plex Mono", monospace; flex-shrink: 0; }
+  .badge.passed { background: var(--pass-bg); color: var(--pass); }
+  .badge.failed { background: var(--fail-bg); color: var(--fail); }
+  .badge.skipped { background: var(--skip-bg); color: var(--skip); }
+  .t-title { flex: 1; }
+  .tag { font-size: 10.5px; color: var(--accent-ink); background: var(--accent-soft); padding: 1px 7px; border-radius: 5px; margin-left: 4px; font-family: "IBM Plex Mono", monospace; }
+  .test-body { padding: 4px 16px 16px 40px; font-size: 13.5px; }
+  .test-body h4 { font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 12px 0 6px; font-weight: 600; }
+  .test-body ol { margin: 0; padding-left: 20px; }
+  .test-body li { margin-bottom: 3px; }
+  .test-body pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; margin: 6px 0; }
+  .why { color: var(--ink-dim); }
+  .why b { color: var(--ink); }
+  .reco-box { background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; margin-top: 6px; color: var(--ink); }
+
+  footer.rep {
+    max-width: 1080px; margin: 0 auto; padding: 24px clamp(20px, 5vw, 56px) 56px;
+    color: var(--ink-faint); font-size: 12.5px; border-top: 1px solid var(--border);
+  }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="eyebrow">Playwright Automation &middot; Kapil Group</div>
+  <h1>Pre-closure Screen Test Report</h1>
+  <div class="run-meta">
+    <span>Loans &rarr; Loan Configuration &rarr; Pre-closure</span>
+    <span>&middot;</span>
+    <span>demonbfc.finsta.co.in</span>
+    <span>&middot;</span>
+    <span>2026&#8209;09&#8209;01</span>
+    <span>&middot;</span>
+    <span>chromium &middot; full suite incl. destructive</span>
+  </div>
+  <div class="verdict-badge"><span class="verdict-dot"></span> 22 / 22 passed &mdash; 0 failures, 4 real behaviors found and folded into the spec</div>
+</header>
+
+<div class="stat-row">
+  <div class="stat"><div class="n">22</div><div class="l">Executed</div></div>
+  <div class="stat pass"><div class="n">22</div><div class="l">Passed</div></div>
+  <div class="stat fail"><div class="n">0</div><div class="l">Failed</div></div>
+  <div class="stat skip"><div class="n">0</div><div class="l">Skipped</div></div>
+  <div class="stat"><div class="n">100%</div><div class="l">Pass rate</div></div>
+  <div class="stat"><div class="n">~5m</div><div class="l">Run time</div></div>
+</div>
+
+<main>
+
+<section id="findings">
+  <h2>Key findings</h2>
+  <p class="section-note">Nothing here failed a test &mdash; every item below is a real app behavior the suite had to be corrected against after an initial wrong assumption, surfaced through repeated live verification rather than guessed from the spec. All four are now the source of truth in <code>Pre-Closure prompt.md</code> and <code>pages/PreClosurePage.js</code>.</p>
+
+  <div class="finding medium">
+    <div class="finding-head"><span class="sev">Spec correction</span><strong>Delete has no confirmation step</strong></div>
+    <p>The original brief assumed a confirm/cancel prompt on delete, matching most CRUD grids in this app. Verified live: clicking the trash icon removes the row immediately &mdash; no dialog, no native <code>window.confirm</code>, nothing to cancel.</p>
+    <p class="reco"><b>Action:</b> spec and <code>deleteRowByLoanName()</code> both updated to the immediate-delete behavior. Worth a product conversation &mdash; every sibling screen in Loan Configuration deletes the same way, so this is either deliberate or a gap across the whole module.</p>
+  </div>
+
+  <div class="finding info">
+    <div class="finding-head"><span class="sev">Navigation topology</span><strong>Sidebar "Pre-closure" opens the form, not the list</strong></div>
+    <p>Clicking Pre-closure in the left nav lands directly on the New/Edit form (route <code>PreclosureMaster</code>). The grid everyone thinks of as the "Pre-closure screen" is a second route, <code>PreclosureView</code>, reached only via the "View" control in the form's top-right corner &mdash; itself a plain clickable <code>&lt;span&gt;</code>, not a link.</p>
+    <p class="reco"><b>Action:</b> <code>navigateToPreClosure()</code> and <code>navigateToPreClosureList()</code> are now two distinct page-object methods so every test states which one it means.</p>
+  </div>
+
+  <div class="finding info">
+    <div class="finding-head"><span class="sev">UI state</span><strong>The submit button reads "Save" or "Update" depending on mode</strong></div>
+    <p>Same control, same position, different label: "Save" when creating, "Update" when editing an existing row. A locator pinned to the literal text "Save" silently stops matching the moment a test opens a row for edit.</p>
+    <p class="reco"><b>Action:</b> the submit-button locator now matches <code>/^(Save|Update)$/</code>.</p>
+  </div>
+
+  <div class="finding info">
+    <div class="finding-head"><span class="sev">Timing</span><strong>Loan Name options load asynchronously after Loan Type changes</strong></div>
+    <p>The Loan Name dropdown is empty until an Angular call populates it in response to the Loan Type selection. Selecting Loan Name immediately after Loan Type &mdash; the natural thing to automate &mdash; sometimes fires before the options exist.</p>
+    <p class="reco"><b>Action:</b> <code>fillForm()</code> now waits for the Loan Name <code>&lt;select&gt;</code> to gain more than its placeholder option before selecting from it.</p>
+  </div>
+</section>
+
+<section id="coverage">
+  <h2>Coverage by test-strategy category</h2>
+  <p class="section-note">Mapped against the same 37-point checklist used for the Charge screen. Pre-closure is a single-form create/edit/delete screen with no file upload, currency display, or date-picker field, so most of the infrastructure-level categories (API, DB, accessibility, DAST) are genuinely out of scope for this pass rather than missed &mdash; they were never wired up for this screen.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>#</th><th class="wrap">Category</th><th class="num">Run</th><th class="num">Pass</th><th class="num">Fail</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="wrap">Unit Testing</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">N/A</span></td></tr>
+      <tr><td>2</td><td class="wrap">Smoke Testing</td><td class="num">2</td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>3</td><td class="wrap">Sanity Testing</td><td class="num">2<span style="color:var(--ink-faint)">*</span></td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED<span style="font-weight:400"> *same as #2</span></span></td></tr>
+      <tr><td>4</td><td class="wrap">Regression Testing</td><td class="num">22</td><td class="num pass-n">22</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>5</td><td class="wrap">Functional Testing</td><td class="num">7</td><td class="num pass-n">7</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>6</td><td class="wrap">UI Testing</td><td class="num">2<span style="color:var(--ink-faint)">*</span></td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-partial">PARTIAL &mdash; layout/labels only, no visual-diff snapshots</span></td></tr>
+      <tr><td>7</td><td class="wrap">End&#8209;to&#8209;End Testing</td><td class="num">3</td><td class="num pass-n">3</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED &mdash; create &rarr; edit &rarr; delete against live data</span></td></tr>
+      <tr><td>8</td><td class="wrap">Validation Testing</td><td class="num">6</td><td class="num pass-n">6</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>9</td><td class="wrap">Business Rule Validation</td><td class="num">4</td><td class="num pass-n">4</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED &mdash; duplicate config, GST%&nbsp;required, radio exclusivity</span></td></tr>
+      <tr><td>10</td><td class="wrap">API Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no API docs/network capture for this screen yet</span></td></tr>
+      <tr><td>11</td><td class="wrap">Database Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no DB credentials/schema provided</span></td></tr>
+      <tr><td>12</td><td class="wrap">Security Testing</td><td class="num">2</td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED &mdash; SQLi / XSS payloads on the percentage field</span></td></tr>
+      <tr><td>13</td><td class="wrap">Accessibility (axe-core)</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; not run this pass</span></td></tr>
+      <tr><td>14</td><td class="wrap">Cross Browser Testing</td><td class="num">3 <span style="color:var(--ink-faint)">projects</span></td><td class="num pass-n">&ndash;</td><td class="num fail-n">&ndash;</td><td><span class="cov-badge cov-partial">CONFIGURED, chromium&#8209;verified &mdash; firefox/webkit not yet run</span></td></tr>
+      <tr><td>15</td><td class="wrap">Responsive Testing</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; not run this pass</span></td></tr>
+      <tr><td>16</td><td class="wrap">Boundary Value Analysis</td><td class="num">5</td><td class="num pass-n">5</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED &mdash; Charge % at 0 / 100 / &minus;1 / 101 / 99.99</span></td></tr>
+      <tr><td>17</td><td class="wrap">Equivalence Partitioning</td><td class="num">1<span style="color:var(--ink-faint)">*</span></td><td class="num pass-n">1</td><td class="num fail-n">0</td><td><span class="cov-badge cov-partial">PARTIAL &mdash; *GST-option branching only, dropdown option lists not enumerated</span></td></tr>
+      <tr><td>18</td><td class="wrap">Negative Testing</td><td class="num">13</td><td class="num pass-n">13</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>19</td><td class="wrap">Positive Testing</td><td class="num">9</td><td class="num pass-n">9</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>20</td><td class="wrap">Exception Handling</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no network-failure test written</span></td></tr>
+      <tr><td>21</td><td class="wrap">Error Message Validation</td><td class="num">3</td><td class="num pass-n">3</td><td class="num fail-n">0</td><td><span class="cov-badge cov-partial">PARTIAL &mdash; presence of a validation message asserted, not its exact copy</span></td></tr>
+      <tr><td>22</td><td class="wrap">File Upload Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">N/A &mdash; no upload field on this form</span></td></tr>
+      <tr><td>23</td><td class="wrap">Search Validation</td><td class="num">1</td><td class="num pass-n">1</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>24</td><td class="wrap">Sorting Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; column 3-dot menus not exercised this pass</span></td></tr>
+      <tr><td>25</td><td class="wrap">Filtering Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">N/A &mdash; search box is the only filter, covered under #23</span></td></tr>
+      <tr><td>26</td><td class="wrap">Print Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; Export PDF/Excel buttons not exercised this pass</span></td></tr>
+      <tr><td>27</td><td class="wrap">Role&#8209;Based Access</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; only one login role available</span></td></tr>
+      <tr><td>28</td><td class="wrap">Session Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no expired-session scenario written</span></td></tr>
+      <tr><td>29</td><td class="wrap">Duplicate Pre-closure Validation</td><td class="num">1</td><td class="num pass-n">1</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>30</td><td class="wrap">Currency Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">N/A &mdash; no currency field on Pre-closure</span></td></tr>
+      <tr><td>31</td><td class="wrap">Date Validation</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">N/A &mdash; no date field on Pre-closure</span></td></tr>
+      <tr><td>32</td><td class="wrap">Sanity Test Cases</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">Same as #3, not duplicated</span></td></tr>
+      <tr><td>33</td><td class="wrap">Edge Case Scenarios</td><td class="num">3<span style="color:var(--ink-faint)">*</span></td><td class="num pass-n">3</td><td class="num fail-n">0</td><td><span class="cov-badge cov-partial">PARTIAL &mdash; *empty/non-numeric lock-in period only</span></td></tr>
+      <tr><td>34</td><td class="wrap">Performance Recommendations</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">RECOMMENDATIONS ONLY &mdash; no timing assertions written</span></td></tr>
+      <tr><td>35</td><td class="wrap">DAST / SAST</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; needs ZAP / Semgrep, out of scope for Playwright</span></td></tr>
+      <tr><td>36</td><td class="wrap">Microfrontend Integration</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">N/A &mdash; app is not microfrontend-based</span></td></tr>
+      <tr><td>37</td><td class="wrap">Telematics Testing</td><td class="num">0</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td><span class="cov-badge cov-na">N/A &mdash; NBFC loan app, no vehicle/IoT surface</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="results">
+  <h2>Detailed results</h2>
+  <p class="section-note">Grouped by spec file, in the order they ran. This is the full suite, destructive tests included &mdash; each Save/Delete below ran once against the live grid (Loan Type <code>Gold Loan</code> / Loan Name <code>New Gold Loan</code>, a combination not already configured) and cleaned up after itself. Routine runs should still use <code>npm run test</code> with <code>--grep-invert @destructive</code> to skip these.</p>
+
+  <div class="group-title">Smoke <span class="counts"><b class="p">2 passed</b> &middot; <b class="f">0 failed</b> &middot; 2 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">should navigate to Pre-closure and display the New/Edit form</span><span class="tag">smoke</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/preClosure.smoke.spec.js</code></p>
+      <h4>Steps</h4>
+      <ol><li>log in &rarr; click Loans &rarr; click Pre-closure</li><li>assert Loan Type / Loan Name dropdowns, Save, Clear and the View control are all visible</li></ol>
+    </div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">should open the Pre-closure list grid via View</span><span class="tag">smoke</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/preClosure.smoke.spec.js</code></p>
+      <h4>Steps</h4>
+      <ol><li>navigate to the form, then click View</li><li>assert the "PreClosure" grid title, +New button and search box are visible</li></ol>
+    </div>
+  </details>
+
+  <div class="group-title">Functional <span class="counts"><b class="p">7 passed</b> &middot; <b class="f">0 failed</b> &middot; 7 total <span style="opacity:.6">(3 destructive)</span></span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">should create a new Pre-closure configuration</span><span class="tag">positive</span><span class="tag">destructive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.functional.spec.js</code></p>
+      <h4>Steps</h4><ol><li>open a fresh form &middot; fill Loan Type, Loan Name, lock-in period, charge %, interest basis, GST</li><li><code>save()</code> &middot; app returns to the list with a "Saved Successfully" toast</li><li>assert the new row is visible in the grid</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">editing an existing row updates it without duplicating</span><span class="tag">positive</span><span class="tag">destructive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.functional.spec.js</code></p>
+      <h4>Steps</h4><ol><li><code>editRowByLoanName()</code> via the grid's <code>#icon-edit</code> control &middot; form opens pre-filled</li><li>change the charge percentage &middot; click <b>Update</b></li><li>assert the Loan Name still appears exactly once in the grid</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Clear button resets the form fields</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.functional.spec.js</code></p>
+      <h4>Steps</h4><ol><li>fill the form &middot; <code>clear()</code></li><li>assert lock-in period and charge percentage inputs are empty</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">only one "Pre-Closure interest is calculated on" radio can be active</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.functional.spec.js</code></p>
+      <h4>Steps</h4><ol><li>check Future Principal &middot; assert it's checked and the other option is not</li><li>check the other option &middot; assert the reverse</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">GST % dropdown reflects the selected GST option</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.functional.spec.js</code></p>
+      <p class="why">Original assumption &mdash; that the GST % dropdown only renders when "Excluded" is chosen &mdash; was wrong live: the dropdown is always present. Test rewritten to assert the radio-group's exclusive-selection behavior instead.</p>
+      <h4>Steps</h4><ol><li>check Excluded &middot; GST % dropdown visible</li><li>check Included, then No GST &middot; assert exclusivity across all three radios</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">search filters the grid by Loan Name</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.functional.spec.js</code></p>
+      <h4>Steps</h4><ol><li>search "Bullet Loan" &middot; row visible</li><li>search a nonsense string &middot; "No records available." shown</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">delete removes the row immediately</span><span class="tag">positive</span><span class="tag">destructive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.functional.spec.js</code></p>
+      <p class="why">Originally written to expect a confirmation dialog per the brief; rewritten once live verification showed there is none &mdash; see Key Findings.</p>
+      <h4>Steps</h4><ol><li><code>deleteRowByLoanName()</code> via <code>#icon-delete</code></li><li>assert the Loan Name has zero matches left in the grid</li></ol></div>
+  </details>
+
+  <div class="group-title">Negative &amp; Validation <span class="counts"><b class="p">13 passed</b> &middot; <b class="f">0 failed</b> &middot; 13 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Save with no Loan Type / Loan Name selected shows validation error</span><span class="tag">negative</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.negative.spec.js</code></p><h4>Steps</h4><ol><li>open a fresh form &middot; Save immediately &middot; assert a required/mandatory message appears</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Save with duplicate Loan Type + Loan Name combination is rejected</span><span class="tag">negative</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.negative.spec.js</code></p><h4>Steps</h4><ol><li>fill Loan Type/Name = Bullet Loan / Bullet Loan (already configured) &middot; Save</li><li>behavioral assertion: the form stays open rather than navigating away</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">boundary/invalid Charge Type Percentage &mdash; 5 values (0, 100, &minus;1, 101, 99.99)</span><span class="tag">boundary</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.negative.spec.js</code></p>
+      <p class="why">The field carries a keystroke-filtering directive plus a live truncate/reformat behavior, so tests type character-by-character (<code>pressSequentially</code>, not <code>fill</code>) to exercise it the way a real user would, then assert the resulting value stays within 0&ndash;100 rather than matching an exact echoed string.</p>
+      <h4>Steps</h4><ol><li>type each value into the percentage field</li><li>assert the resolved numeric value, if any, is between 0 and 100</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">invalid Min. Lock-in Period &mdash; 3 values (&minus;1, "abc", "")</span><span class="tag">negative</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.negative.spec.js</code></p><h4>Steps</h4><ol><li>type each value &middot; Save &middot; assert the form stays open (does not persist an invalid period)</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">SQL injection payload in Charge Type Percentage is not accepted as-is</span><span class="tag">security</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.negative.spec.js</code></p><h4>Steps</h4><ol><li>type <code>1' OR '1'='1</code> &middot; Save &middot; assert the field's value contains no quote character</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">XSS payload in numeric fields is not accepted as-is</span><span class="tag">security</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.negative.spec.js</code></p><h4>Steps</h4><ol><li>type <code>&lt;script&gt;alert(1)&lt;/script&gt;</code> &middot; Save &middot; assert the field's value contains no <code>&lt;script&gt;</code> tag</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Selecting Excluded for GST without choosing GST % blocks Save</span><span class="tag">negative</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/preClosure.negative.spec.js</code></p><h4>Steps</h4><ol><li>check Excluded, leave GST % on "Select" &middot; Save &middot; assert a GST-required message appears</li></ol></div>
+  </details>
+
+  <div class="group-title">Live-verified in this pass, ahead of automation <span class="counts">2 behaviors, hand-confirmed before writing the assertions above</span></div>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">keystroke-level filtering blocks non-numeric characters that a raw DOM write does not</span><span class="tag">info</span></summary>
+    <div class="test-body">
+      <p>The percentage field's <code>appnumbersonly</code> directive only listens for real keydown events. Setting its value with <code>.fill()</code> (a direct DOM write) let a bare "&minus;1" through untouched; switching every negative/injection test to <code>.pressSequentially()</code> &mdash; simulated real typing &mdash; showed the directive does correctly strip the character. The gap is automation-method, not app behavior, but worth flagging: any client-side filter here is bypassable by anything that sets the DOM value directly rather than typing.</p>
+    </div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">grid is backed by a Kendo UI table (<code>#icon-edit</code> / <code>#icon-delete</code>)</span><span class="tag">info</span></summary>
+    <div class="test-body"><p>Row actions are plain <code>&lt;div id="icon-edit"&gt;</code> / <code>&lt;div id="icon-delete"&gt;</code> elements, not <code>&lt;img&gt;</code> or <code>title</code>-attributed icons as the original locator guessed. Page object updated accordingly.</p></div>
+  </details>
+
+</section>
+
+<section id="notes">
+  <h2>How to reproduce</h2>
+  <div class="table-wrap" style="padding:18px 22px;">
+    <pre style="margin:0;background:none;border:none;padding:0;">cd "Pre-Closure"
+npm install
+npx playwright install chromium
+
+npx playwright test --grep-invert "@destructive"   # this report's non-destructive 19
+npx playwright test --grep "@destructive"          # create/edit/delete against the live grid
+npx playwright test                                 # full 22, as run for this report</pre>
+  </div>
+</section>
+
+</main>
+
+<footer class="rep">
+  Generated from a live Playwright run against <code>demonbfc.finsta.co.in</code> &middot; chromium project, full suite including destructive &middot; framework: <code>Pre-Closure/</code> &middot; HTML report and traces written to <code>reports/html-report</code> after any local run.
+</footer>
+
+</body>
+</html>

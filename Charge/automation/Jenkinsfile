@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    environment {
+        ENV = 'qa'
+        CI = 'true'
+    }
+
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+    }
+
+    stages {
+        stage('Install dependencies') {
+            steps {
+                sh 'npm ci'
+            }
+        }
+
+        stage('Install browsers') {
+            steps {
+                sh 'npx playwright install --with-deps'
+            }
+        }
+
+        stage('Execute tests') {
+            steps {
+                sh 'npm run test:safe'
+            }
+        }
+
+        stage('Generate Allure report') {
+            steps {
+                sh 'npm run allure:generate'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'reports/html-report/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'screenshots/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
+            junit allowEmptyResults: true, testResults: 'reports/junit-results.xml'
+            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+        }
+    }
+}

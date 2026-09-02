@@ -1,0 +1,27 @@
+{
+  "name": "loans-configuration-automation",
+  "version": "1.0.0",
+  "description": "Playwright POM automation framework for the Loans Configuration module",
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:negative": "playwright test --grep @negative",
+    "test:destructive": "playwright test --grep @destructive",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://demonbfc.finsta.co.in/#/"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "allure-commandline": "^2.30.0",
+    "allure-playwright": "^2.15.1",
+    "dotenv": "^16.4.5",
+    "winston": "^3.14.2"
+  },
+  "license": "UNLICENSED"
+}

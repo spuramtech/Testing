@@ -1,0 +1,645 @@
+<testsuites id="" name="" tests="34" failures="5" skipped="0" errors="2" time="736.803196">
+<testsuite name="loansConfiguration\identificationDocumentsTab.spec.js" timestamp="2026-08-29T08:32:04.372Z" hostname="chromium" tests="4" failures="0" skipped="0" time="91.286" errors="0">
+<testcase name="Loans Configuration - Identification Documents Tab @functional › each accordion section expands and collapses @positive" classname="loansConfiguration\identificationDocumentsTab.spec.js" time="37.819">
+<system-out>
+<![CDATA[[2026-08-29 14:02:32] [INFO] Navigating to /
+[2026-08-29 14:02:40] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:02:41] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Identification Documents Tab @functional › Mandatory and Required checkboxes are independently togglable @positive" classname="loansConfiguration\identificationDocumentsTab.spec.js" time="17.668">
+<system-out>
+<![CDATA[[2026-08-29 14:02:55] [INFO] Navigating to /
+[2026-08-29 14:02:59] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:03:00] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Identification Documents Tab @functional › full proof-type list is present per category @positive" classname="loansConfiguration\identificationDocumentsTab.spec.js" time="19.152">
+<system-out>
+<![CDATA[[2026-08-29 14:03:12] [INFO] Navigating to /
+[2026-08-29 14:03:18] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:03:19] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Identification Documents Tab @functional › Submit button is visible on the final tab @smoke" classname="loansConfiguration\identificationDocumentsTab.spec.js" time="16.647">
+<system-out>
+<![CDATA[[2026-08-29 14:03:31] [INFO] Navigating to /
+[2026-08-29 14:03:35] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:03:36] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="loansConfiguration\installmentAndPenalTabs.spec.js" timestamp="2026-08-29T08:32:04.372Z" hostname="chromium" tests="7" failures="0" skipped="0" time="138.974" errors="1">
+<testcase name="Loans Configuration - Installment Due Date Tab @functional › EMI vs No EMI toggles Loan Installment Mode relevance @positive" classname="loansConfiguration\installmentAndPenalTabs.spec.js" time="12.768">
+<system-out>
+<![CDATA[[2026-08-29 14:03:45] [INFO] Navigating to /
+[2026-08-29 14:03:50] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:03:50] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Installment Due Date Tab @functional › only one Installment Due Date radio option is selectable at a time @positive" classname="loansConfiguration\installmentAndPenalTabs.spec.js" time="15.652">
+<system-out>
+<![CDATA[[2026-08-29 14:04:02] [INFO] Navigating to /
+[2026-08-29 14:04:06] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:04:06] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Installment Due Date Tab @functional › Next advances to Penal Interest tab @positive" classname="loansConfiguration\installmentAndPenalTabs.spec.js" time="17.345">
+<system-out>
+<![CDATA[[2026-08-29 14:04:17] [INFO] Navigating to /
+[2026-08-29 14:04:22] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:04:22] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Penal Interest Tab @functional › Fixed % numeric input accepts valid values @positive" classname="loansConfiguration\installmentAndPenalTabs.spec.js" time="30.241">
+<system-out>
+<![CDATA[[2026-08-29 14:04:35] [INFO] Navigating to /
+[2026-08-29 14:04:40] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:04:40] [INFO] Navigating to Loans Configuration screen
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › loansConfiguration\installmentAndPenalTabs.spec.js:51:3 › Loans Configuration - Penal Interest Tab @functional › Fixed % numeric input accepts valid values @positive 
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('select').filter({ has: locator('option').filter({ hasText: 'Bullet Loan' }) }).first()
+        - locator resolved to <select placeholder="Loan Type" class="form-control w-100" _ngcontent-ng-cli-universal-c2="">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - element is not visible
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - element is not visible
+        - retrying select option action
+          - waiting 100ms
+        29 × waiting for element to be visible and enabled
+           - element is not visible
+         - retrying select option action
+           - waiting 500ms
+
+
+       at ..\pages\BasePage.js:31
+
+      29 |     const tagName = await dropdownLocator.evaluate((el) => el.tagName).catch(() => null);
+      30 |     if (tagName === 'SELECT') {
+    > 31 |       await dropdownLocator.selectOption({ label: optionText });
+         |                             ^
+      32 |       return;
+      33 |     }
+      34 |     await dropdownLocator.click();
+        at LoansConfigurationWizardPage.selectDropdownOption (D:\DEMO NBFC\Loan Config\pages\BasePage.js:31:29)
+        at LoansConfigurationWizardPage.fillLoanCreation (D:\DEMO NBFC\Loan Config\pages\LoansConfigurationWizardPage.js:116:19)
+        at reachInstallmentDueDateTab (D:\DEMO NBFC\Loan Config\tests\loansConfiguration\installmentAndPenalTabs.spec.js:6:3)
+        at D:\DEMO NBFC\Loan Config\tests\loansConfiguration\installmentAndPenalTabs.spec.js:46:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\loansConfiguration-install-eb476-cepts-valid-values-positive-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Loans Configuration - Penal Interest Tab @functional › Grace Period numeric input accepts valid values @positive @boundary" classname="loansConfiguration\installmentAndPenalTabs.spec.js" time="29.747">
+<system-out>
+<![CDATA[[2026-08-29 14:05:25] [INFO] Navigating to /
+[2026-08-29 14:05:31] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:05:31] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Penal Interest Tab @functional › Clear resets both Fixed % and Grace Period panels @positive" classname="loansConfiguration\installmentAndPenalTabs.spec.js" time="17.121">
+<system-out>
+<![CDATA[[2026-08-29 14:05:43] [INFO] Navigating to /
+[2026-08-29 14:05:48] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:05:48] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Penal Interest Tab @functional › Next advances to Identification Documents tab @positive" classname="loansConfiguration\installmentAndPenalTabs.spec.js" time="16.1">
+<system-out>
+<![CDATA[[2026-08-29 14:05:59] [INFO] Navigating to /
+[2026-08-29 14:06:04] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:06:04] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="loansConfiguration\list.spec.js" timestamp="2026-08-29T08:32:04.372Z" hostname="chromium" tests="2" failures="0" skipped="0" time="27.693" errors="0">
+<testcase name="Loans Configuration - List Page @functional @regression › wizard landing page loads with title and embedded grid @smoke" classname="loansConfiguration\list.spec.js" time="13.883">
+<system-out>
+<![CDATA[[2026-08-29 14:06:15] [INFO] Navigating to /
+[2026-08-29 14:06:21] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:06:21] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - List Page @functional @regression › embedded grid displays existing loan rows with expected columns @positive" classname="loansConfiguration\list.spec.js" time="13.81">
+<system-out>
+<![CDATA[[2026-08-29 14:06:30] [INFO] Navigating to /
+[2026-08-29 14:06:36] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:06:36] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="loansConfiguration\loanConfigurationTab.spec.js" timestamp="2026-08-29T08:32:04.372Z" hostname="chromium" tests="11" failures="5" skipped="0" time="288.814" errors="1">
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Individual vs Business Entity toggles Applicant Type field @positive" classname="loansConfiguration\loanConfigurationTab.spec.js" time="13.136">
+<system-out>
+<![CDATA[[2026-08-29 14:06:43] [INFO] Navigating to /
+[2026-08-29 14:06:47] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:06:48] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Fixed vs Floating Interest Mode toggles associated fields @positive" classname="loansConfiguration\loanConfigurationTab.spec.js" time="14.479">
+<system-out>
+<![CDATA[[2026-08-29 14:06:56] [INFO] Navigating to /
+[2026-08-29 14:07:02] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:07:02] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › &quot;Not Applicable&quot; disables Loan Amount inputs when checked @positive @boundary" classname="loansConfiguration\loanConfigurationTab.spec.js" time="12.484">
+<system-out>
+<![CDATA[[2026-08-29 14:07:11] [INFO] Navigating to /
+[2026-08-29 14:07:15] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:07:15] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › &quot;Not Applicable&quot; disables Tenure inputs when checked @positive @boundary" classname="loansConfiguration\loanConfigurationTab.spec.js" time="12.389">
+<system-out>
+<![CDATA[[2026-08-29 14:07:23] [INFO] Navigating to /
+[2026-08-29 14:07:28] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:07:28] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Interest Rate Minimum greater than Maximum is rejected @negative @boundary" classname="loansConfiguration\loanConfigurationTab.spec.js" time="25.81">
+<system-out>
+<![CDATA[[2026-08-29 14:07:36] [INFO] Navigating to /
+[2026-08-29 14:07:42] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:07:42] [INFO] Navigating to Loans Configuration screen
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chromium] › loansConfiguration\loanConfigurationTab.spec.js:46:3 › Loans Configuration - Loan Configuration Tab @functional › Interest Rate Minimum greater than Maximum is rejected @negative @boundary 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 0
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      48 |     await wizardPage.fillLoanConfiguration({ interestRateType: 'Flat', interestRateMin: 20, interestRateMax: 10 });
+      49 |     await wizardPage.addConfigurationRow();
+    > 50 |     await expect.poll(() => wizardPage.getConfigurationRowCount()).toBe(before);
+         |                                                                    ^
+      51 |   });
+      52 |
+      53 |   test('Loan Amount Minimum greater than Maximum is rejected @negative @boundary', async ({ wizardPage }) => {
+        at D:\DEMO NBFC\Loan Config\tests\loansConfiguration\loanConfigurationTab.spec.js:50:68
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\loansConfiguration-loanCon-5138f--rejected-negative-boundary-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Loan Amount Minimum greater than Maximum is rejected @negative @boundary" classname="loansConfiguration\loanConfigurationTab.spec.js" time="35.363">
+<system-out>
+<![CDATA[[2026-08-29 14:08:23] [INFO] Navigating to /
+[2026-08-29 14:08:27] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:08:27] [INFO] Navigating to Loans Configuration screen
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chromium] › loansConfiguration\loanConfigurationTab.spec.js:53:3 › Loans Configuration - Loan Configuration Tab @functional › Loan Amount Minimum greater than Maximum is rejected @negative @boundary 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 0
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      59 |     });
+      60 |     await wizardPage.addConfigurationRow();
+    > 61 |     await expect.poll(() => wizardPage.getConfigurationRowCount()).toBe(before);
+         |                                                                    ^
+      62 |   });
+      63 |
+      64 |   test('Tenure From greater than To is rejected @negative @boundary', async ({ wizardPage }) => {
+        at D:\DEMO NBFC\Loan Config\tests\loansConfiguration\loanConfigurationTab.spec.js:61:68
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\loansConfiguration-loanCon-d2bb2--rejected-negative-boundary-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Tenure From greater than To is rejected @negative @boundary" classname="loansConfiguration\loanConfigurationTab.spec.js" time="35.912">
+<system-out>
+<![CDATA[[2026-08-29 14:09:06] [INFO] Navigating to /
+[2026-08-29 14:09:10] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:09:11] [INFO] Navigating to Loans Configuration screen
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chromium] › loansConfiguration\loanConfigurationTab.spec.js:64:3 › Loans Configuration - Loan Configuration Tab @functional › Tenure From greater than To is rejected @negative @boundary 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 0
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      66 |     await wizardPage.fillLoanConfiguration({ tenureNotApplicable: false, tenureFrom: 36, tenureTo: 12 });
+      67 |     await wizardPage.addConfigurationRow();
+    > 68 |     await expect.poll(() => wizardPage.getConfigurationRowCount()).toBe(before);
+         |                                                                    ^
+      69 |   });
+      70 |
+      71 |   test('Add button appends a new row to the configuration grid @positive', async ({ wizardPage }) => {
+        at D:\DEMO NBFC\Loan Config\tests\loansConfiguration\loanConfigurationTab.spec.js:68:68
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\loansConfiguration-loanCon-86eff--rejected-negative-boundary-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Add button appends a new row to the configuration grid @positive" classname="loansConfiguration\loanConfigurationTab.spec.js" time="36.865">
+<system-out>
+<![CDATA[[2026-08-29 14:09:49] [INFO] Navigating to /
+[2026-08-29 14:09:55] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:09:55] [INFO] Navigating to Loans Configuration screen
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chromium] › loansConfiguration\loanConfigurationTab.spec.js:71:3 › Loans Configuration - Loan Configuration Tab @functional › Add button appends a new row to the configuration grid @positive 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 0
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+      83 |     await expect
+      84 |       .poll(() => wizardPage.getConfigurationRowCount())
+    > 85 |       .toBe(before + 1);
+         |        ^
+      86 |   });
+      87 |
+      88 |   test('multiple configuration rows can be added @positive', async ({ wizardPage }) => {
+        at D:\DEMO NBFC\Loan Config\tests\loansConfiguration\loanConfigurationTab.spec.js:85:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\loansConfiguration-loanCon-34d70-configuration-grid-positive-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › multiple configuration rows can be added @positive" classname="loansConfiguration\loanConfigurationTab.spec.js" time="36.021">
+<system-out>
+<![CDATA[[2026-08-29 14:10:33] [INFO] Navigating to /
+[2026-08-29 14:10:38] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:10:38] [INFO] Navigating to Loans Configuration screen
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chromium] › loansConfiguration\loanConfigurationTab.spec.js:88:3 › Loans Configuration - Loan Configuration Tab @functional › multiple configuration rows can be added @positive 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+       99 |       await wizardPage.addConfigurationRow();
+      100 |       expectedCount += 1;
+    > 101 |       await expect.poll(() => wizardPage.getConfigurationRowCount()).toBe(expectedCount);
+          |                                                                      ^
+      102 |     }
+      103 |     await expect
+      104 |       .poll(() => wizardPage.getConfigurationRowCount())
+        at D:\DEMO NBFC\Loan Config\tests\loansConfiguration\loanConfigurationTab.spec.js:101:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\loansConfiguration-loanCon-6b8f3--rows-can-be-added-positive-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Clear resets Loan Configuration tab fields @positive" classname="loansConfiguration\loanConfigurationTab.spec.js" time="39.859">
+<system-out>
+<![CDATA[[2026-08-29 14:11:17] [INFO] Navigating to /
+[2026-08-29 14:11:22] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:11:22] [INFO] Navigating to Loans Configuration screen
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\video.webm]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\error-context.md]]
+
+[[ATTACHMENT|..\..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › loansConfiguration\loanConfigurationTab.spec.js:108:3 › Loans Configuration - Loan Configuration Tab @functional › Clear resets Loan Configuration tab fields @positive 
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('select').filter({ has: locator('option').filter({ hasText: 'Bullet Loan' }) }).first()
+        - locator resolved to <select placeholder="Loan Type" class="form-control w-100" _ngcontent-ng-cli-universal-c2="">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - element is not visible
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - element is not visible
+        - retrying select option action
+          - waiting 100ms
+        29 × waiting for element to be visible and enabled
+           - element is not visible
+         - retrying select option action
+           - waiting 500ms
+
+
+       at ..\pages\BasePage.js:31
+
+      29 |     const tagName = await dropdownLocator.evaluate((el) => el.tagName).catch(() => null);
+      30 |     if (tagName === 'SELECT') {
+    > 31 |       await dropdownLocator.selectOption({ label: optionText });
+         |                             ^
+      32 |       return;
+      33 |     }
+      34 |     await dropdownLocator.click();
+        at LoansConfigurationWizardPage.selectDropdownOption (D:\DEMO NBFC\Loan Config\pages\BasePage.js:31:29)
+        at LoansConfigurationWizardPage.fillLoanCreation (D:\DEMO NBFC\Loan Config\pages\LoansConfigurationWizardPage.js:116:19)
+        at reachLoanConfigurationTab (D:\DEMO NBFC\Loan Config\tests\loansConfiguration\loanConfigurationTab.spec.js:6:3)
+        at D:\DEMO NBFC\Loan Config\tests\loansConfiguration\loanConfigurationTab.spec.js:12:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\loansConfiguration-loanCon-30a8d-uration-tab-fields-positive-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Loans Configuration - Loan Configuration Tab @functional › Next advances to Installment Due Date tab @positive" classname="loansConfiguration\loanConfigurationTab.spec.js" time="26.496">
+<system-out>
+<![CDATA[[2026-08-29 14:12:05] [INFO] Navigating to /
+[2026-08-29 14:12:10] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:12:10] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="loansConfiguration\loanCreationTab.spec.js" timestamp="2026-08-29T08:32:04.372Z" hostname="chromium" tests="8" failures="0" skipped="0" time="102.861" errors="0">
+<testcase name="Loans Configuration - Loan Creation Tab @functional › New button opens an empty Loan Creation tab @smoke" classname="loansConfiguration\loanCreationTab.spec.js" time="12.837">
+<system-out>
+<![CDATA[[2026-08-29 14:12:19] [INFO] Navigating to /
+[2026-08-29 14:12:25] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:12:25] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Creation Tab @functional › Loan Type dropdown exposes the full predefined option list" classname="loansConfiguration\loanCreationTab.spec.js" time="12.132">
+<system-out>
+<![CDATA[[2026-08-29 14:12:32] [INFO] Navigating to /
+[2026-08-29 14:12:37] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:12:37] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Creation Tab @functional › blank mandatory fields block progression to next tab @negative @validation" classname="loansConfiguration\loanCreationTab.spec.js" time="12.558">
+<system-out>
+<![CDATA[[2026-08-29 14:12:45] [INFO] Navigating to /
+[2026-08-29 14:12:49] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:12:50] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Creation Tab @functional › valid mandatory fields allow progression to Loan Configuration tab @positive" classname="loansConfiguration\loanCreationTab.spec.js" time="13.171">
+<system-out>
+<![CDATA[[2026-08-29 14:12:57] [INFO] Navigating to /
+[2026-08-29 14:13:02] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:13:02] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Creation Tab @functional › duplicate Loan Name/Loan Code is rejected @negative @duplicate" classname="loansConfiguration\loanCreationTab.spec.js" time="12.978">
+<system-out>
+<![CDATA[[2026-08-29 14:13:10] [INFO] Navigating to /
+[2026-08-29 14:13:15] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:13:15] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Creation Tab @functional › Clear button resets Loan Creation fields @positive" classname="loansConfiguration\loanCreationTab.spec.js" time="12.516">
+<system-out>
+<![CDATA[[2026-08-29 14:13:23] [INFO] Navigating to /
+[2026-08-29 14:13:28] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:13:28] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Creation Tab @functional › SQL injection payload in Loan Name is safely handled @security @negative" classname="loansConfiguration\loanCreationTab.spec.js" time="13.502">
+<system-out>
+<![CDATA[[2026-08-29 14:13:36] [INFO] Navigating to /
+[2026-08-29 14:13:41] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:13:42] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+<testcase name="Loans Configuration - Loan Creation Tab @functional › XSS payload in Loan Code is not executed @security @negative" classname="loansConfiguration\loanCreationTab.spec.js" time="13.167">
+<system-out>
+<![CDATA[[2026-08-29 14:13:49] [INFO] Navigating to /
+[2026-08-29 14:13:55] [INFO] Logging in as admin@kapilit.com
+[2026-08-29 14:13:55] [INFO] Navigating to Loans Configuration screen
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="loansConfiguration\login.spec.js" timestamp="2026-08-29T08:32:04.372Z" hostname="chromium" tests="2" failures="0" skipped="0" time="21.735" errors="0">
+<testcase name="Login @smoke @sanity › user can log in with valid credentials" classname="loansConfiguration\login.spec.js" time="11.333">
+<system-out>
+<![CDATA[[2026-08-29 14:14:03] [INFO] Navigating to /
+[2026-08-29 14:14:08] [INFO] Logging in as admin@kapilit.com
+]]>
+</system-out>
+</testcase>
+<testcase name="Login @smoke @sanity › login fails with invalid password @negative" classname="loansConfiguration\login.spec.js" time="10.402">
+<system-out>
+<![CDATA[[2026-08-29 14:14:14] [INFO] Navigating to /
+[2026-08-29 14:14:19] [INFO] Logging in as admin@kapilit.com
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

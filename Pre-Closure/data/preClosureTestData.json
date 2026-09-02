@@ -1,0 +1,18 @@
+{
+  "validConfig": {
+    "loanType": "Gold Loan",
+    "loanName": "New Gold Loan",
+    "lockInPeriodValue": 2,
+    "lockInPeriodUnit": "Months",
+    "chargePercentage": 2,
+    "interestOn": "Future Principal and Outstanding Principal",
+    "gstOption": "Excluded",
+    "gstPercent": 18
+  },
+  "duplicateConfig": {
+    "loanType": "Bullet Loan",
+    "loanName": "Bullet Loan"
+  },
+  "boundaryChargePercentages": [0, 100, -1, 101, 99.99],
+  "negativeLockInPeriods": [-1, "abc", ""]
+}

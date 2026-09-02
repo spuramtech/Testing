@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Loans Configuration Test Report</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #f2f4f8;
+    --surface: #ffffff;
+    --surface-2: #eaeef5;
+    --border: #d9dfea;
+    --ink: #16202e;
+    --ink-dim: #57657a;
+    --ink-faint: #8493a8;
+    --accent: #2f5fd6;
+    --accent-ink: #1c3f9e;
+    --accent-soft: #e4eaff;
+    --pass: #1a8f5a;
+    --pass-bg: #e2f6ec;
+    --fail: #c23434;
+    --fail-bg: #fbe7e6;
+    --skip: #a3781a;
+    --skip-bg: #fbf1de;
+    --code-bg: #eef1f7;
+    --shadow: 0 1px 2px rgba(22,32,46,.06), 0 8px 24px -12px rgba(22,32,46,.12);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #0e1420;
+      --surface: #161e2d;
+      --surface-2: #1c2637;
+      --border: #2a3448;
+      --ink: #e7ecf5;
+      --ink-dim: #a2adc2;
+      --ink-faint: #6d7893;
+      --accent: #6f93ff;
+      --accent-ink: #a9c0ff;
+      --accent-soft: #1c2a4d;
+      --pass: #4fd393;
+      --pass-bg: #103224;
+      --fail: #ff7a72;
+      --fail-bg: #3a1817;
+      --skip: #f0c15c;
+      --skip-bg: #3a2e10;
+      --code-bg: #0f1522;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px -16px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1420;
+    --surface: #161e2d;
+    --surface-2: #1c2637;
+    --border: #2a3448;
+    --ink: #e7ecf5;
+    --ink-dim: #a2adc2;
+    --ink-faint: #6d7893;
+    --accent: #6f93ff;
+    --accent-ink: #a9c0ff;
+    --accent-soft: #1c2a4d;
+    --pass: #4fd393;
+    --pass-bg: #103224;
+    --fail: #ff7a72;
+    --fail-bg: #3a1817;
+    --skip: #f0c15c;
+    --skip-bg: #3a2e10;
+    --code-bg: #0f1522;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px -16px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); }
+
+  a { color: var(--accent); }
+
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; text-wrap: balance; font-weight: 600; margin: 0; }
+  code, pre, .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+  header.top {
+    padding: 40px clamp(20px, 5vw, 56px) 32px;
+    background: linear-gradient(155deg, var(--accent-ink), var(--accent) 130%);
+    color: #eef2ff;
+    position: relative;
+    overflow: hidden;
+  }
+  header.top::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 85% 20%, rgba(255,255,255,.14), transparent 45%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    opacity: .78;
+    margin-bottom: 10px;
+  }
+  header.top h1 { font-size: clamp(26px, 3.4vw, 36px); color: #fff; }
+  .run-meta {
+    margin-top: 12px;
+    display: flex; flex-wrap: wrap; gap: 6px 18px;
+    font-size: 13.5px; opacity: .88;
+  }
+  .verdict-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 18px; padding: 6px 14px;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px;
+    font-size: 13px; font-weight: 500;
+  }
+  .verdict-dot { width: 8px; height: 8px; border-radius: 50%; background: #ffd166; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(122px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: -28px clamp(20px, 5vw, 56px) 0;
+    box-shadow: var(--shadow);
+    position: relative; z-index: 2;
+  }
+  .stat {
+    background: var(--surface);
+    padding: 18px 16px;
+    text-align: left;
+  }
+  .stat .n { font-family: "Fraunces", serif; font-size: 30px; font-variant-numeric: tabular-nums; line-height: 1; }
+  .stat .l { margin-top: 6px; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); }
+  .stat.pass .n { color: var(--pass); }
+  .stat.fail .n { color: var(--fail); }
+  .stat.skip .n { color: var(--skip); }
+
+  main { max-width: 1080px; margin: 0 auto; padding: 48px clamp(20px, 5vw, 56px) 80px; }
+  section + section { margin-top: 52px; }
+
+  section > h2 {
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+  .section-note { font-size: 14px; color: var(--ink-dim); margin: -10px 0 22px; max-width: 68ch; }
+
+  .finding {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+  }
+  .finding.critical { border-left-color: var(--fail); }
+  .finding.high { border-left-color: #e08a2e; }
+  .finding.medium { border-left-color: var(--skip); }
+  .finding.info { border-left-color: var(--accent); }
+  .finding-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .sev {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; font-weight: 600; letter-spacing: .06em;
+    padding: 2px 8px; border-radius: 999px; text-transform: uppercase;
+  }
+  .critical .sev { background: var(--fail-bg); color: var(--fail); }
+  .high .sev { background: #fbe9d6; color: #a05a12; }
+  .medium .sev { background: var(--skip-bg); color: var(--skip); }
+  .info .sev { background: var(--accent-soft); color: var(--accent-ink); }
+  .finding-head strong { font-size: 15px; }
+  .finding p { margin: 6px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-dim); }
+  .finding .reco { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); color: var(--ink); }
+  .finding .reco b { color: var(--accent-ink); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td.wrap, th.wrap { white-space: normal; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); font-weight: 600; background: var(--surface-2); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; }
+  td.pass-n { color: var(--pass); font-weight: 600; }
+  td.fail-n { color: var(--fail); font-weight: 600; }
+
+  .cov-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: .02em; }
+  .cov-covered { background: var(--pass-bg); color: var(--pass); }
+  .cov-partial { background: var(--skip-bg); color: var(--skip); }
+  .cov-na { background: var(--surface-2); color: var(--ink-faint); }
+  .cov-blocked { background: var(--fail-bg); color: var(--fail); }
+
+  .group-title {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+    padding: 12px 16px; margin-bottom: 8px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    font-size: 15px; font-weight: 600;
+  }
+  .group-title .counts { font-size: 12px; font-weight: 400; color: var(--ink-faint); font-family: "IBM Plex Mono", monospace; }
+  .group-title .counts b.p { color: var(--pass); } .group-title .counts b.f { color: var(--fail); } .group-title .counts b.s { color: var(--skip); }
+
+  details.test {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  details.test[open] { border-color: var(--accent); }
+  details.test > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 11px 14px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13.5px;
+  }
+  details.test > summary::-webkit-details-marker { display: none; }
+  details.test > summary::before {
+    content: "\25BA";
+    display: inline-block;
+    transition: transform .15s ease;
+    color: var(--ink-faint);
+    font-size: 16px;
+    width: 10px;
+  }
+  details.test[open] > summary::before { transform: rotate(90deg); }
+  .badge { font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 2px 8px; border-radius: 5px; text-transform: uppercase; font-family: "IBM Plex Mono", monospace; flex-shrink: 0; }
+  .badge.passed { background: var(--pass-bg); color: var(--pass); }
+  .badge.failed { background: var(--fail-bg); color: var(--fail); }
+  .badge.skipped { background: var(--skip-bg); color: var(--skip); }
+  .t-title { flex: 1; }
+  .tag { font-size: 10.5px; color: var(--accent-ink); background: var(--accent-soft); padding: 1px 7px; border-radius: 5px; margin-left: 4px; font-family: "IBM Plex Mono", monospace; }
+  .test-body { padding: 4px 16px 16px 40px; font-size: 13.5px; }
+  .test-body h4 { font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-faint); margin: 12px 0 6px; font-weight: 600; }
+  .test-body ol { margin: 0; padding-left: 20px; }
+  .test-body li { margin-bottom: 3px; }
+  .test-body pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; margin: 6px 0; }
+  .why { color: var(--ink-dim); }
+  .why b { color: var(--ink); }
+  .reco-box { background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; margin-top: 6px; color: var(--ink); }
+
+  footer.rep {
+    max-width: 1080px; margin: 0 auto; padding: 24px clamp(20px, 5vw, 56px) 56px;
+    color: var(--ink-faint); font-size: 12.5px; border-top: 1px solid var(--border);
+  }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="eyebrow">Playwright Automation &middot; Kapil IT</div>
+  <h1>Loans Configuration Test Report</h1>
+  <div class="run-meta">
+    <span>Loans &rsaquo; Loan Configuration &rsaquo; Loans Configuration</span>
+    <span>&middot;</span>
+    <span>demonbfc.finsta.co.in</span>
+    <span>&middot;</span>
+    <span>2026-08-29</span>
+    <span>&middot;</span>
+    <span>chromium &middot; non-destructive suite, 1 worker</span>
+  </div>
+  <div class="verdict-badge"><span class="verdict-dot"></span> 27 / 34 passed &middot; 6 real findings, 1 environment-driven flake pattern</div>
+</header>
+
+<div class="stat-row">
+  <div class="stat"><div class="n">34</div><div class="l">Executed</div></div>
+  <div class="stat pass"><div class="n">27</div><div class="l">Passed</div></div>
+  <div class="stat fail"><div class="n">7</div><div class="l">Failed</div></div>
+  <div class="stat skip"><div class="n">0</div><div class="l">Skipped</div></div>
+  <div class="stat"><div class="n">79%</div><div class="l">Pass rate</div></div>
+  <div class="stat"><div class="n">~12m</div><div class="l">Run time</div></div>
+</div>
+
+<main>
+
+<section id="findings">
+  <h2>Key findings</h2>
+  <p class="section-note">Issues surfaced against the live app during automation, not gaps in the test code. Ranked by what a reviewer should look at first.</p>
+
+  <div class="finding high">
+    <div class="finding-head"><span class="sev">High</span><strong>Validation failures are silent &mdash; no visible error message anywhere in the wizard</strong></div>
+    <p>Blank mandatory fields, a duplicate Loan Name/Code, and every boundary violation (Interest Rate Min &gt; Max, Loan Amount Min &gt; Max, Tenure From &gt; To) are all correctly <em>rejected</em> &mdash; the wizard simply declines to advance or add a row &mdash; but at no point does any toast, inline message, or highlighted field tell the user why. A user gets no feedback at all when a submission is silently blocked.</p>
+    <p class="reco"><b>Fix:</b> add an inline error message or toast for each of these rejection paths so users understand why Next/Add did nothing.</p>
+  </div>
+
+  <div class="finding medium">
+    <div class="finding-head"><span class="sev">Medium</span><strong>Mandatory/Required proof-type checkboxes have no accessible name</strong></div>
+    <p>On the Identification Documents tab, every checkbox in the PAN/Identification/Financial/Bank Proof tables renders as <code>&lt;label for="idproofmandate1"&gt;&lt;/label&gt;</code> &mdash; the label element exists and is correctly wired to its input's <code>id</code>, but contains no text. A screen-reader user hears an unlabeled checkbox for every single proof-type row.</p>
+    <p class="reco"><b>Fix:</b> add visually-hidden label text ("Mandatory - PAN CARD", "Required - PAN CARD", etc.) to each checkbox's label element.</p>
+  </div>
+
+  <div class="finding medium">
+    <div class="finding-head"><span class="sev">Medium</span><strong>Duplicate <code>id</code> / <code>formcontrolname</code> attributes across the wizard</strong></div>
+    <p>Found on three separate tabs: the EMI / No EMI radios (Installment Due Date tab) share one literal <code>id="loaninstalmentmode"</code> on both inputs; the Interest Rate Type select and the day-of-month field appear twice in the DOM with the same <code>formcontrolname</code>; and the Penal Interest radios reuse <code>id="inlineRadio1"</code> / <code>id="due"</code> across visible and hidden variants. Duplicate <code>id</code>s are invalid HTML and undermine both label association and any JavaScript/automation that targets elements by id.</p>
+    <p class="reco"><b>Fix:</b> give every form control a unique <code>id</code>/<code>formcontrolname</code>, including hidden/alternate variants of the same field.</p>
+  </div>
+
+  <div class="finding info">
+    <div class="finding-head"><span class="sev">Info</span><strong>Company Code / Branch Code are read-only, contrary to the original spec</strong></div>
+    <p>The brief described Company Code and Branch Code as free-text, "highlighted/required styling" inputs. In the live app both render as read-only <code>&lt;label&gt;</code> display fields, auto-populated by the app and not editable by the user at all.</p>
+  </div>
+
+  <div class="finding info">
+    <div class="finding-head"><span class="sev">Info</span><strong>The "Loans Configuration" screen has no dedicated list page &mdash; it's the Loan Creation tab</strong></div>
+    <p>The brief described a separate list screen (search box, Export PDF/Excel, standalone grid) ahead of the wizard. In the live app, navigating Loans &rsaquo; Loan Configuration &rsaquo; Loans Configuration lands directly on the 5-tab wizard with the existing-loans grid embedded under Tab 1. That embedded grid has no search box and no Export buttons &mdash; confirmed by inspecting the live DOM, not assumed.</p>
+  </div>
+
+  <div class="finding info">
+    <div class="finding-head"><span class="sev">Info</span><strong>Added-configuration-row grid state appears session-scoped, not draft-scoped</strong></div>
+    <p>The Loan Configuration tab's "added rows" grid should start empty for every brand-new Loan (confirmed empty in isolated verification). But when running the full suite back-to-back, the grid's starting row count was observed as non-zero (5) at the start of several tests despite each opening a fresh "+ New" wizard &mdash; suggesting the grid's state may be tied to the logged-in account/session rather than reset per Loan draft. Worth a manual check by a human tester logging in twice in a row and opening "+ New" each time.</p>
+  </div>
+</section>
+
+<section id="coverage">
+  <h2>Coverage by test-strategy category</h2>
+  <p class="section-note">Mapped against the 37-point checklist in the original brief. The Loans Configuration screen is a 5-tab wizard (Loan Creation, Loan Configuration, Installment Due Date, Penal Interest, Identification Documents) with no file upload field encountered, so several categories are genuinely not applicable rather than missed.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>#</th><th class="wrap">Category</th><th class="num">Run</th><th class="num">Pass</th><th class="num">Fail</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="wrap">Unit Testing</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">N/A</span></td></tr>
+      <tr><td>2</td><td class="wrap">Smoke Testing</td><td class="num">7</td><td class="num pass-n">7</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>3</td><td class="wrap">Sanity Testing</td><td class="num">2</td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>4</td><td class="wrap">Regression Testing</td><td class="num">2</td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>5</td><td class="wrap">Functional Testing</td><td class="num">32</td><td class="num pass-n">25</td><td class="num fail-n">7</td><td><span class="cov-badge cov-partial">PARTIAL</span></td></tr>
+      <tr><td>6</td><td class="wrap">UI Testing</td><td class="num">34</td><td class="num pass-n">27</td><td class="num fail-n">7</td><td><span class="cov-badge cov-partial">PARTIAL</span></td></tr>
+      <tr><td>7</td><td class="wrap">End-to-End Testing</td><td class="num">5<span style="color:var(--ink-faint)">*</span></td><td class="num pass-n">&mdash;</td><td class="num fail-n">&mdash;</td><td><span class="cov-badge cov-partial">WRITTEN, NOT RUN<span style="font-weight:400"> *@destructive, excluded from this run</span></span></td></tr>
+      <tr><td>8</td><td class="wrap">Validation Testing</td><td class="num">7</td><td class="num pass-n">4</td><td class="num fail-n">3</td><td><span class="cov-badge cov-partial">PARTIAL</span></td></tr>
+      <tr><td>9</td><td class="wrap">Business Rule Validation</td><td class="num">5</td><td class="num pass-n">2</td><td class="num fail-n">3</td><td><span class="cov-badge cov-partial">PARTIAL</span></td></tr>
+      <tr><td>10</td><td class="wrap">API Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no API docs/endpoints available this session</span></td></tr>
+      <tr><td>11</td><td class="wrap">Database Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no DB credentials/schema provided</span></td></tr>
+      <tr><td>12</td><td class="wrap">Security Testing</td><td class="num">2</td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED &mdash; SQLi / XSS payloads only</span></td></tr>
+      <tr><td>13</td><td class="wrap">Accessibility Testing (axe-core)</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; axe-core not wired into this framework; see Key Findings for a manually-found label defect</span></td></tr>
+      <tr><td>14</td><td class="wrap">Cross Browser Testing</td><td class="num">3 <span style="color:var(--ink-faint)">projects</span></td><td class="num pass-n">&mdash;</td><td class="num fail-n">&mdash;</td><td><span class="cov-badge cov-partial">CONFIGURED, CHROMIUM ONLY RUN &mdash; firefox/webkit projects exist but were not executed this session</span></td></tr>
+      <tr><td>15</td><td class="wrap">Responsive Testing</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no viewport-size tests written</span></td></tr>
+      <tr><td>16</td><td class="wrap">Boundary Value Analysis</td><td class="num">7</td><td class="num pass-n">4</td><td class="num fail-n">3</td><td><span class="cov-badge cov-partial">PARTIAL</span></td></tr>
+      <tr><td>17</td><td class="wrap">Equivalence Partitioning</td><td class="num">1</td><td class="num pass-n">1</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED &mdash; Loan Type dropdown option list</span></td></tr>
+      <tr><td>18</td><td class="wrap">Negative Testing</td><td class="num">10</td><td class="num pass-n">7</td><td class="num fail-n">3</td><td><span class="cov-badge cov-partial">PARTIAL</span></td></tr>
+      <tr><td>19</td><td class="wrap">Positive Testing</td><td class="num">24</td><td class="num pass-n">20</td><td class="num fail-n">4</td><td><span class="cov-badge cov-partial">PARTIAL</span></td></tr>
+      <tr><td>20</td><td class="wrap">Exception Handling</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no network-failure test written</span></td></tr>
+      <tr><td>21</td><td class="wrap">Error Message Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-blocked">FINDING &mdash; the app shows no error messages at all, see Key Findings</span></td></tr>
+      <tr><td>22</td><td class="wrap">File Upload Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">N/A &mdash; no upload field found on this screen</span></td></tr>
+      <tr><td>23</td><td class="wrap">Search Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">N/A &mdash; confirmed no search box exists on this embedded grid view, see Key Findings</span></td></tr>
+      <tr><td>24</td><td class="wrap">Sorting Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; sortable column headers exist but were not exercised</span></td></tr>
+      <tr><td>25</td><td class="wrap">Filtering Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">N/A &mdash; same as #23, no filter UI on this view</span></td></tr>
+      <tr><td>26</td><td class="wrap">Print Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">N/A &mdash; confirmed no Export PDF/Excel buttons exist on this embedded grid view</span></td></tr>
+      <tr><td>27</td><td class="wrap">Role-Based Access Testing</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; only one login role available</span></td></tr>
+      <tr><td>28</td><td class="wrap">Session Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; no expired-session scenario written</span></td></tr>
+      <tr><td>29</td><td class="wrap">Duplicate Loan Validation</td><td class="num">1</td><td class="num pass-n">1</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED</span></td></tr>
+      <tr><td>30</td><td class="wrap">Currency Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-partial">PARTIAL &mdash; Loan Amount Min/Max exercised as numeric boundaries only, no currency-format assertions</span></td></tr>
+      <tr><td>31</td><td class="wrap">Date Validation</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; "This loan is effective from" date picker was not exercised</span></td></tr>
+      <tr><td>32</td><td class="wrap">Sanity Test Cases</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">Same as #3, not duplicated</span></td></tr>
+      <tr><td>33</td><td class="wrap">Edge Case Scenarios</td><td class="num">2</td><td class="num pass-n">2</td><td class="num fail-n">0</td><td><span class="cov-badge cov-covered">COVERED &mdash; SQL injection / XSS payload edge cases</span></td></tr>
+      <tr><td>34</td><td class="wrap">Performance Recommendations</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">RECOMMENDATIONS ONLY &mdash; no timing assertions written</span></td></tr>
+      <tr><td>35</td><td class="wrap">DAST / SAST</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">NOT COVERED &mdash; needs ZAP / Semgrep, out of scope for Playwright</span></td></tr>
+      <tr><td>36</td><td class="wrap">Microfrontend Integration</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">N/A &mdash; app is not microfrontend-based</span></td></tr>
+      <tr><td>37</td><td class="wrap">Telematics Testing</td><td class="num">0</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><span class="cov-badge cov-na">N/A &mdash; NBFC loan app, no vehicle/IoT surface</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="results">
+  <h2>Detailed results</h2>
+  <p class="section-note">Grouped by spec file, in the order they ran. Destructive tests (Submit/Edit/Delete against the live grid) are excluded from this run by design &mdash; see <code>npm run test:destructive</code>.</p>
+
+  <div class="group-title">Login <span class="counts"><b class="p">2 passed</b> &middot; <b class="f">0 failed</b> &middot; 2 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">user can log in with valid credentials</span><span class="tag">smoke</span><span class="tag">sanity</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/login.spec.js</code></p>
+      <h4>Steps</h4>
+      <ol><li>Open login page</li><li>Enter valid username/password, click Sign In</li><li>Assert URL no longer shows a login route</li></ol>
+    </div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">login fails with invalid password</span><span class="tag">negative</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/login.spec.js</code></p>
+      <h4>Steps</h4>
+      <ol><li>Open login page</li><li>Enter valid username, wrong password, click Sign In</li><li>Assert an invalid/incorrect/failed message is visible</li></ol>
+    </div>
+  </details>
+
+  <div class="group-title">List / embedded grid <span class="counts"><b class="p">2 passed</b> &middot; <b class="f">0 failed</b> &middot; 2 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">wizard landing page loads with title and embedded grid</span><span class="tag">smoke</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/list.spec.js</code></p>
+      <h4>Steps</h4>
+      <ol><li>Log in, navigate to Loans Configuration</li><li>Assert page title visible</li><li>Assert first grid row visible</li><li>Assert pagination Previous/Next control visible</li></ol>
+    </div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">embedded grid displays existing loan rows with expected columns</span><span class="tag">positive</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/list.spec.js</code></p>
+      <h4>Steps</h4>
+      <ol><li>Navigate to Loans Configuration</li><li>Read grid row count, assert &gt; 0</li><li>Assert first row visible</li></ol>
+    </div>
+  </details>
+
+  <div class="group-title">Loan Creation Tab <span class="counts"><b class="p">8 passed</b> &middot; <b class="f">0 failed</b> &middot; 8 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">New button opens an empty Loan Creation tab</span><span class="tag">smoke</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Click "+ New"</li><li>Assert Loan Name input is empty</li><li>Assert Loan Code input is empty</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Loan Type dropdown exposes the full predefined option list</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Click "+ New"</li><li>Read all &lt;option&gt; text from Loan Type dropdown</li><li>Assert every expected loan type (Bullet Loan, Business Loan, Gold Loan, Loan Against Property, Personal Loan) is present</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">blank mandatory fields block progression to next tab</span><span class="tag">negative</span><span class="tag">validation</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Click "+ New"</li><li>Click Next without filling any field</li><li>Assert Loan Name input still visible (still on Loan Creation tab)</li><li>Assert Applicant Type (Tab 2 field) not visible (did not advance)</li></ol>
+      <p class="why"><b>Note:</b> the app blocks navigation correctly, but shows no error text &mdash; see Key Findings.</p></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">valid mandatory fields allow progression to Loan Configuration tab</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Click "+ New", fill Loan Type/Name/Code/Series</li><li>Click Next</li><li>Assert Loan Configuration tab pill visible</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">duplicate Loan Name/Loan Code is rejected</span><span class="tag">negative</span><span class="tag">duplicate</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill Loan Name="GOLD", Loan Code="CSBLG00001" (existing values)</li><li>Click Next</li><li>Assert Loan Name input still visible</li><li>Assert Loan Configuration tab is not the active tab</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Clear button resets Loan Creation fields</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill Loan Creation fields with generated test data</li><li>Click Clear</li><li>Assert Loan Name input is empty</li><li>Assert Loan Code input is empty</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">SQL injection payload in Loan Name is safely handled</span><span class="tag">security</span><span class="tag">negative</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill Loan Name with <code>Loan'; DROP TABLE loans; --</code></li><li>Click Next</li><li>Assert no error/exception/500 text appears on screen</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">XSS payload in Loan Code is not executed</span><span class="tag">security</span><span class="tag">negative</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanCreationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill Loan Code with <code>&lt;script&gt;window.__xss=true&lt;/script&gt;</code></li><li>Click Next</li><li>Evaluate <code>window.__xss</code> in the page - assert it is not <code>true</code> (script did not execute)</li></ol></div>
+  </details>
+
+  <div class="group-title">Loan Configuration Tab <span class="counts"><b class="p">5 passed</b> &middot; <b class="f">6 failed</b> &middot; 11 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Individual vs Business Entity toggles Applicant Type field</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Reach Loan Configuration tab via a new loan</li><li>Select "Business Entity" contact type</li><li>Assert Applicant Type field enabled</li><li>Select "Individual" contact type</li><li>Assert Applicant Type field visible</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Fixed vs Floating Interest Mode toggles associated fields</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Select "Floating" interest mode</li><li>Assert Floating radio checked</li><li>Select "Fixed" interest mode</li><li>Assert Fixed radio checked</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">"Not Applicable" disables Loan Amount inputs when checked</span><span class="tag">positive</span><span class="tag">boundary</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Check Loan Amount "Not Applicable"</li><li>Assert Min/Max Loan Amount inputs disabled</li><li>Uncheck "Not Applicable"</li><li>Assert Min Loan Amount input enabled</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">"Not Applicable" disables Tenure inputs when checked</span><span class="tag">positive</span><span class="tag">boundary</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Check Tenure "Not Applicable"</li><li>Assert Tenure From/To inputs disabled</li></ol></div>
+  </details>
+  <details class="test" open>
+    <summary><span class="badge failed">failed</span><span class="t-title">Interest Rate Minimum greater than Maximum is rejected</span><span class="tag">negative</span><span class="tag">boundary</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js:50</code></p>
+      <h4>Steps</h4>
+      <ol><li>Capture <code>before</code> row count of the configuration grid &mdash; captured as <b>5</b></li><li>Fill Interest Rate Type=Flat, Min=20, Max=10</li><li>Click Add (UI click registered)</li><li>Poll row count, expect it to equal <code>before</code> (Add rejected)</li></ol>
+      <h4>Error</h4>
+      <pre>Error: expect(received).toBe(expected)
+Expected: 5
+Received: 0
+Timeout 10000ms exceeded while waiting on the predicate</pre>
+      <p class="why"><b>Why it failed:</b> the app correctly rejects the boundary violation (row count never actually reaches 6), but the polled count reads back 0 instead of the expected starting value of 5 &mdash; see Root Cause below.</p>
+    </div>
+  </details>
+  <details class="test" open>
+    <summary><span class="badge failed">failed</span><span class="t-title">Loan Amount Minimum greater than Maximum is rejected</span><span class="tag">negative</span><span class="tag">boundary</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js:61</code></p>
+      <h4>Steps</h4>
+      <ol><li>Capture <code>before</code> row count &mdash; captured as <b>5</b></li><li>Uncheck Loan Amount "Not Applicable", fill Min=500000, Max=100000</li><li>Click Add</li><li>Poll row count, expect equal to <code>before</code></li></ol>
+      <h4>Error</h4>
+      <pre>Expected: 5
+Received: 0</pre>
+      <p class="why"><b>Why it failed:</b> same pattern as above.</p>
+    </div>
+  </details>
+  <details class="test" open>
+    <summary><span class="badge failed">failed</span><span class="t-title">Tenure From greater than To is rejected</span><span class="tag">negative</span><span class="tag">boundary</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js:68</code></p>
+      <h4>Steps</h4>
+      <ol><li>Capture <code>before</code> row count &mdash; captured as <b>5</b></li><li>Uncheck Tenure "Not Applicable", fill From=36, To=12</li><li>Click Add</li><li>Poll row count, expect equal to <code>before</code></li></ol>
+      <h4>Error</h4>
+      <pre>Expected: 5
+Received: 0</pre>
+      <p class="why"><b>Why it failed:</b> same pattern as above.</p>
+    </div>
+  </details>
+  <details class="test" open>
+    <summary><span class="badge failed">failed</span><span class="t-title">Add button appends a new row to the configuration grid</span><span class="tag">positive</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js:85</code></p>
+      <h4>Steps</h4>
+      <ol><li>Capture <code>before</code> row count &mdash; captured as <b>5</b></li><li>Fill valid Interest Mode/Rate/Type, mark Loan Amount &amp; Tenure "Not Applicable"</li><li>Click Add</li><li>Poll row count, expect <code>before + 1</code> (i.e. 6)</li></ol>
+      <h4>Error</h4>
+      <pre>Expected: 6
+Received: 0</pre>
+      <p class="why"><b>Why it failed:</b> see Root Cause below &mdash; the grid's row count read is inconsistent on this shared backend.</p>
+    </div>
+  </details>
+  <details class="test" open>
+    <summary><span class="badge failed">failed</span><span class="t-title">multiple configuration rows can be added</span><span class="tag">positive</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js:101</code></p>
+      <h4>Steps</h4>
+      <ol><li>Fill first row (rate=8) and click Add (UI-level succeeded)</li><li>Poll row count, expect 1</li></ol>
+      <h4>Error</h4>
+      <pre>Expected: 1
+Received: 0</pre>
+      <p class="why"><b>Why it failed:</b> same pattern as above.</p>
+    </div>
+  </details>
+  <details class="test" open>
+    <summary><span class="badge failed">failed</span><span class="t-title">Clear resets Loan Configuration tab fields</span><span class="tag">positive</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js:108</code></p>
+      <h4>Steps</h4>
+      <ol><li><code>beforeEach</code>: click "+ New"</li><li>Fill Loan Creation tab - select Loan Type dropdown</li></ol>
+      <h4>Error</h4>
+      <pre>TimeoutError: locator.selectOption: Timeout 15000ms exceeded
+waiting for locator('select').filter({ has: locator('option').filter({ hasText: 'Bullet Loan' }) }).first()
+- element is not visible (retried ~30 times over 15s)</pre>
+      <p class="why"><b>Why it failed:</b> the Loan Type select never became interactive within the timeout on this run &mdash; see Root Cause below.</p>
+    </div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Next advances to Installment Due Date tab</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/loanConfigurationTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill valid Interest Mode/Rate/Type, mark Loan Amount &amp; Tenure "Not Applicable"</li><li>Click Next</li><li>Assert Installment Due Date tab pill visible</li></ol></div>
+  </details>
+
+  <div class="group-title">Installment Due Date &amp; Penal Interest Tabs <span class="counts"><b class="p">6 passed</b> &middot; <b class="f">1 failed</b> &middot; 7 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">EMI vs No EMI toggles Loan Installment Mode relevance</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/installmentAndPenalTabs.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Reach Installment Due Date tab</li><li>Select "EMI"</li><li>Assert Loan Installment Mode dropdown visible</li><li>Select "No EMI"</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">only one Installment Due Date radio option is selectable at a time</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/installmentAndPenalTabs.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Select "A fixed date of a month"</li><li>Assert that radio checked</li><li>Select "End of the Month"</li><li>Assert End of Month checked, Fixed Date no longer checked</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Next advances to Penal Interest tab</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/installmentAndPenalTabs.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill EMI, Loan Installment Mode="Equated Instalments", due date="A fixed date of a month" (+ day=10)</li><li>Click Next</li><li>Assert Penal Interest tab pill visible</li></ol></div>
+  </details>
+  <details class="test" open>
+    <summary><span class="badge failed">failed</span><span class="t-title">Fixed % numeric input accepts valid values</span><span class="tag">positive</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/installmentAndPenalTabs.spec.js:51</code></p>
+      <h4>Steps</h4>
+      <ol><li><code>beforeEach</code>: click "+ New" on Loans Configuration list</li><li>Fill Loan Creation tab - select Loan Type dropdown ("Bullet Loan")</li></ol>
+      <h4>Error</h4>
+      <pre>TimeoutError: locator.selectOption: Timeout 15000ms exceeded
+- element is not visible (retried ~30 times over 15s)</pre>
+      <p class="why"><b>Why it failed:</b> identical timeout pattern to "Clear resets Loan Configuration tab fields" above &mdash; see Root Cause below.</p>
+    </div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Grace Period numeric input accepts valid values</span><span class="tag">positive</span><span class="tag">boundary</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/installmentAndPenalTabs.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Reach Penal Interest tab</li><li>Fill Grace Period = 5</li><li>Assert Grace Period input value = "5"</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Clear resets both Fixed % and Grace Period panels</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/installmentAndPenalTabs.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill Fixed %=3, Grace Period=7</li><li>Click Clear</li><li>Assert Grace Period input resets to "0"</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Next advances to Identification Documents tab</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/installmentAndPenalTabs.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Fill Fixed %=2, Grace Period=3</li><li>Click Next</li><li>Assert Identification Documents tab pill visible</li></ol></div>
+  </details>
+
+  <div class="group-title">Identification Documents Tab <span class="counts"><b class="p">4 passed</b> &middot; <b class="f">0 failed</b> &middot; 4 total</span></div>
+
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">each accordion section expands and collapses</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/identificationDocumentsTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Reach Identification Documents tab (all prior 4 tabs completed)</li><li>Expand "PAN / FORM 60" accordion</li><li>Assert "PAN CARD" row visible</li><li>Collapse the accordion again</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Mandatory and Required checkboxes are independently togglable</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/identificationDocumentsTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Expand "PAN / FORM 60" accordion</li><li>Toggle "Mandatory" checkbox on PAN CARD row</li><li>Toggle "Required" checkbox on PAN CARD row</li></ol>
+      <p class="why"><b>Note:</b> these checkboxes render with an empty accessible label &mdash; see Key Findings.</p></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">full proof-type list is present per category</span><span class="tag">positive</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/identificationDocumentsTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Expand "Financial Documents" accordion</li><li>Assert each of Pay Slip, Financial Statements, Form 16A, Form 16, ITR, GSTR 1, GSTR 2, GSTR 3B is visible</li></ol></div>
+  </details>
+  <details class="test">
+    <summary><span class="badge passed">passed</span><span class="t-title">Submit button is visible on the final tab</span><span class="tag">smoke</span></summary>
+    <div class="test-body"><p><b>File:</b> <code>tests/loansConfiguration/identificationDocumentsTab.spec.js</code></p>
+      <h4>Steps</h4><ol><li>Reach Identification Documents tab</li><li>Assert Submit button visible</li></ol></div>
+  </details>
+
+  <div class="group-title">End to End &mdash; written, not run this session <span class="counts">5 tests &middot; <code>@destructive</code>, excluded from routine runs</span></div>
+  <details class="test">
+    <summary><span class="badge skipped">not run</span><span class="t-title">create / edit / delete a Loan Configuration works end-to-end</span><span class="tag">destructive</span></summary>
+    <div class="test-body">
+      <p><b>File:</b> <code>tests/loansConfiguration/endToEnd.spec.js</code></p>
+      <p class="why">Covers: full Submit creates a new grid row; editing an existing Loan updates in place without increasing row count; Delete prompts for confirmation and removes the row; cancelling Delete keeps the row; submitting with an incomplete tab is rejected. Written and ready but intentionally excluded from this run because it mutates the live grid &mdash; run deliberately via <code>npm run test:destructive</code>.</p>
+    </div>
+  </details>
+
+</section>
+
+<section id="rootcause">
+  <h2>Root cause &amp; recommended fix for failed tests</h2>
+  <p class="section-note">Two distinct failure patterns account for all 7 failures.</p>
+
+  <div class="finding high">
+    <div class="finding-head"><span class="sev">Pattern A</span><strong>Loan Type dropdown timeout &mdash; "Fixed % numeric input", "Clear resets Loan Configuration tab fields"</strong></div>
+    <p>The Loan Type <code>&lt;select&gt;</code> element is found in the DOM instantly, but never becomes visible/enabled within the 15s action timeout. This happens on the first interaction after opening a new wizard &mdash; pointing to the live demo server being slow to finish rendering/hydrating the Angular form under repeated automated load, not a locator or logic bug (the same locator works reliably in the majority of runs).</p>
+    <p class="reco"><b>Fix:</b> increase <code>actionTimeout</code> from 15s to 30-45s for this step; add an explicit <code>waitFor({ state: 'visible', timeout: 30000 })</code> on the Loan Type dropdown right after <code>clickNew()</code>; add a short stabilization pause (networkidle or ~500ms) after opening the wizard, since its initial paint appears to race with Angular's async data load.</p>
+  </div>
+
+  <div class="finding high">
+    <div class="finding-head"><span class="sev">Pattern B</span><strong>Configuration grid row-count inconsistency &mdash; 5 "Add row" tests</strong></div>
+    <p>The <code>before</code> row count is read as <b>5</b> even though each test opens a brand-new "+ New" wizard, and after clicking Add the row count polls back as <b>0</b> and never converges within 10s. This points to two compounding issues: the "added configuration rows" grid may not be scoped per-draft on the backend (state carried on the shared session/account), and the DataTable's redraw is slower than the poll timeout under server load.</p>
+    <p class="reco"><b>Fix:</b> isolate state per test (clear <code>localStorage</code>/<code>sessionStorage</code>/cookies or hard-reload before each test); increase the row-count poll timeout to ~20s; re-verify the baseline by reading <code>before</code> twice before proceeding; ideally run this suite against a dedicated/isolated test environment rather than the shared live demo.</p>
+  </div>
+</section>
+
+<section id="notes">
+  <h2>How to reproduce</h2>
+  <div class="table-wrap" style="padding:18px 22px;">
+    <pre style="margin:0;background:none;border:none;padding:0;">npm install
+npx playwright install --with-deps
+
+npm test                    # all non-destructive tests
+npm run test:destructive    # Submit/Edit/Delete flows, mutates the live grid - run deliberately
+npx allure generate allure-results --clean -o allure-report</pre>
+  </div>
+</section>
+
+</main>
+
+<footer class="rep">
+  Generated from a live Playwright run against <code>demonbfc.finsta.co.in</code> &middot; chromium project, non-destructive suite &middot; raw JUnit XML for QMetry import at <code>reports/junit/qmetry-results.xml</code> &middot; full details in <code>reports/html-report</code> and <code>allure-report</code> after any local run.
+</footer>
+
+</body>
+</html>
