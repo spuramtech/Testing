@@ -23,7 +23,7 @@ Use the following configuration:
 `admin`
 
 **Password:**  
-`jayapriya@123`
+`<SET_VIA_.env_QA_PASSWORD>`
 
 **Additional Login Details / OTP / PIN:**  
 `<ENTER_IF_REQUIRED>`

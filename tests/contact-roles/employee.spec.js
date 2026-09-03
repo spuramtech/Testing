@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { CREDS } = require("../../utils/config");
 const { ContactPage } = require('../../pages/ContactPage');
 const { ContactDetailPage } = require('../../pages/ContactDetailPage');
 const { loginAndSelectBranch } = require('../../utils/navigation');
@@ -53,7 +54,6 @@ test.describe('Contact Role - Employee Field Coverage (all fields, no skips)', (
   });
 });
 
-const CREDS = { username: 'admin', password: 'jayapriya@123' };
 const CONTACT_ID = '327299';
 
 async function openEmployeeTab(page) {

@@ -4,7 +4,7 @@ const { ContactDetailPage } = require('../../pages/ContactDetailPage');
 const { loginAndSelectBranch } = require('../../utils/navigation');
 const fs = require('fs');
 
-const CREDS = { username: 'admin', password: 'jayapriya@123' };
+const { CREDS } = require('../../utils/config');
 const EVIDENCE_DIR = 'qmetry/evidence';
 if (!fs.existsSync(EVIDENCE_DIR)) fs.mkdirSync(EVIDENCE_DIR, { recursive: true });
 async function shot(page, name) { await page.screenshot({ path: `${EVIDENCE_DIR}/${name}.png`, fullPage: true }); }

@@ -5,7 +5,8 @@ const { ContactPage } = require('./pages/ContactPage');
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1400, height: 900 } });
-  await loginAndSelectBranch(page, 'http://host81.kapilits.com:8007/#/', { username: 'admin', password: 'jayapriya@123' });
+  const { CREDS } = require('./utils/config');
+  await loginAndSelectBranch(page, 'http://host81.kapilits.com:8007/#/', CREDS);
   const contact = new ContactPage(page);
   await contact.openFromDashboard();
   await page.waitForTimeout(1000);

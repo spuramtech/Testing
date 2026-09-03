@@ -1,9 +1,9 @@
 const { test, expect } = require('@playwright/test');
+const { CREDS } = require("../../utils/config");
 const { GroupFormationPage } = require('../../pages/GroupFormationPage');
 const { loginAndSelectBranch } = require('../../utils/navigation');
 const data = require('../../test-data/group-formation-data');
 
-const CREDS = { username: 'admin', password: 'jayapriya@123' };
 
 const ALL_FIELD_LABELS = [
   'Group Status', 'Group Formation Date', 'Registrar Branch', 'Chit Value', 'Chit Period',

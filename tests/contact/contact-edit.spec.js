@@ -3,7 +3,7 @@ const { ContactPage } = require('../../pages/ContactPage');
 const { loginAndSelectBranch } = require('../../utils/navigation');
 const data = require('../../test-data/contact-data');
 
-const CREDS = { username: 'admin', password: 'jayapriya@123' };
+const { CREDS } = require('../../utils/config');
 
 // IMPORTANT: These tests open a REAL existing production contact record to verify
 // read-only Edit behaviour. They must NEVER click Save Contact, to avoid mutating

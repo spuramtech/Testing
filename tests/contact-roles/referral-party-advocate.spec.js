@@ -3,7 +3,7 @@ const { ContactDetailPage } = require('../../pages/ContactDetailPage');
 const { loginAndSelectBranch } = require('../../utils/navigation');
 const data = require('../../test-data/contact-roles-data');
 
-const CREDS = { username: 'admin', password: 'jayapriya@123' };
+const { CREDS } = require('../../utils/config');
 const CONTACT_ID = '327299';
 
 async function openRoleTab(page, role) {

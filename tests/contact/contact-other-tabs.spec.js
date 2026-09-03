@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { ContactPage } = require('../../pages/ContactPage');
 const { loginAndSelectBranch } = require('../../utils/navigation');
 
-const CREDS = { username: 'admin', password: 'jayapriya@123' };
+const { CREDS } = require('../../utils/config');
 const TABS = ['Employees', 'Referrals', 'Party', 'Advocates'];
 
 test.describe('Contact Module - Other Category Tabs', () => {
