@@ -11,4 +11,9 @@ async function loginAndSelectBranch(page, baseUrl, creds, branchName = 'NEYVELI 
   await page.waitForTimeout(3000);
 }
 
-module.exports = { loginAndSelectBranch };
+async function dismissGlobalPopups(page) {
+  const okBtn = page.locator('.swal2-container button:visible', { hasText: 'OK' }).first();
+  await okBtn.click({ timeout: 3000 }).catch(() => {});
+}
+
+module.exports = { loginAndSelectBranch, dismissGlobalPopups };

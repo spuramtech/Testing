@@ -160,5 +160,122 @@
     "rootCause": "Requires developer/backend investigation. Likely cause (not confirmed, but consistent with BUG-006's pattern in this codebase): the Group Formation page renders more than one instance of the Chit Period control in the DOM (a duplicate-hidden-component pattern already observed on the Contact Detail/Employee role forms), and the submit-time required check may be reading a different (stale/hidden) FormControl instance than the one the user actually interacted with, or the parent form's cross-field validator recomputes validity from a source that is not kept in sync with the visible control.",
     "recommendedResolution": "For the dev team: 1) Audit the Group Formation component for duplicate/hidden instances of the Chit Period (and other) form controls, consistent with the pattern already flagged in BUG-006 for the Contact module - ensure only one FormControl instance backs each visible field. 2) Verify the Save click handler's required-field check reads validity from the same FormGroup instance that data-binds to the visible dropdown, not a stale or duplicate one. 3) As a defensive fix, never let Save silently no-op with zero API calls - call markAllAsTouched() and render a visible, field-specific error summary so a genuine validator/state mismatch is immediately visible and reportable rather than appearing as 'nothing happens'.",
     "status": "OPEN"
+  },
+  {
+    "bugId": "BUG-008",
+    "title": "PSO Number field on Group Registration has no numeric or length validation",
+    "module": "Group Registration",
+    "screen": "Group Registration (#/configuration/chitregistration)",
+    "testCaseId": "TC_GR_BV01 / TC_GR_BV02 / TC_GR_BV03",
+    "severity": "MEDIUM",
+    "priority": "P2",
+    "preconditions": "Logged in as admin, branch NEYVELI CAO selected, Group Registration form open.",
+    "stepsToReproduce": [
+      "1. Open Group Registration (#/configuration/chitregistration).",
+      "2. Enter '-123' (negative) in the PSO Number field and move focus away - observe no error.",
+      "3. Enter 'abcde' (non-numeric) in the PSO Number field and move focus away - observe no error.",
+      "4. Enter '12345678901234567890' (20 digits) in the PSO Number field and move focus away - observe no error."
+    ],
+    "testData": "PSO Number = '-123', 'abcde', '12345678901234567890'",
+    "expectedResult": "PSO Number is a business reference number (compare existing groups: e.g. '4563456', '284682743' - 7-9 digit numeric values); the field should reject negative values, non-numeric characters, and unreasonably long input.",
+    "actualResult": "All three invalid values were silently accepted with no validation message and no length cap, consistent with the same class of missing-validation issue already found on the Contact module (BUG-002, BUG-003).",
+    "evidence": "",
+    "rootCause": "Requires developer/backend investigation. Likely cause (not confirmed): the psonumber form control has no validator attached at all (no Validators.pattern, no Validators.maxLength), unlike other numeric-looking fields in the app that do enforce format.",
+    "recommendedResolution": "Add a numeric-only, reasonable-max-length pattern validator to the PSO Number field (e.g. ^[0-9]{1,10}$, adjusted to the real business range), client-side and server-side, with a clear 'Enter a valid PSO Number' message.",
+    "status": "OPEN"
+  },
+  {
+    "bugId": "BUG-009",
+    "title": "Group Commencement search grid always shows \"No data to display\" because its backing API (getMortgageDetailsForCommencement) returns HTTP 500",
+    "module": "Group Commencement",
+    "screen": "Group Commencement (#/configuration/chitcommencement)",
+    "testCaseId": "TC_GC_BUG01",
+    "severity": "HIGH",
+    "priority": "P1",
+    "preconditions": "Logged in as admin, branch NEYVELI CAO selected.",
+    "stepsToReproduce": [
+      "1. Open Group Commencement (#/configuration/chitcommencement).",
+      "2. Open browser DevTools Network tab (or capture via Playwright response listener) before the page finishes loading.",
+      "3. Observe the request to GET /api/MortgageController/getMortgageDetailsForCommencement?branchschema=NY&startindex=0&endindex=10&SearchText=",
+      "4. Observe the response status is 500, with body: {\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.6.1\",\"title\":\"An error occured while processing your request.\",\"status\":500,\"traceId\":\"|60f01a66-4db710fda944fc57.\"}",
+      "5. Observe the on-page grid (a datatable-body/datatable-selection component) renders its empty-state 'No data to display' row, even though a separate successful call to GetChitGroupDetails (HTTP 200) confirms chit groups do exist for this branch."
+    ],
+    "testData": "branchschema=NY, startindex=0, endindex=10, SearchText=(empty) - default page load, no search term entered.",
+    "expectedResult": "The group search grid on this page should list existing registered chit groups eligible for commencement, so a user can select one and proceed to fill in commencement details (New Commencement Date, Auction Dates, Security Type, etc.).",
+    "actualResult": "The grid is permanently empty for every user on this branch, because its only data source (getMortgageDetailsForCommencement) errors out server-side with an unhandled 500 on every call, regardless of search term. This blocks the entire Group Commencement workflow end-to-end - no group can be selected, so no commencement details can ever be saved through this screen.",
+    "evidence": "Captured via Playwright network response listener: getMortgageDetailsForCommencement -> 500, with the RFC7231 ProblemDetails error body shown above; reproduced consistently across multiple page loads.",
+    "rootCause": "Server-side defect in the getMortgageDetailsForCommencement API endpoint (MortgageController) - requires backend/dev team investigation using the returned traceId. Likely an unhandled exception in that endpoint's query/data-access logic (e.g. a null-reference or a bad join when no mortgage records exist yet for a branch), rather than anything the frontend can work around.",
+    "recommendedResolution": "For the dev team: 1) Use traceId |60f01a66-4db710fda944fc57. to pull server-side logs/exception details for this request and fix the underlying exception in MortgageController.getMortgageDetailsForCommencement. 2) Add a server-side null/empty-result guard so a branch with zero existing mortgage records returns an empty 200 result set instead of throwing. 3) On the frontend, the grid should distinguish a genuine 'no records' empty state from an API failure (e.g. show a retry/error banner instead of silently rendering 'No data to display' on a 500), so this class of failure is visibly reported rather than looking like normal empty data. This is a release-blocking defect for the Group Commencement feature since it is currently unusable end-to-end.",
+    "status": "OPEN"
+  },
+  {
+    "bugId": "BUG-010",
+    "title": "Chit Receipt empty-submit validation summary has a spelling error: \"Fill Required filelds\" instead of \"Fill Required fields\"",
+    "module": "Chit Receipt",
+    "screen": "Chit Receipt (#/Transactions/Chitreceipt)",
+    "testCaseId": "TC_CR_MSG01",
+    "severity": "LOW",
+    "priority": "P4",
+    "preconditions": "Logged in as admin, branch NEYVELI CAO selected, Chit Receipt form open.",
+    "stepsToReproduce": [
+      "1. Open Chit Receipt (#/Transactions/Chitreceipt).",
+      "2. Without filling any fields, click 'Save'.",
+      "3. Observe the validation summary text shown alongside the field-specific 'Subscriber Required' message."
+    ],
+    "testData": "N/A - empty form submission.",
+    "expectedResult": "The validation summary should read 'Fill Required fields'.",
+    "actualResult": "The validation summary reads 'Fill Required filelds' (misspelled).",
+    "evidence": "",
+    "rootCause": "Static string typo in the component's validation-summary template/message constant.",
+    "recommendedResolution": "Low priority - correct the string from 'filelds' to 'fields' in the Chit Receipt component (and grep the rest of the codebase for the same typo, in case it is reused elsewhere via a shared message constant).",
+    "status": "OPEN"
+  },
+  {
+    "bugId": "BUG-011",
+    "title": "Amount Received and Waiver Amount fields on Chit Receipt have no numeric-sign or format validation",
+    "module": "Chit Receipt",
+    "screen": "Chit Receipt (#/Transactions/Chitreceipt)",
+    "testCaseId": "TC_CR_BV01 / TC_CR_BV02 / TC_CR_BV03",
+    "severity": "MEDIUM",
+    "priority": "P2",
+    "preconditions": "Logged in as admin, branch NEYVELI CAO selected, Chit Receipt form open.",
+    "stepsToReproduce": [
+      "1. Open Chit Receipt (#/Transactions/Chitreceipt).",
+      "2. Enter '-500' (negative) in the Amount Received field and move focus away - observe no error; the value is reformatted to '-,500' (also note the minus sign is retained but the currency-style comma grouping is applied incorrectly around it).",
+      "3. Enter 'abcde' (non-numeric) in the Amount Received field - observe it is coerced to 'ab,cde' rather than being rejected.",
+      "4. Enter '-1' (negative) in the Waiver Amount field - observe no error."
+    ],
+    "testData": "totalreceivedamount = '-500', 'abcde'; WaiverAmount = '-1'",
+    "expectedResult": "A monetary amount field like Amount Received or Waiver Amount should reject negative values and non-numeric characters outright, since a chit receipt represents money actually collected from a subscriber and cannot be negative or non-numeric.",
+    "actualResult": "Both fields silently accept negative and non-numeric input; the currency-formatter directive reformats the raw string (e.g. 'abcde' -> 'ab,cde') instead of rejecting it, which means a non-numeric or negative 'amount received' could potentially reach Save with no client-side validation blocking it.",
+    "evidence": "",
+    "rootCause": "Requires developer/backend investigation. Likely cause (not confirmed): the currency-formatter directive (appmycurrencyformatter, seen elsewhere in this app) only affects display grouping and does not enforce a Validators.pattern/Validators.min(0) constraint on the underlying form control.",
+    "recommendedResolution": "Add a non-negative numeric pattern validator (e.g. ^[0-9]+(\\.[0-9]{1,2})?$) to Amount Received, Waiver Amount, and any other monetary input on this form, client-side and server-side, so negative or non-numeric amounts are rejected with a clear message before Save is reachable.",
+    "status": "OPEN"
+  },
+  {
+    "bugId": "BUG-012",
+    "title": "Selecting a chit group from the Auction Groups list is visual-only - it never loads tickets for that group, blocking the entire auction-conducting workflow",
+    "module": "Auction",
+    "screen": "Auction (#/AuctionConfig/Auction)",
+    "testCaseId": "TC_AU_BUG01",
+    "severity": "HIGH",
+    "priority": "P1",
+    "preconditions": "Logged in as admin, branch NEYVELI CAO selected, Auction form open, at least one due group (e.g. JMJ2717) listed under 'Auction Groups'.",
+    "stepsToReproduce": [
+      "1. Open Auction (#/AuctionConfig/Auction).",
+      "2. Open DevTools Network tab (or capture via a Playwright response listener).",
+      "3. Click a group code label under 'Auction Groups' (e.g. 'JMJ2717').",
+      "4. Observe the label visually highlights (CSS class changes to include 'bg-primary text-white'), confirming the click is registered by the Angular component.",
+      "5. Observe no new network request is fired as a result of the click (zero auction/ticket/group API calls).",
+      "6. Click the 'Select Ticket Number' dropdown - it shows 'No items found', even though a group is visually selected."
+    ],
+    "testData": "Group code = JMJ2717 (any group listed under Auction Groups reproduces this).",
+    "expectedResult": "Clicking a group in the Auction Groups list should trigger the component to fetch and populate that group's open tickets into the 'Select Ticket Number' dropdown, so the user can proceed to select a ticket and conduct the auction (enter Bid Amount, Save).",
+    "actualResult": "The click only updates the label's own CSS class (a purely cosmetic/local state change) and triggers zero API calls. The Select Ticket Number dropdown remains permanently 'No items found' regardless of which group is clicked, making it impossible to select a ticket or conduct an auction through this screen at all.",
+    "evidence": "Reproduced via Playwright network response listener (zero relevant API calls after the click) and DOM class inspection (class list gains 'bg-primary text-white' confirming the click handler did fire on the frontend).",
+    "rootCause": "Requires developer/backend investigation. Likely cause (not confirmed): the group-selection click handler updates only a local/cosmetic selection state (e.g. a CSS class binding) but is missing the call to the API that should fetch tickets for the selected group id and populate the ticketno ng-select's options/data source.",
+    "recommendedResolution": "For the dev team: 1) Locate the (click) handler bound to the Auction Groups label list and verify it also dispatches the ticket-fetch API call (e.g. GetOpenTicketsForGroup or similar) using the clicked group's id, in addition to any cosmetic/selected-state update. 2) Ensure the ticketno ng-select's data source subscribes to that fetch result. 3) This is a release-blocking defect - until fixed, no auction can be conducted end-to-end through this screen, so it should be treated as high priority ahead of any secondary Auction-page polish.",
+    "status": "OPEN"
   }
 ]
