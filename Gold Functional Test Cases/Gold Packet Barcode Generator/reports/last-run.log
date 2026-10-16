@@ -1,0 +1,488 @@
+
+> gold-functional-test-cases@1.0.0 barcode
+> node common/utils/run-form.js "Gold Packet Barcode Generator"
+
+
+=== Gold Packet Barcode Generator / Gold Packet Barcode Generator ===
+
+Running 61 tests using 1 worker
+
+  ok 1 [chromium] › api\barcode-api.spec.js:8:3 › Gold Packet Barcode Generator – API › TC_PB_053 - Loan list and register APIs refuse requests without a token @regression (18.7s)
+  ok 2 [chromium] › api\barcode-api.spec.js:20:3 › Gold Packet Barcode Generator – API › TC_PB_054 - generatebarcode refuses a request without a token @regression (17.6s)
+  ok 3 [chromium] › api\barcode-api.spec.js:30:3 › Gold Packet Barcode Generator – API › TC_PB_055 - Register API Status filter returns only that status @regression (17.6s)
+  x  4 [chromium] › api\barcode-api.spec.js:41:3 › Gold Packet Barcode Generator – API › TC_PB_056 - A non-Branch-Head user cannot read the loans-for-barcode list through the API (HYPOTHESIS) @regression (18.1s)
+  ok 5 [chromium] › business-rules\print.spec.js:30:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_016 - BH print sends type New, loan, employee and branch @smoke @regression (20.3s)
+  ok 6 [chromium] › business-rules\print.spec.js:40:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_017 - Audit print sends type Audit @regression (22.3s)
+  ok 7 [chromium] › business-rules\print.spec.js:49:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_018 - Successful print shows the recorded barcode number and a "use once" message @regression (21.3s)
+  ok 8 [chromium] › business-rules\print.spec.js:61:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_019 - Network failure on print: "nothing was printed", no recorded number @regression (21.8s)
+  ok 9 [chromium] › business-rules\print.spec.js:72:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_020 - Server error 500 on print is shown as an error, not success @regression (20.9s)
+  ok 10 [chromium] › business-rules\print.spec.js:83:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_021 - Double-clicking Print sticker records only once @regression (22.4s)
+  ok 11 [chromium] › business-rules\print.spec.js:92:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_022 - A loan with an unused barcode is refused and offers "Cancel old barcode & generate new" @regression (18.1s)
+  ok 12 [chromium] › business-rules\print.spec.js:100:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_023 - "Cancel old & generate new" without a reason is refused @regression (20.1s)
+  ok 13 [chromium] › business-rules\print.spec.js:110:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_024 - "Cancel old & generate new" sends the old barcode and the reason @regression (21.0s)
+  ok 14 [chromium] › business-rules\print.spec.js:122:3 › Gold Packet Barcode Generator – Print sticker (simulated server) › TC_PB_025 - A real loan that has an unused BH barcode is refused (live data) @regression (21.7s)
+  ok 15 [chromium] › functional\generator.spec.js:7:3 › Gold Packet Barcode Generator – generator screen › TC_PB_001 - Page shows Type, Loan Number, Employee Name and Generate barcode @smoke @regression (19.6s)
+  ok 16 [chromium] › functional\generator.spec.js:16:3 › Gold Packet Barcode Generator – generator screen › TC_PB_002 - Type defaults to BH @regression (17.7s)
+  ok 17 [chromium] › functional\generator.spec.js:22:3 › Gold Packet Barcode Generator – generator screen › TC_PB_003 - Employee Name is the logged-in user and cannot be edited @regression (20.7s)
+  ok 18 [chromium] › functional\generator.spec.js:31:3 › Gold Packet Barcode Generator – generator screen › TC_PB_004 - BH loan list = API list of loans not yet packeted @smoke @regression (18.1s)
+  ok 19 [chromium] › functional\generator.spec.js:39:3 › Gold Packet Barcode Generator – generator screen › TC_PB_005 - Audit loan list = API list of loans already in inventory @regression (18.4s)
+  ok 20 [chromium] › functional\generator.spec.js:47:3 › Gold Packet Barcode Generator – generator screen › TC_PB_006 - Switching to Audit changes the hint and the loan list @regression (18.5s)
+  ok 21 [chromium] › functional\generator.spec.js:57:3 › Gold Packet Barcode Generator – generator screen › TC_PB_007 - Each loan option shows loan number and applicant name @regression (17.8s)
+  ok 22 [chromium] › functional\generator.spec.js:63:3 › Gold Packet Barcode Generator – generator screen › TC_PB_008 - Generate without a loan shows no preview @smoke @regression (18.2s)
+  x  23 [chromium] › functional\generator.spec.js:72:3 › Gold Packet Barcode Generator – generator screen › TC_PB_009 - Generate shows a preview with branch, type, loan and employee, and no barcode number yet @smoke @regression (18.6s)
+  ok 24 [chromium] › functional\generator.spec.js:88:3 › Gold Packet Barcode Generator – generator screen › TC_PB_010 - Generate is only a preview: no write request is sent @regression (20.3s)
+  x  25 [chromium] › functional\generator.spec.js:98:3 › Gold Packet Barcode Generator – generator screen › TC_PB_011 - After switching type, any preview shown matches the selected type (HYPOTHESIS) @regression (19.3s)
+  ok 26 [chromium] › functional\generator.spec.js:109:3 › Gold Packet Barcode Generator – generator screen › TC_PB_012 - Typing in Loan Number filters the list @regression (18.5s)
+  ok 27 [chromium] › functional\register.spec.js:7:3 › Gold Packet Barcode Register › TC_PB_026 - Register opens from "View Register" with the expected columns @smoke @regression (18.2s)
+  ok 28 [chromium] › functional\register.spec.js:14:3 › Gold Packet Barcode Register › TC_PB_027 - Total items equals the number of records from the API @regression (17.9s)
+  ok 29 [chromium] › functional\register.spec.js:21:3 › Gold Packet Barcode Register › TC_PB_028 - First-page rows match the API (barcode, loan, status) @regression (18.2s)
+  ok 30 [chromium] › functional\register.spec.js:30:3 › Gold Packet Barcode Register › TC_PB_029 - Status list offers All, Not Used, Used and Cancelled @regression (17.6s)
+  ok 31 [chromium] › functional\register.spec.js:37:5 › Gold Packet Barcode Register › TC_PB_030 - Status filter "Not Used" shows only Not Used barcodes @regression (19.5s)
+  ok 32 [chromium] › functional\register.spec.js:37:5 › Gold Packet Barcode Register › TC_PB_031 - Status filter "Used" shows only Used barcodes @regression (21.9s)
+  ok 33 [chromium] › functional\register.spec.js:37:5 › Gold Packet Barcode Register › TC_PB_032 - Status filter "Cancelled" shows only Cancelled barcodes @regression (19.1s)
+  ok 34 [chromium] › functional\register.spec.js:47:5 › Gold Packet Barcode Register › TC_PB_033 - Search by loan number @regression (21.1s)
+  ok 35 [chromium] › functional\register.spec.js:47:5 › Gold Packet Barcode Register › TC_PB_034 - Search by barcode number @regression (19.3s)
+  ok 36 [chromium] › functional\register.spec.js:47:5 › Gold Packet Barcode Register › TC_PB_035 - Search by applicant name @regression (20.5s)
+  ok 37 [chromium] › functional\register.spec.js:57:3 › Gold Packet Barcode Register › TC_PB_036 - Search with no match shows no rows @regression (21.0s)
+  ok 38 [chromium] › functional\register.spec.js:64:3 › Gold Packet Barcode Register › TC_PB_037 - Only Not Used barcodes have a Cancel button @regression (17.4s)
+  x  39 [chromium] › functional\register.spec.js:71:3 › Gold Packet Barcode Register › TC_PB_038 - Barcode numbers are BH…/AUD… by type and unique @regression (18.0s)
+  ok 40 [chromium] › functional\register.spec.js:81:3 › Gold Packet Barcode Register › TC_PB_039 - A loan has at most one Not Used BH barcode @regression (19.2s)
+  ok 41 [chromium] › functional\register.spec.js:88:3 › Gold Packet Barcode Register › TC_PB_040 - A loan has at most one Used BH barcode (one packet per loan) @regression (17.9s)
+  x  42 [chromium] › functional\register.spec.js:95:3 › Gold Packet Barcode Register › TC_PB_041 - Loans in the BH list have no Used BH barcode @regression (19.0s)
+  ok 43 [chromium] › functional\register.spec.js:104:3 › Gold Packet Barcode Register › TC_PB_042 - Rows are listed newest first @regression (18.6s)
+  ok 44 [chromium] › functional\register.spec.js:111:3 › Gold Packet Barcode Register › TC_PB_043 - Paging shows 10 rows per page and page 2 has different rows @regression (19.9s)
+  ok 45 [chromium] › functional\register.spec.js:134:3 › Gold Packet Barcode Register – cancel a barcode (simulated) › TC_PB_044 - Cancel dialog shows the barcode, type and loan and warns it is permanent @regression (19.5s)
+  ok 46 [chromium] › functional\register.spec.js:143:3 › Gold Packet Barcode Register – cancel a barcode (simulated) › TC_PB_045 - Confirm cancellation without a reason is refused @regression (22.7s)
+  ok 47 [chromium] › functional\register.spec.js:154:3 › Gold Packet Barcode Register – cancel a barcode (simulated) › TC_PB_046 - Whitespace-only reason is refused @regression (20.3s)
+  ok 48 [chromium] › functional\register.spec.js:166:3 › Gold Packet Barcode Register – cancel a barcode (simulated) › TC_PB_047 - Confirm cancellation sends the barcode and the reason @regression (25.1s)
+  ok 49 [chromium] › functional\register.spec.js:178:3 › Gold Packet Barcode Register – cancel a barcode (simulated) › TC_PB_048 - Back closes the dialog and sends nothing @regression (19.7s)
+  ok 50 [chromium] › functional\register.spec.js:187:3 › Gold Packet Barcode Register – cancel a barcode (simulated) › TC_PB_049 - Failed cancellation (network) does not show success @regression (21.8s)
+  ok 51 [chromium] › negative\roles.spec.js:9:5 › Gold Packet Barcode Generator – roles › TC_PB_050 - INT_APPRAISER1 has no Gold Packet Barcode Generator in the menu @regression (1.5m)
+  ok 52 [chromium] › negative\roles.spec.js:9:5 › Gold Packet Barcode Generator – roles › TC_PB_051 - EXT_APPRAISER1 has no Gold Packet Barcode Generator in the menu @regression (1.5m)
+  x  53 [chromium] › negative\roles.spec.js:18:3 › Gold Packet Barcode Generator – roles › TC_PB_052 - INT_APPRAISER1 opening the generator URL directly cannot generate @regression (14.7s)
+  -  54 [chromium] › positive\real-barcode.spec.js:11:3 › Gold Packet Barcode Generator – real print and cancel › TC_PB_060 - Real BH print records a Not Used barcode in the register (ALLOW_DATA_CREATION=1) @regression
+  -  55 [chromium] › positive\real-barcode.spec.js:30:3 › Gold Packet Barcode Generator – real print and cancel › TC_PB_061 - Real cancel marks the barcode Cancelled with the reason (ALLOW_DATA_CREATION=1) @regression
+  ok 56 [chromium] › regression\ui.spec.js:4:3 › Gold Packet Barcode Generator – usability, accessibility, responsive › TC_PB_057 - At tablet width (768px) the generator has no page-level horizontal scroll @regression (20.4s)
+  x  57 [chromium] › regression\ui.spec.js:12:3 › Gold Packet Barcode Generator – usability, accessibility, responsive › TC_PB_058 - Type radios and Loan Number have accessible names @regression (18.1s)
+  x  58 [chromium] › regression\ui.spec.js:24:3 › Gold Packet Barcode Generator – usability, accessibility, responsive › TC_PB_059 - Register search box has an accessible name @regression (19.9s)
+  ok 59 [chromium] › validation\loan-select.spec.js:4:3 › Gold Packet Barcode Generator – loan selection validation › TC_PB_013 - An unknown loan number cannot be selected @regression (18.9s)
+  ok 60 [chromium] › validation\loan-select.spec.js:17:3 › Gold Packet Barcode Generator – loan selection validation › TC_PB_014 - Special characters in the loan search find nothing and cause no error @regression (20.3s)
+  ok 61 [chromium] › validation\loan-select.spec.js:28:3 › Gold Packet Barcode Generator – loan selection validation › TC_PB_015 - The clear (x) button removes the selected loan @regression (19.3s)
+
+
+  1) [chromium] › api\barcode-api.spec.js:41:3 › Gold Packet Barcode Generator – API › TC_PB_056 - A non-Branch-Head user cannot read the loans-for-barcode list through the API (HYPOTHESIS) @regression 
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      [2m- navigating to "http://host214.kapilits.com:8411/", waiting until "load"[22m
+
+
+       at ..\..\common\pages\LoginPage.js:15
+
+      13 |     // QC occasionally hangs on the post-login redirect; retry the whole login once
+      14 |     for (let attempt = 1; attempt <= 2; attempt++) {
+    > 15 |       await this.page.goto('/');
+         |                       ^
+      16 |       await this.username.fill(user);
+      17 |       await this.password.fill(pass);
+      18 |       await this.signIn.click();
+
+        at LoginPage.login (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\common\pages\LoginPage.js:15:23)
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\api\barcode-api.spec.js:47:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › functional\generator.spec.js:72:3 › Gold Packet Barcode Generator – generator screen › TC_PB_009 - Generate shows a preview with branch, type, loan and employee, and no barcode number yet @smoke @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: [32m/Preview - not yet recorded/[39m
+    Received string:  [31m""[39m
+
+      78 |     await expect(bc.printBtn).toBeVisible();
+      79 |     record(t.slice(0, 220));
+    > 80 |     expect(t).toMatch(/Preview - not yet recorded/);
+         |               ^
+      81 |     expect(t).toMatch(/BRANCH\s*HEAD OFFICE/);
+      82 |     expect(t).toMatch(/TYPE\s*BH/);
+      83 |     expect(t).toContain(loan);
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\functional\generator.spec.js:80:15
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--cd3c7-number-yet-smoke-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--cd3c7-number-yet-smoke-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--cd3c7-number-yet-smoke-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--cd3c7-number-yet-smoke-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › functional\generator.spec.js:98:3 › Gold Packet Barcode Generator – generator screen › TC_PB_011 - After switching type, any preview shown matches the selected type (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mfalse[39m
+    Received: [31mtrue[39m
+
+      104 |     const stale = /not yet recorded/.test(t) && /TYPE\s*BH/.test(t);
+      105 |     record(stale ? `BH preview still shown after selecting Audit: ${t.slice(0, 120)}` : 'Preview cleared or updated');
+    > 106 |     expect(stale).toBe(false);
+          |                   ^
+      107 |   });
+      108 |
+      109 |   test('TC_PB_012 - Typing in Loan Number filters the list @regression', async ({ bc, page, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\functional\generator.spec.js:106:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--aa04b--type-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--aa04b--type-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--aa04b--type-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\functional-generator-Gold--aa04b--type-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › functional\register.spec.js:71:3 › Gold Packet Barcode Register › TC_PB_038 - Barcode numbers are BH…/AUD… by type and unique @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -   1[39m
+    [31m+ Received  + 112[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "pApplicantname": "",[39m
+    [31m+     "pBarcodeno": "GLD-20260904-0005",[39m
+    [31m+     "pBranchid": 0,[39m
+    [31m+     "pBranchname": "HEAD OFFICE",[39m
+    [31m+     "pCancelreason": "Superseded before use: ok we will reuse old one",[39m
+    [31m+     "pCreatedby": 14,[39m
+    [31m+     "pCreateddate": "04-09-2026 17:38",[39m
+    [31m+     "pEmployeeid": 0,[39m
+    [31m+     "pEmployeename": "Finsta Admin",[39m
+    [31m+     "pInventoryid": 0,[39m
+    [31m+     "pLoanid": "GLBG01RAHEA0000001",[39m
+    [31m+     "pLoanname": null,[39m
+    [31m+     "pModifiedby": 0,[39m
+    [31m+     "pModifieddate": null,[39m
+    [31m+     "pRecordid": 5,[39m
+    [31m+     "pRemarks": "",[39m
+    [31m+     "pStatus": "Cancelled",[39m
+    [31m+     "pStatusid": 0,[39m
+    [31m+     "pType": "New",[39m
+    [31m+     "pTypeofoperation": null,[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "pApplicantname": "",[39m
+    [31m+     "pBarcodeno": "GLD-20260904-0004",[39m
+    [31m+     "pBranchid": 0,[39m
+    [31m+     "pBranchname": "HEAD OFFICE",[39m
+    [31m+     "pCancelreason": "Superseded before use: ok",[39m
+    [31m+     "pCreatedby": 14,[39m
+    [31m+     "pCreateddate": "04-09-2026 17:19",[39m
+    [31m+     "pEmployeeid": 0,[39m
+    [31m+     "pEmployeename": "Finsta Admin",[39m
+    [31m+     "pInventoryid": 0,[39m
+    [31m+     "pLoanid": "GLBG01RAHEA0000001",[39m
+    [31m+     "pLoanname": null,[39m
+    [31m+     "pModifiedby": 0,[39m
+    [31m+     "pModifieddate": null,[39m
+    [31m+     "pRecordid": 4,[39m
+    [31m+     "pRemarks": "",[39m
+    [31m+     "pStatus": "Cancelled",[39m
+    [31m+     "pStatusid": 0,[39m
+    [31m+     "pType": "New",[39m
+    [31m+     "pTypeofoperation": null,[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "pApplicantname": "",[39m
+    [31m+     "pBarcodeno": "GLD-20260904-0003",[39m
+    [31m+     "pBranchid": 0,[39m
+    [31m+     "pBranchname": "HEAD OFFICE",[39m
+    [31m+     "pCancelreason": "",[39m
+    [31m+     "pCreatedby": 14,[39m
+    [31m+     "pCreateddate": "04-09-2026 17:15",[39m
+    [31m+     "pEmployeeid": 0,[39m
+    [31m+     "pEmployeename": "Finsta Admin",[39m
+    [31m+     "pInventoryid": 0,[39m
+    [31m+     "pLoanid": "GLBG01RAHEA0000002",[39m
+    [31m+     "pLoanname": null,[39m
+    [31m+     "pModifiedby": 0,[39m
+    [31m+     "pModifieddate": null,[39m
+    [31m+     "pRecordid": 3,[39m
+    [31m+     "pRemarks": "UI redesign verification",[39m
+    [31m+     "pStatus": "Not Used",[39m
+    [31m+     "pStatusid": 0,[39m
+    [31m+     "pType": "New",[39m
+    [31m+     "pTypeofoperation": null,[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "pApplicantname": "",[39m
+    [31m+     "pBarcodeno": "GLD-20260904-0002",[39m
+    [31m+     "pBranchid": 0,[39m
+    [31m+     "pBranchname": "HEAD OFFICE",[39m
+    [31m+     "pCancelreason": "Stale leftover from earlier feature testing, cleared to unblock loan for real use",[39m
+    [31m+     "pCreatedby": 14,[39m
+    [31m+     "pCreateddate": "04-09-2026 16:59",[39m
+    [31m+     "pEmployeeid": 0,[39m
+    [31m+     "pEmployeename": "admin@kapilit.com",[39m
+    [31m+     "pInventoryid": 0,[39m
+    [31m+     "pLoanid": "GLBG01RAHEA0000001",[39m
+    [31m+     "pLoanname": null,[39m
+    [31m+     "pModifiedby": 0,[39m
+    [31m+     "pModifieddate": null,[39m
+    [31m+     "pRecordid": 2,[39m
+    [31m+     "pRemarks": "",[39m
+    [31m+     "pStatus": "Cancelled",[39m
+    [31m+     "pStatusid": 0,[39m
+    [31m+     "pType": "New",[39m
+    [31m+     "pTypeofoperation": null,[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "pApplicantname": "",[39m
+    [31m+     "pBarcodeno": "GLD-20260904-0001",[39m
+    [31m+     "pBranchid": 0,[39m
+    [31m+     "pBranchname": "Head Office",[39m
+    [31m+     "pCancelreason": "End-to-end verification - test cancel",[39m
+    [31m+     "pCreatedby": 1,[39m
+    [31m+     "pCreateddate": "04-09-2026 16:36",[39m
+    [31m+     "pEmployeeid": 0,[39m
+    [31m+     "pEmployeename": "Test Officer",[39m
+    [31m+     "pInventoryid": 0,[39m
+    [31m+     "pLoanid": "GLBG01RAHEA0000001",[39m
+    [31m+     "pLoanname": null,[39m
+    [31m+     "pModifiedby": 0,[39m
+    [31m+     "pModifieddate": null,[39m
+    [31m+     "pRecordid": 1,[39m
+    [31m+     "pRemarks": "End-to-end verification run",[39m
+    [31m+     "pStatus": "Cancelled",[39m
+    [31m+     "pStatusid": 0,[39m
+    [31m+     "pType": "New",[39m
+    [31m+     "pTypeofoperation": null,[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      76 |     record(`${nos.length} barcodes, duplicates ${dup.length}, bad format ${badFmt.map((r) => `${r.pBarcodeno}/${r.pType}`).join(', ') || 0}`);
+      77 |     expect(dup).toEqual([]);
+    > 78 |     expect(badFmt).toEqual([]);
+         |                    ^
+      79 |   });
+      80 |
+      81 |   test('TC_PB_039 - A loan has at most one Not Used BH barcode @regression', async ({ register, apiHits, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\functional\register.spec.js:78:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-fec6b--type-and-unique-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-fec6b--type-and-unique-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-fec6b--type-and-unique-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-fec6b--type-and-unique-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › functional\register.spec.js:95:3 › Gold Packet Barcode Register › TC_PB_041 - Loans in the BH list have no Used BH barcode @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 3[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   "GLNG0126090000002",[39m
+    [31m+ ][39m
+
+       99 |     const both = bh.filter((l) => usedLoans.has(l));
+      100 |     record(`${bh.length} BH loans; already packeted: ${both.join(', ') || 'none'}`);
+    > 101 |     expect(both).toEqual([]);
+          |                  ^
+      102 |   });
+      103 |
+      104 |   test('TC_PB_042 - Rows are listed newest first @regression', async ({ register, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\functional\register.spec.js:101:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-7a42d--Used-BH-barcode-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-7a42d--Used-BH-barcode-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-7a42d--Used-BH-barcode-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\functional-register-Gold-P-7a42d--Used-BH-barcode-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › negative\roles.spec.js:18:3 › Gold Packet Barcode Generator – roles › TC_PB_052 - INT_APPRAISER1 opening the generator URL directly cannot generate @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      24 |     const text = (await page.locator('body').innerText()).replace(/\s+/g, ' ');
+      25 |     record(`URL ${page.url()}; Generate buttons ${gen}; ${text.split('Gold Packet Barcode').pop().slice(0, 160)}`);
+    > 26 |     expect(gen).toBe(0);
+         |                 ^
+      27 |   });
+      28 | });
+      29 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\negative\roles.spec.js:26:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\negative-roles-Gold-Packet-4144c--cannot-generate-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\negative-roles-Gold-Packet-4144c--cannot-generate-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\negative-roles-Gold-Packet-4144c--cannot-generate-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\negative-roles-Gold-Packet-4144c--cannot-generate-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › regression\ui.spec.js:12:3 › Gold Packet Barcode Generator – usability, accessibility, responsive › TC_PB_058 - Type radios and Loan Number have accessible names @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 1[39m
+
+    [2m  Object {[22m
+    [32m-   "loan": true,[39m
+    [31m+   "loan": false,[39m
+    [2m    "radios": true,[22m
+    [2m  }[22m
+
+      19 |     });
+      20 |     record(JSON.stringify(res));
+    > 21 |     expect(res).toEqual({ radios: true, loan: true });
+         |                 ^
+      22 |   });
+      23 |
+      24 |   test('TC_PB_059 - Register search box has an accessible name @regression', async ({ register, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\regression\ui.spec.js:21:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--13ba7-accessible-names-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--13ba7-accessible-names-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--13ba7-accessible-names-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--13ba7-accessible-names-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › regression\ui.spec.js:24:3 › Gold Packet Barcode Generator – usability, accessibility, responsive › TC_PB_059 - Register search box has an accessible name @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mtrue[39m
+    Received: [31mfalse[39m
+
+      25 |     const named = await register.regSearch.evaluate((e) => !!(e.getAttribute('aria-label') || e.getAttribute('aria-labelledby') || (e.id && document.querySelector(`label[for="${e.id}"]`))));
+      26 |     record(`Search box named: ${named} (placeholder only does not count)`);
+    > 27 |     expect(named).toBe(true);
+         |                   ^
+      28 |   });
+      29 | });
+      30 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\tests\regression\ui.spec.js:27:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--c5131--accessible-name-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--c5131--accessible-name-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--c5131--accessible-name-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Packet Barcode Generator\test-results\artifacts\regression-ui-Gold-Packet--c5131--accessible-name-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › business-rules\print.spec.js (3.5m)
+  Slow test file: [chromium] › negative\roles.spec.js (3.3m)
+  Slow test file: [chromium] › api\barcode-api.spec.js (1.2m)
+  Slow test file: [chromium] › validation\loan-select.spec.js (58.5s)
+  Slow test file: [chromium] › positive\real-barcode.spec.js (38.8s)
+  Consider splitting slow test files to speed up parallel execution
+  8 failed
+    [chromium] › api\barcode-api.spec.js:41:3 › Gold Packet Barcode Generator – API › TC_PB_056 - A non-Branch-Head user cannot read the loans-for-barcode list through the API (HYPOTHESIS) @regression 
+    [chromium] › functional\generator.spec.js:72:3 › Gold Packet Barcode Generator – generator screen › TC_PB_009 - Generate shows a preview with branch, type, loan and employee, and no barcode number yet @smoke @regression 
+    [chromium] › functional\generator.spec.js:98:3 › Gold Packet Barcode Generator – generator screen › TC_PB_011 - After switching type, any preview shown matches the selected type (HYPOTHESIS) @regression 
+    [chromium] › functional\register.spec.js:71:3 › Gold Packet Barcode Register › TC_PB_038 - Barcode numbers are BH…/AUD… by type and unique @regression 
+    [chromium] › functional\register.spec.js:95:3 › Gold Packet Barcode Register › TC_PB_041 - Loans in the BH list have no Used BH barcode @regression 
+    [chromium] › negative\roles.spec.js:18:3 › Gold Packet Barcode Generator – roles › TC_PB_052 - INT_APPRAISER1 opening the generator URL directly cannot generate @regression 
+    [chromium] › regression\ui.spec.js:12:3 › Gold Packet Barcode Generator – usability, accessibility, responsive › TC_PB_058 - Type radios and Loan Number have accessible names @regression 
+    [chromium] › regression\ui.spec.js:24:3 › Gold Packet Barcode Generator – usability, accessibility, responsive › TC_PB_059 - Register search box has an accessible name @regression 
+  2 skipped
+  51 passed (22.5m)
+
+To open last HTML report run:
+
+  npx playwright show-report Gold Packet Barcode Generator\reports\playwright-html
+
+Generated 69 | Automated 61 | Discovered 61 | Executed 59 | Passed 51 | Failed 8 | Blocked 0 | Skipped 2 | Not Executed 4 | N/A 4 | reconciles: true
+Report: C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Gold Packet Barcode Generator\reports\QMetryReport.html

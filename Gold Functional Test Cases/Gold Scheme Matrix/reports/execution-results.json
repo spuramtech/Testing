@@ -1,0 +1,3009 @@
+{
+  "summary": {
+    "generated": 76,
+    "automated": 71,
+    "discovered": 71,
+    "executed": 71,
+    "passed": 59,
+    "failed": 12,
+    "blocked": 0,
+    "skipped": 0,
+    "notExecuted": 3,
+    "na": 2,
+    "discoveryAvailable": true,
+    "runStats": {
+      "startTime": "2026-10-15T10:56:13.117Z",
+      "duration": 1064421.267,
+      "expected": 57,
+      "skipped": 0,
+      "unexpected": 14,
+      "flaky": 0
+    },
+    "generatedAt": "2026-10-15T11:55:54.708Z",
+    "baseURL": "http://host214.kapilits.com:8411/",
+    "reconciles": true
+  },
+  "rows": [
+    {
+      "id": "TC_GS_001",
+      "req": "REQ-01",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Navigation",
+      "scenario": "Admin opens Gold Scheme Matrix",
+      "type": "Positive / Navigation",
+      "priority": "P0",
+      "pre": "Admin account",
+      "data": "CHECKER_BH",
+      "steps": [
+        "Login",
+        "Gold Loan Configuration",
+        "Click Gold Scheme Matrix"
+      ],
+      "expected": "URL open=GoldSchemeMatrix; \"Unified scheme matrix\" header and New Scheme shown",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "@smoke",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "URL http://host214.kapilits.com:8411/#/Loans/GoldLoanConfiguration?open=GoldSchemeMatrix; New Scheme shown; 23 schemes",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.7,
+      "timestamp": "2026-10-15T10:59:40.045Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-b0a3c-figuration-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_002",
+      "req": "REQ-02",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Grid columns",
+      "type": "Functional / UI",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Read headers"
+      ],
+      "expected": "Scheme, Tenure, Type, Interest %, Paise/mo, Internal LTV by slab, Scheme on, Action",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "@smoke",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Scheme | Tenure | Type | Interest % | Paise/mo | Internal LTV by slab | Scheme on | Action",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.6,
+      "timestamp": "2026-10-15T10:59:51.714Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-c8d20--on-Action-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_003",
+      "req": "REQ-02",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Company",
+      "scenario": "Company selector",
+      "type": "Default value",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Read company dropdown"
+      ],
+      "expected": "Logged-in company (BIJAY FINANCE …) selected",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Default values & dropdowns",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Selected \"BIJAY FINANCE AND INVESTMENT PVT LTD-HEAD OFFICE\"; options BIJAY FINANCE AND INVESTMENT PVT LTD-HEAD OFFICE",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.8,
+      "timestamp": "2026-10-15T11:00:02.285Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-8c674-ogged-in-company-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_004",
+      "req": "REQ-02",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Paging 10 per page",
+      "type": "Pagination",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Read page 1",
+        "Next page"
+      ],
+      "expected": "10 rows on page 1; next page shows other schemes",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Pagination & sorting",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "\"1 - 10 of 23 items\" (10 rows) → \"11 - 20 of 23 items\" (10 rows)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T11:00:12.050Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-eb2e8-to-the-next-page-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_005",
+      "req": "REQ-02",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Sort by Interest %",
+      "type": "Sorting",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Click Interest % header"
+      ],
+      "expected": "Rows ordered by rate",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Pagination & sorting",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Rates after sort: ",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.5,
+      "timestamp": "2026-10-15T11:00:22.091Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-bf516-the-rows-by-rate-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_006",
+      "req": "REQ-07",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Paise/mo = rate ÷ 12 for every scheme",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "All pages",
+      "steps": [
+        "Read every row"
+      ],
+      "expected": "Paise/mo within 0.001 of rate/12",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "23 schemes; mismatches: GL-FLEXI 22% → 1.83 (expected 1.833)",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  -  1\n+ Received  + 17\n\n- Array []\n+ Array [\n+   Object {\n+     \"code\": \"GL-FLEXI\",\n+     \"ltv\": Array [\n+       76.58,\n+       72.07,",
+      "expectedVerified": false,
+      "duration": 11.2,
+      "timestamp": "2026-10-15T11:00:31.589Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-264da-ls-Interest-÷-12-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-264da-ls-Interest-÷-12-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-264da-ls-Interest-÷-12-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-001",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_007",
+      "req": "REQ-07",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Paise/mo shown with consistent precision (HYPOTHESIS)",
+      "type": "UI consistency",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Read Paise/mo texts"
+      ],
+      "expected": "Same number of decimals on every row",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Decimal places used: 3, 2 (GL-QUICK=1.833, GL-SMART=1.167, GLP=2.00, GL-FLEXI=1.83, GL-Smart=1.167, AT-02192=1.50, AT-02476=1.50, AT-10325=1.50…)",
+      "error": "Error: expect(received).toHaveLength(expected)\n\nExpected length: 1\nReceived length: 2\nReceived array:  [3, 2]\n\n  58 |     const decimals = [...new Set(rows.map((r) => (r.paiseText.split('.')[1] || '').length))];\n  59 |     record(`Decimal places used: ${decimals.join(', ')} (${rows.map((r) => `${r.code}=${r.paiseText}`).slice(0, 8).join(', ')}…)`);\n> 60 |     expect(decimals).toHaveLength(1);\n     |                      ^\n  61 |   });\n  62 |",
+      "expectedVerified": false,
+      "duration": 10.8,
+      "timestamp": "2026-10-15T11:00:44.067Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-d3e94-y-row-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-d3e94-y-row-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-d3e94-y-row-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-002",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_008",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Grid Internal LTV = resolved-LTV API",
+      "type": "Data consistency / API",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "getresolvedgoldschemeltv",
+      "steps": [
+        "Compare each row with the API"
+      ],
+      "expected": "Identical LTV per slab",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "23 schemes compared; differences: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.4,
+      "timestamp": "2026-10-15T11:00:55.971Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-d8102-for-every-scheme-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_009",
+      "req": "REQ-02",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Grid = scheme list API",
+      "type": "Data consistency / API",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "getgoldschemeconfigurationlist",
+      "steps": [
+        "Compare tenure/type/rate/status"
+      ],
+      "expected": "All rows match; same count",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "23 rows vs 23 API records; differences: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.7,
+      "timestamp": "2026-10-15T11:15:08.718Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-fa1b1-type-rate-status-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_010",
+      "req": "REQ-02",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Grid",
+      "scenario": "Tenure and Type formats",
+      "type": "Functional / UI",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Read rows"
+      ],
+      "expected": "\"<n> mo\"; Type Bullet or Regular Monthly Repayment",
+      "script": "tests/functional/grid.spec.js",
+      "tags": "",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "10 rows; unexpected: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.1,
+      "timestamp": "2026-10-15T11:02:05.954Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-grid-Gold-Schem-12acb-onthly-Repayment-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/grid.spec.js"
+    },
+    {
+      "id": "TC_GS_011",
+      "req": "REQ-03",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "New Scheme",
+      "scenario": "Default values",
+      "type": "Default value",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "-",
+      "steps": [
+        "Read the panel"
+      ],
+      "expected": "Loan \"Select…\", code/name empty, tenure 3, Bullet, rate 0, Effective From today, Active",
+      "script": "tests/functional/new-form.spec.js",
+      "tags": "@smoke",
+      "category": "Default values & dropdowns",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"loan\":\"0: null\",\"loanText\":\"Select the loan this scheme is aligned to\",\"code\":\"\",\"name\":\"\",\"tenure\":\"3\",\"type\":\"BULLET\",\"rate\":\"0\",\"effectiveFrom\":\"15/10/2026\",\"active\":true}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13,
+      "timestamp": "2026-10-15T11:02:16.147Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-new-form-Gold-S-10257-ult-values-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/new-form.spec.js"
+    },
+    {
+      "id": "TC_GS_012",
+      "req": "REQ-03",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "New Scheme",
+      "scenario": "Loan dropdown = loan list API",
+      "type": "Dropdown",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "getloanlist",
+      "steps": [
+        "Read options"
+      ],
+      "expected": "Extra (PLE), New Gold (GLNG) – as the API",
+      "script": "tests/functional/new-form.spec.js",
+      "tags": "",
+      "category": "Default values & dropdowns",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Options Extra (PLE), New Gold (GLNG); API Extra (PLE), New Gold (GLNG)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.3,
+      "timestamp": "2026-10-15T11:02:29.113Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-new-form-Gold-S-fe94b-ns-Configuration-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/new-form.spec.js"
+    },
+    {
+      "id": "TC_GS_013",
+      "req": "REQ-03",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "New Scheme",
+      "scenario": "Scheme Type options",
+      "type": "Dropdown",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "-",
+      "steps": [
+        "Read options"
+      ],
+      "expected": "Bullet …, Regular Monthly Repayment …",
+      "script": "tests/functional/new-form.spec.js",
+      "tags": "",
+      "category": "Default values & dropdowns",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Bullet (interest accrues over the whole tenure) | Regular Monthly Repayment (interest settles one month at a time, e.g. GL-Smart)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.7,
+      "timestamp": "2026-10-15T11:02:39.432Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-new-form-Gold-S-95afd-onthly-Repayment-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/new-form.spec.js"
+    },
+    {
+      "id": "TC_GS_014",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Slab table",
+      "scenario": "Slabs from LTV Slab Master, RBI LTV read-only",
+      "type": "Functional / Field state",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "getltvslabmaster",
+      "steps": [
+        "Read slab rows"
+      ],
+      "expected": "RBI LTV 85/80/75 % as the master; only rate and paise are inputs",
+      "script": "tests/functional/new-form.spec.js",
+      "tags": "",
+      "category": "Default values & dropdowns",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "0 – 2,50,000 RBI 85% rate 0 paise 0 internal 85; 2,50,000 – 5,00,000 RBI 80% rate 0 paise 0 internal 80; 5,00,000 – Unlimited RBI 75% rate 0 paise 0 internal 75",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.4,
+      "timestamp": "2026-10-15T11:02:50.092Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-new-form-Gold-S-ea49c-ead-only-RBI-LTV-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/new-form.spec.js"
+    },
+    {
+      "id": "TC_GS_015",
+      "req": "REQ-04",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Effective From",
+      "scenario": "Calendar only; past date selectable",
+      "type": "Date validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "15th of previous month",
+      "steps": [
+        "Open calendar",
+        "Previous month",
+        "Pick 15"
+      ],
+      "expected": "Field read-only; picked past date shown",
+      "script": "tests/functional/new-form.spec.js",
+      "tags": "",
+      "category": "Date validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Read-only input; picked 15th of previous month → 15/09/2026",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.1,
+      "timestamp": "2026-10-15T11:03:02.486Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-new-form-Gold-S-42711-epts-a-past-date-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/new-form.spec.js"
+    },
+    {
+      "id": "TC_GS_016",
+      "req": "REQ-05",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Clear",
+      "scenario": "Clear resets the form",
+      "type": "Reset / Clear",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Filled form",
+      "steps": [
+        "Fill",
+        "Clear"
+      ],
+      "expected": "Code/name empty, tenure 3, rate 0, loan unselected",
+      "script": "tests/functional/new-form.spec.js",
+      "tags": "",
+      "category": "Clear / Reset",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"loan\":\"0: null\",\"loanText\":\"Select the loan this scheme is aligned to\",\"code\":\"\",\"name\":\"\",\"tenure\":\"3\",\"type\":\"BULLET\",\"rate\":\"0\",\"effectiveFrom\":\"15/10/2026\",\"active\":true}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.5,
+      "timestamp": "2026-10-15T11:03:13.542Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-new-form-Gold-S-7d232--to-its-defaults-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/new-form.spec.js"
+    },
+    {
+      "id": "TC_GS_017",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Tenure input",
+      "scenario": "Tenure \"abc\" → \"\" (letters rejected)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Tenure: \"abc\"",
+      "steps": [
+        "Type \"abc\" into Tenure",
+        "Tab"
+      ],
+      "expected": "Tenure shows \"\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"abc\" → \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.7,
+      "timestamp": "2026-10-15T11:10:21.399Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-42620-letters-rejected-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_018",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Tenure input",
+      "scenario": "Tenure \"-3\" → \"3\" (minus stripped)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Tenure: \"-3\"",
+      "steps": [
+        "Type \"-3\" into Tenure",
+        "Tab"
+      ],
+      "expected": "Tenure shows \"3\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"-3\" → \"3\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.1,
+      "timestamp": "2026-10-15T11:10:31.066Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-daa5b-us-sign-stripped-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_019",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Tenure input",
+      "scenario": "Tenure \"1.5\" → not \"15\" (decimal not silently turned into 15 – HYPOTHESIS)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Tenure: \"1.5\"",
+      "steps": [
+        "Type \"1.5\" into Tenure",
+        "Tab"
+      ],
+      "expected": "Tenure shows not \"15\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Typed \"1.5\" → \"15\"",
+      "error": "Error: expect(received).not.toBe(expected) // Object.is equality\n\nExpected: not \"15\"\n\n  20 |       const v = await gsm[field].inputValue();\n  21 |       record(`Typed \"${typed}\" → \"${v}\"`);\n> 22 |       if (expected.startsWith('!')) expect(v).not.toBe(expected.slice(1));\n     |                                                   ^\n  23 |       else expect(v).toBe(expected);\n  24 |     });\n  25 |   }\n",
+      "expectedVerified": false,
+      "duration": 9.8,
+      "timestamp": "2026-10-15T11:10:41.204Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-40fa8-to-15-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-40fa8-to-15-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-40fa8-to-15-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-003",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_020",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Rate input",
+      "scenario": "Rate \"abc\" → \"\" (letters rejected)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Rate: \"abc\"",
+      "steps": [
+        "Type \"abc\" into Rate",
+        "Tab"
+      ],
+      "expected": "Rate shows \"\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"abc\" → \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T11:10:52.003Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-30a8b-letters-rejected-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_021",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Rate input",
+      "scenario": "Rate \"-5\" → \"5\" (minus stripped)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Rate: \"-5\"",
+      "steps": [
+        "Type \"-5\" into Rate",
+        "Tab"
+      ],
+      "expected": "Rate shows \"5\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"-5\" → \"5\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.8,
+      "timestamp": "2026-10-15T11:11:02.131Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-0b87a-us-sign-stripped-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_022",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Rate input",
+      "scenario": "Rate \"12.345\" → \"12.34\" (max 2 decimals)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Rate: \"12.345\"",
+      "steps": [
+        "Type \"12.345\" into Rate",
+        "Tab"
+      ],
+      "expected": "Rate shows \"12.34\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"12.345\" → \"12.34\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.3,
+      "timestamp": "2026-10-15T11:11:11.931Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-1af11-4-max-2-decimals-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_023",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Rate input",
+      "scenario": "Rate \"99.99\" → \"99.99\" (upper boundary kept)",
+      "type": "Validation",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Rate: \"99.99\"",
+      "steps": [
+        "Type \"99.99\" into Rate",
+        "Tab"
+      ],
+      "expected": "Rate shows \"99.99\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"99.99\" → \"99.99\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13.4,
+      "timestamp": "2026-10-15T11:11:22.246Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-9d248-ndary-99-99-kept-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_024",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Rate input",
+      "scenario": "Rate \"150\" → not \"15\" (150 % not silently cut to 15 % – HYPOTHESIS)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Rate: \"150\"",
+      "steps": [
+        "Type \"150\" into Rate",
+        "Tab"
+      ],
+      "expected": "Rate shows not \"15\"",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Typed \"150\" → \"15\"",
+      "error": "Error: expect(received).not.toBe(expected) // Object.is equality\n\nExpected: not \"15\"\n\n  20 |       const v = await gsm[field].inputValue();\n  21 |       record(`Typed \"${typed}\" → \"${v}\"`);\n> 22 |       if (expected.startsWith('!')) expect(v).not.toBe(expected.slice(1));\n     |                                                   ^\n  23 |       else expect(v).toBe(expected);\n  24 |     });\n  25 |   }\n",
+      "expectedVerified": false,
+      "duration": 9.9,
+      "timestamp": "2026-10-15T11:11:35.658Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-0a858-to-15-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-0a858-to-15-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-0a858-to-15-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-004",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_025",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Scheme Code",
+      "scenario": "Code length limited (HYPOTHESIS)",
+      "type": "Max length",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "60 × \"A\"",
+      "steps": [
+        "Type 60 characters"
+      ],
+      "expected": "A maxlength is set",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "60 characters typed → 60 kept; maxlength=null",
+      "error": "Error: expect(received).not.toBeNull()\n\nReceived: null\n\n  31 |     const max = await gsm.code.getAttribute('maxlength');\n  32 |     record(`60 characters typed → ${v.length} kept; maxlength=${max}`);\n> 33 |     expect(max).not.toBeNull();\n     |                     ^\n  34 |   });\n  35 |\n  36 |   test('TC_GS_026 - Scheme Name accepts Unicode text @regression', async ({ gsm, record }) => {\n",
+      "expectedVerified": false,
+      "duration": 9.5,
+      "timestamp": "2026-10-15T11:11:46.652Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-504c7-IS-maxlength-set-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-504c7-IS-maxlength-set-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-504c7-IS-maxlength-set-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-005",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_026",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Scheme Name",
+      "scenario": "Unicode name accepted",
+      "type": "Unicode",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "स्वर्ण योजना – Gold ₹",
+      "steps": [
+        "Type the name"
+      ],
+      "expected": "Kept exactly",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Name \"स्वर्ण योजना – Gold ₹\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.4,
+      "timestamp": "2026-10-15T11:11:57.257Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-9539a-pts-Unicode-text-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_027",
+      "req": "REQ-06",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Tenure",
+      "scenario": "Tenure 0 refused on save (HYPOTHESIS)",
+      "type": "Boundary / Negative",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Tenure 0, rate 18",
+      "steps": [
+        "Fill",
+        "Apply",
+        "Save"
+      ],
+      "expected": "No save request is sent",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Required fields & negative save",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please fill all mandatory fields, including the aligned Loan\"; save request sent: false",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.3,
+      "timestamp": "2026-10-15T11:12:06.789Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-d005d--save-HYPOTHESIS-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_028",
+      "req": "REQ-05",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Save",
+      "scenario": "Save without Loan",
+      "type": "Required field",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Loan not selected",
+      "steps": [
+        "Fill others",
+        "Save"
+      ],
+      "expected": "\"Please fill all mandatory fields…\"; no request",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Required fields & negative save",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please fill all mandatory fields, including the aligned Loan\"; write requests 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.7,
+      "timestamp": "2026-10-15T11:12:18.056Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-3bf72-nd-sends-nothing-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_029",
+      "req": "REQ-05",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Save",
+      "scenario": "Save without Scheme Code",
+      "type": "Required field",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Code empty",
+      "steps": [
+        "Fill others",
+        "Save"
+      ],
+      "expected": "Same warning; no request",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Required fields & negative save",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please fill all mandatory fields, including the aligned Loan\"; write requests 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.6,
+      "timestamp": "2026-10-15T11:12:28.745Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-9ca44-nd-sends-nothing-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_030",
+      "req": "REQ-05",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Save",
+      "scenario": "Save without Scheme Name",
+      "type": "Required field",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Name empty",
+      "steps": [
+        "Fill others",
+        "Save"
+      ],
+      "expected": "Same warning; no request",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Required fields & negative save",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please fill all mandatory fields, including the aligned Loan\"; write requests 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.6,
+      "timestamp": "2026-10-15T11:12:39.334Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-b0399-nd-sends-nothing-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_031",
+      "req": "REQ-05",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Save",
+      "scenario": "Save empty form",
+      "type": "Required field",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "-",
+      "steps": [
+        "Save"
+      ],
+      "expected": "\"Please fill all mandatory fields, including the aligned Loan\"; no request",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "@smoke",
+      "category": "Required fields & negative save",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please fill all mandatory fields, including the aligned Loan\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.9,
+      "timestamp": "2026-10-15T11:12:49.928Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-03b2e-igned-Loan-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_032",
+      "req": "REQ-20",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Interest rate",
+      "scenario": "Rate 0 % refused",
+      "type": "Boundary / Negative",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Rate 0",
+      "steps": [
+        "Fill",
+        "Apply",
+        "Save"
+      ],
+      "expected": "\"Interest rate must be between 2% and 24%, per this loan’s own Loan Configuration\"; no request",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Boundary values (rate 2 % – 24 %)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Rate 0: message \"Warning! | Interest rate must be between 2% and 24%, per this loan's own Loan Configuration\"; save request sent false (blocked)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11,
+      "timestamp": "2026-10-15T11:13:00.873Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-a6522-an-allows-2-–-24-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_071",
+      "req": "REQ-20",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Interest rate",
+      "scenario": "Rate 1.99 % refused (below min)",
+      "type": "Boundary value",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Rate 1.99",
+      "steps": [
+        "Fill",
+        "Apply",
+        "Save"
+      ],
+      "expected": "Same warning; no request",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Boundary values (rate 2 % – 24 %)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Rate 1.99: message \"Warning! | Interest rate must be between 2% and 24%, per this loan's own Loan Configuration\"; save request sent false (blocked)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.7,
+      "timestamp": "2026-10-15T11:13:11.829Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-d24a4-an-allows-2-–-24-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_072",
+      "req": "REQ-20",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Interest rate",
+      "scenario": "Rate 2 % accepted (min)",
+      "type": "Boundary value",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Rate 2",
+      "steps": [
+        "Fill",
+        "Apply",
+        "Save"
+      ],
+      "expected": "Save request sent (blocked)",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Boundary values (rate 2 % – 24 %)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Rate 2: message \"Error! | Unable to save scheme. Please contact support.\"; save request sent true (blocked)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.9,
+      "timestamp": "2026-10-15T11:13:22.556Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-d9408-an-allows-2-–-24-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_073",
+      "req": "REQ-20",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Interest rate",
+      "scenario": "Rate 24 % accepted (max)",
+      "type": "Boundary value",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Rate 24",
+      "steps": [
+        "Fill",
+        "Apply",
+        "Save"
+      ],
+      "expected": "Save request sent (blocked)",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Boundary values (rate 2 % – 24 %)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Rate 24: message \"Error! | Unable to save scheme. Please contact support.\"; save request sent true (blocked)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.8,
+      "timestamp": "2026-10-15T11:13:35.444Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-827e2-an-allows-2-–-24-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_074",
+      "req": "REQ-20",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Interest rate",
+      "scenario": "Rate 24.01 % refused (above max)",
+      "type": "Boundary value",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save calls blocked (nothing reaches the server)",
+      "data": "Rate 24.01",
+      "steps": [
+        "Fill",
+        "Apply",
+        "Save"
+      ],
+      "expected": "Same warning; no request",
+      "script": "tests/validation/fields.spec.js",
+      "tags": "",
+      "category": "Boundary values (rate 2 % – 24 %)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Rate 24.01: message \"Warning! | Interest rate must be between 2% and 24%, per this loan's own Loan Configuration\"; save request sent false (blocked)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.9,
+      "timestamp": "2026-10-15T11:13:46.282Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-fields-Gold-Sch-3cb2d-an-allows-2-–-24-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/fields.spec.js"
+    },
+    {
+      "id": "TC_GS_033",
+      "req": "REQ-07",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Slab table",
+      "scenario": "Apply to all slabs",
+      "type": "Business rule",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Rate 18",
+      "steps": [
+        "Type 18",
+        "Apply to all slabs"
+      ],
+      "expected": "Every slab 18 %, Paise/mo 1.5",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "@smoke",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "0 – 2,50,000: 18% / 1.5; 2,50,000 – 5,00,000: 18% / 1.5; 5,00,000 – Unlimited: 18% / 1.5",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T10:57:12.296Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--63f4c--rate-÷-12-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_034",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Internal LTV",
+      "scenario": "Bullet 9 mo at 18%",
+      "type": "Business rule / Calculation",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Type Bullet, tenure 9, rate 18",
+      "steps": [
+        "Fill tenure, type, rate",
+        "Apply to all slabs",
+        "Read Internal LTV"
+      ],
+      "expected": "Internal LTV = RBI LTV ÷ (1 + rate × tenure ÷ 12) for every slab (±0.01)",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "0 – 2,50,000: RBI 85% → 74.89% (expected 74.89%); 2,50,000 – 5,00,000: RBI 80% → 70.48% (expected 70.48%); 5,00,000 – Unlimited: RBI 75% → 66.08% (expected 66.08%)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T10:57:22.309Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--ab0c3-te-×-tenure-÷-12-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_035",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Internal LTV",
+      "scenario": "Bullet 3 mo at 22%",
+      "type": "Business rule / Calculation",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Type Bullet, tenure 3, rate 22",
+      "steps": [
+        "Fill tenure, type, rate",
+        "Apply to all slabs",
+        "Read Internal LTV"
+      ],
+      "expected": "Internal LTV = RBI LTV ÷ (1 + rate × tenure ÷ 12) for every slab (±0.01)",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "0 – 2,50,000: RBI 85% → 80.57% (expected 80.57%); 2,50,000 – 5,00,000: RBI 80% → 75.83% (expected 75.83%); 5,00,000 – Unlimited: RBI 75% → 71.09% (expected 71.09%)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.3,
+      "timestamp": "2026-10-15T11:14:58.265Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--e8bfb-te-×-tenure-÷-12-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_036",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Internal LTV",
+      "scenario": "Monthly 6 mo at 14%",
+      "type": "Business rule / Calculation",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Type Monthly, tenure 6, rate 14",
+      "steps": [
+        "Fill tenure, type, rate",
+        "Apply to all slabs",
+        "Read Internal LTV"
+      ],
+      "expected": "Internal LTV = RBI LTV ÷ (1 + rate × 1 month ÷ 12) for every slab (±0.01)",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "0 – 2,50,000: RBI 85% → 84.02% (expected 84.02%); 2,50,000 – 5,00,000: RBI 80% → 79.08% (expected 79.08%); 5,00,000 – Unlimited: RBI 75% → 74.14% (expected 74.14%)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.7,
+      "timestamp": "2026-10-15T10:58:31.798Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--72b92-e-×-1-month-÷-12-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_037",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Internal LTV",
+      "scenario": "Monthly 12 mo at 18%",
+      "type": "Business rule / Calculation",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Type Monthly, tenure 12, rate 18",
+      "steps": [
+        "Fill tenure, type, rate",
+        "Apply to all slabs",
+        "Read Internal LTV"
+      ],
+      "expected": "Internal LTV = RBI LTV ÷ (1 + rate × 1 month ÷ 12) for every slab (±0.01)",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "0 – 2,50,000: RBI 85% → 83.74% (expected 83.74%); 2,50,000 – 5,00,000: RBI 80% → 78.82% (expected 78.82%); 5,00,000 – Unlimited: RBI 75% → 73.89% (expected 73.89%)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.8,
+      "timestamp": "2026-10-15T10:58:42.658Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--1f24e-e-×-1-month-÷-12-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_038",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Internal LTV",
+      "scenario": "Monthly LTV independent of tenure",
+      "type": "Business rule",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Monthly 18 %, 3 → 24 mo",
+      "steps": [
+        "Change tenure"
+      ],
+      "expected": "LTV unchanged",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "3 mo 83.74/78.82/73.89 vs 24 mo 83.74/78.82/73.89",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11,
+      "timestamp": "2026-10-15T10:58:53.492Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--95239-ange-with-tenure-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_039",
+      "req": "REQ-08",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Slab table",
+      "scenario": "One slab rate changed",
+      "type": "Business rule / Field dependency",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Slab 1 → 24 %",
+      "steps": [
+        "Apply 20 %",
+        "Set slab 1 to 24"
+      ],
+      "expected": "Slab 1 paise 2.0 and LTV recalculated; other slabs unchanged",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "before 20/1.667/77.27 | 20/1.667/72.73 | 20/1.667/68.18 → after 24/2/75.89 | 20/1.667/72.73 | 20/1.667/68.18",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.7,
+      "timestamp": "2026-10-15T10:59:04.457Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--a8afe-s-only-that-slab-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_040",
+      "req": "REQ-09",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Slab table",
+      "scenario": "Exclude / include a slab",
+      "type": "Conditional behaviour",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "Slab 3",
+      "steps": [
+        "Exclude",
+        "Include back"
+      ],
+      "expected": "\"Not offered\"; button changes to \"Include…\"; LTV restored",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "68.18 → Not offered (button \"Include this amount range back into this scheme\") → 68.18",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.7,
+      "timestamp": "2026-10-15T10:59:17.207Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--9cd69-restores-the-LTV-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_041",
+      "req": "REQ-07",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Slab table",
+      "scenario": "Default rate change needs \"Apply\" (HYPOTHESIS)",
+      "type": "Field dependency",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "20 → 15",
+      "steps": [
+        "Apply 20",
+        "Type 15"
+      ],
+      "expected": "Slab rates stay 20 until Apply is pressed",
+      "script": "tests/business-rules/slab-rules.spec.js",
+      "tags": "",
+      "category": "Business rules – slabs & Internal LTV",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Default 15 typed, slab rates 20/20/20",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.1,
+      "timestamp": "2026-10-15T10:59:28.927Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-slab-rules--972c7-essed-HYPOTHESIS-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/slab-rules.spec.js"
+    },
+    {
+      "id": "TC_GS_042",
+      "req": "REQ-10",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Save – API",
+      "scenario": "Header payload",
+      "type": "API / Payload",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save answered by a SIMULATED server response",
+      "data": "AT-SIM, 6 mo, 20 %, Inactive",
+      "steps": [
+        "Fill",
+        "Save",
+        "Inspect body"
+      ],
+      "expected": "pLoanId 88, code, name, tenure, rate, paise = 20/12, ISO Effective From, INACTIVE, BULLET",
+      "script": "tests/negative/save-failures.spec.js",
+      "tags": "",
+      "category": "API payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"precordid\":0,\"pCompanyId\":20,\"pLoanId\":88,\"pSchemeCode\":\"AT-SIM\",\"pSchemeName\":\"AUTOTEST SIMULATED\",\"pTenureMonths\":6,\"pRateOfInterest\":20,\"pPaisePerMonth\":1.667,\"pEffectiveFrom\":\"2026-10-15\",\"pStatus\":\"INACTIVE\",\"pSchemeType\":\"BULLET\"}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13.6,
+      "timestamp": "2026-10-15T11:04:02.552Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-a9985-simulated-server-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/save-failures.spec.js"
+    },
+    {
+      "id": "TC_GS_043",
+      "req": "REQ-10",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Save – API",
+      "scenario": "Slab payload",
+      "type": "API / Payload",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save answered by a SIMULATED server response",
+      "data": "Slab 1 = 19 %, slab 3 excluded",
+      "steps": [
+        "Save",
+        "Inspect slab body"
+      ],
+      "expected": "Rates 19/20/20, status ACTIVE/ACTIVE/INACTIVE, new scheme id",
+      "script": "tests/negative/save-failures.spec.js",
+      "tags": "",
+      "category": "API payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"pSchemeId\":999999999,\"pRates\":[{\"pSchemeId\":999999999,\"pMinimumAmount\":0,\"pMaximumAmount\":250000,\"pRateOfInterest\":19,\"pPaisePerMonth\":1.583,\"pStatus\":\"ACTIVE\"},{\"pSchemeId\":999999999,\"pMinimumAmount\":250000,\"pMaximumAmount\":500000,\"pRateOfInterest\":20,\"pPaisePerMonth\":1.667,\"pStatus\":\"ACTIVE\"},{\"pSchemeId\":999999999,\"pMinimumAmount\":500000,\"pMaximumAmount\":null,\"pRateOfInterest\":20,\"pPaisePerMonth\":1.667,\"pStatus\":\"INACTIVE\"}]}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.4,
+      "timestamp": "2026-10-15T11:04:16.312Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-6dc44-simulated-server-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/save-failures.spec.js"
+    },
+    {
+      "id": "TC_GS_044",
+      "req": "REQ-11",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Recovery",
+      "scenario": "Network failure on save",
+      "type": "Recovery / Negative",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save answered by a SIMULATED server response",
+      "data": "Save call aborted",
+      "steps": [
+        "Save"
+      ],
+      "expected": "\"Unable to save scheme\"; no success",
+      "script": "tests/negative/save-failures.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Error! | Unable to save scheme. Please contact support.\"; panel open true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.5,
+      "timestamp": "2026-10-15T11:04:27.769Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-be7c6-e-and-no-success-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/save-failures.spec.js"
+    },
+    {
+      "id": "TC_GS_045",
+      "req": "REQ-11",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Recovery",
+      "scenario": "HTTP 500 on save",
+      "type": "Recovery / Negative",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save answered by a SIMULATED server response",
+      "data": "Simulated 500",
+      "steps": [
+        "Save"
+      ],
+      "expected": "Error shown; entered data kept",
+      "script": "tests/negative/save-failures.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Error! | Unable to save scheme. Please contact support.\"; code still \"AT-SIM\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.7,
+      "timestamp": "2026-10-15T11:04:39.239Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-920a6-the-entered-data-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/save-failures.spec.js"
+    },
+    {
+      "id": "TC_GS_046",
+      "req": "REQ-11",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Recovery",
+      "scenario": "Slab save fails after header saved (HYPOTHESIS)",
+      "type": "Transaction integrity",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save answered by a SIMULATED server response",
+      "data": "Header OK, slabs 500",
+      "steps": [
+        "Save"
+      ],
+      "expected": "User told about the failure; no \"Scheme added successfully\"",
+      "script": "tests/negative/save-failures.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Error! | Scheme saved, but its per-slab rates failed to save. Please reopen and try again.\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.5,
+      "timestamp": "2026-10-15T11:04:50.985Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-49080-lated-HYPOTHESIS-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/save-failures.spec.js"
+    },
+    {
+      "id": "TC_GS_047",
+      "req": "REQ-12",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Save",
+      "scenario": "Double-click Save Scheme",
+      "type": "Double submit",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked; save answered by a SIMULATED server response",
+      "data": "-",
+      "steps": [
+        "Double-click Save"
+      ],
+      "expected": "One save request",
+      "script": "tests/negative/save-failures.spec.js",
+      "tags": "",
+      "category": "Double submit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "savegoldschemeconfiguration calls: 2",
+      "error": "Error: expect(received).toHaveLength(expected)\n\nExpected length: 1\nReceived length: 2\nReceived array:  [{\"pCompanyId\": 20, \"pEffectiveFrom\": \"2026-10-15\", \"pLoanId\": 88, \"pPaisePerMonth\": 1.667, \"pRateOfInterest\": 20, \"pSchemeCode\": \"AT-SIM\", \"pSchemeName\": \"AUTOTEST SIMULATED\", \"pSchemeType\": \"BULLET\", \"pStatus\": \"INACTIVE\", \"pTenureMonths\": 6, \"precordid\": 0}, {\"pCompanyId\": 20, \"pEffectiveFrom\": \"2026-10-15\", \"pLoanId\": 88, \"pPaisePerMonth\": 1.667, \"pRateOfInterest\": 20, \"pSchemeCode\": \"AT-SIM\", \"pSchemeName\": \"AUTOTEST SIMULATED\", \"pSchemeType\": \"BULLET\", \"pStatus\": \"INACTIVE\", \"pTenureMonths\": 6, \"precordid\": 0}]\n\n  86 |     await gsm.page.waitForTimeout(2500);\n  87 |     record(`savegoldschemeconfiguration calls: ${sent.length}`);\n> 88 |     expect(sent).toHaveLength(1);\n     |                  ^\n  89 |   });\n  90 | });",
+      "expectedVerified": false,
+      "duration": 13.5,
+      "timestamp": "2026-10-15T11:05:02.441Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-a2f6f-simulated-server-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-a2f6f-simulated-server-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/negative-save-failures-Gol-a2f6f-simulated-server-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-006",
+      "automationPath": "tests/negative/save-failures.spec.js"
+    },
+    {
+      "id": "TC_GS_048",
+      "req": "REQ-10",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Create",
+      "scenario": "Create scheme with custom slab and exclusion",
+      "type": "Positive / Create / Persistence",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "6 mo Bullet 20 %, slab 1 19 %, slab 3 excluded",
+      "steps": [
+        "Fill",
+        "Save",
+        "Find row"
+      ],
+      "expected": "\"Scheme added successfully\"; row 6 mo / Bullet / 20.00 % / 1.667 / LTV 77.63 % / 72.73 %; switch off",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "@smoke",
+      "category": "Create / Read",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Success! | Scheme added successfully\"; API savegoldschemeconfiguration 200 49, savegoldschemeslabrates 200 true; total 23 → 24; row {\"code\":\"AT-T270470\",\"name\":\"AUTOTEST FT 270470\",\"tenure\":6,\"type\":\"Bullet\",\"rate\":20,\"paise\":1.667,\"paiseText\":\"1.667\",\"ltv\":[77.63,72.73],\"on\":false}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 29.8,
+      "timestamp": "2026-10-15T11:05:17.207Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--2f864-ght-values-smoke-regression-chromium/test-finished-1.png"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--2f864-ght-values-smoke-regression-chromium/test-finished-2.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_049",
+      "req": "REQ-13",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Read",
+      "scenario": "Edit shows saved values",
+      "type": "Read / Edit",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "As TC_GS_048",
+      "steps": [
+        "Create",
+        "Edit"
+      ],
+      "expected": "Header and slab rates 19/20/20 + slab 3 \"Not offered\"",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Create / Read",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"loan\":\"2: 88\",\"loanText\":\"New Gold (GLNG)\",\"code\":\"AT-T567856\",\"name\":\"AUTOTEST FT 567856\",\"tenure\":\"6\",\"type\":\"BULLET\",\"rate\":\"20\",\"effectiveFrom\":\"15/10/2026\",\"active\":false}; slabs 19/77.63 | 20/72.73 | 20/Not offered",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 27,
+      "timestamp": "2026-10-15T11:05:47.197Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--64338-s-and-exclusions-regression-chromium/test-finished-1.png"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--64338-s-and-exclusions-regression-chromium/test-finished-2.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_050",
+      "req": "REQ-13",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Update",
+      "scenario": "Update name and tenure",
+      "type": "Positive / Update",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "Name + \" UPD\", tenure 12",
+      "steps": [
+        "Edit",
+        "Update"
+      ],
+      "expected": "\"Scheme updated successfully\"; grid updated, LTV recalculated",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Update / Edit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Success! | Scheme updated successfully | Success! | Scheme added successfully\"; row {\"code\":\"AT-T836155\",\"name\":\"AUTOTEST FT 836155 UPD\",\"tenure\":12,\"type\":\"Bullet\",\"rate\":20,\"paise\":1.667,\"paiseText\":\"1.667\",\"ltv\":[70.83,66.67,62.5],\"on\":false}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 30.2,
+      "timestamp": "2026-10-15T11:06:14.185Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--7a76d-s-the-new-values-regression-chromium/test-finished-1.png"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--7a76d-s-the-new-values-regression-chromium/test-finished-2.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_051",
+      "req": "REQ-13",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Update",
+      "scenario": "Update keeps slab overrides",
+      "type": "Data integrity",
+      "priority": "P0",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "Slab 1 19 %, slab 3 excluded; tenure → 12",
+      "steps": [
+        "Create",
+        "Update tenure",
+        "Edit again"
+      ],
+      "expected": "Slab rates 19/20/20 and slab 3 still excluded",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Update / Edit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "After update: slab rates 20/20/20, slab 3 62.5; grid LTV 70.83/66.67/62.5",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 1\n\n  Array [\n-   19,\n+   20,\n    20,\n    20,\n  ]\n",
+      "expectedVerified": false,
+      "duration": 33.5,
+      "timestamp": "2026-10-15T11:06:44.417Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium/video.webm"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium/test-failed-2.png"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-007",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_052",
+      "req": "REQ-14",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Create",
+      "scenario": "Duplicate code + tenure refused, with no success message",
+      "type": "Duplicate prevention",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "Same code twice",
+      "steps": [
+        "Create",
+        "Create again with same code and tenure"
+      ],
+      "expected": "Only \"already exists with a 6 month tenure\"; no \"Scheme added successfully\"; count unchanged",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Duplicate prevention",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Second save with code AT-T492791: \"Warning! | Scheme AT-T492791 already exists with a 6 month tenure | Success! | Scheme added successfully\"; schemes 24 → 24",
+      "error": "Error: expect(received).not.toMatch(expected)\n\nExpected pattern: not /Scheme added successfully/\nReceived string:      \"Warning! | Scheme AT-T492791 already exists with a 6 month tenure | Success! | Scheme added successfully\"\n\n  94 |     expect(after).toBe(before);\n  95 |     expect(msg).toMatch(/already exists with a 6 month tenure/);\n> 96 |     expect(msg).not.toMatch(/Scheme added successfully/);\n     |                     ^\n  97 |   });\n  98 |\n  99 |   test('TC_GS_053 - \"Scheme on\" switch disables and re-enables a scheme and the state is kept @regression', async ({ gsm, created, record }) => {",
+      "expectedVerified": false,
+      "duration": 29.7,
+      "timestamp": "2026-10-15T11:07:19.930Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--355f5--success-message-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--355f5--success-message-regression-chromium/video.webm"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--355f5--success-message-regression-chromium/test-failed-2.png"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--355f5--success-message-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-008",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_053",
+      "req": "REQ-15",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Scheme on",
+      "scenario": "Switch off and on",
+      "type": "Workflow state",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "Active scheme",
+      "steps": [
+        "Switch off",
+        "Reload",
+        "Switch on",
+        "Reload"
+      ],
+      "expected": "\"Scheme disabled\" → off kept → on kept",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Workflow state (Scheme on, effectiveness)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "on=true → \"Success! | Scheme disabled | Success! | Scheme added successfully\" → on=false → \"Success! | Scheme enabled\" → on=true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 29.2,
+      "timestamp": "2026-10-15T11:07:51.418Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--10310-he-state-is-kept-regression-chromium/test-finished-1.png"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--10310-he-state-is-kept-regression-chromium/test-finished-2.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_054",
+      "req": "REQ-16",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Delete",
+      "scenario": "Delete then Cancel",
+      "type": "Cancel",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "-",
+      "steps": [
+        "Delete",
+        "Dismiss"
+      ],
+      "expected": "Dialog \"Permanently delete scheme <code> (<name>) and its slab rates? This cannot be undone…\"; scheme stays",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Delete & Cancel",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Dialog \"Permanently delete scheme AT-T111393 (AUTOTEST FT 111393) and its slab rates? This cannot be undone - use the \"Scheme on\" toggle instead if you just want to stop offering it.\"; still listed true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 28,
+      "timestamp": "2026-10-15T11:08:20.759Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--06153-keeps-the-scheme-regression-chromium/test-finished-1.png"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--06153-keeps-the-scheme-regression-chromium/test-finished-2.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_055",
+      "req": "REQ-16",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Delete",
+      "scenario": "Delete confirmed",
+      "type": "Positive / Delete",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "-",
+      "steps": [
+        "Delete",
+        "Accept"
+      ],
+      "expected": "\"Scheme <code> deleted.\"; row gone",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Delete & Cancel",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Success! | Scheme AT-T379608 deleted. | Success! | Scheme added successfully\"; API 200 {\"pIsDeleted\":true,\"pMessage\":\"Scheme AT-T379608 deleted.\"}; total 24 → 23; gone true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 27.1,
+      "timestamp": "2026-10-15T11:08:48.773Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--07ebe-eme-code-deleted-regression-chromium/test-finished-1.png"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--07ebe-eme-code-deleted-regression-chromium/test-finished-2.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_056",
+      "req": "REQ-15",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Effectiveness",
+      "scenario": "Active scheme effective today; Inactive not",
+      "type": "Business rule / API",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; creates a real INACTIVE \"AUTOTEST FT\" scheme (code AT-T…) that is deleted after the test",
+      "data": "One Active + one Inactive scheme",
+      "steps": [
+        "Create both",
+        "Read resolved-LTV API"
+      ],
+      "expected": "Active → ACTIVE & pIsEffective; Inactive → INACTIVE",
+      "script": "tests/positive/crud.spec.js",
+      "tags": "",
+      "category": "Workflow state (Scheme on, effectiveness)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Active AT-T647895: ACTIVE/true,ACTIVE/true,ACTIVE/true; Inactive AT-T647892: INACTIVE/false,INACTIVE/false,INACTIVE/false",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 33.7,
+      "timestamp": "2026-10-15T11:09:15.862Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--7f10d-e-one-is-not-API-regression-chromium/test-finished-1.png"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-crud-Gold-Scheme--7f10d-e-one-is-not-API-regression-chromium/test-finished-2.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/crud.spec.js"
+    },
+    {
+      "id": "TC_GS_057",
+      "req": "REQ-17",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Access",
+      "scenario": "User without rights sees locked card",
+      "type": "Role-based access",
+      "priority": "P0",
+      "pre": "Maker (INT_APPRAISER1)",
+      "data": "-",
+      "steps": [
+        "Login as maker",
+        "Click Gold Scheme Matrix"
+      ],
+      "expected": "\"No view permission in User Rights for GoldSchemeMatrix\"; screen does not open",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Card \"Gold Scheme Matrix Gold schemes: type (Bullet/Monthly), tenure, interest rate and internal LTV. No view permission in User Rights for GoldSchemeMatrix\"; URL http://host214.kapilits.com:8411/#/Loans/GoldLoanConfiguration; New Scheme visible false",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12,
+      "timestamp": "2026-10-15T11:03:25.076Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Sche-ec090--open-the-screen-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GS_058",
+      "req": "REQ-17",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Access",
+      "scenario": "Direct URL without rights",
+      "type": "Role-based access / Security",
+      "priority": "P0",
+      "pre": "Maker",
+      "data": "open=GoldSchemeMatrix",
+      "steps": [
+        "Open the URL"
+      ],
+      "expected": "No screen, scheme list API not called",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "New Scheme visible false; list API called false",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.8,
+      "timestamp": "2026-10-15T11:03:37.058Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Sche-ebde2-d-no-scheme-data-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GS_059",
+      "req": "REQ-13",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Edit",
+      "scenario": "Scheme Code locked when editing (HYPOTHESIS)",
+      "type": "Field state",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "First scheme (not saved)",
+      "steps": [
+        "Edit",
+        "Check code field"
+      ],
+      "expected": "Code read-only",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Update / Edit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Editing GL-QUICK: Scheme Code editable = true (not saved)",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: false\nReceived: true\n\n  37 |     const editable = await gsm.code.isEditable();\n  38 |     record(`Editing ${r.code}: Scheme Code editable = ${editable} (not saved)`);\n> 39 |     expect(editable).toBe(false);\n     |                      ^\n  40 |     void GoldSchemeMatrixPage;\n  41 |   });\n  42 | });",
+      "expectedVerified": false,
+      "duration": 10.4,
+      "timestamp": "2026-10-15T11:03:49.830Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Sche-7648e-cheme-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/functional-roles-Gold-Sche-7648e-cheme-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/functional-roles-Gold-Sche-7648e-cheme-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-009",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GS_060",
+      "req": "REQ-18",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "API",
+      "scenario": "Scheme list schema",
+      "type": "API / Schema",
+      "priority": "P2",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Validate records"
+      ],
+      "expected": "Every record well-formed",
+      "script": "tests/api/scheme-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "23 schemes; malformed: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.7,
+      "timestamp": "2026-10-15T10:56:13.788Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-5c3d2-l-formed-records-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/scheme-api.spec.js"
+    },
+    {
+      "id": "TC_GS_061",
+      "req": "REQ-18",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "API security",
+      "scenario": "List API without token",
+      "type": "API / Authorization",
+      "priority": "P1",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Replay without token"
+      ],
+      "expected": "401 / 403",
+      "script": "tests/api/scheme-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "No token → 401",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.7,
+      "timestamp": "2026-10-15T10:56:23.657Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-d2d83--without-a-token-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/scheme-api.spec.js"
+    },
+    {
+      "id": "TC_GS_062",
+      "req": "REQ-18",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "API security",
+      "scenario": "List API with a no-rights token",
+      "type": "API / Authorization",
+      "priority": "P1",
+      "pre": "Maker + admin",
+      "data": "Maker token",
+      "steps": [
+        "Replay with maker token"
+      ],
+      "expected": "401 / 403",
+      "script": "tests/api/scheme-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "INT_APPRAISER1 token → 200 23 schemes returned",
+      "error": "Error: expect(received).toContain(expected) // indexOf\n\nExpected value: 200\nReceived array: [401, 403]\n\n  38 |     record(`${MAKER} token → ${r.status()} ${t.trim().startsWith('[') ? `${JSON.parse(t).length} schemes returned` : t.slice(0, 100)}`);\n  39 |     await m.page.close();\n> 40 |     expect([401, 403]).toContain(r.status());\n     |                        ^\n  41 |   });\n  42 |\n  43 |   test(`TC_GS_063 - Delete API refuses a user without rights (${MAKER}) – non-existent id @regression`, async ({ browser, record }) => {",
+      "expectedVerified": false,
+      "duration": 17.8,
+      "timestamp": "2026-10-15T10:56:33.377Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium/video.webm"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium/test-failed-2.png"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-010",
+      "automationPath": "tests/api/scheme-api.spec.js"
+    },
+    {
+      "id": "TC_GS_063",
+      "req": "REQ-18",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "API security",
+      "scenario": "Delete API with a no-rights token",
+      "type": "API / Authorization",
+      "priority": "P0",
+      "pre": "Maker",
+      "data": "Scheme id 999999999",
+      "steps": [
+        "POST delete as maker"
+      ],
+      "expected": "401 / 403",
+      "script": "tests/api/scheme-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "INT_APPRAISER1 delete → 200 {\"pIsDeleted\":false,\"pMessage\":\"Scheme not found - it may already have been deleted.\"}",
+      "error": "Error: expect(received).toContain(expected) // indexOf\n\nExpected value: 200\nReceived array: [401, 403]\n\n  47 |     record(`${MAKER} delete → ${r.status()} ${t.slice(0, 160)}`);\n  48 |     await m.page.close();\n> 49 |     expect([401, 403]).toContain(r.status());\n     |                        ^\n  50 |   });\n  51 |\n  52 |   test('TC_GS_064 - Delete API for a non-existent scheme answers \"not deleted\" @regression', async ({ browser, record }) => {",
+      "expectedVerified": false,
+      "duration": 8.3,
+      "timestamp": "2026-10-15T10:56:52.311Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-1778c--non-existent-id-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-1778c--non-existent-id-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-011",
+      "automationPath": "tests/api/scheme-api.spec.js"
+    },
+    {
+      "id": "TC_GS_064",
+      "req": "REQ-18",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "API",
+      "scenario": "Delete unknown scheme",
+      "type": "API / Negative",
+      "priority": "P3",
+      "pre": "Admin",
+      "data": "Scheme id 999999999",
+      "steps": [
+        "POST delete"
+      ],
+      "expected": "pIsDeleted false",
+      "script": "tests/api/scheme-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Admin delete unknown id → 200 {\"pIsDeleted\":false,\"pMessage\":\"Scheme not found - it may already have been deleted.\"}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.4,
+      "timestamp": "2026-10-15T10:57:01.704Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-scheme-api-Gold-Scheme-831de-wers-not-deleted-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/scheme-api.spec.js"
+    },
+    {
+      "id": "TC_GS_065",
+      "req": "REQ-19",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Responsive",
+      "scenario": "768px width",
+      "type": "Responsive",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "768×1024",
+      "steps": [
+        "Resize",
+        "Open New"
+      ],
+      "expected": "Save Scheme inside the viewport",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "scrollWidth 768; Save Scheme right edge 744",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.3,
+      "timestamp": "2026-10-15T11:09:49.537Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Scheme--bfbc8-panel-are-usable-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GS_066",
+      "req": "REQ-19",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Accessibility",
+      "scenario": "Form fields labelled",
+      "type": "Accessibility",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open; New Scheme clicked",
+      "data": "-",
+      "steps": [
+        "Check labels"
+      ],
+      "expected": "Every field has an accessible name",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Without accessible name: Loan, Scheme Code, Scheme Name, Tenure, Scheme Type, Interest rate, Effective From",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 9\n\n- Array []\n+ Array [\n+   \"Loan\",\n+   \"Scheme Code\",\n+   \"Scheme Name\",\n+   \"Tenure\",\n+   \"Scheme Type\",",
+      "expectedVerified": false,
+      "duration": 9.6,
+      "timestamp": "2026-10-15T11:09:59.847Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Scheme--214c7-accessible-names-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/regression-ui-Gold-Scheme--214c7-accessible-names-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/regression-ui-Gold-Scheme--214c7-accessible-names-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-012",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GS_067",
+      "req": "REQ-19",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Accessibility",
+      "scenario": "Row action tooltips",
+      "type": "Usability",
+      "priority": "P3",
+      "pre": "Admin (CHECKER_BH) logged in; Gold Loan Configuration → Gold Scheme Matrix open",
+      "data": "-",
+      "steps": [
+        "Read button titles"
+      ],
+      "expected": "Edit, Delete",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Edit, Delete",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T11:10:11.201Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Scheme--44d7b--Edit-and-Delete-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GS_068",
+      "req": "REQ-15",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Integration",
+      "scenario": "Inactive / future-dated scheme not offered on Gold Estimates",
+      "type": "Cross-screen workflow",
+      "priority": "P1",
+      "pre": "Scheme created; Gold Estimate screen",
+      "data": "-",
+      "steps": [
+        "Create inactive scheme",
+        "Open Gold Estimates scheme list"
+      ],
+      "expected": "Scheme not offered",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Needs the Gold Estimates form (separate suite) – planned when that form is built",
+      "category": "Workflow state (Scheme on, effectiveness)",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GS_069",
+      "req": "REQ-14",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Concurrency",
+      "scenario": "Two admins edit the same scheme",
+      "type": "Concurrent updates",
+      "priority": "P3",
+      "pre": "Two admin accounts",
+      "data": "-",
+      "steps": [
+        "Both edit",
+        "Both update"
+      ],
+      "expected": "Second update warned or merged",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Only one admin account in .env",
+      "category": "Concurrency / session / browser",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GS_070",
+      "req": "REQ-19",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Session / browser",
+      "scenario": "Session timeout; Firefox / WebKit",
+      "type": "Session timeout / Browser compatibility",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Idle time unknown; only Chromium run",
+      "category": "Concurrency / session / browser",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GS_NA1",
+      "req": "-",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Files",
+      "scenario": "File upload / download",
+      "type": "File",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "No upload or export on this screen",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GS_NA2",
+      "req": "-",
+      "module": "Gold Scheme Matrix",
+      "screen": "Scheme Matrix",
+      "feature": "Database",
+      "scenario": "Database verification",
+      "type": "Persistence",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "No DB access; persistence checked by grid, Edit and API",
+      "category": "Create / Read",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    }
+  ]
+}

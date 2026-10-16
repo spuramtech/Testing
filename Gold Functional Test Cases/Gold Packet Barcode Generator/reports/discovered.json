@@ -1,0 +1,1552 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Gold Packet Barcode Generator/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Gold Packet Barcode Generator/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Gold Packet Barcode Generator/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\barcode-api.spec.js",
+      "file": "api/barcode-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Generator – API",
+          "file": "api/barcode-api.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_053 - Loan list and register APIs refuse requests without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f0aeec4a43b68ed24965-6d2da0e7a9a92b759c26",
+              "file": "api/barcode-api.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_054 - generatebarcode refuses a request without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f0aeec4a43b68ed24965-729aac5ea8ae6131f03a",
+              "file": "api/barcode-api.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_055 - Register API Status filter returns only that status @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f0aeec4a43b68ed24965-3b1631235e948014ff92",
+              "file": "api/barcode-api.spec.js",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_056 - A non-Branch-Head user cannot read the loans-for-barcode list through the API (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f0aeec4a43b68ed24965-3a05a30e8b94d3638985",
+              "file": "api/barcode-api.spec.js",
+              "line": 41,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\print.spec.js",
+      "file": "business-rules/print.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Generator – Print sticker (simulated server)",
+          "file": "business-rules/print.spec.js",
+          "line": 29,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_016 - BH print sends type New, loan, employee and branch @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-367d9bc0a26be8d33094",
+              "file": "business-rules/print.spec.js",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_017 - Audit print sends type Audit @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-4744fd0d96b865af8050",
+              "file": "business-rules/print.spec.js",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_018 - Successful print shows the recorded barcode number and a \"use once\" message @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-430494c69c6ba80c4b6f",
+              "file": "business-rules/print.spec.js",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_019 - Network failure on print: \"nothing was printed\", no recorded number @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-de5384cab55b893c19da",
+              "file": "business-rules/print.spec.js",
+              "line": 61,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_020 - Server error 500 on print is shown as an error, not success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-a50941876555df154659",
+              "file": "business-rules/print.spec.js",
+              "line": 72,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_021 - Double-clicking Print sticker records only once @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-b4ed5b5cb999c55608fc",
+              "file": "business-rules/print.spec.js",
+              "line": 83,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_022 - A loan with an unused barcode is refused and offers \"Cancel old barcode & generate new\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-cca3614940f73338d60e",
+              "file": "business-rules/print.spec.js",
+              "line": 92,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_023 - \"Cancel old & generate new\" without a reason is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-4eca149a5fef84c50d16",
+              "file": "business-rules/print.spec.js",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_024 - \"Cancel old & generate new\" sends the old barcode and the reason @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-d07b68c80ad07a61ef78",
+              "file": "business-rules/print.spec.js",
+              "line": 110,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_025 - A real loan that has an unused BH barcode is refused (live data) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8566ad0c84916bd229a9-a249786c22d5622db90d",
+              "file": "business-rules/print.spec.js",
+              "line": 122,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\generator.spec.js",
+      "file": "functional/generator.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Generator – generator screen",
+          "file": "functional/generator.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_001 - Page shows Type, Loan Number, Employee Name and Generate barcode @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-b06e4621c17ec2176316",
+              "file": "functional/generator.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_002 - Type defaults to BH @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-62616a71c1ba78ba8be9",
+              "file": "functional/generator.spec.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_003 - Employee Name is the logged-in user and cannot be edited @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-415db1b274ef8144714f",
+              "file": "functional/generator.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_004 - BH loan list = API list of loans not yet packeted @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-9f9a38e62b14e52ea236",
+              "file": "functional/generator.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_005 - Audit loan list = API list of loans already in inventory @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-8136282a05b36e3ea283",
+              "file": "functional/generator.spec.js",
+              "line": 39,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_006 - Switching to Audit changes the hint and the loan list @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-9827ecdd7b4694ec2525",
+              "file": "functional/generator.spec.js",
+              "line": 47,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_007 - Each loan option shows loan number and applicant name @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-8c160e4c3a7b06e4bb53",
+              "file": "functional/generator.spec.js",
+              "line": 57,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_008 - Generate without a loan shows no preview @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-b7674fb7a748c975057d",
+              "file": "functional/generator.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_009 - Generate shows a preview with branch, type, loan and employee, and no barcode number yet @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-7f03f7fbfdc81de07b99",
+              "file": "functional/generator.spec.js",
+              "line": 72,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_010 - Generate is only a preview: no write request is sent @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-f833467341c28687b282",
+              "file": "functional/generator.spec.js",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_011 - After switching type, any preview shown matches the selected type (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-f51c6407c788d481ba23",
+              "file": "functional/generator.spec.js",
+              "line": 98,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_012 - Typing in Loan Number filters the list @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c7475810b688fcec3429-367f24f11469a13fe832",
+              "file": "functional/generator.spec.js",
+              "line": 109,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\register.spec.js",
+      "file": "functional/register.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Register",
+          "file": "functional/register.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_026 - Register opens from \"View Register\" with the expected columns @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-86f5bd65d946dbd478a2",
+              "file": "functional/register.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_027 - Total items equals the number of records from the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-5facd5ef1d9b3ffd179d",
+              "file": "functional/register.spec.js",
+              "line": 14,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_028 - First-page rows match the API (barcode, loan, status) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-11e803f98bd04868342f",
+              "file": "functional/register.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_029 - Status list offers All, Not Used, Used and Cancelled @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-889a4fc04e8b9f1e696a",
+              "file": "functional/register.spec.js",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_030 - Status filter \"Not Used\" shows only Not Used barcodes @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-877875fa5ceb8750552f",
+              "file": "functional/register.spec.js",
+              "line": 37,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_031 - Status filter \"Used\" shows only Used barcodes @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-99728d44dbea0e1c8478",
+              "file": "functional/register.spec.js",
+              "line": 37,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_032 - Status filter \"Cancelled\" shows only Cancelled barcodes @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-87f2c29a13c48de8563c",
+              "file": "functional/register.spec.js",
+              "line": 37,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_033 - Search by loan number @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-37854485f1adb2bee55c",
+              "file": "functional/register.spec.js",
+              "line": 47,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_034 - Search by barcode number @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-2cba3b4d5aa15ee47f84",
+              "file": "functional/register.spec.js",
+              "line": 47,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_035 - Search by applicant name @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-78c023b7e7426b69692f",
+              "file": "functional/register.spec.js",
+              "line": 47,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_036 - Search with no match shows no rows @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-70a0155ac05dbf2c1550",
+              "file": "functional/register.spec.js",
+              "line": 57,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_037 - Only Not Used barcodes have a Cancel button @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-5e06464cf6f5555774f5",
+              "file": "functional/register.spec.js",
+              "line": 64,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_038 - Barcode numbers are BH…/AUD… by type and unique @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-4ff935bd4ab718ee205d",
+              "file": "functional/register.spec.js",
+              "line": 71,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_039 - A loan has at most one Not Used BH barcode @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-8cee87ada13f34fa739b",
+              "file": "functional/register.spec.js",
+              "line": 81,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_040 - A loan has at most one Used BH barcode (one packet per loan) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-62adb5447196c8e20286",
+              "file": "functional/register.spec.js",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_041 - Loans in the BH list have no Used BH barcode @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-a1f5f094af45a8ef90a9",
+              "file": "functional/register.spec.js",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_042 - Rows are listed newest first @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-9b3a7c2c2e4c0fe6e1bb",
+              "file": "functional/register.spec.js",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_043 - Paging shows 10 rows per page and page 2 has different rows @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-da612b8588994b9fa237",
+              "file": "functional/register.spec.js",
+              "line": 111,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Gold Packet Barcode Register – cancel a barcode (simulated)",
+          "file": "functional/register.spec.js",
+          "line": 123,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_044 - Cancel dialog shows the barcode, type and loan and warns it is permanent @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-f5e40ff883db79c1d56d",
+              "file": "functional/register.spec.js",
+              "line": 134,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_045 - Confirm cancellation without a reason is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-dcc2f3eb2eaf50358561",
+              "file": "functional/register.spec.js",
+              "line": 143,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_046 - Whitespace-only reason is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-966cbce7f1ce9a55c81c",
+              "file": "functional/register.spec.js",
+              "line": 154,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_047 - Confirm cancellation sends the barcode and the reason @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-a34734b5340a1c91a382",
+              "file": "functional/register.spec.js",
+              "line": 166,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_048 - Back closes the dialog and sends nothing @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-77171924697b4994be5d",
+              "file": "functional/register.spec.js",
+              "line": 178,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_049 - Failed cancellation (network) does not show success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "63da7d50092806ad3cd0-b006584bd1da0c1ccb53",
+              "file": "functional/register.spec.js",
+              "line": 187,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "negative\\roles.spec.js",
+      "file": "negative/roles.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Generator – roles",
+          "file": "negative/roles.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_050 - INT_APPRAISER1 has no Gold Packet Barcode Generator in the menu @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-702c68fd6339cea81c03",
+              "file": "negative/roles.spec.js",
+              "line": 9,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_051 - EXT_APPRAISER1 has no Gold Packet Barcode Generator in the menu @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-4be304cea2b67af120a3",
+              "file": "negative/roles.spec.js",
+              "line": 9,
+              "column": 5
+            },
+            {
+              "title": "TC_PB_052 - INT_APPRAISER1 opening the generator URL directly cannot generate @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-b961834813d43f90749c",
+              "file": "negative/roles.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\real-barcode.spec.js",
+      "file": "positive/real-barcode.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Generator – real print and cancel",
+          "file": "positive/real-barcode.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_060 - Real BH print records a Not Used barcode in the register (ALLOW_DATA_CREATION=1) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1e3a3cbf921637ee98fe-28ee580668bc0198b123",
+              "file": "positive/real-barcode.spec.js",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_061 - Real cancel marks the barcode Cancelled with the reason (ALLOW_DATA_CREATION=1) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1e3a3cbf921637ee98fe-5730ee31a1332447aec8",
+              "file": "positive/real-barcode.spec.js",
+              "line": 30,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui.spec.js",
+      "file": "regression/ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Generator – usability, accessibility, responsive",
+          "file": "regression/ui.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_057 - At tablet width (768px) the generator has no page-level horizontal scroll @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-000781b9d195e3f25ddb",
+              "file": "regression/ui.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_058 - Type radios and Loan Number have accessible names @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-717525733a7e60c5a1f8",
+              "file": "regression/ui.spec.js",
+              "line": 12,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_059 - Register search box has an accessible name @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-eee520733d5d87f37ad7",
+              "file": "regression/ui.spec.js",
+              "line": 24,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "validation\\loan-select.spec.js",
+      "file": "validation/loan-select.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Packet Barcode Generator – loan selection validation",
+          "file": "validation/loan-select.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_PB_013 - An unknown loan number cannot be selected @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "aa9a1f3ccfdd8b49d30c-e2511bcb99d6c0bc6eb3",
+              "file": "validation/loan-select.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_014 - Special characters in the loan search find nothing and cause no error @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "aa9a1f3ccfdd8b49d30c-d9f3ab96c7318eb9788d",
+              "file": "validation/loan-select.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_PB_015 - The clear (x) button removes the selected loan @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "aa9a1f3ccfdd8b49d30c-1b3625e561fa0449ab6a",
+              "file": "validation/loan-select.spec.js",
+              "line": 28,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-16T05:52:44.740Z",
+    "duration": 47.55799999999999,
+    "expected": 0,
+    "skipped": 61,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

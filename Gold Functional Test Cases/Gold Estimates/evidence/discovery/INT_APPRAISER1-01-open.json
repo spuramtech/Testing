@@ -1,0 +1,118 @@
+{
+  "inputs": [
+    {
+      "tag": "NG-SELECT",
+      "fc": "urlName",
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": ""
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": "pCustomername",
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": "ptodayDate",
+      "ro": true,
+      "val": "15/10/2026"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": "pLoantypeid",
+      "val": "88",
+      "opts": [
+        "Select",
+        "New Gold"
+      ]
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": null,
+      "val": "0: null",
+      "opts": [
+        "Not applied (use Loan Configuration)",
+        "GL-quick — 3 mo",
+        "GL-smart — 3 mo",
+        "GOLD OLD — 3 mo",
+        "GL-Flexi — 6 mo",
+        "GL-Smart — 6 mo",
+        "AUTOTEST SCHEME 02192 — 9 mo",
+        "AUTOTEST SCHEME 02476 — 9 mo",
+        "AUTOTEST SCHEME 10325 — 9 mo",
+        "AUTOTEST SCHEME 23482 — 9 mo",
+        "AUTOTEST SCHEME 32076 — 9 mo",
+        "AUTOTEST SCHEME 43412 — 9 mo",
+        "AUTOTEST SCHEME 50419 — 9 mo",
+        "AUTOTEST SCHEME 53612 — 9 mo",
+        "AUTOTEST SCHEME 55989 — 9 mo"
+      ]
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 200,
+      "dis": true,
+      "val": ""
+    },
+    {
+      "tag": "TEXTAREA",
+      "type": "textarea",
+      "fc": "pRemarks",
+      "max": 90,
+      "val": ""
+    }
+  ],
+  "buttons": [
+    "Contact Configuration",
+    "Loan Configuration",
+    "Loan Origination",
+    "Credit Evaluation",
+    "Loan Management",
+    "Reports & Letters",
+    "Nach",
+    "Npa",
+    "Suit",
+    "Vehicle Loan",
+    "Gold",
+    "Configuration",
+    "Transactions",
+    "Reports",
+    "Invoice",
+    "Assign Forms",
+    "Audit Log",
+    "Quick Links",
+    "btn dropdown-toggle border-0 p-0",
+    "View",
+    "My Saved Estimates",
+    "Add Row",
+    "btn btn-lg-icon px-2 p-0",
+    "Take Photo",
+    "Clear",
+    "Save"
+  ],
+  "labels": [
+    "Contact Name",
+    "Date",
+    "LOAN NAME",
+    "SCHEME",
+    "UPLOAD GOLD ARTICLES IMAGES",
+    "Remarks"
+  ],
+  "text": "× Dashboard Contact Contact Contact Configuration Loans Loans Loan Configuration Loan Origination Credit Evaluation Loan Management Reports & Letters Nach Npa Suit Vehicle Loan Gold Gold Estimates Gold Estimate Approval Queue Inventory Form My Gold Estimates Gold Token Gold Stock Gold Release Gold Release Approvals Audit Custodian Desk Gold Loan Configuration Gold Audit Accounting Accounting Configuration Transactions Reports Invoice Settings Settings Assign Forms Audit Log Loans Gold Gold Estimates HEAD OFFICE Finsta User GOLD ESTIMATE New Estimate View My Saved Estimates Customer Details Contact Name × Gold Details Date LOAN NAME Select New Gold SCHEME Not applied (use Loan Configuration) GL-quick — 3 mo GL-smart — 3 mo GOLD OLD — 3 mo GL-Flexi — 6 mo GL-Smart — 6 mo AUTOTEST SCHEME 02192 — 9 mo AUTOTEST SCHEME 02476 — 9 mo AUTOTEST SCHEME 10325 — 9 mo AUTOTEST SCHEME 23482 — 9 mo AUTOTEST SCHEME 32076 — 9 mo AUTOTEST SCHEME 43412 — 9 mo AUTOTEST SCHEME 50419 — 9 mo AUTOTEST SCHEME 53612 — 9 mo AUTOTEST SCHEME 55989 — 9 mo AUTOTEST SCHEME 63119 — 9 mo AUTOTEST SCHEME 70490 — 9 mo AUTOTEST SCHEME 72880 — 9 mo AUTOTEST SCHEME 73030 — 9 mo AUTOTEST SCHEME 78881 — 9 mo AUTOTEST SCHEME 90144 — 9 mo AUTOTEST SCHEME 98566 — 9 mo GL-MAX — 12 mo GL-Smart — 12 mo Gold Article Details Stone Deduction Purity Deduction LTV Add Row Enter each gold article directly in the grid below. A new blank row is added automatically once you start filling the last one. Select a Contact above before entering Gold Article details. Totals TOTAL PURE NETWEIGHT 0.00 g TOTAL QUANTITY 0 APPRAISAL VALUE 0 Attachments & Remarks UPLOAD GOLD ARTICLES IMAGES Take Photo Remarks Clear Save "
+}

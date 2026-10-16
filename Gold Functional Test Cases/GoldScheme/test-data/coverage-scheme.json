@@ -1,0 +1,32 @@
+{
+  "s": {
+    "loan": "New Gold (GLNG)",
+    "code": "AT-20137",
+    "name": "AUTOTEST SCHEME 20137",
+    "tenure": 9,
+    "type": "Bullet",
+    "rate": 12,
+    "active": true
+  },
+  "apiCalls": [
+    {
+      "m": "POST",
+      "url": "http://host214.kapilits.com:8412/api/loans/masters/goldschememaster/savegoldschemeconfiguration",
+      "status": 200
+    },
+    {
+      "m": "POST",
+      "url": "http://host214.kapilits.com:8412/api/loans/masters/goldschememaster/savegoldschemeslabrates",
+      "status": 200
+    }
+  ],
+  "errScheme": {
+    "loan": "New Gold (GLNG)",
+    "code": "AT-23878",
+    "name": "AUTOTEST SCHEME 23878",
+    "tenure": 9,
+    "type": "Bullet",
+    "rate": 18,
+    "active": true
+  }
+}

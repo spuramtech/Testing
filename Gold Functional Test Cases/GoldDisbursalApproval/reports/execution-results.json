@@ -1,0 +1,2097 @@
+{
+  "generatedAt": "2026-10-16T12:46:04.257Z",
+  "environment": "http://host214.kapilits.com:8411/",
+  "reconciliation": {
+    "generated": 79,
+    "automated": 79,
+    "discovered": 79,
+    "executed": 68,
+    "passed": 60,
+    "failed": 8,
+    "blocked": 0,
+    "skipped": 0,
+    "notExecuted": 7,
+    "na": 4,
+    "reconciles": true
+  },
+  "requirements": [
+    {
+      "id": "REQ-DISBAPP-001",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-DISBAPP-002",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-DISBAPP-003",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-004",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-005",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-006",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-007",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-008",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-009",
+      "state": "NOT VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-010",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-DISBAPP-011",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-012",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-013",
+      "state": "NOT VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-014",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-015",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-016",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-017",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-DISBAPP-018",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-019",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-020",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-DISBAPP-021",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-DISBAPP-022",
+      "state": "NOT VERIFIED"
+    }
+  ],
+  "designedNoScript": [],
+  "cases": [
+    {
+      "key": "TC_DISBAPP_CREATE_01 - Positive / Create: disbursals cannot be created in this queue",
+      "id": "TC_DISBAPP_CREATE_01",
+      "meta": {
+        "module": "Positive / Create",
+        "priority": "Medium",
+        "type": "Positive / Create",
+        "summary": "disbursals cannot be created in this queue",
+        "steps": [
+          "Look for a way to create a disbursal in the queue"
+        ],
+        "expected": "Not applicable: disbursals are created in the Loan Disbursal form."
+      },
+      "notes": [
+        "Not applicable: a disbursal is created in the Loan Disbursal form; this queue only approves or reverts it."
+      ],
+      "status": "Skipped",
+      "duration": 43276,
+      "error": "",
+      "shortId": "CREATE_01",
+      "title": "TC_DISBAPP_CREATE_01 - Positive / Create: disbursals cannot be created in this queue",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T10:55:25.117Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-53be9-ot-be-created-in-this-queue-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_DISBAPP_READ_01 - Read / Persistence: the grid shows the 10 columns and every row is complete",
+      "id": "TC_DISBAPP_READ_01",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the grid shows the 10 columns and every row is complete",
+        "steps": [
+          "Open Loans > Gold > Gold Disbursal Approval Queue",
+          "Choose the status view \"All\"",
+          "Read the headings and the rows"
+        ],
+        "expected": "All 11 headings; up to 10 rows, none with an empty cell; amount shown as ₹ n,nn,nnn; status is one of the three."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23362,
+      "error": "",
+      "shortId": "READ_01",
+      "title": "TC_DISBAPP_READ_01 - Read / Persistence: the grid shows the 10 columns and every row is complete",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T10:56:08.781Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-b3a5d-s-and-every-row-is-complete-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_READ_02 - Read / Persistence: the status views add up (All = Waiting + Approved & Disbursed + Reverted)",
+      "id": "TC_DISBAPP_READ_02",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the status views add up (All = Waiting + Approved & Disbursed + Reverted)",
+        "steps": [
+          "Open Loans > Gold > Gold Disbursal Approval Queue",
+          "Read the pager total of Waiting, Approved & Disbursed, Reverted and All"
+        ],
+        "expected": "All = Waiting + Approved & Disbursed + Reverted."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34933,
+      "error": "",
+      "shortId": "READ_02",
+      "title": "TC_DISBAPP_READ_02 - Read / Persistence: the status views add up (All = Waiting + Approved & Disbursed + Reverted)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T10:56:32.161Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-f3815-pproved-Disbursed-Reverted--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_READ_03 - Read / Persistence: an approved loan's page shows every field (amounts, who entered / approved, voucher, history)",
+      "id": "TC_DISBAPP_READ_03",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "an approved loan's page shows every field (amounts, who entered / approved, voucher, history)",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Click View on the first loan",
+          "Read the loan page"
+        ],
+        "expected": "Loan no, customer (mobile), loan name, branch, sanctioned amount, entered and approved by with dates, voucher no and a SUBMIT, APPROVE history."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 36383,
+      "error": "",
+      "shortId": "READ_03",
+      "title": "TC_DISBAPP_READ_03 - Read / Persistence: an approved loan's page shows every field (amounts, who entered / approved, voucher, history)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T10:57:07.100Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-6c8df-d-approved-voucher-history--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_READ_04 - Read / Persistence: a reverted loan's page shows who reverted it, the remark and a REVERT entry in the history",
+      "id": "TC_DISBAPP_READ_04",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "a reverted loan's page shows who reverted it, the remark and a REVERT entry in the history",
+        "steps": [
+          "Choose the status view \"Reverted\"",
+          "Click View on the first loan",
+          "Read the loan page"
+        ],
+        "expected": "Status Reverted, \"Reverted by\" with date, \"Revert remarks\" and a REVERT entry in the history."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 28761,
+      "error": "",
+      "shortId": "READ_04",
+      "title": "TC_DISBAPP_READ_04 - Read / Persistence: a reverted loan's page shows who reverted it, the remark and a REVERT entry in the history",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T10:57:43.489Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-c3169-REVERT-entry-in-the-history-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_READ_05 - Read / Persistence: the loan from your own flow (last-disbursal.json) is listed as Approved & Disbursed with its amount",
+      "id": "TC_DISBAPP_READ_05",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the loan from your own flow (last-disbursal.json) is listed as Approved & Disbursed with its amount",
+        "steps": [
+          "Take the loan number from test-data/last-disbursal.json",
+          "Choose the status view \"All\"",
+          "Search it"
+        ],
+        "expected": "It is listed as Approved & Disbursed with the amount saved by the flow."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 56222,
+      "error": "",
+      "shortId": "READ_05",
+      "title": "TC_DISBAPP_READ_05 - Read / Persistence: the loan from your own flow (last-disbursal.json) is listed as Approved & Disbursed with its amount",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T10:58:12.255Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-c2d79-d-Disbursed-with-its-amount-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_READ_06 - Read / Persistence: a loan's page shows the same values again after a page reload",
+      "id": "TC_DISBAPP_READ_06",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "a loan's page shows the same values again after a page reload",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Open the first loan",
+          "Reload the page",
+          "Read the loan page again"
+        ],
+        "expected": "The same values are shown."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 113179,
+      "error": "Error: loan page after reload\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: \"GLNG0126060000007\"\nReceived: undefined\n\nCall Log:\n- Timeout 30000ms exceeded while waiting on the predicate",
+      "shortId": "READ_06",
+      "title": "TC_DISBAPP_READ_06 - Read / Persistence: a loan's page shows the same values again after a page reload",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:40:12.518Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-c\\GoldDisbursalApproval-test-a9f44-s-again-after-a-page-reload-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_DISBAPP_UPDATE_01 - Update / Edit: Approve & Disburse posts the voucher and sets \"Approved & Disbursed\"",
+      "id": "TC_DISBAPP_UPDATE_01",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "Approve & Disburse posts the voucher and sets \"Approved & Disbursed\"",
+        "steps": [
+          "Click Approve & Disburse on a waiting loan and confirm"
+        ],
+        "expected": "NOT EXECUTED (data safety): posts a voucher that cannot be undone."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): the confirmation text says the voucher \"is posted now and cannot be undone from here\", the waiting loans belong to other live work, and the suite has no disbursal of its own to approve. Run the existing \"npm run disbursal-approval\" for the approval itself."
+      ],
+      "status": "Skipped",
+      "duration": 38806,
+      "error": "",
+      "shortId": "UPDATE_01",
+      "title": "TC_DISBAPP_UPDATE_01 - Update / Edit: Approve & Disburse posts the voucher and sets \"Approved & Disbursed\"",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:00:54.260Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-0de42-nd-sets-Approved-Disbursed--chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_DISBAPP_UPDATE_02 - Update / Edit: a finished loan's page is read-only (only a Back button)",
+      "id": "TC_DISBAPP_UPDATE_02",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "a finished loan's page is read-only (only a Back button)",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Open a loan",
+          "Read the buttons",
+          "Repeat for a Reverted loan"
+        ],
+        "expected": "Only \"Back\" is shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 62298,
+      "error": "",
+      "shortId": "UPDATE_02",
+      "title": "TC_DISBAPP_UPDATE_02 - Update / Edit: a finished loan's page is read-only (only a Back button)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:01:33.267Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-b17af-ad-only-only-a-Back-button--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_CANCEL_01 - Delete & Cancel: Back on a loan's page returns to the queue",
+      "id": "TC_DISBAPP_CANCEL_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "Back on a loan's page returns to the queue",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Open a loan",
+          "Click Back"
+        ],
+        "expected": "The queue is shown again."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 64591,
+      "error": "",
+      "shortId": "CANCEL_01",
+      "title": "TC_DISBAPP_CANCEL_01 - Delete & Cancel: Back on a loan's page returns to the queue",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:02:35.577Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-11ba4-s-page-returns-to-the-queue-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_CANCEL_02 - Delete & Cancel: Back returns to the same status view the user was looking at (HYPOTHESIS)",
+      "id": "TC_DISBAPP_CANCEL_02",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "Back returns to the same status view the user was looking at (HYPOTHESIS)",
+        "steps": [
+          "Choose the status view \"Reverted\"",
+          "Open a loan",
+          "Click Back"
+        ],
+        "expected": "The queue still shows the \"Reverted\" view (HYPOTHESIS)."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 64043,
+      "error": "Error: status view after Back (it was \"Reverted\" before opening the loan)\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: \"Reverted\"\nReceived: \"Waiting for Approval\"",
+      "shortId": "CANCEL_02",
+      "title": "TC_DISBAPP_CANCEL_02 - Delete & Cancel: Back returns to the same status view the user was looking at (HYPOTHESIS)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:03:40.192Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-cf0af--was-looking-at-HYPOTHESIS--chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_DISBAPP_CANCEL_03 - Delete & Cancel: Revert sends a loan back with a remark",
+      "id": "TC_DISBAPP_CANCEL_03",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "Revert sends a loan back with a remark",
+        "steps": [
+          "Click Revert on a waiting loan"
+        ],
+        "expected": "NOT EXECUTED (data safety): changes a live loan."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): Revert changes a live loan; the suite has no disbursal of its own to revert."
+      ],
+      "status": "Skipped",
+      "duration": 53964,
+      "error": "",
+      "shortId": "CANCEL_03",
+      "title": "TC_DISBAPP_CANCEL_03 - Delete & Cancel: Revert sends a loan back with a remark",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:04:48.941Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-46336-s-a-loan-back-with-a-remark-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_DISBAPP_DELETE_01 - Delete & Cancel: a disbursal cannot be deleted from the queue",
+      "id": "TC_DISBAPP_DELETE_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "a disbursal cannot be deleted from the queue",
+        "steps": [
+          "Look for a delete action"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: the queue has no delete action."
+      ],
+      "status": "Skipped",
+      "duration": 54408,
+      "error": "",
+      "shortId": "DELETE_01",
+      "title": "TC_DISBAPP_DELETE_01 - Delete & Cancel: a disbursal cannot be deleted from the queue",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:05:43.181Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-d4e7a-t-be-deleted-from-the-queue-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_DISBAPP_REQUIRED_01 - Negative / Required field: a remark is required when reverting",
+      "id": "TC_DISBAPP_REQUIRED_01",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "a remark is required when reverting",
+        "steps": [
+          "Click Revert without a remark"
+        ],
+        "expected": "NOT EXECUTED (data safety): needs the Revert dialog on a live loan."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): checking it would need the Revert dialog on a live loan."
+      ],
+      "status": "Skipped",
+      "duration": 47269,
+      "error": "",
+      "shortId": "REQUIRED_01",
+      "title": "TC_DISBAPP_REQUIRED_01 - Negative / Required field: a remark is required when reverting",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:06:37.603Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-da1db--is-required-when-reverting-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_DISBAPP_INPUT_01 - Input validation: script / SQL text in the search box finds nothing and runs nothing",
+      "id": "TC_DISBAPP_INPUT_01",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "script / SQL text in the search box finds nothing and runs nothing",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Search script and SQL text"
+        ],
+        "expected": "No rows; nothing is executed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 65148,
+      "error": "",
+      "shortId": "INPUT_01",
+      "title": "TC_DISBAPP_INPUT_01 - Input validation: script / SQL text in the search box finds nothing and runs nothing",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:07:24.893Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-c190b-ds-nothing-and-runs-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_INPUT_02 - Input validation: a search of only spaces is treated as empty (the full list stays)",
+      "id": "TC_DISBAPP_INPUT_02",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "a search of only spaces is treated as empty (the full list stays)",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Search five spaces"
+        ],
+        "expected": "The full list stays."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 32586,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 24\nReceived: 0",
+      "shortId": "INPUT_02",
+      "title": "TC_DISBAPP_INPUT_02 - Input validation: a search of only spaces is treated as empty (the full list stays)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:08:30.062Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-0dd7d--empty-the-full-list-stays--chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_DISBAPP_INPUT_03 - Input validation: spaces around a loan number are ignored",
+      "id": "TC_DISBAPP_INPUT_03",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "spaces around a loan number are ignored",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Search a loan number with spaces around it"
+        ],
+        "expected": "The loan is found."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 28256,
+      "error": "Error: expect(received).toContain(expected) // indexOf\n\nExpected value: \"GLNG0126060000007\"\nReceived array: []",
+      "shortId": "INPUT_03",
+      "title": "TC_DISBAPP_INPUT_03 - Input validation: spaces around a loan number are ignored",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:09:04.577Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-2d2ee-d-a-loan-number-are-ignored-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_DISBAPP_INPUT_04 - Input validation: Unicode text (Telugu, emoji) in the search box does not break the grid",
+      "id": "TC_DISBAPP_INPUT_04",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "Unicode text (Telugu, emoji) in the search box does not break the grid",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Search Telugu text and an emoji"
+        ],
+        "expected": "No rows; the grid stays intact."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23827,
+      "error": "",
+      "shortId": "INPUT_04",
+      "title": "TC_DISBAPP_INPUT_04 - Input validation: Unicode text (Telugu, emoji) in the search box does not break the grid",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:09:34.746Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-8415b-box-does-not-break-the-grid-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BOUNDARY_01 - Boundary values: a one-character search returns matching rows",
+      "id": "TC_DISBAPP_BOUNDARY_01",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a one-character search returns matching rows",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Search the single character \"G\""
+        ],
+        "expected": "Matching rows are listed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 51305,
+      "error": "",
+      "shortId": "BOUNDARY_01",
+      "title": "TC_DISBAPP_BOUNDARY_01 - Boundary values: a one-character search returns matching rows",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:09:58.840Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-531db-earch-returns-matching-rows-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BOUNDARY_02 - Boundary values: a 2,000-character search does not break the grid",
+      "id": "TC_DISBAPP_BOUNDARY_02",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a 2,000-character search does not break the grid",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Paste a 2,000-character search"
+        ],
+        "expected": "No rows; the grid stays intact."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34936,
+      "error": "",
+      "shortId": "BOUNDARY_02",
+      "title": "TC_DISBAPP_BOUNDARY_02 - Boundary values: a 2,000-character search does not break the grid",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:10:50.156Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-ac576-rch-does-not-break-the-grid-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BOUNDARY_03 - Boundary values: the last page shows exactly the remaining rows",
+      "id": "TC_DISBAPP_BOUNDARY_03",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "the last page shows exactly the remaining rows",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Click the last page"
+        ],
+        "expected": "The remaining rows (total mod 10) are shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24506,
+      "error": "",
+      "shortId": "BOUNDARY_03",
+      "title": "TC_DISBAPP_BOUNDARY_03 - Boundary values: the last page shows exactly the remaining rows",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:11:25.099Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-d2636--exactly-the-remaining-rows-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_DEFAULT_01 - Default values: the queue opens on \"Branch Head queue\" / \"Waiting for Approval\" with an empty search",
+      "id": "TC_DISBAPP_DEFAULT_01",
+      "meta": {
+        "module": "Default values",
+        "priority": "Medium",
+        "type": "Default values",
+        "summary": "the queue opens on \"Branch Head queue\" / \"Waiting for Approval\" with an empty search",
+        "steps": [
+          "Open Loans > Gold > Gold Disbursal Approval Queue"
+        ],
+        "expected": "Branch Head queue, Waiting for Approval, empty search."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23638,
+      "error": "",
+      "shortId": "DEFAULT_01",
+      "title": "TC_DISBAPP_DEFAULT_01 - Default values: the queue opens on \"Branch Head queue\" / \"Waiting for Approval\" with an empty search",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:11:49.611Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-e277e-proval-with-an-empty-search-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_DEFAULT_02 - Default values: the \"All\" view lists the newest entries first (Entered On descending)",
+      "id": "TC_DISBAPP_DEFAULT_02",
+      "meta": {
+        "module": "Default values",
+        "priority": "Medium",
+        "type": "Default values",
+        "summary": "the \"All\" view lists the newest entries first (Entered On descending)",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Read Entered On over all pages"
+        ],
+        "expected": "Newest first (descending)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34295,
+      "error": "",
+      "shortId": "DEFAULT_02",
+      "title": "TC_DISBAPP_DEFAULT_02 - Default values: the \"All\" view lists the newest entries first (Entered On descending)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:12:13.255Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-07e26-irst-Entered-On-descending--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_DATE_01 - Date / calendar validation: Entered On uses the format dd-MMM-yyyy hh:mm on every row",
+      "id": "TC_DISBAPP_DATE_01",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "Entered On uses the format dd-MMM-yyyy hh:mm on every row",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Read Entered On"
+        ],
+        "expected": "Format dd-MMM-yyyy hh:mm on every row."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 25079,
+      "error": "",
+      "shortId": "DATE_01",
+      "title": "TC_DISBAPP_DATE_01 - Date / calendar validation: Entered On uses the format dd-MMM-yyyy hh:mm on every row",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:12:47.556Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-b9ffc-MMM-yyyy-hh-mm-on-every-row-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_DATE_02 - Date / calendar validation: no loan was entered in the future",
+      "id": "TC_DISBAPP_DATE_02",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "no loan was entered in the future",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Read the newest Entered On"
+        ],
+        "expected": "Not in the future."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 47553,
+      "error": "",
+      "shortId": "DATE_02",
+      "title": "TC_DISBAPP_DATE_02 - Date / calendar validation: no loan was entered in the future",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:13:12.647Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-3ab0b-n-was-entered-in-the-future-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_DATE_03 - Date / calendar validation: Aging shows hours / days for waiting loans and \"-\" for finished ones",
+      "id": "TC_DISBAPP_DATE_03",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "Aging shows hours / days for waiting loans and \"-\" for finished ones",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Read Aging"
+        ],
+        "expected": "Waiting loans show <1h, Nh or Nd; finished loans show \"-\"."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 56813,
+      "error": "",
+      "shortId": "DATE_03",
+      "title": "TC_DISBAPP_DATE_03 - Date / calendar validation: Aging shows hours / days for waiting loans and \"-\" for finished ones",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:14:00.212Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-7d752-ans-and---for-finished-ones-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BUSINESS_01 - Business rules / Calculation: Net Payout = Sanctioned Amount - Charges Adjusted - Broken Interest",
+      "id": "TC_DISBAPP_BUSINESS_01",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "Net Payout = Sanctioned Amount - Charges Adjusted - Broken Interest",
+        "steps": [
+          "Open two waiting, three approved and two reverted loans",
+          "Read Sanctioned, Charges, Broken Interest and Net Payout"
+        ],
+        "expected": "Net Payout = Sanctioned - Charges - Broken Interest."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 110828,
+      "error": "",
+      "shortId": "BUSINESS_01",
+      "title": "TC_DISBAPP_BUSINESS_01 - Business rules / Calculation: Net Payout = Sanctioned Amount - Charges Adjusted - Broken Interest",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:14:57.031Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-7899c--Adjusted---Broken-Interest-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BUSINESS_02 - Business rules / Calculation: every approved loan has a voucher number and an approver",
+      "id": "TC_DISBAPP_BUSINESS_02",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "every approved loan has a voucher number and an approver",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Open four loans"
+        ],
+        "expected": "Each has a voucher number and an approver."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 79242,
+      "error": "",
+      "shortId": "BUSINESS_02",
+      "title": "TC_DISBAPP_BUSINESS_02 - Business rules / Calculation: every approved loan has a voucher number and an approver",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:16:47.900Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-5f64c-cher-number-and-an-approver-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BUSINESS_03 - Business rules / Calculation: the approver is not the person who entered the disbursal (maker-checker)",
+      "id": "TC_DISBAPP_BUSINESS_03",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "the approver is not the person who entered the disbursal (maker-checker)",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Open four loans"
+        ],
+        "expected": "The approver differs from the person who entered the disbursal."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 100025,
+      "error": "",
+      "shortId": "BUSINESS_03",
+      "title": "TC_DISBAPP_BUSINESS_03 - Business rules / Calculation: the approver is not the person who entered the disbursal (maker-checker)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:18:07.166Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-96bfd-he-disbursal-maker-checker--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BUSINESS_04 - Business rules / Calculation: a waiting loan has no voucher and no approver yet",
+      "id": "TC_DISBAPP_BUSINESS_04",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "a waiting loan has no voucher and no approver yet",
+        "steps": [
+          "Choose the status view \"Waiting for Approval\"",
+          "Open a loan"
+        ],
+        "expected": "No voucher, no approver, history SUBMIT only."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 60244,
+      "error": "",
+      "shortId": "BUSINESS_04",
+      "title": "TC_DISBAPP_BUSINESS_04 - Business rules / Calculation: a waiting loan has no voucher and no approver yet",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:19:47.209Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-a7612-voucher-and-no-approver-yet-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_BUSINESS_05 - Business rules / Calculation: the last history action matches the status (APPROVE / REVERT / SUBMIT)",
+      "id": "TC_DISBAPP_BUSINESS_05",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "the last history action matches the status (APPROVE / REVERT / SUBMIT)",
+        "steps": [
+          "Open one approved, one reverted and one waiting loan"
+        ],
+        "expected": "The last history action is APPROVE, REVERT and SUBMIT."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 61448,
+      "error": "",
+      "shortId": "BUSINESS_05",
+      "title": "TC_DISBAPP_BUSINESS_05 - Business rules / Calculation: the last history action matches the status (APPROVE / REVERT / SUBMIT)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:28:20.415Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-b\\GoldDisbursalApproval-test-1b69f-atus-APPROVE-REVERT-SUBMIT--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_CONSISTENCY_01 - Data consistency: the grid row and the loan's page agree (loan, customer, branch, amount, status)",
+      "id": "TC_DISBAPP_CONSISTENCY_01",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the grid row and the loan's page agree (loan, customer, branch, amount, status)",
+        "steps": [
+          "Open two loans of each status",
+          "Compare with the grid row"
+        ],
+        "expected": "Loan no, mobile, branch, net payout vs amount and status agree."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 103133,
+      "error": "",
+      "shortId": "CONSISTENCY_01",
+      "title": "TC_DISBAPP_CONSISTENCY_01 - Data consistency: the grid row and the loan's page agree (loan, customer, branch, amount, status)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:22:03.550Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-33bb6-tomer-branch-amount-status--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_CONSISTENCY_02 - Data consistency: the pager total equals the number of rows read over all pages, for every status",
+      "id": "TC_DISBAPP_CONSISTENCY_02",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the pager total equals the number of rows read over all pages, for every status",
+        "steps": [
+          "For each status view read the pager total and all pages"
+        ],
+        "expected": "Rows over all pages = pager total."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 108534,
+      "error": "Error: rows over all pages in \"Reverted\"\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 1\nReceived: 0",
+      "shortId": "CONSISTENCY_02",
+      "title": "TC_DISBAPP_CONSISTENCY_02 - Data consistency: the pager total equals the number of rows read over all pages, for every status",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:42:13.308Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-c\\GoldDisbursalApproval-test-3fe4b--all-pages-for-every-status-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_DISBAPP_CONSISTENCY_03 - Data consistency: the payment mode in the grid matches the page (CASH / BANK)",
+      "id": "TC_DISBAPP_CONSISTENCY_03",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the payment mode in the grid matches the page (CASH / BANK)",
+        "steps": [
+          "Open two approved and one waiting loan",
+          "Compare Mode with the grid"
+        ],
+        "expected": "CASH / BANK agrees."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 64942,
+      "error": "",
+      "shortId": "CONSISTENCY_03",
+      "title": "TC_DISBAPP_CONSISTENCY_03 - Data consistency: the payment mode in the grid matches the page (CASH / BANK)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:44:05.672Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-c\\GoldDisbursalApproval-test-bf613-matches-the-page-CASH-BANK--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_DUPLICATE_01 - Duplicate prevention: no two rows of the \"All\" view are the same entry (same loan, status and entered-on)",
+      "id": "TC_DISBAPP_DUPLICATE_01",
+      "meta": {
+        "module": "Duplicate prevention",
+        "priority": "Medium",
+        "type": "Duplicate prevention",
+        "summary": "no two rows of the \"All\" view are the same entry (same loan, status and entered-on)",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Read every loan number"
+        ],
+        "expected": "No loan number appears twice."
+      },
+      "notes": [
+        "Loan numbers with more than one entry (for example resubmitted after a revert): GLNG0126060000004"
+      ],
+      "status": "Pass",
+      "duration": 42248,
+      "error": "",
+      "shortId": "DUPLICATE_01",
+      "title": "TC_DISBAPP_DUPLICATE_01 - Duplicate prevention: no two rows of the \"All\" view are the same entry (same loan, status and entered-on)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:32:17.974Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-b\\GoldDisbursalApproval-test-ba7fa-loan-status-and-entered-on--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SEARCH_01 - Search: a loan number finds exactly that loan",
+      "id": "TC_DISBAPP_SEARCH_01",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "a loan number finds exactly that loan",
+        "steps": [
+          "Search a loan number"
+        ],
+        "expected": "Exactly that loan."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24846,
+      "error": "",
+      "shortId": "SEARCH_01",
+      "title": "TC_DISBAPP_SEARCH_01 - Search: a loan number finds exactly that loan",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:27:09.069Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-0d78a-ber-finds-exactly-that-loan-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SEARCH_02 - Search: part of a customer name in lower case finds the loan",
+      "id": "TC_DISBAPP_SEARCH_02",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "part of a customer name in lower case finds the loan",
+        "steps": [
+          "Search the first name of a customer in lower case"
+        ],
+        "expected": "The loan is found."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 29244,
+      "error": "",
+      "shortId": "SEARCH_02",
+      "title": "TC_DISBAPP_SEARCH_02 - Search: part of a customer name in lower case finds the loan",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:27:34.167Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-08a98-n-lower-case-finds-the-loan-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SEARCH_03 - Search: a mobile number finds the loan",
+      "id": "TC_DISBAPP_SEARCH_03",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "a mobile number finds the loan",
+        "steps": [
+          "Search a mobile number"
+        ],
+        "expected": "The loan is found."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 30058,
+      "error": "",
+      "shortId": "SEARCH_03",
+      "title": "TC_DISBAPP_SEARCH_03 - Search: a mobile number finds the loan",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:28:03.417Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-4b06e-obile-number-finds-the-loan-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SEARCH_04 - Search: the branch name finds the loans of that branch",
+      "id": "TC_DISBAPP_SEARCH_04",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "the branch name finds the loans of that branch",
+        "steps": [
+          "Search the branch name in lower case"
+        ],
+        "expected": "Rows of that branch."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 27974,
+      "error": "",
+      "shortId": "SEARCH_04",
+      "title": "TC_DISBAPP_SEARCH_04 - Search: the branch name finds the loans of that branch",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:28:33.481Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-5167b-ds-the-loans-of-that-branch-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SEARCH_05 - Search: the maker (entered by) can be searched",
+      "id": "TC_DISBAPP_SEARCH_05",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "the maker (entered by) can be searched",
+        "steps": [
+          "Search the maker name in lower case"
+        ],
+        "expected": "The loan is found."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24400,
+      "error": "",
+      "shortId": "SEARCH_05",
+      "title": "TC_DISBAPP_SEARCH_05 - Search: the maker (entered by) can be searched",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:29:01.460Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-e9b83--entered-by-can-be-searched-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SEARCH_06 - Search: an unknown value shows \"No disbursals here.\" and \"0 - 0 of 0 items\"",
+      "id": "TC_DISBAPP_SEARCH_06",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "an unknown value shows \"No disbursals here.\" and \"0 - 0 of 0 items\"",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Search an unknown value"
+        ],
+        "expected": "\"No disbursals here.\" and \"0 - 0 of 0 items\"."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24635,
+      "error": "",
+      "shortId": "SEARCH_06",
+      "title": "TC_DISBAPP_SEARCH_06 - Search: an unknown value shows \"No disbursals here.\" and \"0 - 0 of 0 items\"",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:29:25.866Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-0fded--here-and-0---0-of-0-items--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SEARCH_07 - Search: clearing the search brings the full list back",
+      "id": "TC_DISBAPP_SEARCH_07",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "clearing the search brings the full list back",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Search an unknown value",
+          "Clear the search"
+        ],
+        "expected": "The full list returns."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34207,
+      "error": "",
+      "shortId": "SEARCH_07",
+      "title": "TC_DISBAPP_SEARCH_07 - Search: clearing the search brings the full list back",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:29:50.507Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-7200e-h-brings-the-full-list-back-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_FILTER_01 - Filtering: each status filter lists only loans with that status",
+      "id": "TC_DISBAPP_FILTER_01",
+      "meta": {
+        "module": "Filtering",
+        "priority": "Medium",
+        "type": "Filtering",
+        "summary": "each status filter lists only loans with that status",
+        "steps": [
+          "For each of the three statuses read the rows"
+        ],
+        "expected": "Every row has the chosen status."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 29237,
+      "error": "",
+      "shortId": "FILTER_01",
+      "title": "TC_DISBAPP_FILTER_01 - Filtering: each status filter lists only loans with that status",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:30:24.719Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-326c2-only-loans-with-that-status-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_FILTER_02 - Filtering: \"My submissions\" shows the admin's own submissions (none) and no status filter",
+      "id": "TC_DISBAPP_FILTER_02",
+      "meta": {
+        "module": "Filtering",
+        "priority": "Medium",
+        "type": "Filtering",
+        "summary": "\"My submissions\" shows the admin's own submissions (none) and no status filter",
+        "steps": [
+          "Choose \"My submissions\""
+        ],
+        "expected": "No status filter; \"You have not submitted any gold loan disbursals\"."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23430,
+      "error": "",
+      "shortId": "FILTER_02",
+      "title": "TC_DISBAPP_FILTER_02 - Filtering: \"My submissions\" shows the admin's own submissions (none) and no status filter",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:30:53.963Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-13b6c-s-none-and-no-status-filter-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_FILTER_03 - Filtering: search and status filter work together",
+      "id": "TC_DISBAPP_FILTER_03",
+      "meta": {
+        "module": "Filtering",
+        "priority": "Medium",
+        "type": "Filtering",
+        "summary": "search and status filter work together",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Search a customer name"
+        ],
+        "expected": "Only approved loans of that customer."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 32627,
+      "error": "",
+      "shortId": "FILTER_03",
+      "title": "TC_DISBAPP_FILTER_03 - Filtering: search and status filter work together",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:31:17.400Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-5a5a1-status-filter-work-together-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SORT_01 - Sorting: clicking a column header sorts the grid",
+      "id": "TC_DISBAPP_SORT_01",
+      "meta": {
+        "module": "Sorting",
+        "priority": "Medium",
+        "type": "Sorting",
+        "summary": "clicking a column header sorts the grid",
+        "steps": [
+          "Click the LOAN NO heading"
+        ],
+        "expected": "Not applicable: headers are not sortable."
+      },
+      "notes": [
+        "Not applicable: the column headers are not sortable (no aria-sort after a click); the list is ordered by Entered On, newest first."
+      ],
+      "status": "Skipped",
+      "duration": 50286,
+      "error": "",
+      "shortId": "SORT_01",
+      "title": "TC_DISBAPP_SORT_01 - Sorting: clicking a column header sorts the grid",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:31:50.037Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-e75d9-olumn-header-sorts-the-grid-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_DISBAPP_PAGINATION_01 - Pagination: the pager shows \"1 - 10 of N items\" and 10 rows on the first page",
+      "id": "TC_DISBAPP_PAGINATION_01",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "the pager shows \"1 - 10 of N items\" and 10 rows on the first page",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Read the pager and the rows"
+        ],
+        "expected": "\"1 - 10 of N items\" and 10 rows."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 64495,
+      "error": "",
+      "shortId": "PAGINATION_01",
+      "title": "TC_DISBAPP_PAGINATION_01 - Pagination: the pager shows \"1 - 10 of N items\" and 10 rows on the first page",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:32:40.334Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-50990-d-10-rows-on-the-first-page-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_PAGINATION_02 - Pagination: first / previous / next / last buttons move between pages",
+      "id": "TC_DISBAPP_PAGINATION_02",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "first / previous / next / last buttons move between pages",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Next, Last, First"
+        ],
+        "expected": "The pager follows each move; First is disabled on page 1."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 66841,
+      "error": "",
+      "shortId": "PAGINATION_02",
+      "title": "TC_DISBAPP_PAGINATION_02 - Pagination: first / previous / next / last buttons move between pages",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:33:44.840Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-7b619--buttons-move-between-pages-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_PAGINATION_03 - Pagination: clicking page number 2 opens the second page",
+      "id": "TC_DISBAPP_PAGINATION_03",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "clicking page number 2 opens the second page",
+        "steps": [
+          "Choose the status view \"All\"",
+          "Click page number 2"
+        ],
+        "expected": "Rows 11 onwards."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 73917,
+      "error": "",
+      "shortId": "PAGINATION_03",
+      "title": "TC_DISBAPP_PAGINATION_03 - Pagination: clicking page number 2 opens the second page",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:34:51.695Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-a21c2-ber-2-opens-the-second-page-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_CLEAR_01 - Clear / Reset: clearing the search keeps the chosen status view",
+      "id": "TC_DISBAPP_CLEAR_01",
+      "meta": {
+        "module": "Clear / Reset",
+        "priority": "Medium",
+        "type": "Clear / Reset",
+        "summary": "clearing the search keeps the chosen status view",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Search something unknown",
+          "Clear the search"
+        ],
+        "expected": "Still the Approved & Disbursed view, with rows."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 61667,
+      "error": "",
+      "shortId": "CLEAR_01",
+      "title": "TC_DISBAPP_CLEAR_01 - Clear / Reset: clearing the search keeps the chosen status view",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:36:05.624Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-5bf62-eeps-the-chosen-status-view-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_NAV_01 - Navigation & UI layout: the page title and the menu path Loans > Gold > Gold Disbursal Approval Queue",
+      "id": "TC_DISBAPP_NAV_01",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "the page title and the menu path Loans > Gold > Gold Disbursal Approval Queue",
+        "steps": [
+          "Open Loans > Gold > Gold Disbursal Approval Queue"
+        ],
+        "expected": "Title \"Gold Disbursal Approval Queue\" and URL #/Loans/GoldDisbursalApprovalQueue."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 69403,
+      "error": "",
+      "shortId": "NAV_01",
+      "title": "TC_DISBAPP_NAV_01 - Navigation & UI layout: the page title and the menu path Loans > Gold > Gold Disbursal Approval Queue",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:33:00.646Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-b\\GoldDisbursalApproval-test-29aa0-ld-Disbursal-Approval-Queue-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_NAV_02 - Navigation & UI layout: Review / View opens the loan's own page (GoldDisbursalApprovalDetail;id=...)",
+      "id": "TC_DISBAPP_NAV_02",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "Review / View opens the loan's own page (GoldDisbursalApprovalDetail;id=...)",
+        "steps": [
+          "Click View on an approved loan"
+        ],
+        "expected": "URL GoldDisbursalApprovalDetail;id=..."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 89681,
+      "error": "",
+      "shortId": "NAV_02",
+      "title": "TC_DISBAPP_NAV_02 - Navigation & UI layout: Review / View opens the loan's own page (GoldDisbursalApprovalDetail;id=...)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:37:49.620Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-b7833-DisbursalApprovalDetail-id--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_NAV_03 - Navigation & UI layout: the action button says \"Review\" on waiting loans and \"View\" on finished ones",
+      "id": "TC_DISBAPP_NAV_03",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "the action button says \"Review\" on waiting loans and \"View\" on finished ones",
+        "steps": [
+          "Read the action button of a waiting, approved and reverted loan"
+        ],
+        "expected": "Review, View, View."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 44927,
+      "error": "",
+      "shortId": "NAV_03",
+      "title": "TC_DISBAPP_NAV_03 - Navigation & UI layout: the action button says \"Review\" on waiting loans and \"View\" on finished ones",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:39:19.585Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-45180-s-and-View-on-finished-ones-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_NAV_04 - Navigation & UI layout: browser Back from a loan's page returns to the queue",
+      "id": "TC_DISBAPP_NAV_04",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "browser Back from a loan's page returns to the queue",
+        "steps": [
+          "Open a loan",
+          "Click the browser Back button"
+        ],
+        "expected": "The queue is shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34645,
+      "error": "",
+      "shortId": "NAV_04",
+      "title": "TC_DISBAPP_NAV_04 - Navigation & UI layout: browser Back from a loan's page returns to the queue",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:40:04.525Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-189ae-s-page-returns-to-the-queue-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_ROLE_01 - Role-based access: what the maker and other roles see in the queue (HYPOTHESIS: appraisers cannot approve)",
+      "id": "TC_DISBAPP_ROLE_01",
+      "meta": {
+        "module": "Role-based access",
+        "priority": "Medium",
+        "type": "Role-based access",
+        "summary": "what the maker and other roles see in the queue (HYPOTHESIS: appraisers cannot approve)",
+        "steps": [
+          "Log in as Internal Appraiser 1 / 2 and Auditor",
+          "Open the queue",
+          "Open a waiting loan"
+        ],
+        "expected": "Each role is recorded; a maker must not see Approve & Disburse."
+      },
+      "notes": [
+        "INT_APPRAISER1: queue does not open",
+        "INT_APPRAISER2: queue does not open",
+        "AUDITOR: queue does not open"
+      ],
+      "status": "Pass",
+      "duration": 202688,
+      "error": "",
+      "shortId": "ROLE_01",
+      "title": "TC_DISBAPP_ROLE_01 - Role-based access: what the maker and other roles see in the queue (HYPOTHESIS: appraisers cannot approve)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:40:39.180Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-df482--appraisers-cannot-approve--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_WORKFLOW_01 - Workflow (approval): a waiting loan's page offers Back, Approve & Disburse and Revert (they are only looked at, never clicked)",
+      "id": "TC_DISBAPP_WORKFLOW_01",
+      "meta": {
+        "module": "Workflow (approval)",
+        "priority": "Medium",
+        "type": "Workflow (approval)",
+        "summary": "a waiting loan's page offers Back, Approve & Disburse and Revert (they are only looked at, never clicked)",
+        "steps": [
+          "Choose the status view \"Waiting for Approval\"",
+          "Open a loan",
+          "Read the buttons (do not click)"
+        ],
+        "expected": "Back, Approve & Disburse and Revert."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 50924,
+      "error": "",
+      "shortId": "WORKFLOW_01",
+      "title": "TC_DISBAPP_WORKFLOW_01 - Workflow (approval): a waiting loan's page offers Back, Approve & Disburse and Revert (they are only looked at, never clicked)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:44:01.888Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-0b205-ly-looked-at-never-clicked--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_WORKFLOW_02 - Workflow (approval): the history of a finished loan reads SUBMIT then APPROVE (or REVERT)",
+      "id": "TC_DISBAPP_WORKFLOW_02",
+      "meta": {
+        "module": "Workflow (approval)",
+        "priority": "Medium",
+        "type": "Workflow (approval)",
+        "summary": "the history of a finished loan reads SUBMIT then APPROVE (or REVERT)",
+        "steps": [
+          "Open an approved and a reverted loan",
+          "Read the history"
+        ],
+        "expected": "SUBMIT then APPROVE; SUBMIT then REVERT."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 49038,
+      "error": "",
+      "shortId": "WORKFLOW_02",
+      "title": "TC_DISBAPP_WORKFLOW_02 - Workflow (approval): the history of a finished loan reads SUBMIT then APPROVE (or REVERT)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:34:10.059Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-b\\GoldDisbursalApproval-test-c9710-MIT-then-APPROVE-or-REVERT--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_WORKFLOW_03 - Workflow (approval): approving and reverting move a loan out of \"Waiting for Approval\"",
+      "id": "TC_DISBAPP_WORKFLOW_03",
+      "meta": {
+        "module": "Workflow (approval)",
+        "priority": "Medium",
+        "type": "Workflow (approval)",
+        "summary": "approving and reverting move a loan out of \"Waiting for Approval\"",
+        "steps": [
+          "Approve and revert loans"
+        ],
+        "expected": "NOT EXECUTED (data safety): real approve / revert."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): needs a real approve / revert. The existing \"npm run disbursal-approval\" covers the approval of the flow's own loan."
+      ],
+      "status": "Skipped",
+      "duration": 74902,
+      "error": "",
+      "shortId": "WORKFLOW_03",
+      "title": "TC_DISBAPP_WORKFLOW_03 - Workflow (approval): approving and reverting move a loan out of \"Waiting for Approval\"",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:46:43.980Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-f5ca6-ut-of-Waiting-for-Approval--chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_DISBAPP_API_01 - API: the queue list API answers 200 with JSON that contains loan numbers",
+      "id": "TC_DISBAPP_API_01",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the queue list API answers 200 with JSON that contains loan numbers",
+        "steps": [
+          "Reload the queue",
+          "Read the list API response"
+        ],
+        "expected": "200 with JSON containing loan numbers."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 76899,
+      "error": "",
+      "shortId": "API_01",
+      "title": "TC_DISBAPP_API_01 - API: the queue list API answers 200 with JSON that contains loan numbers",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:34:59.109Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-b\\GoldDisbursalApproval-test-b20e9--that-contains-loan-numbers-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_API_02 - API: the loan page's data call answers 200",
+      "id": "TC_DISBAPP_API_02",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the loan page's data call answers 200",
+        "steps": [
+          "Open a loan",
+          "Read the data call"
+        ],
+        "expected": "200 (no HTTP errors)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 72305,
+      "error": "",
+      "shortId": "API_02",
+      "title": "TC_DISBAPP_API_02 - API: the loan page's data call answers 200",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:50:57.649Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-9f510-age-s-data-call-answers-200-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_API_03 - API: the queue list API refuses a call that carries no login",
+      "id": "TC_DISBAPP_API_03",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the queue list API refuses a call that carries no login",
+        "steps": [
+          "Call the list API URL without any login"
+        ],
+        "expected": "Refused (401 / 403) or no loan data."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 79768,
+      "error": "",
+      "shortId": "API_03",
+      "title": "TC_DISBAPP_API_03 - API: the queue list API refuses a call that carries no login",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:36:16.028Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-b\\GoldDisbursalApproval-test-e7216--call-that-carries-no-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_API_04 - API: browsing the queue and the loans' pages sends no approve / revert / disburse request",
+      "id": "TC_DISBAPP_API_04",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "browsing the queue and the loans' pages sends no approve / revert / disburse request",
+        "steps": [
+          "Browse the queue and open a loan, then go back"
+        ],
+        "expected": "No approve / revert / disburse request is sent."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 107681,
+      "error": "",
+      "shortId": "API_04",
+      "title": "TC_DISBAPP_API_04 - API: browsing the queue and the loans' pages sends no approve / revert / disburse request",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:54:48.852Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-10958-ove-revert-disburse-request-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_API_05 - API: the approve / revert API with invalid data or without permission",
+      "id": "TC_DISBAPP_API_05",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the approve / revert API with invalid data or without permission",
+        "steps": [
+          "Call the approve / revert API directly"
+        ],
+        "expected": "NOT EXECUTED (data safety): could post a real voucher."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): a direct call could post a real voucher."
+      ],
+      "status": "Skipped",
+      "duration": 78242,
+      "error": "",
+      "shortId": "API_05",
+      "title": "TC_DISBAPP_API_05 - API: the approve / revert API with invalid data or without permission",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T11:56:36.839Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-b5c0c--data-or-without-permission-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_DISBAPP_ERROR_01 - Error recovery: when the list call fails the page does not crash and recovers after a reload",
+      "id": "TC_DISBAPP_ERROR_01",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "when the list call fails the page does not crash and recovers after a reload",
+        "steps": [
+          "Abort the list call",
+          "Reload",
+          "Remove the abort and reload"
+        ],
+        "expected": "No crash; the grid is back after a reload."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 101110,
+      "error": "",
+      "shortId": "ERROR_01",
+      "title": "TC_DISBAPP_ERROR_01 - Error recovery: when the list call fails the page does not crash and recovers after a reload",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:37:35.810Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb-b\\GoldDisbursalApproval-test-2ebd1-and-recovers-after-a-reload-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_ERROR_02 - Error recovery: opening a loan page with an invalid id shows no Approve button",
+      "id": "TC_DISBAPP_ERROR_02",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "opening a loan page with an invalid id shows no Approve button",
+        "steps": [
+          "Open a loan page with an invalid id"
+        ],
+        "expected": "No Approve & Disburse / Revert button."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 80893,
+      "error": "",
+      "shortId": "ERROR_02",
+      "title": "TC_DISBAPP_ERROR_02 - Error recovery: opening a loan page with an invalid id shows no Approve button",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:00:37.805Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-6545f--id-shows-no-Approve-button-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_FILE_01 - File download / upload: the queue has no export or upload",
+      "id": "TC_DISBAPP_FILE_01",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "the queue has no export or upload",
+        "steps": [
+          "Look for export / upload"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: no Excel / PDF export or upload icons on the queue (unlike the Vault screen)."
+      ],
+      "status": "Skipped",
+      "duration": 52758,
+      "error": "",
+      "shortId": "FILE_01",
+      "title": "TC_DISBAPP_FILE_01 - File download / upload: the queue has no export or upload",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:01:58.917Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-3eb8c-eue-has-no-export-or-upload-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_DISBAPP_A11Y_01 - Accessibility & responsive: the queue fits a phone (390 x 844) without sideways scrolling",
+      "id": "TC_DISBAPP_A11Y_01",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the queue fits a phone (390 x 844) without sideways scrolling",
+        "steps": [
+          "Open the queue at 390 x 844"
+        ],
+        "expected": "No horizontal scroll."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 70820,
+      "error": "",
+      "shortId": "A11Y_01",
+      "title": "TC_DISBAPP_A11Y_01 - Accessibility & responsive: the queue fits a phone (390 x 844) without sideways scrolling",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:02:51.698Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-f89b2--without-sideways-scrolling-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_A11Y_02 - Accessibility & responsive: the search box, both filters and the action buttons have accessible names",
+      "id": "TC_DISBAPP_A11Y_02",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the search box, both filters and the action buttons have accessible names",
+        "steps": [
+          "Check the search box, filters and action buttons"
+        ],
+        "expected": "Each has an accessible name."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 57773,
+      "error": "Error: controls without an accessible name\n\nexpect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 5\n\n- Array []\n+ Array [\n+   \"input\",\n+   \"select\",\n+   \"select\",\n+ ]",
+      "shortId": "A11Y_02",
+      "title": "TC_DISBAPP_A11Y_02 - Accessibility & responsive: the search box, both filters and the action buttons have accessible names",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:04:02.537Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-a8642-ttons-have-accessible-names-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_DISBAPP_A11Y_03 - Accessibility & responsive: the queue fits a tablet (768 x 1024) without sideways scrolling",
+      "id": "TC_DISBAPP_A11Y_03",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the queue fits a tablet (768 x 1024) without sideways scrolling",
+        "steps": [
+          "Open the queue at 768 x 1024"
+        ],
+        "expected": "No horizontal scroll."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 61401,
+      "error": "",
+      "shortId": "A11Y_03",
+      "title": "TC_DISBAPP_A11Y_03 - Accessibility & responsive: the queue fits a tablet (768 x 1024) without sideways scrolling",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:05:07.512Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-02a7b--without-sideways-scrolling-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "id": "TC_DISBAPP_A11Y_04",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "browser compatibility (Firefox, Safari / WebKit, Edge)",
+        "steps": [
+          "Run the queue in Firefox and WebKit"
+        ],
+        "expected": "NOT EXECUTED: only Chromium is installed."
+      },
+      "notes": [
+        "NOT EXECUTED: only Chromium is installed for this project (run \"npx playwright install\" and add projects to playwright.config.js to enable other browsers)."
+      ],
+      "status": "Skipped",
+      "duration": 59520,
+      "error": "",
+      "shortId": "A11Y_04",
+      "title": "TC_DISBAPP_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:06:09.321Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-59017-Firefox-Safari-WebKit-Edge--chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_DISBAPP_A11Y_05 - Accessibility & responsive: Tab moves from the search box to the queue filter and then the status filter",
+      "id": "TC_DISBAPP_A11Y_05",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "Tab moves from the search box to the queue filter and then the status filter",
+        "steps": [
+          "Focus the search box",
+          "Press Tab twice"
+        ],
+        "expected": "Focus moves to the two filters."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 39222,
+      "error": "",
+      "shortId": "A11Y_05",
+      "title": "TC_DISBAPP_A11Y_05 - Accessibility & responsive: Tab moves from the search box to the queue filter and then the status filter",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:07:08.865Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-0fdb0--and-then-the-status-filter-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SESSION_01 - Session / concurrency / browser: the queue URL without a login does not show the loans",
+      "id": "TC_DISBAPP_SESSION_01",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "the queue URL without a login does not show the loans",
+        "steps": [
+          "Without login open the queue URL"
+        ],
+        "expected": "No loans shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 73738,
+      "error": "",
+      "shortId": "SESSION_01",
+      "title": "TC_DISBAPP_SESSION_01 - Session / concurrency / browser: the queue URL without a login does not show the loans",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:07:48.101Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-376fe-gin-does-not-show-the-loans-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SESSION_02 - Session / concurrency / browser: a loan page URL without a login shows no loan and no Approve button",
+      "id": "TC_DISBAPP_SESSION_02",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "a loan page URL without a login shows no loan and no Approve button",
+        "steps": [
+          "Without login open a loan page URL"
+        ],
+        "expected": "No loan and no Approve button."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 62803,
+      "error": "",
+      "shortId": "SESSION_02",
+      "title": "TC_DISBAPP_SESSION_02 - Session / concurrency / browser: a loan page URL without a login shows no loan and no Approve button",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:09:01.881Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-2fd45--loan-and-no-Approve-button-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SESSION_03 - Session / concurrency / browser: browser storage cleared, then the filter is changed (behaviour recorded)",
+      "id": "TC_DISBAPP_SESSION_03",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "browser storage cleared, then the filter is changed (behaviour recorded)",
+        "steps": [
+          "Clear browser storage and cookies",
+          "Change the status filter"
+        ],
+        "expected": "Behaviour recorded in the notes."
+      },
+      "notes": [
+        "After clearing the session and changing the filter: stayed on the queue with 0 rows"
+      ],
+      "status": "Pass",
+      "duration": 27953,
+      "error": "",
+      "shortId": "SESSION_03",
+      "title": "TC_DISBAPP_SESSION_03 - Session / concurrency / browser: browser storage cleared, then the filter is changed (behaviour recorded)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:10:04.701Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-4e21e-changed-behaviour-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SESSION_04 - Session / concurrency / browser: a page refresh keeps or resets the chosen status view (behaviour recorded)",
+      "id": "TC_DISBAPP_SESSION_04",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "a page refresh keeps or resets the chosen status view (behaviour recorded)",
+        "steps": [
+          "Choose the status view \"Approved & Disbursed\"",
+          "Refresh the page"
+        ],
+        "expected": "Behaviour recorded in the notes (view kept or reset)."
+      },
+      "notes": [
+        "After a refresh the status view is \"null\" (it was \"Approved & Disbursed\")"
+      ],
+      "status": "Pass",
+      "duration": 70587,
+      "error": "",
+      "shortId": "SESSION_04",
+      "title": "TC_DISBAPP_SESSION_04 - Session / concurrency / browser: a page refresh keeps or resets the chosen status view (behaviour recorded)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:10:32.661Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-39454-us-view-behaviour-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SESSION_05 - Session / concurrency / browser: double-clicking View opens one loan page",
+      "id": "TC_DISBAPP_SESSION_05",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "double-clicking View opens one loan page",
+        "steps": [
+          "Double-click View on a loan"
+        ],
+        "expected": "One loan page opens."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 26560,
+      "error": "",
+      "shortId": "SESSION_05",
+      "title": "TC_DISBAPP_SESSION_05 - Session / concurrency / browser: double-clicking View opens one loan page",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:11:43.252Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-2d443-ng-View-opens-one-loan-page-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_DISBAPP_SESSION_06 - Session / concurrency / browser: two approvers approving the same loan at the same time",
+      "id": "TC_DISBAPP_SESSION_06",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "two approvers approving the same loan at the same time",
+        "steps": [
+          "Two approvers approve one loan"
+        ],
+        "expected": "NOT EXECUTED (data safety): two real approvals of one loan."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): needs two real approvals of one loan."
+      ],
+      "status": "Skipped",
+      "duration": 35787,
+      "error": "",
+      "shortId": "SESSION_06",
+      "title": "TC_DISBAPP_SESSION_06 - Session / concurrency / browser: two approvers approving the same loan at the same time",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:12:09.822Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-f96b7--same-loan-at-the-same-time-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_DISBAPP_LENGTH_01 - Field length & autocomplete: the search box has a maximum length",
+      "id": "TC_DISBAPP_LENGTH_01",
+      "meta": {
+        "module": "Field length & autocomplete",
+        "priority": "Medium",
+        "type": "Field length & autocomplete",
+        "summary": "the search box has a maximum length",
+        "steps": [
+          "Read maxlength of the search box"
+        ],
+        "expected": "A maximum length is set."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 84850,
+      "error": "Error: search maxlength\n\nexpect(received).not.toBeNull()\n\nReceived: null",
+      "shortId": "LENGTH_01",
+      "title": "TC_DISBAPP_LENGTH_01 - Field length & autocomplete: the search box has a maximum length",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:12:45.618Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-b58bd-ch-box-has-a-maximum-length-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_DISBAPP_LENGTH_02 - Field length & autocomplete: the search box keeps at most a sensible number of characters (a 5,000-character paste is cut)",
+      "id": "TC_DISBAPP_LENGTH_02",
+      "meta": {
+        "module": "Field length & autocomplete",
+        "priority": "Medium",
+        "type": "Field length & autocomplete",
+        "summary": "the search box keeps at most a sensible number of characters (a 5,000-character paste is cut)",
+        "steps": [
+          "Paste 5,000 characters into the search box"
+        ],
+        "expected": "At most 500 are kept."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 38491,
+      "error": "Error: expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 500\nReceived:    5000",
+      "shortId": "LENGTH_02",
+      "title": "TC_DISBAPP_LENGTH_02 - Field length & autocomplete: the search box keeps at most a sensible number of characters (a 5,000-character paste is cut)",
+      "file": "GoldDisbursalApproval/tests/gold-disbursal-approval-functional.spec.js",
+      "startTime": "2026-10-16T12:14:12.671Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-disb\\GoldDisbursalApproval-test-71af6-000-character-paste-is-cut--chromium\\test-failed-1.png",
+      "final": "FAILED"
+    }
+  ]
+}

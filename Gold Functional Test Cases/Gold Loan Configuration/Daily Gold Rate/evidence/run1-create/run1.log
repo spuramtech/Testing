@@ -1,0 +1,585 @@
+
+Running 61 tests using 1 worker
+
+  ok 1 [chromium] › api\gold-rate-api.spec.js:6:3 › Daily Gold Rate – API › TC_GR_050 - Gold rate list API refuses requests without a valid token @regression (8.9s)
+  x  2 [chromium] › api\gold-rate-api.spec.js:18:3 › Daily Gold Rate – API › TC_GR_051 - Gold rate list API returns well-formed records that match the grid @regression (8.5s)
+  ok 3 [chromium] › business-rules\rates.spec.js:6:3 › Daily Gold Rate – business rules › TC_GR_030 - 22K = 24K × 91.6% and 18K = 24K × 75% (2 decimals) for typical rates @smoke @regression (14.6s)
+  ok 4 [chromium] › business-rules\rates.spec.js:19:3 › Daily Gold Rate – business rules › TC_GR_031 - 22K and 18K rates cannot be edited by the user @regression (9.3s)
+  ok 5 [chromium] › business-rules\rates.spec.js:32:3 › Daily Gold Rate – business rules › TC_GR_032 - Every saved rate in the grid follows the 22K / 18K ratio to 24K @regression (12.7s)
+  x  6 [chromium] › business-rules\rates.spec.js:40:3 › Daily Gold Rate – business rules › TC_GR_033 - Internal Rate for the day = lower of 30-day average (A) and previous closing (B) @regression (9.8s)
+  ok 7 [chromium] › business-rules\rates.spec.js:49:3 › Daily Gold Rate – business rules › TC_GR_034 - Internal Rate "Previous Closing (B)" equals the Online 24K rate of the previous rate date @regression (14.3s)
+  x  8 [chromium] › business-rules\rates.spec.js:64:3 › Daily Gold Rate – business rules › TC_GR_035 - Online rate is editable/deletable only until its derived Internal Rate is Approved (lock + tooltip after) @regression (10.6s)
+  ok 9 [chromium] › business-rules\rates.spec.js:83:3 › Daily Gold Rate – business rules › TC_GR_036 - "Manual Gold Rate Entry in Gold Estimates" switch reflects the company feature setting @regression (8.1s)
+  ok 10 [chromium] › functional\navigation-grid.spec.js:8:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_001 - Daily Gold Rate opens from Loans → Gold → Gold Loan Configuration with Online Rate tab @smoke @regression (10.0s)
+  ok 11 [chromium] › functional\navigation-grid.spec.js:17:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_002 - Online grid shows Trans Date, 24K, 22K, 18K columns, Average Rate footer and pager @smoke @regression (8.4s)
+  ok 12 [chromium] › functional\navigation-grid.spec.js:26:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_003 - Date Range filter offers the expected options and defaults to Last 30 Days @regression (8.7s)
+  x  13 [chromium] › functional\navigation-grid.spec.js:33:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_004 - Last 30 Days shows only rates dated within the last 30 days @regression (9.3s)
+  ok 14 [chromium] › functional\navigation-grid.spec.js:41:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_005 - All range lists at least as many rows as Last 30 Days; Today lists only today @regression (10.4s)
+  ok 15 [chromium] › functional\navigation-grid.spec.js:52:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_006 - Grid lists rates newest first (HYPOTHESIS: default sort Trans Date descending) @regression (10.1s)
+  ok 16 [chromium] › functional\navigation-grid.spec.js:58:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_007 - Average Rate footer equals the mean of the listed 24K / 22K / 18K rates @regression (9.2s)
+  ok 17 [chromium] › functional\navigation-grid.spec.js:67:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_008 - Pager moves to the next page in the All range and shows different rows @regression (11.6s)
+  x  18 [chromium] › functional\navigation-grid.spec.js:82:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_012 - Excel and PDF export icons download the grid @regression (15.7s)
+  ok 19 [chromium] › functional\new-form.spec.js:5:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_013 - New opens "Online Gold Rate Submission" with read-only Loan Type "Gold Loan" and calculated 22K / 18K @smoke @regression (8.6s)
+  ok 20 [chromium] › functional\new-form.spec.js:19:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_014 - Trans Date defaults to the previous working day (HYPOTHESIS) @regression (8.5s)
+  x  21 [chromium] › functional\new-form.spec.js:27:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_015 - Trans Date cannot be typed – it is set only from the calendar @regression (29.0s)
+  ok 22 [chromium] › functional\new-form.spec.js:38:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_016 - Calendar disables today and every future date @regression (9.9s)
+  ok 23 [chromium] › functional\new-form.spec.js:50:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_017 - Calendar disables Sundays (current and previous month) @regression (10.1s)
+  ok 24 [chromium] › functional\new-form.spec.js:66:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_018 - Calendar allows a past working day to be selected @regression (10.9s)
+  ok 25 [chromium] › functional\new-form.spec.js:75:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_052 - Clear empties 24K / 22K / 18K and keeps the Trans Date @regression (9.2s)
+  ok 26 [chromium] › functional\new-form.spec.js:86:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_053 - Edit opens the panel pre-filled with the row values and Trans Date locked (no save) @regression (13.0s)
+  ok 27 [chromium] › functional\roles.spec.js:7:3 › Daily Gold Rate – roles and maker/checker workflow › TC_GR_047 - Checker (CHECKER_BH) sees no Edit / Delete actions on Online rates @regression (9.3s)
+  ok 28 [chromium] › functional\roles.spec.js:18:3 › Daily Gold Rate – roles and maker/checker workflow › TC_GR_048 - Maker (INT_APPRAISER1) cannot approve any Gold Rate submission @regression (1.1m)
+  ok 29 [chromium] › functional\roles.spec.js:28:3 › Daily Gold Rate – roles and maker/checker workflow › TC_GR_049 - IsGoldRateChecker API answers false for the maker @regression (10.2s)
+  -  30 [chromium] › functional\roles.spec.js:36:3 › Daily Gold Rate – roles and maker/checker workflow › TC_GR_056 - Checker approves a pending Internal Rate submitted by another user @regression
+  x  31 [chromium] › functional\search.spec.js:4:3 › Daily Gold Rate – search › TC_GR_009 - Searching an existing Trans Date shows that rate row @regression (12.5s)
+  x  32 [chromium] › functional\search.spec.js:13:3 › Daily Gold Rate – search › TC_GR_063 - Searching an existing 24K rate shows that rate row @regression (12.0s)
+  ok 33 [chromium] › functional\search.spec.js:23:3 › Daily Gold Rate – search › TC_GR_010 - Searching text that matches nothing shows "No records available." @regression (11.1s)
+  ok 34 [chromium] › functional\search.spec.js:31:3 › Daily Gold Rate – search › TC_GR_011 - Clearing the search restores the full list @regression (11.7s)
+  ok 35 [chromium] › negative\save-negative.spec.js:7:3 › Daily Gold Rate – negative save scenarios › TC_GR_037 - Save without a 24K rate shows the required warning and sends nothing @smoke @regression (11.9s)
+  ok 36 [chromium] › negative\save-negative.spec.js:17:3 › Daily Gold Rate – negative save scenarios › TC_GR_038 - Save with a zero 24K rate is rejected with the required warning @regression (12.3s)
+  ok 37 [chromium] › negative\save-negative.spec.js:27:3 › Daily Gold Rate – negative save scenarios › TC_GR_039 - A second rate for a Trans Date that already has one is rejected (duplicate) @regression (21.8s)
+  ok 38 [chromium] › negative\save-negative.spec.js:46:3 › Daily Gold Rate – negative save scenarios › TC_GR_040 - Update with the 24K rate cleared shows the required warning @regression (12.8s)
+  ok 39 [chromium] › negative\save-negative.spec.js:60:5 › Daily Gold Rate – negative save scenarios › TC_GR_060 - Save during a network failure does not report success and keeps the entry for retry @regression (17.2s)
+  ok 40 [chromium] › negative\save-negative.spec.js:60:5 › Daily Gold Rate – negative save scenarios › TC_GR_061 - Save during a server error 500 does not report success and keeps the entry for retry @regression (19.7s)
+  x  41 [chromium] › positive\crud.spec.js:22:3 › Daily Gold Rate – create, read, update, delete › TC_GR_041 - Maker saves a 24K rate for a free past working day; double-click sends one save @smoke @regression (23.0s)
+  -  42 [chromium] › positive\crud.spec.js:44:3 › Daily Gold Rate – create, read, update, delete › TC_GR_042 - The saved rate is listed in the grid with the submitted 24K / 22K / 18K @regression
+  -  43 [chromium] › positive\crud.spec.js:56:3 › Daily Gold Rate – create, read, update, delete › TC_GR_043 - Save API payload: every carat takes the nearest higher tier rate; Internal Rate is for the next working day @regression
+  -  44 [chromium] › positive\crud.spec.js:71:3 › Daily Gold Rate – create, read, update, delete › TC_GR_044 - Maker updates the rate; the grid shows the new 24K and recalculated 22K / 18K @regression
+  -  45 [chromium] › positive\crud.spec.js:93:3 › Daily Gold Rate – create, read, update, delete › TC_GR_045 - Delete asks for confirmation; Cancel keeps the rate @regression
+  -  46 [chromium] › positive\crud.spec.js:105:3 › Daily Gold Rate – create, read, update, delete › TC_GR_046 - Delete confirmed removes the rate (test-data cleanup) @regression
+  ok 47 [chromium] › regression\ui-compat.spec.js:4:3 › Daily Gold Rate – usability, accessibility and responsive › TC_GR_054 - At tablet width (768px) the grid and New entry panel remain usable @regression (10.2s)
+  x  48 [chromium] › regression\ui-compat.spec.js:17:3 › Daily Gold Rate – usability, accessibility and responsive › TC_GR_055 - Entry fields expose an accessible name (label or aria-label) @regression (8.6s)
+  ok 49 [chromium] › regression\ui-compat.spec.js:29:3 › Daily Gold Rate – usability, accessibility and responsive › TC_GR_064 - Online Rate / Internal Rate tabs switch content and back @regression (10.6s)
+  ok 50 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_019 - 24K input: "abc" → "" (letters are rejected) @regression (9.4s)
+  ok 51 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_020 - 24K input: "@#$%&*" → "" (special characters are rejected) @regression (9.3s)
+  ok 52 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_021 - 24K input: "-500" → "500" (minus sign is stripped (negative rate not possible)) @regression (9.9s)
+  ok 53 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_022 - 24K input: "   " → "" (whitespace only leaves the field empty) @regression (9.8s)
+  ok 54 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_023 - 24K input: "0" → "" (a leading zero / zero rate is not accepted) @regression (12.7s)
+  ok 55 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_024 - 24K input: "99999999999" → "99,999" (max 5 integer digits (boundary)) @regression (10.5s)
+  ok 56 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_025 - 24K input: "12.345" → "12.34" (max 2 decimal places) @regression (9.8s)
+  ok 57 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_026 - 24K input: "15000.5" → "15,000.5" (Indian thousand separator applied) @regression (9.6s)
+  x  58 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_027 - 24K input: "0.01" → "0.01" (smallest positive rate 0.01 is kept as typed) @regression (11.8s)
+  x  59 [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_062 - 24K input: "१५०००" → "" (Unicode (Devanagari) digits are rejected) @regression (9.9s)
+  ok 60 [chromium] › validation\rate-input.spec.js:19:5 › Daily Gold Rate – 24K rate input validation › TC_GR_028 - Boundary 24K 1 is accepted and 22K / 18K are calculated @regression (9.9s)
+  ok 61 [chromium] › validation\rate-input.spec.js:19:5 › Daily Gold Rate – 24K rate input validation › TC_GR_029 - Boundary 24K 99999.99 is accepted and 22K / 18K are calculated @regression (11.5s)
+
+
+  1) [chromium] › api\gold-rate-api.spec.js:18:3 › Daily Gold Rate – API › TC_GR_051 - Gold rate list API returns well-formed records that match the grid @regression 
+
+    TypeError: Cannot read properties of undefined (reading 'text')
+
+      18 |   test('TC_GR_051 - Gold rate list API returns well-formed records that match the grid @regression', async ({ grp, apiHits, record }) => {
+      19 |     const hit = apiHits.find((h) => /getonlinegoldrateView/i.test(h.url) && h.text);
+    > 20 |     const list = JSON.parse(hit.text);
+         |                                 ^
+      21 |     expect(Array.isArray(list)).toBe(true);
+      22 |     const malformed = list.filter((r) => !/^\d{4}-\d{2}-\d{2}/.test(r.ptransdate) || typeof r.pgoldrate !== 'number' || !/\d+K/.test(r.pgoldtype) || r.pgoldrate <= 0);
+      23 |     const [first] = await grp.rows();
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\api\gold-rate-api.spec.js:20:33
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\api-gold-rate-api-Daily-Go-93d3c-t-match-the-grid-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\api-gold-rate-api-Daily-Go-93d3c-t-match-the-grid-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\api-gold-rate-api-Daily-Go-93d3c-t-match-the-grid-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\api-gold-rate-api-Daily-Go-93d3c-t-match-the-grid-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › business-rules\rates.spec.js:40:3 › Daily Gold Rate – business rules › TC_GR_033 - Internal Rate for the day = lower of 30-day average (A) and previous closing (B) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -  1[39m
+    [31m+ Received  + 72[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15098.22,[39m
+    [31m+     "date": "14/10/2026",[39m
+    [31m+     "prevClosing": 15175.6,[39m
+    [31m+     "rate": 15175.6,[39m
+    [31m+     "status": "PENDING",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15102.63,[39m
+    [31m+     "date": "13/10/2026",[39m
+    [31m+     "prevClosing": 15108.5,[39m
+    [31m+     "rate": 15108.5,[39m
+    [31m+     "status": "APPROVED",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15107.9,[39m
+    [31m+     "date": "10/10/2026",[39m
+    [31m+     "prevClosing": 15239.2,[39m
+    [31m+     "rate": 15239.2,[39m
+    [31m+     "status": "PENDING",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15116.21,[39m
+    [31m+     "date": "09/10/2026",[39m
+    [31m+     "prevClosing": 15169,[39m
+    [31m+     "rate": 15169,[39m
+    [31m+     "status": "PENDING",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15424.35,[39m
+    [31m+     "date": "21/09/2026",[39m
+    [31m+     "prevClosing": 15106.8,[39m
+    [31m+     "rate": 15372.7,[39m
+    [31m+     "status": "APPROVED",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15430.92,[39m
+    [31m+     "date": "15/09/2026",[39m
+    [31m+     "prevClosing": 15047.6,[39m
+    [31m+     "rate": 15193.8,[39m
+    [31m+     "status": "APPROVED",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15431.47,[39m
+    [31m+     "date": "14/09/2026",[39m
+    [31m+     "prevClosing": 15016.6,[39m
+    [31m+     "rate": 15193.8,[39m
+    [31m+     "status": "APPROVED",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15392.45,[39m
+    [31m+     "date": "10/09/2026",[39m
+    [31m+     "prevClosing": 15348.6,[39m
+    [31m+     "rate": 15297.52,[39m
+    [31m+     "status": "APPROVED",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15357.05,[39m
+    [31m+     "date": "09/09/2026",[39m
+    [31m+     "prevClosing": 15307.7,[39m
+    [31m+     "rate": 15259.98,[39m
+    [31m+     "status": "APPROVED",[39m
+    [31m+   },[39m
+    [31m+   Object {[39m
+    [31m+     "avg30": 15321.99,[39m
+    [31m+     "date": "08/09/2026",[39m
+    [31m+     "prevClosing": 15270.3,[39m
+    [31m+     "rate": 15224.02,[39m
+    [31m+     "status": "APPROVED",[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      44 |     const bad = rows.filter((r) => Math.abs(r.rate - Math.min(r.avg30, r.prevClosing)) > 0.011);
+      45 |     record(`${rows.length} rows; ${bad.length} where rate ≠ min(A,B): ${bad.slice(0, 8).map((r) => `${r.date} A ${r.avg30} B ${r.prevClosing} rate ${r.rate}`).join('; ')}`);
+    > 46 |     expect(bad).toEqual([]);
+         |                 ^
+      47 |   });
+      48 |
+      49 |   test('TC_GR_034 - Internal Rate "Previous Closing (B)" equals the Online 24K rate of the previous rate date @regression', async ({ grp, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\business-rules\rates.spec.js:46:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\business-rules-rates-Daily-604de-evious-closing-B-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\business-rules-rates-Daily-604de-evious-closing-B-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\business-rules-rates-Daily-604de-evious-closing-B-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\business-rules-rates-Daily-604de-evious-closing-B-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › business-rules\rates.spec.js:64:3 › Daily Gold Rate – business rules › TC_GR_035 - Online rate is editable/deletable only until its derived Internal Rate is Approved (lock + tooltip after) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 4[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   "09/10/2026 should be editable (internal 10/10/2026 PENDING)",[39m
+    [31m+   "08/10/2026 should be editable (internal 09/10/2026 PENDING)",[39m
+    [31m+ ][39m
+
+      78 |     record(`${checked} rows checked; violations: ${bad.join('; ') || 'none'}`);
+      79 |     expect(checked).toBeGreaterThan(0);
+    > 80 |     expect(bad).toEqual([]);
+         |                 ^
+      81 |   });
+      82 |
+      83 |   test('TC_GR_036 - "Manual Gold Rate Entry in Gold Estimates" switch reflects the company feature setting @regression', async ({ page, grp, apiHits, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\business-rules\rates.spec.js:80:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\business-rules-rates-Daily-c41d8-ck-tooltip-after-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\business-rules-rates-Daily-c41d8-ck-tooltip-after-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\business-rules-rates-Daily-c41d8-ck-tooltip-after-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\business-rules-rates-Daily-c41d8-ck-tooltip-after-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › functional\navigation-grid.spec.js:33:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_004 - Last 30 Days shows only rates dated within the last 30 days @regression 
+
+    Error: oldest row 09/09/2026 is older than 30 days
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      36 |     const oldest = rows.map((r) => parse(r.date)).sort((a, b) => a - b)[0];
+      37 |     record(`${rows.length} rows, oldest ${fmt(oldest)}`);
+    > 38 |     expect(oldest >= daysAgo(31), `oldest row ${fmt(oldest)} is older than 30 days`).toBeTruthy();
+         |                                                                                      ^
+      39 |   });
+      40 |
+      41 |   test('TC_GR_005 - All range lists at least as many rows as Last 30 Days; Today lists only today @regression', async ({ grp, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\functional\navigation-grid.spec.js:38:86
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\functional-navigation-grid-a04dd-the-last-30-days-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\functional-navigation-grid-a04dd-the-last-30-days-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\functional-navigation-grid-a04dd-the-last-30-days-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\functional-navigation-grid-a04dd-the-last-30-days-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › functional\navigation-grid.spec.js:82:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_012 - Excel and PDF export icons download the grid @regression 
+
+    Error: excel icon
+
+    [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+    Locator: locator('img[title=excel]:visible').first()
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      [2m- excel icon with timeout 15000ms[22m
+    [2m  - waiting for locator('img[title=excel]:visible').first()[22m
+
+
+      84 |     for (const [title, ext] of [['excel', /\.(xlsx|xls|csv)$/i], ['pdf', /\.pdf$/i]]) {
+      85 |       const icon = page.locator(`img[title=${title}]:visible`).first();
+    > 86 |       await expect(icon, `${title} icon`).toBeVisible();
+         |                                           ^
+      87 |       const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 20_000 }), icon.click()]);
+      88 |       const name = dl.suggestedFilename();
+      89 |       await dl.saveAs(test.info().outputPath(name));
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\functional\navigation-grid.spec.js:86:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\functional-navigation-grid-3b229-ownload-the-grid-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\functional-navigation-grid-3b229-ownload-the-grid-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\functional-navigation-grid-3b229-ownload-the-grid-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\functional-navigation-grid-3b229-ownload-the-grid-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › functional\new-form.spec.js:27:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_015 - Trans Date cannot be typed – it is set only from the calendar @regression 
+
+    TimeoutError: locator.inputValue: Timeout 20000ms exceeded.
+    Call log:
+      [2m- waiting for locator('[formcontrolname=ptransdate]:visible')[22m
+
+
+      32 |     await grp.page.keyboard.type('31/12/2099');
+      33 |     await grp.page.keyboard.press('Escape');
+    > 34 |     record(`Field read-only; value stays ${await grp.transDate.inputValue()}`);
+         |                                                                ^
+      35 |     await expect(grp.transDate).toHaveValue(before);
+      36 |   });
+      37 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\functional\new-form.spec.js:34:64
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\functional-new-form-Daily--f0a9f-rom-the-calendar-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\functional-new-form-Daily--f0a9f-rom-the-calendar-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\functional-new-form-Daily--f0a9f-rom-the-calendar-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\functional-new-form-Daily--f0a9f-rom-the-calendar-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › functional\search.spec.js:4:3 › Daily Gold Rate – search › TC_GR_009 - Searching an existing Trans Date shows that rate row @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m"13/10/2026"[39m
+    Received array: [31m[][39m
+
+       8 |     const rows = await grp.rows();
+       9 |     record(`Search "${first.date}" → ${rows.length} rows (${rows.map((r) => r.date).join(', ') || 'No records available'})`);
+    > 10 |     expect(rows.map((r) => r.date)).toContain(first.date);
+         |                                     ^
+      11 |   });
+      12 |
+      13 |   test('TC_GR_063 - Searching an existing 24K rate shows that rate row @regression', async ({ grp, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\functional\search.spec.js:10:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\functional-search-Daily-Go-8824d-ws-that-rate-row-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\functional-search-Daily-Go-8824d-ws-that-rate-row-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\functional-search-Daily-Go-8824d-ws-that-rate-row-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\functional-search-Daily-Go-8824d-ws-that-rate-row-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › functional\search.spec.js:13:3 › Daily Gold Rate – search › TC_GR_063 - Searching an existing 24K rate shows that rate row @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m"13/10/2026"[39m
+    Received array: [31m[][39m
+
+      18 |     const rows = await grp.rows();
+      19 |     record(`Search "${text}" → ${rows.length} rows`);
+    > 20 |     expect(rows.map((r) => r.date)).toContain(first.date);
+         |                                     ^
+      21 |   });
+      22 |
+      23 |   test('TC_GR_010 - Searching text that matches nothing shows "No records available." @regression', async ({ page, grp, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\functional\search.spec.js:20:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\functional-search-Daily-Go-7f1d0-ws-that-rate-row-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\functional-search-Daily-Go-7f1d0-ws-that-rate-row-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\functional-search-Daily-Go-7f1d0-ws-that-rate-row-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\functional-search-Daily-Go-7f1d0-ws-that-rate-row-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium] › positive\crud.spec.js:22:3 › Daily Gold Rate – create, read, update, delete › TC_GR_041 - Maker saves a 24K rate for a free past working day; double-click sends one save @smoke @regression 
+
+    Error: double-click must not save twice
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m2[39m
+    Received array:  [31m[{"body": "{\"onlinegoldrates\":[{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"24K (99.9% pure gold)\",\"pgoldrate\":14268.22,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"22K (91.6% gold and 8.4% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"21K (87.5% gold and 12.5% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"20K (83.3% gold and 16.7% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"19K (79.2% gold and 20.8% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"18K (75% gold and 25% alloyed metals)\",\"pgoldrate\":10701.17,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"14K (58.3% gold and 41.7% alloyed metals)\",\"pgoldrate\":8318.37,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0}],\"pbranchid\":1}", "headers": {"accept": "application/json, text/plain, */*", "accept-language": "en-US", "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjI3IiwiZmluc3RhX3VzZXJpZCI6IjE1IiwibmJmIjoxNzkxOTgzMTc1LCJleHAiOjE3OTE5OTM5NzUsImlhdCI6MTc5MTk4MzE3NX0.mhLIYsA8U4oeqRC4CPwxoa4I4rp4eANWOB_33ujYlYs", "cache-control": "no-cache", "content-type": "application/json", "referer": "http://host214.kapilits.com:8411/", "schema-name": "public", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.31 Safari/537.36"}, "method": "POST", "status": 200, "text": "true", "url": "http://host214.kapilits.com:8412/api/loans/masters/loanmaster/saveonlinegoldrate"}, {"body": "{\"onlinegoldrates\":[{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"24K (99.9% pure gold)\",\"pgoldrate\":14268.22,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"22K (91.6% gold and 8.4% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"21K (87.5% gold and 12.5% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"20K (83.3% gold and 16.7% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"19K (79.2% gold and 20.8% alloyed metals)\",\"pgoldrate\":13069.69,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"18K (75% gold and 25% alloyed metals)\",\"pgoldrate\":10701.17,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pgoldtype\":\"14K (58.3% gold and 41.7% alloyed metals)\",\"pgoldrate\":8318.37,\"pAvgrate\":12223.79,\"pCreatedby\":15,\"ptransdate\":\"2026-07-04T13:06:19.000Z\",\"precordid\":0}],\"pbranchid\":1}", "headers": {"accept": "application/json, text/plain, */*", "accept-language": "en-US", "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjI3IiwiZmluc3RhX3VzZXJpZCI6IjE1IiwibmJmIjoxNzkxOTgzMTc1LCJleHAiOjE3OTE5OTM5NzUsImlhdCI6MTc5MTk4MzE3NX0.mhLIYsA8U4oeqRC4CPwxoa4I4rp4eANWOB_33ujYlYs", "cache-control": "no-cache", "content-type": "application/json", "referer": "http://host214.kapilits.com:8411/", "schema-name": "public", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.31 Safari/537.36"}, "method": "POST", "status": 200, "text": "true", "url": "http://host214.kapilits.com:8412/api/loans/masters/loanmaster/saveonlinegoldrate"}][39m
+
+      37 |     expect(msg).toMatch(/Online gold rate saved successfully/i);
+      38 |     expect(msg).toMatch(new RegExp(`Internal Rate for ${fmt(nextWorkingDay(parse(date))).replace(/\//g, '\\/')}.*submitted for Checker approval`, 'i'));
+    > 39 |     expect(online, 'double-click must not save twice').toHaveLength(1);
+         |                                                        ^
+      40 |     expect(ltv).toHaveLength(1);
+      41 |     expect(online[0].status).toBe(200);
+      42 |   });
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\positive\crud.spec.js:39:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\positive-crud-Daily-Gold-R-61b25-s-one-save-smoke-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\positive-crud-Daily-Gold-R-61b25-s-one-save-smoke-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\positive-crud-Daily-Gold-R-61b25-s-one-save-smoke-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\positive-crud-Daily-Gold-R-61b25-s-one-save-smoke-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium] › regression\ui-compat.spec.js:17:3 › Daily Gold Rate – usability, accessibility and responsive › TC_GR_055 - Entry fields expose an accessible name (label or aria-label) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 6[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   "Trans Date",[39m
+    [31m+   "24K rate",[39m
+    [31m+   "22K rate",[39m
+    [31m+   "18K rate",[39m
+    [31m+ ][39m
+
+      24 |     }
+      25 |     record(`Fields without accessible name: ${missing.join(', ') || 'none'}`);
+    > 26 |     expect(missing).toEqual([]);
+         |                     ^
+      27 |   });
+      28 |
+      29 |   test('TC_GR_064 - Online Rate / Internal Rate tabs switch content and back @regression', async ({ page, grp, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\regression\ui-compat.spec.js:26:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\regression-ui-compat-Daily-b4acb-el-or-aria-label-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\regression-ui-compat-Daily-b4acb-el-or-aria-label-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\regression-ui-compat-Daily-b4acb-el-or-aria-label-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\regression-ui-compat-Daily-b4acb-el-or-aria-label-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_027 - 24K input: "0.01" → "0.01" (smallest positive rate 0.01 is kept as typed) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"[7m0.0[27m1"[39m
+    Received: [31m"1"[39m
+
+      11 |       const v = await grp.values();
+      12 |       record(`Typed "${typed}" → 24K "${v.r24}", 22K "${v.r22}", 18K "${v.r18}"`);
+    > 13 |       expect(v.r24).toBe(expected);
+         |                     ^
+      14 |       if (expected === '') expect(v.r22).toBe('');
+      15 |     });
+      16 |   }
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\validation\rate-input.spec.js:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\validation-rate-input-Dail-adf8d-is-kept-as-typed-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\validation-rate-input-Dail-adf8d-is-kept-as-typed-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\validation-rate-input-Dail-adf8d-is-kept-as-typed-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\validation-rate-input-Dail-adf8d-is-kept-as-typed-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_062 - 24K input: "१५०००" → "" (Unicode (Devanagari) digits are rejected) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m""[39m
+    Received: [31m"१५,०००"[39m
+
+      11 |       const v = await grp.values();
+      12 |       record(`Typed "${typed}" → 24K "${v.r24}", 22K "${v.r22}", 18K "${v.r18}"`);
+    > 13 |       expect(v.r24).toBe(expected);
+         |                     ^
+      14 |       if (expected === '') expect(v.r22).toBe('');
+      15 |     });
+      16 |   }
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\tests\validation\rate-input.spec.js:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\artifacts\validation-rate-input-Dail-bd4d2-its-are-rejected-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\artifacts\validation-rate-input-Dail-bd4d2-its-are-rejected-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\validation-rate-input-Dail-bd4d2-its-are-rejected-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\validation-rate-input-Dail-bd4d2-its-are-rejected-regression-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › negative\save-negative.spec.js (1.6m)
+  Slow test file: [chromium] › functional\roles.spec.js (1.4m)
+  Slow test file: [chromium] › api\gold-rate-api.spec.js (17.4s)
+  Consider splitting slow test files to speed up parallel execution
+  12 failed
+    [chromium] › api\gold-rate-api.spec.js:18:3 › Daily Gold Rate – API › TC_GR_051 - Gold rate list API returns well-formed records that match the grid @regression 
+    [chromium] › business-rules\rates.spec.js:40:3 › Daily Gold Rate – business rules › TC_GR_033 - Internal Rate for the day = lower of 30-day average (A) and previous closing (B) @regression 
+    [chromium] › business-rules\rates.spec.js:64:3 › Daily Gold Rate – business rules › TC_GR_035 - Online rate is editable/deletable only until its derived Internal Rate is Approved (lock + tooltip after) @regression 
+    [chromium] › functional\navigation-grid.spec.js:33:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_004 - Last 30 Days shows only rates dated within the last 30 days @regression 
+    [chromium] › functional\navigation-grid.spec.js:82:3 › Daily Gold Rate – navigation and Online Rate grid › TC_GR_012 - Excel and PDF export icons download the grid @regression 
+    [chromium] › functional\new-form.spec.js:27:3 › Daily Gold Rate – New entry panel and Trans Date calendar › TC_GR_015 - Trans Date cannot be typed – it is set only from the calendar @regression 
+    [chromium] › functional\search.spec.js:4:3 › Daily Gold Rate – search › TC_GR_009 - Searching an existing Trans Date shows that rate row @regression 
+    [chromium] › functional\search.spec.js:13:3 › Daily Gold Rate – search › TC_GR_063 - Searching an existing 24K rate shows that rate row @regression 
+    [chromium] › positive\crud.spec.js:22:3 › Daily Gold Rate – create, read, update, delete › TC_GR_041 - Maker saves a 24K rate for a free past working day; double-click sends one save @smoke @regression 
+    [chromium] › regression\ui-compat.spec.js:17:3 › Daily Gold Rate – usability, accessibility and responsive › TC_GR_055 - Entry fields expose an accessible name (label or aria-label) @regression 
+    [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_027 - 24K input: "0.01" → "0.01" (smallest positive rate 0.01 is kept as typed) @regression 
+    [chromium] › validation\rate-input.spec.js:8:5 › Daily Gold Rate – 24K rate input validation › TC_GR_062 - 24K input: "१५०००" → "" (Unicode (Devanagari) digits are rejected) @regression 
+  1 skipped
+  5 did not run
+  43 passed (11.8m)
+
+To open last HTML report run:
+
+  npx playwright show-report reports\playwright-html
+
+Generated 68 | Automated 61 | Discovered 61 | Executed 55 | Passed 43 | Failed 12 | Blocked 0 | Skipped 6 | Not Executed 3 | N/A 4 | reconciles: true
+Report: C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\reports\QMetryReport.html

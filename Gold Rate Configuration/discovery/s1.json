@@ -1,0 +1,379 @@
+{
+  "url": "https://qc.finsta.co.in/#/Contact/ContactNew",
+  "inputs": [
+    {
+      "tag": "ng-select",
+      "formcontrolname": "urlName",
+      "placeholder": "Select",
+      "bindlabel": "pFunctionName",
+      "text": "×"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "ng-select",
+      "formcontrolname": "contactid",
+      "placeholder": "Select",
+      "bindlabel": "contactname",
+      "label": "Search Contact Name / Pan / Aadhar / Mob",
+      "text": "Select"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "inlineRadio2",
+      "formcontrolname": "Contacttype",
+      "label": "Individual",
+      "text": "Individual"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "inlineRadio3",
+      "formcontrolname": "Contacttype",
+      "label": "Business Entity",
+      "text": "Business Entity"
+    },
+    {
+      "tag": "ng-select",
+      "id": "pTitleName",
+      "formcontrolname": "pTitleName",
+      "placeholder": "Select",
+      "bindlabel": "pTitleName",
+      "text": "Select"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pName",
+      "placeholder": "Enter First Name",
+      "maxlength": "50"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pMiddleName",
+      "placeholder": "Middle Name",
+      "maxlength": "20",
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pSurName",
+      "placeholder": "Last Name",
+      "maxlength": "20",
+      "label": ""
+    },
+    {
+      "tag": "ng-select",
+      "id": "pTitleNameFathers",
+      "formcontrolname": "pTitleNameFathers",
+      "placeholder": "Select",
+      "bindlabel": "pTitleName",
+      "text": "Mr"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pFatherName",
+      "placeholder": "Enter First Name",
+      "maxlength": "75"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pFatherLastName",
+      "placeholder": "Enter  Last Name",
+      "maxlength": "75",
+      "label": ""
+    },
+    {
+      "tag": "ng-select",
+      "id": "pTitleNameMothers",
+      "formcontrolname": "pTitleNameMothers",
+      "placeholder": "Select",
+      "bindlabel": "pTitleName",
+      "text": "Mrs"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pMotherFirstName",
+      "placeholder": "Enter First Name",
+      "maxlength": "75"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pMotherLastName",
+      "placeholder": "Enter  Last Name",
+      "maxlength": "75",
+      "label": ""
+    },
+    {
+      "tag": "ng-select",
+      "id": "pTitleNameSpouses",
+      "formcontrolname": "pTitleNameSpouses",
+      "placeholder": "Select",
+      "bindlabel": "pTitleName",
+      "text": "Select"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pSpouseName",
+      "placeholder": "Enter First Name",
+      "maxlength": "75"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pSpouseLastName",
+      "placeholder": "Enter  Last Name",
+      "maxlength": "75",
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "type": "file",
+      "id": "upload",
+      "label": "Upload Photo"
+    },
+    {
+      "tag": "input",
+      "type": "file",
+      "id": "uploadSignature",
+      "label": "Upload Signature Image"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pDob",
+      "maxlength": "10",
+      "label": "Date of Birth"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pAge",
+      "maxlength": "20",
+      "label": "Age"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "male",
+      "name": "pGender",
+      "formcontrolname": "pGender",
+      "label": "Male",
+      "text": "Male"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "female",
+      "name": "pGender",
+      "formcontrolname": "pGender",
+      "label": "Female",
+      "text": "Female"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "tgender",
+      "name": "pGender",
+      "formcontrolname": "pGender",
+      "label": "Third Gender",
+      "text": "Third Gender"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pCKYCNumber",
+      "placeholder": "Enter CKYC Number",
+      "maxlength": "14",
+      "label": "CKYC Number"
+    },
+    {
+      "tag": "ng-select",
+      "id": "pPreferredLanguage",
+      "formcontrolname": "pPreferredLanguage",
+      "placeholder": "Select",
+      "bindlabel": "pPreferredLanguage",
+      "label": "Preferred Language"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "Yes",
+      "name": "pPhysicallyhandicapped",
+      "formcontrolname": "pPhysicallyhandicapped",
+      "label": "Yes",
+      "text": "Yes"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "No",
+      "name": "pPhysicallyhandicapped",
+      "formcontrolname": "pPhysicallyhandicapped",
+      "label": "No",
+      "text": "No"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "pxyes",
+      "name": "pPoliticallyExposedPerson",
+      "formcontrolname": "pPoliticallyExposedPerson",
+      "label": "Yes",
+      "text": "Yes"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "pxno",
+      "name": "pPoliticallyExposedPerson",
+      "formcontrolname": "pPoliticallyExposedPerson",
+      "label": "No",
+      "text": "No"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "pxnrepep",
+      "name": "pPoliticallyExposedPerson",
+      "formcontrolname": "pPoliticallyExposedPerson",
+      "label": "Related to PEP",
+      "text": "Related to PEP"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pDIN",
+      "placeholder": "DIN",
+      "maxlength": "14",
+      "label": "DIN"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pDPIN",
+      "placeholder": "DPIN",
+      "maxlength": "14",
+      "label": "DPIN"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pContactNumber",
+      "placeholder": "Enter Primary Contact Number",
+      "maxlength": "12",
+      "label": "Primary Contact Number"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pAlternativeNo",
+      "placeholder": "Enter Contact Number",
+      "maxlength": "12",
+      "label": "Secondary Contact Number"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pEmailId",
+      "placeholder": "Enter Primary Email ID",
+      "maxlength": "75",
+      "label": "Primary Email ID"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pEmailId2",
+      "placeholder": "Enter Email ID",
+      "maxlength": "75",
+      "label": "Secondary Email ID"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pOnboardingdate",
+      "label": "KYC Date",
+      "text": "13/10/2026"
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "button",
+      "type": "button",
+      "label": "Upload Photo",
+      "text": "Take Photo"
+    },
+    {
+      "tag": "button",
+      "text": "Save & Continue"
+    }
+  ],
+  "labels": [
+    "Search Contact Name / Pan / Aadhar / Mobile Number / Email",
+    "Individual",
+    "Business Entity",
+    "Personal Details",
+    "First Name",
+    "Father Name",
+    "Mother Name",
+    "Spouse Name",
+    "Mailing Name (S)",
+    "Upload Photo",
+    "Upload Signature Image",
+    "Date of Birth",
+    "Age",
+    "Gender",
+    "Male",
+    "Female",
+    "Third Gender",
+    "CKYC Number",
+    "Preferred Language",
+    "Physically Handi Capped",
+    "Yes",
+    "No",
+    "Politically Exposed Person",
+    "Related to PEP",
+    "DIN",
+    "DPIN",
+    "Contact Information",
+    "Primary Contact Number",
+    "Secondary Contact Number",
+    "Primary Email ID",
+    "Secondary Email ID",
+    "KYC Date"
+  ]
+}

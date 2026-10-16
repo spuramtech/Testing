@@ -1,0 +1,11 @@
+{
+  "ge": "GE2610000025",
+  "msgs": "Entry verified. Routed to the next stage.",
+  "apiCalls": [
+    {
+      "url": "https://qc-api.finsta.co.in/api/loans/transactions/goldestimate/ApproveInternalAppraisal",
+      "status": 200
+    }
+  ],
+  "approvedAt": "2026-10-15T11:15:57.422Z"
+}

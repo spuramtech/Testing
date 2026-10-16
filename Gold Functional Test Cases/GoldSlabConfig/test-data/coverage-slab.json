@@ -1,0 +1,15 @@
+{
+  "A": {
+    "from": 100000001,
+    "to": 101000000,
+    "internal": 2,
+    "external": 1
+  },
+  "calls": [
+    {
+      "url": "http://host214.kapilits.com:8412/api/loans/transactions/goldestimate/SaveSlabConfig?createdby=14",
+      "status": 200,
+      "body": "{\"precordid\":0,\"pSlabFromAmount\":100000001,\"pSlabToAmount\":101000000,\"pInternalAppraiserCount\":2,\"pExternalAppraiserCount\":1}"
+    }
+  ]
+}

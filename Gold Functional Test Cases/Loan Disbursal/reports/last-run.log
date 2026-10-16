@@ -1,0 +1,601 @@
+
+> gold-functional-test-cases@1.0.0 disbursal
+> node common/utils/run-form.js "Loan Disbursal"
+
+
+=== Loan Disbursal / Loan Disbursal ===
+
+Running 56 tests using 1 worker
+
+  ok 1 [chromium] › api\disbursal-api.spec.js:6:3 › Loan Disbursal – API › TC_LD_050 - Disbursal list and loan APIs refuse requests without a token @regression (15.8s)
+  ok 2 [chromium] › api\disbursal-api.spec.js:17:3 › Loan Disbursal – API › TC_LD_051 - SubmitDisbursal refuses a request without a token @regression (15.8s)
+  ok 3 [chromium] › api\disbursal-api.spec.js:25:3 › Loan Disbursal – API › TC_LD_052 - Gold loans require Branch Head approval (RequiresApproval = true) @regression (15.7s)
+  x  4 [chromium] › api\disbursal-api.spec.js:32:3 › Loan Disbursal – API › TC_LD_053 - An external appraiser cannot read the disbursal list through the API (HYPOTHESIS) @regression (23.0s)
+  ok 5 [chromium] › business-rules\submit.spec.js:17:3 › Loan Disbursal – Submit For Approval: required fields › TC_LD_032 - Bank without Cheque/Online/Debit Card: "Please Select Bank", nothing sent @smoke @regression (20.5s)
+  x  6 [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_033 - Online without bank name is refused with a message @regression (21.7s)
+  x  7 [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_034 - Online without type of payment is refused with a message @regression (21.9s)
+  x  8 [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_035 - Online without reference no is refused with a message @regression (1.1m)
+  ok 9 [chromium] › business-rules\submit.spec.js:42:3 › Loan Disbursal – Submit For Approval: required fields › TC_LD_036 - Cheque with no cheque number cannot be submitted @regression (23.6s)
+  x  10 [chromium] › business-rules\submit.spec.js:54:3 › Loan Disbursal – Submit For Approval: required fields › TC_LD_037 - Submitting without choosing a mode of payment asks for one (HYPOTHESIS) @regression (20.9s)
+  ok 11 [chromium] › business-rules\submit.spec.js:70:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_038 - Online submit sends BANK / ONLINE / NEFT, the reference, the bank and the full amount @smoke @regression (23.6s)
+  ok 12 [chromium] › business-rules\submit.spec.js:83:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_039 - Cash submit sends CASH with no bank details @regression (20.7s)
+  ok 13 [chromium] › business-rules\submit.spec.js:94:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_040 - Submit sends today as payment date and the shown installment start date @regression (21.4s)
+  ok 14 [chromium] › business-rules\submit.spec.js:103:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_041 - Submit sends the borrower's primary bank account @regression (20.6s)
+  ok 15 [chromium] › business-rules\submit.spec.js:112:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_042 - Successful submit: "Disbursal submitted for Branch Head approval." and back to the list @regression (21.7s)
+  ok 16 [chromium] › business-rules\submit.spec.js:120:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_043 - Network failure on submit: no success, stays on the form @regression (20.5s)
+  ok 17 [chromium] › business-rules\submit.spec.js:129:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_044 - Server error 500 on submit is shown as an error, not success @regression (22.9s)
+  ok 18 [chromium] › business-rules\submit.spec.js:137:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_045 - Double-clicking Submit For Approval sends only one request @regression (20.6s)
+  -  19 [chromium] › business-rules\submit.spec.js:145:3 › Loan Disbursal – Submit For Approval: payload and outcome (simulated server) › TC_LD_046 - A loan already submitted for approval cannot be submitted again @regression
+  x  20 [chromium] › functional\list.spec.js:7:3 › Loan Disbursal – approved loans list › TC_LD_001 - List shows Branch, Show Loans and the Approved columns @smoke @regression (1.1m)
+  ok 21 [chromium] › functional\list.spec.js:15:3 › Loan Disbursal – approved loans list › TC_LD_002 - Total and application numbers match the API @smoke @regression (16.6s)
+  x  22 [chromium] › functional\list.spec.js:26:3 › Loan Disbursal – approved loans list › TC_LD_003 - Row values (applicant, contact, sanctioned) match the API @regression (1.1m)
+  ok 23 [chromium] › functional\list.spec.js:36:3 › Loan Disbursal – approved loans list › TC_LD_004 - Branch filter HEAD OFFICE shows only HEAD OFFICE loans @regression (18.8s)
+  ok 24 [chromium] › functional\list.spec.js:46:3 › Loan Disbursal – approved loans list › TC_LD_005 - Search by application number finds that loan only @regression (16.9s)
+  ok 25 [chromium] › functional\list.spec.js:53:3 › Loan Disbursal – approved loans list › TC_LD_006 - Search by applicant name @regression (17.1s)
+  ok 26 [chromium] › functional\list.spec.js:60:3 › Loan Disbursal – approved loans list › TC_LD_007 - Search with no match shows no rows @regression (16.8s)
+  ok 27 [chromium] › functional\list.spec.js:66:3 › Loan Disbursal – approved loans list › TC_LD_008 - Paging shows 10 rows and page 2 has different loans @regression (19.5s)
+  x  28 [chromium] › functional\list.spec.js:77:3 › Loan Disbursal – approved loans list › TC_LD_009 - Approved loans offered for disbursal have a sanctioned amount above 0 (HYPOTHESIS) @regression (16.1s)
+  ok 29 [chromium] › functional\list.spec.js:83:3 › Loan Disbursal – approved loans list › TC_LD_010 - Clicking the Application No opens the disbursement form @smoke @regression (17.9s)
+  ok 30 [chromium] › functional\loan-details.spec.js:8:3 › Loan Disbursal – loan details › TC_LD_011 - Amounts: available = sanctioned − previous; amount disbursed = available − adjustments @smoke @regression (18.0s)
+  ok 31 [chromium] › functional\loan-details.spec.js:16:3 › Loan Disbursal – loan details › TC_LD_012 - Loan terms come from the approved application @regression (20.1s)
+  -  32 [chromium] › functional\loan-details.spec.js:23:3 › Loan Disbursal – loan details › TC_LD_013 - Borrower bank details = the contact's bank account @regression
+  ok 33 [chromium] › functional\loan-details.spec.js:33:3 › Loan Disbursal – loan details › TC_LD_014 - Disburse Date is today and read-only @regression (20.8s)
+  ok 34 [chromium] › functional\loan-details.spec.js:41:3 › Loan Disbursal – loan details › TC_LD_015 - Installment Start Date is one month after the disburse date @regression (17.3s)
+  ok 35 [chromium] › functional\loan-details.spec.js:47:3 › Loan Disbursal – loan details › TC_LD_016 - A loan with nothing disbursed shows no disbursal history @regression (20.6s)
+  x  36 [chromium] › functional\loan-details.spec.js:56:3 › Loan Disbursal – loan details › TC_LD_017 - Mode of Payment shows Cash and Bank with balances from the books; Cash is pre-selected @regression (1.1m)
+  ok 37 [chromium] › functional\loan-details.spec.js:69:3 › Loan Disbursal – loan details › TC_LD_018 - Bank → Online offers the company bank and RTGS / NEFT / IMPS / UPI / INTRA BANK TRANSFER @regression (18.9s)
+  x  38 [chromium] › functional\loan-details.spec.js:79:3 › Loan Disbursal – loan details › TC_LD_019 - Bank → Cheque offers the bank and its unused cheques @regression (1.1m)
+  ok 39 [chromium] › functional\loan-details.spec.js:91:3 › Loan Disbursal – loan details › TC_LD_020 - Bank → Debit Card offers a card list @regression (20.7s)
+  x  40 [chromium] › functional\loan-details.spec.js:99:3 › Loan Disbursal – loan details › TC_LD_021 - Cash hides the bank fields @regression (1.1m)
+  ok 41 [chromium] › functional\loan-details.spec.js:107:3 › Loan Disbursal – loan details › TC_LD_022 - Clear resets the bank choice @regression (1.0m)
+  ok 42 [chromium] › negative\roles.spec.js:8:3 › Loan Disbursal – roles › TC_LD_047 - EXT_APPRAISER1 has no Loan Disbursal in the menu @regression (25.5s)
+  ok 43 [chromium] › negative\roles.spec.js:16:3 › Loan Disbursal – roles › TC_LD_048 - EXT_APPRAISER1 opening the URL directly is sent back to the Dashboard @regression (14.6s)
+  x  44 [chromium] › negative\roles.spec.js:27:3 › Loan Disbursal – roles › TC_LD_049 - Branch Head (CHECKER_BH) can open the Loan Disbursal list @regression (1.1m)
+  -  45 [chromium] › positive\real-submit.spec.js:7:1 › TC_LD_056 - Real Online submit of an AUTOTEST loan goes to Branch Head approval (ALLOW_DATA_CREATION=1) @regression
+  x  46 [chromium] › regression\ui.spec.js:4:3 › Loan Disbursal – usability, accessibility, responsive › TC_LD_054 - At tablet width (768px) the disbursement form has no page-level horizontal scroll @regression (20.0s)
+  x  47 [chromium] › regression\ui.spec.js:12:3 › Loan Disbursal – usability, accessibility, responsive › TC_LD_055 - Payout, dates and bank fields have accessible names @regression (1.1m)
+  ok 48 [chromium] › validation\payout.spec.js:16:5 › Loan Disbursal – payout amount validation › TC_LD_023 - Payout "0" (zero) is not accepted: full amount stays @regression (18.9s)
+  ok 49 [chromium] › validation\payout.spec.js:16:5 › Loan Disbursal – payout amount validation › TC_LD_024 - Payout "100" (less than the available amount) is not accepted: full amount stays @regression (22.3s)
+  ok 50 [chromium] › validation\payout.spec.js:16:5 › Loan Disbursal – payout amount validation › TC_LD_025 - Payout "MORE" (more than the available amount) is not accepted: full amount stays @regression (19.3s)
+  ok 51 [chromium] › validation\payout.spec.js:16:5 › Loan Disbursal – payout amount validation › TC_LD_026 - Payout "abc" (letters) is not accepted: full amount stays @regression (19.6s)
+  ok 52 [chromium] › validation\payout.spec.js:16:5 › Loan Disbursal – payout amount validation › TC_LD_027 - Payout "-100" (negative) is not accepted: full amount stays @regression (19.2s)
+  ok 53 [chromium] › validation\payout.spec.js:16:5 › Loan Disbursal – payout amount validation › TC_LD_028 - Payout "100.555" (three decimals) is not accepted: full amount stays @regression (21.4s)
+  ok 54 [chromium] › validation\payout.spec.js:16:5 › Loan Disbursal – payout amount validation › TC_LD_029 - Payout "" (empty) is not accepted: full amount stays @regression (19.1s)
+  ok 55 [chromium] › validation\payout.spec.js:28:3 › Loan Disbursal – payout amount validation › TC_LD_030 - Payout field holds at most 18 characters @regression (16.9s)
+  ok 56 [chromium] › validation\payout.spec.js:34:3 › Loan Disbursal – payout amount validation › TC_LD_031 - Online Reference No holds at most 30 characters @regression (17.9s)
+
+
+  1) [chromium] › api\disbursal-api.spec.js:32:3 › Loan Disbursal – API › TC_LD_053 - An external appraiser cannot read the disbursal list through the API (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mtrue[39m
+    Received: [31mfalse[39m
+
+      42 |     const n = await r.json().then((x) => (x.papprovedloanslist || []).length).catch(() => null);
+      43 |     record(`External appraiser token → ${r.status()}, ${n} loans`);
+    > 44 |     expect([401, 403].includes(r.status()) || n === 0).toBe(true);
+         |                                                        ^
+      45 |   });
+      46 | });
+      47 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\tests\api\disbursal-api.spec.js:44:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\api-disbursal-api-Loan-Dis-e9073-e-API-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\api-disbursal-api-Loan-Dis-e9073-e-API-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\api-disbursal-api-Loan-Dis-e9073-e-API-HYPOTHESIS-regression-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\api-disbursal-api-Loan-Dis-e9073-e-API-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\api-disbursal-api-Loan-Dis-e9073-e-API-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_033 - Online without bank name is refused with a message @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: not [32m""[39m
+
+      36 |       record(`Requests ${sent.length}; message "${m}"`);
+      37 |       expect(sent).toHaveLength(0);
+    > 38 |       expect(m).not.toBe('');
+         |                     ^
+      39 |     });
+      40 |   }
+      41 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\tests\business-rules\submit.spec.js:38:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-92156-d-with-a-message-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-92156-d-with-a-message-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-92156-d-with-a-message-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-92156-d-with-a-message-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_034 - Online without type of payment is refused with a message @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: not [32m""[39m
+
+      36 |       record(`Requests ${sent.length}; message "${m}"`);
+      37 |       expect(sent).toHaveLength(0);
+    > 38 |       expect(m).not.toBe('');
+         |                     ^
+      39 |     });
+      40 |   }
+      41 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\tests\business-rules\submit.spec.js:38:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-ec452-d-with-a-message-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-ec452-d-with-a-message-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-ec452-d-with-a-message-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-ec452-d-with-a-message-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_035 - Online without reference no is refused with a message @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at prepare (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:22:3)
+        at Object.ld (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:49:16)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-019e3-d-with-a-message-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-019e3-d-with-a-message-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-019e3-d-with-a-message-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-019e3-d-with-a-message-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › business-rules\submit.spec.js:54:3 › Loan Disbursal – Submit For Approval: required fields › TC_LD_037 - Submitting without choosing a mode of payment asks for one (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m[{"pApplicantmobile": "9974483459", "pDisbursement": {"PChargeCalculatedon": "", "emitype": "REGULAR", "pAdvanceEmiAmount": 0, "pBalancetransferList": [], "pBankId": 0, "pBrowkenAmount": 0, "pBrowkendays": 0, "pCardNumber": null, "pChequenumber": null, "pCreatedby": 15, "pSelectedBankContactId": 0, "pStatusname": null, "pTopUp": "General", "pTopUptype": "", "pUpiid": null, "pUpiname": null, "padjustchargeslist": [], "papplicantid": 4550, "papplicantname": "Autotest Eidefj Qa", "papplicationid": 739, "papproveddate": "01/06/2026", "papprovedloanamount": "5,35,786.00", "papprovedstatus": null, "pbankid": 0, "pbankname": null, "pbranchname": "HEAD OFFICE", "pbranchschema": "public", "pbrokeninterestcollectthrough": "A", "pcancelchequesamount": 0, "pchargesadjustedamount": 0, "pchequedate": null, "pcommissionamount": 0, "pcontactreferenceid": "261000014", "pdateofapplication": "01/06/2026", "pdebtorsaccountid": 130047, "pdisbursedtype": "SINGLE PAYMENT", "pdisbursestatus": "FINAL", "pdistransType": "", "pemiday": 0, "pemitype": "REGULAR", "pexistingdisbursestatus": "NO", "pexistingloanssadjustedamount": "0.00", "pinstallmentstartdate": "2026-11-15T18:30:00.000Z", "pinteresttype": "Diminishing", "pledgerid": null, "pledgername": "", "ploanadjustmentamount": "0.00", "ploandisbusableamount": "5,35,786.00", "ploandisbusalamount": "5,35,786.00", "ploaninstallment": "0.00", "ploaninstalmentpaymentmode": "Only Interest (Principle is paid at end of tenure)", "ploanname": "New Gold", "ploanpayin": "Monthly", "ploanpayoutamount": "5,35,786.00", "pmodofpayment": "CASH", "pnarration": null, "ppayinduration": "1", "ppayinnature": "MONTHS", "ppaymentdate": "2026-10-16T09:12:02.623Z", "ppaymentid": null, "ppreviousdisbursedamount": 0, "ppreviousdisbursedtdate": null, "ppurposeofloan": "", "prateofinterest": 24, "prequestid": 0, "pselectedBankaccountno": 0, "pstagewisepaymentslist": [], "psubledgerid": 0, "psubledgername": "", "ptenureofloan": 3, "ptotalpaidamount": 0, "ptranstype": null, "ptypeofoperation": "CREATE", "ptypeofpayment": null, "pvchapplicationid": "GLNG0126060000001"}, "pLoginbranchschema": "public"}][39m
+
+      56 |     const m = await trySubmit(loan.ld, page);
+      57 |     record(`Requests ${sent.length} (mode ${sent[0]?.pDisbursement?.pmodofpayment}); message "${m}"`);
+    > 58 |     expect(sent).toHaveLength(0);
+         |                  ^
+      59 |   });
+      60 | });
+      61 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\tests\business-rules\submit.spec.js:58:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-e4559-r-one-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-e4559-r-one-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-e4559-r-one-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\business-rules-submit-Loan-e4559-r-one-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › functional\list.spec.js:7:3 › Loan Disbursal – approved loans list › TC_LD_001 - List shows Branch, Show Loans and the Approved columns @smoke @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at prepare (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:22:3)
+        at Object.ld (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:49:16)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-ddb81-ed-columns-smoke-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-ddb81-ed-columns-smoke-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-ddb81-ed-columns-smoke-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-ddb81-ed-columns-smoke-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › functional\list.spec.js:26:3 › Loan Disbursal – approved loans list › TC_LD_003 - Row values (applicant, contact, sanctioned) match the API @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at prepare (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:22:3)
+        at Object.ld (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:49:16)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-0b423-ed-match-the-API-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-0b423-ed-match-the-API-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-0b423-ed-match-the-API-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-0b423-ed-match-the-API-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › functional\list.spec.js:77:3 › Loan Disbursal – approved loans list › TC_LD_009 - Approved loans offered for disbursal have a sanctioned amount above 0 (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 7[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   "GLNG0126100000007 (Autotest Gahjjf Qa)",[39m
+    [31m+   "GLNG0126100000010 (Autotest Habcba Qa)",[39m
+    [31m+   "GLNG0126100000011 (Autotest Habcba Qa)",[39m
+    [31m+   "GLNG0126100000012 (Autotest Habcba Qa)",[39m
+    [31m+   "GLNG0126100000013 (Autotest Habcba Qa)",[39m
+    [31m+ ][39m
+
+      78 |     const zero = listApi(apiHits).filter((l) => !(l.ploanapprovedamount > 0)).map((l) => `${l.pvchapplicationid} (${l.papplicantname})`);
+      79 |     record(`Loans with sanctioned 0: ${zero.length} – ${zero.join(', ') || 'none'}`);
+    > 80 |     expect(zero).toEqual([]);
+         |                  ^
+      81 |   });
+      82 |
+      83 |   test('TC_LD_010 - Clicking the Application No opens the disbursement form @smoke @regression', async ({ ld, page, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\tests\functional\list.spec.js:80:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-3adca-ove-0-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-3adca-ove-0-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-3adca-ove-0-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\functional-list-Loan-Disbu-3adca-ove-0-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium] › functional\loan-details.spec.js:56:3 › Loan Disbursal – loan details › TC_LD_017 - Mode of Payment shows Cash and Bank with balances from the books; Cash is pre-selected @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at prepare (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:22:3)
+        at Object.ld (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:49:16)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-8c4e5--is-pre-selected-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-8c4e5--is-pre-selected-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-8c4e5--is-pre-selected-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-8c4e5--is-pre-selected-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium] › functional\loan-details.spec.js:79:3 › Loan Disbursal – loan details › TC_LD_019 - Bank → Cheque offers the bank and its unused cheques @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at prepare (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:22:3)
+        at Object.ld (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:49:16)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-f0bb3-s-unused-cheques-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-f0bb3-s-unused-cheques-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-f0bb3-s-unused-cheques-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-f0bb3-s-unused-cheques-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium] › functional\loan-details.spec.js:99:3 › Loan Disbursal – loan details › TC_LD_021 - Cash hides the bank fields @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at prepare (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:22:3)
+        at Object.ld (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:49:16)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-0a737--the-bank-fields-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-0a737--the-bank-fields-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-0a737--the-bank-fields-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\functional-loan-details-Lo-0a737--the-bank-fields-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium] › negative\roles.spec.js:27:3 › Loan Disbursal – roles › TC_LD_049 - Branch Head (CHECKER_BH) can open the Loan Disbursal list @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\tests\negative\roles.spec.js:31:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\negative-roles-Loan-Disbur-743b9-n-Disbursal-list-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\negative-roles-Loan-Disbur-743b9-n-Disbursal-list-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\negative-roles-Loan-Disbur-743b9-n-Disbursal-list-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\negative-roles-Loan-Disbur-743b9-n-Disbursal-list-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [chromium] › regression\ui.spec.js:4:3 › Loan Disbursal – usability, accessibility, responsive › TC_LD_054 - At tablet width (768px) the disbursement form has no page-level horizontal scroll @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m768[39m
+    Received:    [31m825[39m
+
+       7 |     const sw = await page.evaluate(() => document.documentElement.scrollWidth);
+       8 |     record(`scrollWidth ${sw}`);
+    >  9 |     expect(sw).toBeLessThanOrEqual(768);
+         |                ^
+      10 |   });
+      11 |
+      12 |   test('TC_LD_055 - Payout, dates and bank fields have accessible names @regression', async ({ loan, page, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\tests\regression\ui.spec.js:9:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-32aef-orizontal-scroll-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-32aef-orizontal-scroll-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-32aef-orizontal-scroll-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-32aef-orizontal-scroll-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [chromium] › regression\ui.spec.js:12:3 › Loan Disbursal – usability, accessibility, responsive › TC_LD_055 - Payout, dates and bank fields have accessible names @regression 
+
+    TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+       at ..\pages\LoanDisbursalPage.js:25
+
+      23 |     }
+      24 |     await link.click();
+    > 25 |     await p.waitForURL(/DisbursementView/);
+         |             ^
+      26 |     await this.showLoans.click();
+      27 |     await p.locator('tr', { hasText: /GLNG|[A-Z]{3,}\d{10,}/ }).first().waitFor({ timeout: 15_000 }).catch(() => {});
+      28 |   }
+
+        at LoanDisbursalPage.open (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\pages\LoanDisbursalPage.js:25:13)
+        at prepare (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:22:3)
+        at Object.ld (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\fixtures\index.js:49:16)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-d0a15-accessible-names-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-d0a15-accessible-names-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-d0a15-accessible-names-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Loan Disbursal\test-results\artifacts\regression-ui-Loan-Disburs-d0a15-accessible-names-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › validation\payout.spec.js (2.9m)
+  Slow test file: [chromium] › negative\roles.spec.js (1.8m)
+  Slow test file: [chromium] › api\disbursal-api.spec.js (1.2m)
+  Slow test file: [chromium] › positive\real-submit.spec.js (16.1s)
+  Consider splitting slow test files to speed up parallel execution
+  14 failed
+    [chromium] › api\disbursal-api.spec.js:32:3 › Loan Disbursal – API › TC_LD_053 - An external appraiser cannot read the disbursal list through the API (HYPOTHESIS) @regression 
+    [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_033 - Online without bank name is refused with a message @regression 
+    [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_034 - Online without type of payment is refused with a message @regression 
+    [chromium] › business-rules\submit.spec.js:31:5 › Loan Disbursal – Submit For Approval: required fields › TC_LD_035 - Online without reference no is refused with a message @regression 
+    [chromium] › business-rules\submit.spec.js:54:3 › Loan Disbursal – Submit For Approval: required fields › TC_LD_037 - Submitting without choosing a mode of payment asks for one (HYPOTHESIS) @regression 
+    [chromium] › functional\list.spec.js:7:3 › Loan Disbursal – approved loans list › TC_LD_001 - List shows Branch, Show Loans and the Approved columns @smoke @regression 
+    [chromium] › functional\list.spec.js:26:3 › Loan Disbursal – approved loans list › TC_LD_003 - Row values (applicant, contact, sanctioned) match the API @regression 
+    [chromium] › functional\list.spec.js:77:3 › Loan Disbursal – approved loans list › TC_LD_009 - Approved loans offered for disbursal have a sanctioned amount above 0 (HYPOTHESIS) @regression 
+    [chromium] › functional\loan-details.spec.js:56:3 › Loan Disbursal – loan details › TC_LD_017 - Mode of Payment shows Cash and Bank with balances from the books; Cash is pre-selected @regression 
+    [chromium] › functional\loan-details.spec.js:79:3 › Loan Disbursal – loan details › TC_LD_019 - Bank → Cheque offers the bank and its unused cheques @regression 
+    [chromium] › functional\loan-details.spec.js:99:3 › Loan Disbursal – loan details › TC_LD_021 - Cash hides the bank fields @regression 
+    [chromium] › negative\roles.spec.js:27:3 › Loan Disbursal – roles › TC_LD_049 - Branch Head (CHECKER_BH) can open the Loan Disbursal list @regression 
+    [chromium] › regression\ui.spec.js:4:3 › Loan Disbursal – usability, accessibility, responsive › TC_LD_054 - At tablet width (768px) the disbursement form has no page-level horizontal scroll @regression 
+    [chromium] › regression\ui.spec.js:12:3 › Loan Disbursal – usability, accessibility, responsive › TC_LD_055 - Payout, dates and bank fields have accessible names @regression 
+  3 skipped
+  39 passed (25.4m)
+
+To open last HTML report run:
+
+  npx playwright show-report Loan Disbursal\reports\playwright-html
+
+Generated 65 | Automated 56 | Discovered 56 | Executed 53 | Passed 39 | Failed 14 | Blocked 0 | Skipped 3 | Not Executed 6 | N/A 3 | reconciles: true
+Report: C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Loan Disbursal\reports\QMetryReport.html

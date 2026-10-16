@@ -1,0 +1,19 @@
+{
+  "last": {
+    "loanNumber": "GLNG0126100000018",
+    "applicant": "Autotest Eidefj Qa",
+    "amount": 93000,
+    "submittedAt": "2026-10-14T11:05:06.928Z",
+    "env": "http://host214.kapilits.com:8411/"
+  },
+  "submitted": [
+    "http://host214.kapilits.com:8411/|GLNG0126100000008",
+    "http://host214.kapilits.com:8411/|GLNG0126100000009",
+    "http://host214.kapilits.com:8411/|GLNG0126100000015",
+    "http://host214.kapilits.com:8411/|GLNG0126070000001",
+    "http://host214.kapilits.com:8411/|GLNG0126070000002",
+    "http://host214.kapilits.com:8411/|GLNG0126070000003",
+    "http://host214.kapilits.com:8411/|GLNG0126070000004",
+    "http://host214.kapilits.com:8411/|GLNG0126100000018"
+  ]
+}

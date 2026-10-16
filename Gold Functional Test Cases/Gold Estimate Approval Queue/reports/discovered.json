@@ -1,0 +1,1311 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\OneDrive\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Estimate Approval Queue/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Estimate Approval Queue/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Estimate Approval Queue/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\queue-api.spec.js",
+      "file": "api/queue-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimate Approval Queue – API",
+          "file": "api/queue-api.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_044 - Queue API refuses requests without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a2eecd134bdcd718dc23-f42d176e052458b44786",
+              "file": "api/queue-api.spec.js",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_045 - A non-Branch-Head token cannot read the Branch Head's full queue @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a2eecd134bdcd718dc23-60bf34d94242ec3c690d",
+              "file": "api/queue-api.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_046 - ApproveGoldEstimate by a non-Branch-Head is refused (non-existent GE) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a2eecd134bdcd718dc23-4a6b20c5ff7fc34dc330",
+              "file": "api/queue-api.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_047 - ApproveInternalAppraisal for an unknown GE is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a2eecd134bdcd718dc23-edac677f1af969bbf070",
+              "file": "api/queue-api.spec.js",
+              "line": 47,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_048 - RevertGoldEstimate without remarks is refused by the server (unknown GE) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a2eecd134bdcd718dc23-5d757678f13fcab4b8f8",
+              "file": "api/queue-api.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\checker-approval.spec.js",
+      "file": "business-rules/checker-approval.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimate Approval Queue – Checker final approval (simulated estimate)",
+          "file": "business-rules/checker-approval.spec.js",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_032 - Branch Head sees the estimate as \"Ready for Approval\" with a Review action @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-586ec1043e238c869ca6",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_033 - Review shows stages completed/required, every appraisal entry, and Approve / Revert @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-bea2b1df21d44b32641f",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_034 - Approve lists every entry with appraisal value / eligible loan and nothing pre-selected when there is a choice @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-604537eea8a9ef8c0093",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_035 - Single entry is pre-selected in the approve prompt @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-7619c3f8a03814ffd675",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_036 - Confirm Approve without choosing an entry is refused (\"Select which entry …\") @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-9b43a45ce6fd36eb0b3b",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 53,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_037 - Confirm Approve sends the chosen entry id and checker id; \"Gold Estimate approved.\" (simulated) @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-9764430b0817bab37793",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_038 - Approval failure is reported and no success shown (simulated) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-9b0cebfbe4de7c8a8124",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 78,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_039 - Double-click on Confirm Approve sends one approval (simulated) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-d50c6a31613f99de92d6",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_040 - Checker Revert warns it voids every entry and needs a remark @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-ea0640d9a7a2acac3f19",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 101,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_041 - Checker Revert with remarks sends RevertGoldEstimate and confirms the restart (simulated) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-1870d59f111d36cf9a18",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 114,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_042 - Branch Head who made the estimate cannot approve it (no Approve / Revert) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-cc2410fd5f058dc2df65",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 126,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_043 - Approve is not offered on an estimate that is already Approved @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0257073d3375053d6d45-7454a280256e0ebd5347",
+              "file": "business-rules/checker-approval.spec.js",
+              "line": 137,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\ia2-verification.spec.js",
+      "file": "business-rules/ia2-verification.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate)",
+          "file": "business-rules/ia2-verification.spec.js",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_020 - IA2 sees the pending estimate with role \"Internal Appraiser 2\" and a Verify action @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-62a521f8899e773b8523",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_021 - Verify page shows the maker's entry: weights, rate/g, value, eligible loan and articles @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-5f125b7f0771eaeac93a",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_022 - Revert opens a remarks prompt (required) with Confirm Revert and Cancel @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-661a4ea468ddf840d728",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_023 - Confirm Revert with empty remarks is refused (\"A remark is required to revert this entry.\") @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-975a0e189dcaf80850dd",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 43,
+              "column": 5
+            },
+            {
+              "title": "TC_EQ_024 - Confirm Revert with whitespace-only remarks is refused (\"A remark is required to revert this entry.\") @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-d44a50ee29c7db1fb358",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 43,
+              "column": 5
+            },
+            {
+              "title": "TC_EQ_025 - Cancel closes the revert prompt and sends nothing @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-63aa78b851489aeca8c0",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 57,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_026 - Revert with remarks sends REVERT for this GE by this user and confirms \"Sent back to the Internal Appraiser to edit.\" (simulated) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-50cee2dc8dc40f28685f",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 68,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_027 - Approve sends APPROVE for this GE and confirms \"Entry verified. Routed to the next stage.\" (simulated) @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-9368e5f543847fb5d7f4",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 80,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_028 - Approve asks for confirmation before verifying (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-c8f3fdda2dd4bc61c39f",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_029 - Server refusal on Approve is shown to the user (simulated) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-1bc7e319dabb06e5a9fc",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_030 - Double-click on Approve sends one request (simulated) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-bd9a1537edc81c6d25ea",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_031 - The maker cannot verify their own entry: IA1 does not get the Verify action @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "15e776b0311b121ac50a-b5f58c09ba6a09c94920",
+              "file": "business-rules/ia2-verification.spec.js",
+              "line": 118,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\queue.spec.js",
+      "file": "functional/queue.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimate Approval Queue – queue view (Branch Head)",
+          "file": "functional/queue.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_001 - Branch Head opens the queue with GE, customer, value, role, status, token, aging and action columns @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-3f1cf69a57f8e35f483f",
+              "file": "functional/queue.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_002 - Status filter lists all 7 workflow statuses @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-e9a5cc469e9852966a3c",
+              "file": "functional/queue.spec.js",
+              "line": 14,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_003 - Filtering by \"Approved\" shows only Approved estimates @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-a3f81b722d32d7a0e655",
+              "file": "functional/queue.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_004 - Queue total equals the queue API for the Branch Head @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-eaa31b887d5d992b81d4",
+              "file": "functional/queue.spec.js",
+              "line": 29,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_005 - Search by GE number shows that estimate only @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-541d2748462fc56d2e84",
+              "file": "functional/queue.spec.js",
+              "line": 37,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_006 - Search by customer name or mobile finds that customer's estimates @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-35b2f7436a5ba77e007b",
+              "file": "functional/queue.spec.js",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_007 - Search with no match empties the list @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-b57b4ca02f9cec284b8d",
+              "file": "functional/queue.spec.js",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_008 - Approved estimates show a pledge token; others show \"-\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-1b17f87fb2549fab1bb0",
+              "file": "functional/queue.spec.js",
+              "line": 68,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_009 - Branch Head sees \"Branch Head\" as role and View on estimates not waiting for them @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-3e8e64031b93b969dfd8",
+              "file": "functional/queue.spec.js",
+              "line": 78,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_010 - Aging is shown as <1h / Nh / Nd @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-028b40feeebbd58997b7",
+              "file": "functional/queue.spec.js",
+              "line": 84,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_011 - Every estimate: appraisals completed never exceed appraisals required; approved ones have a final value @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-6aa431e89cf1e2b2c7a3",
+              "file": "functional/queue.spec.js",
+              "line": 90,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Gold Estimate Approval Queue – detail (View)",
+          "file": "functional/queue.spec.js",
+          "line": 98,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_012 - View shows estimate header, appraisal entries and status history @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-be50cec6cc03df6831dc",
+              "file": "functional/queue.spec.js",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_013 - Detail: eligible loan = appraisal value × LTV applied; values match the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-bba4dc47d49bb85da97b",
+              "file": "functional/queue.spec.js",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_014 - Status history is in time order and starts with the maker's SUBMIT @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-aadb01212c7ff47fc148",
+              "file": "functional/queue.spec.js",
+              "line": 121,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_015 - Back returns to the queue @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-00f6aa7385a781d91cb9",
+              "file": "functional/queue.spec.js",
+              "line": 133,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Gold Estimate Approval Queue – role inboxes",
+          "file": "functional/queue.spec.js",
+          "line": 143,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_016 - INT_APPRAISER2 sees only the estimates waiting for them @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-fee7e95aac4d6adb578c",
+              "file": "functional/queue.spec.js",
+              "line": 149,
+              "column": 5
+            },
+            {
+              "title": "TC_EQ_017 - EXT_APPRAISER1 sees only the estimates waiting for them @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-824ac3dac8fe5aa10806",
+              "file": "functional/queue.spec.js",
+              "line": 149,
+              "column": 5
+            },
+            {
+              "title": "TC_EQ_018 - INT_APPRAISER1 sees only the estimates waiting for them @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-4de7febe5651fd025abf",
+              "file": "functional/queue.spec.js",
+              "line": 149,
+              "column": 5
+            },
+            {
+              "title": "TC_EQ_019 - Status filter is not labelled \"as Branch Head\" for users who are not Branch Head (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "06eef5aed6d723eb2dc9-7aefee92c5cb16c0a5a3",
+              "file": "functional/queue.spec.js",
+              "line": 160,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\real-chain.spec.js",
+      "file": "positive/real-chain.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimate Approval Queue – real approval chain (opt-in)",
+          "file": "positive/real-chain.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_051 - Maker → IA2 Verify → Branch Head Approve gives Approved status and a pledge token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "ALLOW_DATA_CREATION=1 not set – creates a permanent estimate and pledge token"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bcb80d3543ade58b5b5d-87f53bdc2e41923158c0",
+              "file": "positive/real-chain.spec.js",
+              "line": 12,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui.spec.js",
+      "file": "regression/ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimate Approval Queue – usability, accessibility, responsive",
+          "file": "regression/ui.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_EQ_049 - At tablet width (768px) the queue fits without page-level horizontal scroll @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-af0f76751be6236fa3ff",
+              "file": "regression/ui.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_EQ_050 - Search box and status filter have accessible names @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-2fb33a77bf8470ddb106",
+              "file": "regression/ui.spec.js",
+              "line": 12,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-15T12:36:16.669Z",
+    "duration": 33.47399999999999,
+    "expected": 0,
+    "skipped": 51,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

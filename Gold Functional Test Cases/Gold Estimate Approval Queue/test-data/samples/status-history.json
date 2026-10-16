@@ -1,0 +1,35 @@
+[
+  {
+    "precordid": 304,
+    "pEstimateid": 134,
+    "pSequence": 1,
+    "pActor": "INTERNAL_APPRAISER",
+    "pActionby": 15,
+    "pActionbyname": "Finsta User",
+    "pAction": "SUBMIT",
+    "pRemarks": "Automation Estimate 2026-10-15t05:49",
+    "pActiondate": "2026-10-15T11:19:44.08172"
+  },
+  {
+    "precordid": 305,
+    "pEstimateid": 134,
+    "pSequence": 1,
+    "pActor": "INTERNAL_APPRAISER_2",
+    "pActionby": 82,
+    "pActionbyname": "Priya",
+    "pAction": "APPROVE",
+    "pRemarks": null,
+    "pActiondate": "2026-10-15T11:21:19.364519"
+  },
+  {
+    "precordid": 306,
+    "pEstimateid": 134,
+    "pSequence": 1,
+    "pActor": "CHECKER",
+    "pActionby": 14,
+    "pActionbyname": "Finsta Admin",
+    "pAction": "APPROVE",
+    "pRemarks": null,
+    "pActiondate": "2026-10-15T11:22:48.664074"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "method": "GET",
+    "url": "/api/loans/masters/loanmaster/getfiLoanTypes",
+    "status": 200,
+    "body": "[{\"getidentificationdocumentsList\":null,\"instalmentdatedetailslist\":null,\"loanconfigurationlist\":null,\"identificationdocumentsList\":null,\"referralCommissioLoanList\":null,\"penaltyConfigurationList\":null,\"ltvConfiguration\":null,\"rbtConfiguration\":null,\"intrestConfiguration\":null,\"rebateconfig\":null,\"loaninterestchanges\":null,\"ltvSlabConfigurationList\":null,\"pLoanid\":0,\"pLoanNmae\":null,\"pLoantypeid\":4,\"pLoantype\":\"Gold Loan\",\"pLoanname\":null,\"pLoancode\":null,\"pCompanycode\":null,\"pBranchcode\":null,\"pSeries\":null,\"pSerieslength\":0,\"pLoanidcode\":null,\"effectiveFromDate\":null,\"effectiveToDate\":null,\"pProductVersion\":null,\"pSecurityNature\":null,\"pPSLapplicable\":false,\"ppslcategory\":null,\"ppslsubcategory\":null,\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null},{\"getidentificationdocumentsList\":null,\"instalmentdatedetailslist\":null,\"loanconfigurationlist\":null,\"identificationdocumentsList\":null,\"referralCommissioLoanList\":null,\"penaltyConfigurationList\":null,\"ltvConfiguration\":null,\"rbtConfiguration\":null,\"intrestConfiguration\":null,\"rebateconfig\":null,\"loaninterestchanges\":null,\"ltvSlabConfigurationList\":null,\"pLoanid\":0,\"pLoanNmae\":null,\"pLoantypeid\":5,\"pLoantype\":\"Personal Loan\",\"pLoanname\":null,\"pLoancode\":null,\"pCompanycode\":null,\"pBranchcode\":null,\"pSeries\":null,\"pSerieslength\":0,\"pLoanidcode\":null,\"effectiveFromDate\":null,\"effectiveToDate\":null,\"pProductVersion\":null,\"pSecurityNat"
+  },
+  {
+    "method": "GET",
+    "url": "/api/loans/masters/loanmaster/IsGoldRateChecker?userid=14",
+    "status": 200,
+    "body": "true"
+  },
+  {
+    "method": "GET",
+    "url": "/api/loans/masters/loanmaster/GetPendingGoldRateApprovals",
+    "status": 200,
+    "body": "[{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-07-06\",\"pgoldtype\":\"14K (58.3% gold and 41.7% alloyed metals)\",\"pgoldrate\":8318.37,\"pltv\":0.0,\"pgoldpercentage\":0.0,\"pmodifiedby\":0,\"pmodifieddate\":\"0001-01-01T00:00:00\",\"pcreateddate\":\"0001-01-01T00:00:00\",\"precordid\":6166,\"pstatus\":\"PENDING\",\"pApprovedby\":0,\"pApprovedbyname\":null,\"pApproveddate\":null,\"pRemarks\":null,\"pCreatedbyname\":\"tryfinsta\",\"pbranchid\":0,\"pVersionstamp\":\"2026-10-14 18:36:30.200826\",\"modifiedby\":0,\"pCreatedby\":15,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-07-06\",\"pgoldtype\":\"18K (75% gold and 25% alloyed metals)\",\"pgoldrate\":10701.17,\"pltv\":0.0,\"pgoldpercentage\":0.0,\"pmodifiedby\":0,\"pmodifieddate\":\"0001-01-01T00:00:00\",\"pcreateddate\":\"0001-01-01T00:00:00\",\"precordid\":6165,\"pstatus\":\"PENDING\",\"pApprovedby\":0,\"pApprovedbyname\":null,\"pApproveddate\":null,\"pRemarks\":null,\"pCreatedbyname\":\"tryfinsta\",\"pbranchid\":0,\"pVersionstamp\":\"2026-10-14 18:36:30.200826\",\"modifiedby\":0,\"pCreatedby\":15,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null},{\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-07-06\",\"pgoldtype\":\"19K (79.2% gold and 20.8% alloyed metals)\",\"pgoldrate\":13069.69,\"pltv\":0.0,\"pgoldpercentage\":0."
+  }
+]

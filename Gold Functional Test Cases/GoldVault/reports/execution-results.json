@@ -1,0 +1,1994 @@
+{
+  "generatedAt": "2026-10-16T09:43:37.153Z",
+  "environment": "http://host214.kapilits.com:8411/",
+  "reconciliation": {
+    "generated": 74,
+    "automated": 74,
+    "discovered": 74,
+    "executed": 66,
+    "passed": 61,
+    "failed": 5,
+    "blocked": 0,
+    "skipped": 0,
+    "notExecuted": 4,
+    "na": 4,
+    "reconciles": true
+  },
+  "requirements": [
+    {
+      "id": "REQ-VAULT-001",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-002",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-003",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-004",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-005",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-VAULT-006",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-007",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-008",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-009",
+      "state": "NOT VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-010",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-011",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-012",
+      "state": "NOT VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-013",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-014",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-015",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-016",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-VAULT-017",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-018",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-019",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-020",
+      "state": "PARTLY VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-021",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-022",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-VAULT-023",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-VAULT-024",
+      "state": "NOT VERIFIED"
+    }
+  ],
+  "designedNoScript": [],
+  "cases": [
+    {
+      "key": "TC_VAULT_CREATE_01 - Positive / Create: a valid vault is saved and listed",
+      "id": "TC_VAULT_CREATE_01",
+      "meta": {
+        "module": "Positive / Create",
+        "priority": "Medium",
+        "type": "Positive / Create",
+        "summary": "a valid vault is saved and listed",
+        "steps": [
+          "Click New",
+          "Enter Vault Name \"AUTOTEST FT Vault nnnnn\", Branch \"HEAD OFFICE\", Code \"ATFTnnnnn\"",
+          "Click Save"
+        ],
+        "expected": "\"Save Successfully\" is shown and the vault appears in the grid."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23028,
+      "error": "",
+      "shortId": "CREATE_01",
+      "title": "TC_VAULT_CREATE_01 - Positive / Create: a valid vault is saved and listed",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:22:32.109Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-5a17a-d-vault-is-saved-and-listed-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_READ_01 - Read / Persistence: the grid shows Vault Name, Vault Branch and Vault Code for each vault",
+      "id": "TC_VAULT_READ_01",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the grid shows Vault Name, Vault Branch and Vault Code for each vault",
+        "steps": [
+          "Read the grid"
+        ],
+        "expected": "Columns Vault Name, Vault Branch, Vault Code; up to 10 rows, none with an empty cell."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 83394,
+      "error": "",
+      "shortId": "READ_01",
+      "title": "TC_VAULT_READ_01 - Read / Persistence: the grid shows Vault Name, Vault Branch and Vault Code for each vault",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:22:55.371Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-2d6b7-d-Vault-Code-for-each-vault-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_READ_02 - Read / Persistence: the vault created earlier is still listed after a fresh login",
+      "id": "TC_VAULT_READ_02",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the vault created earlier is still listed after a fresh login",
+        "steps": [
+          "Log in fresh",
+          "Search the test vault code"
+        ],
+        "expected": "The test vault is listed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20855,
+      "error": "",
+      "shortId": "READ_02",
+      "title": "TC_VAULT_READ_02 - Read / Persistence: the vault created earlier is still listed after a fresh login",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:24:18.784Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-0325a--listed-after-a-fresh-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_READ_03 - Read / Persistence: across all pages every vault code is unique and the count matches the pager",
+      "id": "TC_VAULT_READ_03",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "across all pages every vault code is unique and the count matches the pager",
+        "steps": [
+          "Read every page of the grid",
+          "Compare with the pager total"
+        ],
+        "expected": "All codes are unique and the row count equals the pager total."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 21887,
+      "error": "",
+      "shortId": "READ_03",
+      "title": "TC_VAULT_READ_03 - Read / Persistence: across all pages every vault code is unique and the count matches the pager",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:24:39.658Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-03260-the-count-matches-the-pager-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_READ_04 - Read / Persistence: the vault of the Safe & Lockers hand-off is still listed",
+      "id": "TC_VAULT_READ_04",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the vault of the Safe & Lockers hand-off is still listed",
+        "steps": [
+          "Search the code of the hand-off vault (last-vault.json)"
+        ],
+        "expected": "The vault used by Safe & Lockers is still listed with the same name."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 52736,
+      "error": "",
+      "shortId": "READ_04",
+      "title": "TC_VAULT_READ_04 - Read / Persistence: the vault of the Safe & Lockers hand-off is still listed",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:30:41.897Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault-b\\GoldVault-tests-gold-vault-9198d-rs-hand-off-is-still-listed-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_UPDATE_01 - Update / Edit: the Vault Name of the test vault can be changed and saved",
+      "id": "TC_VAULT_UPDATE_01",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "the Vault Name of the test vault can be changed and saved",
+        "steps": [
+          "Click the edit icon of the test vault",
+          "Change Vault Name",
+          "Click Update"
+        ],
+        "expected": "Saved; the grid shows the new name."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 18376,
+      "error": "",
+      "shortId": "UPDATE_01",
+      "title": "TC_VAULT_UPDATE_01 - Update / Edit: the Vault Name of the test vault can be changed and saved",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:25:13.081Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-e1a0c-lt-can-be-changed-and-saved-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_UPDATE_02 - Update / Edit: the Vault Code of the test vault can be changed and saved",
+      "id": "TC_VAULT_UPDATE_02",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "the Vault Code of the test vault can be changed and saved",
+        "steps": [
+          "Click the edit icon of the test vault",
+          "Change Vault Code",
+          "Click Update"
+        ],
+        "expected": "Saved; the grid shows the new code."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 16700,
+      "error": "",
+      "shortId": "UPDATE_02",
+      "title": "TC_VAULT_UPDATE_02 - Update / Edit: the Vault Code of the test vault can be changed and saved",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:25:31.757Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-47aa1-lt-can-be-changed-and-saved-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_UPDATE_03 - Update / Edit: the original name and code of the test vault can be restored",
+      "id": "TC_VAULT_UPDATE_03",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "the original name and code of the test vault can be restored",
+        "steps": [
+          "Click the edit icon of the test vault",
+          "Enter the original name and code",
+          "Click Update"
+        ],
+        "expected": "Saved; the grid shows the original values again."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 25282,
+      "error": "",
+      "shortId": "UPDATE_03",
+      "title": "TC_VAULT_UPDATE_03 - Update / Edit: the original name and code of the test vault can be restored",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:25:48.466Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-585db--test-vault-can-be-restored-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_CANCEL_01 - Delete & Cancel: closing the New panel with × saves nothing",
+      "id": "TC_VAULT_CANCEL_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "closing the New panel with × saves nothing",
+        "steps": [
+          "Click New",
+          "Fill the panel",
+          "Click ×"
+        ],
+        "expected": "The panel closes and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 81256,
+      "error": "",
+      "shortId": "CANCEL_01",
+      "title": "TC_VAULT_CANCEL_01 - Delete & Cancel: closing the New panel with × saves nothing",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:26:13.762Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-5ce7a--panel-with-×-saves-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_CANCEL_02 - Delete & Cancel: closing the Edit panel with × leaves the vault unchanged",
+      "id": "TC_VAULT_CANCEL_02",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "closing the Edit panel with × leaves the vault unchanged",
+        "steps": [
+          "Click the edit icon of the test vault",
+          "Change the name",
+          "Click ×"
+        ],
+        "expected": "The vault is unchanged."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20590,
+      "error": "",
+      "shortId": "CANCEL_02",
+      "title": "TC_VAULT_CANCEL_02 - Delete & Cancel: closing the Edit panel with × leaves the vault unchanged",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:27:35.025Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-371c2--leaves-the-vault-unchanged-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_DELETE_01 - Delete & Cancel: a vault cannot be deleted from the grid",
+      "id": "TC_VAULT_DELETE_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "a vault cannot be deleted from the grid",
+        "steps": [
+          "Look for a delete action"
+        ],
+        "expected": "Not applicable: there is none (only Edit)."
+      },
+      "notes": [
+        "Not applicable: the Vault grid has only an Edit icon - there is no delete action. Test vaults therefore stay (one per run)."
+      ],
+      "status": "Skipped",
+      "duration": 17625,
+      "error": "",
+      "shortId": "DELETE_01",
+      "title": "TC_VAULT_DELETE_01 - Delete & Cancel: a vault cannot be deleted from the grid",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:27:55.630Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-9497a-ot-be-deleted-from-the-grid-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_VAULT_REQUIRED_01 - Negative / Required field: saving an empty panel shows all three \"Required\" messages and sends nothing",
+      "id": "TC_VAULT_REQUIRED_01",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "saving an empty panel shows all three \"Required\" messages and sends nothing",
+        "steps": [
+          "Click New",
+          "Click Save with an empty panel"
+        ],
+        "expected": "\"Vault Name Required\", \"Vault Branch Required\" and \"Vault Code Required\" are shown. No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 16202,
+      "error": "",
+      "shortId": "REQUIRED_01",
+      "title": "TC_VAULT_REQUIRED_01 - Negative / Required field: saving an empty panel shows all three \"Required\" messages and sends nothing",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:28:13.271Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-82d02--messages-and-sends-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_REQUIRED_02 - Negative / Required field: saving without Vault Name shows only \"Vault Name Required\" and sends nothing",
+      "id": "TC_VAULT_REQUIRED_02",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "saving without Vault Name shows only \"Vault Name Required\" and sends nothing",
+        "steps": [
+          "Click New",
+          "Fill Branch and Code, leave Name empty",
+          "Click Save"
+        ],
+        "expected": "Only \"Vault Name Required\" is shown. No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23977,
+      "error": "",
+      "shortId": "REQUIRED_02",
+      "title": "TC_VAULT_REQUIRED_02 - Negative / Required field: saving without Vault Name shows only \"Vault Name Required\" and sends nothing",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:28:29.482Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-4f482--Required-and-sends-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_REQUIRED_03 - Negative / Required field: saving without Vault Branch shows only \"Vault Branch Required\" and sends nothing",
+      "id": "TC_VAULT_REQUIRED_03",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "saving without Vault Branch shows only \"Vault Branch Required\" and sends nothing",
+        "steps": [
+          "Click New",
+          "Fill Name and Code, leave Branch empty",
+          "Click Save"
+        ],
+        "expected": "Only \"Vault Branch Required\" is shown. No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24879,
+      "error": "",
+      "shortId": "REQUIRED_03",
+      "title": "TC_VAULT_REQUIRED_03 - Negative / Required field: saving without Vault Branch shows only \"Vault Branch Required\" and sends nothing",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:28:53.473Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-414dd--Required-and-sends-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_REQUIRED_04 - Negative / Required field: saving without Vault Code shows only \"Vault Code Required\" and sends nothing",
+      "id": "TC_VAULT_REQUIRED_04",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "saving without Vault Code shows only \"Vault Code Required\" and sends nothing",
+        "steps": [
+          "Click New",
+          "Fill Name and Branch, leave Code empty",
+          "Click Save"
+        ],
+        "expected": "Only \"Vault Code Required\" is shown. No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 16191,
+      "error": "",
+      "shortId": "REQUIRED_04",
+      "title": "TC_VAULT_REQUIRED_04 - Negative / Required field: saving without Vault Code shows only \"Vault Code Required\" and sends nothing",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:29:18.362Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-4cee1--Required-and-sends-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_INPUT_01 - Input validation: spaces only in all three fields count as empty (nothing is sent)",
+      "id": "TC_VAULT_INPUT_01",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "spaces only in all three fields count as empty (nothing is sent)",
+        "steps": [
+          "Click New",
+          "Enter only spaces in all three fields",
+          "Click Save"
+        ],
+        "expected": "Treated as empty: No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 20555,
+      "error": "Error: a save request was sent for blank (space-only) values\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 0\nReceived: 1",
+      "shortId": "INPUT_01",
+      "title": "TC_VAULT_INPUT_01 - Input validation: spaces only in all three fields count as empty (nothing is sent)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:29:34.559Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-866d4-t-as-empty-nothing-is-sent--chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_VAULT_INPUT_02 - Input validation: characters kept in Vault Code are recorded (letters, digits and symbols)",
+      "id": "TC_VAULT_INPUT_02",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "characters kept in Vault Code are recorded (letters, digits and symbols)",
+        "steps": [
+          "Click New",
+          "Type \"ab-1_ 2#$<>/\" into Vault Code"
+        ],
+        "expected": "Behaviour recorded in the notes (which characters are kept)."
+      },
+      "notes": [
+        "Typed \"ab-1_ 2#$<>/\" into Vault Code; the field kept \"ab-1_ 2#$<>/\""
+      ],
+      "status": "Pass",
+      "duration": 13500,
+      "error": "",
+      "shortId": "INPUT_02",
+      "title": "TC_VAULT_INPUT_02 - Input validation: characters kept in Vault Code are recorded (letters, digits and symbols)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:29:59.129Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-f5a69-letters-digits-and-symbols--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_INPUT_03 - Input validation: script text in Vault Name is not executed",
+      "id": "TC_VAULT_INPUT_03",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "script text in Vault Name is not executed",
+        "steps": [
+          "Click New",
+          "Enter script text in Vault Name and Branch",
+          "Click Save (call aborted)"
+        ],
+        "expected": "No alert / script runs."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 18737,
+      "error": "",
+      "shortId": "INPUT_03",
+      "title": "TC_VAULT_INPUT_03 - Input validation: script text in Vault Name is not executed",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:30:12.987Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-a8ed0--Vault-Name-is-not-executed-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_INPUT_04 - Input validation: Unicode text (Telugu and emoji) is kept in Vault Name",
+      "id": "TC_VAULT_INPUT_04",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "Unicode text (Telugu and emoji) is kept in Vault Name",
+        "steps": [
+          "Click New",
+          "Type Telugu text and an emoji into Vault Name"
+        ],
+        "expected": "The text is kept as typed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 26687,
+      "error": "",
+      "shortId": "INPUT_04",
+      "title": "TC_VAULT_INPUT_04 - Input validation: Unicode text (Telugu and emoji) is kept in Vault Name",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:30:31.748Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-49cc0-emoji-is-kept-in-Vault-Name-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_INPUT_05 - Input validation: spaces around the values are trimmed before they are sent",
+      "id": "TC_VAULT_INPUT_05",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "spaces around the values are trimmed before they are sent",
+        "steps": [
+          "Click New",
+          "Enter values with spaces around them",
+          "Click Save (call aborted)"
+        ],
+        "expected": "The values in the save request have no leading / trailing spaces."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 23800,
+      "error": "Error: values sent with leading / trailing spaces\n\nexpect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 5\n\n- Array []\n+ Array [\n+   \"  AUTOTEST TRIM  \",\n+   \"  HEAD OFFICE  \",\n+   \"  ATFTTRIM  \",\n+ ]",
+      "shortId": "INPUT_05",
+      "title": "TC_VAULT_INPUT_05 - Input validation: spaces around the values are trimmed before they are sent",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:30:58.446Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-508c3-rimmed-before-they-are-sent-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_VAULT_BOUNDARY_01 - Boundary values: a Vault Name of exactly 250 characters is accepted by the panel and sent in full",
+      "id": "TC_VAULT_BOUNDARY_01",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a Vault Name of exactly 250 characters is accepted by the panel and sent in full",
+        "steps": [
+          "Click New",
+          "Enter a 250-character Vault Name",
+          "Click Save (call aborted)"
+        ],
+        "expected": "All 250 characters are kept and sent."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23304,
+      "error": "",
+      "shortId": "BOUNDARY_01",
+      "title": "TC_VAULT_BOUNDARY_01 - Boundary values: a Vault Name of exactly 250 characters is accepted by the panel and sent in full",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:31:25.247Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-62413--the-panel-and-sent-in-full-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_BOUNDARY_02 - Boundary values: the 251st character of Vault Name is not accepted",
+      "id": "TC_VAULT_BOUNDARY_02",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "the 251st character of Vault Name is not accepted",
+        "steps": [
+          "Click New",
+          "Type 260 characters into Vault Name"
+        ],
+        "expected": "Only 250 are kept."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 11799,
+      "error": "",
+      "shortId": "BOUNDARY_02",
+      "title": "TC_VAULT_BOUNDARY_02 - Boundary values: the 251st character of Vault Name is not accepted",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:31:48.756Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-52f54--Vault-Name-is-not-accepted-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_BOUNDARY_03 - Boundary values: a Vault Code of exactly 30 characters is accepted by the panel and sent in full",
+      "id": "TC_VAULT_BOUNDARY_03",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a Vault Code of exactly 30 characters is accepted by the panel and sent in full",
+        "steps": [
+          "Click New",
+          "Enter a 30-character Vault Code",
+          "Click Save (call aborted)"
+        ],
+        "expected": "All 30 characters are kept and sent."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 83732,
+      "error": "",
+      "shortId": "BOUNDARY_03",
+      "title": "TC_VAULT_BOUNDARY_03 - Boundary values: a Vault Code of exactly 30 characters is accepted by the panel and sent in full",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:32:00.561Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-331bb--the-panel-and-sent-in-full-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_BOUNDARY_04 - Boundary values: the 31st character of Vault Code is not accepted",
+      "id": "TC_VAULT_BOUNDARY_04",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "the 31st character of Vault Code is not accepted",
+        "steps": [
+          "Click New",
+          "Type 40 characters into Vault Code"
+        ],
+        "expected": "Only 30 are kept."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 10528,
+      "error": "",
+      "shortId": "BOUNDARY_04",
+      "title": "TC_VAULT_BOUNDARY_04 - Boundary values: the 31st character of Vault Code is not accepted",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:33:24.301Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-e9dc1--Vault-Code-is-not-accepted-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_BOUNDARY_05 - Boundary values: one-character values are accepted by the panel and sent",
+      "id": "TC_VAULT_BOUNDARY_05",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "one-character values are accepted by the panel and sent",
+        "steps": [
+          "Click New",
+          "Enter one character in each field",
+          "Click Save (call aborted)"
+        ],
+        "expected": "The save request is sent."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 16067,
+      "error": "",
+      "shortId": "BOUNDARY_05",
+      "title": "TC_VAULT_BOUNDARY_05 - Boundary values: one-character values are accepted by the panel and sent",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:33:34.838Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-ad85a-epted-by-the-panel-and-sent-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_DEFAULT_01 - Default values: the New panel opens empty (Vault Branch is not pre-filled)",
+      "id": "TC_VAULT_DEFAULT_01",
+      "meta": {
+        "module": "Default values",
+        "priority": "Medium",
+        "type": "Default values",
+        "summary": "the New panel opens empty (Vault Branch is not pre-filled)",
+        "steps": [
+          "Click New"
+        ],
+        "expected": "All three fields are empty (Vault Branch is not pre-filled; recorded)."
+      },
+      "notes": [
+        "Vault Branch default: \"\""
+      ],
+      "status": "Pass",
+      "duration": 44307,
+      "error": "",
+      "shortId": "DEFAULT_01",
+      "title": "TC_VAULT_DEFAULT_01 - Default values: the New panel opens empty (Vault Branch is not pre-filled)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:33:51.003Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-523ec-t-Branch-is-not-pre-filled--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_DATE_01 - Date / calendar validation: the Vault screen has no date fields",
+      "id": "TC_VAULT_DATE_01",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "the Vault screen has no date fields",
+        "steps": [
+          "Look for date fields"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: no date or time fields on the Vault screen."
+      ],
+      "status": "Skipped",
+      "duration": 33149,
+      "error": "",
+      "shortId": "DATE_01",
+      "title": "TC_VAULT_DATE_01 - Date / calendar validation: the Vault screen has no date fields",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:34:35.331Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-0a334-t-screen-has-no-date-fields-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_VAULT_BUSINESS_01 - Business rules / Calculation: a Vault Branch must be an existing branch",
+      "id": "TC_VAULT_BUSINESS_01",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "a Vault Branch must be an existing branch",
+        "steps": [
+          "Save a vault with an unknown branch"
+        ],
+        "expected": "NOT EXECUTED: it would create a vault that cannot be deleted."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): Vault Branch is a free-text box, so checking whether an unknown branch is refused would need to SAVE one - and vaults cannot be deleted. Check manually or on a throw-away server."
+      ],
+      "status": "Skipped",
+      "duration": 48429,
+      "error": "",
+      "shortId": "BUSINESS_01",
+      "title": "TC_VAULT_BUSINESS_01 - Business rules / Calculation: a Vault Branch must be an existing branch",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:35:08.519Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-53132--must-be-an-existing-branch-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_VAULT_BUSINESS_02 - Business rules / Calculation: the Vault Code stays editable after saving (recorded)",
+      "id": "TC_VAULT_BUSINESS_02",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "the Vault Code stays editable after saving (recorded)",
+        "steps": [
+          "Click the edit icon of the test vault",
+          "Check whether Vault Code is editable"
+        ],
+        "expected": "Recorded in the notes."
+      },
+      "notes": [
+        "Vault Code is EDITABLE in the Edit panel - a code can be changed even after safes were created in the vault (not tested whether the safes follow)"
+      ],
+      "status": "Pass",
+      "duration": 42702,
+      "error": "",
+      "shortId": "BUSINESS_02",
+      "title": "TC_VAULT_BUSINESS_02 - Business rules / Calculation: the Vault Code stays editable after saving (recorded)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:35:56.978Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-e2a80-able-after-saving-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_CONSISTENCY_01 - Data consistency: the Excel export contains every vault code listed in the grid",
+      "id": "TC_VAULT_CONSISTENCY_01",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the Excel export contains every vault code listed in the grid",
+        "steps": [
+          "Read all vault codes from the grid",
+          "Download the Excel export"
+        ],
+        "expected": "Every code of the grid is in the Excel file."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 55582,
+      "error": "Error: codes in the grid but not in the Excel file\n\nexpect(received).toEqual(expected) // deep equality\n\n- Expected  -  1\n+ Received  + 11\n\n- Array []\n+ Array [\n+   \"ATV40675\",\n+   \"ATV71407\",\n+   \"ATV60122\",\n+   \"ATV13764\",\n+   \"ATV60531\",\n+   \"ATV86130\",\n+   \"ATV93697\",\n+   \"ATV71145\",\n+   \"ATV97906\",\n+ ]",
+      "shortId": "CONSISTENCY_01",
+      "title": "TC_VAULT_CONSISTENCY_01 - Data consistency: the Excel export contains every vault code listed in the grid",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:36:39.724Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-abc44-ult-code-listed-in-the-grid-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_VAULT_CONSISTENCY_02 - Data consistency: the Edit panel shows exactly the values listed in the grid",
+      "id": "TC_VAULT_CONSISTENCY_02",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the Edit panel shows exactly the values listed in the grid",
+        "steps": [
+          "Click the edit icon of the test vault",
+          "Read the panel"
+        ],
+        "expected": "Name, branch and code equal the grid."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 102786,
+      "error": "",
+      "shortId": "CONSISTENCY_02",
+      "title": "TC_VAULT_CONSISTENCY_02 - Data consistency: the Edit panel shows exactly the values listed in the grid",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:31:35.091Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault-b\\GoldVault-tests-gold-vault-caad4-e-values-listed-in-the-grid-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_CONSISTENCY_03 - Data consistency: the new vault is offered in the Safe & Lockers vault dropdown",
+      "id": "TC_VAULT_CONSISTENCY_03",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the new vault is offered in the Safe & Lockers vault dropdown",
+        "steps": [
+          "Open Safe & Lockers > New",
+          "Open the Vault dropdown"
+        ],
+        "expected": "The test vault is offered."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 62947,
+      "error": "",
+      "shortId": "CONSISTENCY_03",
+      "title": "TC_VAULT_CONSISTENCY_03 - Data consistency: the new vault is offered in the Safe & Lockers vault dropdown",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:40:39.746Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-60d2c-Safe-Lockers-vault-dropdown-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_DUPLICATE_01 - Duplicate prevention: a second vault with the same Vault Code is rejected",
+      "id": "TC_VAULT_DUPLICATE_01",
+      "meta": {
+        "module": "Duplicate prevention",
+        "priority": "Medium",
+        "type": "Duplicate prevention",
+        "summary": "a second vault with the same Vault Code is rejected",
+        "steps": [
+          "Save a vault with the same Vault Code as the test vault"
+        ],
+        "expected": "Rejected; only one vault has that code."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 50030,
+      "error": "",
+      "shortId": "DUPLICATE_01",
+      "title": "TC_VAULT_DUPLICATE_01 - Duplicate prevention: a second vault with the same Vault Code is rejected",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:41:43.498Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-37532-same-Vault-Code-is-rejected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_DUPLICATE_02 - Duplicate prevention: a second vault with the same Vault Name is rejected (HYPOTHESIS: names are unique)",
+      "id": "TC_VAULT_DUPLICATE_02",
+      "meta": {
+        "module": "Duplicate prevention",
+        "priority": "Medium",
+        "type": "Duplicate prevention",
+        "summary": "a second vault with the same Vault Name is rejected (HYPOTHESIS: names are unique)",
+        "steps": [
+          "Save a vault with the same Vault Name as the test vault and another code"
+        ],
+        "expected": "Rejected (HYPOTHESIS: names are unique)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 42118,
+      "error": "",
+      "shortId": "DUPLICATE_02",
+      "title": "TC_VAULT_DUPLICATE_02 - Duplicate prevention: a second vault with the same Vault Name is rejected (HYPOTHESIS: names are unique)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:42:33.581Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-260ff-YPOTHESIS-names-are-unique--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SEARCH_01 - Search: searching a Vault Code lists only that vault and the pager shows 1 item",
+      "id": "TC_VAULT_SEARCH_01",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "searching a Vault Code lists only that vault and the pager shows 1 item",
+        "steps": [
+          "Search the test vault code"
+        ],
+        "expected": "Only that vault is listed; pager \"1 - 1 of 1 items\"."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 33354,
+      "error": "",
+      "shortId": "SEARCH_01",
+      "title": "TC_VAULT_SEARCH_01 - Search: searching a Vault Code lists only that vault and the pager shows 1 item",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:43:15.736Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-edc06--and-the-pager-shows-1-item-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SEARCH_02 - Search: searching part of a Vault Name (lower case) finds the vault",
+      "id": "TC_VAULT_SEARCH_02",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "searching part of a Vault Name (lower case) finds the vault",
+        "steps": [
+          "Search part of the name in lower case"
+        ],
+        "expected": "The vault is found."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 40369,
+      "error": "",
+      "shortId": "SEARCH_02",
+      "title": "TC_VAULT_SEARCH_02 - Search: searching part of a Vault Name (lower case) finds the vault",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:43:49.121Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-ae6fa--lower-case-finds-the-vault-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SEARCH_03 - Search: the search also looks in the Vault Branch column",
+      "id": "TC_VAULT_SEARCH_03",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "the search also looks in the Vault Branch column",
+        "steps": [
+          "Search \"kavuri\""
+        ],
+        "expected": "Every row shown contains it (the branch column is searched)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 55463,
+      "error": "",
+      "shortId": "SEARCH_03",
+      "title": "TC_VAULT_SEARCH_03 - Search: the search also looks in the Vault Branch column",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:44:29.505Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-95194--in-the-Vault-Branch-column-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SEARCH_04 - Search: an unknown value shows \"No records available.\"",
+      "id": "TC_VAULT_SEARCH_04",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "an unknown value shows \"No records available.\"",
+        "steps": [
+          "Search an unknown value"
+        ],
+        "expected": "\"No records available.\" is shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 35287,
+      "error": "",
+      "shortId": "SEARCH_04",
+      "title": "TC_VAULT_SEARCH_04 - Search: an unknown value shows \"No records available.\"",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:45:25.007Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-022c2-shows-No-records-available--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SEARCH_05 - Search: script / SQL text in the search box finds nothing and runs nothing",
+      "id": "TC_VAULT_SEARCH_05",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "script / SQL text in the search box finds nothing and runs nothing",
+        "steps": [
+          "Search script / SQL text"
+        ],
+        "expected": "No rows; nothing is executed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 40628,
+      "error": "",
+      "shortId": "SEARCH_05",
+      "title": "TC_VAULT_SEARCH_05 - Search: script / SQL text in the search box finds nothing and runs nothing",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:46:00.375Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-f066e-ds-nothing-and-runs-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SEARCH_06 - Search: clearing the search box brings the full list back",
+      "id": "TC_VAULT_SEARCH_06",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "clearing the search box brings the full list back",
+        "steps": [
+          "Search something unknown",
+          "Clear the search box"
+        ],
+        "expected": "The full list and total return."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 79620,
+      "error": "",
+      "shortId": "SEARCH_06",
+      "title": "TC_VAULT_SEARCH_06 - Search: clearing the search box brings the full list back",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:33:17.947Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault-b\\GoldVault-tests-gold-vault-c97c2-x-brings-the-full-list-back-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_FILTER_01 - Filtering: the grid has no column filters (only the search box)",
+      "id": "TC_VAULT_FILTER_01",
+      "meta": {
+        "module": "Filtering",
+        "priority": "Medium",
+        "type": "Filtering",
+        "summary": "the grid has no column filters (only the search box)",
+        "steps": [
+          "Look for column filters"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: no column filters; the search box covers all columns (SEARCH tests)."
+      ],
+      "status": "Skipped",
+      "duration": 29328,
+      "error": "",
+      "shortId": "FILTER_01",
+      "title": "TC_VAULT_FILTER_01 - Filtering: the grid has no column filters (only the search box)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:48:22.267Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-48448-ilters-only-the-search-box--chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_VAULT_SORT_01 - Sorting: clicking the Vault Code header sorts ascending, then descending",
+      "id": "TC_VAULT_SORT_01",
+      "meta": {
+        "module": "Sorting",
+        "priority": "Medium",
+        "type": "Sorting",
+        "summary": "clicking the Vault Code header sorts ascending, then descending",
+        "steps": [
+          "Click Vault Code twice"
+        ],
+        "expected": "Ascending, then descending, in the right order."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 36828,
+      "error": "",
+      "shortId": "SORT_01",
+      "title": "TC_VAULT_SORT_01 - Sorting: clicking the Vault Code header sorts ascending, then descending",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:48:51.858Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-a243e-s-ascending-then-descending-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SORT_02 - Sorting: clicking the Vault Name header sorts ascending, then descending",
+      "id": "TC_VAULT_SORT_02",
+      "meta": {
+        "module": "Sorting",
+        "priority": "Medium",
+        "type": "Sorting",
+        "summary": "clicking the Vault Name header sorts ascending, then descending",
+        "steps": [
+          "Click Vault Name twice"
+        ],
+        "expected": "Ascending, then descending, in the right order."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 37112,
+      "error": "",
+      "shortId": "SORT_02",
+      "title": "TC_VAULT_SORT_02 - Sorting: clicking the Vault Name header sorts ascending, then descending",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:49:28.709Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-846b2-s-ascending-then-descending-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SORT_03 - Sorting: clicking the Vault Branch header sorts ascending, then descending",
+      "id": "TC_VAULT_SORT_03",
+      "meta": {
+        "module": "Sorting",
+        "priority": "Medium",
+        "type": "Sorting",
+        "summary": "clicking the Vault Branch header sorts ascending, then descending",
+        "steps": [
+          "Click Vault Branch twice"
+        ],
+        "expected": "Ascending, then descending, in the right order."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34544,
+      "error": "",
+      "shortId": "SORT_03",
+      "title": "TC_VAULT_SORT_03 - Sorting: clicking the Vault Branch header sorts ascending, then descending",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:50:05.849Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-d0d39-s-ascending-then-descending-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_PAGINATION_01 - Pagination: the pager shows \"1 - 10 of N items\" and page 2 shows the rest",
+      "id": "TC_VAULT_PAGINATION_01",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "the pager shows \"1 - 10 of N items\" and page 2 shows the rest",
+        "steps": [
+          "Read the pager",
+          "Open page 2"
+        ],
+        "expected": "\"1 - 10 of N items\"; page 2 shows the remaining vaults."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 37390,
+      "error": "",
+      "shortId": "PAGINATION_01",
+      "title": "TC_VAULT_PAGINATION_01 - Pagination: the pager shows \"1 - 10 of N items\" and page 2 shows the rest",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T07:50:40.406Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-db5c0-s-and-page-2-shows-the-rest-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_PAGINATION_02 - Pagination: the first / previous / next / last buttons move between pages",
+      "id": "TC_VAULT_PAGINATION_02",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "the first / previous / next / last buttons move between pages",
+        "steps": [
+          "Click last, previous and first page"
+        ],
+        "expected": "The pager follows each move."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 58733,
+      "error": "",
+      "shortId": "PAGINATION_02",
+      "title": "TC_VAULT_PAGINATION_02 - Pagination: the first / previous / next / last buttons move between pages",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:42:28.073Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault-c\\GoldVault-tests-gold-vault-02a2f--buttons-move-between-pages-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_CLEAR_01 - Clear / Reset: Clear empties the New panel",
+      "id": "TC_VAULT_CLEAR_01",
+      "meta": {
+        "module": "Clear / Reset",
+        "priority": "Medium",
+        "type": "Clear / Reset",
+        "summary": "Clear empties the New panel",
+        "steps": [
+          "Click New",
+          "Fill the panel",
+          "Click Clear"
+        ],
+        "expected": "All three fields are empty."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 30206,
+      "error": "",
+      "shortId": "CLEAR_01",
+      "title": "TC_VAULT_CLEAR_01 - Clear / Reset: Clear empties the New panel",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T08:50:51.642Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-a8b61-Clear-empties-the-New-panel-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_CLEAR_02 - Clear / Reset: after closing and reopening, the New panel is empty again",
+      "id": "TC_VAULT_CLEAR_02",
+      "meta": {
+        "module": "Clear / Reset",
+        "priority": "Medium",
+        "type": "Clear / Reset",
+        "summary": "after closing and reopening, the New panel is empty again",
+        "steps": [
+          "Click New",
+          "Fill the panel",
+          "Click ×",
+          "Click New again"
+        ],
+        "expected": "The panel is empty."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 42674,
+      "error": "",
+      "shortId": "CLEAR_02",
+      "title": "TC_VAULT_CLEAR_02 - Clear / Reset: after closing and reopening, the New panel is empty again",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T08:51:22.373Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-fddac-he-New-panel-is-empty-again-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_NAV_01 - Navigation & UI layout: the breadcrumb shows Vault & Safe > Vault and Overview returns to the tiles",
+      "id": "TC_VAULT_NAV_01",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "the breadcrumb shows Vault & Safe > Vault and Overview returns to the tiles",
+        "steps": [
+          "Read the breadcrumb",
+          "Click Overview"
+        ],
+        "expected": "Breadcrumb Vault & Safe > Vault; Overview shows the tiles."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 104205,
+      "error": "",
+      "shortId": "NAV_01",
+      "title": "TC_VAULT_NAV_01 - Navigation & UI layout: the breadcrumb shows Vault & Safe > Vault and Overview returns to the tiles",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:36:03.468Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault-b\\GoldVault-tests-gold-vault-a8ff5-erview-returns-to-the-tiles-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_NAV_02 - Navigation & UI layout: browser Back leaves the Vault screen",
+      "id": "TC_VAULT_NAV_02",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "browser Back leaves the Vault screen",
+        "steps": [
+          "Click the browser Back button"
+        ],
+        "expected": "The Vault screen is left."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24188,
+      "error": "",
+      "shortId": "NAV_02",
+      "title": "TC_VAULT_NAV_02 - Navigation & UI layout: browser Back leaves the Vault screen",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T08:53:57.415Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-dd29d-ack-leaves-the-Vault-screen-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_ROLE_01 - Role-based access: only the admin can open and change vaults (other roles recorded; HYPOTHESIS for Internal Appraiser 1)",
+      "id": "TC_VAULT_ROLE_01",
+      "meta": {
+        "module": "Role-based access",
+        "priority": "Medium",
+        "type": "Role-based access",
+        "summary": "only the admin can open and change vaults (other roles recorded; HYPOTHESIS for Internal Appraiser 1)",
+        "steps": [
+          "Log in as Internal Appraiser 1 / 2 and Auditor",
+          "Open the Vault screen",
+          "Check for New"
+        ],
+        "expected": "Internal Appraiser 1 cannot create vaults; each role is recorded in the notes."
+      },
+      "notes": [
+        "INT_APPRAISER1: Vault screen does not open; New not available",
+        "INT_APPRAISER2: Vault screen does not open; New not available",
+        "AUDITOR: Vault screen does not open; New not available"
+      ],
+      "status": "Pass",
+      "duration": 502977,
+      "error": "",
+      "shortId": "ROLE_01",
+      "title": "TC_VAULT_ROLE_01 - Role-based access: only the admin can open and change vaults (other roles recorded; HYPOTHESIS for Internal Appraiser 1)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T08:54:21.920Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-fc670-S-for-Internal-Appraiser-1--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_WORKFLOW_01 - Workflow (approval): vault changes need no approval",
+      "id": "TC_VAULT_WORKFLOW_01",
+      "meta": {
+        "module": "Workflow (approval)",
+        "priority": "Medium",
+        "type": "Workflow (approval)",
+        "summary": "vault changes need no approval",
+        "steps": [
+          "Look for an approval step"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: a saved vault is available at once (for example in Safe & Lockers); there is no approval step."
+      ],
+      "status": "Skipped",
+      "duration": 82048,
+      "error": "",
+      "shortId": "WORKFLOW_01",
+      "title": "TC_VAULT_WORKFLOW_01 - Workflow (approval): vault changes need no approval",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:02:44.934Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-ab0bd-lt-changes-need-no-approval-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_VAULT_API_01 - API: the vault list API answers 200 with JSON that contains the vault codes",
+      "id": "TC_VAULT_API_01",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the vault list API answers 200 with JSON that contains the vault codes",
+        "steps": [
+          "Reload the Vault screen",
+          "Read the list API response"
+        ],
+        "expected": "200 with JSON that contains the vault codes."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 104150,
+      "error": "",
+      "shortId": "API_01",
+      "title": "TC_VAULT_API_01 - API: the vault list API answers 200 with JSON that contains the vault codes",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:04:07.011Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-daa99-at-contains-the-vault-codes-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_API_02 - API: the save request carried the entered name, branch and code and returned 200",
+      "id": "TC_VAULT_API_02",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the save request carried the entered name, branch and code and returned 200",
+        "steps": [
+          "Read the save request of CREATE_01"
+        ],
+        "expected": "200; the body holds the entered name, branch and code."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 55704,
+      "error": "",
+      "shortId": "API_02",
+      "title": "TC_VAULT_API_02 - API: the save request carried the entered name, branch and code and returned 200",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:05:51.206Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-72362-h-and-code-and-returned-200-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_API_03 - API: the vault list API refuses a call that carries no login",
+      "id": "TC_VAULT_API_03",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the vault list API refuses a call that carries no login",
+        "steps": [
+          "Call the list API URL without any login"
+        ],
+        "expected": "Refused (401 / 403) or no vault data."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 95957,
+      "error": "",
+      "shortId": "API_03",
+      "title": "TC_VAULT_API_03 - API: the vault list API refuses a call that carries no login",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:06:46.937Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-6514a--call-that-carries-no-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_API_04 - API: the save URL carries the user id (createdby) - recorded, the server should take the user from the login",
+      "id": "TC_VAULT_API_04",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the save URL carries the user id (createdby) - recorded, the server should take the user from the login",
+        "steps": [
+          "Read the save URL of CREATE_01"
+        ],
+        "expected": "Recorded: the URL carries createdby; a changed value was not tested."
+      },
+      "notes": [
+        "Save URL: /api/loans/Masters/InventoryMasters/savevaultconfiguration - no createdby in the URL; whether the server ignores a changed value was NOT tested"
+      ],
+      "status": "Pass",
+      "duration": 57174,
+      "error": "",
+      "shortId": "API_04",
+      "title": "TC_VAULT_API_04 - API: the save URL carries the user id (createdby) - recorded, the server should take the user from the login",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:08:22.953Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-8c020-ake-the-user-from-the-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_API_05 - API: server-side validation by sending invalid vaults straight to the save API",
+      "id": "TC_VAULT_API_05",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "server-side validation by sending invalid vaults straight to the save API",
+        "steps": [
+          "Send invalid vaults straight to the save API"
+        ],
+        "expected": "NOT EXECUTED."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): a direct call the server accepts would create a vault that cannot be deleted; covered at screen level instead."
+      ],
+      "status": "Skipped",
+      "duration": 45779,
+      "error": "",
+      "shortId": "API_05",
+      "title": "TC_VAULT_API_05 - API: server-side validation by sending invalid vaults straight to the save API",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:09:20.176Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-163d6-ts-straight-to-the-save-API-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_VAULT_ERROR_01 - Error recovery: after the \"Required\" messages, filling the fields lets the save go through",
+      "id": "TC_VAULT_ERROR_01",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "after the \"Required\" messages, filling the fields lets the save go through",
+        "steps": [
+          "Click New",
+          "Click Save (errors)",
+          "Fill the fields and Save (call aborted)"
+        ],
+        "expected": "The messages disappear and exactly one save request is sent."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 148575,
+      "error": "",
+      "shortId": "ERROR_01",
+      "title": "TC_VAULT_ERROR_01 - Error recovery: after the \"Required\" messages, filling the fields lets the save go through",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:10:05.996Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-591b8-ds-lets-the-save-go-through-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_ERROR_02 - Error recovery: when the save call fails (network aborted) no success message is shown and the panel keeps the values",
+      "id": "TC_VAULT_ERROR_02",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "when the save call fails (network aborted) no success message is shown and the panel keeps the values",
+        "steps": [
+          "Click New",
+          "Enter Vault Name, Vault Branch and Vault Code",
+          "Click Save with the network call aborted"
+        ],
+        "expected": "No success message; the panel keeps the values."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 90884,
+      "error": "",
+      "shortId": "ERROR_02",
+      "title": "TC_VAULT_ERROR_02 - Error recovery: when the save call fails (network aborted) no success message is shown and the panel keeps the values",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:12:34.676Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-eabb5--the-panel-keeps-the-values-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_FILE_01 - File download / upload: the Excel icon downloads \"Vault Configuration.xlsx\" with the vault rows",
+      "id": "TC_VAULT_FILE_01",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "the Excel icon downloads \"Vault Configuration.xlsx\" with the vault rows",
+        "steps": [
+          "Click the Excel icon"
+        ],
+        "expected": "Downloads \"Vault Configuration.xlsx\" with the headings and vault codes."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 96948,
+      "error": "",
+      "shortId": "FILE_01",
+      "title": "TC_VAULT_FILE_01 - File download / upload: the Excel icon downloads \"Vault Configuration.xlsx\" with the vault rows",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:14:05.642Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-60f52-on-xlsx-with-the-vault-rows-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_FILE_02 - File download / upload: the PDF icon downloads \"Vault Configuration.pdf\" that is a real PDF",
+      "id": "TC_VAULT_FILE_02",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "the PDF icon downloads \"Vault Configuration.pdf\" that is a real PDF",
+        "steps": [
+          "Click the PDF icon"
+        ],
+        "expected": "Downloads \"Vault Configuration.pdf\", a real PDF."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 42093,
+      "error": "",
+      "shortId": "FILE_02",
+      "title": "TC_VAULT_FILE_02 - File download / upload: the PDF icon downloads \"Vault Configuration.pdf\" that is a real PDF",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:15:42.649Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-d75c7-tion-pdf-that-is-a-real-PDF-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_FILE_03 - File download / upload: after a search the Excel export contains only the matching vault (HYPOTHESIS: export follows the filter)",
+      "id": "TC_VAULT_FILE_03",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "after a search the Excel export contains only the matching vault (HYPOTHESIS: export follows the filter)",
+        "steps": [
+          "Search the test vault code",
+          "Click the Excel icon"
+        ],
+        "expected": "The file holds only the matching vault (HYPOTHESIS)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 48434,
+      "error": "",
+      "shortId": "FILE_03",
+      "title": "TC_VAULT_FILE_03 - File download / upload: after a search the Excel export contains only the matching vault (HYPOTHESIS: export follows the filter)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:16:24.775Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-41232--export-follows-the-filter--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_A11Y_01 - Accessibility & responsive: the screen fits a phone (390 x 844) without sideways scrolling",
+      "id": "TC_VAULT_A11Y_01",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the screen fits a phone (390 x 844) without sideways scrolling",
+        "steps": [
+          "Open the screen at 390 x 844"
+        ],
+        "expected": "No horizontal scroll."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 41764,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+      "shortId": "A11Y_01",
+      "title": "TC_VAULT_A11Y_01 - Accessibility & responsive: the screen fits a phone (390 x 844) without sideways scrolling",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:17:13.243Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-81d2c--without-sideways-scrolling-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_VAULT_A11Y_02 - Accessibility & responsive: every field and button of the New panel has an accessible name",
+      "id": "TC_VAULT_A11Y_02",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "every field and button of the New panel has an accessible name",
+        "steps": [
+          "Click New",
+          "Check each control for an accessible name"
+        ],
+        "expected": "Every field and button has a label, title, placeholder or text."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 17334,
+      "error": "",
+      "shortId": "A11Y_02",
+      "title": "TC_VAULT_A11Y_02 - Accessibility & responsive: every field and button of the New panel has an accessible name",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:18:16.590Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-fdc62-anel-has-an-accessible-name-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_A11Y_03 - Accessibility & responsive: the screen fits a tablet (768 x 1024) without sideways scrolling",
+      "id": "TC_VAULT_A11Y_03",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the screen fits a tablet (768 x 1024) without sideways scrolling",
+        "steps": [
+          "Open the screen at 768 x 1024"
+        ],
+        "expected": "No horizontal scroll."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 28871,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+      "shortId": "A11Y_03",
+      "title": "TC_VAULT_A11Y_03 - Accessibility & responsive: the screen fits a tablet (768 x 1024) without sideways scrolling",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:18:34.258Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-f9651--without-sideways-scrolling-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_VAULT_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "id": "TC_VAULT_A11Y_04",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "browser compatibility (Firefox, Safari / WebKit, Edge)",
+        "steps": [
+          "Run the screen in Firefox and WebKit"
+        ],
+        "expected": "NOT EXECUTED."
+      },
+      "notes": [
+        "NOT EXECUTED: only Chromium is installed for this project (run \"npx playwright install\" and add projects to playwright.config.js to enable other browsers)."
+      ],
+      "status": "Skipped",
+      "duration": 81669,
+      "error": "",
+      "shortId": "A11Y_04",
+      "title": "TC_VAULT_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:19:05.814Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-6ad21-Firefox-Safari-WebKit-Edge--chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_VAULT_A11Y_05 - Accessibility & responsive: Tab moves Vault Name -> Vault Branch -> Vault Code",
+      "id": "TC_VAULT_A11Y_05",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "Tab moves Vault Name -> Vault Branch -> Vault Code",
+        "steps": [
+          "Click New",
+          "Focus Vault Name",
+          "Press Tab twice"
+        ],
+        "expected": "Focus goes to Vault Branch, then Vault Code."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 63602,
+      "error": "",
+      "shortId": "A11Y_05",
+      "title": "TC_VAULT_A11Y_05 - Accessibility & responsive: Tab moves Vault Name -> Vault Branch -> Vault Code",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:20:28.208Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-2661c---Vault-Branch---Vault-Code-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SESSION_01 - Session / concurrency / browser: the Vault URL without a login does not show the vaults",
+      "id": "TC_VAULT_SESSION_01",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "the Vault URL without a login does not show the vaults",
+        "steps": [
+          "In a fresh browser without login open the Vault URL"
+        ],
+        "expected": "The vaults are not shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 91917,
+      "error": "",
+      "shortId": "SESSION_01",
+      "title": "TC_VAULT_SESSION_01 - Session / concurrency / browser: the Vault URL without a login does not show the vaults",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:21:31.915Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-fb862-in-does-not-show-the-vaults-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SESSION_02 - Session / concurrency / browser: browser storage cleared with the panel open, then Save (behaviour recorded, save call aborted)",
+      "id": "TC_VAULT_SESSION_02",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "browser storage cleared with the panel open, then Save (behaviour recorded, save call aborted)",
+        "steps": [
+          "Click New",
+          "Enter Vault Name, Vault Branch and Vault Code",
+          "Clear browser storage and cookies",
+          "Click Save (call aborted)"
+        ],
+        "expected": "Behaviour recorded in the notes."
+      },
+      "notes": [
+        "After clearing the session and clicking Save: stayed on the screen; messages: Unknown Error"
+      ],
+      "status": "Pass",
+      "duration": 72969,
+      "error": "",
+      "shortId": "SESSION_02",
+      "title": "TC_VAULT_SESSION_02 - Session / concurrency / browser: browser storage cleared with the panel open, then Save (behaviour recorded, save call aborted)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:23:03.903Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-25d5a-recorded-save-call-aborted--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SESSION_03 - Session / concurrency / browser: a page refresh with the New panel open closes the panel (behaviour recorded)",
+      "id": "TC_VAULT_SESSION_03",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "a page refresh with the New panel open closes the panel (behaviour recorded)",
+        "steps": [
+          "Click New",
+          "Fill the panel",
+          "Refresh the page"
+        ],
+        "expected": "Behaviour recorded in the notes."
+      },
+      "notes": [
+        "After refresh the New panel is closed (entered values lost)"
+      ],
+      "status": "Pass",
+      "duration": 110143,
+      "error": "",
+      "shortId": "SESSION_03",
+      "title": "TC_VAULT_SESSION_03 - Session / concurrency / browser: a page refresh with the New panel open closes the panel (behaviour recorded)",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:24:16.901Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-3ddcc-e-panel-behaviour-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SESSION_04 - Session / concurrency / browser: double-clicking New opens one panel",
+      "id": "TC_VAULT_SESSION_04",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "double-clicking New opens one panel",
+        "steps": [
+          "Double-click New"
+        ],
+        "expected": "One panel opens."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 60199,
+      "error": "",
+      "shortId": "SESSION_04",
+      "title": "TC_VAULT_SESSION_04 - Session / concurrency / browser: double-clicking New opens one panel",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:26:07.087Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-19c07-licking-New-opens-one-panel-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SESSION_05 - Session / concurrency / browser: double-clicking Save sends only one save request",
+      "id": "TC_VAULT_SESSION_05",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "double-clicking Save sends only one save request",
+        "steps": [
+          "Click New",
+          "Enter Vault Name, Vault Branch and Vault Code",
+          "Double-click Save (call aborted)"
+        ],
+        "expected": "Exactly one save request is sent."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 29730,
+      "error": "",
+      "shortId": "SESSION_05",
+      "title": "TC_VAULT_SESSION_05 - Session / concurrency / browser: double-clicking Save sends only one save request",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:27:07.396Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-de49a-sends-only-one-save-request-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_VAULT_SESSION_06 - Session / concurrency / browser: two users saving the same vault code at the same time",
+      "id": "TC_VAULT_SESSION_06",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "two users saving the same vault code at the same time",
+        "steps": [
+          "Two users save the same code at once"
+        ],
+        "expected": "NOT EXECUTED."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): needs two real saves of one code, and vaults cannot be deleted."
+      ],
+      "status": "Skipped",
+      "duration": 15705,
+      "error": "",
+      "shortId": "SESSION_06",
+      "title": "TC_VAULT_SESSION_06 - Session / concurrency / browser: two users saving the same vault code at the same time",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:27:37.145Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-0c585-vault-code-at-the-same-time-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_VAULT_LENGTH_01 - Field length & autocomplete: Vault Name and Vault Branch allow 250 characters and Vault Code 30",
+      "id": "TC_VAULT_LENGTH_01",
+      "meta": {
+        "module": "Field length & autocomplete",
+        "priority": "Medium",
+        "type": "Field length & autocomplete",
+        "summary": "Vault Name and Vault Branch allow 250 characters and Vault Code 30",
+        "steps": [
+          "Click New",
+          "Read maxlength of the three fields"
+        ],
+        "expected": "250, 250 and 30."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15955,
+      "error": "",
+      "shortId": "LENGTH_01",
+      "title": "TC_VAULT_LENGTH_01 - Field length & autocomplete: Vault Name and Vault Branch allow 250 characters and Vault Code 30",
+      "file": "GoldVault/tests/gold-vault-functional.spec.js",
+      "startTime": "2026-10-16T09:27:52.861Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-vault\\GoldVault-tests-gold-vault-ba029-haracters-and-Vault-Code-30-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "inputs": [
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "",
+      "fc": null,
+      "val": "20",
+      "opts": [
+        "BIJAY FINANCE AND INVESTMENT PVT LTD-HEAD OFFICE"
+      ]
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    }
+  ],
+  "buttons": [
+    "New Scheme",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete"
+  ],
+  "headers": [
+    "COMPANY",
+    "Scheme",
+    "Tenure",
+    "Type",
+    "Interest %",
+    "Paise/mo",
+    "Internal LTV by slab",
+    "Scheme on",
+    "Action"
+  ],
+  "text": "COMPANY BIJAY FINANCE AND INVESTMENT PVT LTD-HEAD OFFICE UNIFIED SCHEME MATRIX FOR THIS COMPANY On New Scheme Scheme Tenure Type Interest % Paise/mo Internal LTV by slab Scheme on Action GL-QUICK GL-quick 3 mo Bullet 22.00% 1.833 80.57% / 75.83% / 71.09% GL-SMART GL-smart 3 mo Regular Monthly Repayment 14.00% 1.167 84.02% / 79.08% / 74.14% GLP GOLD OLD 3 mo Bullet 24.00% 2.00 80.19% / 75.47% / 70.75% GL-FLEXI GL-Flexi 6 mo Bullet 22.00% 1.83 76.58% / 72.07% / 67.57% GL-Smart GL-Smart 6 mo Regular Monthly Repayment 14.00% 1.167 84.02% / 79.08% / 74.14% AT-02192 AUTOTEST SCHEME 02192 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-02476 AUTOTEST SCHEME 02476 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-10325 AUTOTEST SCHEME 10325 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-23482 AUTOTEST SCHEME 23482 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-32076 AUTOTEST SCHEME 32076 9 mo Regular Monthly Repayment 18.00% 1.50 83.74% / 78.82% / 73.89% 1 2 ... 1 - 10 of 23 items"
+}

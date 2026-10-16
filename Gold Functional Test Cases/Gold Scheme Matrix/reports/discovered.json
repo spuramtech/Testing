@@ -1,0 +1,1781 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\OneDrive\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Scheme Matrix/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Scheme Matrix/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Scheme Matrix/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\scheme-api.spec.js",
+      "file": "api/scheme-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – API",
+          "file": "api/scheme-api.spec.js",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_060 - Scheme list API returns well-formed records @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "42b21080ebf1fcd0f105-fa33ecfb045eb1cb28b4",
+              "file": "api/scheme-api.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_061 - Scheme list API refuses requests without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "42b21080ebf1fcd0f105-cfc1431253cce45639df",
+              "file": "api/scheme-api.spec.js",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_062 - Scheme list API refuses a user without Scheme Matrix rights (INT_APPRAISER1) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "42b21080ebf1fcd0f105-89bcb061821d87f1695b",
+              "file": "api/scheme-api.spec.js",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_063 - Delete API refuses a user without rights (INT_APPRAISER1) – non-existent id @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "42b21080ebf1fcd0f105-486b0ceb5d86135a4e19",
+              "file": "api/scheme-api.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_064 - Delete API for a non-existent scheme answers \"not deleted\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "42b21080ebf1fcd0f105-ff00ea9f4e0d7b6de41a",
+              "file": "api/scheme-api.spec.js",
+              "line": 52,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\slab-rules.spec.js",
+      "file": "business-rules/slab-rules.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – slab business rules",
+          "file": "business-rules/slab-rules.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_033 - \"Apply to all slabs below\" copies the default rate to every slab with Paise/mo = rate ÷ 12 @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-cf05fd69bfe4f0572a73",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_034 - Internal LTV for Bullet 9 mo at 18% = RBI LTV ÷ (1 + rate × tenure ÷ 12) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-7d3aef3c76fd9395858c",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 21,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_035 - Internal LTV for Bullet 3 mo at 22% = RBI LTV ÷ (1 + rate × tenure ÷ 12) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-bd1b03b7f428d2faa7f8",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 21,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_036 - Internal LTV for Monthly 6 mo at 14% = RBI LTV ÷ (1 + rate × 1 month ÷ 12) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-fbc3dbfc2778aee4f1b2",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 21,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_037 - Internal LTV for Monthly 12 mo at 18% = RBI LTV ÷ (1 + rate × 1 month ÷ 12) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-abb40513e4b45bbdfb26",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 21,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_038 - Monthly schemes: Internal LTV does not change with tenure @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-6133490279d8dde4fc1f",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_039 - Changing one slab's rate recalculates only that slab @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-defa479458005056fd1a",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_040 - Excluding a slab shows \"Not offered\"; including it back restores the LTV @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-e6c4d1679e39a1fc03a6",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_041 - Changing the default rate alone does not overwrite slab rates until \"Apply to all slabs\" is pressed (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1e83fb062ae50867804-1538846d16533df6cb71",
+              "file": "business-rules/slab-rules.spec.js",
+              "line": 72,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\grid.spec.js",
+      "file": "functional/grid.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – grid",
+          "file": "functional/grid.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_001 - Admin opens Gold Scheme Matrix from Gold Loan Configuration @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-46c425123d2dbbe629d7",
+              "file": "functional/grid.spec.js",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_002 - Grid shows Scheme, Tenure, Type, Interest %, Paise/mo, Internal LTV by slab, Scheme on, Action @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-f90f6a855e45485f0301",
+              "file": "functional/grid.spec.js",
+              "line": 12,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_003 - Company selector shows the logged-in company @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-1f3fc14d4d29bac2883c",
+              "file": "functional/grid.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_004 - Grid pages 10 schemes at a time and the pager moves to the next page @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-e51cd3dd79750b251368",
+              "file": "functional/grid.spec.js",
+              "line": 27,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_005 - Sorting by Interest % orders the rows by rate @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-96e40522b52aae864a09",
+              "file": "functional/grid.spec.js",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_006 - Paise/mo of every scheme equals Interest % ÷ 12 @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-330dad2c6b49c27ff983",
+              "file": "functional/grid.spec.js",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_007 - Paise/mo is shown with the same precision on every row (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-65c46ee5a277e8093b55",
+              "file": "functional/grid.spec.js",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_008 - Grid Internal LTV values match the resolved-LTV API for every scheme @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-eb14de6b746256b73cc3",
+              "file": "functional/grid.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_009 - Grid rows match the scheme list API (tenure, type, rate, status) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-22128b9686b63b292551",
+              "file": "functional/grid.spec.js",
+              "line": 76,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_010 - Tenure shows \"<n> mo\" and Type shows Bullet or Regular Monthly Repayment @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f858235a4de2f4ad8531-e735ea039c45851cfaf9",
+              "file": "functional/grid.spec.js",
+              "line": 91,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\new-form.spec.js",
+      "file": "functional/new-form.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – New Scheme panel",
+          "file": "functional/new-form.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_011 - New Scheme opens with default values @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-c90bacc4893cc1e796f0",
+              "file": "functional/new-form.spec.js",
+              "line": 6,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_012 - Loan dropdown lists the gold loans from Loans Configuration @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-5c35218302ba932dcf03",
+              "file": "functional/new-form.spec.js",
+              "line": 15,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_013 - Scheme Type offers Bullet and Regular Monthly Repayment @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-a4e1033883a58af9294f",
+              "file": "functional/new-form.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_014 - Slab table shows the LTV Slab Master ranges with read-only RBI LTV @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-e531a913ac1bc977b8ee",
+              "file": "functional/new-form.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_015 - Effective From is chosen from the calendar and accepts a past date @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-dd2186072731039f7421",
+              "file": "functional/new-form.spec.js",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_016 - Clear resets the form to its defaults @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-7ea84ec2aea1673d381d",
+              "file": "functional/new-form.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\roles.spec.js",
+      "file": "functional/roles.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – access by role",
+          "file": "functional/roles.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_057 - User without rights (INT_APPRAISER1) sees \"No view permission\" and cannot open the screen @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-a4dcd74de8c941ff2880",
+              "file": "functional/roles.spec.js",
+              "line": 6,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_058 - INT_APPRAISER1 opening the Scheme Matrix URL directly gets no screen and no scheme data @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-d40c84ce8ef2bb94560a",
+              "file": "functional/roles.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_059 - Scheme Code cannot be changed when editing an existing scheme (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-d275aa2032a8ec843887",
+              "file": "functional/roles.spec.js",
+              "line": 33,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "negative\\save-failures.spec.js",
+      "file": "negative/save-failures.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – save payload and failures",
+          "file": "negative/save-failures.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_042 - Save sends the header with Paise/mo = rate ÷ 12, ISO Effective From and chosen status (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "49405ac577f1f96fcc36-f0d793cc24addb40ec14",
+              "file": "negative/save-failures.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_043 - Slab rates are saved for the new scheme id, excluded slabs as INACTIVE (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "49405ac577f1f96fcc36-4c2ea12e9d66775800d5",
+              "file": "negative/save-failures.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_044 - Save during a network failure shows \"Unable to save scheme\" and no success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "49405ac577f1f96fcc36-d58f1ca715b984aa82d8",
+              "file": "negative/save-failures.spec.js",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_045 - Save when the server returns HTTP 500 shows an error and keeps the entered data @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "49405ac577f1f96fcc36-e953d7096aac4c0277e9",
+              "file": "negative/save-failures.spec.js",
+              "line": 53,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_046 - Header saved but slab save fails – user is told (simulated) (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "49405ac577f1f96fcc36-bced697c8ec893464ccb",
+              "file": "negative/save-failures.spec.js",
+              "line": 66,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_047 - Double-click on Save Scheme sends one save (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "49405ac577f1f96fcc36-b58b2ebd121637a19fe3",
+              "file": "negative/save-failures.spec.js",
+              "line": 79,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\crud.spec.js",
+      "file": "positive/crud.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up)",
+          "file": "positive/crud.spec.js",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_048 - Admin creates a scheme with a custom slab rate and an excluded slab; it is listed with the right values @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-f002af9b276e4c22e0cc",
+              "file": "positive/crud.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_049 - Edit opens the scheme with its saved header, slab rates and exclusions @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-56f45bb4fc9051a80779",
+              "file": "positive/crud.spec.js",
+              "line": 37,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_050 - Update changes name and tenure; the grid shows the new values @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-33a66decf0fe2d901988",
+              "file": "positive/crud.spec.js",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_051 - Update keeps the custom slab rates and exclusions @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-57409568bf7fce484f7f",
+              "file": "positive/crud.spec.js",
+              "line": 68,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_052 - A second scheme with the same code and tenure is refused without a success message @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-7f0a28d99839792eddda",
+              "file": "positive/crud.spec.js",
+              "line": 85,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_053 - \"Scheme on\" switch disables and re-enables a scheme and the state is kept @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-6c168e26a9ec5b9b2e90",
+              "file": "positive/crud.spec.js",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_054 - Delete asks for confirmation; Cancel keeps the scheme @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-f9916834cc82589447de",
+              "file": "positive/crud.spec.js",
+              "line": 123,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_055 - Delete confirmed removes the scheme with \"Scheme <code> deleted.\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-1494f306f6cdcf30d036",
+              "file": "positive/crud.spec.js",
+              "line": 137,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_056 - A new Active scheme effective today is resolved as effective; an Inactive one is not (API) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-d8fd963faeb6ed3780e3",
+              "file": "positive/crud.spec.js",
+              "line": 153,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui.spec.js",
+      "file": "regression/ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – usability, accessibility, responsive",
+          "file": "regression/ui.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_065 - At tablet width (768px) the grid and the New Scheme panel are usable @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-a60cdc948b1eadd1ed1f",
+              "file": "regression/ui.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_066 - Form fields have accessible names @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-4567f12e80d872094d83",
+              "file": "regression/ui.spec.js",
+              "line": 14,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_067 - Row actions have tooltips \"Edit\" and \"Delete\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-297a8b7d309f202ea7a4",
+              "file": "regression/ui.spec.js",
+              "line": 26,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "validation\\fields.spec.js",
+      "file": "validation/fields.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Scheme Matrix – field validation",
+          "file": "validation/fields.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GS_017 - Tenure \"abc\" → \"\" (letters rejected) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-11b0159aae94e8149696",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_018 - Tenure \"-3\" → \"3\" (minus sign stripped) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-01cd957adac59f139afd",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_019 - Tenure \"1.5\" → not \"15\" (decimal tenure is not silently turned into 15 (HYPOTHESIS)) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-53c0d323f5197096317a",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_020 - Interest rate \"abc\" → \"\" (letters rejected) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-6995f830f5e6d2a85217",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_021 - Interest rate \"-5\" → \"5\" (minus sign stripped) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-5c14b72b51cb1eb26885",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_022 - Interest rate \"12.345\" → \"12.34\" (max 2 decimals) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-fcc3c3d480de9aab7926",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_023 - Interest rate \"99.99\" → \"99.99\" (upper boundary 99.99 kept) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-53c5c2a05b39b68c28be",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_024 - Interest rate \"150\" → not \"15\" (150 % is not silently cut to 15 % (HYPOTHESIS)) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-e13267d0abead248fcd2",
+              "file": "validation/fields.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_025 - Scheme Code length is limited (HYPOTHESIS: maxlength set) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-e9dd07b4cbf72df8a678",
+              "file": "validation/fields.spec.js",
+              "line": 27,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_026 - Scheme Name accepts Unicode text @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-82f62df21d4c081f83b4",
+              "file": "validation/fields.spec.js",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_027 - Tenure 0 is refused on save (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-a2bf87772ba0dd336d83",
+              "file": "validation/fields.spec.js",
+              "line": 44,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_028 - Save without the aligned Loan shows the mandatory-fields warning and sends nothing @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-0ef76ae857db75e9986c",
+              "file": "validation/fields.spec.js",
+              "line": 57,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_029 - Save without Scheme code shows the mandatory-fields warning and sends nothing @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-2d1af5b57308ecf8da48",
+              "file": "validation/fields.spec.js",
+              "line": 57,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_030 - Save without Scheme name shows the mandatory-fields warning and sends nothing @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-333b833f61204709a874",
+              "file": "validation/fields.spec.js",
+              "line": 57,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_031 - Save with everything empty shows \"Please fill all mandatory fields, including the aligned Loan\" @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-2f60ea17f364ae72034d",
+              "file": "validation/fields.spec.js",
+              "line": 73,
+              "column": 3
+            },
+            {
+              "title": "TC_GS_032 - Interest rate 0 % is refused (loan allows 2 % – 24 %) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-a04c366af1cdc7b9d319",
+              "file": "validation/fields.spec.js",
+              "line": 85,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_071 - Interest rate 1.99 % is refused (loan allows 2 % – 24 %) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-a21c72e9a43d32a9849a",
+              "file": "validation/fields.spec.js",
+              "line": 85,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_072 - Interest rate 2 % is accepted (loan allows 2 % – 24 %) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-b74ca6ef5d2f66484005",
+              "file": "validation/fields.spec.js",
+              "line": 85,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_073 - Interest rate 24 % is accepted (loan allows 2 % – 24 %) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-c24c90e199516ca272a0",
+              "file": "validation/fields.spec.js",
+              "line": 85,
+              "column": 5
+            },
+            {
+              "title": "TC_GS_074 - Interest rate 24.01 % is refused (loan allows 2 % – 24 %) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c34d9192070c454899f5-a4bd1dff87a0c5269d1a",
+              "file": "validation/fields.spec.js",
+              "line": 85,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-15T10:56:11.412Z",
+    "duration": 45.513000000000034,
+    "expected": 0,
+    "skipped": 71,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,2155 @@
+{
+  "summary": {
+    "generated": 56,
+    "automated": 48,
+    "discovered": 48,
+    "executed": 46,
+    "passed": 38,
+    "failed": 8,
+    "blocked": 0,
+    "skipped": 2,
+    "notExecuted": 4,
+    "na": 4,
+    "discoveryAvailable": true,
+    "runStats": {
+      "startTime": "2026-10-15T09:30:26.691Z",
+      "duration": 554200.2089999999,
+      "expected": 38,
+      "skipped": 2,
+      "unexpected": 8,
+      "flaky": 0
+    },
+    "generatedAt": "2026-10-15T11:55:55.015Z",
+    "baseURL": "http://host214.kapilits.com:8411/",
+    "reconciles": true
+  },
+  "rows": [
+    {
+      "id": "TC_GQ_001",
+      "req": "REQ-01",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Navigation",
+      "scenario": "Checker opens the queue",
+      "type": "Positive / Navigation",
+      "priority": "P0",
+      "pre": "Checker account",
+      "data": "CHECKER_BH",
+      "steps": [
+        "Login as checker",
+        "Gold Loan Configuration",
+        "Click Gold Rate Approval"
+      ],
+      "expected": "URL open=GoldRateApprovalQueue; \"Checker Approval Queue\" heading and search box shown",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "@smoke",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "URL http://host214.kapilits.com:8411/#/Loans/GoldLoanConfiguration?open=GoldRateApprovalQueue; heading \"Checker Approval Queue\", search box shown; 5 cards",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.1,
+      "timestamp": "2026-10-15T09:33:26.943Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-08a9d-roval-card-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_002",
+      "req": "REQ-02",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Queue header",
+      "scenario": "\"N submissions pending\" = cards = API days",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "GetPendingGoldRateApprovals",
+      "steps": [
+        "Read header count",
+        "Count cards",
+        "Count distinct dates in API"
+      ],
+      "expected": "All three numbers are equal",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "@smoke",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Header 5; cards 5; API days 5 (35 records)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.8,
+      "timestamp": "2026-10-15T09:33:37.052Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-373a6-by-the-API-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_003",
+      "req": "REQ-02",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Submission card",
+      "scenario": "Card layout",
+      "type": "Functional / UI",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "-",
+      "steps": [
+        "Read every card"
+      ],
+      "expected": "Date, \"Submitted by <maker>\", Approve All (n), Reject All, 7 gold-type rows (24K–14K); n = row count",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "06 Jul 2026 by tryfinsta: Approve All (7), 7 rows; 02 Jun 2026 by tryfinsta: Approve All (7), 7 rows; 09 Oct 2026 by tryfinsta: Approve All (7), 7 rows; 10 Oct 2026 by tryfinsta: Approve All (7), 7 rows; 14 Oct 2026 by tryfinsta: Approve All (7), 7 rows",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.9,
+      "timestamp": "2026-10-15T09:33:46.906Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-0d45e-7-gold-type-rows-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_004",
+      "req": "REQ-02",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Submission card",
+      "scenario": "Card rates and maker match the API",
+      "type": "Data consistency / API",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "GetPendingGoldRateApprovals",
+      "steps": [
+        "Compare each card row with the API record of that date and gold type"
+      ],
+      "expected": "Every rate and maker matches",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "5 cards compared with 35 API records; differences: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.4,
+      "timestamp": "2026-10-15T09:33:58.785Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-92bc1-urned-by-the-API-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_005",
+      "req": "REQ-03",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Submission card",
+      "scenario": "Newest submission first",
+      "type": "Sorting",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "pVersionstamp",
+      "steps": [
+        "Read card order",
+        "Sort API days by submission time"
+      ],
+      "expected": "Same order",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Sorting",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Card order 2026-07-06, 2026-06-02, 2026-10-09, 2026-10-10, 2026-10-14; by submission time 2026-07-06, 2026-06-02, 2026-10-09, 2026-10-10, 2026-10-14",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.3,
+      "timestamp": "2026-10-15T09:34:09.180Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-0928d--submission-time-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_006",
+      "req": "REQ-04",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Actions",
+      "scenario": "Approve/Reject tooltips",
+      "type": "Usability",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "-",
+      "steps": [
+        "Read button titles"
+      ],
+      "expected": "\"Approves every gold type in this submission in one action\" / \"Rejects every gold type…\"",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Approve \"Approves every gold type in this submission in one action\" | Reject \"Rejects every gold type in this submission in one action\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.7,
+      "timestamp": "2026-10-15T09:34:19.535Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-ed979-anatory-tooltips-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_007",
+      "req": "REQ-05",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Search",
+      "scenario": "Search by maker",
+      "type": "Search",
+      "priority": "P2",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "Maker of first card (tryfinsta)",
+      "steps": [
+        "Type the maker name"
+      ],
+      "expected": "Only that maker's cards, all of them",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Search \"tryfinsta\" → 5 cards (expected 5)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.4,
+      "timestamp": "2026-10-15T09:34:29.251Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-72386-at-maker-s-cards-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_008",
+      "req": "REQ-05",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Search",
+      "scenario": "Search by gold type",
+      "type": "Search",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "\"24K\"",
+      "steps": [
+        "Type 24K"
+      ],
+      "expected": "All cards stay (each contains 24K)",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Search \"24K\" → 5 of 5 cards",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.8,
+      "timestamp": "2026-10-15T09:34:41.651Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-374dd--that-contain-it-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_009",
+      "req": "REQ-05",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Search",
+      "scenario": "Search with no match",
+      "type": "Search / Negative",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "\"zzzz-no-such-maker\"",
+      "steps": [
+        "Type the text"
+      ],
+      "expected": "No cards; \"No gold rate submissions are waiting…\" message",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Cards 0; message \"No gold rate submissions are waiting for your approval right now.\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.7,
+      "timestamp": "2026-10-15T09:34:52.422Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-727c3-ty-state-message-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_010",
+      "req": "REQ-05",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Search",
+      "scenario": "Clear search restores cards",
+      "type": "Search / Reset",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "\"zzzz\" then empty",
+      "steps": [
+        "Search",
+        "Clear"
+      ],
+      "expected": "Card count back to original",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "5 cards before, 5 after clearing",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.9,
+      "timestamp": "2026-10-15T09:35:03.168Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-70c1e-tores-every-card-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_011",
+      "req": "REQ-05",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Search",
+      "scenario": "Search ignores case",
+      "type": "Search / Equivalence",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "Maker in upper case",
+      "steps": [
+        "Type TRYFINSTA"
+      ],
+      "expected": "Same cards as lower-case search",
+      "script": "tests/functional/queue-view.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Search \"TRYFINSTA\" → 5 cards",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.6,
+      "timestamp": "2026-10-15T09:35:14.113Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-queue-view-Gold-1e5a0-r-the-maker-name-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/queue-view.spec.js"
+    },
+    {
+      "id": "TC_GQ_012",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject modal",
+      "scenario": "Modal content",
+      "type": "Functional / UI",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "First card",
+      "steps": [
+        "Click Reject All"
+      ],
+      "expected": "Title \"Reject Gold Rate\"; \"This rejects all <n> gold type(s) submitted for <date>, not just one.\"; Remarks (required); placeholder \"Reason for rejection\"",
+      "script": "tests/validation/reject-remarks.spec.js",
+      "tags": "@smoke",
+      "category": "Reject modal & remarks validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "REJECT SUBMISSION Reject Gold Rate This rejects all 7 gold type(s) submitted for 06 Jul 2026, not just one. Remarks (required) Cancel Confirm Reject",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.9,
+      "timestamp": "2026-10-15T09:38:24.504Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-reject-remarks--629e6-ed-remarks-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/reject-remarks.spec.js"
+    },
+    {
+      "id": "TC_GQ_013",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject modal",
+      "scenario": "Confirm with empty remarks",
+      "type": "Required field / Negative",
+      "priority": "P0",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "Remarks empty (writes blocked)",
+      "steps": [
+        "Reject All",
+        "Confirm Reject"
+      ],
+      "expected": "Warning \"Remarks are required to reject.\"; no request; modal stays open",
+      "script": "tests/validation/reject-remarks.spec.js",
+      "tags": "",
+      "category": "Reject modal & remarks validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Remarks are required to reject.\"; reject requests 0; modal open true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.3,
+      "timestamp": "2026-10-15T09:38:35.451Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-reject-remarks--18e5b-nd-sends-nothing-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/reject-remarks.spec.js"
+    },
+    {
+      "id": "TC_GQ_014",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject modal",
+      "scenario": "Confirm with whitespace-only remarks",
+      "type": "Whitespace input",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "Remarks \"     \" (writes blocked)",
+      "steps": [
+        "Reject All",
+        "Type spaces",
+        "Confirm Reject"
+      ],
+      "expected": "Same warning; no request",
+      "script": "tests/validation/reject-remarks.spec.js",
+      "tags": "",
+      "category": "Reject modal & remarks validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Remarks are required to reject.\"; reject requests 0; modal open true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.9,
+      "timestamp": "2026-10-15T09:38:46.762Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-reject-remarks--9c31e-nd-sends-nothing-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/reject-remarks.spec.js"
+    },
+    {
+      "id": "TC_GQ_015",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject modal",
+      "scenario": "Cancel",
+      "type": "Cancel",
+      "priority": "P2",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "Remarks \"cancel me\" (writes blocked)",
+      "steps": [
+        "Reject All",
+        "Type remarks",
+        "Cancel"
+      ],
+      "expected": "Modal closes; no request; card count unchanged",
+      "script": "tests/validation/reject-remarks.spec.js",
+      "tags": "",
+      "category": "Cancel",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Cards 5 → 5; reject requests 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.5,
+      "timestamp": "2026-10-15T09:38:57.638Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-reject-remarks--4151d-g-the-card-stays-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/reject-remarks.spec.js"
+    },
+    {
+      "id": "TC_GQ_016",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject modal",
+      "scenario": "Remarks cleared on reopen",
+      "type": "Reset / Clear",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "\"old text\"",
+      "steps": [
+        "Open, type, Cancel",
+        "Open again"
+      ],
+      "expected": "Remarks box is empty",
+      "script": "tests/validation/reject-remarks.spec.js",
+      "tags": "",
+      "category": "Reject modal & remarks validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Remarks on reopen: \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.1,
+      "timestamp": "2026-10-15T09:39:08.130Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-reject-remarks--36658--is-opened-again-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/reject-remarks.spec.js"
+    },
+    {
+      "id": "TC_GQ_017",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject modal",
+      "scenario": "1000-character remarks",
+      "type": "Boundary / Max length",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "1000 × \"R\"",
+      "steps": [
+        "Type remarks",
+        "Confirm Reject"
+      ],
+      "expected": "Remarks sent unchanged (no truncation); no maxlength on the box",
+      "script": "tests/validation/reject-remarks.spec.js",
+      "tags": "",
+      "category": "Boundary & special characters",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Sent pRemarks length 1000: \"RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.1,
+      "timestamp": "2026-10-15T09:39:19.269Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-reject-remarks--29952-simulated-server-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/reject-remarks.spec.js"
+    },
+    {
+      "id": "TC_GQ_018",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject modal",
+      "scenario": "Unicode / special-character remarks",
+      "type": "Special characters / Unicode",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "दर गलत है – rate mismatch ₹ <b>&\"'",
+      "steps": [
+        "Type remarks",
+        "Confirm Reject"
+      ],
+      "expected": "Remarks sent byte-for-byte",
+      "script": "tests/validation/reject-remarks.spec.js",
+      "tags": "",
+      "category": "Boundary & special characters",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Sent pRemarks length 34: \"दर गलत है – rate mismatch ₹ <b>&\"'\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.4,
+      "timestamp": "2026-10-15T09:39:30.356Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-reject-remarks--3e464-simulated-server-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/reject-remarks.spec.js"
+    },
+    {
+      "id": "TC_GQ_019",
+      "req": "REQ-07",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Approve",
+      "scenario": "Approve All payload",
+      "type": "Business rule / API",
+      "priority": "P0",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "First card",
+      "steps": [
+        "Click Approve All",
+        "Inspect ApproveGoldRate body"
+      ],
+      "expected": "All record ids of that day with their version stamps; pApprovedby = checker user id",
+      "script": "tests/business-rules/approve-reject-rules.spec.js",
+      "tags": "@smoke",
+      "category": "Business rules / Payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "06 Jul 2026: 7 items sent, pApprovedby 14 (checker userid 14)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.6,
+      "timestamp": "2026-10-15T09:32:00.056Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-approve-rej-204b7-checker-id-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/approve-reject-rules.spec.js"
+    },
+    {
+      "id": "TC_GQ_020",
+      "req": "REQ-07",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject",
+      "scenario": "Reject payload",
+      "type": "Business rule / API",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "Remarks \"Rate does not match the market closing\"",
+      "steps": [
+        "Reject with remarks",
+        "Inspect RejectGoldRate body"
+      ],
+      "expected": "All n items of the day + remarks",
+      "script": "tests/business-rules/approve-reject-rules.spec.js",
+      "tags": "",
+      "category": "Business rules / Payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "06 Jul 2026: 7 items, remarks \"Rate does not match the market closing\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.2,
+      "timestamp": "2026-10-15T09:32:10.790Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-approve-rej-27266-with-the-remarks-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/approve-reject-rules.spec.js"
+    },
+    {
+      "id": "TC_GQ_021",
+      "req": "REQ-08",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Approve",
+      "scenario": "Confirmation before approving (HYPOTHESIS)",
+      "type": "Usability / Safety",
+      "priority": "P2",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "-",
+      "steps": [
+        "Click Approve All once"
+      ],
+      "expected": "A confirmation is asked before the approval is sent",
+      "script": "tests/business-rules/approve-reject-rules.spec.js",
+      "tags": "",
+      "category": "Usability / Safety",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Confirmation dialog shown: false; approve request sent immediately: true",
+      "error": "Error: Approve was sent without any confirmation\n\nexpect(received).toHaveLength(expected)\n\nExpected length: 0\nReceived length: 1\nReceived array:  [{\"pApprovedby\": 14, \"pItems\": [{\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6166}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6165}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6164}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6163}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6162}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6161}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6160}], \"precordid\": 6166}]\n\n  42 |     const dialog = await queue.page.locator('.modal.show:not(#rejectGoldRateModal), .swal2-popup').filter({ hasText: /approve|confirm/i }).count();\n  43 |     record(`Confirmation dialog shown: ${dialog > 0}; approve request sent immediately: ${sent.length > 0}`);\n> 44 |     expect(sent, 'Approve was sent without any confirmation').toHaveLength(0);\n     |                                                               ^",
+      "expectedVerified": false,
+      "duration": 11.4,
+      "timestamp": "2026-10-15T09:32:21.948Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-approve-rej-9ff96-eversible-action-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/business-rules-approve-rej-9ff96-eversible-action-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/business-rules-approve-rej-9ff96-eversible-action-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-001",
+      "automationPath": "tests/business-rules/approve-reject-rules.spec.js"
+    },
+    {
+      "id": "TC_GQ_022",
+      "req": "REQ-09",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Approve",
+      "scenario": "Card leaves queue after approval",
+      "type": "Workflow transition",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "Simulated success; that day hidden from the reload",
+      "steps": [
+        "Approve All"
+      ],
+      "expected": "Success message; card removed; count drops",
+      "script": "tests/business-rules/approve-reject-rules.spec.js",
+      "tags": "",
+      "category": "Workflow transition (approve / reject)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Success! | Simulated success\"; cards 5 → 4; header 4",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13.7,
+      "timestamp": "2026-10-15T09:32:34.458Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-approve-rej-03142-simulated-server-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/approve-reject-rules.spec.js"
+    },
+    {
+      "id": "TC_GQ_023",
+      "req": "REQ-09",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject",
+      "scenario": "Card leaves queue after rejection",
+      "type": "Workflow transition",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "Simulated success",
+      "steps": [
+        "Reject with remarks"
+      ],
+      "expected": "Success message; modal closes; card removed",
+      "script": "tests/business-rules/approve-reject-rules.spec.js",
+      "tags": "",
+      "category": "Workflow transition (approve / reject)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Success! | Simulated success\"; modal open false; cards 5 → 4",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.9,
+      "timestamp": "2026-10-15T09:32:48.241Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-approve-rej-128a4-simulated-server-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/approve-reject-rules.spec.js"
+    },
+    {
+      "id": "TC_GQ_024",
+      "req": "REQ-10",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Rates",
+      "scenario": "Carat rule on every card",
+      "type": "Business rule / Calculation",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "-",
+      "steps": [
+        "Read each card"
+      ],
+      "expected": "22K/21K/20K/19K = 24K × 91.6 %, 18K = 75 %, 14K = 58.3 % (±0.01)",
+      "script": "tests/business-rules/approve-reject-rules.spec.js",
+      "tags": "",
+      "category": "Business rules / Payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "5 cards; mismatches: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.5,
+      "timestamp": "2026-10-15T09:33:01.153Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-approve-rej-5fb53--18K-75-14K-58-3-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/approve-reject-rules.spec.js"
+    },
+    {
+      "id": "TC_GQ_025",
+      "req": "REQ-10",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Rates",
+      "scenario": "24K = Online closing of previous rate date",
+      "type": "Business rule / Cross-screen",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; checker can open Daily Gold Rate",
+      "data": "Daily Gold Rate (All)",
+      "steps": [
+        "Read cards",
+        "Read Online grid",
+        "Match previous closing"
+      ],
+      "expected": "Card 24K equals the previous Online 24K",
+      "script": "tests/business-rules/approve-reject-rules.spec.js",
+      "tags": "",
+      "category": "Business rules / Payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "06 Jul 2026 24K 14268.22 ← online 04/07/2026 14268.22; 02 Jun 2026 24K 14555.5 ← online 01/06/2026 14555.5; 09 Oct 2026 24K 15169 ← online 08/10/2026 15169; 10 Oct 2026 24K 15239.2 ← online 09/10/2026 15239.2; 14 Oct 2026 24K 15175.6 ← online 13/10/2026 15175.6",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 15.3,
+      "timestamp": "2026-10-15T09:33:11.657Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-approve-rej-d6d05--Daily-Gold-Rate-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/approve-reject-rules.spec.js"
+    },
+    {
+      "id": "TC_GQ_026",
+      "req": "REQ-11",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Concurrency",
+      "scenario": "\"Already processed by someone else\"",
+      "type": "Concurrent updates",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "Simulated server message",
+      "steps": [
+        "Approve All"
+      ],
+      "expected": "Message shown; no success",
+      "script": "tests/negative/failures.spec.js",
+      "tags": "",
+      "category": "Concurrency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | This entry was already processed by someone else.\"; cards after 4",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.8,
+      "timestamp": "2026-10-15T09:36:19.387Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-afb95-reshed-simulated-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/failures.spec.js"
+    },
+    {
+      "id": "TC_GQ_027",
+      "req": "REQ-12",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Recovery",
+      "scenario": "Approve during network failure",
+      "type": "Recovery / Negative",
+      "priority": "P2",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; approve call aborted",
+      "data": "-",
+      "steps": [
+        "Approve All"
+      ],
+      "expected": "Error message shown; card stays",
+      "script": "tests/negative/failures.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Message \"none\"; cards 5 → 5",
+      "error": "Error: user must be told the approval failed\n\nexpect(received).toMatch(expected)\n\nExpected pattern: /error|fail|try again|unable|could not/i\nReceived string:  \"\"\n\n  27 |     record(`Message \"${msg || 'none'}\"; cards ${before} → ${await queue.cards.count()}`);\n  28 |     expect(await queue.cards.count()).toBe(before);\n> 29 |     expect(msg, 'user must be told the approval failed').toMatch(/error|fail|try again|unable|could not/i);\n     |                                                          ^\n  30 |   });",
+      "expectedVerified": false,
+      "duration": 14.1,
+      "timestamp": "2026-10-15T09:36:31.215Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-3c054-d-keeps-the-card-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-3c054-d-keeps-the-card-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-3c054-d-keeps-the-card-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-002",
+      "automationPath": "tests/negative/failures.spec.js"
+    },
+    {
+      "id": "TC_GQ_028",
+      "req": "REQ-12",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Recovery",
+      "scenario": "Reject when server returns 500",
+      "type": "Recovery / Negative",
+      "priority": "P2",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; reject answered 500 (simulated)",
+      "data": "Remarks \"retry me\"",
+      "steps": [
+        "Reject with remarks"
+      ],
+      "expected": "Error message; no success",
+      "script": "tests/negative/failures.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Message \"none\"; modal open true; remarks \"retry me\"",
+      "error": "Error: expect(received).toMatch(expected)\n\nExpected pattern: /error|fail|try again|unable|could not/i\nReceived string:  \"\"\n\n  41 |     record(`Message \"${msg || 'none'}\"; modal open ${open}; remarks \"${open ? await queue.remarks.inputValue() : '-'}\"`);\n  42 |     expect(msg).not.toMatch(/success!/i);\n> 43 |     expect(msg).toMatch(/error|fail|try again|unable|could not/i);\n     |                 ^\n  44 |   });\n  45 |\n  46 |   test('TC_GQ_029 - Double-click on Approve All sends only one approval (simulated server) @regression', async ({ queue, mockWrite, record }) => {",
+      "expectedVerified": false,
+      "duration": 13.2,
+      "timestamp": "2026-10-15T09:36:46.678Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-cc49f-emarks-for-retry-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-cc49f-emarks-for-retry-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-cc49f-emarks-for-retry-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-003",
+      "automationPath": "tests/negative/failures.spec.js"
+    },
+    {
+      "id": "TC_GQ_029",
+      "req": "REQ-13",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Approve",
+      "scenario": "Double-click Approve All",
+      "type": "Double submit",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "-",
+      "steps": [
+        "Double-click Approve All"
+      ],
+      "expected": "Exactly one approval request",
+      "script": "tests/negative/failures.spec.js",
+      "tags": "",
+      "category": "Double submit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Approve requests sent: 2",
+      "error": "Error: expect(received).toHaveLength(expected)\n\nExpected length: 1\nReceived length: 2\nReceived array:  [{\"pApprovedby\": 14, \"pItems\": [{\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6166}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6165}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6164}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6163}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6162}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6161}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6160}], \"precordid\": 6166}, {\"pApprovedby\": 14, \"pItems\": [{\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6166}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6165}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6164}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6163}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6162}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6161}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6160}], \"precordid\": 6166}]\n\n  51 |     await queue.page.waitForTimeout(2000);\n  52 |     record(`Approve requests sent: ${sent.length}`);\n> 53 |     expect(sent).toHaveLength(1);\n     |                  ^\n  54 |   });\n  55 |",
+      "expectedVerified": false,
+      "duration": 12.4,
+      "timestamp": "2026-10-15T09:37:01.053Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-03e37-simulated-server-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-03e37-simulated-server-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-03e37-simulated-server-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-004",
+      "automationPath": "tests/negative/failures.spec.js"
+    },
+    {
+      "id": "TC_GQ_030",
+      "req": "REQ-13",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject",
+      "scenario": "Double-click Confirm Reject",
+      "type": "Double submit",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; Approve/Reject answered by a SIMULATED server response (no server change)",
+      "data": "Remarks \"double click\"",
+      "steps": [
+        "Double-click Confirm Reject"
+      ],
+      "expected": "Exactly one reject request",
+      "script": "tests/negative/failures.spec.js",
+      "tags": "",
+      "category": "Double submit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Reject requests sent: 2",
+      "error": "Error: expect(received).toHaveLength(expected)\n\nExpected length: 1\nReceived length: 2\nReceived array:  [{\"pApprovedby\": 14, \"pItems\": [{\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6166}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6165}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6164}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6163}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6162}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6161}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6160}], \"pRemarks\": \"double click\", \"precordid\": 6166}, {\"pApprovedby\": 14, \"pItems\": [{\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6166}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6165}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6164}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6163}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6162}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6161}, {\"pVersionstamp\": \"2026-10-14 18:36:30.200826\", \"precordid\": 6160}], \"pRemarks\": \"double click\", \"precordid\": 6166}]\n\n  63 |     await queue.page.waitForTimeout(2000);\n  64 |     record(`Reject requests sent: ${sent.length}`);\n> 65 |     expect(sent).toHaveLength(1);\n     |                  ^\n  66 |   });\n  67 | });",
+      "expectedVerified": false,
+      "duration": 16.2,
+      "timestamp": "2026-10-15T09:37:14.569Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-6c10f-simulated-server-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-6c10f-simulated-server-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/negative-failures-Gold-Rat-6c10f-simulated-server-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-005",
+      "automationPath": "tests/negative/failures.spec.js"
+    },
+    {
+      "id": "TC_GQ_031",
+      "req": "REQ-14",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Access",
+      "scenario": "Maker sees the card locked",
+      "type": "Role-based access",
+      "priority": "P0",
+      "pre": "Maker account (INT_APPRAISER1)",
+      "data": "INT_APPRAISER1",
+      "steps": [
+        "Login as maker",
+        "Gold Loan Configuration",
+        "Click Gold Rate Approval"
+      ],
+      "expected": "Card text \"Only Gold Rate checkers (Form-wise Approvals > Gold Rate)\"; queue does not open",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Card \"Gold Rate Approval Checker approval of the day's internal gold rates. Only users set as Gold Rate checkers can open it. Only Gold Rate checkers (Form-wise Approvals > Gold Rate)\"; URL after click http://host214.kapilits.com:8411/#/Loans/GoldLoanConfiguration; queue cards 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.7,
+      "timestamp": "2026-10-15T09:35:25.681Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Rate-d472a-t-open-the-queue-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GQ_032",
+      "req": "REQ-14",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Access",
+      "scenario": "Second appraiser sees the card locked",
+      "type": "Role-based access",
+      "priority": "P2",
+      "pre": "INT_APPRAISER2 account",
+      "data": "INT_APPRAISER2",
+      "steps": [
+        "Login",
+        "Click Gold Rate Approval"
+      ],
+      "expected": "Same as TC_GQ_031",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Card \"Gold Rate Approval Checker approval of the day's internal gold rates. Only users set as Gold Rate checkers can open it. Only Gold Rate checkers (Form-wise Approvals > Gold Rate)\"; URL after click http://host214.kapilits.com:8411/#/Loans/GoldLoanConfiguration; queue cards 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.5,
+      "timestamp": "2026-10-15T09:35:36.417Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Rate-9b07e-t-open-the-queue-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GQ_033",
+      "req": "REQ-14",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Access",
+      "scenario": "Maker opens queue URL directly",
+      "type": "Role-based access / Security",
+      "priority": "P0",
+      "pre": "Maker account",
+      "data": "#/Loans/GoldLoanConfiguration?open=GoldRateApprovalQueue",
+      "steps": [
+        "Login as maker",
+        "Open the URL"
+      ],
+      "expected": "No cards, no Approve buttons, queue API not called",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Queue cards 0; Approve buttons 0; queue API called false",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13.6,
+      "timestamp": "2026-10-15T09:35:46.922Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Rate-44926-nd-no-queue-data-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GQ_034",
+      "req": "REQ-14",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Access – API",
+      "scenario": "IsGoldRateChecker true for checker",
+      "type": "API / Authorization",
+      "priority": "P2",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "-",
+      "steps": [
+        "Capture IsGoldRateChecker"
+      ],
+      "expected": "true",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "IsGoldRateChecker?userid=14 → true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.7,
+      "timestamp": "2026-10-15T11:15:39.696Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Rate-b1dd4--for-the-checker-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GQ_035",
+      "req": "REQ-14",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Access – API",
+      "scenario": "IsGoldRateChecker false for maker",
+      "type": "API / Authorization",
+      "priority": "P2",
+      "pre": "Maker account",
+      "data": "-",
+      "steps": [
+        "Login as maker",
+        "Capture IsGoldRateChecker"
+      ],
+      "expected": "false",
+      "script": "tests/functional/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "IsGoldRateChecker?userid=15 → false",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9,
+      "timestamp": "2026-10-15T09:36:10.375Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-roles-Gold-Rate-b3fdb-se-for-the-maker-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/roles.spec.js"
+    },
+    {
+      "id": "TC_GQ_036",
+      "req": "REQ-15",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "API",
+      "scenario": "Queue API schema",
+      "type": "API / Schema",
+      "priority": "P2",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "GetPendingGoldRateApprovals",
+      "steps": [
+        "Validate every record"
+      ],
+      "expected": "ISO date, gold type, rate > 0, status PENDING, version stamp, record id, maker name",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "35 records; malformed 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T11:15:29.521Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-0bc98--PENDING-records-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_037",
+      "req": "REQ-15",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "API security",
+      "scenario": "Queue API without token",
+      "type": "API / Authorization",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "No Authorization header",
+      "steps": [
+        "Replay GET without token"
+      ],
+      "expected": "401 / 403",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "No token → 401",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.9,
+      "timestamp": "2026-10-15T09:30:39.991Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-23d14--without-a-token-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_038",
+      "req": "REQ-15",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "API security",
+      "scenario": "Queue API with maker token",
+      "type": "API / Authorization",
+      "priority": "P0",
+      "pre": "Maker + checker accounts",
+      "data": "Maker Bearer token",
+      "steps": [
+        "Replay GET with maker token"
+      ],
+      "expected": "401 / 403 – pending rates not disclosed to non-checkers",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Maker token → 200; 35 pending records returned",
+      "error": "Error: expect(received).toContain(expected) // indexOf\n\nExpected value: 200\nReceived array: [401, 403]\n\n  43 |     record(`Maker token → ${r.status()}; ${t.trim().startsWith('[') ? `${JSON.parse(t).length} pending records returned` : t.slice(0, 120)}`);\n  44 |     await maker.page.close();\n> 45 |     expect([401, 403]).toContain(r.status());\n     |                        ^\n  46 |   });\n  47 |\n  48 |   for (const [id, ep] of [['TC_GQ_039', 'ApproveGoldRate'], ['TC_GQ_040', 'RejectGoldRate']]) {",
+      "expectedVerified": false,
+      "duration": 19.1,
+      "timestamp": "2026-10-15T09:30:49.856Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium/video.webm"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium/test-failed-2.png"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-006",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_039",
+      "req": "REQ-15",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "API security",
+      "scenario": "Approve API as maker",
+      "type": "API / Authorization",
+      "priority": "P0",
+      "pre": "Maker account",
+      "data": "Non-existent record 999999999",
+      "steps": [
+        "POST ApproveGoldRate as maker"
+      ],
+      "expected": "success:false, \"not configured as a Checker for Gold Rate\"",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "INT_APPRAISER1 ApproveGoldRate → HTTP 200 {\"success\":false,\"message\":\"You are not configured as a Checker for Gold Rate on the Form-wise Approvals screen.\"}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.2,
+      "timestamp": "2026-10-15T09:31:10.056Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-26de4--existent-record-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_040",
+      "req": "REQ-15",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "API security",
+      "scenario": "Reject API as maker",
+      "type": "API / Authorization",
+      "priority": "P0",
+      "pre": "Maker account",
+      "data": "Non-existent record 999999999",
+      "steps": [
+        "POST RejectGoldRate as maker"
+      ],
+      "expected": "success:false, \"not configured as a Checker for Gold Rate\"",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "INT_APPRAISER1 RejectGoldRate → HTTP 200 {\"success\":false,\"message\":\"You are not configured as a Checker for Gold Rate on the Form-wise Approvals screen.\"}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 8.7,
+      "timestamp": "2026-10-15T09:31:21.410Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-aa643--existent-record-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_041",
+      "req": "REQ-11",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Concurrency – API",
+      "scenario": "Stale / unknown version",
+      "type": "Concurrent updates / API",
+      "priority": "P1",
+      "pre": "Checker account",
+      "data": "Non-existent record, old version stamp",
+      "steps": [
+        "POST ApproveGoldRate"
+      ],
+      "expected": "success:false, \"already processed by someone else\"",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "Concurrency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "CHECKER_BH ApproveGoldRate (unknown id) → HTTP 200 {\"success\":false,\"message\":\"This entry was already processed by someone else.\"}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 8.8,
+      "timestamp": "2026-10-15T09:31:30.081Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-4f29d--by-someone-else-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_042",
+      "req": "REQ-06",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Validation – API",
+      "scenario": "Reject without remarks via API",
+      "type": "Server-side validation",
+      "priority": "P1",
+      "pre": "Checker account",
+      "data": "pRemarks \"\" on non-existent record",
+      "steps": [
+        "POST RejectGoldRate"
+      ],
+      "expected": "success:false, \"A remark is required to reject a gold rate entry.\"",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "RejectGoldRate empty remarks → HTTP 200 {\"success\":false,\"message\":\"A remark is required to reject a gold rate entry.\"}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 8.9,
+      "timestamp": "2026-10-15T09:31:38.931Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-06f1a--without-remarks-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_043",
+      "req": "REQ-15",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "API",
+      "scenario": "Refused writes use HTTP error status (HYPOTHESIS)",
+      "type": "API / Response codes",
+      "priority": "P3",
+      "pre": "Maker account",
+      "data": "Non-existent record",
+      "steps": [
+        "POST ApproveGoldRate as maker"
+      ],
+      "expected": "HTTP 4xx (not 200 with success:false)",
+      "script": "tests/api/approval-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Non-checker approve → HTTP 200 {\"success\":false,\"message\":\"You are not configured as a Checker for Gold Rate on the Form-wise Approvals screen.\"}",
+      "error": "Error: expect(received).toBeGreaterThanOrEqual(expected)\n\nExpected: >= 400\nReceived:    200\n\n  83 |     record(`Non-checker approve → HTTP ${r.status()} ${(await r.text()).slice(0, 120)}`);\n  84 |     await s.page.close();\n> 85 |     expect(r.status()).toBeGreaterThanOrEqual(400);\n     |                        ^\n  86 |   });\n  87 | });\n  88 |",
+      "expectedVerified": false,
+      "duration": 11.3,
+      "timestamp": "2026-10-15T09:31:47.801Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-c1f39--REST-convention-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/api-approval-api-Gold-Rate-c1f39--REST-convention-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-007",
+      "automationPath": "tests/api/approval-api.spec.js"
+    },
+    {
+      "id": "TC_GQ_044",
+      "req": "REQ-09",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Reject (real)",
+      "scenario": "Real rejection of a target submission (ALLOW_APPROVAL=1)",
+      "type": "Positive / Workflow",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; ALLOW_APPROVAL=1; submission date in GQ_TARGET_DATES",
+      "data": "Default targets 2026-06-02, 2026-07-06 (automation test data)",
+      "steps": [
+        "Reject with remarks",
+        "Reload queue",
+        "Check Internal Rate tab"
+      ],
+      "expected": "Success; card gone; Internal Rate not APPROVED/PENDING",
+      "script": "tests/positive/real-approve-reject.spec.js",
+      "tags": "",
+      "category": "Workflow transition (approve / reject)",
+      "automated": true,
+      "discovered": true,
+      "executed": false,
+      "status": "SKIPPED",
+      "reason": "ALLOW_APPROVAL=1 not set – approving/rejecting changes the live Internal Rate for every user",
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": 10.3,
+      "timestamp": "2026-10-15T09:37:31.872Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-real-approve-reje-60496--is-not-approved-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/real-approve-reject.spec.js"
+    },
+    {
+      "id": "TC_GQ_045",
+      "req": "REQ-09",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Approve (real)",
+      "scenario": "Real approval of a target submission (ALLOW_APPROVAL=1 + GQ_ALLOW_REAL_APPROVE=1)",
+      "type": "Positive / Workflow",
+      "priority": "P1",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission; both switches on",
+      "data": "GQ_TARGET_DATES",
+      "steps": [
+        "Approve All",
+        "Reload queue",
+        "Check Internal Rate tab"
+      ],
+      "expected": "Success; card gone; Internal Rate APPROVED",
+      "script": "tests/positive/real-approve-reject.spec.js",
+      "tags": "",
+      "category": "Workflow transition (approve / reject)",
+      "automated": true,
+      "discovered": true,
+      "executed": false,
+      "status": "SKIPPED",
+      "reason": "ALLOW_APPROVAL=1 not set – approving/rejecting changes the live Internal Rate for every user",
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": 10,
+      "timestamp": "2026-10-15T09:37:42.314Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-real-approve-reje-b4775-e-shows-APPROVED-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/real-approve-reject.spec.js"
+    },
+    {
+      "id": "TC_GQ_046",
+      "req": "REQ-16",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Responsive",
+      "scenario": "768px width",
+      "type": "Responsive",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "Viewport 768×1024",
+      "steps": [
+        "Resize"
+      ],
+      "expected": "No horizontal scroll; buttons inside viewport",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "scrollWidth 768; 5 cards; Reject button right edge 732",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.9,
+      "timestamp": "2026-10-15T09:37:52.282Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Rate-Ap-06765-zontal-scrolling-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GQ_047",
+      "req": "REQ-16",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Accessibility",
+      "scenario": "Remarks and search have accessible names",
+      "type": "Accessibility",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "-",
+      "steps": [
+        "Open Reject",
+        "Check labels"
+      ],
+      "expected": "Both have a programmatic label",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Accessible name – remarks false, search false",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 2\n+ Received  + 2\n\n  Object {\n-   \"remarks\": true,\n-   \"search\": true,\n+   \"remarks\": false,\n+   \"search\": false,\n  }\n",
+      "expectedVerified": false,
+      "duration": 10.4,
+      "timestamp": "2026-10-15T09:38:03.237Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Rate-Ap-8913f-accessible-names-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/regression-ui-Gold-Rate-Ap-8913f-accessible-names-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/regression-ui-Gold-Rate-Ap-8913f-accessible-names-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-008",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GQ_048",
+      "req": "REQ-16",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Accessibility",
+      "scenario": "Keyboard focus on Approve All",
+      "type": "Accessibility / Keyboard",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "-",
+      "steps": [
+        "Focus the button"
+      ],
+      "expected": "Button takes focus and has text \"Approve All (n)\"",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Focused \"grq-btn grq-btn-approve\", accessible text \"Approve All (7)\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.7,
+      "timestamp": "2026-10-15T09:38:14.609Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Rate-Ap-5950d-nced-by-keyboard-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GQ_049",
+      "req": "REQ-14",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Self-approval",
+      "scenario": "Checker cannot approve a submission they made themselves",
+      "type": "Role-based access",
+      "priority": "P1",
+      "pre": "Checker submits a Daily Gold Rate",
+      "data": "-",
+      "steps": [
+        "Checker saves an online rate",
+        "Open queue"
+      ],
+      "expected": "Approve/Reject disabled for own submission",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Needs the checker to create a gold rate (permanent data on host214) – run manually with approval",
+      "category": "Role-based access",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GQ_050",
+      "req": "REQ-11",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Concurrency",
+      "scenario": "Two checkers approve the same day at the same time (real)",
+      "type": "Concurrent updates",
+      "priority": "P2",
+      "pre": "Two checker accounts",
+      "data": "-",
+      "steps": [
+        "Both open the queue",
+        "Both approve"
+      ],
+      "expected": "Second one gets \"already processed by someone else\"",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Only one checker account in .env; server behaviour covered by TC_GQ_041 and UI by TC_GQ_026",
+      "category": "Concurrency",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GQ_051",
+      "req": "REQ-17",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Session",
+      "scenario": "Session timeout while the Reject modal is open",
+      "type": "Session timeout",
+      "priority": "P3",
+      "pre": "Checker (CHECKER_BH, Gold Rate checker) logged in; Gold Loan Configuration → Gold Rate Approval open; ≥ 1 pending submission",
+      "data": "-",
+      "steps": [
+        "Open Reject",
+        "Stay idle"
+      ],
+      "expected": "Warning, then login again without approving/rejecting",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Idle time before timeout unknown – manual test",
+      "category": "Session / browser",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GQ_052",
+      "req": "REQ-16",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Browser compatibility",
+      "scenario": "Firefox / WebKit",
+      "type": "Browser compatibility",
+      "priority": "P3",
+      "pre": "-",
+      "data": "BROWSER=firefox|webkit",
+      "steps": [
+        "Run the form with BROWSER set"
+      ],
+      "expected": "Same results",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Supported by config; only Chromium run",
+      "category": "Session / browser",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GQ_NA1",
+      "req": "-",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Pagination / sorting controls",
+      "scenario": "Pagination and column sorting",
+      "type": "Pagination / Sorting",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "Queue has no pager or sortable columns (order covered by TC_GQ_005)",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GQ_NA2",
+      "req": "-",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Create / Edit / Delete",
+      "scenario": "Create, edit or delete records",
+      "type": "CRUD",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "Approval screen only – records are created on Daily Gold Rate",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GQ_NA3",
+      "req": "-",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Dates / dropdowns / upload",
+      "scenario": "Date pickers, dropdowns, file upload/download",
+      "type": "Date / Dropdown / File",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "Screen has none of these controls",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GQ_NA4",
+      "req": "-",
+      "module": "Gold Rate Approval Queue",
+      "screen": "Checker Approval Queue",
+      "feature": "Database",
+      "scenario": "Database verification",
+      "type": "Persistence",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "No DB access; persistence checked through the API and Daily Gold Rate (TC_GQ_004, 025, 044)",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    }
+  ]
+}

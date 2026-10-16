@@ -1,0 +1,14 @@
+[
+  {
+    "method": "GET",
+    "url": "/api/loans/masters/loanmaster/getfiLoanTypes",
+    "status": 200,
+    "body": "[{\"getidentificationdocumentsList\":null,\"instalmentdatedetailslist\":null,\"loanconfigurationlist\":null,\"identificationdocumentsList\":null,\"referralCommissioLoanList\":null,\"penaltyConfigurationList\":null,\"ltvConfiguration\":null,\"rbtConfiguration\":null,\"intrestConfiguration\":null,\"rebateconfig\":null,\"loaninterestchanges\":null,\"ltvSlabConfigurationList\":null,\"pLoanid\":0,\"pLoanNmae\":null,\"pLoantypeid\":4,\"pLoantype\":\"Gold Loan\",\"pLoanname\":null,\"pLoancode\":null,\"pCompanycode\":null,\"pBranchcode\":null,\"pSeries\":null,\"pSerieslength\":0,\"pLoanidcode\":null,\"effectiveFromDate\":null,\"effectiveToDate\":null,\"pProductVersion\":null,\"pSecurityNature\":null,\"pPSLapplicable\":false,\"ppslcategory\":null,\"ppslsubcategory\":null,\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null},{\"getidentificationdocumentsList\":null,\"instalmentdatedetailslist\":null,\"loanconfigurationlist\":null,\"identificationdocumentsList\":null,\"referralCommissioLoanList\":null,\"penaltyConfigurationList\":null,\"ltvConfiguration\":null,\"rbtConfiguration\":null,\"intrestConfiguration\":null,\"rebateconfig\":null,\"loaninterestchanges\":null,\"ltvSlabConfigurationList\":null,\"pLoanid\":0,\"pLoanNmae\":null,\"pLoantypeid\":5,\"pLoantype\":\"Personal Loan\",\"pLoanname\":null,\"pLoancode\":null,\"pCompanycode\":null,\"pBranchcode\":null,\"pSeries\":null,\"pSerieslength\":0,\"pLoanidcode\":null,\"effectiveFromDate\":null,\"effectiveToDate\":null,\"pProductVersion\":null,\"pSecurityNat"
+  },
+  {
+    "method": "GET",
+    "url": "/api/loans/masters/loanmaster/IsGoldRateChecker?userid=15",
+    "status": 200,
+    "body": "false"
+  }
+]

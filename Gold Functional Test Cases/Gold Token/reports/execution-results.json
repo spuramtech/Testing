@@ -1,0 +1,1758 @@
+{
+  "summary": {
+    "generated": 46,
+    "automated": 41,
+    "discovered": 41,
+    "executed": 40,
+    "passed": 34,
+    "failed": 6,
+    "blocked": 0,
+    "skipped": 1,
+    "notExecuted": 3,
+    "na": 2,
+    "discoveryAvailable": true,
+    "runStats": {
+      "startTime": "2026-10-15T13:14:45.038Z",
+      "duration": 514500.09099999996,
+      "expected": 34,
+      "skipped": 1,
+      "unexpected": 6,
+      "flaky": 0
+    },
+    "generatedAt": "2026-10-15T13:23:20.010Z",
+    "baseURL": "http://host214.kapilits.com:8411/",
+    "reconciles": true
+  },
+  "rows": [
+    {
+      "id": "TC_GT_001",
+      "req": "REQ-01",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Token list",
+      "scenario": "Page layout",
+      "type": "Positive / UI",
+      "priority": "P0",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only)",
+      "data": "-",
+      "steps": [
+        "Open Gold Token"
+      ],
+      "expected": "New / Used Tokens counts; grid Generate, Token Number, Customer Name, Mobile, Type, Appraisal Value",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "@smoke",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Counts {\"newTokens\":1,\"usedTokens\":1}; columns Generate | Token Number | Customer Name | Customer Mobile | Customer Type | Appraisal Value",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11,
+      "timestamp": "2026-10-15T13:19:10.512Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-988c5-token-grid-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_002",
+      "req": "REQ-01",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Token list",
+      "scenario": "Available = unused tokens from API",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only)",
+      "data": "GetGoldLoanCustomerDetails",
+      "steps": [
+        "Compare"
+      ],
+      "expected": "Same tokens; New Tokens count equal",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "UI UID00035; API unused UID00035; New Tokens 1",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.3,
+      "timestamp": "2026-10-15T13:19:21.511Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-d927c-tches-New-Tokens-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_003",
+      "req": "REQ-01",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Token list",
+      "scenario": "Appraisal value = estimate",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only)",
+      "data": "-",
+      "steps": [
+        "Compare each token"
+      ],
+      "expected": "Equal values",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "1 tokens; mismatches none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.3,
+      "timestamp": "2026-10-15T13:19:30.784Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-fc91d-pproved-estimate-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_004",
+      "req": "REQ-01",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Used tokens",
+      "scenario": "Used Tokens tab",
+      "type": "Read / Filter",
+      "priority": "P2",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only)",
+      "data": "GetUsedGoldLoanTokensDetails",
+      "steps": [
+        "Open Used Tokens"
+      ],
+      "expected": "Only used tokens, = API",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "",
+      "category": "Read views",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Used tab rows UID00032; API UID00032",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.8,
+      "timestamp": "2026-10-15T13:19:40.114Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-cb3ac-urned-into-loans-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_005",
+      "req": "REQ-02",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Token",
+      "scenario": "Simulated token listed",
+      "type": "Read",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "UID99999",
+      "steps": [
+        "Read row"
+      ],
+      "expected": "Customer, mobile, value of the estimate",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "",
+      "category": "Read views",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"token\":\"UID99999\",\"customer\":\"Autotest Dcgjbi Qa\",\"mobile\":\"9043326918\",\"type\":\"existing\",\"value\":138393.9}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.1,
+      "timestamp": "2026-10-15T13:19:51.943Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-3b68f--appraisal-value-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_006",
+      "req": "REQ-02",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Token Overview",
+      "scenario": "Appraisal, eligible, article qty",
+      "type": "Data consistency",
+      "priority": "P0",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Read overview"
+      ],
+      "expected": "= estimate appraisal value, eligible value, article quantity",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "@smoke",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"appraisal\":138393.9,\"eligible\":103643.19,\"articleQty\":1} vs estimate 138393.9 / 103643.19 / 1",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T13:20:03.038Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-1217e-e-estimate-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_007",
+      "req": "REQ-02",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Member",
+      "scenario": "Member information",
+      "type": "Read",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Read Member Information"
+      ],
+      "expected": "Estimate customer name and mobile",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "",
+      "category": "Read views",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": " Member Code : NA Name : Autotest Dcgjbi Qa Contact Number : 9043326918 12, Gandhi Street, Block 10, Neyveli, Cuddalore, Tamil Nadu, India - 607801 AQDPC6918G NA ",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10,
+      "timestamp": "2026-10-15T13:20:13.065Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-b7679-imate-s-customer-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_008",
+      "req": "REQ-02",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Date",
+      "scenario": "Token date read-only",
+      "type": "Field state",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Check date"
+      ],
+      "expected": "dd/mm/yyyy, read-only",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "",
+      "category": "Field state & dates",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Date \"15/10/2026\", editable false",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.1,
+      "timestamp": "2026-10-15T13:20:23.114Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-47d1c-ate-is-read-only-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_009",
+      "req": "REQ-02",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Articles",
+      "scenario": "View gold article details",
+      "type": "Read",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Click the eye icon on Article Details"
+      ],
+      "expected": "Pop-up lists the estimate articles",
+      "script": "tests/functional/tokens.spec.js",
+      "tags": "",
+      "category": "Read views",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Gold Articles × Carat Article Type Qty. Gross Weight Stone/Wastage Wt (g) / Count Net Weight Purity Ded% Pure Netweight Stone Ded% Gold Rate Total Remarks Image 22K (916KDM 92% gold and 8% alloyed metals) RING 1 10.500 0.5 10.000 0% 10.00 0% 13,839.39 1,38,393.9 - Rs.1,38,393.90/- Total Gold Article",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.7,
+      "timestamp": "2026-10-15T13:20:33.246Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-tokens-Gold-Tok-a3726-stimate-articles-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/tokens.spec.js"
+    },
+    {
+      "id": "TC_GT_010",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Next without nominee",
+      "type": "Required field",
+      "priority": "P0",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Next"
+      ],
+      "expected": "\"Please add at least one Nominee before proceeding.\"",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "@smoke",
+      "category": "Nominee – required & business rules",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please add at least one Nominee before proceeding.\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.5,
+      "timestamp": "2026-10-15T13:21:06.472Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-c36e3-proceeding-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_011",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Add without name/relationship",
+      "type": "Required field",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Add"
+      ],
+      "expected": "\"Please fill Full Name and Relationship before adding a nominee\"",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – required & business rules",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please fill Full Name and Relationship before adding a nominee\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.2,
+      "timestamp": "2026-10-15T13:21:19.090Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-55ce7-nship-is-refused-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_012",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Relationship list",
+      "type": "Dropdown",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Open list"
+      ],
+      "expected": "Mother, Father, Spouse, Son, Daughter, Brother, Sister …",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Mother, Father, Brother In Law, Sister In Law, Sister, Brother, Mother In Law, Spouse, Son, Daughter",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.3,
+      "timestamp": "2026-10-15T13:21:31.319Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-b0b54-family-relations-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_013",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Contact digits only (HYPOTHESIS)",
+      "type": "Data type",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "\"abc12345678901\"",
+      "steps": [
+        "Type"
+      ],
+      "expected": "Only digits kept",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"abc12345678901\" → \"12345678901\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 12.6,
+      "timestamp": "2026-10-15T13:21:41.616Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-b28f4--only-HYPOTHESIS-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_014",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Contact max 12",
+      "type": "Max length",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "14 digits",
+      "steps": [
+        "Type"
+      ],
+      "expected": "≤ 12 kept",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed 14 digits → \"987650001199\" (12)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.1,
+      "timestamp": "2026-10-15T13:21:54.251Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-ee13d-to-12-characters-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_015",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Proportion > 100 %",
+      "type": "Boundary",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "150 %",
+      "steps": [
+        "Add"
+      ],
+      "expected": "\"Proportional should not be greater than 100\"; not added",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Please fill Full Name and Relationship before adding a nominee | Warning! | Proportional should not be greater than 100\"; nominee rows 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.8,
+      "timestamp": "2026-10-15T13:22:04.338Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-0eaa5-e-100-is-refused-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_016",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Total must be 100 %",
+      "type": "Business rule",
+      "priority": "P0",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "60 %",
+      "steps": [
+        "Add",
+        "Next"
+      ],
+      "expected": "\"… must add up to 100% … (currently 60%)\"",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – required & business rules",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Nominee Proportional must add up to 100% across all nominees (currently 60%).\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 11.8,
+      "timestamp": "2026-10-15T13:22:15.091Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-0179d--100-before-Next-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_017",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Duplicate nominee",
+      "type": "Duplicate prevention",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "Same nominee twice",
+      "steps": [
+        "Add twice"
+      ],
+      "expected": "\"Already existed\"; one row",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Duplicate prevention & edit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Warning! | Already existed\"; rows 1",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13,
+      "timestamp": "2026-10-15T13:22:26.905Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-27869--Already-existed-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_018",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "60 % + 40 % → Next",
+      "type": "Positive / Business rule",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "Two nominees",
+      "steps": [
+        "Add both",
+        "Next"
+      ],
+      "expected": "Loan Details shown",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – required & business rules",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Loan Details shown after 60 % + 40 %",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 14.8,
+      "timestamp": "2026-10-15T13:22:39.909Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-2d139--to-Loan-Details-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_019",
+      "req": "REQ-04",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "KYC",
+      "scenario": "PAN / FORM 60 proofs, reference max 30",
+      "type": "Dropdown / Max length",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "PAN / FORM 60",
+      "steps": [
+        "Pick type"
+      ],
+      "expected": "Form 60, PAN CARD; reference maxlength 30",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Nominee – input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "ID proofs Select, Form 60, PAN CARD; reference maxlength 30",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 10.9,
+      "timestamp": "2026-10-15T13:22:54.677Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-6e3cf-ax-30-characters-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_020",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "Remove an added nominee (HYPOTHESIS)",
+      "type": "Edit / Delete",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Add",
+        "Look for remove"
+      ],
+      "expected": "Row has a delete/edit action",
+      "script": "tests/validation/nominee.spec.js",
+      "tags": "",
+      "category": "Duplicate prevention & edit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Nominee row actions: 0",
+      "error": "Error: no delete/edit action on the nominee row\n\nexpect(received).toBeGreaterThan(expected)\n\nExpected: > 0\nReceived:   0\n\n  104 |     const actions = await row.locator('button, a, i[class*=fa]').count();\n  105 |     record(`Nominee row actions: ${actions}`);\n> 106 |     expect(actions, 'no delete/edit action on the nominee row').toBeGreaterThan(0);\n      |                                                                 ^\n  107 |   });",
+      "expectedVerified": false,
+      "duration": 13.4,
+      "timestamp": "2026-10-15T13:23:05.631Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-d63a1-aving-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-d63a1-aving-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/validation-nominee-Gold-To-d63a1-aving-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-001",
+      "automationPath": "tests/validation/nominee.spec.js"
+    },
+    {
+      "id": "TC_GT_021",
+      "req": "REQ-05",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Loan Details",
+      "scenario": "Scheme terms locked",
+      "type": "Business rule / Field state",
+      "priority": "P0",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "-",
+      "steps": [
+        "Read loan name, tenure, interest"
+      ],
+      "expected": "New Gold; estimate tenure and rate; all disabled",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "@smoke",
+      "category": "Loan terms from scheme",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"loan\":\"New Gold\",\"tenure\":9,\"interest\":18} vs estimate 9 mo @ 18%",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13.8,
+      "timestamp": "2026-10-15T13:15:03.929Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-a6d21-are-locked-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_022",
+      "req": "REQ-05",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Loan Details",
+      "scenario": "Eligible amount",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "-",
+      "steps": [
+        "Read eligible"
+      ],
+      "expected": "= estimate eligible value",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Shown 103643.19; estimate 103643.19",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13.2,
+      "timestamp": "2026-10-15T13:15:17.776Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-74f19-s-eligible-value-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_023",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Amount requested",
+      "scenario": "\"abc\" → \"\" (letters rejected)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "Amount \"abc\"",
+      "steps": [
+        "Type amount",
+        "Tab"
+      ],
+      "expected": "Box shows \"\"",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Amount validation & boundaries",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"abc\" → \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 14.6,
+      "timestamp": "2026-10-15T13:15:31.001Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-4a219-letters-rejected-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_024",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Amount requested",
+      "scenario": "\"50000\" → \"50,000\" (Indian separators)",
+      "type": "Validation",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "Amount \"50000\"",
+      "steps": [
+        "Type amount",
+        "Tab"
+      ],
+      "expected": "Box shows \"50,000\"",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Amount validation & boundaries",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"50000\" → \"50,000\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 16.5,
+      "timestamp": "2026-10-15T13:15:45.647Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-0014f-ndian-separators-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_025",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Amount requested",
+      "scenario": "\"0\" → \"\" (zero not accepted)",
+      "type": "Validation",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "Amount \"0\"",
+      "steps": [
+        "Type amount",
+        "Tab"
+      ],
+      "expected": "Box shows \"\"",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Amount validation & boundaries",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Typed \"0\" → \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 14.2,
+      "timestamp": "2026-10-15T13:16:02.196Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-c6700-ero-not-accepted-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_026",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Amount requested",
+      "scenario": "\"1000.50\" → 1000.5 (decimal keeps its value – HYPOTHESIS)",
+      "type": "Validation",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "Amount \"1000.50\"",
+      "steps": [
+        "Type amount",
+        "Tab"
+      ],
+      "expected": "Box shows 1000.5",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Amount validation & boundaries",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Typed \"1000.50\" → \"1,00,050\"",
+      "error": "Error: expect(received).toBeCloseTo(expected, precision)\n\nExpected: 1000.5\nReceived: 100050\n\nExpected precision:    2\nExpected difference: < 0.005\nReceived difference:   99049.5\n\n  35 |       const v = await gt.typeAmount(typed);\n  36 |       record(`Typed \"${typed}\" → \"${v}\"`);\n> 37 |       if (id === 'TC_GT_026') expect(Number(v.replace(/,/g, ''))).toBeCloseTo(1000.5, 2);",
+      "expectedVerified": false,
+      "duration": 14.3,
+      "timestamp": "2026-10-15T13:16:16.405Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-ac59a-value-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/business-rules-loan-detail-ac59a-value-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/business-rules-loan-detail-ac59a-value-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-002",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_027",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Amount",
+      "scenario": "Eligible − 1 accepted",
+      "type": "Boundary value",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "floor(eligible) − 1",
+      "steps": [
+        "Type"
+      ],
+      "expected": "Kept",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Amount validation & boundaries",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Eligible 103643.19; typed 103642 → \"1,03,642\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 14.2,
+      "timestamp": "2026-10-15T13:16:31.936Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-aae3a-ccepted-boundary-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_028",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Amount",
+      "scenario": "Equal to eligible refused",
+      "type": "Boundary value",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "ceil(eligible)",
+      "steps": [
+        "Type"
+      ],
+      "expected": "Cleared; \"Amount Should be Less than Eligible Loan Amount (LTV)\"",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Amount validation & boundaries",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Eligible 103643.19; typed 103644 → \"\"; message \"Warning! | Amount Should be Less than Eligible Loan Amount (LTV)\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 14.4,
+      "timestamp": "2026-10-15T13:16:46.308Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-a785c--Loan-Amount-LTV-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_029",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Amount",
+      "scenario": "Above eligible refused",
+      "type": "Boundary value",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "ceil(eligible) + 1",
+      "steps": [
+        "Type"
+      ],
+      "expected": "Cleared; same message",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Amount validation & boundaries",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Eligible 103643.19; typed 103645 → \"\"; message \"Warning! | Amount Should be Less than Eligible Loan Amount (LTV)\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.1,
+      "timestamp": "2026-10-15T13:17:00.697Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-7d82d--Loan-Amount-LTV-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_030",
+      "req": "REQ-07",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Save",
+      "scenario": "No amount → not sent with 0",
+      "type": "Required field / Data integrity",
+      "priority": "P0",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "Amount empty",
+      "steps": [
+        "Save"
+      ],
+      "expected": "No save request",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "@smoke",
+      "category": "Save integrity & payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Save requests 1 (pAmountrequested 0, blocked); message \"Error! | Unknown Error\"",
+      "error": "Error: a loan with no amount was sent to the server\n\nexpect(received).toHaveLength(expected)\n\nExpected length: 0\nReceived length: 1\nReceived array:  [{\"body\": \"{\\\"pCustomerType\\\":\\\"existing\\\",\\\"pContactid\\\":4556,\\\"pContactreferenceid\\\":\\\"261000020\\\",\\\"pmembertype\\\":\\\"\\\",\\\"pmembertypeid\\\":0,\\\"pCreatedby\\\":15,\\\"Ptokennumber\\\":\\\"UID99999\\\",\\\"PersonalNomineeList\\\":[{\\\"precordid\\\":0,\\\"pnomineename\\\":\\\"LAKSHMI QA\\\",\\\"prelationship\\\":\\\"Mother\\\",\\\"pdateofbirth\\\":\\\"\\\",\\\"pAge\\\":0,\\\"pcontactno\\\":\\\"9876500011\\\",\\\"pidprooftype\\\":\\\"\\\",\\\"pDocumentGroup\\\":\\\"\\\",\\\"pDocumentGroupId\\\":\\\"\\\",\\\"pidproofname\\\":\\\"\\\",\\\"pDocumentId\\\":\\\"\\\",\\\"pPercentage\\\":\\\"100\\\",\\\"pTypeChk\\\":true,\\\"pisprimarynominee\\\":true,\\\"pDocumentName\\\":\\\"\\\",\\\"preferencenumber\\\":\\\"\\\",\\\"pMemberrefcode\\\":\\\"\\\",\\\"pCreatedby\\\":15,\\\"pStatusname\\\":\\\"ACTIVE\\\",\\\"ptypeofoperation\\\":\\\"CREATE\\\",\\\"pProportional\\\":100}],\\\"Contact\\\":{\\\"pReferenceId\\\":\\\"\\\",\\\"pAddressTypeChk\\\":\\\"Home\\\",\\\"pPhoto\\\":\\\"\\\",\\\"pStatusname\\\":\\\"ACTIVE\\\",\\\"pContactimagepath\\\":\\\"\\\",\\\"pName\\\":\\\"\\\",\\\"pBusinessEntityEmailid\\\":\\\"\\\",\\\"pBusinessEntityContactno\\\":\\\"\\\",\\\"pContactType\\\":\\\"Individual\\\",\\\"documentstorelist\\\":null,\\\"lstbusinessperson\\\":\\\"\\\",\\\"pMiddleName\\\":\\\"\\\",\\\"pSurName\\\":\\\"\\\",\\\"pDob\\\":\\\"2026-10-15T13:17:26.164Z\\\",\\\"pGender\\\":\\\"Male\\\",\\\"Name\\\":\\\"\\\",\\\"pactivitytype\\\":\\\"C\\\",\\\"pTitleNameFathers\\\":\\\"Mr\\\",\\\"pFatherName\\\":\\\"\\\",\\\"pFatherLastName\\\":\\\"\\\",\\\"pTitleNameSpouses\\\":null,\\\"pSpouseName\\\":\\\"\\\",\\\"pSpouseLastName\\\":\\\"\\\",\\\"pTitleNameMothers\\\":\\\"Mrs\\\",\\\"pMotherFirstName\\\":\\\"\\\",\\\"pMotherLastName\\\":\\\"\\\",\\\"pCKYCNumber\\\":\\\"\\\",\\\"pDIN\\\":\\\"\\\",\\\"pDPIN\\\":\\\"\\\",\\\"pPoliticallyExposedPerson\\\":\\\"No\\\",\\\"pPMLA\\\":\\\"\\\",\\\"pSignaturePhoto\\\":\\\"\\\",\\\"pSignatureimagepath\\\":\\\"\\\",\\\"pPhysicallyhandicapped\\\":\\\"No\\\",\\\"pPreferredLanguage\\\":\\\"\\\",\\\"pAge\\\":0,\\\"pTitleName\\\":\\\"\\\",\\\"pContactName\\\":\\\"\\\",\\\"pEmailId\\\":\\\"\\\",\\\"pEmailId2\\\":\\\"\\\",\\\"pContactNumber\\\":\\\"\\\",\\\"pAlternativeNo\\\":\\\"\\\",\\\"pRecordId\\\":\\\"\\\",\\\"pRecordId1\\\":\\\"\\\",\\\"pContactId\\\":0,\\\"pAddressPriority\\\":\\\"\\\",\\\"pPriority\\\":\\\"\\\",\\\"isWebcamImage\\\":false,\\\"photoOption\\\":\\\"webcam\\\",\\\"nomineeDetailsList\\\":[{\\\"precordid\\\":0,\\\"pnomineename\\\":\\\"LAKSHMI QA\\\",\\\"prelationship\\\":\\\"Mother\\\",\\\"pdateofbirth\\\":\\\"\\\",\\\"pAge\\\":0,\\\"pcontactno\\\":\\\"9876500011\\\",\\\"pidprooftype\\\":\\\"\\\",\\\"pDocumentGroup\\\":\\\"\\\",\\\"pDocumentGroupId\\\":\\\"\\\",\\\"pidproofname\\\":\\\"\\\",\\\"pDocumentId\\\":\\\"\\\",\\\"pPercentage\\\":\\\"100\\\",\\\"pTypeChk\\\":true,\\\"pisprimarynominee\\\":true,\\\"pDocumentName\\\":\\\"\\\",\\\"preferencenumber\\\":\\\"\\\",\\\"pMemberrefcode\\\":\\\"\\\",\\\"pCreatedby\\\":15,\\\"pStatusname\\\":\\\"ACTIVE\\\",\\\"ptypeofoperation\\\":\\\"CREATE\\\"}],\\\"referralDetails\\\":\\\"\\\",\\\"pAddressControls\\\":{\\\"pRecordId\\\":0,\\\"pAddressType\\\":\\\"Home\\\",\\\"pResidencetype\\\":\\\"Owned\\\",\\\"pAddress1\\\":\\\"\\\",\\\"pAddress2\\\":\\\"\\\",\\\"pState\\\":\\\"Tamil Nadu\\\",\\\"pStateId\\\":0,\\\"pDistrict\\\":\\\"Coimbatore\\\",\\\"pDistrictId\\\":0,\\\"pCity\\\":\\\"\\\",\\\"pCountry\\\":\\\"India\\\",\\\"pCountryId\\\":1,\\\"pPinCode\\\":0,\\\"plongitude\\\":\\\"\\\",\\\"platitude\\\":\\\"\\\",\\\"pPriorityCon\\\":true,\\\"ptypeofoperation\\\":\\\"Create\\\",\\\"pAddressDetails\\\":\\\"\\\",\\\"pStatusname\\\":\\\"ACTIVE\\\",\\\"pAddressPriority\\\":\\\"PRIMARY\\\",\\\"pPriority\\\":\\\"PRIMARY\\\"},\\\"pAddressList\\\":[],\\\"personaldetailsnewControls\\\":\\\"\\\",\\\"lstpersonaldetailsnew\\\":null,\\\"GSTDetailsControls\\\":\\\"\\\",\\\"GSTDetailsList\\\":null,\\\"familyDetailsControls\\\":\\\"\\\",\\\"familyDetailsList\\\":null,\\\"referralbankdetailslist\\\":null,\\\"PersonalEmployeementList\\\":\\\"\\\",\\\"PersonalIncomeList\\\":\\\"\\\",\\\"personalOtherIncomeDetailsIncomeForm\\\":\\\"\\\",\\\"personalOtherIncomeDetailsIncomeFormList\\\":null,\\\"pMemberId\\\":0,\\\"MakeMember\\\":true,\\\"pMembertypeId\\\":0,\\\"pMemberType\\\":\\\"\\\",\\\"membercode\\\":\\\"\\\",\\\"pGuradianrelation\\\":\\\"\\\",\\\"pGuradian_contactid\\\":0,\\\"pGuradian_contactrefid\\\":0,\\\"pApplicanttype\\\":\\\"Regular/General\\\",\\\"pbranchid\\\":1,\\\"pbranchname\\\":\\\"HEAD OFFICE\\\",\\\"pIsSavingsExist\\\":true},\\\"LoanDetails\\\":{\\\"firstinformationDTO\\\":{\\\"pVchapplicationid\\\":0,\\\"pLoantypeid\\\":4,\\\"pLoanid\\\":88,\\\"pContacttype\\\":\\\"Individual\\\",\\\"pContactreferenceid\\\":4556,\\\"pApplicanttype\\\":\\\"Regular/General\\\",\\\"pLoantype\\\":\\\"Gold Loan\\\",\\\"pLoanname\\\":\\\"New Gold\\\",\\\"pApplicantname\\\":\\\"Autotest Dcgjbi Qa\\\",\\\"pApplicantid\\\":4556,\\\"ptypeofoperation\\\":\\\"CREATE\\\",\\\"pStatusname\\\":\\\"ACTIVE\\\",\\\"pVchapplicantstatus\\\":\\\"N\\\",\\\"pDateofapplication\\\":\\\"2026-10-15\\\",\\\"pAmountrequested\\\":0,\\\"pPurposeofloan\\\":\\\"\\\",\\\"pInteresttype\\\":\\\"Diminishing\\\",\\\"preceiptid\\\":\\\"\\\",\\\"pLoanpayin\\\":\\\"Monthly\\\",\\\"pTenureofloan\\\":9,\\\"pTenuretype\\\":\\\"Monthly\\\",\\\"pRateofinterest\\\":18,\\\"pemitype\\\":\\\"REGULAR\\\",\\\"emitype\\\":\\\"REGULAR\\\",\\\"pIsschemesapplicable\\\":false,\\\"pLoaninstalmentpaymentmode\\\":\\\"Only Interest (Principle is paid at end of tenure)\\\",\\\"pSchemecode\\\":\\\"\\\",\\\"pPartprinciplepaidinterval\\\":0,\\\"pLeadId\\\":\\\"\\\",\\\"pIsreferralapplicable\\\":false,\\\"pReferralname\\\":\\\"\\\",\\\"preferralcontactrefid\\\":\\\"\\\",\\\"pSalespersonname\\\":\\\"\\\",\\\"psalespersoncontactrefid\\\":\\\"\\\",\\\"pInstalmentamount\\\":0,\\\"leadid\\\":\\\"\\\"}},\\\"LoanSpecificDetails\\\":{\\\"pLoantype\\\":\\\"Gold Loan\\\",\\\"pVchapplicationid\\\":0,\\\"pApplicantid\\\":4556,\\\"pApplicationid\\\":0,\\\"pContactreferenceid\\\":4556,\\\"lstVehicleLoanDTO\\\":null,\\\"goldLoanDTO\\\":{\\\"pRecordid\\\":0,\\\"pCurrentGoldRate\\\":13839.39,\\\"pAppraisalvalue\\\":138393.9,\\\"pRemarks\\\":\\\"No Remarks\\\",\\\"pAppraisorName\\\":\\\"Autotest Dcgjbi Qa\\\",\\\"pAppraisalDate\\\":\\\"2026-10-15\\\",\\\"GoldLoanDetailslist\\\":[{\\\"pRecordid\\\":156,\\\"pCarat\\\":\\\"22K (916KDM 92% gold and 8% alloyed metals)\\\",\\\"pGoldArticleType\\\":\\\"RING\\\",\\\"pGoldArticle\\\":\\\"\\\",\\\"grossweight\\\":10.5,\\\"pQuantity\\\":1,\\\"pNetWeight\\\":10,\\\"pWastageamount\\\":0,\\\"pActualRate\\\":138393.9,\\\"pFilepath\\\":null,\\\"pfilename\\\":null,\\\"articleuniqueid\\\":null,\\\"pobservations\\\":\\\"\\\",\\\"pgoldRate\\\":13839.39,\\\"pgoldLTV\\\":91.6,\\\"ptotal\\\":138393.9,\\\"pTypeofoperation\\\":\\\"CREATE\\\",\\\"pPureGold\\\":10,\\\"pStoneweight\\\":0.5,\\\"pStonecount\\\":null,\\\"pPuritydeductionpercent\\\":0,\\\"pStonedeductionpercent\\\":0,\\\"goldLoanFilePathlist\\\":[],\\\"pGrossweight\\\":10.5}]},\\\"educationLoanDTO\\\":null,\\\"lstLoanagainstDepositDTO\\\":null,\\\"homeLoanDTO\\\":null,\\\"balanceTransferDTO\\\":null,\\\"businessLoanDTO\\\":null,\\\"consumerLoanDTO\\\":null},\\\"Approval\\\":{\\\"papprovestatus\\\":\\\"Approve\\\",\\\"pApproveddate\\\":\\\"2026-10-15\\\",\\\"pDisbursmentdate\\\":null,\\\"pAmountrequested\\\":0,\\\"pApprovedloanamount\\\":0,\\\"pLoanpayin\\\":\\\"Monthly\\\",\\\"pInteresttype\\\":\\\"Diminishing\\\",\\\"pRateofinterest\\\":18,\\\"pTenureofloan\\\":9,\\\"pTenuretype\\\":\\\"\\\",\\\"pVchaccintrest\\\":18,\\\"pLoaninstalmentpaymentmode\\\":\\\"Only Interest (Principle is paid at end of tenure)\\\",\\\"pOldInstallmentstartdate\\\":\\\"2026-10-15\\\",\\\"pInstallmentamount\\\":0,\\\"pInstallmentstartdate\\\":\\\"2026-11-14T18:30:00.000Z\\\",\\\"pHolidayperiodpayin\\\":\\\"\\\",\\\"pHolidayperiodvalue\\\":0,\\\"pMoratoriumperiodpayin\\\":\\\"\\\",\\\"pMoratoriumperiodvalue\\\":0,\\\"pRemarks\\\":\\\"\\\",\\\"pDisbursementpayinmode\\\":\\\"SINGLE PAYMENT\\\",\\\"emitype\\\":\\\"REGULAR\\\",\\\"pemitype\\\":\\\"REGULAR\\\",\\\"pGraceperiod\\\":0,\\\"emiday\\\":0,\\\"pemiday\\\":0,\\\"lstStagewisepayments\\\":[],\\\"lstApprovedloancharges\\\":[],\\\"pStatusid\\\":\\\"1\\\",\\\"pStatusname\\\":\\\"ACTIVE\\\",\\\"ptypeofoperation\\\":\\\"CREATE\\\",\\\"pDateofapplication\\\":\\\"2026-10-15\\\",\\\"pApplicantname\\\":\\\"Autotest Dcgjbi Qa\\\",\\\"pLoantype\\\":\\\"Gold Loan\\\",\\\"pLoantypeid\\\":4,\\\"pLoanid\\\":88,\\\"pLoanname\\\":\\\"New Gold\\\",\\\"pMobileno\\\":9043326918,\\\"pPurposeofloan\\\":\\\"\\\",\\\"pAmount\\\":\\\"\\\",\\\"pChargename\\\":\\\"\\\",\\\"pInterevels\\\":0,\\\"ploaninstallmenttype\\\":\\\"NO EMI\\\",\\\"pfrrtype\\\":\\\"\\\"},\\\"Agreement\\\":{\\\"pAgreementDate\\\":\\\"2026-10-15\\\",\\\"pInstallmentstartdate1\\\":\\\"2026-11-14T18:30:00.000Z\\\",\\\"pAgreementStatus\\\":\\\"Agreement Approved\\\",\\\"pApproveddate\\\":\\\"2026-10-15\\\",\\\"papprovedloanamount\\\":0,\\\"pLoantypeid\\\":4,\\\"pLoantype\\\":\\\"Gold Loan\\\",\\\"pLoanid\\\":88,\\\"pLoanname\\\":\\\"New Gold\\\",\\\"pRemarks\\\":\\\"\\\",\\\"pAgreementDocuments\\\":\\\"\\\",\\\"pContacttypes\\\":\\\"mobile\\\",\\\"pContactforesign\\\":\\\"\\\",\\\"pEsignresponse\\\":\\\"\\\",\\\"pAgreementtype\\\":\\\"Manual\\\",\\\"pEagreementstatus\\\":\\\"\\\"},\\\"Disbursement\\\":[]}\", \"headers\": {\"accept\": \"application/json, text/plain, */*\", \"accept-language\": \"en-US\", \"authorization\": \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjI3IiwiZmluc3RhX3VzZXJpZCI6IjE1IiwibmJmIjoxNzkyMDcwMjQwLCJleHAiOjE3OTIwODEwNDAsImlhdCI6MTc5MjA3MDI0MH0.RLI3rep0XHe_abnnX3kbqNESLq93KJsaogvqEYg9kMU\", \"cache-control\": \"no-cache\", \"content-type\": \"application/json\", \"origin\": \"http://host214.kapilits.com:8411\", \"referer\": \"http://host214.kapilits.com:8411/\", \"schema-name\": \"public\", \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.31 Safari/537.36\"}, \"method\": \"POST\", \"url\": \"http://host214.kapilits.com:8412/api/loans/Transactions/Disbursement/SaveCustomerandGoldLoanAllDetails\"}]\n\n  71 |     const amt = sent[0] ? deep(JSON.parse(sent[0].body), 'pAmountrequested') : null;\n  72 |     record(`Save requests ${sent.length}${sent.length ? ` (pAmountrequested ${amt}, blocked)` : ''}; message \"${await gt.messages()}\"`);\n> 73 |     expect(sent, 'a loan with no amount was sent to the server').toHaveLength(0);\n     |                                                                  ^",
+      "expectedVerified": false,
+      "duration": 16.4,
+      "timestamp": "2026-10-15T13:17:17.794Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-23f51-h-amount-0-smoke-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/business-rules-loan-detail-23f51-h-amount-0-smoke-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/business-rules-loan-detail-23f51-h-amount-0-smoke-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-003",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_031",
+      "req": "REQ-06",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Save – API",
+      "scenario": "Save payload",
+      "type": "API / Payload",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "Amount 50,000",
+      "steps": [
+        "Save (blocked)"
+      ],
+      "expected": "Token UID99999, contact ref, nominee, amount 50000",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Save integrity & payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"token\":\"UID99999\",\"contact\":\"261000020\",\"nominees\":[\"LAKSHMI QA/Mother/100\"],\"amount\":50000,\"tenure\":9,\"rate\":18,\"loan\":88}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 14.2,
+      "timestamp": "2026-10-15T13:17:35.325Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-18ea1-me-terms-blocked-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_032",
+      "req": "REQ-03",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Nominee",
+      "scenario": "One primary nominee (HYPOTHESIS)",
+      "type": "Business rule",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; two nominees",
+      "data": "60/40",
+      "steps": [
+        "Save (blocked)"
+      ],
+      "expected": "Exactly one pisprimarynominee",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Save integrity & payload",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "LAKSHMI QA primary=true, RAVI QA primary=true",
+      "error": "Error: expect(received).toHaveLength(expected)\n\nExpected length: 1\nReceived length: 2\nReceived array:  [{\"pAge\": 0, \"pCreatedby\": 15, \"pDocumentGroup\": \"\", \"pDocumentGroupId\": \"\", \"pDocumentId\": \"\", \"pDocumentName\": \"\", \"pMemberrefcode\": \"\", \"pPercentage\": \"60\", \"pProportional\": 60, \"pStatusname\": \"ACTIVE\", \"pTypeChk\": true, \"pcontactno\": \"9876500011\", \"pdateofbirth\": \"\", \"pidproofname\": \"\", \"pidprooftype\": \"\", \"pisprimarynominee\": true, \"pnomineename\": \"LAKSHMI QA\", \"precordid\": 0, \"preferencenumber\": \"\", \"prelationship\": \"Mother\", \"ptypeofoperation\": \"CREATE\"}, {\"pAge\": 0, \"pCreatedby\": 15, \"pDocumentGroup\": \"\", \"pDocumentGroupId\": \"\", \"pDocumentId\": \"\", \"pDocumentName\": \"\", \"pMemberrefcode\": \"\", \"pPercentage\": \"40\", \"pProportional\": 40, \"pStatusname\": \"ACTIVE\", \"pTypeChk\": true, \"pcontactno\": \"9876500012\", \"pdateofbirth\": \"\", \"pdocidproofpath\": \"\", \"pidproofname\": \"\", \"pidprooftype\": \"\", \"pisprimarynominee\": true, \"pnomineename\": \"RAVI QA\", \"precordid\": 0, \"preferencenumber\": \"\", \"prelationship\": \"Father\", \"ptypeofoperation\": \"CREATE\"}]\n\n   98 |     const n = JSON.parse(apiHits.find((h) => SAVE_API.test(h.url)).body).PersonalNomineeList;\n   99 |     record(n.map((x) => `${x.pnomineename} primary=${x.pisprimarynominee}`).join(', '));\n> 100 |     expect(n.filter((x) => x.pisprimarynominee)).toHaveLength(1);\n      |                                                  ^\n  101 |   });\n  102 |",
+      "expectedVerified": false,
+      "duration": 16.3,
+      "timestamp": "2026-10-15T13:17:49.649Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-d946a-imary-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/business-rules-loan-detail-d946a-imary-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/business-rules-loan-detail-d946a-imary-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-004",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_033",
+      "req": "REQ-06",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Save",
+      "scenario": "Meaningful failure message",
+      "type": "Error handling",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "Network blocked",
+      "steps": [
+        "Save"
+      ],
+      "expected": "Error shown, not \"Unknown Error\"",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Error handling & double submit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Message \"Error! | Unknown Error\"",
+      "error": "Error: expect(received).not.toMatch(expected)\n\nExpected pattern: not /Unknown Error/\nReceived string:      \"Error! | Unknown Error\"\n\n  110 |     record(`Message \"${msg}\"`);\n  111 |     expect(msg).toMatch(/error|fail/i);\n> 112 |     expect(msg).not.toMatch(/Unknown Error/);\n      |                     ^\n  113 |   });\n  114 |\n  115 |   test('TC_GT_034 - Double-click on Save sends one request (simulated server) @regression', async ({ simToken, mockWrite, record }) => {",
+      "expectedVerified": false,
+      "duration": 15.4,
+      "timestamp": "2026-10-15T13:18:07.053Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-a2c30-ot-Unknown-Error-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/business-rules-loan-detail-a2c30-ot-Unknown-Error-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/business-rules-loan-detail-a2c30-ot-Unknown-Error-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-005",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_034",
+      "req": "REQ-06",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Save",
+      "scenario": "Double-click Save",
+      "type": "Double submit",
+      "priority": "P1",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details; simulated server",
+      "data": "-",
+      "steps": [
+        "Double-click Save"
+      ],
+      "expected": "One request",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Error handling & double submit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Save requests: 1",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.5,
+      "timestamp": "2026-10-15T13:18:23.691Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-8653a-simulated-server-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_035",
+      "req": "REQ-06",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Navigation",
+      "scenario": "Back keeps nominees",
+      "type": "Navigation",
+      "priority": "P2",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "-",
+      "steps": [
+        "Back"
+      ],
+      "expected": "Member tab with nominee row",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Navigation (Back)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Back → Member tab; nominee rows 1",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 14.5,
+      "timestamp": "2026-10-15T13:18:42.323Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-76baa-he-nominees-kept-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_036",
+      "req": "REQ-05",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Charges",
+      "scenario": "Charges & Fees table",
+      "type": "UI",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked; nominee LAKSHMI QA / Mother / 100 % added; Next → Loan Details",
+      "data": "-",
+      "steps": [
+        "Read"
+      ],
+      "expected": "Charges, amount, waiver, GST, adjust-in-disbursement columns",
+      "script": "tests/business-rules/loan-details.spec.js",
+      "tags": "",
+      "category": "Loan terms from scheme",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Charges & Fees Charges and Fees Amount Waiver After waiver Amount GST Amount GST Type GST% Adjust in Loan Disbursement Amount Collect from Borrower No records available. Back Save ",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 13.7,
+      "timestamp": "2026-10-15T13:18:56.822Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-loan-detail-34bb7--on-Loan-Details-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/loan-details.spec.js"
+    },
+    {
+      "id": "TC_GT_037",
+      "req": "REQ-08",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "API security",
+      "scenario": "No token",
+      "type": "API / Authorization",
+      "priority": "P1",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only)",
+      "data": "-",
+      "steps": [
+        "Replay without token"
+      ],
+      "expected": "401 / 403",
+      "script": "tests/api/token-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "No token → 401",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 8.9,
+      "timestamp": "2026-10-15T13:14:45.675Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-token-api-Gold-Token-–-7a5d0--without-a-token-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/token-api.spec.js"
+    },
+    {
+      "id": "TC_GT_038",
+      "req": "REQ-08",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "API",
+      "scenario": "Used token reported used",
+      "type": "API / Consistency",
+      "priority": "P2",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only)",
+      "data": "A used token",
+      "steps": [
+        "GET details"
+      ],
+      "expected": "isTokenUsed true",
+      "script": "tests/api/token-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "UID00032: isTokenUsed true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.1,
+      "timestamp": "2026-10-15T13:14:54.766Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-token-api-Gold-Token-–-0ab8e-eport-it-as-used-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/token-api.spec.js"
+    },
+    {
+      "id": "TC_GT_039",
+      "req": "REQ-09",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Responsive",
+      "scenario": "768px",
+      "type": "Responsive",
+      "priority": "P3",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only)",
+      "data": "-",
+      "steps": [
+        "Resize"
+      ],
+      "expected": "No page-level horizontal scroll",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "scrollWidth 768",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 9.7,
+      "timestamp": "2026-10-15T13:20:44.991Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Token-–-f8ce1-orizontal-scroll-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GT_040",
+      "req": "REQ-09",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Accessibility",
+      "scenario": "Nominee fields labelled",
+      "type": "Accessibility",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "-",
+      "steps": [
+        "Check labels"
+      ],
+      "expected": "All labelled",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "{\"name\":false,\"contact\":false,\"proportion\":false}",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 3\n+ Received  + 3\n\n  Object {\n-   \"contact\": true,\n-   \"name\": true,\n-   \"proportion\": true,\n+   \"contact\": false,\n+   \"name\": false,\n+   \"proportion\": false,",
+      "expectedVerified": false,
+      "duration": 10.6,
+      "timestamp": "2026-10-15T13:20:54.735Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Token-–-83dde-accessible-names-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/regression-ui-Gold-Token-–-83dde-accessible-names-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/regression-ui-Gold-Token-–-83dde-accessible-names-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-006",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_GT_041",
+      "req": "REQ-06",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Create (real)",
+      "scenario": "AUTOTEST token → loan (ALLOW_DATA_CREATION=1)",
+      "type": "Positive / Create",
+      "priority": "P0",
+      "pre": "Maker (INT_APPRAISER1) logged in; Loans → Gold → Gold Token open (real list, read-only); an available AUTOTEST token; ALLOW_DATA_CREATION=1",
+      "data": "90 % of eligible",
+      "steps": [
+        "Select",
+        "Nominee",
+        "Amount",
+        "Save"
+      ],
+      "expected": "Success; token leaves New Tokens",
+      "script": "tests/positive/real-loan.spec.js",
+      "tags": "",
+      "category": "Create (real)",
+      "automated": true,
+      "discovered": true,
+      "executed": false,
+      "status": "SKIPPED",
+      "reason": "ALLOW_DATA_CREATION=1 not set – creates a permanent gold loan",
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": 0,
+      "timestamp": "2026-10-15T13:20:44.987Z",
+      "evidence": [],
+      "defect": "",
+      "automationPath": "tests/positive/real-loan.spec.js"
+    },
+    {
+      "id": "TC_GT_042",
+      "req": "REQ-04",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "KYC upload",
+      "scenario": "Nominee KYC file upload",
+      "type": "File upload",
+      "priority": "P3",
+      "pre": "Maker logged in; SIMULATED available token UID99999 (copy of a used AUTOTEST token) selected; every write blocked",
+      "data": "PNG",
+      "steps": [
+        "Upload"
+      ],
+      "expected": "File attached",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Upload goes straight to the server (MultiFileUploads); not needed for the rules above – covered by Gold Estimates upload",
+      "category": "File upload / session / concurrency",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GT_043",
+      "req": "REQ-02",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Back date",
+      "scenario": "Back-dated token",
+      "type": "Date",
+      "priority": "P2",
+      "pre": "-",
+      "data": "BACK_DATE",
+      "steps": [
+        "-"
+      ],
+      "expected": "Token date = back date",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Covered by the Gold Flow Entry back-dated flow",
+      "category": "Field state & dates",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GT_044",
+      "req": "REQ-09",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Session / browser / concurrency",
+      "scenario": "Two makers use the same token; session timeout; Firefox/WebKit",
+      "type": "Concurrency / Session / Browser",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Would consume a real token; idle time unknown; Chromium only",
+      "category": "File upload / session / concurrency",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GT_NA1",
+      "req": "-",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Delete",
+      "scenario": "Delete / cancel a token",
+      "type": "CRUD",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "Tokens come from approved estimates; the screen has no delete",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_GT_NA2",
+      "req": "-",
+      "module": "Gold Token",
+      "screen": "Gold Loan Token",
+      "feature": "Database",
+      "scenario": "DB verification",
+      "type": "Persistence",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "No DB access",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    }
+  ]
+}

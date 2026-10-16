@@ -1,0 +1,1579 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\OneDrive\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Loan Configuration/Daily Gold Rate/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Loan Configuration/Daily Gold Rate/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Loan Configuration/Daily Gold Rate/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\gold-rate-api.spec.js",
+      "file": "api/gold-rate-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – API",
+          "file": "api/gold-rate-api.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_050 - Gold rate list API refuses requests without a valid token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "114359f68de937031f5c-bac34dc8440cd8d318cd",
+              "file": "api/gold-rate-api.spec.js",
+              "line": 6,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_051 - Gold rate list API returns well-formed records that match the grid @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "114359f68de937031f5c-adf55961dc962b922f57",
+              "file": "api/gold-rate-api.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\rates.spec.js",
+      "file": "business-rules/rates.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – business rules",
+          "file": "business-rules/rates.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_030 - 22K = 24K × 91.6% and 18K = 24K × 75% (2 decimals) for typical rates @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2cb458f2541468d822be-8a4cf1b9bdbbf70ea562",
+              "file": "business-rules/rates.spec.js",
+              "line": 6,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_031 - 22K and 18K rates cannot be edited by the user @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2cb458f2541468d822be-7eaebe50679c768e6138",
+              "file": "business-rules/rates.spec.js",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_032 - Every saved rate in the grid follows the 22K / 18K ratio to 24K @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2cb458f2541468d822be-f7740730c83bfb19a2e4",
+              "file": "business-rules/rates.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_033 - Internal Rate for the day = lower of 30-day average (A) and previous closing (B) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2cb458f2541468d822be-c58c808b59190e6399b8",
+              "file": "business-rules/rates.spec.js",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_034 - Internal Rate \"Previous Closing (B)\" equals the Online 24K rate of the previous rate date @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2cb458f2541468d822be-3ccc19c064f78837141a",
+              "file": "business-rules/rates.spec.js",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_035 - Online rate is editable/deletable only until its derived Internal Rate is Approved (lock + tooltip after) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2cb458f2541468d822be-fc8edde2f067b8155583",
+              "file": "business-rules/rates.spec.js",
+              "line": 64,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_036 - \"Manual Gold Rate Entry in Gold Estimates\" switch reflects the company feature setting @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2cb458f2541468d822be-ad2df551960612969157",
+              "file": "business-rules/rates.spec.js",
+              "line": 83,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\navigation-grid.spec.js",
+      "file": "functional/navigation-grid.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – navigation and Online Rate grid",
+          "file": "functional/navigation-grid.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_001 - Daily Gold Rate opens from Loans → Gold → Gold Loan Configuration with Online Rate tab @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-904ef01b11c526a2c53b",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_002 - Online grid shows Trans Date, 24K, 22K, 18K columns, Average Rate footer and pager @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-4968b250d59627ab0f0f",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_003 - Date Range filter offers the expected options and defaults to Last 30 Days @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-4f5e50a949af9efc52e2",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 26,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_004 - Last 30 Days shows only rates dated within the last 30 days @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-62cccfa63e9bb65ade58",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_005 - All range lists at least as many rows as Last 30 Days; Today lists only today @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-287e1ae6216330a5677d",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_006 - Grid lists rates newest first (HYPOTHESIS: default sort Trans Date descending) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-ee0659121dd1196e922d",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 52,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_007 - Average Rate footer equals the mean of the listed 24K / 22K / 18K rates @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-dd187f2f6320b09e0630",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_008 - Pager moves to the next page in the All range and shows different rows @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-249916dc60812b703040",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 67,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_012 - Excel and PDF export icons download the grid @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1db4a6e10eef912c2e1f-324d40b8a57133359621",
+              "file": "functional/navigation-grid.spec.js",
+              "line": 82,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\new-form.spec.js",
+      "file": "functional/new-form.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – New entry panel and Trans Date calendar",
+          "file": "functional/new-form.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_013 - New opens \"Online Gold Rate Submission\" with read-only Loan Type \"Gold Loan\" and calculated 22K / 18K @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-9262fec9b576ae5f0c47",
+              "file": "functional/new-form.spec.js",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_014 - Trans Date defaults to the previous working day (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-bb9c3ff5e64fd44a5e66",
+              "file": "functional/new-form.spec.js",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_015 - Trans Date cannot be typed – it is set only from the calendar @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-9c22163a53bc28f6cfe1",
+              "file": "functional/new-form.spec.js",
+              "line": 27,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_016 - Calendar disables today and every future date @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-0dbf164af9c19366a9b8",
+              "file": "functional/new-form.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_017 - Calendar disables Sundays (current and previous month) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-2d9aee8ee2f9aab84174",
+              "file": "functional/new-form.spec.js",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_018 - Calendar allows a past working day to be selected @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-a894a76ae8b2bc227788",
+              "file": "functional/new-form.spec.js",
+              "line": 66,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_052 - Clear empties 24K / 22K / 18K and keeps the Trans Date @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-5eea1cce07bc5682bce8",
+              "file": "functional/new-form.spec.js",
+              "line": 75,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_053 - Edit opens the panel pre-filled with the row values and Trans Date locked (no save) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "853b99cb731a449b1257-c983951ab3869e17dc54",
+              "file": "functional/new-form.spec.js",
+              "line": 86,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\roles.spec.js",
+      "file": "functional/roles.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – roles and maker/checker workflow",
+          "file": "functional/roles.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_047 - Checker (CHECKER_BH) sees no Edit / Delete actions on Online rates @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-a79317ea8d77b39c4952",
+              "file": "functional/roles.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_048 - Maker (INT_APPRAISER1) cannot approve any Gold Rate submission @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-d009e68d9df6c28f80d7",
+              "file": "functional/roles.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_049 - IsGoldRateChecker API answers false for the maker @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-da06ed7bf8c8b84c2371",
+              "file": "functional/roles.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_056 - Checker approves a pending Internal Rate submitted by another user @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-a5013e025c162041e9cb",
+              "file": "functional/roles.spec.js",
+              "line": 36,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\search.spec.js",
+      "file": "functional/search.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – search",
+          "file": "functional/search.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_009 - Searching an existing Trans Date shows that rate row @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0c14013d7792b73d1960-5f1b32fe1bb233e499fc",
+              "file": "functional/search.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_063 - Searching an existing 24K rate shows that rate row @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0c14013d7792b73d1960-1c8dc56787b85b739c55",
+              "file": "functional/search.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_010 - Searching text that matches nothing shows \"No records available.\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0c14013d7792b73d1960-69ea20cd39426ee38718",
+              "file": "functional/search.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_011 - Clearing the search restores the full list @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0c14013d7792b73d1960-9e4a4f48ad2e0f244ca4",
+              "file": "functional/search.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "negative\\save-negative.spec.js",
+      "file": "negative/save-negative.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – negative save scenarios",
+          "file": "negative/save-negative.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_037 - Save without a 24K rate shows the required warning and sends nothing @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a599c268dab6e835939-d5793644be0bb243b8eb",
+              "file": "negative/save-negative.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_038 - Save with a zero 24K rate is rejected with the required warning @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a599c268dab6e835939-5da53b554c14c1488db0",
+              "file": "negative/save-negative.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_039 - A second rate for a Trans Date that already has one is rejected (duplicate) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a599c268dab6e835939-c9b38a699d12e187252b",
+              "file": "negative/save-negative.spec.js",
+              "line": 27,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_040 - Update with the 24K rate cleared shows the required warning @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a599c268dab6e835939-6ddc7fee01d2c96d0e60",
+              "file": "negative/save-negative.spec.js",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_060 - Save during a network failure does not report success and keeps the entry for retry @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a599c268dab6e835939-fb4a94d32b92080f7d24",
+              "file": "negative/save-negative.spec.js",
+              "line": 60,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_061 - Save during a server error 500 does not report success and keeps the entry for retry @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a599c268dab6e835939-4a821ba8fa691adbe56d",
+              "file": "negative/save-negative.spec.js",
+              "line": 60,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\crud.spec.js",
+      "file": "positive/crud.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – create, read, update, delete",
+          "file": "positive/crud.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_041 - Maker saves a 24K rate for a free past working day; double-click sends one save @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-8296d6882af98cafe0f2",
+              "file": "positive/crud.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_042 - The saved rate is listed in the grid with the submitted 24K / 22K / 18K @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-9411e30962707b7010e8",
+              "file": "positive/crud.spec.js",
+              "line": 45,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_043 - Save API payload: every carat takes the nearest higher tier rate; Internal Rate is for the next working day @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-149aace8bd4fd8efa249",
+              "file": "positive/crud.spec.js",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_044 - Maker updates the rate; the grid shows the new 24K and recalculated 22K / 18K @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-cd2296db57390b17e26f",
+              "file": "positive/crud.spec.js",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_045 - Delete asks for confirmation; Cancel keeps the rate @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-0e82f37f0575de6bf562",
+              "file": "positive/crud.spec.js",
+              "line": 97,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_046 - Delete confirmed removes the rate (test-data cleanup) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e239a9b2be633a926554-f9fefe9396e7b6093d45",
+              "file": "positive/crud.spec.js",
+              "line": 110,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui-compat.spec.js",
+      "file": "regression/ui-compat.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – usability, accessibility and responsive",
+          "file": "regression/ui-compat.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_054 - At tablet width (768px) the grid and New entry panel remain usable @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "cf12963e2c46bddda24b-9ec931b6cb713d41c7eb",
+              "file": "regression/ui-compat.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_055 - Entry fields expose an accessible name (label or aria-label) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "cf12963e2c46bddda24b-19ca6ba1b63903d7c09c",
+              "file": "regression/ui-compat.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_GR_064 - Online Rate / Internal Rate tabs switch content and back @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "cf12963e2c46bddda24b-e6bc681cd48ae0acd4cd",
+              "file": "regression/ui-compat.spec.js",
+              "line": 29,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "validation\\rate-input.spec.js",
+      "file": "validation/rate-input.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Daily Gold Rate – 24K rate input validation",
+          "file": "validation/rate-input.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GR_019 - 24K input: \"abc\" → \"\" (letters are rejected) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-a9612373df794c45ce40",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_020 - 24K input: \"@#$%&*\" → \"\" (special characters are rejected) @regression",
+              "ok": true,
+              "tags": [
+                "#$%&*\"",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-6dc76be9154e27aa31bb",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_021 - 24K input: \"-500\" → \"500\" (minus sign is stripped (negative rate not possible)) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-9b5631c255a6d58f9efa",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_022 - 24K input: \"   \" → \"\" (whitespace only leaves the field empty) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-1c17683d67a5947801a7",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_023 - 24K input: \"0\" → \"\" (a leading zero / zero rate is not accepted) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-958be857f5a422ff2cd3",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_024 - 24K input: \"99999999999\" → \"99,999\" (max 5 integer digits (boundary)) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-423294640df304eb86c7",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_025 - 24K input: \"12.345\" → \"12.34\" (max 2 decimal places) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-cd3402474135bbf8a034",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_026 - 24K input: \"15000.5\" → \"15,000.5\" (Indian thousand separator applied) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-698c494ff71a59c3834e",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_027 - 24K input: \"0.01\" → \"0.01\" (smallest positive rate 0.01 is kept as typed) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-ef26c3287b3ff9c4852c",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_062 - 24K input: \"१५०००\" → \"\" (Unicode (Devanagari) digits are rejected) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-6bc4cc0ee46735819a04",
+              "file": "validation/rate-input.spec.js",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_028 - Boundary 24K 1 is accepted and 22K / 18K are calculated @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-a87b6ddac85b8efe435d",
+              "file": "validation/rate-input.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "TC_GR_029 - Boundary 24K 99999.99 is accepted and 22K / 18K are calculated @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "494b6fd625e941b1a23d-8090f348d097f5a535a8",
+              "file": "validation/rate-input.spec.js",
+              "line": 19,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-15T06:53:24.511Z",
+    "duration": 68.96100000000001,
+    "expected": 0,
+    "skipped": 61,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

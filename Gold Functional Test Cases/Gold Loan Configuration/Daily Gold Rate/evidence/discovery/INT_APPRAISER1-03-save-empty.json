@@ -1,0 +1,228 @@
+{
+  "url": "http://host214.kapilits.com:8411/#/Loans/GoldLoanConfiguration?open=GoldRateConfiguration",
+  "inputs": [
+    {
+      "tag": "ng-select",
+      "formcontrolname": "urlName",
+      "placeholder": "Select",
+      "class": "nav-search-custom ng-select ng-select-single ng-select-searchable ng-select-clea",
+      "text": "×"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "checkbox",
+      "value": "on"
+    },
+    {
+      "tag": "input",
+      "placeholder": "Search in all columns...",
+      "class": "form-control search-k-cst sb"
+    },
+    {
+      "tag": "ng-select",
+      "formcontrolname": "Daterange",
+      "placeholder": "Select",
+      "class": "ng-select ng-select-single ng-select-searchable ng-untouched ng-pristine ng-vali",
+      "text": "Last 30 Days"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "formcontrolname": "pLoantype",
+      "class": "form-control gcfg-readonly-field ng-untouched ng-pristine ng-valid",
+      "value": "Gold Loan"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "ptransdate",
+      "placeholder": "Date picker here",
+      "class": "form-control ng-untouched ng-pristine ng-valid",
+      "value": "13/10/2026"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pgoldrate",
+      "placeholder": "GOLD RATE",
+      "class": "form-control ng-untouched ng-pristine ng-valid"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pgoldrate",
+      "placeholder": "Calculated automatically",
+      "class": "form-control gcfg-readonly-field ng-untouched ng-pristine ng-valid"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pgoldrate",
+      "placeholder": "Calculated automatically",
+      "class": "form-control gcfg-readonly-field ng-untouched ng-pristine ng-valid"
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "a",
+      "id": "mhalltitle66",
+      "class": "btn btn-link collapsed",
+      "text": "Contact Configuration"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle61",
+      "class": "btn btn-link collapsed",
+      "text": "Loan Configuration"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle62",
+      "class": "btn btn-link collapsed",
+      "text": "Loan Origination"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle63",
+      "class": "btn btn-link collapsed",
+      "text": "Credit Evaluation"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle64",
+      "class": "btn btn-link collapsed",
+      "text": "Loan Management"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle65",
+      "class": "btn btn-link collapsed",
+      "text": "Reports & Letters"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle81",
+      "class": "btn btn-link collapsed",
+      "text": "Nach"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle84",
+      "class": "btn btn-link collapsed",
+      "text": "Npa"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle85",
+      "class": "btn btn-link collapsed",
+      "text": "Suit"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle88",
+      "class": "btn btn-link collapsed",
+      "text": "Vehicle Loan"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle90",
+      "class": "btn btn-link",
+      "text": "Gold"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle67",
+      "class": "btn btn-link collapsed",
+      "text": "Configuration"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle68",
+      "class": "btn btn-link collapsed",
+      "text": "Transactions"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle69",
+      "class": "btn btn-link collapsed",
+      "text": "Reports"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle89",
+      "class": "btn btn-link collapsed",
+      "text": "Invoice"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle71",
+      "class": "btn btn-link collapsed",
+      "text": "Assign Forms"
+    },
+    {
+      "tag": "a",
+      "id": "mhalltitle82",
+      "class": "btn btn-link collapsed",
+      "text": "Audit Log"
+    },
+    {
+      "tag": "a",
+      "class": "btn-expand-collapse"
+    },
+    {
+      "tag": "a",
+      "id": "dropdownMenuLink",
+      "title": "Quick Links",
+      "class": "btn dropdown-toggle border-0 p-0"
+    },
+    {
+      "tag": "a",
+      "id": "dropdownMenuLink",
+      "class": "btn dropdown-toggle border-0 p-0"
+    },
+    {
+      "tag": "a",
+      "class": "btn btn-b-icon border-0",
+      "text": "New"
+    },
+    {
+      "tag": "a",
+      "class": "btn btn-g-icon mr-4 px-3 border-0",
+      "text": "Clear"
+    },
+    {
+      "tag": "button",
+      "class": "btn btn-b-icon px-3 border-0",
+      "text": "Save"
+    },
+    {
+      "tag": "button",
+      "class": "toast-close-button ng-tns-c23-0 ng-star-inserted",
+      "text": "×"
+    }
+  ],
+  "labels": [
+    "Date Range",
+    "Trans Date",
+    "24K (99.9% pure gold)",
+    "22K (91.6% gold and 8.4% alloyed metals)",
+    "18K (75% gold and 25% alloyed metals)",
+    "Online Gold Rate Submission",
+    "Loan Type",
+    "Trans Date",
+    "24K (99.9% pure gold)",
+    "Gold Rate (Per Gram) - enter this",
+    "22K (91.6% gold and 8.4% alloyed metals) Auto",
+    "Gold Rate (Per Gram) - calculated",
+    "18K (75% gold and 25% alloyed metals) Auto",
+    "Gold Rate (Per Gram) - calculated"
+  ],
+  "body": "×\nDashboard\nContact\nContact\nContact Configuration\nLoans\nLoans\nLoan Configuration\nLoan Origination\nCredit Evaluation\nLoan Management\nReports & Letters\nNach\nNpa\nSuit\nVehicle Loan\nGold\nGold Estimates\nGold Estimate Approval Queue\nInventory Form\nMy Gold Estimates\nGold Token\nGold Stock\nAudit Custodian Desk\nGold Loan Configuration\nGold Audit\nAccounting\nAccounting\nConfiguration\nTransactions\nReports\nInvoice\nSettings\nSettings\nAssign Forms\nAudit Log\nLoans\nGold\n Gold Loan Configuration\n HEAD OFFICE\n\nFinsta User\n\nGOLD LOAN\n\nGold Loan Configuration\n\nEvery gold-loan master, configuration and pre-estimate setup in one place. Each screen opens with the same access rules as its own menu entry.\n\n3\nof 14 available to you\nOverview\nGold Rate & Purity\nDaily Gold Rate\n\nOnline and internal per-gram rates by carat. Manage Carats (purity types) is inside this screen.\n\nGOLD LOAN CONFIGURATION\n\nDaily Gold Rate\n\nEnter the 24K gold rate - every other carat is calculated automatically. Saved immediately, no Checker approval required.\n\nMANUAL GOLD RATE ENTRY IN GOLD ESTIMATES\nOff\nOnline Rate\nInternal Rate\nDate Range\nLast 30 Days\nNew\nTrans Date\n\t\n24K (99.9% pure gold)\n\t\n22K (91.6% gold and 8.4% alloyed metals)\n\t\n18K (75% gold and 25% alloyed metals)\n\t\n13/10/2026\t₹ 15,175.60\t₹ 13,900.85\t₹ 11,381.70\t\n12/10/2026\t₹ 15,108.50\t₹ 13,839.39\t₹ 11,331.38\t\n10/10/2026\t₹ 15,009.00\t₹ 13,748.24\t₹ 11,256.75\t\n09/10/2026\t₹ 15,239.20\t₹ 13,959.11\t₹ 11,429.40\t\n08/10/2026\t₹ 15,169.00\t₹ 13,894.80\t₹ 11,376.75\t\n07/10/2026\t₹ 15,098.50\t₹ 13,830.23\t₹ 11,323.88\t\n06/10/2026\t₹ 15,025.90\t₹ 13,763.72\t₹ 11,269.42\t\n05/10/2026\t₹ 14,819.80\t₹ 13,574.94\t₹ 11,114.85\t\n03/10/2026\t₹ 15,137.20\t₹ 13,865.68\t₹ 11,352.90\t\n02/10/2026\t₹ 15,054.00\t₹ 13,789.46\t₹ 11,290.50\t\n01/10/2026\t₹ 14,813.80\t₹ 13,569.44\t₹ 11,110.35\t\n30/09/2026\t₹ 14,788.80\t₹ 13,546.54\t₹ 11,091.60\t\n29/09/2026\t₹ 14,766.70\t₹ 13,526.30\t₹ 11,075.02\t\n28/09/2026\t₹ 14,798.00\t₹ 13,554.97\t₹ 11,098.50\t\n26/09/2026\t₹ 14,977.90\t₹ 13,719.76\t₹ 11,233.42\t\n25/09/2026\t₹ 15,211.30\t₹ 13,933.55\t₹ 11,408.48\t\n24/09/2026\t₹ 15,078.50\t₹ 13,811.91\t₹ 11,308.88\t\n23/09/2026\t₹ 15,201.60\t₹ 13,924.67\t₹ 11,401.20\t\n22/09/2026\t₹ 15,213.60\t₹ 13,935.66\t₹ 11,410.20\t\n21/09/2026\t₹ 15,333.70\t₹ 14,045.67\t₹ 11,500.28\t\n19/09/2026\t₹ 15,106.80\t₹ 13,837.83\t₹ 11,330.10\t\n18/09/2026\t₹ 15,372.70\t₹ 14,081.39\t₹ 11,529.53\t\n17/09/2026\t₹ 15,184.90\t₹ 13,909.37\t₹ 11,388.68\t\n16/09/2026\t₹ 15,236.20\t₹ 13,956.36\t₹ 11,427.15\t\n15/09/2026\t₹ 15,090.20\t₹ 13,822.62\t₹ 11,317.65\t\n14/09/2026\t₹ 15,047.60\t₹ 13,783.60\t₹ 11,285.70\t\n12/09/2026\t₹ 15,016.60\t₹ 13,755.21\t₹ 11,262.45\t\n11/09/2026\t₹ 15,193.80\t₹ 13,917.52\t₹ 11,395.35\t\n10/09/2026\t₹ 15,328.70\t₹ 14,041.09\t₹ 11,496.53\t\n09/09/2026\t₹ 15,348.60\t₹ 14,059.32\t₹ 11,511.45\t\nAverage Rate\t₹ 15,098.22\t₹ 13,829.97\t₹ 11,323.67\t\n1\n1 - 30 of 30 items\n\nNEW ENTRY\n\nOnline Gold Rate Submission\nLoan Type\nTrans Date\n24K (99.9% pure gold)\nGold Rate (Per Gram) - enter this\n₹\n22K (91.6% gold and 8.4% alloyed metals) Auto\nGold Rate (Per Gram) - calculated\n₹\n18K (75% gold and 25% alloyed metals) Auto\nGold Rate (Per Gram) - calculated\n₹\nEnter the 24K rate - 22K, 18K and 14K are calculated automatically from it, and every other carat takes the same rate as the nearest higher tier (21K/20K/19K = 22K's rate). Saves immediately (no Checker approval), and also submits the next working day's Internal Rate (this date's closing is its previous closing) for Checker approval.\nClearSave\n\n\n×\nWarning!\nPlease enter the 24K Gold Rate - every other carat is derived from it."
+}

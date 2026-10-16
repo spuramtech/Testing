@@ -1,0 +1,14 @@
+{
+  "barcode": "BH2610000025",
+  "loanNumber": "GLNG0126100000018",
+  "customer": "Autotest Eidefj Qa",
+  "type": "BH",
+  "generatedBy": "admin",
+  "status": "Used",
+  "newlyGenerated": true,
+  "savedAt": "2026-10-14T10:48:12.445Z",
+  "usedIn": "Inventory Form",
+  "vaultName": "AUTOTEST Strong Room 42892",
+  "safeNo": "S6260",
+  "locker": "1"
+}

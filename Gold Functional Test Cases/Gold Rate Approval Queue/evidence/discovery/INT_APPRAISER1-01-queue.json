@@ -1,0 +1,113 @@
+{
+  "buttons": [
+    {
+      "text": "Contact Configuration",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Loan Configuration",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Loan Origination",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Credit Evaluation",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Loan Management",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Reports & Letters",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Nach",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Npa",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Suit",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Vehicle Loan",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Gold",
+      "title": "",
+      "cls": "btn btn-link"
+    },
+    {
+      "text": "Configuration",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Transactions",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Reports",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Invoice",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Assign Forms",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Audit Log",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "",
+      "title": "Quick Links",
+      "cls": "btn dropdown-toggle border-0 p-0"
+    },
+    {
+      "text": "",
+      "title": "",
+      "cls": "btn dropdown-toggle border-0 p-0"
+    }
+  ],
+  "inputs": [
+    {
+      "tag": "NG-SELECT",
+      "fc": "urlName"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "ph": "",
+      "value": ""
+    }
+  ],
+  "text": "×\nDashboard\nContact\nContact\nContact Configuration\nLoans\nLoans\nLoan Configuration\nLoan Origination\nCredit Evaluation\nLoan Management\nReports & Letters\nNach\nNpa\nSuit\nVehicle Loan\nGold\nGold Estimates\nGold Estimate Approval Queue\nInventory Form\nMy Gold Estimates\nGold Token\nGold Stock\nAudit Custodian Desk\nGold Loan Configuration\nGold Audit\nAccounting\nAccounting\nConfiguration\nTransactions\nReports\nInvoice\nSettings\nSettings\nAssign Forms\nAudit Log\nLoans\nGold\n Gold Loan Configuration\n HEAD OFFICE\n\nFinsta User\n\nGOLD LOAN\n\nGold Loan Configuration\n\nEvery gold-loan master, configuration and pre-estimate setup in one place. Each screen opens with the same access rules as its own menu entry.\n\n3\nof 14 available to you\nGold Rate & Purity\n\nDaily rates and the carat/purity list every valuation is priced against.\n\nDaily Gold Rate\nOnline and internal per-gram rates by carat. Manage Carats (purity types) is inside this screen.\nGold Rate Approval\nChecker approval of the day's internal gold rates. Only users set as Gold Rate checkers can open it.\nOnly Gold Rate checkers (Form-wise Approvals > Gold Rate)\nSchemes, LTV & Rebate\n\nWhat a pledge is worth, at what rate and tenure, and the rebate on early closure.\n\nGold Scheme Matrix\nGold schemes: type (Bullet/Monthly), tenure, interest rate and internal LTV.\nNo view permission in User Rights for GoldSchemeMatrix\nLTV Slab Master\nRBI, internal and product maximum LTV % by loan amount range.\nNo view permission in User Rights for LTVSlabMaster\nGold Loan Rebate\nRebate slabs by tenure and base rate (\"paid within N months\" to effective rate).\nNo view permission in User Rights for GoldLoanRebateMaster\nAppraisal & Pre-Estimate Setup\n\nRules and pick-lists the Gold Estimate screen and its approval workflow use.\n\nPurity Deduction\nDeduction % applied to net weight by purity (SOP Table 1.6).\nNo view permission in User Rights for PurityDeductionMaster\nStone Deduction\nStone weight deduction rules (SOP Table 1.5).\nNo view permission in User Rights for StoneDeductionMaster\nGold Article Types\nOrnament / article types offered on the estimate. Same list as the \"+\" popup on Gold Estimates.\nArticle Limits\nMaximum quantity per article type, prohibited articles and ED/MD approvers.\nNo view permission in User Rights for GoldArticleLimitMaster\nEstimate Remarks\nRemarks the appraiser can pick per article. Same list as the \"+\" popup on Gold Estimates.\nEstimate Approval Slabs\nHow many internal / external appraisal stages an estimate needs, by amount.\nNo view permission in User Rights for GoldEstimateSlabConfig\nBranch Appraiser Pools\nWho may act as Branch Head, Internal and External Appraiser, per branch.\nNo view permission in User Rights for GoldEstimateRolePool\nVault & Safe\n\nStorage locations a pledged packet must be assigned to before disbursal.\n\nVault\nVaults per branch.\nNo view permission in User Rights for Vaultconfig\nSafe & Lockers\nSafes in each vault and their locker numbers.\nNo view permission in User Rights for Chabinetconfig\n\n"
+}

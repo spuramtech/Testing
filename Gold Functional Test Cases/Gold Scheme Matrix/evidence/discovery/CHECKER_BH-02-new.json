@@ -1,0 +1,290 @@
+{
+  "inputs": [
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "",
+      "fc": null,
+      "val": "20",
+      "opts": [
+        "BIJAY FINANCE AND INVESTMENT PVT LTD-HEAD OFFICE"
+      ]
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "INPUT",
+      "type": "checkbox",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "on"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "",
+      "fc": "pLoanId",
+      "val": "0: null",
+      "opts": [
+        "Select the loan this scheme is aligned to",
+        "Extra (PLE)",
+        "New Gold (GLNG)"
+      ]
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": "pSchemeCode",
+      "ph": "GL-QUICK",
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": "pSchemeName",
+      "ph": "GL-Quick",
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": "pTenureMonths",
+      "ph": "3",
+      "val": "3"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "id": "",
+      "fc": "pSchemeType",
+      "val": "BULLET",
+      "opts": [
+        "Bullet (interest accrues over the whole tenure)",
+        "Regular Monthly Repayment (interest settles one month at a time, e.g. GL-Smart)"
+      ]
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": "pRateOfInterest",
+      "ph": "0.00",
+      "val": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": "pEffectiveFrom",
+      "ph": "",
+      "ro": true,
+      "val": "15/10/2026"
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": "schemeStatusActive",
+      "fc": "pStatus",
+      "ph": "",
+      "val": "ACTIVE"
+    },
+    {
+      "tag": "INPUT",
+      "type": "radio",
+      "id": "schemeStatusInactive",
+      "fc": "pStatus",
+      "ph": "",
+      "val": "INACTIVE"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "0"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "id": "",
+      "fc": null,
+      "ph": "",
+      "val": "0"
+    }
+  ],
+  "buttons": [
+    "New Scheme",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Edit",
+    "Delete",
+    "Apply to all slabs below",
+    "Add Slab",
+    "Exclude this amount range from this scheme",
+    "Exclude this amount range from this scheme",
+    "Exclude this amount range from this scheme",
+    "Clear",
+    "Save Scheme"
+  ],
+  "headers": [
+    "COMPANY",
+    "Scheme",
+    "Tenure",
+    "Type",
+    "Interest %",
+    "Paise/mo",
+    "Internal LTV by slab",
+    "Scheme on",
+    "Action",
+    "Gold Scheme Configuration",
+    "Loan (Loans Configuration) *",
+    "Scheme Code",
+    "Scheme Name",
+    "Tenure (months)",
+    "Scheme Type",
+    "Default Interest Rate % p.a.",
+    "Effective From",
+    "Status",
+    "Active",
+    "Inactive",
+    "INTEREST & INTERNAL LTV BY AMOUNT SLAB",
+    "Amount slab",
+    "RBI LTV",
+    "Interest % p.a.",
+    "Paise / mo",
+    "Internal LTV",
+    "Applies?"
+  ],
+  "text": "COMPANY BIJAY FINANCE AND INVESTMENT PVT LTD-HEAD OFFICE UNIFIED SCHEME MATRIX FOR THIS COMPANY On New Scheme Scheme Tenure Type Interest % Paise/mo Internal LTV by slab Scheme on Action GL-QUICK GL-quick 3 mo Bullet 22.00% 1.833 80.57% / 75.83% / 71.09% GL-SMART GL-smart 3 mo Regular Monthly Repayment 14.00% 1.167 84.02% / 79.08% / 74.14% GLP GOLD OLD 3 mo Bullet 24.00% 2.00 80.19% / 75.47% / 70.75% GL-FLEXI GL-Flexi 6 mo Bullet 22.00% 1.83 76.58% / 72.07% / 67.57% GL-Smart GL-Smart 6 mo Regular Monthly Repayment 14.00% 1.167 84.02% / 79.08% / 74.14% AT-02192 AUTOTEST SCHEME 02192 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-02476 AUTOTEST SCHEME 02476 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-10325 AUTOTEST SCHEME 10325 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-23482 AUTOTEST SCHEME 23482 9 mo Bullet 18.00% 1.50 74.89% / 70.48% / 66.08% AT-32076 AUTOTEST SCHEME 32076 9 mo Regular Monthly Repayment 18.00% 1.50 83.74% / 78.82% / 73.89% 1 2 ... 1 - 10 of 23 items NEW ENTRY Gold Scheme Configuration Loan (Loans Configuration) * Select the loan this scheme is aligned to Extra (PLE) New Gold (GLNG) Contact/applicant type, payin and interest type still come from this loan's own configuration — the scheme only refines interest and LTV on top of it. Scheme Code Scheme Name Tenure (months) Scheme Type Bullet (interest accrues over the whole tenure) Regular Monthly Repayment (interest settles one month at a time, e.g. GL-Smart) Default Interest Rate % p.a. Apply to all slabs below Used when adding a scheme, and as the \"reset\" starting point for the per-slab table below — interest can still differ by amount slab (e.g. GL-Quick: 20% under 2.5L, 22% above). Effective From Status Active Inactive INTEREST & INTERNAL LTV BY AMOUNT SLAB Add Slab Amount slab RBI LTV Interest % p.a. Paise / mo Internal LTV Applies? 0 – 2,50,000 85.00% 85.00% 2,50,000 – 5,00,000 80.00% 80.00% 5,00,000 – Unlimited 75.00% 75.00% RBI LTV and the amount ranges themselves are read-only here — edit those on the existing LTV Slab Master screen. Internal LTV recalculates as you change a slab's interest rate; use the trash/plus icon to exclude or bring back a range for this scheme only. ClearSave Scheme"
+}

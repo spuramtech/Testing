@@ -1,0 +1,27 @@
+// Test-type categories for the report.
+const ids = (...n) => n.map((x) => `TC_GS_${x}`);
+module.exports = [
+  ['Navigation & UI layout', ids('001', '002', '010')],
+  ['Default values & dropdowns', ids('003', '011', '012', '013', '014')],
+  ['Pagination & sorting', ids('004', '005')],
+  ['Data consistency', ids('006', '007', '008', '009')],
+  ['Date validation', ids('015')],
+  ['Clear / Reset', ids('016')],
+  ['Input validation', ids('017', '018', '019', '020', '021', '022', '023', '024', '025', '026')],
+  ['Required fields & negative save', ids('027', '028', '029', '030', '031')],
+  ['Boundary values (rate 2 % – 24 %)', ids('032', '071', '072', '073', '074')],
+  ['Business rules – slabs & Internal LTV', ids('033', '034', '035', '036', '037', '038', '039', '040', '041')],
+  ['API payload', ids('042', '043')],
+  ['Error recovery', ids('044', '045', '046')],
+  ['Double submit', ids('047')],
+  ['Create / Read', ids('048', '049', 'NA2')],
+  ['Update / Edit', ids('050', '051', '059')],
+  ['Duplicate prevention', ids('052')],
+  ['Workflow state (Scheme on, effectiveness)', ids('053', '056', '068')],
+  ['Delete & Cancel', ids('054', '055')],
+  ['Role-based access', ids('057', '058')],
+  ['API', ids('060', '061', '062', '063', '064')],
+  ['Accessibility & responsive', ids('065', '066', '067')],
+  ['Concurrency / session / browser', ids('069', '070')],
+  ['Not applicable', ids('NA1')],
+];

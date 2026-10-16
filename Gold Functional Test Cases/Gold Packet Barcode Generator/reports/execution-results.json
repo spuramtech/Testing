@@ -1,0 +1,2617 @@
+{
+  "summary": {
+    "generated": 69,
+    "automated": 61,
+    "discovered": 61,
+    "executed": 59,
+    "passed": 52,
+    "failed": 7,
+    "blocked": 0,
+    "skipped": 2,
+    "notExecuted": 4,
+    "na": 4,
+    "discoveryAvailable": true,
+    "runStats": {
+      "startTime": "2026-10-16T05:52:46.450Z",
+      "duration": 1348157.9419999998,
+      "expected": 51,
+      "skipped": 2,
+      "unexpected": 8,
+      "flaky": 0
+    },
+    "generatedAt": "2026-10-16T06:19:46.937Z",
+    "baseURL": "http://host214.kapilits.com:8411/",
+    "reconciles": true
+  },
+  "rows": [
+    {
+      "id": "TC_PB_001",
+      "req": "REQ-01",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Generator",
+      "scenario": "Page layout",
+      "type": "Positive / UI",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "-",
+      "steps": [
+        "Open the generator"
+      ],
+      "expected": "Subtitle, TYPE (BH / Audit), LOAN NUMBER, EMPLOYEE NAME, View Register, Generate barcode",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "@smoke",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": " Generate a one-time barcode sticker for a pledged gold packet View Register TYPE * BH Audit Loans approved / disbursed and not yet packeted. LOAN NUMBER * × EMPLOYEE NAME Finsta Admin Generate barcode ",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.6,
+      "timestamp": "2026-10-16T05:57:30.413Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--47ff5-te-barcode-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_002",
+      "req": "REQ-01",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Type",
+      "scenario": "Default type",
+      "type": "Default value",
+      "priority": "P2",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "-",
+      "steps": [
+        "Read the Type radios"
+      ],
+      "expected": "BH (value New) selected",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Default values & field state",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Checked type value \"New\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.7,
+      "timestamp": "2026-10-16T05:57:49.997Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--6d98a-e-defaults-to-BH-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_003",
+      "req": "REQ-01",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Employee Name",
+      "scenario": "Logged-in user, read-only",
+      "type": "Default value / Field state",
+      "priority": "P2",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "-",
+      "steps": [
+        "Read Employee Name"
+      ],
+      "expected": "Finsta Admin; not editable",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Default values & field state",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Employee \"Finsta Admin\", editable inputs holding the name: 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.7,
+      "timestamp": "2026-10-16T05:58:07.722Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--3c77a-cannot-be-edited-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_004",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "BH list = loans not yet packeted",
+      "type": "Data consistency",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "getloansforbarcode?Type=New",
+      "steps": [
+        "Open the list",
+        "Compare with API"
+      ],
+      "expected": "Same loans",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "@smoke",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "UI 7, API 7",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.1,
+      "timestamp": "2026-10-16T05:58:28.428Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--bfe71-t-packeted-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_005",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "Audit list = loans in inventory",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "getloansforbarcode?Type=Audit",
+      "steps": [
+        "Select Audit",
+        "Compare"
+      ],
+      "expected": "Same loans",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "UI 27, API 27",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.4,
+      "timestamp": "2026-10-16T05:58:46.522Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--4235f-ady-in-inventory-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_006",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Type",
+      "scenario": "Switch to Audit",
+      "type": "Dependent field",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "Audit",
+      "steps": [
+        "Select Audit"
+      ],
+      "expected": "Hint \"Loans that already have a packet in inventory\"; different loan list",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Dropdown / autocomplete",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "BH 7 loans, Audit 27 loans",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.5,
+      "timestamp": "2026-10-16T05:59:04.927Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--bd91a-nd-the-loan-list-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_007",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "Option text",
+      "type": "Dropdown",
+      "priority": "P3",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "-",
+      "steps": [
+        "Open the list"
+      ],
+      "expected": "Each option \"GLNG… - applicant\"",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Dropdown / autocomplete",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "GLNG0126060000001 - Autotest Eidefj Qa | GLNG0126090000001 - Sk Farukh | GLNG0126090000002 - Naga Vardhan Reddy Dwarakacharla",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.8,
+      "timestamp": "2026-10-16T05:59:23.467Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--7541a-d-applicant-name-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_008",
+      "req": "REQ-03",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Generate",
+      "scenario": "Generate without a loan",
+      "type": "Required field",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "no loan",
+      "steps": [
+        "Generate barcode"
+      ],
+      "expected": "No preview, no Print sticker",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "@smoke",
+      "category": "Required field & input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Preview shown: false; hint: true",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.2,
+      "timestamp": "2026-10-16T05:59:41.224Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--13a09-no-preview-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_009",
+      "req": "REQ-03",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Preview",
+      "scenario": "Preview content",
+      "type": "Positive",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "first BH loan",
+      "steps": [
+        "Select loan",
+        "Generate"
+      ],
+      "expected": "\"Preview - not yet recorded\"; branch, type BH, loan, employee; no barcode number yet",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "@smoke",
+      "category": "Preview",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "New Preview - not yet recorded Print sticker BRANCHHEAD OFFICE TYPEBH DATE- LOAN NO GLNG0126060000001 Barcode number is assigned only when you click \"Print sticker\" EMPLOYEE Finsta Admin SIGNATURE Sticker prints at actua",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.3,
+      "timestamp": "2026-10-16T06:16:26.240Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--cd3c7-number-yet-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_010",
+      "req": "REQ-03",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Preview",
+      "scenario": "Generate writes nothing",
+      "type": "Persistence",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "-",
+      "steps": [
+        "Select loan",
+        "Generate"
+      ],
+      "expected": "No POST/PUT sent",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Preview",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Write requests: 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.3,
+      "timestamp": "2026-10-16T06:00:19.217Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--6f4a4--request-is-sent-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_011",
+      "req": "REQ-03",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Preview",
+      "scenario": "Preview after switching type (HYPOTHESIS)",
+      "type": "Dependent field",
+      "priority": "P2",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "BH → Audit",
+      "steps": [
+        "Generate BH preview",
+        "Select Audit"
+      ],
+      "expected": "BH preview cleared or changed to Audit",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Preview",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "BH preview still shown after selecting Audit: New Preview - not yet recorded Print sticker BRANCHHEAD OFFICE TYPEBH DATE- LOAN NO GLNG0126060000001 Barcode number is ",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: false\nReceived: true\n\n  104 |     const stale = /not yet recorded/.test(t) && /TYPE\\s*BH/.test(t);\n  105 |     record(stale ? `BH preview still shown after selecting Audit: ${t.slice(0, 120)}` : 'Preview cleared or updated');\n> 106 |     expect(stale).toBe(false);\n      |                   ^\n  107 |   });\n  108 |\n  109 |   test('TC_PB_012 - Typing in Loan Number filters the list @regression', async ({ bc, page, record }) => {",
+      "expectedVerified": false,
+      "duration": 22,
+      "timestamp": "2026-10-16T06:17:49.559Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--aa04b--type-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/functional-generator-Gold--aa04b--type-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/functional-generator-Gold--aa04b--type-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-001",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_012",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "Type-ahead filter",
+      "type": "Autocomplete",
+      "priority": "P2",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "full loan no.",
+      "steps": [
+        "Type the loan number"
+      ],
+      "expected": "Only that loan listed",
+      "script": "tests/functional/generator.spec.js",
+      "tags": "",
+      "category": "Dropdown / autocomplete",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "\"GLNG0126060000001\" → 1 option(s)",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.5,
+      "timestamp": "2026-10-16T06:01:00.022Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-generator-Gold--d7221-filters-the-list-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/generator.spec.js"
+    },
+    {
+      "id": "TC_PB_013",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "Unknown loan",
+      "type": "Negative / Invalid selection",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "GLNG9999999999999",
+      "steps": [
+        "Type",
+        "Enter"
+      ],
+      "expected": "\"No items found\"; nothing selected",
+      "script": "tests/validation/loan-select.spec.js",
+      "tags": "",
+      "category": "Required field & input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Options [\"No items found\"]; selected \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.9,
+      "timestamp": "2026-10-16T06:14:15.833Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-loan-select-Gol-64075-nnot-be-selected-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/loan-select.spec.js"
+    },
+    {
+      "id": "TC_PB_014",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "Special characters",
+      "type": "Special characters",
+      "priority": "P3",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "'\"<script>%",
+      "steps": [
+        "Type"
+      ],
+      "expected": "\"No items found\"; no error",
+      "script": "tests/validation/loan-select.spec.js",
+      "tags": "",
+      "category": "Required field & input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Options \"No items found\"; toasts \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.3,
+      "timestamp": "2026-10-16T06:14:34.877Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-loan-select-Gol-e4e3b-d-cause-no-error-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/loan-select.spec.js"
+    },
+    {
+      "id": "TC_PB_015",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "Clear (x)",
+      "type": "Clear / Reset",
+      "priority": "P3",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "-",
+      "steps": [
+        "Select loan",
+        "Click x"
+      ],
+      "expected": "Loan cleared",
+      "script": "tests/validation/loan-select.spec.js",
+      "tags": "",
+      "category": "Clear / Reset",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "After clear: \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.3,
+      "timestamp": "2026-10-16T06:14:55.233Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/validation-loan-select-Gol-4772c-he-selected-loan-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/validation/loan-select.spec.js"
+    },
+    {
+      "id": "TC_PB_016",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Print sticker",
+      "scenario": "BH print payload",
+      "type": "API payload",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered as none (SIMULATED); Generate clicked",
+      "data": "BH",
+      "steps": [
+        "Print sticker"
+      ],
+      "expected": "One POST generatebarcode: pType New, loan, employee, branch",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "@smoke",
+      "category": "Print payload & success",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"pType\":\"New\",\"pLoanid\":\"GLNG0126060000001\",\"pEmployeeid\":14,\"pEmployeename\":\"Finsta Admin\",\"pBranchid\":1,\"pBranchname\":\"HEAD OFFICE\",\"pCreatedby\":14}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.3,
+      "timestamp": "2026-10-16T05:54:00.196Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--32f63-and-branch-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_017",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Print sticker",
+      "scenario": "Audit print payload",
+      "type": "API payload",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered as none (SIMULATED); Generate clicked (type Audit)",
+      "data": "Audit",
+      "steps": [
+        "Print sticker"
+      ],
+      "expected": "pType Audit, loan",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Print payload & success",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"pType\":\"Audit\",\"pLoanid\":\"GLNG0126050000001\",\"pEmployeeid\":14,\"pEmployeename\":\"Finsta Admin\",\"pBranchid\":1,\"pBranchname\":\"HEAD OFFICE\",\"pCreatedby\":14}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 22.3,
+      "timestamp": "2026-10-16T05:54:20.692Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--32a0d-sends-type-Audit-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_018",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Print sticker",
+      "scenario": "Success message (SIMULATED reply)",
+      "type": "Positive",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered as none (SIMULATED); Generate clicked",
+      "data": "reply BH9999999999",
+      "steps": [
+        "Print sticker"
+      ],
+      "expected": "\"Recorded sticker BH9999999999\"; \"Barcode … recorded for loan …. It can only be used once.\"",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Print payload & success",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Success! | Barcode BH9999999999 recorded for loan GLNG0126060000001. It can only be used once. | New Recorded sticker BH9999999999 Print again BRANCHHEAD OFFICE TYPEBH DATE2026-10-16T05:55:01.638Z LOAN NO GLNG01260600",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21.3,
+      "timestamp": "2026-10-16T05:54:43.028Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--d5c12-use-once-message-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_019",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Print sticker",
+      "scenario": "Network failure",
+      "type": "Error recovery",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered as none (SIMULATED); Generate clicked",
+      "data": "request aborted",
+      "steps": [
+        "Print sticker"
+      ],
+      "expected": "\"Could not record the barcode - nothing was printed\"",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Error! | Could not record the barcode - nothing was printed. Detail: Unknown Error New Preview - not yet recorded Print sticker BRANCHHEAD OFFICE TYPEBH DATE- LOAN NO GLNG0126060000001 Barcode number ",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21.8,
+      "timestamp": "2026-10-16T05:55:04.344Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--64c51--recorded-number-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_020",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Print sticker",
+      "scenario": "Server error 500",
+      "type": "Error recovery",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered as none (SIMULATED); Generate clicked",
+      "data": "HTTP 500",
+      "steps": [
+        "Print sticker"
+      ],
+      "expected": "Error shown, no success",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Error! | Could not record the barcode - nothing was printed. Detail: Internal error New Preview - not yet recorded Print sticker BRANCHHEAD OFFICE TYPEBH DATE- LOAN NO GLNG0126060000001 Barcode number",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.9,
+      "timestamp": "2026-10-16T05:55:26.158Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--8159e-rror-not-success-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_021",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Print sticker",
+      "scenario": "Double click",
+      "type": "Double submit",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered as none (SIMULATED); Generate clicked",
+      "data": "-",
+      "steps": [
+        "Double-click Print sticker"
+      ],
+      "expected": "Only one request",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Double submit",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Requests sent: 1",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 22.4,
+      "timestamp": "2026-10-16T05:55:47.103Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--ada0d-ecords-only-once-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_022",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "One unused barcode",
+      "scenario": "Loan already has an unused barcode",
+      "type": "Business rule",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered with BH9999999998 (SIMULATED); Generate clicked",
+      "data": "-",
+      "steps": [
+        "Generate"
+      ],
+      "expected": "\"already has an unused barcode\"; Cancel old & generate new offered; no Print sticker",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Business rules (one barcode / packet)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "This loan already has an unused barcode × Loan GLNG0126060000001 already has a barcode that was generated but never used. It must be used at inventory as-is - it cannot be reused or regenerated with the same number. Existing barcode no. BH9999999998 Generated ",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.1,
+      "timestamp": "2026-10-16T05:56:09.463Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--5e3a4-ode-generate-new-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_023",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel old & generate new",
+      "scenario": "No reason",
+      "type": "Required field",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered with BH9999999998 (SIMULATED); Generate clicked",
+      "data": "blank reason",
+      "steps": [
+        "Click Cancel old & generate new"
+      ],
+      "expected": "Nothing sent",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Required field & input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Button disabled: false; cancel requests 0; message \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.1,
+      "timestamp": "2026-10-16T05:56:27.579Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--4aaac-eason-is-refused-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_024",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel old & generate new",
+      "scenario": "With reason",
+      "type": "API payload",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked; first loan selected; \"unused barcode\" check answered with BH9999999998 (SIMULATED); Generate clicked",
+      "data": "reason text",
+      "steps": [
+        "Type reason",
+        "Click"
+      ],
+      "expected": "cancelbarcode with old barcode and the reason",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Cancel barcode",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"pBarcodeno\":\"BH9999999998\",\"pCancelreason\":\"Superseded before use: sticker damaged – autotest (simulated)\",\"pModifiedby\":14}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21,
+      "timestamp": "2026-10-16T05:56:47.683Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--08c1c-e-and-the-reason-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_025",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "One unused barcode",
+      "scenario": "Live loan with an unused BH barcode",
+      "type": "Business rule",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "Not Used BH loan from register",
+      "steps": [
+        "Select it",
+        "Generate"
+      ],
+      "expected": "Refused, no Print sticker",
+      "script": "tests/business-rules/print.spec.js",
+      "tags": "",
+      "category": "Business rules (one barcode / packet)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "GLNG0126100000019: This loan already has an unused barcode × Loan GLNG0126100000019 already has a barcode that was generated but never used. It must be used at inventory as-is - i",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21.7,
+      "timestamp": "2026-10-16T05:57:08.680Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/business-rules-print-Gold--3eb31-efused-live-data-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/business-rules/print.spec.js"
+    },
+    {
+      "id": "TC_PB_026",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Layout and columns",
+      "type": "Navigation / UI",
+      "priority": "P0",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "View Register"
+      ],
+      "expected": "Barcode no., Type, Loan no., Applicant Name, Created by, Created date, Status, Remarks, Action",
+      "script": "tests/functional/register.spec.js",
+      "tags": "@smoke",
+      "category": "Navigation & UI layout",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Gold Packet Barcode Register | Barcode no. | Type | Loan no. | Applicant Name | Created by | Created date | Status | Remarks | Action",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.2,
+      "timestamp": "2026-10-16T06:01:18.671Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-03baa-ed-columns-smoke-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_027",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Total = API",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "getbarcoderegister",
+      "steps": [
+        "Compare"
+      ],
+      "expected": "Equal",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Pager 74, API 74",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.9,
+      "timestamp": "2026-10-16T06:01:36.922Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-13534-rds-from-the-API-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_028",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Rows = API",
+      "type": "Data consistency",
+      "priority": "P1",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Compare rows"
+      ],
+      "expected": "Barcode, loan, status equal",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Data consistency",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "10 rows checked, 0 mismatches []",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.2,
+      "timestamp": "2026-10-16T06:01:54.857Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-ab441-code-loan-status-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_029",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Status options",
+      "type": "Dropdown",
+      "priority": "P3",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Open Status"
+      ],
+      "expected": "All statuses, Not Used, Used, Cancelled",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Dropdown / autocomplete",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "All statuses, Not Used, Used, Cancelled",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.6,
+      "timestamp": "2026-10-16T06:02:13.092Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-6c870-ed-and-Cancelled-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_030",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Filter Not Used",
+      "type": "Filtering",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "Not Used",
+      "steps": [
+        "Select"
+      ],
+      "expected": "Only Not Used",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Filtering",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "10 rows: Not Used",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.5,
+      "timestamp": "2026-10-16T06:02:30.720Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-e99c1-ot-Used-barcodes-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_031",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Filter Used",
+      "type": "Filtering",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "Used",
+      "steps": [
+        "Select"
+      ],
+      "expected": "Only Used",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Filtering",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "10 rows: Used",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21.9,
+      "timestamp": "2026-10-16T06:02:50.183Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-90123-ly-Used-barcodes-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_032",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Filter Cancelled",
+      "type": "Filtering",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "Cancelled",
+      "steps": [
+        "Select"
+      ],
+      "expected": "Only Cancelled",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Filtering",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "6 rows: Cancelled",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.1,
+      "timestamp": "2026-10-16T06:03:12.094Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-46817-ncelled-barcodes-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_033",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Search by loan",
+      "type": "Search",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "first row loan",
+      "steps": [
+        "Search"
+      ],
+      "expected": "Matching rows",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "\"GLNG0126060000004\" → 1 rows",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21.1,
+      "timestamp": "2026-10-16T06:03:31.158Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-20d29-h-by-loan-number-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_034",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Search by barcode",
+      "type": "Search",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "first row barcode",
+      "steps": [
+        "Search"
+      ],
+      "expected": "Matching rows",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "\"BH2610000032\" → 1 rows",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.3,
+      "timestamp": "2026-10-16T06:03:52.309Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-d2a78-y-barcode-number-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_035",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Search by applicant",
+      "type": "Search",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "first row applicant",
+      "steps": [
+        "Search"
+      ],
+      "expected": "Matching rows",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "\"Sk Azu Umar\" → 3 rows",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.5,
+      "timestamp": "2026-10-16T06:04:11.594Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-db2bb-y-applicant-name-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_036",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Search no match",
+      "type": "Search / Negative",
+      "priority": "P3",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "ZZNOMATCH999",
+      "steps": [
+        "Search"
+      ],
+      "expected": "No rows",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Search",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "0 rows",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21,
+      "timestamp": "2026-10-16T06:04:32.114Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-ca57b-ch-shows-no-rows-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_037",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Cancel only on Not Used",
+      "type": "Business rule",
+      "priority": "P0",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Check Action column"
+      ],
+      "expected": "Cancel button only on Not Used rows",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Business rules (one barcode / packet)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "10 rows, wrong: []",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.4,
+      "timestamp": "2026-10-16T06:04:53.151Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-9f634--a-Cancel-button-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_038",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Barcode number",
+      "scenario": "Format and uniqueness",
+      "type": "Duplicate prevention",
+      "priority": "P1",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "all records",
+      "steps": [
+        "Check numbers"
+      ],
+      "expected": "BH + 10 digits / AUD + 10 digits; no duplicates",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Duplicate prevention",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "74 barcodes, duplicates 0, bad format GLD-20260904-0005/New, GLD-20260904-0004/New, GLD-20260904-0003/New, GLD-20260904-0002/New, GLD-20260904-0001/New",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  -   1\n+ Received  + 112\n\n- Array []\n+ Array [\n+   Object {\n+     \"pApplicantname\": \"\",\n+     \"pBarcodeno\": \"GLD-20260904-0005\",\n+     \"pBranchid\": 0,\n+     \"pBranchname\": \"HEAD OFFICE\",",
+      "expectedVerified": false,
+      "duration": 18.4,
+      "timestamp": "2026-10-16T06:18:12.760Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-fec6b--type-and-unique-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/functional-register-Gold-P-fec6b--type-and-unique-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/functional-register-Gold-P-fec6b--type-and-unique-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-002",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_039",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "One unused barcode",
+      "scenario": "At most one Not Used BH per loan",
+      "type": "Business rule / Data consistency",
+      "priority": "P1",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Check records"
+      ],
+      "expected": "No loan has two",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Business rules (one barcode / packet)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "14 Not Used BH barcodes; loans with more than one: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.2,
+      "timestamp": "2026-10-16T06:05:29.756Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-0dad3--Used-BH-barcode-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_040",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "One packet per loan",
+      "scenario": "At most one Used BH per loan (HYPOTHESIS)",
+      "type": "Business rule / Data consistency",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Check records"
+      ],
+      "expected": "No loan has two",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Business rules (one barcode / packet)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "35 Used BH barcodes; loans with more than one: none",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.9,
+      "timestamp": "2026-10-16T06:05:49.181Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-82aa0--packet-per-loan-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_041",
+      "req": "REQ-02",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Loan Number",
+      "scenario": "BH list excludes packeted loans",
+      "type": "Business rule",
+      "priority": "P1",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Compare BH list with Used BH barcodes"
+      ],
+      "expected": "No overlap",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Business rules (one barcode / packet)",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "7 BH loans; already packeted: GLNG0126090000002 (BH2609000020)",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"GLNG0126090000002\",\n+ ]\n\n  100 |     const both = bh.filter((l) => usedLoans.has(l));\n  101 |     record(`${bh.length} BH loans; already packeted: ${both.map((l) => `${l} (${used.filter((r) => r.pLoanid === l).map((r) => r.pBarcodeno).join(', ')})`).join('; ') || 'none'}`);",
+      "expectedVerified": false,
+      "duration": 18.3,
+      "timestamp": "2026-10-16T06:18:32.375Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-7a42d--Used-BH-barcode-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/functional-register-Gold-P-7a42d--Used-BH-barcode-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/functional-register-Gold-P-7a42d--Used-BH-barcode-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-003",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_042",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Newest first",
+      "type": "Sorting",
+      "priority": "P3",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Read created dates"
+      ],
+      "expected": "Descending",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Sorting & pagination",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "2026101611:15, 2026101516:20, 2026101514:48, 2026101511:32, 2026101511:27",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.6,
+      "timestamp": "2026-10-16T06:06:27.319Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-b3137-ted-newest-first-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_043",
+      "req": "REQ-06",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Register",
+      "scenario": "Paging",
+      "type": "Pagination",
+      "priority": "P3",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Next page"
+      ],
+      "expected": "10 rows per page; page 2 different",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Sorting & pagination",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Page 1 10 rows, page 2 10: BH2610000025",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.9,
+      "timestamp": "2026-10-16T06:06:46.071Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-39525-s-different-rows-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_044",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel dialog",
+      "scenario": "Dialog content",
+      "type": "Positive / UI",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked; Status = Not Used; Cancel clicked on the first row",
+      "data": "-",
+      "steps": [
+        "Read dialog"
+      ],
+      "expected": "Barcode, type, loan; \"permanently unusable\"",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Cancel barcode",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Cancel barcode × This barcode has not been used on a packet. Cancelling will mark it permanently unusable. Barcode no. AUD2610000015 Type Audit Loan no. GLNG0126100000021 Reason for cancellation * Back Confirm cancellation",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.5,
+      "timestamp": "2026-10-16T06:07:06.013Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-2d85b--it-is-permanent-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_045",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel dialog",
+      "scenario": "No reason",
+      "type": "Required field",
+      "priority": "P0",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked; Status = Not Used; Cancel clicked on the first row",
+      "data": "blank",
+      "steps": [
+        "Confirm cancellation"
+      ],
+      "expected": "Nothing sent",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Required field & input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Confirm disabled: false; requests 0; message \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 22.7,
+      "timestamp": "2026-10-16T06:07:25.556Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-82e35-eason-is-refused-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_046",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel dialog",
+      "scenario": "Whitespace reason",
+      "type": "Whitespace input",
+      "priority": "P1",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked; Status = Not Used; Cancel clicked on the first row",
+      "data": "5 spaces",
+      "steps": [
+        "Confirm cancellation"
+      ],
+      "expected": "Nothing sent",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Required field & input validation",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Confirm disabled: false; requests 0; message \"\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.3,
+      "timestamp": "2026-10-16T06:07:48.241Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-e09d0-eason-is-refused-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_047",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel dialog",
+      "scenario": "Cancel payload (SIMULATED reply)",
+      "type": "API payload",
+      "priority": "P1",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked; Status = Not Used; Cancel clicked on the first row",
+      "data": "reason text",
+      "steps": [
+        "Type reason",
+        "Confirm"
+      ],
+      "expected": "cancelbarcode with the barcode and reason",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Cancel barcode",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"pBarcodeno\":\"AUD2610000015\",\"pCancelreason\":\"sticker lost – autotest (simulated)\",\"pModifiedby\":14}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 25.1,
+      "timestamp": "2026-10-16T06:08:08.535Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-3511a-e-and-the-reason-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_048",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel dialog",
+      "scenario": "Back",
+      "type": "Cancel",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked; Status = Not Used; Cancel clicked on the first row",
+      "data": "-",
+      "steps": [
+        "Back"
+      ],
+      "expected": "Dialog closes; nothing sent",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Cancel barcode",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Requests 0",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 19.7,
+      "timestamp": "2026-10-16T06:08:33.631Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-e6705-nd-sends-nothing-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_049",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel dialog",
+      "scenario": "Network failure",
+      "type": "Error recovery",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked; Status = Not Used; Cancel clicked on the first row",
+      "data": "aborted",
+      "steps": [
+        "Confirm"
+      ],
+      "expected": "Error, no success",
+      "script": "tests/functional/register.spec.js",
+      "tags": "",
+      "category": "Error recovery",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Message \"Error! | Unknown Error\"",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 21.8,
+      "timestamp": "2026-10-16T06:08:53.325Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/functional-register-Gold-P-020e9-not-show-success-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/functional/register.spec.js"
+    },
+    {
+      "id": "TC_PB_050",
+      "req": "REQ-08",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Access",
+      "scenario": "Internal appraiser menu",
+      "type": "Role-based access",
+      "priority": "P0",
+      "pre": "INT_APPRAISER1 logged in",
+      "data": "-",
+      "steps": [
+        "Look for the menu entry"
+      ],
+      "expected": "Not available",
+      "script": "tests/negative/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Menu entry not reachable: locator.click: Timeout 20000ms exceeded.",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 92.4,
+      "timestamp": "2026-10-16T06:09:15.173Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-roles-Gold-Packet-08a1a-ator-in-the-menu-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/roles.spec.js"
+    },
+    {
+      "id": "TC_PB_051",
+      "req": "REQ-08",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Access",
+      "scenario": "External appraiser menu",
+      "type": "Role-based access",
+      "priority": "P1",
+      "pre": "EXT_APPRAISER1 logged in",
+      "data": "-",
+      "steps": [
+        "Look for the menu entry"
+      ],
+      "expected": "Not available",
+      "script": "tests/negative/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "Menu entry not reachable: locator.click: Timeout 20000ms exceeded.",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 92.8,
+      "timestamp": "2026-10-16T06:10:47.560Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-roles-Gold-Packet-1600e-ator-in-the-menu-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/negative/roles.spec.js"
+    },
+    {
+      "id": "TC_PB_052",
+      "req": "REQ-08",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Access",
+      "scenario": "Direct URL as appraiser",
+      "type": "Role-based access",
+      "priority": "P0",
+      "pre": "INT_APPRAISER1 logged in",
+      "data": "#/Loans/GoldPacketBarcodeGenerate",
+      "steps": [
+        "Open URL"
+      ],
+      "expected": "No Generate barcode",
+      "script": "tests/negative/roles.spec.js",
+      "tags": "",
+      "category": "Role-based access",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "URL http://host214.kapilits.com:8411/#/Loans/GoldPacketBarcodeGenerate; Generate buttons 1;  Generate a one-time barcode sticker for a pledged gold packet View Register TYPE * Audit Loans that already have a packet in inventory. Several Audit barcodes ",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 0\nReceived: 1\n\n  24 |     const text = (await page.locator('body').innerText()).replace(/\\s+/g, ' ');\n  25 |     record(`URL ${page.url()}; Generate buttons ${gen}; ${text.split('Gold Packet Barcode').pop().slice(0, 160)}`);\n> 26 |     expect(gen).toBe(0);\n     |                 ^\n  27 |   });\n  28 | });\n  29 |",
+      "expectedVerified": false,
+      "duration": 14.9,
+      "timestamp": "2026-10-16T06:18:51.732Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/negative-roles-Gold-Packet-4144c--cannot-generate-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/negative-roles-Gold-Packet-4144c--cannot-generate-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/negative-roles-Gold-Packet-4144c--cannot-generate-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-004",
+      "automationPath": "tests/negative/roles.spec.js"
+    },
+    {
+      "id": "TC_PB_053",
+      "req": "REQ-09",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "API",
+      "scenario": "Read APIs without token",
+      "type": "API security",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "no Authorization",
+      "steps": [
+        "GET register / loans"
+      ],
+      "expected": "401/403",
+      "script": "tests/api/barcode-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "getbarcoderegister → 401; getloansforbarcode → 401",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 18.7,
+      "timestamp": "2026-10-16T05:52:47.065Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-barcode-api-Gold-Packe-a6f07--without-a-token-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/barcode-api.spec.js"
+    },
+    {
+      "id": "TC_PB_054",
+      "req": "REQ-09",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "API",
+      "scenario": "generatebarcode without token",
+      "type": "API security",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "fake loan, no Authorization",
+      "steps": [
+        "POST"
+      ],
+      "expected": "401/403",
+      "script": "tests/api/barcode-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "No token → 401 ",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.6,
+      "timestamp": "2026-10-16T05:53:05.934Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-barcode-api-Gold-Packe-09cc0--without-a-token-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/barcode-api.spec.js"
+    },
+    {
+      "id": "TC_PB_055",
+      "req": "REQ-09",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "API",
+      "scenario": "Register Status filter",
+      "type": "API",
+      "priority": "P2",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "Status=Not Used/Used/Cancelled",
+      "steps": [
+        "GET each"
+      ],
+      "expected": "Only that status",
+      "script": "tests/api/barcode-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "{\"Not Used\":[29,[\"Not Used\"]],\"Used\":[35,[\"Used\"]],\"Cancelled\":[10,[\"Cancelled\"]]}",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 17.6,
+      "timestamp": "2026-10-16T05:53:23.505Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-barcode-api-Gold-Packe-1302d-only-that-status-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/api/barcode-api.spec.js"
+    },
+    {
+      "id": "TC_PB_056",
+      "req": "REQ-08",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "API",
+      "scenario": "Appraiser token reads loans list (HYPOTHESIS)",
+      "type": "API security",
+      "priority": "P1",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "INT_APPRAISER1 token",
+      "steps": [
+        "GET getloansforbarcode"
+      ],
+      "expected": "401/403 or empty",
+      "script": "tests/api/barcode-api.spec.js",
+      "tags": "",
+      "category": "API",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Maker token → 200, 7 loans returned",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n\n  54 |     const n = (() => { try { return JSON.parse(body).length; } catch { return null; } })();\n  55 |     record(`Maker token → ${r.status()}, ${n} loans returned`);\n> 56 |     expect([401, 403].includes(r.status()) || n === 0).toBe(true);\n     |                                                        ^\n  57 |   });\n  58 | });\n  59 |",
+      "expectedVerified": false,
+      "duration": 25.4,
+      "timestamp": "2026-10-16T06:17:22.946Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium/video.webm"
+        },
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium/test-failed-2.png"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/api-barcode-api-Gold-Packe-bfa81-e-API-HYPOTHESIS-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-005",
+      "automationPath": "tests/api/barcode-api.spec.js"
+    },
+    {
+      "id": "TC_PB_057",
+      "req": "REQ-10",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "UI",
+      "scenario": "Tablet width",
+      "type": "Responsive",
+      "priority": "P3",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "768px",
+      "steps": [
+        "Resize"
+      ],
+      "expected": "No horizontal scroll",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "PASSED",
+      "reason": "",
+      "actual": "scrollWidth 768",
+      "error": "",
+      "expectedVerified": true,
+      "duration": 20.4,
+      "timestamp": "2026-10-16T06:13:15.183Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Packet--09ba8-orizontal-scroll-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_PB_058",
+      "req": "REQ-10",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "UI",
+      "scenario": "Generator field labels",
+      "type": "Accessibility",
+      "priority": "P3",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked",
+      "data": "-",
+      "steps": [
+        "Check labels"
+      ],
+      "expected": "Type radios and Loan Number named",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "{\"radios\":true,\"loan\":false}",
+      "error": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 1\n\n  Object {\n-   \"loan\": true,\n+   \"loan\": false,\n    \"radios\": true,\n  }\n\n  19 |     });",
+      "expectedVerified": false,
+      "duration": 19.3,
+      "timestamp": "2026-10-16T06:19:07.637Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Packet--13ba7-accessible-names-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/regression-ui-Gold-Packet--13ba7-accessible-names-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/regression-ui-Gold-Packet--13ba7-accessible-names-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-006",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_PB_059",
+      "req": "REQ-10",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "UI",
+      "scenario": "Register search label",
+      "type": "Accessibility",
+      "priority": "P3",
+      "pre": "Branch Head logged in; Gold Packet Barcode Register open (View Register); every write blocked",
+      "data": "-",
+      "steps": [
+        "Check label"
+      ],
+      "expected": "Search box named",
+      "script": "tests/regression/ui.spec.js",
+      "tags": "",
+      "category": "Accessibility & responsive",
+      "automated": true,
+      "discovered": true,
+      "executed": true,
+      "status": "FAILED",
+      "reason": "",
+      "actual": "Search box named: false (placeholder only does not count)",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n\n  25 |     const named = await register.regSearch.evaluate((e) => !!(e.getAttribute('aria-label') || e.getAttribute('aria-labelledby') || (e.id && document.querySelector(`label[for=\"${e.id}\"]`))));\n  26 |     record(`Search box named: ${named} (placeholder only does not count)`);\n> 27 |     expect(named).toBe(true);\n     |                   ^\n  28 |   });\n  29 | });\n  30 |",
+      "expectedVerified": false,
+      "duration": 18,
+      "timestamp": "2026-10-16T06:19:28.021Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/regression-ui-Gold-Packet--c5131--accessible-name-regression-chromium/test-failed-1.png"
+        },
+        {
+          "name": "video",
+          "path": "../test-results/artifacts/regression-ui-Gold-Packet--c5131--accessible-name-regression-chromium/video.webm"
+        },
+        {
+          "name": "trace",
+          "path": "../test-results/artifacts/regression-ui-Gold-Packet--c5131--accessible-name-regression-chromium/trace.zip"
+        }
+      ],
+      "defect": "DC-007",
+      "automationPath": "tests/regression/ui.spec.js"
+    },
+    {
+      "id": "TC_PB_060",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Create (real)",
+      "scenario": "Real BH print (ALLOW_DATA_CREATION=1)",
+      "type": "Positive / Create",
+      "priority": "P0",
+      "pre": "Branch Head (CHECKER_BH) logged in; Loans → Gold → Gold Packet Barcode Generator open; every write blocked but writes allowed; AUTOTEST loan in BH list; ALLOW_DATA_CREATION=1",
+      "data": "AUTOTEST loan",
+      "steps": [
+        "Generate",
+        "Print sticker",
+        "Search register"
+      ],
+      "expected": "Barcode recorded, Not Used, type BH",
+      "script": "tests/positive/real-barcode.spec.js",
+      "tags": "",
+      "category": "Create & cancel (real)",
+      "automated": true,
+      "discovered": true,
+      "executed": false,
+      "status": "SKIPPED",
+      "reason": "Creates a permanent barcode – set ALLOW_DATA_CREATION=1",
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": 20.7,
+      "timestamp": "2026-10-16T06:12:36.161Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-real-barcode-Gold-bc764--DATA-CREATION-1-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/real-barcode.spec.js"
+    },
+    {
+      "id": "TC_PB_061",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Cancel (real)",
+      "scenario": "Real cancel of TC_PB_060 barcode",
+      "type": "Update / Cancel",
+      "priority": "P1",
+      "pre": "TC_PB_060 passed",
+      "data": "reason \"autotest clean-up\"",
+      "steps": [
+        "Cancel",
+        "Reason",
+        "Confirm",
+        "Reload"
+      ],
+      "expected": "Status Cancelled; no Cancel button",
+      "script": "tests/positive/real-barcode.spec.js",
+      "tags": "",
+      "category": "Create & cancel (real)",
+      "automated": true,
+      "discovered": true,
+      "executed": false,
+      "status": "SKIPPED",
+      "reason": "runs only after TC_PB_060 made a barcode",
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": 18.1,
+      "timestamp": "2026-10-16T06:12:57.076Z",
+      "evidence": [
+        {
+          "name": "screenshot",
+          "path": "../test-results/artifacts/positive-real-barcode-Gold-ce1e4--DATA-CREATION-1-regression-chromium/test-finished-1.png"
+        }
+      ],
+      "defect": "",
+      "automationPath": "tests/positive/real-barcode.spec.js"
+    },
+    {
+      "id": "TC_PB_062",
+      "req": "REQ-05",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Audit limit",
+      "scenario": "Audit barcodes up to the number of gold articles",
+      "type": "Business rule",
+      "priority": "P2",
+      "pre": "-",
+      "data": "loan with N articles",
+      "steps": [
+        "Print N+1 Audit barcodes"
+      ],
+      "expected": "N+1th refused",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Needs N real permanent Audit barcodes on one loan; the limit message is unknown",
+      "category": "Workflow / print output",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_PB_063",
+      "req": "REQ-07",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Used at inventory",
+      "scenario": "Barcode becomes Used when scanned at inventory, once only",
+      "type": "Workflow",
+      "priority": "P1",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "Scan at Inventory"
+      ],
+      "expected": "Status Used; second scan refused",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Belongs to the Inventory form; needs a real barcode",
+      "category": "Workflow / print output",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_PB_064",
+      "req": "REQ-04",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Sticker",
+      "scenario": "Printed size 2cm × 4cm, CODE128 scannable",
+      "type": "Print output",
+      "priority": "P2",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "Print",
+        "Scan"
+      ],
+      "expected": "Scans correctly",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "Needs a label printer and scanner – manual check",
+      "category": "Workflow / print output",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_PB_065",
+      "req": "REQ-10",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Session / concurrency / browser",
+      "scenario": "Two Branch Heads print for the same loan; session timeout; Firefox/WebKit",
+      "type": "Concurrency / Session / Browser",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "NOT EXECUTED",
+      "reason": "One Branch Head login; would create real barcodes; idle time unknown; Chromium only",
+      "category": "Session / concurrency / browser",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_PB_NA1",
+      "req": "-",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Edit / Delete",
+      "scenario": "Edit or delete a barcode",
+      "type": "CRUD",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "No edit or delete; Cancel (TC_PB_044–049) is the only change allowed",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_PB_NA2",
+      "req": "-",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Text fields",
+      "scenario": "Min/max length, data type of typed fields",
+      "type": "Field length",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "Only typed field is the cancel reason; no limit shown",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_PB_NA3",
+      "req": "-",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "Database",
+      "scenario": "DB verification",
+      "type": "Persistence",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "No DB access; persistence checked through the register and API",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    },
+    {
+      "id": "TC_PB_NA4",
+      "req": "-",
+      "module": "Gold Packet Barcode Generator",
+      "screen": "Gold Packet Barcode Generator / Register",
+      "feature": "File upload",
+      "scenario": "Upload",
+      "type": "File upload",
+      "priority": "P3",
+      "pre": "-",
+      "data": "-",
+      "steps": [
+        "-"
+      ],
+      "expected": "-",
+      "script": null,
+      "tags": "",
+      "status": "N/A",
+      "reason": "The screen has no upload",
+      "category": "Not applicable",
+      "automated": false,
+      "discovered": false,
+      "executed": false,
+      "actual": "",
+      "error": "",
+      "expectedVerified": false,
+      "duration": null,
+      "timestamp": "",
+      "evidence": [],
+      "defect": "",
+      "automationPath": ""
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+
+> gold-functional-test-cases@1.0.0 goldtoken
+> node common/utils/run-form.js "Gold Token"
+
+
+=== Gold Token / Gold Token ===
+
+Running 41 tests using 1 worker
+
+  ok 1 [chromium] › api\token-api.spec.js:4:3 › Gold Token – API › TC_GT_037 - Token list API refuses requests without a token @regression (8.9s)
+  ok 2 [chromium] › api\token-api.spec.js:13:3 › Gold Token – API › TC_GT_038 - A used token's estimate details report it as used @regression (9.1s)
+  ok 3 [chromium] › business-rules\loan-details.spec.js:7:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_021 - Loan name, tenure and interest come from the estimate's scheme and are locked @smoke @regression (13.8s)
+  ok 4 [chromium] › business-rules\loan-details.spec.js:16:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_022 - Eligible Loan Amount on Loan Details = the estimate's eligible value @regression (13.2s)
+  ok 5 [chromium] › business-rules\loan-details.spec.js:32:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_023 - Amount requested "abc" → "" (letters rejected) @regression (14.6s)
+  ok 6 [chromium] › business-rules\loan-details.spec.js:32:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_024 - Amount requested "50000" → "50,000" (shown with Indian separators) @regression (16.5s)
+  ok 7 [chromium] › business-rules\loan-details.spec.js:32:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_025 - Amount requested "0" → "" (zero not accepted) @regression (14.2s)
+  x  8 [chromium] › business-rules\loan-details.spec.js:32:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_026 - Amount requested "1000.50" → "1,000.5" (decimal amount keeps its value (HYPOTHESIS)) @regression (14.3s)
+  ok 9 [chromium] › business-rules\loan-details.spec.js:42:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_027 - Amount one rupee below the eligible loan is accepted (boundary) @regression (14.2s)
+  ok 10 [chromium] › business-rules\loan-details.spec.js:52:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_028 - Amount equal to the eligible loan is refused with "Amount Should be Less than Eligible Loan Amount (LTV)" @regression (14.4s)
+  ok 11 [chromium] › business-rules\loan-details.spec.js:52:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_029 - Amount above the eligible loan is refused with "Amount Should be Less than Eligible Loan Amount (LTV)" @regression (17.1s)
+  x  12 [chromium] › business-rules\loan-details.spec.js:64:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_030 - Save with no amount is refused – the loan must not be sent with amount 0 @smoke @regression (16.4s)
+  ok 13 [chromium] › business-rules\loan-details.spec.js:76:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_031 - Save sends token, contact, nominees, amount and the scheme terms (blocked) @regression (14.2s)
+  x  14 [chromium] › business-rules\loan-details.spec.js:92:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_032 - Only one nominee is marked primary (HYPOTHESIS) @regression (16.3s)
+  x  15 [chromium] › business-rules\loan-details.spec.js:103:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_033 - A failed save gives a meaningful message (not "Unknown Error") @regression (15.4s)
+  ok 16 [chromium] › business-rules\loan-details.spec.js:115:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_034 - Double-click on Save sends one request (simulated server) @regression (18.5s)
+  ok 17 [chromium] › business-rules\loan-details.spec.js:126:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_035 - Back returns to the Member tab with the nominees kept @regression (14.5s)
+  ok 18 [chromium] › business-rules\loan-details.spec.js:136:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_036 - Charges & Fees table is shown on Loan Details @regression (13.7s)
+  ok 19 [chromium] › functional\tokens.spec.js:6:3 › Gold Token – token lists (real, read-only) › TC_GT_001 - Gold Token opens with New / Used Tokens and the available-token grid @smoke @regression (11.0s)
+  ok 20 [chromium] › functional\tokens.spec.js:14:3 › Gold Token – token lists (real, read-only) › TC_GT_002 - Available tokens = unused tokens from the API; count matches "New Tokens" @regression (9.3s)
+  ok 21 [chromium] › functional\tokens.spec.js:24:3 › Gold Token – token lists (real, read-only) › TC_GT_003 - Every token's appraisal value matches its approved estimate @regression (9.3s)
+  ok 22 [chromium] › functional\tokens.spec.js:32:3 › Gold Token – token lists (real, read-only) › TC_GT_004 - Used Tokens tab lists tokens already turned into loans @regression (11.8s)
+  ok 23 [chromium] › functional\tokens.spec.js:44:3 › Gold Token – selected token (simulated UID99999) › TC_GT_005 - Simulated token is listed with customer, mobile and appraisal value @regression (11.1s)
+  ok 24 [chromium] › functional\tokens.spec.js:53:3 › Gold Token – selected token (simulated UID99999) › TC_GT_006 - Token Overview shows appraisal value, eligible loan (LTV) and article quantity of the estimate @smoke @regression (10.0s)
+  ok 25 [chromium] › functional\tokens.spec.js:60:3 › Gold Token – selected token (simulated UID99999) › TC_GT_007 - Member Information shows the estimate's customer @regression (10.0s)
+  ok 26 [chromium] › functional\tokens.spec.js:68:3 › Gold Token – selected token (simulated UID99999) › TC_GT_008 - Token date is read-only @regression (10.1s)
+  ok 27 [chromium] › functional\tokens.spec.js:76:3 › Gold Token – selected token (simulated UID99999) › TC_GT_009 - "View gold article details" opens the estimate articles @regression (11.7s)
+  -  28 [chromium] › positive\real-loan.spec.js:9:3 › Gold Token – real loan generation (opt-in) › TC_GT_041 - AUTOTEST token → nominee → amount → Save creates the loan and moves the token to Used @regression
+  ok 29 [chromium] › regression\ui.spec.js:4:3 › Gold Token – usability, accessibility, responsive › TC_GT_039 - At tablet width (768px) the token page has no page-level horizontal scroll @regression (9.7s)
+  x  30 [chromium] › regression\ui.spec.js:12:3 › Gold Token – usability, accessibility, responsive › TC_GT_040 - Nominee and amount fields have accessible names @regression (10.6s)
+  ok 31 [chromium] › validation\nominee.spec.js:7:3 › Gold Token – nominee validation (simulated token) › TC_GT_010 - Next without a nominee: "Please add at least one Nominee before proceeding." @smoke @regression (12.5s)
+  ok 32 [chromium] › validation\nominee.spec.js:16:3 › Gold Token – nominee validation (simulated token) › TC_GT_011 - Add without name and relationship is refused @regression (12.2s)
+  ok 33 [chromium] › validation\nominee.spec.js:24:3 › Gold Token – nominee validation (simulated token) › TC_GT_012 - Relationship list offers the family relations @regression (10.3s)
+  ok 34 [chromium] › validation\nominee.spec.js:33:3 › Gold Token – nominee validation (simulated token) › TC_GT_013 - Nominee contact number accepts digits only (HYPOTHESIS) @regression (12.6s)
+  ok 35 [chromium] › validation\nominee.spec.js:42:3 › Gold Token – nominee validation (simulated token) › TC_GT_014 - Nominee contact number is limited to 12 characters @regression (10.1s)
+  ok 36 [chromium] › validation\nominee.spec.js:51:3 › Gold Token – nominee validation (simulated token) › TC_GT_015 - Proportion above 100 % is refused @regression (10.8s)
+  ok 37 [chromium] › validation\nominee.spec.js:60:3 › Gold Token – nominee validation (simulated token) › TC_GT_016 - Nominee proportions must add up to 100 % before Next @regression (11.8s)
+  ok 38 [chromium] › validation\nominee.spec.js:70:3 › Gold Token – nominee validation (simulated token) › TC_GT_017 - The same nominee cannot be added twice ("Already existed") @regression (13.0s)
+  ok 39 [chromium] › validation\nominee.spec.js:81:3 › Gold Token – nominee validation (simulated token) › TC_GT_018 - Two nominees 60 % + 40 % allow Next to Loan Details @regression (14.8s)
+  ok 40 [chromium] › validation\nominee.spec.js:88:3 › Gold Token – nominee validation (simulated token) › TC_GT_019 - KYC: PAN / FORM 60 offers Form 60 and PAN CARD; reference max 30 characters @regression (10.9s)
+  x  41 [chromium] › validation\nominee.spec.js:100:3 › Gold Token – nominee validation (simulated token) › TC_GT_020 - An added nominee can be removed before saving (HYPOTHESIS) @regression (13.4s)
+
+
+  1) [chromium] › business-rules\loan-details.spec.js:32:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_026 - Amount requested "1000.50" → "1,000.5" (decimal amount keeps its value (HYPOTHESIS)) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeCloseTo[2m([22m[32mexpected[39m[2m, [22mprecision[2m)[22m
+
+    Expected: [32m1000.5[39m
+    Received: [31m100050[39m
+
+    Expected precision:    2
+    Expected difference: < [32m0.005[39m
+    Received difference:   [31m99049.5[39m
+
+      35 |       const v = await gt.typeAmount(typed);
+      36 |       record(`Typed "${typed}" → "${v}"`);
+    > 37 |       if (id === 'TC_GT_026') expect(Number(v.replace(/,/g, ''))).toBeCloseTo(1000.5, 2);
+         |                                                                   ^
+      38 |       else expect(v).toBe(exp);
+      39 |     });
+      40 |   }
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Token\tests\business-rules\loan-details.spec.js:37:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-ac59a-value-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-ac59a-value-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-ac59a-value-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Token\test-results\artifacts\business-rules-loan-detail-ac59a-value-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › business-rules\loan-details.spec.js:64:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_030 - Save with no amount is refused – the loan must not be sent with amount 0 @smoke @regression 
+
+    Error: a loan with no amount was sent to the server
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m[{"body": "{\"pCustomerType\":\"existing\",\"pContactid\":4556,\"pContactreferenceid\":\"261000020\",\"pmembertype\":\"\",\"pmembertypeid\":0,\"pCreatedby\":15,\"Ptokennumber\":\"UID99999\",\"PersonalNomineeList\":[{\"precordid\":0,\"pnomineename\":\"LAKSHMI QA\",\"prelationship\":\"Mother\",\"pdateofbirth\":\"\",\"pAge\":0,\"pcontactno\":\"9876500011\",\"pidprooftype\":\"\",\"pDocumentGroup\":\"\",\"pDocumentGroupId\":\"\",\"pidproofname\":\"\",\"pDocumentId\":\"\",\"pPercentage\":\"100\",\"pTypeChk\":true,\"pisprimarynominee\":true,\"pDocumentName\":\"\",\"preferencenumber\":\"\",\"pMemberrefcode\":\"\",\"pCreatedby\":15,\"pStatusname\":\"ACTIVE\",\"ptypeofoperation\":\"CREATE\",\"pProportional\":100}],\"Contact\":{\"pReferenceId\":\"\",\"pAddressTypeChk\":\"Home\",\"pPhoto\":\"\",\"pStatusname\":\"ACTIVE\",\"pContactimagepath\":\"\",\"pName\":\"\",\"pBusinessEntityEmailid\":\"\",\"pBusinessEntityContactno\":\"\",\"pContactType\":\"Individual\",\"documentstorelist\":null,\"lstbusinessperson\":\"\",\"pMiddleName\":\"\",\"pSurName\":\"\",\"pDob\":\"2026-10-15T13:17:26.164Z\",\"pGender\":\"Male\",\"Name\":\"\",\"pactivitytype\":\"C\",\"pTitleNameFathers\":\"Mr\",\"pFatherName\":\"\",\"pFatherLastName\":\"\",\"pTitleNameSpouses\":null,\"pSpouseName\":\"\",\"pSpouseLastName\":\"\",\"pTitleNameMothers\":\"Mrs\",\"pMotherFirstName\":\"\",\"pMotherLastName\":\"\",\"pCKYCNumber\":\"\",\"pDIN\":\"\",\"pDPIN\":\"\",\"pPoliticallyExposedPerson\":\"No\",\"pPMLA\":\"\",\"pSignaturePhoto\":\"\",\"pSignatureimagepath\":\"\",\"pPhysicallyhandicapped\":\"No\",\"pPreferredLanguage\":\"\",\"pAge\":0,\"pTitleName\":\"\",\"pContactName\":\"\",\"pEmailId\":\"\",\"pEmailId2\":\"\",\"pContactNumber\":\"\",\"pAlternativeNo\":\"\",\"pRecordId\":\"\",\"pRecordId1\":\"\",\"pContactId\":0,\"pAddressPriority\":\"\",\"pPriority\":\"\",\"isWebcamImage\":false,\"photoOption\":\"webcam\",\"nomineeDetailsList\":[{\"precordid\":0,\"pnomineename\":\"LAKSHMI QA\",\"prelationship\":\"Mother\",\"pdateofbirth\":\"\",\"pAge\":0,\"pcontactno\":\"9876500011\",\"pidprooftype\":\"\",\"pDocumentGroup\":\"\",\"pDocumentGroupId\":\"\",\"pidproofname\":\"\",\"pDocumentId\":\"\",\"pPercentage\":\"100\",\"pTypeChk\":true,\"pisprimarynominee\":true,\"pDocumentName\":\"\",\"preferencenumber\":\"\",\"pMemberrefcode\":\"\",\"pCreatedby\":15,\"pStatusname\":\"ACTIVE\",\"ptypeofoperation\":\"CREATE\"}],\"referralDetails\":\"\",\"pAddressControls\":{\"pRecordId\":0,\"pAddressType\":\"Home\",\"pResidencetype\":\"Owned\",\"pAddress1\":\"\",\"pAddress2\":\"\",\"pState\":\"Tamil Nadu\",\"pStateId\":0,\"pDistrict\":\"Coimbatore\",\"pDistrictId\":0,\"pCity\":\"\",\"pCountry\":\"India\",\"pCountryId\":1,\"pPinCode\":0,\"plongitude\":\"\",\"platitude\":\"\",\"pPriorityCon\":true,\"ptypeofoperation\":\"Create\",\"pAddressDetails\":\"\",\"pStatusname\":\"ACTIVE\",\"pAddressPriority\":\"PRIMARY\",\"pPriority\":\"PRIMARY\"},\"pAddressList\":[],\"personaldetailsnewControls\":\"\",\"lstpersonaldetailsnew\":null,\"GSTDetailsControls\":\"\",\"GSTDetailsList\":null,\"familyDetailsControls\":\"\",\"familyDetailsList\":null,\"referralbankdetailslist\":null,\"PersonalEmployeementList\":\"\",\"PersonalIncomeList\":\"\",\"personalOtherIncomeDetailsIncomeForm\":\"\",\"personalOtherIncomeDetailsIncomeFormList\":null,\"pMemberId\":0,\"MakeMember\":true,\"pMembertypeId\":0,\"pMemberType\":\"\",\"membercode\":\"\",\"pGuradianrelation\":\"\",\"pGuradian_contactid\":0,\"pGuradian_contactrefid\":0,\"pApplicanttype\":\"Regular/General\",\"pbranchid\":1,\"pbranchname\":\"HEAD OFFICE\",\"pIsSavingsExist\":true},\"LoanDetails\":{\"firstinformationDTO\":{\"pVchapplicationid\":0,\"pLoantypeid\":4,\"pLoanid\":88,\"pContacttype\":\"Individual\",\"pContactreferenceid\":4556,\"pApplicanttype\":\"Regular/General\",\"pLoantype\":\"Gold Loan\",\"pLoanname\":\"New Gold\",\"pApplicantname\":\"Autotest Dcgjbi Qa\",\"pApplicantid\":4556,\"ptypeofoperation\":\"CREATE\",\"pStatusname\":\"ACTIVE\",\"pVchapplicantstatus\":\"N\",\"pDateofapplication\":\"2026-10-15\",\"pAmountrequested\":0,\"pPurposeofloan\":\"\",\"pInteresttype\":\"Diminishing\",\"preceiptid\":\"\",\"pLoanpayin\":\"Monthly\",\"pTenureofloan\":9,\"pTenuretype\":\"Monthly\",\"pRateofinterest\":18,\"pemitype\":\"REGULAR\",\"emitype\":\"REGULAR\",\"pIsschemesapplicable\":false,\"pLoaninstalmentpaymentmode\":\"Only Interest (Principle is paid at end of tenure)\",\"pSchemecode\":\"\",\"pPartprinciplepaidinterval\":0,\"pLeadId\":\"\",\"pIsreferralapplicable\":false,\"pReferralname\":\"\",\"preferralcontactrefid\":\"\",\"pSalespersonname\":\"\",\"psalespersoncontactrefid\":\"\",\"pInstalmentamount\":0,\"leadid\":\"\"}},\"LoanSpecificDetails\":{\"pLoantype\":\"Gold Loan\",\"pVchapplicationid\":0,\"pApplicantid\":4556,\"pApplicationid\":0,\"pContactreferenceid\":4556,\"lstVehicleLoanDTO\":null,\"goldLoanDTO\":{\"pRecordid\":0,\"pCurrentGoldRate\":13839.39,\"pAppraisalvalue\":138393.9,\"pRemarks\":\"No Remarks\",\"pAppraisorName\":\"Autotest Dcgjbi Qa\",\"pAppraisalDate\":\"2026-10-15\",\"GoldLoanDetailslist\":[{\"pRecordid\":156,\"pCarat\":\"22K (916KDM 92% gold and 8% alloyed metals)\",\"pGoldArticleType\":\"RING\",\"pGoldArticle\":\"\",\"grossweight\":10.5,\"pQuantity\":1,\"pNetWeight\":10,\"pWastageamount\":0,\"pActualRate\":138393.9,\"pFilepath\":null,\"pfilename\":null,\"articleuniqueid\":null,\"pobservations\":\"\",\"pgoldRate\":13839.39,\"pgoldLTV\":91.6,\"ptotal\":138393.9,\"pTypeofoperation\":\"CREATE\",\"pPureGold\":10,\"pStoneweight\":0.5,\"pStonecount\":null,\"pPuritydeductionpercent\":0,\"pStonedeductionpercent\":0,\"goldLoanFilePathlist\":[],\"pGrossweight\":10.5}]},\"educationLoanDTO\":null,\"lstLoanagainstDepositDTO\":null,\"homeLoanDTO\":null,\"balanceTransferDTO\":null,\"businessLoanDTO\":null,\"consumerLoanDTO\":null},\"Approval\":{\"papprovestatus\":\"Approve\",\"pApproveddate\":\"2026-10-15\",\"pDisbursmentdate\":null,\"pAmountrequested\":0,\"pApprovedloanamount\":0,\"pLoanpayin\":\"Monthly\",\"pInteresttype\":\"Diminishing\",\"pRateofinterest\":18,\"pTenureofloan\":9,\"pTenuretype\":\"\",\"pVchaccintrest\":18,\"pLoaninstalmentpaymentmode\":\"Only Interest (Principle is paid at end of tenure)\",\"pOldInstallmentstartdate\":\"2026-10-15\",\"pInstallmentamount\":0,\"pInstallmentstartdate\":\"2026-11-14T18:30:00.000Z\",\"pHolidayperiodpayin\":\"\",\"pHolidayperiodvalue\":0,\"pMoratoriumperiodpayin\":\"\",\"pMoratoriumperiodvalue\":0,\"pRemarks\":\"\",\"pDisbursementpayinmode\":\"SINGLE PAYMENT\",\"emitype\":\"REGULAR\",\"pemitype\":\"REGULAR\",\"pGraceperiod\":0,\"emiday\":0,\"pemiday\":0,\"lstStagewisepayments\":[],\"lstApprovedloancharges\":[],\"pStatusid\":\"1\",\"pStatusname\":\"ACTIVE\",\"ptypeofoperation\":\"CREATE\",\"pDateofapplication\":\"2026-10-15\",\"pApplicantname\":\"Autotest Dcgjbi Qa\",\"pLoantype\":\"Gold Loan\",\"pLoantypeid\":4,\"pLoanid\":88,\"pLoanname\":\"New Gold\",\"pMobileno\":9043326918,\"pPurposeofloan\":\"\",\"pAmount\":\"\",\"pChargename\":\"\",\"pInterevels\":0,\"ploaninstallmenttype\":\"NO EMI\",\"pfrrtype\":\"\"},\"Agreement\":{\"pAgreementDate\":\"2026-10-15\",\"pInstallmentstartdate1\":\"2026-11-14T18:30:00.000Z\",\"pAgreementStatus\":\"Agreement Approved\",\"pApproveddate\":\"2026-10-15\",\"papprovedloanamount\":0,\"pLoantypeid\":4,\"pLoantype\":\"Gold Loan\",\"pLoanid\":88,\"pLoanname\":\"New Gold\",\"pRemarks\":\"\",\"pAgreementDocuments\":\"\",\"pContacttypes\":\"mobile\",\"pContactforesign\":\"\",\"pEsignresponse\":\"\",\"pAgreementtype\":\"Manual\",\"pEagreementstatus\":\"\"},\"Disbursement\":[]}", "headers": {"accept": "application/json, text/plain, */*", "accept-language": "en-US", "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjI3IiwiZmluc3RhX3VzZXJpZCI6IjE1IiwibmJmIjoxNzkyMDcwMjQwLCJleHAiOjE3OTIwODEwNDAsImlhdCI6MTc5MjA3MDI0MH0.RLI3rep0XHe_abnnX3kbqNESLq93KJsaogvqEYg9kMU", "cache-control": "no-cache", "content-type": "application/json", "origin": "http://host214.kapilits.com:8411", "referer": "http://host214.kapilits.com:8411/", "schema-name": "public", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.31 Safari/537.36"}, "method": "POST", "url": "http://host214.kapilits.com:8412/api/loans/Transactions/Disbursement/SaveCustomerandGoldLoanAllDetails"}][39m
+
+      71 |     const amt = sent[0] ? deep(JSON.parse(sent[0].body), 'pAmountrequested') : null;
+      72 |     record(`Save requests ${sent.length}${sent.length ? ` (pAmountrequested ${amt}, blocked)` : ''}; message "${await gt.messages()}"`);
+    > 73 |     expect(sent, 'a loan with no amount was sent to the server').toHaveLength(0);
+         |                                                                  ^
+      74 |   });
+      75 |
+      76 |   test('TC_GT_031 - Save sends token, contact, nominees, amount and the scheme terms (blocked) @regression', async ({ simToken, apiHits, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Token\tests\business-rules\loan-details.spec.js:73:66
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-23f51-h-amount-0-smoke-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-23f51-h-amount-0-smoke-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-23f51-h-amount-0-smoke-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Token\test-results\artifacts\business-rules-loan-detail-23f51-h-amount-0-smoke-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › business-rules\loan-details.spec.js:92:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_032 - Only one nominee is marked primary (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m2[39m
+    Received array:  [31m[{"pAge": 0, "pCreatedby": 15, "pDocumentGroup": "", "pDocumentGroupId": "", "pDocumentId": "", "pDocumentName": "", "pMemberrefcode": "", "pPercentage": "60", "pProportional": 60, "pStatusname": "ACTIVE", "pTypeChk": true, "pcontactno": "9876500011", "pdateofbirth": "", "pidproofname": "", "pidprooftype": "", "pisprimarynominee": true, "pnomineename": "LAKSHMI QA", "precordid": 0, "preferencenumber": "", "prelationship": "Mother", "ptypeofoperation": "CREATE"}, {"pAge": 0, "pCreatedby": 15, "pDocumentGroup": "", "pDocumentGroupId": "", "pDocumentId": "", "pDocumentName": "", "pMemberrefcode": "", "pPercentage": "40", "pProportional": 40, "pStatusname": "ACTIVE", "pTypeChk": true, "pcontactno": "9876500012", "pdateofbirth": "", "pdocidproofpath": "", "pidproofname": "", "pidprooftype": "", "pisprimarynominee": true, "pnomineename": "RAVI QA", "precordid": 0, "preferencenumber": "", "prelationship": "Father", "ptypeofoperation": "CREATE"}][39m
+
+       98 |     const n = JSON.parse(apiHits.find((h) => SAVE_API.test(h.url)).body).PersonalNomineeList;
+       99 |     record(n.map((x) => `${x.pnomineename} primary=${x.pisprimarynominee}`).join(', '));
+    > 100 |     expect(n.filter((x) => x.pisprimarynominee)).toHaveLength(1);
+          |                                                  ^
+      101 |   });
+      102 |
+      103 |   test('TC_GT_033 - A failed save gives a meaningful message (not "Unknown Error") @regression', async ({ simToken, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Token\tests\business-rules\loan-details.spec.js:100:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-d946a-imary-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-d946a-imary-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-d946a-imary-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Token\test-results\artifacts\business-rules-loan-detail-d946a-imary-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › business-rules\loan-details.spec.js:103:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_033 - A failed save gives a meaningful message (not "Unknown Error") @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: not [32m/Unknown Error/[39m
+    Received string:      [31m"Error! | [7mUnknown Error[27m"[39m
+
+      110 |     record(`Message "${msg}"`);
+      111 |     expect(msg).toMatch(/error|fail/i);
+    > 112 |     expect(msg).not.toMatch(/Unknown Error/);
+          |                     ^
+      113 |   });
+      114 |
+      115 |   test('TC_GT_034 - Double-click on Save sends one request (simulated server) @regression', async ({ simToken, mockWrite, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Token\tests\business-rules\loan-details.spec.js:112:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-a2c30-ot-Unknown-Error-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-a2c30-ot-Unknown-Error-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\business-rules-loan-detail-a2c30-ot-Unknown-Error-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Token\test-results\artifacts\business-rules-loan-detail-a2c30-ot-Unknown-Error-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › regression\ui.spec.js:12:3 › Gold Token – usability, accessibility, responsive › TC_GT_040 - Nominee and amount fields have accessible names @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 3[39m
+    [31m+ Received  + 3[39m
+
+    [2m  Object {[22m
+    [32m-   "contact": true,[39m
+    [32m-   "name": true,[39m
+    [32m-   "proportion": true,[39m
+    [31m+   "contact": false,[39m
+    [31m+   "name": false,[39m
+    [31m+   "proportion": false,[39m
+    [2m  }[22m
+
+      15 |     const res = { name: await named(gt.nomineeName), contact: await named(gt.nomineeContact), proportion: await named(gt.proportion) };
+      16 |     record(JSON.stringify(res));
+    > 17 |     expect(res).toEqual({ name: true, contact: true, proportion: true });
+         |                 ^
+      18 |   });
+      19 | });
+      20 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Token\tests\regression\ui.spec.js:17:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\regression-ui-Gold-Token-–-83dde-accessible-names-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\regression-ui-Gold-Token-–-83dde-accessible-names-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\regression-ui-Gold-Token-–-83dde-accessible-names-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Token\test-results\artifacts\regression-ui-Gold-Token-–-83dde-accessible-names-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › validation\nominee.spec.js:100:3 › Gold Token – nominee validation (simulated token) › TC_GT_020 - An added nominee can be removed before saving (HYPOTHESIS) @regression 
+
+    Error: no delete/edit action on the nominee row
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m0[39m
+    Received:   [31m0[39m
+
+      104 |     const actions = await row.locator('button, a, i[class*=fa]').count();
+      105 |     record(`Nominee row actions: ${actions}`);
+    > 106 |     expect(actions, 'no delete/edit action on the nominee row').toBeGreaterThan(0);
+          |                                                                 ^
+      107 |   });
+      108 | });
+      109 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Token\tests\validation\nominee.spec.js:106:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\validation-nominee-Gold-To-d63a1-aving-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\validation-nominee-Gold-To-d63a1-aving-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Token\test-results\artifacts\validation-nominee-Gold-To-d63a1-aving-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Token\test-results\artifacts\validation-nominee-Gold-To-d63a1-aving-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › validation\nominee.spec.js (2.2m)
+  Slow test file: [chromium] › functional\tokens.spec.js (1.6m)
+  Slow test file: [chromium] › regression\ui.spec.js (20.3s)
+  Slow test file: [chromium] › api\token-api.spec.js (18.1s)
+  Consider splitting slow test files to speed up parallel execution
+  6 failed
+    [chromium] › business-rules\loan-details.spec.js:32:5 › Gold Token – loan details and amount rules (simulated token) › TC_GT_026 - Amount requested "1000.50" → "1,000.5" (decimal amount keeps its value (HYPOTHESIS)) @regression 
+    [chromium] › business-rules\loan-details.spec.js:64:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_030 - Save with no amount is refused – the loan must not be sent with amount 0 @smoke @regression 
+    [chromium] › business-rules\loan-details.spec.js:92:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_032 - Only one nominee is marked primary (HYPOTHESIS) @regression 
+    [chromium] › business-rules\loan-details.spec.js:103:3 › Gold Token – loan details and amount rules (simulated token) › TC_GT_033 - A failed save gives a meaningful message (not "Unknown Error") @regression 
+    [chromium] › regression\ui.spec.js:12:3 › Gold Token – usability, accessibility, responsive › TC_GT_040 - Nominee and amount fields have accessible names @regression 
+    [chromium] › validation\nominee.spec.js:100:3 › Gold Token – nominee validation (simulated token) › TC_GT_020 - An added nominee can be removed before saving (HYPOTHESIS) @regression 
+  1 skipped
+  34 passed (8.6m)
+
+To open last HTML report run:
+
+  npx playwright show-report Gold Token\reports\playwright-html
+
+Generated 46 | Automated 41 | Discovered 41 | Executed 40 | Passed 34 | Failed 6 | Blocked 0 | Skipped 1 | Not Executed 3 | N/A 2 | reconciles: true
+Report: C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Token\reports\QMetryReport.html

@@ -1,0 +1,185 @@
+{
+  "buttons": [
+    {
+      "text": "Contact Configuration",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Loan Configuration",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Loan Origination",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Credit Evaluation",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Loan Management",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Reports & Letters",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Nach",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Npa",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Suit",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Vehicle Loan",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Gold",
+      "title": "",
+      "cls": "btn btn-link"
+    },
+    {
+      "text": "Jobs",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Configuration",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Transactions",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Reports",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Invoice",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Assign Forms",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "Audit Log",
+      "title": "",
+      "cls": "btn btn-link collapsed"
+    },
+    {
+      "text": "",
+      "title": "Quick Links",
+      "cls": "btn dropdown-toggle border-0 p-0"
+    },
+    {
+      "text": "",
+      "title": "",
+      "cls": "btn dropdown-toggle border-0 p-0"
+    },
+    {
+      "text": "Approve All (7)",
+      "title": "Approves every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-approve"
+    },
+    {
+      "text": "Reject All",
+      "title": "Rejects every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-reject"
+    },
+    {
+      "text": "Approve All (7)",
+      "title": "Approves every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-approve"
+    },
+    {
+      "text": "Reject All",
+      "title": "Rejects every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-reject"
+    },
+    {
+      "text": "Approve All (7)",
+      "title": "Approves every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-approve"
+    },
+    {
+      "text": "Reject All",
+      "title": "Rejects every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-reject"
+    },
+    {
+      "text": "Approve All (7)",
+      "title": "Approves every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-approve"
+    },
+    {
+      "text": "Reject All",
+      "title": "Rejects every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-reject"
+    },
+    {
+      "text": "Approve All (7)",
+      "title": "Approves every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-approve"
+    },
+    {
+      "text": "Reject All",
+      "title": "Rejects every gold type in this submission in one action",
+      "disabled": false,
+      "cls": "grq-btn grq-btn-reject"
+    }
+  ],
+  "inputs": [
+    {
+      "tag": "NG-SELECT",
+      "fc": "urlName"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "ph": "",
+      "value": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "ph": "Search by maker or gold type...",
+      "value": ""
+    }
+  ],
+  "text": "×\nDashboard\nContact\nContact\nContact Configuration\nLoans\nLoans\nLoan Configuration\nLoan Origination\nCredit Evaluation\nLoan Management\nReports & Letters\nNach\nNpa\nSuit\nVehicle Loan\nGold\nGold Estimates\nGold Estimate Approval Queue\nInventory Form\nMy Gold Estimates\nGold Packet Barcode Generator\nGold Token\nGold Stock\nSchedule Gold Auction\nGold Release\nGold Release Approvals\nAudit Irregularity Report\nAudit Report Search\nGold Loan Configuration\nGold Disbursal Approval Queue\nGold Audit\nJobs\nAccounting\nAccounting\nConfiguration\nTransactions\nReports\nInvoice\nSettings\nSettings\nAssign Forms\nAudit Log\nLoans\nGold\n Gold Loan Configuration\n HEAD OFFICE\n\nFinsta Admin\n\nGOLD LOAN\n\nGold Loan Configuration\n\nEvery gold-loan master, configuration and pre-estimate setup in one place. Each screen opens with the same access rules as its own menu entry.\n\n12\nof 14 available to you\nOverview\nGold Rate & Purity\nGold Rate Approval\n\nChecker approval of the day's internal gold rates. Only users set as Gold Rate checkers can open it.\n\nDAILY GOLD RATE\n\nChecker Approval Queue\n\nReview rates submitted by makers before they go live. Each card is one day's submission - approve or reject it as a whole.\n\n5\nsubmissions pending\n06 Jul 2026\nSubmitted by tryfinsta\nApprove All (7)\nReject All\nGOLD TYPE\tRATE (PER GRAM)\n24K (99.9% pure gold)\t14,268.22\n22K (91.6% gold and 8.4% alloyed metals)\t13,069.69\n21K (87.5% gold and 12.5% alloyed metals)\t13,069.69\n20K (83.3% gold and 16.7% alloyed metals)\t13,069.69\n19K (79.2% gold and 20.8% alloyed metals)\t13,069.69\n18K (75% gold and 25% alloyed metals)\t10,701.17\n14K (58.3% gold and 41.7% alloyed metals)\t8,318.37\n02 Jun 2026\nSubmitted by tryfinsta\nApprove All (7)\nReject All\nGOLD TYPE\tRATE (PER GRAM)\n24K (99.9% pure gold)\t14,555.5\n22K (91.6% gold and 8.4% alloyed metals)\t13,332.84\n21K (87.5% gold and 12.5% alloyed metals)\t13,332.84\n20K (83.3% gold and 16.7% alloyed metals)\t13,332.84\n19K (79.2% gold and 20.8% alloyed metals)\t13,332.84\n18K (75% gold and 25% alloyed metals)\t10,916.63\n14K (58.3% gold and 41.7% alloyed metals)\t8,485.86\n09 Oct 2026\nSubmitted by tryfinsta\nApprove All (7)\nReject All\nGOLD TYPE\tRATE (PER GRAM)\n24K (99.9% pure gold)\t15,169\n22K (91.6% gold and 8.4% alloyed metals)\t13,894.8\n21K (87.5% gold and 12.5% alloyed metals)\t13,894.8\n20K (83.3% gold and 16.7% alloyed metals)\t13,894.8\n19K (79.2% gold and 20.8% alloyed metals)\t13,894.8\n18K (75% gold and 25% alloyed metals)\t11,376.75\n14K (58.3% gold and 41.7% alloyed metals)\t8,843.53\n10 Oct 2026\nSubmitted by tryfinsta\nApprove All (7)\nReject All\nGOLD TYPE\tRATE (PER GRAM)\n24K (99.9% pure gold)\t15,239.2\n22K (91.6% gold and 8.4% alloyed metals)\t13,959.11\n21K (87.5% gold and 12.5% alloyed metals)\t13,959.11\n20K (83.3% gold and 16.7% alloyed metals)\t13,959.11\n19K (79.2% gold and 20.8% alloyed metals)\t13,959.11\n18K (75% gold and 25% alloyed metals)\t11,429.4\n14K (58.3% gold and 41.7% alloyed metals)\t8,884.45\n14 Oct 2026\nSubmitted by tryfinsta\nApprove All (7)\nReject All\nGOLD TYPE\tRATE (PER GRAM)\n24K (99.9% pure gold)\t15,175.6\n22K (91.6% gold and 8.4% alloyed metals)\t13,900.85\n21K (87.5% gold and 12.5% alloyed metals)\t13,900.85\n20K (83.3% gold and 16.7% alloyed metals)\t13,900.85\n19K (79.2% gold and 20.8% alloyed metals)\t13,900.85\n18K (75% gold and 25% alloyed metals)\t11,381.7\n14K (58.3% gold and 41.7% alloyed metals)\t8,847.37\n\n"
+}

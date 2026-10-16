@@ -1,0 +1,213 @@
+{
+  "flowId": "FLOW-1791964800860",
+  "env": "http://host214.kapilits.com:8411/",
+  "startedAt": "2026-10-14T08:00:00.860Z",
+  "contactName": "AUTOTEST HIGAHI QA",
+  "mobile": "9964786078",
+  "pan": "AQHPI6078G",
+  "ucic": "261000011",
+  "steps": [
+    {
+      "step": "contact",
+      "at": "2026-10-14T08:00:00.860Z",
+      "contactName": "AUTOTEST HIGAHI QA",
+      "mobile": "9964786078",
+      "pan": "AQHPI6078G",
+      "ucic": "261000011"
+    },
+    {
+      "step": "goldrate",
+      "at": "2026-10-14T08:00:11.972Z",
+      "goldRateDate": "13/07/2026",
+      "goldRateCreated": false
+    },
+    {
+      "step": "scheme",
+      "at": "2026-10-14T08:00:40.314Z",
+      "schemeCode": "AT-32076",
+      "schemeName": "AUTOTEST SCHEME 32076",
+      "schemeType": "Regular Monthly Repayment",
+      "schemeTenure": 9,
+      "schemeRate": 18,
+      "schemeEffectiveFrom": "13/07/2026"
+    },
+    {
+      "step": "estimate",
+      "at": "2026-10-14T08:00:54.111Z",
+      "geNumber": "GE2610000022",
+      "routedTo": "Internal Appraiser 2",
+      "estimateGrossWt": 10.5,
+      "backDate": "13/07/2026"
+    },
+    {
+      "step": "estimate-checker",
+      "at": "2026-10-14T08:01:48.608Z",
+      "estimateStatus": "Approved",
+      "approvedEstimateValue": "₹ 1,31,325.1"
+    },
+    {
+      "step": "token",
+      "at": "2026-10-14T08:02:30.296Z",
+      "token": "UID00025",
+      "loanNumber": "GLNG0126070000003",
+      "sanctionedAmount": 98000
+    },
+    {
+      "step": "barcode-BH",
+      "at": "2026-10-14T08:02:48.220Z",
+      "bhBarcode": "BH2610000022"
+    },
+    {
+      "step": "inventory",
+      "at": "2026-10-14T08:03:37.380Z",
+      "packedWith": "BH2610000022",
+      "vaultName": "AUTOTEST Strong Room 71145",
+      "safeNo": "S4090",
+      "locker": "1"
+    },
+    {
+      "step": "barcode-Audit",
+      "at": "2026-10-14T08:03:52.615Z",
+      "auditBarcode": "AUD2610000011"
+    },
+    {
+      "step": "stock-audit",
+      "at": "2026-10-14T08:04:07.821Z",
+      "auditStatus": "Verified",
+      "auditedOn": "2026-10-14"
+    },
+    {
+      "step": "disbursal",
+      "at": "2026-10-14T08:04:26.415Z",
+      "disbursalAmount": 98000,
+      "disbursalStatus": "Waiting for Approval"
+    },
+    {
+      "step": "disbursal-approval",
+      "at": "2026-10-14T08:05:01.624Z",
+      "disbursalStatus": "Approved & Disbursed"
+    },
+    {
+      "step": "scheduled-jobs",
+      "at": "2026-10-14T08:05:47.801Z",
+      "accrualDates": [
+        "31/07/2026",
+        "31/08/2026",
+        "30/09/2026"
+      ],
+      "receivableDates": [
+        "13/08/2026",
+        "13/09/2026",
+        "13/10/2026"
+      ],
+      "jobType": "Non EMI",
+      "jobResults": [
+        "Accrued Interest Job 31/07/2026: Accrued interest posted for 1 loan(s) as on 31/07/2026.",
+        "Instalment Receivables 13/08/2026: No instalment falls due on 13/08/2026 (or it was already raised).",
+        "Accrued Interest Job 31/08/2026: Accrued interest posted for 1 loan(s) as on 31/08/2026.",
+        "Instalment Receivables 13/09/2026: No instalment falls due on 13/09/2026 (or it was already raised).",
+        "Accrued Interest Job 30/09/2026: Accrued interest posted for 1 loan(s) as on 30/09/2026.",
+        "Instalment Receivables 13/10/2026: No instalment falls due on 13/10/2026 (or it was already raised)."
+      ]
+    },
+    {
+      "step": "loan-receipt-check",
+      "at": "2026-10-14T08:07:49.493Z",
+      "postedReceivables": [
+        "31/07/2026:869",
+        "31/08/2026:1497",
+        "30/09/2026:1449"
+      ],
+      "delayedPaymentCharges": 149
+    },
+    {
+      "step": "loan-receipt",
+      "at": "2026-10-14T08:08:00.707Z",
+      "receiptAmount": 1545,
+      "receiptMode": "CASH",
+      "paidUpTo": [
+        "31/07/2026"
+      ],
+      "dueBefore": 4640
+    },
+    {
+      "step": "loan-receipt-check",
+      "at": "2026-10-14T08:08:47.099Z",
+      "postedReceivables": [
+        "31/07/2026:869",
+        "31/08/2026:1497",
+        "30/09/2026:1449"
+      ],
+      "delayedPaymentCharges": 0
+    },
+    {
+      "step": "loan-receipt",
+      "at": "2026-10-14T08:08:56.260Z",
+      "receiptAmount": 149,
+      "receiptMode": "CASH",
+      "paidUpTo": [
+        "31/07/2026"
+      ],
+      "dueBefore": 3095
+    }
+  ],
+  "goldRateDate": "13/07/2026",
+  "goldRateCreated": false,
+  "updatedAt": "2026-10-14T08:08:56.260Z",
+  "schemeCode": "AT-32076",
+  "schemeName": "AUTOTEST SCHEME 32076",
+  "schemeType": "Regular Monthly Repayment",
+  "schemeTenure": 9,
+  "schemeRate": 18,
+  "schemeEffectiveFrom": "13/07/2026",
+  "geNumber": "GE2610000022",
+  "routedTo": "Internal Appraiser 2",
+  "estimateGrossWt": 10.5,
+  "backDate": "13/07/2026",
+  "estimateStatus": "Approved",
+  "approvedEstimateValue": "₹ 1,31,325.1",
+  "token": "UID00025",
+  "loanNumber": "GLNG0126070000003",
+  "sanctionedAmount": 98000,
+  "bhBarcode": "BH2610000022",
+  "packedWith": "BH2610000022",
+  "vaultName": "AUTOTEST Strong Room 71145",
+  "safeNo": "S4090",
+  "locker": "1",
+  "auditBarcode": "AUD2610000011",
+  "auditStatus": "Verified",
+  "auditedOn": "2026-10-14",
+  "disbursalAmount": 98000,
+  "disbursalStatus": "Approved & Disbursed",
+  "accrualDates": [
+    "31/07/2026",
+    "31/08/2026",
+    "30/09/2026"
+  ],
+  "receivableDates": [
+    "13/08/2026",
+    "13/09/2026",
+    "13/10/2026"
+  ],
+  "jobType": "Non EMI",
+  "jobResults": [
+    "Accrued Interest Job 31/07/2026: Accrued interest posted for 1 loan(s) as on 31/07/2026.",
+    "Instalment Receivables 13/08/2026: No instalment falls due on 13/08/2026 (or it was already raised).",
+    "Accrued Interest Job 31/08/2026: Accrued interest posted for 1 loan(s) as on 31/08/2026.",
+    "Instalment Receivables 13/09/2026: No instalment falls due on 13/09/2026 (or it was already raised).",
+    "Accrued Interest Job 30/09/2026: Accrued interest posted for 1 loan(s) as on 30/09/2026.",
+    "Instalment Receivables 13/10/2026: No instalment falls due on 13/10/2026 (or it was already raised)."
+  ],
+  "postedReceivables": [
+    "31/07/2026:869",
+    "31/08/2026:1497",
+    "30/09/2026:1449"
+  ],
+  "delayedPaymentCharges": 0,
+  "receiptAmount": 149,
+  "receiptMode": "CASH",
+  "paidUpTo": [
+    "31/07/2026"
+  ],
+  "dueBefore": 3095
+}

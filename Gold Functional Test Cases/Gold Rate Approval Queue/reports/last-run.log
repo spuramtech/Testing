@@ -1,0 +1,360 @@
+
+> gold-functional-test-cases@1.0.0 approvalqueue
+> node common/utils/run-form.js "Gold Rate Approval Queue"
+
+
+=== Gold Rate Approval Queue / Gold Rate Approval Queue ===
+
+Running 48 tests using 1 worker
+
+  ok 1 [chromium] › api\approval-api.spec.js:22:3 › Gold Rate Approval Queue – API › TC_GQ_036 - Queue API returns well-formed PENDING records @regression (12.4s)
+  ok 2 [chromium] › api\approval-api.spec.js:29:3 › Gold Rate Approval Queue – API › TC_GQ_037 - Queue API refuses requests without a token @regression (9.9s)
+  x  3 [chromium] › api\approval-api.spec.js:38:3 › Gold Rate Approval Queue – API › TC_GQ_038 - Queue API refuses a non-checker (maker) token @regression (19.1s)
+  ok 4 [chromium] › api\approval-api.spec.js:49:5 › Gold Rate Approval Queue – API › TC_GQ_039 - ApproveGoldRate by a non-checker is refused by the server (non-existent record) @regression (11.2s)
+  ok 5 [chromium] › api\approval-api.spec.js:49:5 › Gold Rate Approval Queue – API › TC_GQ_040 - RejectGoldRate by a non-checker is refused by the server (non-existent record) @regression (8.7s)
+  ok 6 [chromium] › api\approval-api.spec.js:60:3 › Gold Rate Approval Queue – API › TC_GQ_041 - Approving a stale / unknown version is refused ("already processed by someone else") @regression (8.8s)
+  ok 7 [chromium] › api\approval-api.spec.js:70:3 › Gold Rate Approval Queue – API › TC_GQ_042 - Server rejects a Reject request without remarks @regression (8.9s)
+  x  8 [chromium] › api\approval-api.spec.js:80:3 › Gold Rate Approval Queue – API › TC_GQ_043 - Refused writes use an HTTP error status, not 200 (HYPOTHESIS: REST convention) @regression (11.3s)
+  ok 9 [chromium] › business-rules\approve-reject-rules.spec.js:9:3 › Gold Rate Approval Queue – business rules › TC_GQ_019 - Approve All sends every gold type of that day, with version stamps and the checker id @smoke @regression (10.6s)
+  ok 10 [chromium] › business-rules\approve-reject-rules.spec.js:24:3 › Gold Rate Approval Queue – business rules › TC_GQ_020 - Reject sends every gold type of that day with the remarks @regression (11.2s)
+  x  11 [chromium] › business-rules\approve-reject-rules.spec.js:37:3 › Gold Rate Approval Queue – business rules › TC_GQ_021 - Approve All asks for confirmation before approving (HYPOTHESIS: irreversible action) @regression (11.4s)
+  ok 12 [chromium] › business-rules\approve-reject-rules.spec.js:47:3 › Gold Rate Approval Queue – business rules › TC_GQ_022 - After a successful approval the card leaves the queue and the count drops (simulated server) @regression (13.7s)
+  ok 13 [chromium] › business-rules\approve-reject-rules.spec.js:60:3 › Gold Rate Approval Queue – business rules › TC_GQ_023 - After a successful rejection the modal closes and the card leaves the queue (simulated server) @regression (12.9s)
+  ok 14 [chromium] › business-rules\approve-reject-rules.spec.js:76:3 › Gold Rate Approval Queue – business rules › TC_GQ_024 - Card rates follow the carat rule (22K–19K = 24K × 91.6 %, 18K = 75 %, 14K = 58.3 %) @regression (10.5s)
+  ok 15 [chromium] › business-rules\approve-reject-rules.spec.js:88:3 › Gold Rate Approval Queue – business rules › TC_GQ_025 - Each submission's 24K equals the Online closing of the previous rate date (Daily Gold Rate) @regression (15.3s)
+  ok 16 [chromium] › functional\queue-view.spec.js:5:3 › Gold Rate Approval Queue – view › TC_GQ_001 - Checker opens the queue from the Gold Rate Approval card @smoke @regression (10.1s)
+  ok 17 [chromium] › functional\queue-view.spec.js:12:3 › Gold Rate Approval Queue – view › TC_GQ_002 - "N submissions pending" equals the number of day cards and the days returned by the API @smoke @regression (9.8s)
+  ok 18 [chromium] › functional\queue-view.spec.js:24:3 › Gold Rate Approval Queue – view › TC_GQ_003 - Each card shows date, maker, Approve All (n), Reject All and the 7 gold-type rows @regression (11.9s)
+  ok 19 [chromium] › functional\queue-view.spec.js:32:3 › Gold Rate Approval Queue – view › TC_GQ_004 - Card rates match the pending records returned by the API @regression (10.4s)
+  ok 20 [chromium] › functional\queue-view.spec.js:48:3 › Gold Rate Approval Queue – view › TC_GQ_005 - Cards are ordered newest submission first (by submission time) @regression (10.3s)
+  ok 21 [chromium] › functional\queue-view.spec.js:58:3 › Gold Rate Approval Queue – view › TC_GQ_006 - Approve All / Reject All carry explanatory tooltips @regression (9.7s)
+  ok 22 [chromium] › functional\queue-view.spec.js:67:3 › Gold Rate Approval Queue – view › TC_GQ_007 - Search by maker keeps that maker's cards @regression (12.4s)
+  ok 23 [chromium] › functional\queue-view.spec.js:79:3 › Gold Rate Approval Queue – view › TC_GQ_008 - Search by gold type keeps cards that contain it @regression (10.8s)
+  ok 24 [chromium] › functional\queue-view.spec.js:89:3 › Gold Rate Approval Queue – view › TC_GQ_009 - Search with no match shows the empty-state message @regression (10.7s)
+  ok 25 [chromium] › functional\queue-view.spec.js:98:3 › Gold Rate Approval Queue – view › TC_GQ_010 - Clearing the search restores every card @regression (10.9s)
+  ok 26 [chromium] › functional\queue-view.spec.js:109:3 › Gold Rate Approval Queue – view › TC_GQ_011 - Search is case-insensitive for the maker name @regression (11.6s)
+  ok 27 [chromium] › functional\roles.spec.js:7:5 › Gold Rate Approval Queue – access by role › TC_GQ_031 - Non-checker (INT_APPRAISER1) sees the Gold Rate Approval card locked and cannot open the queue @regression (10.7s)
+  ok 28 [chromium] › functional\roles.spec.js:7:5 › Gold Rate Approval Queue – access by role › TC_GQ_032 - Non-checker (INT_APPRAISER2) sees the Gold Rate Approval card locked and cannot open the queue @regression (10.5s)
+  ok 29 [chromium] › functional\roles.spec.js:21:3 › Gold Rate Approval Queue – access by role › TC_GQ_033 - Maker opening the queue URL directly gets no queue and no queue data @regression (13.6s)
+  ok 30 [chromium] › functional\roles.spec.js:33:3 › Gold Rate Approval Queue – access by role › TC_GQ_034 - IsGoldRateChecker answers true for the checker @regression (9.8s)
+  ok 31 [chromium] › functional\roles.spec.js:39:3 › Gold Rate Approval Queue – access by role › TC_GQ_035 - IsGoldRateChecker answers false for the maker @regression (9.0s)
+  ok 32 [chromium] › negative\failures.spec.js:8:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_026 - Server answers "already processed by someone else" – message shown, queue refreshed (simulated) @regression (11.8s)
+  x  33 [chromium] › negative\failures.spec.js:20:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_027 - Approve during a network failure shows an error and keeps the card @regression (14.1s)
+  x  34 [chromium] › negative\failures.spec.js:32:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_028 - Reject when the server returns HTTP 500 shows an error and keeps the remarks for retry @regression (13.2s)
+  x  35 [chromium] › negative\failures.spec.js:46:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_029 - Double-click on Approve All sends only one approval (simulated server) @regression (12.4s)
+  x  36 [chromium] › negative\failures.spec.js:56:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_030 - Double-click on Confirm Reject sends only one rejection (simulated server) @regression (16.2s)
+  -  37 [chromium] › positive\real-approve-reject.spec.js:17:3 › Gold Rate Approval Queue – real approve / reject (opt-in) › TC_GQ_044 - Checker rejects a target submission with remarks; it leaves the queue and Internal Rate shows it is not approved @regression
+  -  38 [chromium] › positive\real-approve-reject.spec.js:38:3 › Gold Rate Approval Queue – real approve / reject (opt-in) › TC_GQ_045 - Checker approves a target submission; it leaves the queue and Internal Rate shows APPROVED @regression
+  ok 39 [chromium] › regression\ui.spec.js:4:3 › Gold Rate Approval Queue – usability, accessibility, responsive › TC_GQ_046 - At tablet width (768px) cards and actions fit without horizontal scrolling @regression (10.9s)
+  x  40 [chromium] › regression\ui.spec.js:15:3 › Gold Rate Approval Queue – usability, accessibility, responsive › TC_GQ_047 - Remarks box and search box have accessible names @regression (10.4s)
+  ok 41 [chromium] › regression\ui.spec.js:25:3 › Gold Rate Approval Queue – usability, accessibility, responsive › TC_GQ_048 - Approve / Reject buttons are reachable and announced by keyboard @regression (9.7s)
+  ok 42 [chromium] › validation\reject-remarks.spec.js:10:3 › Gold Rate Approval Queue – Reject modal and remarks › TC_GQ_012 - Reject All opens "Reject Gold Rate" with the day, gold-type count and required remarks @smoke @regression (10.9s)
+  ok 43 [chromium] › validation\reject-remarks.spec.js:23:5 › Gold Rate Approval Queue – Reject modal and remarks › TC_GQ_013 - Confirm Reject with empty remarks shows "Remarks are required" and sends nothing @regression (11.3s)
+  ok 44 [chromium] › validation\reject-remarks.spec.js:23:5 › Gold Rate Approval Queue – Reject modal and remarks › TC_GQ_014 - Confirm Reject with whitespace only remarks shows "Remarks are required" and sends nothing @regression (10.9s)
+  ok 45 [chromium] › validation\reject-remarks.spec.js:37:3 › Gold Rate Approval Queue – Reject modal and remarks › TC_GQ_015 - Cancel closes the modal without rejecting; the card stays @regression (10.5s)
+  ok 46 [chromium] › validation\reject-remarks.spec.js:50:3 › Gold Rate Approval Queue – Reject modal and remarks › TC_GQ_016 - Remarks are cleared when the modal is opened again @regression (11.1s)
+  ok 47 [chromium] › validation\reject-remarks.spec.js:62:5 › Gold Rate Approval Queue – Reject modal and remarks › TC_GQ_017 - 1000-character remarks are sent unchanged (simulated server) @regression (11.1s)
+  ok 48 [chromium] › validation\reject-remarks.spec.js:62:5 › Gold Rate Approval Queue – Reject modal and remarks › TC_GQ_018 - Unicode / special-character remarks are sent unchanged (simulated server) @regression (10.4s)
+
+
+  1) [chromium] › api\approval-api.spec.js:38:3 › Gold Rate Approval Queue – API › TC_GQ_038 - Queue API refuses a non-checker (maker) token @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m200[39m
+    Received array: [31m[401, 403][39m
+
+      43 |     record(`Maker token → ${r.status()}; ${t.trim().startsWith('[') ? `${JSON.parse(t).length} pending records returned` : t.slice(0, 120)}`);
+      44 |     await maker.page.close();
+    > 45 |     expect([401, 403]).toContain(r.status());
+         |                        ^
+      46 |   });
+      47 |
+      48 |   for (const [id, ep] of [['TC_GQ_039', 'ApproveGoldRate'], ['TC_GQ_040', 'RejectGoldRate']]) {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\api\approval-api.spec.js:45:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-d9080-cker-maker-token-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › api\approval-api.spec.js:80:3 › Gold Rate Approval Queue – API › TC_GQ_043 - Refused writes use an HTTP error status, not 200 (HYPOTHESIS: REST convention) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: >= [32m400[39m
+    Received:    [31m200[39m
+
+      83 |     record(`Non-checker approve → HTTP ${r.status()} ${(await r.text()).slice(0, 120)}`);
+      84 |     await s.page.close();
+    > 85 |     expect(r.status()).toBeGreaterThanOrEqual(400);
+         |                        ^
+      86 |   });
+      87 | });
+      88 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\api\approval-api.spec.js:85:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-c1f39--REST-convention-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-c1f39--REST-convention-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\api-approval-api-Gold-Rate-c1f39--REST-convention-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › business-rules\approve-reject-rules.spec.js:37:3 › Gold Rate Approval Queue – business rules › TC_GQ_021 - Approve All asks for confirmation before approving (HYPOTHESIS: irreversible action) @regression 
+
+    Error: Approve was sent without any confirmation
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m[{"pApprovedby": 14, "pItems": [{"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6166}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6165}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6164}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6163}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6162}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6161}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6160}], "precordid": 6166}][39m
+
+      42 |     const dialog = await queue.page.locator('.modal.show:not(#rejectGoldRateModal), .swal2-popup').filter({ hasText: /approve|confirm/i }).count();
+      43 |     record(`Confirmation dialog shown: ${dialog > 0}; approve request sent immediately: ${sent.length > 0}`);
+    > 44 |     expect(sent, 'Approve was sent without any confirmation').toHaveLength(0);
+         |                                                               ^
+      45 |   });
+      46 |
+      47 |   test('TC_GQ_022 - After a successful approval the card leaves the queue and the count drops (simulated server) @regression', async ({ queue, mockWrite, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\business-rules\approve-reject-rules.spec.js:44:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\business-rules-approve-rej-9ff96-eversible-action-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\business-rules-approve-rej-9ff96-eversible-action-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\business-rules-approve-rej-9ff96-eversible-action-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\business-rules-approve-rej-9ff96-eversible-action-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › negative\failures.spec.js:20:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_027 - Approve during a network failure shows an error and keeps the card @regression 
+
+    Error: user must be told the approval failed
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: [32m/error|fail|try again|unable|could not/i[39m
+    Received string:  [31m""[39m
+
+      27 |     record(`Message "${msg || 'none'}"; cards ${before} → ${await queue.cards.count()}`);
+      28 |     expect(await queue.cards.count()).toBe(before);
+    > 29 |     expect(msg, 'user must be told the approval failed').toMatch(/error|fail|try again|unable|could not/i);
+         |                                                          ^
+      30 |   });
+      31 |
+      32 |   test('TC_GQ_028 - Reject when the server returns HTTP 500 shows an error and keeps the remarks for retry @regression', async ({ queue, mockWrite, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\negative\failures.spec.js:29:58
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-3c054-d-keeps-the-card-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-3c054-d-keeps-the-card-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-3c054-d-keeps-the-card-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-3c054-d-keeps-the-card-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › negative\failures.spec.js:32:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_028 - Reject when the server returns HTTP 500 shows an error and keeps the remarks for retry @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: [32m/error|fail|try again|unable|could not/i[39m
+    Received string:  [31m""[39m
+
+      41 |     record(`Message "${msg || 'none'}"; modal open ${open}; remarks "${open ? await queue.remarks.inputValue() : '-'}"`);
+      42 |     expect(msg).not.toMatch(/success!/i);
+    > 43 |     expect(msg).toMatch(/error|fail|try again|unable|could not/i);
+         |                 ^
+      44 |   });
+      45 |
+      46 |   test('TC_GQ_029 - Double-click on Approve All sends only one approval (simulated server) @regression', async ({ queue, mockWrite, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\negative\failures.spec.js:43:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-cc49f-emarks-for-retry-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-cc49f-emarks-for-retry-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-cc49f-emarks-for-retry-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-cc49f-emarks-for-retry-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › negative\failures.spec.js:46:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_029 - Double-click on Approve All sends only one approval (simulated server) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m2[39m
+    Received array:  [31m[{"pApprovedby": 14, "pItems": [{"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6166}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6165}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6164}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6163}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6162}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6161}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6160}], "precordid": 6166}, {"pApprovedby": 14, "pItems": [{"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6166}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6165}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6164}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6163}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6162}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6161}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6160}], "precordid": 6166}][39m
+
+      51 |     await queue.page.waitForTimeout(2000);
+      52 |     record(`Approve requests sent: ${sent.length}`);
+    > 53 |     expect(sent).toHaveLength(1);
+         |                  ^
+      54 |   });
+      55 |
+      56 |   test('TC_GQ_030 - Double-click on Confirm Reject sends only one rejection (simulated server) @regression', async ({ queue, mockWrite, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\negative\failures.spec.js:53:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-03e37-simulated-server-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-03e37-simulated-server-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-03e37-simulated-server-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-03e37-simulated-server-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › negative\failures.spec.js:56:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_030 - Double-click on Confirm Reject sends only one rejection (simulated server) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m2[39m
+    Received array:  [31m[{"pApprovedby": 14, "pItems": [{"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6166}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6165}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6164}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6163}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6162}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6161}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6160}], "pRemarks": "double click", "precordid": 6166}, {"pApprovedby": 14, "pItems": [{"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6166}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6165}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6164}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6163}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6162}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6161}, {"pVersionstamp": "2026-10-14 18:36:30.200826", "precordid": 6160}], "pRemarks": "double click", "precordid": 6166}][39m
+
+      63 |     await queue.page.waitForTimeout(2000);
+      64 |     record(`Reject requests sent: ${sent.length}`);
+    > 65 |     expect(sent).toHaveLength(1);
+         |                  ^
+      66 |   });
+      67 | });
+      68 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\negative\failures.spec.js:65:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-6c10f-simulated-server-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-6c10f-simulated-server-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-6c10f-simulated-server-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\negative-failures-Gold-Rat-6c10f-simulated-server-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › regression\ui.spec.js:15:3 › Gold Rate Approval Queue – usability, accessibility, responsive › TC_GQ_047 - Remarks box and search box have accessible names @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 2[39m
+    [31m+ Received  + 2[39m
+
+    [2m  Object {[22m
+    [32m-   "remarks": true,[39m
+    [32m-   "search": true,[39m
+    [31m+   "remarks": false,[39m
+    [31m+   "search": false,[39m
+    [2m  }[22m
+
+      20 |     const res = { remarks: await named(queue.remarks), search: await named(queue.search) };
+      21 |     record(`Accessible name – remarks ${res.remarks}, search ${res.search}`);
+    > 22 |     expect(res).toEqual({ remarks: true, search: true });
+         |                 ^
+      23 |   });
+      24 |
+      25 |   test('TC_GQ_048 - Approve / Reject buttons are reachable and announced by keyboard @regression', async ({ page, queue, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\tests\regression\ui.spec.js:22:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\regression-ui-Gold-Rate-Ap-8913f-accessible-names-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\regression-ui-Gold-Rate-Ap-8913f-accessible-names-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Rate Approval Queue\test-results\artifacts\regression-ui-Gold-Rate-Ap-8913f-accessible-names-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Rate Approval Queue\test-results\artifacts\regression-ui-Gold-Rate-Ap-8913f-accessible-names-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › functional\queue-view.spec.js (2.0m)
+  Slow test file: [chromium] › validation\reject-remarks.spec.js (1.3m)
+  Slow test file: [chromium] › functional\roles.spec.js (53.7s)
+  Slow test file: [chromium] › positive\real-approve-reject.spec.js (20.3s)
+  Consider splitting slow test files to speed up parallel execution
+  8 failed
+    [chromium] › api\approval-api.spec.js:38:3 › Gold Rate Approval Queue – API › TC_GQ_038 - Queue API refuses a non-checker (maker) token @regression 
+    [chromium] › api\approval-api.spec.js:80:3 › Gold Rate Approval Queue – API › TC_GQ_043 - Refused writes use an HTTP error status, not 200 (HYPOTHESIS: REST convention) @regression 
+    [chromium] › business-rules\approve-reject-rules.spec.js:37:3 › Gold Rate Approval Queue – business rules › TC_GQ_021 - Approve All asks for confirmation before approving (HYPOTHESIS: irreversible action) @regression 
+    [chromium] › negative\failures.spec.js:20:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_027 - Approve during a network failure shows an error and keeps the card @regression 
+    [chromium] › negative\failures.spec.js:32:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_028 - Reject when the server returns HTTP 500 shows an error and keeps the remarks for retry @regression 
+    [chromium] › negative\failures.spec.js:46:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_029 - Double-click on Approve All sends only one approval (simulated server) @regression 
+    [chromium] › negative\failures.spec.js:56:3 › Gold Rate Approval Queue – failures and repeated clicks › TC_GQ_030 - Double-click on Confirm Reject sends only one rejection (simulated server) @regression 
+    [chromium] › regression\ui.spec.js:15:3 › Gold Rate Approval Queue – usability, accessibility, responsive › TC_GQ_047 - Remarks box and search box have accessible names @regression 
+  2 skipped
+  38 passed (9.2m)
+
+To open last HTML report run:
+
+  npx playwright show-report Gold Rate Approval Queue\reports\playwright-html
+
+Generated 56 | Automated 48 | Discovered 48 | Executed 46 | Passed 38 | Failed 8 | Blocked 0 | Skipped 2 | Not Executed 4 | N/A 4 | reconciles: true
+Report: C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Rate Approval Queue\reports\QMetryReport.html

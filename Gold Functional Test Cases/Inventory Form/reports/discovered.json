@@ -1,0 +1,1532 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Inventory Form/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Inventory Form/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Inventory Form/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\inventory-api.spec.js",
+      "file": "api/inventory-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – API",
+          "file": "api/inventory-api.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_052 - Inventory read APIs refuse requests without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5701b8b4cfb5212890da-7555be49b7069b46a8ec",
+              "file": "api/inventory-api.spec.js",
+              "line": 6,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_053 - saveloaninventory refuses a request without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5701b8b4cfb5212890da-92683854128a7275e759",
+              "file": "api/inventory-api.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_054 - Barcode details API agrees with the register @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5701b8b4cfb5212890da-170de5304baba4a85bef",
+              "file": "api/inventory-api.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_055 - A non-Branch-Head user cannot read the inventory loan list through the API (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5701b8b4cfb5212890da-fc117874b0a14c44ea44",
+              "file": "api/inventory-api.spec.js",
+              "line": 34,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\add-save.spec.js",
+      "file": "business-rules/add-save.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – Add packet (simulated photo upload)",
+          "file": "business-rules/add-save.spec.js",
+          "line": 39,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_023 - Add without a photo: \"Capture the packet photo with the barcode before adding\" @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-6e130878321cb6913901",
+              "file": "business-rules/add-save.spec.js",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_024 - Add without a vault: \"Enter Vault Name\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-6d51601b132fca06860c",
+              "file": "business-rules/add-save.spec.js",
+              "line": 53,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_025 - Add without a safe is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-459fe4884efb64e04b67",
+              "file": "business-rules/add-save.spec.js",
+              "line": 66,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_026 - Add without a locker is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-c72d40883982bcb7b2c7",
+              "file": "business-rules/add-save.spec.js",
+              "line": 81,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_027 - Add without a barcode: \"Enter Packet Number\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-cf06c4645209fb670d31",
+              "file": "business-rules/add-save.spec.js",
+              "line": 98,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_028 - A typed (not scanned) packet number cannot be added (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-d0a3ce7ca4c849154241",
+              "file": "business-rules/add-save.spec.js",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_029 - Photo upload failure: \"Could not upload the packet photo\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-ec07a66d432c0af1e94b",
+              "file": "business-rules/add-save.spec.js",
+              "line": 125,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_030 - Only PNG / JPEG photos are accepted @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-376ee3d38bf4bd37d604",
+              "file": "business-rules/add-save.spec.js",
+              "line": 135,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_031 - Add binds the packet number to the collateral and shows Save and Clear @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-e02b973b899526bc834c",
+              "file": "business-rules/add-save.spec.js",
+              "line": 149,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Inventory Form – Save (simulated server)",
+          "file": "business-rules/add-save.spec.js",
+          "line": 159,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_032 - Save sends loan, contact, date, remarks and each article's packet, vault, safe, locker and photo @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-8aeb1a41bc8500385735",
+              "file": "business-rules/add-save.spec.js",
+              "line": 160,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_033 - Save weights equal the collateral shown @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-f92afb0ffc554c1d0fed",
+              "file": "business-rules/add-save.spec.js",
+              "line": 177,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_034 - Save without Remarks shows a message (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-492f4bfe8a425e87a08d",
+              "file": "business-rules/add-save.spec.js",
+              "line": 189,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_035 - Remarks is limited to 300 characters @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-7aa90da9de9cacfd8cd6",
+              "file": "business-rules/add-save.spec.js",
+              "line": 201,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_036 - Simulated successful save shows success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-4fc197d1b68c7c6d9a85",
+              "file": "business-rules/add-save.spec.js",
+              "line": 209,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_037 - Save network failure does not show success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-ea13a09df71f51b3dc01",
+              "file": "business-rules/add-save.spec.js",
+              "line": 222,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_038 - Save server error 500 is shown as an error, not success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-91f2e5fd802d938954ed",
+              "file": "business-rules/add-save.spec.js",
+              "line": 235,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_039 - Double-clicking Save sends only one request @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-b52edb4039dd15d6ea05",
+              "file": "business-rules/add-save.spec.js",
+              "line": 247,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_040 - Clear resets the packet, storage and remarks @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "83aaceb4675561c30dbe-a3a0841fec4858475207",
+              "file": "business-rules/add-save.spec.js",
+              "line": 257,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\form.spec.js",
+      "file": "functional/form.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – form, loan and storage lists",
+          "file": "functional/form.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_001 - Form shows Trans Date, Loan Type, Loan, Collateral, Barcode, Photo, Vault, Safe, Locker and Remarks @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-a2c58ccce60831a1bb89",
+              "file": "functional/form.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_002 - Trans Date is today and read-only @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-26218f80476609ca7f56",
+              "file": "functional/form.spec.js",
+              "line": 15,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_003 - Loan Type offers Gold Loan @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-4b88a89166515814b61f",
+              "file": "functional/form.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_004 - Loan list = API list of loans waiting for inventory @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-e45cb6fa91ce6e838ead",
+              "file": "functional/form.spec.js",
+              "line": 29,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_005 - Loans already in inventory are not offered again @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-779551c39bbfc820f298",
+              "file": "functional/form.spec.js",
+              "line": 37,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_006 - Selecting a loan shows its customer, mobile and loan number from the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-a9cb85204b170fffc88f",
+              "file": "functional/form.spec.js",
+              "line": 45,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_007 - Collateral rows show each article with gross and pure net weight, no packet yet @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-141d33ef286c6ec0498e",
+              "file": "functional/form.spec.js",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_008 - Save and Clear are not offered before a packet is added @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-1bf4e7ad4906acb625e9",
+              "file": "functional/form.spec.js",
+              "line": 64,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_009 - Vault list = active vaults from the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-e1bd7d7d6f881127a66e",
+              "file": "functional/form.spec.js",
+              "line": 71,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_010 - Choosing a vault fills its Vault Code and lists only its safes @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-1507818e3d4a9716e8c9",
+              "file": "functional/form.spec.js",
+              "line": 81,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_011 - Vault Code is read-only and Safe has no options before a vault is chosen @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-15e5dd68855771e04fa0",
+              "file": "functional/form.spec.js",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_012 - Locker list = free lockers of the chosen safe from the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-841f0912ee1f8db0eec2",
+              "file": "functional/form.spec.js",
+              "line": 102,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\view.spec.js",
+      "file": "functional/view.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – View (saved inventories)",
+          "file": "functional/view.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_041 - View lists saved inventories with the expected columns @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-a6ae6799ae6685197644",
+              "file": "functional/view.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_042 - View total and rows match the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-9f1f771036aff301fd23",
+              "file": "functional/view.spec.js",
+              "line": 14,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_043 - Inventory numbers are INV + 10 digits and unique; one inventory per loan @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-48fbd930e0c34cbbbb7f",
+              "file": "functional/view.spec.js",
+              "line": 26,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_044 - Every saved inventory's BH barcode is Used in the barcode register @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-f6482b722bc5827f3422",
+              "file": "functional/view.spec.js",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_045 - Newest inventory is listed first @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-443ef99923f4364602a1",
+              "file": "functional/view.spec.js",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_046 - Paging shows 10 rows and page 2 has different rows @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-0859a90c76496d3f14b5",
+              "file": "functional/view.spec.js",
+              "line": 57,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_047 - Totals row = sum of gross and pure net weights @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-f30e8f3754c9464dc45e",
+              "file": "functional/view.spec.js",
+              "line": 69,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_048 - \"New\" goes back to an empty Inventory Form @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "08efbfdfdcb628c9b8c1-7c77e37cf37a9ae6239b",
+              "file": "functional/view.spec.js",
+              "line": 83,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "negative\\roles.spec.js",
+      "file": "negative/roles.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – roles",
+          "file": "negative/roles.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_049 - INT_APPRAISER1 has no Inventory Form in the menu @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-62138b95718d529ecd4a",
+              "file": "negative/roles.spec.js",
+              "line": 9,
+              "column": 5
+            },
+            {
+              "title": "TC_IF_050 - EXT_APPRAISER1 has no Inventory Form in the menu @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-32d442c81e98e6ba8d66",
+              "file": "negative/roles.spec.js",
+              "line": 9,
+              "column": 5
+            },
+            {
+              "title": "TC_IF_051 - INT_APPRAISER1 opening the Inventory Form URL directly cannot use it @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-976e3744b3681c17a8eb",
+              "file": "negative/roles.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\real-inventory.spec.js",
+      "file": "positive/real-inventory.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – real save",
+          "file": "positive/real-inventory.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_059 - Real save of an AUTOTEST loan creates an inventory and uses the barcode (ALLOW_DATA_CREATION=1) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "beec8da0bd57645245cc-9e8c9580309bfa26a9f1",
+              "file": "positive/real-inventory.spec.js",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_060 - After the real save the loan is no longer offered and its barcode is refused (ALLOW_DATA_CREATION=1) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "beec8da0bd57645245cc-92dcb531d9abe32cdd29",
+              "file": "positive/real-inventory.spec.js",
+              "line": 40,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui.spec.js",
+      "file": "regression/ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – usability, accessibility, responsive, session",
+          "file": "regression/ui.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_056 - At tablet width (768px) the form has no page-level horizontal scroll @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-53e9021ddee70903071f",
+              "file": "regression/ui.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_057 - Form fields have accessible names @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-04139a207f1b5880b307",
+              "file": "regression/ui.spec.js",
+              "line": 12,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_058 - Idle session shows a timeout warning and \"Stay Logged In\" keeps the form open @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-60e163b9238c2e6efbe4",
+              "file": "regression/ui.spec.js",
+              "line": 30,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "validation\\scan.spec.js",
+      "file": "validation/scan.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Form – barcode scan validation",
+          "file": "validation/scan.spec.js",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_IF_013 - Unknown BH barcode: \"This is not a recognised barcode\" @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-446f4e2361effe8f1c39",
+              "file": "validation/scan.spec.js",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_014 - Random text is not accepted as a barcode @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-085f7583b7f2c18f3de7",
+              "file": "validation/scan.spec.js",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_015 - Special characters are not accepted as a barcode @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-fba978956a690595c715",
+              "file": "validation/scan.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_016 - A barcode generated for another loan is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-3515264c72ff1ae098a2",
+              "file": "validation/scan.spec.js",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_017 - A cancelled barcode is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-cf55c528bffb166c0191",
+              "file": "validation/scan.spec.js",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_018 - A used barcode is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-55ffe6f97a9901fd84c3",
+              "file": "validation/scan.spec.js",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_019 - The loan's own unused BH barcode is accepted and bound @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-1f73e4669ae8793885e3",
+              "file": "validation/scan.spec.js",
+              "line": 66,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_020 - Bind To Packet No with an empty box shows a message @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-fd955173673ffc45eab9",
+              "file": "validation/scan.spec.js",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_021 - Bind To Packet No button works like Enter @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-0a5ec5350fec0abde2a1",
+              "file": "validation/scan.spec.js",
+              "line": 85,
+              "column": 3
+            },
+            {
+              "title": "TC_IF_022 - An audit barcode cannot be used as the packet barcode (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1f3fe2f8c0dc1bab760-de574cc5394fd90d5d23",
+              "file": "validation/scan.spec.js",
+              "line": 95,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-16T07:29:26.110Z",
+    "duration": 34.20599999999996,
+    "expected": 0,
+    "skipped": 60,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

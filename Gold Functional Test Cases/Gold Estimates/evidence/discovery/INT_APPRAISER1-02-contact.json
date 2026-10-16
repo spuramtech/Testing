@@ -1,0 +1,546 @@
+{
+  "inputs": [
+    {
+      "tag": "NG-SELECT",
+      "fc": "urlName",
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": ""
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": "pCustomername",
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": ""
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": "ptodayDate",
+      "ro": true,
+      "val": "15/10/2026"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": "pLoantypeid",
+      "val": "88",
+      "opts": [
+        "Select",
+        "New Gold"
+      ]
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": null,
+      "val": "0: null",
+      "opts": [
+        "Not applied (use Loan Configuration)",
+        "GL-quick — 3 mo",
+        "GL-smart — 3 mo",
+        "GOLD OLD — 3 mo",
+        "GL-Flexi — 6 mo",
+        "GL-Smart — 6 mo",
+        "AUTOTEST SCHEME 02192 — 9 mo",
+        "AUTOTEST SCHEME 02476 — 9 mo",
+        "AUTOTEST SCHEME 10325 — 9 mo",
+        "AUTOTEST SCHEME 23482 — 9 mo",
+        "AUTOTEST SCHEME 32076 — 9 mo",
+        "AUTOTEST SCHEME 43412 — 9 mo",
+        "AUTOTEST SCHEME 50419 — 9 mo",
+        "AUTOTEST SCHEME 53612 — 9 mo",
+        "AUTOTEST SCHEME 55989 — 9 mo"
+      ]
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": null,
+      "val": "",
+      "opts": [
+        "Select",
+        "NECKLACE",
+        "BANGLE",
+        "BRACELET",
+        "KADA",
+        "LOCKET",
+        "MANGALSUTRA",
+        "DROPS",
+        "RING",
+        "Finger Rings",
+        "Chains (all types)",
+        "Studs & Studded Items",
+        "Baby Finger Rings",
+        "Broad Bangles",
+        "Matti"
+      ],
+      "col": "2"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "3"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "4"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "5"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "6"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": null,
+      "val": "",
+      "opts": [
+        "Select",
+        "NECKLACE",
+        "BANGLE",
+        "BRACELET",
+        "KADA",
+        "LOCKET",
+        "MANGALSUTRA",
+        "DROPS",
+        "RING",
+        "Finger Rings",
+        "Chains (all types)",
+        "Studs & Studded Items",
+        "Baby Finger Rings",
+        "Broad Bangles",
+        "Matti"
+      ],
+      "col": "2"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "3"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "4"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "5"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "6"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": null,
+      "val": "",
+      "opts": [
+        "Select",
+        "NECKLACE",
+        "BANGLE",
+        "BRACELET",
+        "KADA",
+        "LOCKET",
+        "MANGALSUTRA",
+        "DROPS",
+        "RING",
+        "Finger Rings",
+        "Chains (all types)",
+        "Studs & Studded Items",
+        "Baby Finger Rings",
+        "Broad Bangles",
+        "Matti"
+      ],
+      "col": "2"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "3"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "4"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "5"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "6"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": null,
+      "val": "",
+      "opts": [
+        "Select",
+        "NECKLACE",
+        "BANGLE",
+        "BRACELET",
+        "KADA",
+        "LOCKET",
+        "MANGALSUTRA",
+        "DROPS",
+        "RING",
+        "Finger Rings",
+        "Chains (all types)",
+        "Studs & Studded Items",
+        "Baby Finger Rings",
+        "Broad Bangles",
+        "Matti"
+      ],
+      "col": "2"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "3"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "4"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "5"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "6"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "1"
+    },
+    {
+      "tag": "SELECT",
+      "type": "select-one",
+      "fc": null,
+      "val": "",
+      "opts": [
+        "Select",
+        "NECKLACE",
+        "BANGLE",
+        "BRACELET",
+        "KADA",
+        "LOCKET",
+        "MANGALSUTRA",
+        "DROPS",
+        "RING",
+        "Finger Rings",
+        "Chains (all types)",
+        "Studs & Studded Items",
+        "Baby Finger Rings",
+        "Broad Bangles",
+        "Matti"
+      ],
+      "col": "2"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "3"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "4"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "5"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 10,
+      "val": "",
+      "col": "6"
+    },
+    {
+      "tag": "NG-SELECT",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "val": "",
+      "col": "12"
+    },
+    {
+      "tag": "INPUT",
+      "type": "text",
+      "fc": null,
+      "max": 200,
+      "dis": true,
+      "val": ""
+    },
+    {
+      "tag": "TEXTAREA",
+      "type": "textarea",
+      "fc": "pRemarks",
+      "max": 90,
+      "val": ""
+    }
+  ],
+  "buttons": [
+    "Contact Configuration",
+    "Loan Configuration",
+    "Loan Origination",
+    "Credit Evaluation",
+    "Loan Management",
+    "Reports & Letters",
+    "Nach",
+    "Npa",
+    "Suit",
+    "Vehicle Loan",
+    "Gold",
+    "Configuration",
+    "Transactions",
+    "Reports",
+    "Invoice",
+    "Assign Forms",
+    "Audit Log",
+    "Quick Links",
+    "btn dropdown-toggle border-0 p-0",
+    "View",
+    "My Saved Estimates",
+    "Add Row",
+    "Upload article image",
+    "Upload article image",
+    "Upload article image",
+    "Upload article image",
+    "Upload article image",
+    "btn btn-lg-icon px-2 p-0",
+    "Take Photo",
+    "Clear",
+    "Save"
+  ],
+  "labels": [
+    "Contact Name",
+    "Date",
+    "LOAN NAME",
+    "SCHEME",
+    "GOLD PURITY\n*",
+    "GOLD ARTICLE TYPE\n*",
+    "QUANTITY\n*",
+    "GROSS WEIGHT (G)\n*",
+    "STONE/WASTAGE (G)\n*",
+    "STONE COUNT",
+    "NET WEIGHT (G)",
+    "PURITY DED%",
+    "PURE NETWEIGHT (G)",
+    "GOLD RATE",
+    "TOTAL",
+    "DEFECTS",
+    "IMAGES",
+    "UPLOAD GOLD ARTICLES IMAGES",
+    "Remarks"
+  ],
+  "text": "× Dashboard Contact Contact Contact Configuration Loans Loans Loan Configuration Loan Origination Credit Evaluation Loan Management Reports & Letters Nach Npa Suit Vehicle Loan Gold Gold Estimates Gold Estimate Approval Queue Inventory Form My Gold Estimates Gold Token Gold Stock Gold Release Gold Release Approvals Audit Custodian Desk Gold Loan Configuration Gold Audit Accounting Accounting Configuration Transactions Reports Invoice Settings Settings Assign Forms Audit Log Loans Gold Gold Estimates HEAD OFFICE Finsta User GOLD ESTIMATE New Estimate View My Saved Estimates Customer Details Contact Name Autotest Dcgjbi Qa × Gold Details Date LOAN NAME Select New Gold SCHEME Not applied (use Loan Configuration) GL-quick — 3 mo GL-smart — 3 mo GOLD OLD — 3 mo GL-Flexi — 6 mo GL-Smart — 6 mo AUTOTEST SCHEME 02192 — 9 mo AUTOTEST SCHEME 02476 — 9 mo AUTOTEST SCHEME 10325 — 9 mo AUTOTEST SCHEME 23482 — 9 mo AUTOTEST SCHEME 32076 — 9 mo AUTOTEST SCHEME 43412 — 9 mo AUTOTEST SCHEME 50419 — 9 mo AUTOTEST SCHEME 53612 — 9 mo AUTOTEST SCHEME 55989 — 9 mo AUTOTEST SCHEME 63119 — 9 mo AUTOTEST SCHEME 70490 — 9 mo AUTOTEST SCHEME 72880 — 9 mo AUTOTEST SCHEME 73030 — 9 mo AUTOTEST SCHEME 78881 — 9 mo AUTOTEST SCHEME 90144 — 9 mo AUTOTEST SCHEME 98566 — 9 mo GL-MAX — 12 mo GL-Smart — 12 mo Gold Article Details Stone Deduction Purity Deduction LTV Add Row Enter each gold article directly in the grid below. A new blank row is added automatically once you start filling the last one. GOLD PURITY * GOLD ARTICLE TYPE * QUANTITY * GROSS WEIGHT (G) * STONE/WASTAGE (G) * STONE COUNT NET WEIGHT (G) PURITY DED% PURE NETWEIGHT (G) GOLD RATE TOTAL DEFECTS IMAGES 22K (916KDM 92% gold and 8% alloyed metals) ₹ 13,839.39 / g as of 13/10/2026 Select NECKLACE BANGLE BRACELET KADA LOCKET MANGALSUTRA DROPS RING Finger Rings Chains (all types) Studs & Studded Items Baby Finger Rings Broad Bangles Matti Necklaces Lockets Ankle Wear Bracelets Any Other Item CHAIN Coins Plain Bangles 0% 0.00 13,839.39 0 Select Defects 22K (916KDM 92% gold and 8% alloyed metals) ₹ 13,839.39 / g as of 13/10/2026 Select NECKLACE BANGLE BRACELET KADA LOCKET MANGALSUTRA DROPS RING Finger Rings Chains (all types) Studs & Studded Items Baby Finger Rings Broad Bangles Matti Necklaces Lockets Ankle Wear Bracelets Any Other Item CHAIN Coins Plain Bangles 0% 0.00 13,839.39 0 Select Defects 22K (916KDM 92% gold and 8% alloyed metals) ₹ 13,839.39 / g as of 13/10/2026 Select NECKLACE BANGLE BRACELET KADA LOCKET MANGALSUTRA DROPS RING Finger Rings Chains (all types) Studs & Studded Items Baby Finger Rings Broad Bangles Matti Necklaces Lockets Ankle Wear Bracelets Any Other Item CHAIN Coins Plain Bangles 0% 0.00 13,839.39 0 Select Defects 22K (916KDM 92% gold and 8% alloyed metals) ₹ 13,839.39 / g as of 13/10/2026 Select NECKLACE BANGLE BRACELET KADA LOCKET MANGALSUTRA DROPS RING Finger Rings Chains (all types) Studs & Studded Items Baby Finger Rings Broad Bangles Matti Necklaces Lockets Ankle Wear Bracelets Any Other Item CHAIN Coins Plain Bangles 0% 0.00 13,839.39 0 Select Defects 22K (916KDM 92% gold and 8% alloyed metals) ₹ 13,839.39 / g as of 13/10/2026 Select NECKLACE BANGLE BRACELET KADA LOCKET MANGALSUTRA DROPS RING Finger Rings Chains (all types) Studs & Studded Items Baby Finger Rings Broad Bangles Matti Necklaces Lockets Ankle Wear Bracelets Any Other Item CHAIN Coins Plain Bangles 0% 0.00 13,839.39 0 Select Defects Totals TOTAL PURE NETWEIGHT 0.00 g TOTAL QUANTITY 0 APPRAISAL VALUE 0 Attachments & Remarks UPLOAD GOLD ARTICLES IMAGES Take Photo Remarks Clear Save "
+}

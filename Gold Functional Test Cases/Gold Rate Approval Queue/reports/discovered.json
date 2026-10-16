@@ -1,0 +1,1256 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\OneDrive\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Rate Approval Queue/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Rate Approval Queue/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Rate Approval Queue/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\approval-api.spec.js",
+      "file": "api/approval-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – API",
+          "file": "api/approval-api.spec.js",
+          "line": 21,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_036 - Queue API returns well-formed PENDING records @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-73751371cc5f060480d1",
+              "file": "api/approval-api.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_037 - Queue API refuses requests without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-b4d7abe05161babd55d5",
+              "file": "api/approval-api.spec.js",
+              "line": 29,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_038 - Queue API refuses a non-checker (maker) token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-9c52b6e87bae0b8425af",
+              "file": "api/approval-api.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_039 - ApproveGoldRate by a non-checker is refused by the server (non-existent record) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-c9b98a82f04261abcb4d",
+              "file": "api/approval-api.spec.js",
+              "line": 49,
+              "column": 5
+            },
+            {
+              "title": "TC_GQ_040 - RejectGoldRate by a non-checker is refused by the server (non-existent record) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-424e7236b75b7f680be4",
+              "file": "api/approval-api.spec.js",
+              "line": 49,
+              "column": 5
+            },
+            {
+              "title": "TC_GQ_041 - Approving a stale / unknown version is refused (\"already processed by someone else\") @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-40a392a6b502855e57a2",
+              "file": "api/approval-api.spec.js",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_042 - Server rejects a Reject request without remarks @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-6cd6d1cc21bf8fafda36",
+              "file": "api/approval-api.spec.js",
+              "line": 70,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_043 - Refused writes use an HTTP error status, not 200 (HYPOTHESIS: REST convention) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ae5af31bd21485846a87-6d4574ca3207e6f7372f",
+              "file": "api/approval-api.spec.js",
+              "line": 80,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\approve-reject-rules.spec.js",
+      "file": "business-rules/approve-reject-rules.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – business rules",
+          "file": "business-rules/approve-reject-rules.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_019 - Approve All sends every gold type of that day, with version stamps and the checker id @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90b337be937da7030236-d917ab09e4fedc4fb023",
+              "file": "business-rules/approve-reject-rules.spec.js",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_020 - Reject sends every gold type of that day with the remarks @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90b337be937da7030236-460c66f08b2c1823e567",
+              "file": "business-rules/approve-reject-rules.spec.js",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_021 - Approve All asks for confirmation before approving (HYPOTHESIS: irreversible action) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90b337be937da7030236-f511ebdb7517ae2adcee",
+              "file": "business-rules/approve-reject-rules.spec.js",
+              "line": 37,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_022 - After a successful approval the card leaves the queue and the count drops (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90b337be937da7030236-af68171b934fb2b94863",
+              "file": "business-rules/approve-reject-rules.spec.js",
+              "line": 47,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_023 - After a successful rejection the modal closes and the card leaves the queue (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90b337be937da7030236-3cb44ed635acee983a09",
+              "file": "business-rules/approve-reject-rules.spec.js",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_024 - Card rates follow the carat rule (22K–19K = 24K × 91.6 %, 18K = 75 %, 14K = 58.3 %) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90b337be937da7030236-8c7f0ce39ea2d1f3d9a6",
+              "file": "business-rules/approve-reject-rules.spec.js",
+              "line": 76,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_025 - Each submission's 24K equals the Online closing of the previous rate date (Daily Gold Rate) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90b337be937da7030236-2f0daca18bdbe419787c",
+              "file": "business-rules/approve-reject-rules.spec.js",
+              "line": 88,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\queue-view.spec.js",
+      "file": "functional/queue-view.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – view",
+          "file": "functional/queue-view.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_001 - Checker opens the queue from the Gold Rate Approval card @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-68f124b2d876e2eb60e7",
+              "file": "functional/queue-view.spec.js",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_002 - \"N submissions pending\" equals the number of day cards and the days returned by the API @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-2238c8a1c66ba77ead60",
+              "file": "functional/queue-view.spec.js",
+              "line": 12,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_003 - Each card shows date, maker, Approve All (n), Reject All and the 7 gold-type rows @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-98584fb76b5c2e87c10d",
+              "file": "functional/queue-view.spec.js",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_004 - Card rates match the pending records returned by the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-df7e6ab236ef3ce9bebe",
+              "file": "functional/queue-view.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_005 - Cards are ordered newest submission first (by submission time) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-f1da5c000b633e9a43f5",
+              "file": "functional/queue-view.spec.js",
+              "line": 48,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_006 - Approve All / Reject All carry explanatory tooltips @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-e4304816889b3300cb25",
+              "file": "functional/queue-view.spec.js",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_007 - Search by maker keeps that maker's cards @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-fcd575a93375940c8da5",
+              "file": "functional/queue-view.spec.js",
+              "line": 67,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_008 - Search by gold type keeps cards that contain it @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-1657b68332ee62abc004",
+              "file": "functional/queue-view.spec.js",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_009 - Search with no match shows the empty-state message @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-431cf9564ac5d7350da3",
+              "file": "functional/queue-view.spec.js",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_010 - Clearing the search restores every card @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-4831d982e2e54c4f9ebd",
+              "file": "functional/queue-view.spec.js",
+              "line": 98,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_011 - Search is case-insensitive for the maker name @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66d03f3a44dc941ac975-87d21d5466227e3e8fc6",
+              "file": "functional/queue-view.spec.js",
+              "line": 109,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\roles.spec.js",
+      "file": "functional/roles.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – access by role",
+          "file": "functional/roles.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_031 - Non-checker (INT_APPRAISER1) sees the Gold Rate Approval card locked and cannot open the queue @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-78676a7bc1db890725fe",
+              "file": "functional/roles.spec.js",
+              "line": 7,
+              "column": 5
+            },
+            {
+              "title": "TC_GQ_032 - Non-checker (INT_APPRAISER2) sees the Gold Rate Approval card locked and cannot open the queue @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-85131b89c83b0bd56f09",
+              "file": "functional/roles.spec.js",
+              "line": 7,
+              "column": 5
+            },
+            {
+              "title": "TC_GQ_033 - Maker opening the queue URL directly gets no queue and no queue data @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-c1c418b0652938b03d38",
+              "file": "functional/roles.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_034 - IsGoldRateChecker answers true for the checker @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-db622f60b64d17c5e91b",
+              "file": "functional/roles.spec.js",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_035 - IsGoldRateChecker answers false for the maker @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f000809831103687aaad-8c8d3849fe03f5297d77",
+              "file": "functional/roles.spec.js",
+              "line": 39,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "negative\\failures.spec.js",
+      "file": "negative/failures.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – failures and repeated clicks",
+          "file": "negative/failures.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_026 - Server answers \"already processed by someone else\" – message shown, queue refreshed (simulated) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "654664170b5bc25cf72f-24be366b81ee40fb617b",
+              "file": "negative/failures.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_027 - Approve during a network failure shows an error and keeps the card @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "654664170b5bc25cf72f-ce6ea9a0cd01b3757095",
+              "file": "negative/failures.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_028 - Reject when the server returns HTTP 500 shows an error and keeps the remarks for retry @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "654664170b5bc25cf72f-5b38a1b6ac89ebca68f9",
+              "file": "negative/failures.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_029 - Double-click on Approve All sends only one approval (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "654664170b5bc25cf72f-15db5c47363362d5ba99",
+              "file": "negative/failures.spec.js",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_030 - Double-click on Confirm Reject sends only one rejection (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "654664170b5bc25cf72f-05167b29e3f8eacc510f",
+              "file": "negative/failures.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\real-approve-reject.spec.js",
+      "file": "positive/real-approve-reject.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – real approve / reject (opt-in)",
+          "file": "positive/real-approve-reject.spec.js",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_044 - Checker rejects a target submission with remarks; it leaves the queue and Internal Rate shows it is not approved @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fb677c02186fab67e7b9-fc2f4eddf2cc412a5151",
+              "file": "positive/real-approve-reject.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_045 - Checker approves a target submission; it leaves the queue and Internal Rate shows APPROVED @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fb677c02186fab67e7b9-83f61becafe0de8f4d77",
+              "file": "positive/real-approve-reject.spec.js",
+              "line": 38,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui.spec.js",
+      "file": "regression/ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – usability, accessibility, responsive",
+          "file": "regression/ui.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_046 - At tablet width (768px) cards and actions fit without horizontal scrolling @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-85dc8b6d0470f77e0363",
+              "file": "regression/ui.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_047 - Remarks box and search box have accessible names @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-a1543a6ff38d2cee2f57",
+              "file": "regression/ui.spec.js",
+              "line": 15,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_048 - Approve / Reject buttons are reachable and announced by keyboard @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-62fcbc0cf7575251c27c",
+              "file": "regression/ui.spec.js",
+              "line": 25,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "validation\\reject-remarks.spec.js",
+      "file": "validation/reject-remarks.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Rate Approval Queue – Reject modal and remarks",
+          "file": "validation/reject-remarks.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GQ_012 - Reject All opens \"Reject Gold Rate\" with the day, gold-type count and required remarks @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "944dc74319f3df29488f-14ab6aa7918eeca04fde",
+              "file": "validation/reject-remarks.spec.js",
+              "line": 10,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_013 - Confirm Reject with empty remarks shows \"Remarks are required\" and sends nothing @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "944dc74319f3df29488f-a53e1f9a4c72f45fb693",
+              "file": "validation/reject-remarks.spec.js",
+              "line": 23,
+              "column": 5
+            },
+            {
+              "title": "TC_GQ_014 - Confirm Reject with whitespace only remarks shows \"Remarks are required\" and sends nothing @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "944dc74319f3df29488f-7c494f53270be5c46050",
+              "file": "validation/reject-remarks.spec.js",
+              "line": 23,
+              "column": 5
+            },
+            {
+              "title": "TC_GQ_015 - Cancel closes the modal without rejecting; the card stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "944dc74319f3df29488f-d8ed22b48a971319b6bb",
+              "file": "validation/reject-remarks.spec.js",
+              "line": 37,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_016 - Remarks are cleared when the modal is opened again @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "944dc74319f3df29488f-ffa7147c29cfcb8d2593",
+              "file": "validation/reject-remarks.spec.js",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "TC_GQ_017 - 1000-character remarks are sent unchanged (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "944dc74319f3df29488f-bbff73f1d73b9ed8149f",
+              "file": "validation/reject-remarks.spec.js",
+              "line": 62,
+              "column": 5
+            },
+            {
+              "title": "TC_GQ_018 - Unicode / special-character remarks are sent unchanged (simulated server) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "944dc74319f3df29488f-1c24ca74c051047bec18",
+              "file": "validation/reject-remarks.spec.js",
+              "line": 62,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-15T09:30:25.066Z",
+    "duration": 41.28699999999998,
+    "expected": 0,
+    "skipped": 48,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

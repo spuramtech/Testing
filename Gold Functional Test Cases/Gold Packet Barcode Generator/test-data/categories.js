@@ -1,0 +1,27 @@
+// Test-type categories for the report.
+const ids = (...n) => n.map((x) => `TC_PB_${x}`);
+module.exports = [
+  ['Navigation & UI layout', ids('001', '026')],
+  ['Default values & field state', ids('002', '003')],
+  ['Data consistency', ids('004', '005', '027', '028')],
+  ['Dropdown / autocomplete', ids('006', '007', '012', '029')],
+  ['Required field & input validation', ids('008', '013', '014', '023', '045', '046')],
+  ['Clear / Reset', ids('015')],
+  ['Preview', ids('009', '010', '011')],
+  ['Print payload & success', ids('016', '017', '018')],
+  ['Error recovery', ids('019', '020', '049')],
+  ['Double submit', ids('021')],
+  ['Business rules (one barcode / packet)', ids('022', '025', '037', '039', '040', '041')],
+  ['Duplicate prevention', ids('038')],
+  ['Cancel barcode', ids('024', '044', '047', '048')],
+  ['Filtering', ids('030', '031', '032')],
+  ['Search', ids('033', '034', '035', '036')],
+  ['Sorting & pagination', ids('042', '043')],
+  ['Role-based access', ids('050', '051', '052')],
+  ['API', ids('053', '054', '055', '056')],
+  ['Accessibility & responsive', ids('057', '058', '059')],
+  ['Create & cancel (real)', ids('060', '061')],
+  ['Workflow / print output', ids('062', '063', '064')],
+  ['Session / concurrency / browser', ids('065')],
+  ['Not applicable', ids('NA1', 'NA2', 'NA3', 'NA4')],
+];

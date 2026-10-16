@@ -1,0 +1,15 @@
+{
+  "ge": "GE2610000033",
+  "routedTo": "Internal Appraiser 2",
+  "msgs": "GE Number GE2610000033 - Estimate saved. Routed to Internal Appraiser 2 for verification.",
+  "apiCalls": [
+    {
+      "url": "http://host214.kapilits.com:8412/api/loans/masters/contact/MultiFileUploads?subfoldername=Documents&Branch=HEAD%20OFFICE",
+      "status": 200
+    },
+    {
+      "url": "http://host214.kapilits.com:8412/api/loans/transactions/goldestimate/SaveMakerEntry",
+      "status": 200
+    }
+  ]
+}

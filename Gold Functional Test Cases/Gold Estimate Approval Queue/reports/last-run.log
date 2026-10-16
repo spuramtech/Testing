@@ -1,0 +1,311 @@
+
+> gold-functional-test-cases@1.0.0 estimatequeue
+> node common/utils/run-form.js "Gold Estimate Approval Queue"
+
+
+=== Gold Estimate Approval Queue / Gold Estimate Approval Queue ===
+
+Running 51 tests using 1 worker
+
+  ok 1 [chromium] › api\queue-api.spec.js:19:3 › Gold Estimate Approval Queue – API › TC_EQ_044 - Queue API refuses requests without a token @regression (9.6s)
+  ok 2 [chromium] › api\queue-api.spec.js:28:3 › Gold Estimate Approval Queue – API › TC_EQ_045 - A non-Branch-Head token cannot read the Branch Head's full queue @regression (18.3s)
+  ok 3 [chromium] › api\queue-api.spec.js:38:3 › Gold Estimate Approval Queue – API › TC_EQ_046 - ApproveGoldEstimate by a non-Branch-Head is refused (non-existent GE) @regression (8.7s)
+  ok 4 [chromium] › api\queue-api.spec.js:47:3 › Gold Estimate Approval Queue – API › TC_EQ_047 - ApproveInternalAppraisal for an unknown GE is refused @regression (8.7s)
+  ok 5 [chromium] › api\queue-api.spec.js:56:3 › Gold Estimate Approval Queue – API › TC_EQ_048 - RevertGoldEstimate without remarks is refused by the server (unknown GE) @regression (8.5s)
+  ok 6 [chromium] › business-rules\checker-approval.spec.js:13:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_032 - Branch Head sees the estimate as "Ready for Approval" with a Review action @smoke @regression (12.0s)
+  ok 7 [chromium] › business-rules\checker-approval.spec.js:20:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_033 - Review shows stages completed/required, every appraisal entry, and Approve / Revert @regression (10.6s)
+  ok 8 [chromium] › business-rules\checker-approval.spec.js:31:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_034 - Approve lists every entry with appraisal value / eligible loan and nothing pre-selected when there is a choice @regression (9.7s)
+  ok 9 [chromium] › business-rules\checker-approval.spec.js:43:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_035 - Single entry is pre-selected in the approve prompt @regression (9.6s)
+  ok 10 [chromium] › business-rules\checker-approval.spec.js:53:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_036 - Confirm Approve without choosing an entry is refused ("Select which entry …") @regression (13.5s)
+  ok 11 [chromium] › business-rules\checker-approval.spec.js:65:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_037 - Confirm Approve sends the chosen entry id and checker id; "Gold Estimate approved." (simulated) @smoke @regression (11.0s)
+  ok 12 [chromium] › business-rules\checker-approval.spec.js:78:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_038 - Approval failure is reported and no success shown (simulated) @regression (11.0s)
+  ok 13 [chromium] › business-rules\checker-approval.spec.js:90:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_039 - Double-click on Confirm Approve sends one approval (simulated) @regression (14.5s)
+  ok 14 [chromium] › business-rules\checker-approval.spec.js:101:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_040 - Checker Revert warns it voids every entry and needs a remark @regression (11.4s)
+  ok 15 [chromium] › business-rules\checker-approval.spec.js:114:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_041 - Checker Revert with remarks sends RevertGoldEstimate and confirms the restart (simulated) @regression (11.5s)
+  x  16 [chromium] › business-rules\checker-approval.spec.js:126:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_042 - Branch Head who made the estimate cannot approve it (no Approve / Revert) @regression (10.6s)
+  ok 17 [chromium] › business-rules\checker-approval.spec.js:137:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_043 - Approve is not offered on an estimate that is already Approved @regression (11.0s)
+  ok 18 [chromium] › business-rules\ia2-verification.spec.js:11:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_020 - IA2 sees the pending estimate with role "Internal Appraiser 2" and a Verify action @smoke @regression (10.6s)
+  ok 19 [chromium] › business-rules\ia2-verification.spec.js:18:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_021 - Verify page shows the maker's entry: weights, rate/g, value, eligible loan and articles @regression (11.0s)
+  ok 20 [chromium] › business-rules\ia2-verification.spec.js:30:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_022 - Revert opens a remarks prompt (required) with Confirm Revert and Cancel @regression (11.2s)
+  ok 21 [chromium] › business-rules\ia2-verification.spec.js:43:5 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_023 - Confirm Revert with empty remarks is refused ("A remark is required to revert this entry.") @regression (11.4s)
+  ok 22 [chromium] › business-rules\ia2-verification.spec.js:43:5 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_024 - Confirm Revert with whitespace-only remarks is refused ("A remark is required to revert this entry.") @regression (12.0s)
+  ok 23 [chromium] › business-rules\ia2-verification.spec.js:57:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_025 - Cancel closes the revert prompt and sends nothing @regression (11.7s)
+  ok 24 [chromium] › business-rules\ia2-verification.spec.js:68:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_026 - Revert with remarks sends REVERT for this GE by this user and confirms "Sent back to the Internal Appraiser to edit." (simulated) @regression (14.8s)
+  ok 25 [chromium] › business-rules\ia2-verification.spec.js:80:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_027 - Approve sends APPROVE for this GE and confirms "Entry verified. Routed to the next stage." (simulated) @smoke @regression (11.0s)
+  x  26 [chromium] › business-rules\ia2-verification.spec.js:90:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_028 - Approve asks for confirmation before verifying (HYPOTHESIS) @regression (12.0s)
+  ok 27 [chromium] › business-rules\ia2-verification.spec.js:99:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_029 - Server refusal on Approve is shown to the user (simulated) @regression (13.6s)
+  ok 28 [chromium] › business-rules\ia2-verification.spec.js:109:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_030 - Double-click on Approve sends one request (simulated) @regression (21.7s)
+  ok 29 [chromium] › business-rules\ia2-verification.spec.js:118:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_031 - The maker cannot verify their own entry: IA1 does not get the Verify action @regression (9.7s)
+  ok 30 [chromium] › functional\queue.spec.js:8:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_001 - Branch Head opens the queue with GE, customer, value, role, status, token, aging and action columns @smoke @regression (10.2s)
+  ok 31 [chromium] › functional\queue.spec.js:14:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_002 - Status filter lists all 7 workflow statuses @regression (9.9s)
+  ok 32 [chromium] › functional\queue.spec.js:20:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_003 - Filtering by "Approved" shows only Approved estimates @regression (11.4s)
+  ok 33 [chromium] › functional\queue.spec.js:29:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_004 - Queue total equals the queue API for the Branch Head @regression (10.4s)
+  ok 34 [chromium] › functional\queue.spec.js:37:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_005 - Search by GE number shows that estimate only @regression (10.5s)
+  ok 35 [chromium] › functional\queue.spec.js:46:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_006 - Search by customer name or mobile finds that customer's estimates @regression (11.6s)
+  ok 36 [chromium] › functional\queue.spec.js:60:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_007 - Search with no match empties the list @regression (10.4s)
+  x  37 [chromium] › functional\queue.spec.js:68:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_008 - Approved estimates show a pledge token; others show "-" @regression (9.9s)
+  ok 38 [chromium] › functional\queue.spec.js:78:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_009 - Branch Head sees "Branch Head" as role and View on estimates not waiting for them @regression (9.4s)
+  ok 39 [chromium] › functional\queue.spec.js:84:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_010 - Aging is shown as <1h / Nh / Nd @regression (9.2s)
+  ok 40 [chromium] › functional\queue.spec.js:90:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_011 - Every estimate: appraisals completed never exceed appraisals required; approved ones have a final value @regression (9.2s)
+  x  41 [chromium] › functional\queue.spec.js:99:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_012 - View shows estimate header, appraisal entries and status history @smoke @regression (9.0s)
+  ok 42 [chromium] › functional\queue.spec.js:108:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_013 - Detail: eligible loan = appraisal value × LTV applied; values match the API @regression (10.0s)
+  x  43 [chromium] › functional\queue.spec.js:121:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_014 - Status history is in time order and starts with the maker's SUBMIT @regression (9.2s)
+  ok 44 [chromium] › functional\queue.spec.js:133:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_015 - Back returns to the queue @regression (10.3s)
+  ok 45 [chromium] › functional\queue.spec.js:149:5 › Gold Estimate Approval Queue – role inboxes › TC_EQ_016 - INT_APPRAISER2 sees only the estimates waiting for them @regression (18.8s)
+  ok 46 [chromium] › functional\queue.spec.js:149:5 › Gold Estimate Approval Queue – role inboxes › TC_EQ_017 - EXT_APPRAISER1 sees only the estimates waiting for them @regression (9.3s)
+  ok 47 [chromium] › functional\queue.spec.js:149:5 › Gold Estimate Approval Queue – role inboxes › TC_EQ_018 - INT_APPRAISER1 sees only the estimates waiting for them @regression (9.3s)
+  x  48 [chromium] › functional\queue.spec.js:160:3 › Gold Estimate Approval Queue – role inboxes › TC_EQ_019 - Status filter is not labelled "as Branch Head" for users who are not Branch Head (HYPOTHESIS) @regression (10.0s)
+  -  49 [chromium] › positive\real-chain.spec.js:12:3 › Gold Estimate Approval Queue – real approval chain (opt-in) › TC_EQ_051 - Maker → IA2 Verify → Branch Head Approve gives Approved status and a pledge token @regression
+  ok 50 [chromium] › regression\ui.spec.js:4:3 › Gold Estimate Approval Queue – usability, accessibility, responsive › TC_EQ_049 - At tablet width (768px) the queue fits without page-level horizontal scroll @regression (13.8s)
+  x  51 [chromium] › regression\ui.spec.js:12:3 › Gold Estimate Approval Queue – usability, accessibility, responsive › TC_EQ_050 - Search box and status filter have accessible names @regression (10.0s)
+
+
+  1) [chromium] › business-rules\checker-approval.spec.js:126:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_042 - Branch Head who made the estimate cannot approve it (no Approve / Revert) @regression 
+
+    TypeError: Cannot read properties of undefined (reading 'action')
+
+      128 |     const est = await simulate('CHECKER', { makerId: 14 });
+      129 |     const me = await uid();
+    > 130 |     await q.openAction(est.pGenumber, (await q.rows()).find((r) => r.ge === est.pGenumber).action);
+          |                                                                                           ^
+      131 |     const buttons = await q.approveBtn.count();
+      132 |     record(`Maker id ${est.pMakerby}, checker id ${me}; Approve buttons ${buttons}`);
+      133 |     test.skip(me !== 14, `checker user id is ${me}, not 14 – simulated maker id does not match`);
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\tests\business-rules\checker-approval.spec.js:130:91
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\business-rules-checker-app-4afd5-o-Approve-Revert-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\business-rules-checker-app-4afd5-o-Approve-Revert-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\business-rules-checker-app-4afd5-o-Approve-Revert-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Estimate Approval Queue\test-results\artifacts\business-rules-checker-app-4afd5-o-Approve-Revert-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › business-rules\ia2-verification.spec.js:90:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_028 - Approve asks for confirmation before verifying (HYPOTHESIS) @regression 
+
+    Error: Approve was sent without any confirmation step
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m1[39m
+    Received array:  [31m[{"pAction": "APPROVE", "pGenumber": "GE9999999901", "pInternalAppraiser2UserId": 82}][39m
+
+      94 |     await q.page.waitForTimeout(1200);
+      95 |     record(`Approve request sent immediately: ${sent.length > 0}`);
+    > 96 |     expect(sent, 'Approve was sent without any confirmation step').toHaveLength(0);
+         |                                                                    ^
+      97 |   });
+      98 |
+      99 |   test('TC_EQ_029 - Server refusal on Approve is shown to the user (simulated) @regression', async ({ q, simulate, mockWrite, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\tests\business-rules\ia2-verification.spec.js:96:68
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\business-rules-ia2-verific-0a49d-fying-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\business-rules-ia2-verific-0a49d-fying-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\business-rules-ia2-verific-0a49d-fying-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Estimate Approval Queue\test-results\artifacts\business-rules-ia2-verific-0a49d-fying-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › functional\queue.spec.js:68:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_008 - Approved estimates show a pledge token; others show "-" @regression 
+
+    TypeError: Cannot read properties of null (reading 'filter')
+
+      70 |     const rows = await checkerQ.rows();
+      71 |     const bad = rows.filter((r) => (r.status === 'Approved') !== /^UID\d+$/.test(r.token));
+    > 72 |     const apiBad = api.filter((a) => (a.pStatus === 'APPROVED') !== !!a.pResultuniqueid);
+         |                        ^
+      73 |     record(`${rows.length} rows checked; UI mismatches ${bad.map((r) => `${r.ge}:${r.status}/${r.token}`).join(', ') || 'none'}; API mismatches ${apiBad.map((a) => a.pGenumber).join(', ') || 'none'}`);
+      74 |     expect(bad).toEqual([]);
+      75 |     expect(apiBad).toEqual([]);
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\tests\functional\queue.spec.js:72:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-73a79-en-others-show---regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-73a79-en-others-show---regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-73a79-en-others-show---regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-73a79-en-others-show---regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › functional\queue.spec.js:99:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_012 - View shows estimate header, appraisal entries and status history @smoke @regression 
+
+    TypeError: Cannot read properties of undefined (reading 'ge')
+
+       99 |   test('TC_EQ_012 - View shows estimate header, appraisal entries and status history @smoke @regression', async ({ page, checkerQ, record }) => {
+      100 |     const [first] = (await checkerQ.rows()).filter((r) => r.status === 'Approved');
+    > 101 |     await checkerQ.openAction(first.ge, 'View');
+          |                                     ^
+      102 |     const text = (await page.locator('body').innerText()).replace(/\s+/g, ' ');
+      103 |     record(text.split('Back').pop().slice(0, 500));
+      104 |     for (const l of ['GE NUMBER', 'ESTIMATE DATE', 'CUSTOMER', 'SCHEME', 'TENURE', 'ROI', 'APPRAISAL VALUE', 'APPRAISAL STAGES REQUIRED/COMPLETED', 'LTV APPLIED', 'ELIGIBLE LOAN AMOUNT (LTV)', 'STATUS', 'Appraisal Entries', 'Status History']) expect(text).toContain(l);
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\tests\functional\queue.spec.js:101:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-433dc-us-history-smoke-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-433dc-us-history-smoke-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-433dc-us-history-smoke-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-433dc-us-history-smoke-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › functional\queue.spec.js:121:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_014 - Status history is in time order and starts with the maker's SUBMIT @regression 
+
+    TypeError: Cannot read properties of undefined (reading 'ge')
+
+      121 |   test('TC_EQ_014 - Status history is in time order and starts with the maker\'s SUBMIT @regression', async ({ checkerQ, apiHits, record }) => {
+      122 |     const [first] = (await checkerQ.rows()).filter((r) => r.status === 'Approved');
+    > 123 |     await checkerQ.openAction(first.ge, 'View');
+          |                                     ^
+      124 |     await expect.poll(() => !!apiList(apiHits, /GetGoldEstimateStatusHistory/i)).toBe(true);
+      125 |     const h = apiList(apiHits, /GetGoldEstimateStatusHistory/i);
+      126 |     const times = h.map((x) => x.pActiondate);
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\tests\functional\queue.spec.js:123:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-923b6-e-maker-s-SUBMIT-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-923b6-e-maker-s-SUBMIT-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-923b6-e-maker-s-SUBMIT-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-923b6-e-maker-s-SUBMIT-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › functional\queue.spec.js:160:3 › Gold Estimate Approval Queue – role inboxes › TC_EQ_019 - Status filter is not labelled "as Branch Head" for users who are not Branch Head (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: not [32m/as Branch Head/[39m
+    Received string:      [31m"All statuses ([7mas Branch Head[27m)"[39m
+
+      163 |     const first = (await q.statusFilter.locator('option').first().innerText()).trim();
+      164 |     record(`IA2 sees first option "${first}"`);
+    > 165 |     expect(first).not.toMatch(/as Branch Head/);
+          |                       ^
+      166 |   });
+      167 | });
+      168 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\tests\functional\queue.spec.js:165:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-e97f8--Head-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-e97f8--Head-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-e97f8--Head-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Estimate Approval Queue\test-results\artifacts\functional-queue-Gold-Esti-e97f8--Head-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › regression\ui.spec.js:12:3 › Gold Estimate Approval Queue – usability, accessibility, responsive › TC_EQ_050 - Search box and status filter have accessible names @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 2[39m
+    [31m+ Received  + 2[39m
+
+    [2m  Object {[22m
+    [32m-   "search": true,[39m
+    [32m-   "status": true,[39m
+    [31m+   "search": false,[39m
+    [31m+   "status": false,[39m
+    [2m  }[22m
+
+      14 |     const res = { search: await named(checkerQ.search), status: await named(checkerQ.statusFilter) };
+      15 |     record(JSON.stringify(res));
+    > 16 |     expect(res).toEqual({ search: true, status: true });
+         |                 ^
+      17 |   });
+      18 | });
+      19 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\tests\regression\ui.spec.js:16:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\regression-ui-Gold-Estimat-69dbf-accessible-names-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\regression-ui-Gold-Estimat-69dbf-accessible-names-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Estimate Approval Queue\test-results\artifacts\regression-ui-Gold-Estimat-69dbf-accessible-names-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Estimate Approval Queue\test-results\artifacts\regression-ui-Gold-Estimat-69dbf-accessible-names-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › api\queue-api.spec.js (53.9s)
+  Slow test file: [chromium] › regression\ui.spec.js (23.8s)
+  Consider splitting slow test files to speed up parallel execution
+  7 failed
+    [chromium] › business-rules\checker-approval.spec.js:126:3 › Gold Estimate Approval Queue – Checker final approval (simulated estimate) › TC_EQ_042 - Branch Head who made the estimate cannot approve it (no Approve / Revert) @regression 
+    [chromium] › business-rules\ia2-verification.spec.js:90:3 › Gold Estimate Approval Queue – Internal Appraiser 2 verification (simulated estimate) › TC_EQ_028 - Approve asks for confirmation before verifying (HYPOTHESIS) @regression 
+    [chromium] › functional\queue.spec.js:68:3 › Gold Estimate Approval Queue – queue view (Branch Head) › TC_EQ_008 - Approved estimates show a pledge token; others show "-" @regression 
+    [chromium] › functional\queue.spec.js:99:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_012 - View shows estimate header, appraisal entries and status history @smoke @regression 
+    [chromium] › functional\queue.spec.js:121:3 › Gold Estimate Approval Queue – detail (View) › TC_EQ_014 - Status history is in time order and starts with the maker's SUBMIT @regression 
+    [chromium] › functional\queue.spec.js:160:3 › Gold Estimate Approval Queue – role inboxes › TC_EQ_019 - Status filter is not labelled "as Branch Head" for users who are not Branch Head (HYPOTHESIS) @regression 
+    [chromium] › regression\ui.spec.js:12:3 › Gold Estimate Approval Queue – usability, accessibility, responsive › TC_EQ_050 - Search box and status filter have accessible names @regression 
+  1 skipped
+  43 passed (9.6m)
+
+To open last HTML report run:
+
+  npx playwright show-report Gold Estimate Approval Queue\reports\playwright-html
+
+Generated 57 | Automated 51 | Discovered 51 | Executed 50 | Passed 43 | Failed 7 | Blocked 0 | Skipped 1 | Not Executed 4 | N/A 2 | reconciles: true
+Report: C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Estimate Approval Queue\reports\QMetryReport.html

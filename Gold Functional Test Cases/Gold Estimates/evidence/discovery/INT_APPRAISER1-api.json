@@ -1,0 +1,152 @@
+[
+  {
+    "m": "POST",
+    "u": "login",
+    "s": 200,
+    "b": "{\"pUserID\":15,\"pContactRefID\":\"CID1900006\",\"pUserName\":\"tryfinsta\",\"pRoleid\":27,\"pRoleFunctionsCOunt\":0,\"pOtpAuthentication\":false,\"pMobile\":\"1135111957\",\"pEmail\":\"aman@credset.com\",\"pOtp\":null,\"pRoleName\":null,\"pPassword\":null,\"pUserType\":null,\"pstatusid\":0,\"pCreatedby\":0,\"pSaltKey\":\"\",\"pEmployeeName\":\"Finsta User\",\"pToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjI3IiwiZmluc3RhX3VzZXJpZCI6IjE1IiwibmJmIjoxNzkyMDYzNTU0LCJleHAiOjE3OTIwNzQzNTQsImlhdCI6MTc5MjA2MzU1NH0.hyFhpZ4dbr9c4khNf2LiiB4Hj2Z32j97nkfquZ3izm0\",\"pStatus\":null,\"pUserorDesignation\":null,\"pActiveorInactive\":false,\"pRefreshToken\":null,\"pMessage\":null,\"pmobileno\":null,\"pemail\":null,\"companyInfoDTOs\":[{\"pPhoto\":nu"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/goldschememaster/getcompanyfeatureconfig?companyid=20",
+    "s": 200,
+    "b": "{\"precordid\":1,\"pCompanyId\":20,\"pFeatureKey\":\"GOLD_SCHEME_MATRIX\",\"pStatus\":\"ACTIVE\"}"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/stonedeductionmaster/getlist",
+    "s": 200,
+    "b": "[{\"precordid\":11,\"pminstonepercent\":0.00,\"pmaxstonepercent\":5.00,\"pdeductionpercent\":0.00,\"pstatus\":\"ACTIVE\"},{\"precordid\":12,\"pminstonepercent\":5.00,\"pmaxstonepercent\":10.00,\"pdeductionpercent\":1.00,\"pstatus\":\"ACTIVE\"},{\"precordid\":13,\"pminstonepercent\":10.00,\"pmaxstonepercent\":25.00,\"pdeductionpercent\":2.00,\"pstatus\":\"ACTIVE\"},{\"precordid\":14,\"pminstonepercent\":25.00,\"pmaxstonepercent\":40.00,\"pdeductionpercent\":5.00,\"pstatus\":\"ACTIVE\"},{\"precordid\":15,\"pminstonepercent\":40.00,\"pmaxstonepercent\":null,\"pdeductionpercent\":8.00,\"pstatus\":\"ACTIVE\"}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/puritydeductionmaster/getlist",
+    "s": 200,
+    "b": "[{\"precordid\":7,\"pcaratlabel\":\"14ct\",\"ppuritypercent\":58.30,\"pdeductionpercent\":0.00,\"pownrate\":true,\"pstatus\":\"ACTIVE\"},{\"precordid\":6,\"pcaratlabel\":\"18ct\",\"ppuritypercent\":75.00,\"pdeductionpercent\":0.00,\"pownrate\":true,\"pstatus\":\"ACTIVE\"},{\"precordid\":5,\"pcaratlabel\":\"19ct\",\"ppuritypercent\":79.20,\"pdeductionpercent\":13.60,\"pownrate\":true,\"pstatus\":\"ACTIVE\"},{\"precordid\":4,\"pcaratlabel\":\"20ct\",\"ppuritypercent\":83.30,\"pdeductionpercent\":9.10,\"pownrate\":true,\"pstatus\":\"ACTIVE\"},{\"precordid\":3,\"pcaratlabel\":\"21ct\",\"ppuritypercent\":87.50,\"pdeductionpercent\":4.50,\"pownrate\":true,\"pstatus\":\"ACTIVE\"},{\"precordid\":2,\"pcaratlabel\":\"22ct\",\"ppuritypercent\":91.60,\"pdeductionpercent\":0.00,\"pownrate\":tru"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getcompanyfeatureconfig?companyid=20",
+    "s": 200,
+    "b": "{\"precordid\":2,\"pCompanyId\":20,\"pFeatureKey\":\"GOLD_RATE_MANUAL_ENTRY\",\"pStatus\":\"INACTIVE\"}"
+  },
+  {
+    "m": "GET",
+    "u": "loans/transactions/goldestimate/GetGoldEstimateRemarks",
+    "s": 200,
+    "b": "[{\"precordid\":8,\"pRemarks\":\"Alloy\",\"pCreatedby\":0},{\"precordid\":3,\"pRemarks\":\"bend\",\"pCreatedby\":0},{\"precordid\":2,\"pRemarks\":\"Cut\",\"pCreatedby\":0},{\"precordid\":1,\"pRemarks\":\"Fold\",\"pCreatedby\":0},{\"precordid\":10,\"pRemarks\":\"Lac/Resin\",\"pCreatedby\":0},{\"precordid\":5,\"pRemarks\":\"Missing Parts\",\"pCreatedby\":0},{\"precordid\":6,\"pRemarks\":\"Missing Stone\",\"pCreatedby\":0},{\"precordid\":11,\"pRemarks\":\"Nil\",\"pCreatedby\":0},{\"precordid\":7,\"pRemarks\":\"Soldering\",\"pCreatedby\":0},{\"precordid\":9,\"pRemarks\":\"Spring\",\"pCreatedby\":0},{\"precordid\":4,\"pRemarks\":\"Stone missing\",\"pCreatedby\":0}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/contactmasterNew/GetContactsList",
+    "s": 200,
+    "b": "[{\"subscriberid\":null,\"subscribersignedate\":null,\"contactid\":4557,\"contacttype\":\"Individual\",\"contactreferenceid\":\"261000021\",\"contactname\":\"Sk Azu Umar\",\"surname\":null,\"contactmobilenumber\":\"546846646484\",\"contactemailid\":\"\",\"contactaddress\":null,\"contactimagepath\":null,\"subscriberchitgroup\":null,\"subscriberchitgroupid\":null,\"subscriberticketno\":null,\"paadharno\":\"\",\"ppanno\":\"SEDRF3456Y\",\"pdriveinglisence\":\"\",\"ppassport\":\"\",\"pdateofbirth\":\"29-11-2000\",\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null},{\"subscriberid\":null,\"subscribersignedate\":null,\"contactid\":4556,\"contacttype\":\"Individual\",\""
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/GetLoanwiseApprovalMatrixByUser?userid=15",
+    "s": 200,
+    "b": "[]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/transactions/goldestimate/GetGoldArticleCustomerLimitMaster",
+    "s": 200,
+    "b": "[{\"precordid\":11,\"pGoldarticletype\":\"Ankle Wear\",\"pMaxquantityperperson\":5,\"pMaxweightgramsperperson\":null},{\"precordid\":13,\"pGoldarticletype\":\"Any Other Item\",\"pMaxquantityperperson\":5,\"pMaxweightgramsperperson\":null},{\"precordid\":6,\"pGoldarticletype\":\"Baby Finger Rings\",\"pMaxquantityperperson\":10,\"pMaxweightgramsperperson\":null},{\"precordid\":12,\"pGoldarticletype\":\"Bracelets\",\"pMaxquantityperperson\":5,\"pMaxweightgramsperperson\":null},{\"precordid\":7,\"pGoldarticletype\":\"Broad Bangles\",\"pMaxquantityperperson\":5,\"pMaxweightgramsperperson\":null},{\"precordid\":4,\"pGoldarticletype\":\"Chains (all types)\",\"pMaxquantityperperson\":10,\"pMaxweightgramsperperson\":null},{\"precordid\":14,\"pGoldarticletype\":\"C"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/GetLtvAndRebateData",
+    "s": 200,
+    "b": "{\"_LTVlist\":[{\"purity\":\"24K (100% pure gold)\",\"ltVpersantage\":99.00,\"pRecordid\":1,\"pTypeofoperation\":null,\"pCreatedby\":0,\"pGoldpuritypercentage\":100.000},{\"purity\":\"21K (87.5% gold and 12.5% alloyed metals)\",\"ltVpersantage\":87.00,\"pRecordid\":3,\"pTypeofoperation\":null,\"pCreatedby\":0,\"pGoldpuritypercentage\":87.500},{\"purity\":\"20K (83.3% gold and 16.7% alloyed metals)\",\"ltVpersantage\":83.00,\"pRecordid\":4,\"pTypeofoperation\":null,\"pCreatedby\":0,\"pGoldpuritypercentage\":83.300},{\"purity\":\"19K (79.1% gold and 20.9% alloyed metals)\",\"ltVpersantage\":79.00,\"pRecordid\":5,\"pTypeofoperation\":null,\"pCreatedby\":0,\"pGoldpuritypercentage\":79.100},{\"purity\":\"18K (75% gold and 25% alloyed metals)\",\"ltVpersantag"
+  },
+  {
+    "m": "GET",
+    "u": "loans/transactions/goldestimate/GetSlabConfigList",
+    "s": 200,
+    "b": "[{\"precordid\":4,\"pSlabFromAmount\":0.00,\"pSlabToAmount\":99999.00,\"pInternalAppraiserCount\":1,\"pExternalAppraiserCount\":0,\"pStatusid\":1},{\"precordid\":1,\"pSlabFromAmount\":100000.00,\"pSlabToAmount\":500000.00,\"pInternalAppraiserCount\":2,\"pExternalAppraiserCount\":0,\"pStatusid\":1},{\"precordid\":2,\"pSlabFromAmount\":500001.00,\"pSlabToAmount\":1000000.00,\"pInternalAppraiserCount\":2,\"pExternalAppraiserCount\":0,\"pStatusid\":1},{\"precordid\":3,\"pSlabFromAmount\":1000001.00,\"pSlabToAmount\":1500000.00,\"pInternalAppraiserCount\":2,\"pExternalAppraiserCount\":1,\"pStatusid\":1},{\"precordid\":5,\"pSlabFromAmount\":1500001.00,\"pSlabToAmount\":100000000.00,\"pInternalAppraiserCount\":2,\"pExternalAppraiserCount\":2,\"pStatusid\":1"
+  },
+  {
+    "m": "GET",
+    "u": "loans/Transactions/Verification/getgoldarticletype",
+    "s": 200,
+    "b": "[{\"pid\":5,\"pGoldArticleTypeadd\":\"NECKLACE\",\"pcreatedby\":null,\"pcount\":8,\"pMaxcountperloan\":null},{\"pid\":7,\"pGoldArticleTypeadd\":\"BANGLE\",\"pcreatedby\":null,\"pcount\":2,\"pMaxcountperloan\":null},{\"pid\":8,\"pGoldArticleTypeadd\":\"BRACELET\",\"pcreatedby\":null,\"pcount\":7,\"pMaxcountperloan\":null},{\"pid\":9,\"pGoldArticleTypeadd\":\"KADA\",\"pcreatedby\":null,\"pcount\":3,\"pMaxcountperloan\":null},{\"pid\":10,\"pGoldArticleTypeadd\":\"LOCKET\",\"pcreatedby\":null,\"pcount\":0,\"pMaxcountperloan\":null},{\"pid\":6,\"pGoldArticleTypeadd\":\"MANGALSUTRA\",\"pcreatedby\":null,\"pcount\":0,\"pMaxcountperloan\":10},{\"pid\":12,\"pGoldArticleTypeadd\":\"DROPS\",\"pcreatedby\":null,\"pcount\":0,\"pMaxcountperloan\":20},{\"pid\":3,\"pGoldArticleTypeadd\":\"RING\""
+  },
+  {
+    "m": "GET",
+    "u": "loans/transactions/goldestimate/GetGoldArticleLimitMaster",
+    "s": 200,
+    "b": "[{\"precordid\":4,\"pGoldarticletype\":\"Clips\",\"pMaxquantityperestimate\":null,\"pIsprohibited\":true,\"pEdMdUserIds\":[]},{\"precordid\":5,\"pGoldarticletype\":\"Clocks\",\"pMaxquantityperestimate\":null,\"pIsprohibited\":true,\"pEdMdUserIds\":[]},{\"precordid\":11,\"pGoldarticletype\":\"Cufflinks\",\"pMaxquantityperestimate\":null,\"pIsprohibited\":true,\"pEdMdUserIds\":[]},{\"precordid\":16,\"pGoldarticletype\":\"Footwear\",\"pMaxquantityperestimate\":null,\"pIsprohibited\":true,\"pEdMdUserIds\":[]},{\"precordid\":15,\"pGoldarticletype\":\"Garuda figures\",\"pMaxquantityperestimate\":null,\"pIsprohibited\":true,\"pEdMdUserIds\":[]},{\"precordid\":19,\"pGoldarticletype\":\"Gold bars\",\"pMaxquantityperestimate\":null,\"pIsprohibited\":true,\"pEdMdUserIds\":"
+  },
+  {
+    "m": "GET",
+    "u": "loans/transactions/goldestimate/GetRolePool?branchid=1&role=INTERNAL_APPRAISER",
+    "s": 200,
+    "b": "[{\"precordid\":8,\"pBranchid\":1,\"pRole\":\"INTERNAL_APPRAISER\",\"pUserid\":82,\"pUsername\":\"priya\"},{\"precordid\":9,\"pBranchid\":1,\"pRole\":\"INTERNAL_APPRAISER\",\"pUserid\":15,\"pUsername\":\"tryfinsta\"}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getfiLoanTypes",
+    "s": 200,
+    "b": "[{\"getidentificationdocumentsList\":null,\"instalmentdatedetailslist\":null,\"loanconfigurationlist\":null,\"identificationdocumentsList\":null,\"referralCommissioLoanList\":null,\"penaltyConfigurationList\":null,\"ltvConfiguration\":null,\"rbtConfiguration\":null,\"intrestConfiguration\":null,\"rebateconfig\":null,\"loaninterestchanges\":null,\"ltvSlabConfigurationList\":null,\"pLoanid\":0,\"pLoanNmae\":null,\"pLoantypeid\":4,\"pLoantype\":\"Gold Loan\",\"pLoanname\":null,\"pLoancode\":null,\"pCompanycode\":null,\"pBranchcode\":null,\"pSeries\":null,\"pSerieslength\":0,\"pLoanidcode\":null,\"effectiveFromDate\":null,\"effectiveToDate\":null,\"pProductVersion\":null,\"pSecurityNature\":null,\"pPSLapplicable\":false,\"ppslcategory\":null,\"ppslsubcate"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getLoanNames?loanTypeId=4",
+    "s": 200,
+    "b": "[{\"getidentificationdocumentsList\":null,\"instalmentdatedetailslist\":null,\"loanconfigurationlist\":null,\"identificationdocumentsList\":null,\"referralCommissioLoanList\":null,\"penaltyConfigurationList\":null,\"ltvConfiguration\":null,\"rbtConfiguration\":null,\"intrestConfiguration\":null,\"rebateconfig\":null,\"loaninterestchanges\":null,\"ltvSlabConfigurationList\":null,\"pLoanid\":88,\"pLoanNmae\":\"New Gold\",\"pLoantypeid\":0,\"pLoantype\":null,\"pLoanname\":null,\"pLoancode\":null,\"pCompanycode\":null,\"pBranchcode\":null,\"pSeries\":null,\"pSerieslength\":0,\"pLoanidcode\":null,\"effectiveFromDate\":null,\"effectiveToDate\":null,\"pProductVersion\":null,\"pSecurityNature\":null,\"pPSLapplicable\":false,\"ppslcategory\":null,\"ppslsubcate"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getgoldrate?transdate=2026/10/15&loantypeid=4&purity=22K%20(91.6%25%20gold%20and%208.4%25%20alloyed%20metals)",
+    "s": 200,
+    "b": "[{\"pLoantype\":null,\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-10-13\",\"pgoldtype\":\"22K (91.6% gold and 8.4% alloyed metals)\",\"pgoldrate\":13839.39,\"pltv\":0.0,\"pgoldpercentage\":0.0,\"pmodifiedby\":0,\"pmodifieddate\":\"0001-01-01T00:00:00\",\"pcreateddate\":\"0001-01-01T00:00:00\",\"precordid\":6084,\"pstatus\":null,\"pApprovedby\":0,\"pApprovedbyname\":null,\"pApproveddate\":null,\"pRemarks\":null,\"pCreatedbyname\":null,\"pbranchid\":0,\"pVersionstamp\":null,\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getgoldrate?transdate=2026/10/15&loantypeid=4&purity=22K%20(91.6%25%20gold%20and%208.4%25%20alloyed%20metals)",
+    "s": 200,
+    "b": "[{\"pLoantype\":null,\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-10-13\",\"pgoldtype\":\"22K (91.6% gold and 8.4% alloyed metals)\",\"pgoldrate\":13839.39,\"pltv\":0.0,\"pgoldpercentage\":0.0,\"pmodifiedby\":0,\"pmodifieddate\":\"0001-01-01T00:00:00\",\"pcreateddate\":\"0001-01-01T00:00:00\",\"precordid\":6084,\"pstatus\":null,\"pApprovedby\":0,\"pApprovedbyname\":null,\"pApproveddate\":null,\"pRemarks\":null,\"pCreatedbyname\":null,\"pbranchid\":0,\"pVersionstamp\":null,\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getgoldrate?transdate=2026/10/15&loantypeid=4&purity=22K%20(91.6%25%20gold%20and%208.4%25%20alloyed%20metals)",
+    "s": 200,
+    "b": "[{\"pLoantype\":null,\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-10-13\",\"pgoldtype\":\"22K (91.6% gold and 8.4% alloyed metals)\",\"pgoldrate\":13839.39,\"pltv\":0.0,\"pgoldpercentage\":0.0,\"pmodifiedby\":0,\"pmodifieddate\":\"0001-01-01T00:00:00\",\"pcreateddate\":\"0001-01-01T00:00:00\",\"precordid\":6084,\"pstatus\":null,\"pApprovedby\":0,\"pApprovedbyname\":null,\"pApproveddate\":null,\"pRemarks\":null,\"pCreatedbyname\":null,\"pbranchid\":0,\"pVersionstamp\":null,\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getgoldrate?transdate=2026/10/15&loantypeid=4&purity=22K%20(91.6%25%20gold%20and%208.4%25%20alloyed%20metals)",
+    "s": 200,
+    "b": "[{\"pLoantype\":null,\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-10-13\",\"pgoldtype\":\"22K (91.6% gold and 8.4% alloyed metals)\",\"pgoldrate\":13839.39,\"pltv\":0.0,\"pgoldpercentage\":0.0,\"pmodifiedby\":0,\"pmodifieddate\":\"0001-01-01T00:00:00\",\"pcreateddate\":\"0001-01-01T00:00:00\",\"precordid\":6084,\"pstatus\":null,\"pApprovedby\":0,\"pApprovedbyname\":null,\"pApproveddate\":null,\"pRemarks\":null,\"pCreatedbyname\":null,\"pbranchid\":0,\"pVersionstamp\":null,\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getgoldrate?transdate=2026/10/15&loantypeid=4&purity=22K%20(91.6%25%20gold%20and%208.4%25%20alloyed%20metals)",
+    "s": 200,
+    "b": "[{\"pLoantype\":null,\"pLoantypeid\":0,\"pLoanname\":null,\"pLoanid\":0,\"ptransdate\":\"2026-10-13\",\"pgoldtype\":\"22K (91.6% gold and 8.4% alloyed metals)\",\"pgoldrate\":13839.39,\"pltv\":0.0,\"pgoldpercentage\":0.0,\"pmodifiedby\":0,\"pmodifieddate\":\"0001-01-01T00:00:00\",\"pcreateddate\":\"0001-01-01T00:00:00\",\"precordid\":6084,\"pstatus\":null,\"pApprovedby\":0,\"pApprovedbyname\":null,\"pApproveddate\":null,\"pRemarks\":null,\"pCreatedbyname\":null,\"pbranchid\":0,\"pVersionstamp\":null,\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null}]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/goldschememaster/getresolvedgoldschemeltv?companyid=20&transdate=2026-10-15",
+    "s": 200,
+    "b": "[{\"pSchemeId\":1,\"pSchemeCode\":\"GL-QUICK\",\"pSchemeName\":\"GL-quick\",\"pTenureMonths\":3,\"pRateOfInterest\":22.00,\"pPaisePerMonth\":1.833,\"pSchemeStatus\":\"ACTIVE\",\"pEffectiveFrom\":\"2026-08-23T00:00:00\",\"pIsEffective\":true,\"pLoanId\":88,\"pSchemeType\":\"BULLET\",\"pMinimumAmount\":0.00,\"pMaximumAmount\":250000.00,\"pRbiLtv\":85.00,\"pInternalLtv\":80.57},{\"pSchemeId\":1,\"pSchemeCode\":\"GL-QUICK\",\"pSchemeName\":\"GL-quick\",\"pTenureMonths\":3,\"pRateOfInterest\":22.00,\"pPaisePerMonth\":1.833,\"pSchemeStatus\":\"ACTIVE\",\"pEffectiveFrom\":\"2026-08-23T00:00:00\",\"pIsEffective\":true,\"pLoanId\":88,\"pSchemeType\":\"BULLET\",\"pMinimumAmount\":250000.00,\"pMaximumAmount\":500000.00,\"pRbiLtv\":80.00,\"pInternalLtv\":75.83},{\"pSchemeId\":1,\"pSch"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getLoanMasterDetails?Loanid=88",
+    "s": 200,
+    "b": "[{\"getidentificationdocumentsList\":[{\"pDocumentsList\":[{\"pContactType\":\"\",\"pDocumentId\":17,\"pDocumentName\":\"PAN CARD\",\"pDocumentgroupId\":6,\"pDocumentGroupId\":6,\"pDocumentMandatory\":false,\"pDocumentRequired\":false,\"pLoantypeId\":0,\"pLoanId\":88,\"pDocumentGroup\":\"PAN / FORM 60\",\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusid\":null,\"pStatusname\":null,\"pEffectfromdate\":null,\"pEffecttodate\":null,\"ptypeofoperation\":null},{\"pContactType\":\"\",\"pDocumentId\":18,\"pDocumentName\":\"Form 60\",\"pDocumentgroupId\":6,\"pDocumentGroupId\":6,\"pDocumentMandatory\":false,\"pDocumentRequired\":false,\"pLoantypeId\":0,\"pLoanId\":88,\"pDocumentGroup\":\"PAN / FORM 60\",\"modifiedby\":0,\"pCreatedby\":0,\"pModifiedby\":0,\"pStatusi"
+  },
+  {
+    "m": "GET",
+    "u": "loans/masters/loanmaster/getgoldltv?loannameid=88",
+    "s": 200,
+    "b": "[]"
+  },
+  {
+    "m": "GET",
+    "u": "loans/transactions/goldestimate/GetPendingEstimatesByContact?contactid=4556",
+    "s": 200,
+    "b": "[]"
+  }
+]

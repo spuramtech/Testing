@@ -1,0 +1,45 @@
+{
+  "d": {
+    "title": "Mr",
+    "firstName": "AUTOTEST DHHHEF",
+    "lastName": "QA",
+    "fatherFirstName": "RAMESH",
+    "dob": [
+      15,
+      6,
+      1990
+    ],
+    "gender": "male",
+    "mobile": "9067377745",
+    "email": "autotest.377745@example.com",
+    "documents": [
+      {
+        "type": "PAN / FORM 60",
+        "name": "PAN CARD",
+        "reference": "AQDPH7745H"
+      }
+    ],
+    "bank": {
+      "ifsc": "AMCB0660010",
+      "bankName": "AHMEDABAD MERCANTILE",
+      "branch": "AMBAWADI",
+      "accountNo": "92067377745"
+    },
+    "address": {
+      "addressType": "Permanent Address",
+      "residence": "Owned",
+      "address": "12, Gandhi Street",
+      "area": "Block 10",
+      "city": "Neyveli",
+      "state": "Tamil Nadu",
+      "district": "Cuddalore",
+      "pincode": "607801"
+    }
+  },
+  "apiCalls": [
+    {
+      "url": "http://host214.kapilits.com:8412/api/loans/masters/contactmasterNew/Savecontact",
+      "status": 200
+    }
+  ]
+}

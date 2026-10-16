@@ -1,0 +1,27 @@
+// Test-type categories for the report.
+const ids = (...n) => n.map((x) => `TC_IF_${x}`);
+module.exports = [
+  ['Navigation & UI layout', ids('001', '041', '048')],
+  ['Default values & field state', ids('002', '008', '011')],
+  ['Data consistency', ids('004', '006', '007', '042')],
+  ['Dropdown & dependent fields', ids('003', '009', '010', '012')],
+  ['Barcode scan validation', ids('013', '014', '015', '016', '017', '019', '021', '022')],
+  ['Required field', ids('020', '023', '024', '025', '026', '027', '034')],
+  ['Business rules', ids('005', '028', '044')],
+  ['Duplicate prevention', ids('018', '043')],
+  ['File upload (photo)', ids('029', '030', '063')],
+  ['Add packet', ids('031')],
+  ['Save payload & success', ids('032', '036')],
+  ['Calculation', ids('033', '047')],
+  ['Max length', ids('035')],
+  ['Error recovery', ids('037', '038')],
+  ['Double submit', ids('039')],
+  ['Clear / Reset', ids('040')],
+  ['Sorting & pagination', ids('045', '046')],
+  ['Role-based access', ids('049', '050', '051')],
+  ['API', ids('052', '053', '054', '055')],
+  ['Accessibility & responsive', ids('056', '057')],
+  ['Create (real)', ids('059', '060')],
+  ['Session / partial packets / concurrency / browser', ids('058', '061', '062', '064')],
+  ['Not applicable', ids('NA1', 'NA2', 'NA3')],
+];

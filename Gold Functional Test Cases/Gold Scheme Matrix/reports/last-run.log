@@ -1,0 +1,623 @@
+
+> gold-functional-test-cases@1.0.0 goldscheme
+> node common/utils/run-form.js "Gold Scheme Matrix"
+
+
+=== Gold Scheme Matrix / Gold Scheme Matrix ===
+
+Running 71 tests using 1 worker
+
+  ok 1 [chromium] › api\scheme-api.spec.js:17:3 › Gold Scheme Matrix – API › TC_GS_060 - Scheme list API returns well-formed records @regression (9.7s)
+  ok 2 [chromium] › api\scheme-api.spec.js:24:3 › Gold Scheme Matrix – API › TC_GS_061 - Scheme list API refuses requests without a token @regression (9.7s)
+  x  3 [chromium] › api\scheme-api.spec.js:33:3 › Gold Scheme Matrix – API › TC_GS_062 - Scheme list API refuses a user without Scheme Matrix rights (INT_APPRAISER1) @regression (17.8s)
+  x  4 [chromium] › api\scheme-api.spec.js:43:3 › Gold Scheme Matrix – API › TC_GS_063 - Delete API refuses a user without rights (INT_APPRAISER1) – non-existent id @regression (8.3s)
+  ok 5 [chromium] › api\scheme-api.spec.js:52:3 › Gold Scheme Matrix – API › TC_GS_064 - Delete API for a non-existent scheme answers "not deleted" @regression (10.4s)
+  ok 6 [chromium] › business-rules\slab-rules.spec.js:8:3 › Gold Scheme Matrix – slab business rules › TC_GS_033 - "Apply to all slabs below" copies the default rate to every slab with Paise/mo = rate ÷ 12 @smoke @regression (10.0s)
+  ok 7 [chromium] › business-rules\slab-rules.spec.js:21:5 › Gold Scheme Matrix – slab business rules › TC_GS_034 - Internal LTV for Bullet 9 mo at 18% = RBI LTV ÷ (1 + rate × tenure ÷ 12) @regression (10.0s)
+Login as CHECKER_BH did not reach Dashboard, retrying…
+  x  8 [chromium] › business-rules\slab-rules.spec.js:21:5 › Gold Scheme Matrix – slab business rules › TC_GS_035 - Internal LTV for Bullet 3 mo at 22% = RBI LTV ÷ (1 + rate × tenure ÷ 12) @regression (58.4s)
+  ok 9 [chromium] › business-rules\slab-rules.spec.js:21:5 › Gold Scheme Matrix – slab business rules › TC_GS_036 - Internal LTV for Monthly 6 mo at 14% = RBI LTV ÷ (1 + rate × 1 month ÷ 12) @regression (10.7s)
+  ok 10 [chromium] › business-rules\slab-rules.spec.js:21:5 › Gold Scheme Matrix – slab business rules › TC_GS_037 - Internal LTV for Monthly 12 mo at 18% = RBI LTV ÷ (1 + rate × 1 month ÷ 12) @regression (10.8s)
+  ok 11 [chromium] › business-rules\slab-rules.spec.js:32:3 › Gold Scheme Matrix – slab business rules › TC_GS_038 - Monthly schemes: Internal LTV does not change with tenure @regression (11.0s)
+  ok 12 [chromium] › business-rules\slab-rules.spec.js:43:3 › Gold Scheme Matrix – slab business rules › TC_GS_039 - Changing one slab's rate recalculates only that slab @regression (12.7s)
+  ok 13 [chromium] › business-rules\slab-rules.spec.js:56:3 › Gold Scheme Matrix – slab business rules › TC_GS_040 - Excluding a slab shows "Not offered"; including it back restores the LTV @regression (11.7s)
+  ok 14 [chromium] › business-rules\slab-rules.spec.js:72:3 › Gold Scheme Matrix – slab business rules › TC_GS_041 - Changing the default rate alone does not overwrite slab rates until "Apply to all slabs" is pressed (HYPOTHESIS) @regression (11.1s)
+  ok 15 [chromium] › functional\grid.spec.js:5:3 › Gold Scheme Matrix – grid › TC_GS_001 - Admin opens Gold Scheme Matrix from Gold Loan Configuration @smoke @regression (11.7s)
+  ok 16 [chromium] › functional\grid.spec.js:12:3 › Gold Scheme Matrix – grid › TC_GS_002 - Grid shows Scheme, Tenure, Type, Interest %, Paise/mo, Internal LTV by slab, Scheme on, Action @smoke @regression (10.6s)
+  ok 17 [chromium] › functional\grid.spec.js:20:3 › Gold Scheme Matrix – grid › TC_GS_003 - Company selector shows the logged-in company @regression (9.8s)
+  ok 18 [chromium] › functional\grid.spec.js:27:3 › Gold Scheme Matrix – grid › TC_GS_004 - Grid pages 10 schemes at a time and the pager moves to the next page @regression (10.0s)
+  ok 19 [chromium] › functional\grid.spec.js:40:3 › Gold Scheme Matrix – grid › TC_GS_005 - Sorting by Interest % orders the rows by rate @regression (9.5s)
+  x  20 [chromium] › functional\grid.spec.js:49:3 › Gold Scheme Matrix – grid › TC_GS_006 - Paise/mo of every scheme equals Interest % ÷ 12 @regression (11.2s)
+  x  21 [chromium] › functional\grid.spec.js:56:3 › Gold Scheme Matrix – grid › TC_GS_007 - Paise/mo is shown with the same precision on every row (HYPOTHESIS) @regression (10.8s)
+  ok 22 [chromium] › functional\grid.spec.js:63:3 › Gold Scheme Matrix – grid › TC_GS_008 - Grid Internal LTV values match the resolved-LTV API for every scheme @regression (10.4s)
+Login as CHECKER_BH did not reach Dashboard, retrying…
+  x  23 [chromium] › functional\grid.spec.js:76:3 › Gold Scheme Matrix – grid › TC_GS_009 - Grid rows match the scheme list API (tenure, type, rate, status) @regression (58.5s)
+  ok 24 [chromium] › functional\grid.spec.js:91:3 › Gold Scheme Matrix – grid › TC_GS_010 - Tenure shows "<n> mo" and Type shows Bullet or Regular Monthly Repayment @regression (10.1s)
+  ok 25 [chromium] › functional\new-form.spec.js:6:3 › Gold Scheme Matrix – New Scheme panel › TC_GS_011 - New Scheme opens with default values @smoke @regression (13.0s)
+  ok 26 [chromium] › functional\new-form.spec.js:15:3 › Gold Scheme Matrix – New Scheme panel › TC_GS_012 - Loan dropdown lists the gold loans from Loans Configuration @regression (10.3s)
+  ok 27 [chromium] › functional\new-form.spec.js:23:3 › Gold Scheme Matrix – New Scheme panel › TC_GS_013 - Scheme Type offers Bullet and Regular Monthly Repayment @regression (10.7s)
+  ok 28 [chromium] › functional\new-form.spec.js:32:3 › Gold Scheme Matrix – New Scheme panel › TC_GS_014 - Slab table shows the LTV Slab Master ranges with read-only RBI LTV @regression (12.4s)
+  ok 29 [chromium] › functional\new-form.spec.js:42:3 › Gold Scheme Matrix – New Scheme panel › TC_GS_015 - Effective From is chosen from the calendar and accepts a past date @regression (11.1s)
+  ok 30 [chromium] › functional\new-form.spec.js:56:3 › Gold Scheme Matrix – New Scheme panel › TC_GS_016 - Clear resets the form to its defaults @regression (11.5s)
+  ok 31 [chromium] › functional\roles.spec.js:6:3 › Gold Scheme Matrix – access by role › TC_GS_057 - User without rights (INT_APPRAISER1) sees "No view permission" and cannot open the screen @regression (12.0s)
+  ok 32 [chromium] › functional\roles.spec.js:20:3 › Gold Scheme Matrix – access by role › TC_GS_058 - INT_APPRAISER1 opening the Scheme Matrix URL directly gets no screen and no scheme data @regression (12.8s)
+  x  33 [chromium] › functional\roles.spec.js:33:3 › Gold Scheme Matrix – access by role › TC_GS_059 - Scheme Code cannot be changed when editing an existing scheme (HYPOTHESIS) @regression (10.4s)
+  ok 34 [chromium] › negative\save-failures.spec.js:7:3 › Gold Scheme Matrix – save payload and failures › TC_GS_042 - Save sends the header with Paise/mo = rate ÷ 12, ISO Effective From and chosen status (simulated server) @regression (13.6s)
+  ok 35 [chromium] › negative\save-failures.spec.js:23:3 › Gold Scheme Matrix – save payload and failures › TC_GS_043 - Slab rates are saved for the new scheme id, excluded slabs as INACTIVE (simulated server) @regression (11.4s)
+  ok 36 [chromium] › negative\save-failures.spec.js:41:3 › Gold Scheme Matrix – save payload and failures › TC_GS_044 - Save during a network failure shows "Unable to save scheme" and no success @regression (11.5s)
+  ok 37 [chromium] › negative\save-failures.spec.js:53:3 › Gold Scheme Matrix – save payload and failures › TC_GS_045 - Save when the server returns HTTP 500 shows an error and keeps the entered data @regression (11.7s)
+  ok 38 [chromium] › negative\save-failures.spec.js:66:3 › Gold Scheme Matrix – save payload and failures › TC_GS_046 - Header saved but slab save fails – user is told (simulated) (HYPOTHESIS) @regression (11.5s)
+  x  39 [chromium] › negative\save-failures.spec.js:79:3 › Gold Scheme Matrix – save payload and failures › TC_GS_047 - Double-click on Save Scheme sends one save (simulated server) @regression (13.5s)
+  ok 40 [chromium] › positive\crud.spec.js:21:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_048 - Admin creates a scheme with a custom slab rate and an excluded slab; it is listed with the right values @smoke @regression (29.8s)
+  ok 41 [chromium] › positive\crud.spec.js:37:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_049 - Edit opens the scheme with its saved header, slab rates and exclusions @regression (27.0s)
+  ok 42 [chromium] › positive\crud.spec.js:51:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_050 - Update changes name and tenure; the grid shows the new values @regression (30.2s)
+  x  43 [chromium] › positive\crud.spec.js:68:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_051 - Update keeps the custom slab rates and exclusions @regression (33.5s)
+  x  44 [chromium] › positive\crud.spec.js:85:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_052 - A second scheme with the same code and tenure is refused without a success message @regression (29.7s)
+  ok 45 [chromium] › positive\crud.spec.js:99:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_053 - "Scheme on" switch disables and re-enables a scheme and the state is kept @regression (29.2s)
+  ok 46 [chromium] › positive\crud.spec.js:123:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_054 - Delete asks for confirmation; Cancel keeps the scheme @regression (28.0s)
+  ok 47 [chromium] › positive\crud.spec.js:137:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_055 - Delete confirmed removes the scheme with "Scheme <code> deleted." @regression (27.1s)
+  ok 48 [chromium] › positive\crud.spec.js:153:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_056 - A new Active scheme effective today is resolved as effective; an Inactive one is not (API) @regression (33.7s)
+  ok 49 [chromium] › regression\ui.spec.js:4:3 › Gold Scheme Matrix – usability, accessibility, responsive › TC_GS_065 - At tablet width (768px) the grid and the New Scheme panel are usable @regression (10.3s)
+  x  50 [chromium] › regression\ui.spec.js:14:3 › Gold Scheme Matrix – usability, accessibility, responsive › TC_GS_066 - Form fields have accessible names @regression (9.6s)
+  ok 51 [chromium] › regression\ui.spec.js:26:3 › Gold Scheme Matrix – usability, accessibility, responsive › TC_GS_067 - Row actions have tooltips "Edit" and "Delete" @regression (10.0s)
+  ok 52 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_017 - Tenure "abc" → "" (letters rejected) @regression (9.7s)
+  ok 53 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_018 - Tenure "-3" → "3" (minus sign stripped) @regression (10.1s)
+  x  54 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_019 - Tenure "1.5" → not "15" (decimal tenure is not silently turned into 15 (HYPOTHESIS)) @regression (9.8s)
+  ok 55 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_020 - Interest rate "abc" → "" (letters rejected) @regression (10.0s)
+  ok 56 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_021 - Interest rate "-5" → "5" (minus sign stripped) @regression (9.8s)
+  ok 57 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_022 - Interest rate "12.345" → "12.34" (max 2 decimals) @regression (10.3s)
+  ok 58 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_023 - Interest rate "99.99" → "99.99" (upper boundary 99.99 kept) @regression (13.4s)
+  x  59 [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_024 - Interest rate "150" → not "15" (150 % is not silently cut to 15 % (HYPOTHESIS)) @regression (9.9s)
+  x  60 [chromium] › validation\fields.spec.js:27:3 › Gold Scheme Matrix – field validation › TC_GS_025 - Scheme Code length is limited (HYPOTHESIS: maxlength set) @regression (9.5s)
+  ok 61 [chromium] › validation\fields.spec.js:36:3 › Gold Scheme Matrix – field validation › TC_GS_026 - Scheme Name accepts Unicode text @regression (9.4s)
+  ok 62 [chromium] › validation\fields.spec.js:44:3 › Gold Scheme Matrix – field validation › TC_GS_027 - Tenure 0 is refused on save (HYPOTHESIS) @regression (11.3s)
+  ok 63 [chromium] › validation\fields.spec.js:57:5 › Gold Scheme Matrix – field validation › TC_GS_028 - Save without the aligned Loan shows the mandatory-fields warning and sends nothing @regression (10.7s)
+  ok 64 [chromium] › validation\fields.spec.js:57:5 › Gold Scheme Matrix – field validation › TC_GS_029 - Save without Scheme code shows the mandatory-fields warning and sends nothing @regression (10.6s)
+  ok 65 [chromium] › validation\fields.spec.js:57:5 › Gold Scheme Matrix – field validation › TC_GS_030 - Save without Scheme name shows the mandatory-fields warning and sends nothing @regression (10.6s)
+  ok 66 [chromium] › validation\fields.spec.js:73:3 › Gold Scheme Matrix – field validation › TC_GS_031 - Save with everything empty shows "Please fill all mandatory fields, including the aligned Loan" @smoke @regression (10.9s)
+  ok 67 [chromium] › validation\fields.spec.js:85:5 › Gold Scheme Matrix – field validation › TC_GS_032 - Interest rate 0 % is refused (loan allows 2 % – 24 %) @regression (10.9s)
+  ok 68 [chromium] › validation\fields.spec.js:85:5 › Gold Scheme Matrix – field validation › TC_GS_071 - Interest rate 1.99 % is refused (loan allows 2 % – 24 %) @regression (10.7s)
+  ok 69 [chromium] › validation\fields.spec.js:85:5 › Gold Scheme Matrix – field validation › TC_GS_072 - Interest rate 2 % is accepted (loan allows 2 % – 24 %) @regression (12.9s)
+  ok 70 [chromium] › validation\fields.spec.js:85:5 › Gold Scheme Matrix – field validation › TC_GS_073 - Interest rate 24 % is accepted (loan allows 2 % – 24 %) @regression (10.8s)
+  ok 71 [chromium] › validation\fields.spec.js:85:5 › Gold Scheme Matrix – field validation › TC_GS_074 - Interest rate 24.01 % is refused (loan allows 2 % – 24 %) @regression (10.9s)
+
+
+  1) [chromium] › api\scheme-api.spec.js:33:3 › Gold Scheme Matrix – API › TC_GS_062 - Scheme list API refuses a user without Scheme Matrix rights (INT_APPRAISER1) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m200[39m
+    Received array: [31m[401, 403][39m
+
+      38 |     record(`${MAKER} token → ${r.status()} ${t.trim().startsWith('[') ? `${JSON.parse(t).length} schemes returned` : t.slice(0, 100)}`);
+      39 |     await m.page.close();
+    > 40 |     expect([401, 403]).toContain(r.status());
+         |                        ^
+      41 |   });
+      42 |
+      43 |   test(`TC_GS_063 - Delete API refuses a user without rights (${MAKER}) – non-existent id @regression`, async ({ browser, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\api\scheme-api.spec.js:40:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-74c16-s-INT-APPRAISER1-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › api\scheme-api.spec.js:43:3 › Gold Scheme Matrix – API › TC_GS_063 - Delete API refuses a user without rights (INT_APPRAISER1) – non-existent id @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected value: [32m200[39m
+    Received array: [31m[401, 403][39m
+
+      47 |     record(`${MAKER} delete → ${r.status()} ${t.slice(0, 160)}`);
+      48 |     await m.page.close();
+    > 49 |     expect([401, 403]).toContain(r.status());
+         |                        ^
+      50 |   });
+      51 |
+      52 |   test('TC_GS_064 - Delete API for a non-existent scheme answers "not deleted" @regression', async ({ browser, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\api\scheme-api.spec.js:49:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-1778c--non-existent-id-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-1778c--non-existent-id-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\api-scheme-api-Gold-Scheme-1778c--non-existent-id-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › business-rules\slab-rules.spec.js:21:5 › Gold Scheme Matrix – slab business rules › TC_GS_035 - Internal LTV for Bullet 3 mo at 22% = RBI LTV ÷ (1 + rate × tenure ÷ 12) @regression 
+
+    TimeoutError: locator.fill: Timeout 20000ms exceeded.
+    Call log:
+      [2m- waiting for locator('input:not([type=password]):not([type=hidden]):not([type=checkbox])').first()[22m
+
+
+       at ..\..\common\pages\LoginPage.js:16
+
+      14 |     for (let attempt = 1; attempt <= 2; attempt++) {
+      15 |       await this.page.goto('/');
+    > 16 |       await this.username.fill(user);
+         |                           ^
+      17 |       await this.password.fill(pass);
+      18 |       await this.signIn.click();
+      19 |       try {
+
+        at LoginPage.login (C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\common\pages\LoginPage.js:16:27)
+        at Object.gsm (C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\fixtures\index.js:43:5)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\business-rules-slab-rules--e8bfb-te-×-tenure-÷-12-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\business-rules-slab-rules--e8bfb-te-×-tenure-÷-12-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\business-rules-slab-rules--e8bfb-te-×-tenure-÷-12-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\business-rules-slab-rules--e8bfb-te-×-tenure-÷-12-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › functional\grid.spec.js:49:3 › Gold Scheme Matrix – grid › TC_GS_006 - Paise/mo of every scheme equals Interest % ÷ 12 @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -  1[39m
+    [31m+ Received  + 17[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "code": "GL-FLEXI",[39m
+    [31m+     "ltv": Array [[39m
+    [31m+       76.58,[39m
+    [31m+       72.07,[39m
+    [31m+       67.57,[39m
+    [31m+     ],[39m
+    [31m+     "name": "GL-Flexi",[39m
+    [31m+     "on": true,[39m
+    [31m+     "paise": 1.83,[39m
+    [31m+     "paiseText": "1.83",[39m
+    [31m+     "rate": 22,[39m
+    [31m+     "tenure": 6,[39m
+    [31m+     "type": "Bullet",[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      51 |     const bad = rows.filter((r) => Math.abs(r.paise - r.rate / 12) > 0.0011);
+      52 |     record(`${rows.length} schemes; mismatches: ${bad.map((r) => `${r.code} ${r.rate}% → ${r.paiseText} (expected ${(r.rate / 12).toFixed(3)})`).join('; ') || 'none'}`);
+    > 53 |     expect(bad).toEqual([]);
+         |                 ^
+      54 |   });
+      55 |
+      56 |   test('TC_GS_007 - Paise/mo is shown with the same precision on every row (HYPOTHESIS) @regression', async ({ gsm, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\functional\grid.spec.js:53:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-264da-ls-Interest-÷-12-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-264da-ls-Interest-÷-12-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-264da-ls-Interest-÷-12-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-264da-ls-Interest-÷-12-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › functional\grid.spec.js:56:3 › Gold Scheme Matrix – grid › TC_GS_007 - Paise/mo is shown with the same precision on every row (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m2[39m
+    Received array:  [31m[3, 2][39m
+
+      58 |     const decimals = [...new Set(rows.map((r) => (r.paiseText.split('.')[1] || '').length))];
+      59 |     record(`Decimal places used: ${decimals.join(', ')} (${rows.map((r) => `${r.code}=${r.paiseText}`).slice(0, 8).join(', ')}…)`);
+    > 60 |     expect(decimals).toHaveLength(1);
+         |                      ^
+      61 |   });
+      62 |
+      63 |   test('TC_GS_008 - Grid Internal LTV values match the resolved-LTV API for every scheme @regression', async ({ gsm, apiHits, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\functional\grid.spec.js:60:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-d3e94-y-row-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-d3e94-y-row-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-d3e94-y-row-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-d3e94-y-row-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › functional\grid.spec.js:76:3 › Gold Scheme Matrix – grid › TC_GS_009 - Grid rows match the scheme list API (tenure, type, rate, status) @regression 
+
+    TimeoutError: locator.fill: Timeout 20000ms exceeded.
+    Call log:
+      [2m- waiting for locator('input:not([type=password]):not([type=hidden]):not([type=checkbox])').first()[22m
+
+
+       at ..\..\common\pages\LoginPage.js:16
+
+      14 |     for (let attempt = 1; attempt <= 2; attempt++) {
+      15 |       await this.page.goto('/');
+    > 16 |       await this.username.fill(user);
+         |                           ^
+      17 |       await this.password.fill(pass);
+      18 |       await this.signIn.click();
+      19 |       try {
+
+        at LoginPage.login (C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\common\pages\LoginPage.js:16:27)
+        at Object.gsm (C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\fixtures\index.js:43:5)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-fa1b1-type-rate-status-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-fa1b1-type-rate-status-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-fa1b1-type-rate-status-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\functional-grid-Gold-Schem-fa1b1-type-rate-status-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › functional\roles.spec.js:33:3 › Gold Scheme Matrix – access by role › TC_GS_059 - Scheme Code cannot be changed when editing an existing scheme (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mfalse[39m
+    Received: [31mtrue[39m
+
+      37 |     const editable = await gsm.code.isEditable();
+      38 |     record(`Editing ${r.code}: Scheme Code editable = ${editable} (not saved)`);
+    > 39 |     expect(editable).toBe(false);
+         |                      ^
+      40 |     void GoldSchemeMatrixPage;
+      41 |   });
+      42 | });
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\functional\roles.spec.js:39:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-roles-Gold-Sche-7648e-cheme-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-roles-Gold-Sche-7648e-cheme-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\functional-roles-Gold-Sche-7648e-cheme-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\functional-roles-Gold-Sche-7648e-cheme-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › negative\save-failures.spec.js:79:3 › Gold Scheme Matrix – save payload and failures › TC_GS_047 - Double-click on Save Scheme sends one save (simulated server) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m1[39m
+    Received length: [31m2[39m
+    Received array:  [31m[{"pCompanyId": 20, "pEffectiveFrom": "2026-10-15", "pLoanId": 88, "pPaisePerMonth": 1.667, "pRateOfInterest": 20, "pSchemeCode": "AT-SIM", "pSchemeName": "AUTOTEST SIMULATED", "pSchemeType": "BULLET", "pStatus": "INACTIVE", "pTenureMonths": 6, "precordid": 0}, {"pCompanyId": 20, "pEffectiveFrom": "2026-10-15", "pLoanId": 88, "pPaisePerMonth": 1.667, "pRateOfInterest": 20, "pSchemeCode": "AT-SIM", "pSchemeName": "AUTOTEST SIMULATED", "pSchemeType": "BULLET", "pStatus": "INACTIVE", "pTenureMonths": 6, "precordid": 0}][39m
+
+      86 |     await gsm.page.waitForTimeout(2500);
+      87 |     record(`savegoldschemeconfiguration calls: ${sent.length}`);
+    > 88 |     expect(sent).toHaveLength(1);
+         |                  ^
+      89 |   });
+      90 | });
+      91 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\negative\save-failures.spec.js:88:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\negative-save-failures-Gol-a2f6f-simulated-server-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\negative-save-failures-Gol-a2f6f-simulated-server-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\negative-save-failures-Gol-a2f6f-simulated-server-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\negative-save-failures-Gol-a2f6f-simulated-server-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium] › positive\crud.spec.js:68:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_051 - Update keeps the custom slab rates and exclusions @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 1[39m
+
+    [2m  Array [[22m
+    [32m-   19,[39m
+    [31m+   20,[39m
+    [2m    20,[22m
+    [2m    20,[22m
+    [2m  ][22m
+
+      79 |     const r = (await gsm.rows()).find((x) => x.code === d.code);
+      80 |     record(`After update: slab rates ${slabs.map((s) => s.rate).join('/')}, slab 3 ${slabs[2].internal}; grid LTV ${r && r.ltv.join('/')}`);
+    > 81 |     expect(slabs.map((s) => s.rate)).toEqual([19, 20, 20]);
+         |                                      ^
+      82 |     expect(slabs[2].internal).toBe('Not offered');
+      83 |   });
+      84 |
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\positive\crud.spec.js:81:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--efbd8-s-and-exclusions-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium] › positive\crud.spec.js:85:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_052 - A second scheme with the same code and tenure is refused without a success message @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: not [32m/Scheme added successfully/[39m
+    Received string:      [31m"Warning! | Scheme AT-T492791 already exists with a 6 month tenure | Success! | [7mScheme added successfully[27m"[39m
+
+      94 |     expect(after).toBe(before);
+      95 |     expect(msg).toMatch(/already exists with a 6 month tenure/);
+    > 96 |     expect(msg).not.toMatch(/Scheme added successfully/);
+         |                     ^
+      97 |   });
+      98 |
+      99 |   test('TC_GS_053 - "Scheme on" switch disables and re-enables a scheme and the state is kept @regression', async ({ gsm, created, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\positive\crud.spec.js:96:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--355f5--success-message-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--355f5--success-message-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--355f5--success-message-regression-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--355f5--success-message-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\positive-crud-Gold-Scheme--355f5--success-message-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium] › regression\ui.spec.js:14:3 › Gold Scheme Matrix – usability, accessibility, responsive › TC_GS_066 - Form fields have accessible names @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 9[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   "Loan",[39m
+    [31m+   "Scheme Code",[39m
+    [31m+   "Scheme Name",[39m
+    [31m+   "Tenure",[39m
+    [31m+   "Scheme Type",[39m
+    [31m+   "Interest rate",[39m
+    [31m+   "Effective From",[39m
+    [31m+ ][39m
+
+      21 |     }
+      22 |     record(`Without accessible name: ${missing.join(', ') || 'none'}`);
+    > 23 |     expect(missing).toEqual([]);
+         |                     ^
+      24 |   });
+      25 |
+      26 |   test('TC_GS_067 - Row actions have tooltips "Edit" and "Delete" @regression', async ({ page, gsm, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\regression\ui.spec.js:23:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\regression-ui-Gold-Scheme--214c7-accessible-names-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\regression-ui-Gold-Scheme--214c7-accessible-names-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\regression-ui-Gold-Scheme--214c7-accessible-names-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\regression-ui-Gold-Scheme--214c7-accessible-names-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_019 - Tenure "1.5" → not "15" (decimal tenure is not silently turned into 15 (HYPOTHESIS)) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: not [32m"15"[39m
+
+      20 |       const v = await gsm[field].inputValue();
+      21 |       record(`Typed "${typed}" → "${v}"`);
+    > 22 |       if (expected.startsWith('!')) expect(v).not.toBe(expected.slice(1));
+         |                                                   ^
+      23 |       else expect(v).toBe(expected);
+      24 |     });
+      25 |   }
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\validation\fields.spec.js:22:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-40fa8-to-15-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-40fa8-to-15-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-40fa8-to-15-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-40fa8-to-15-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_024 - Interest rate "150" → not "15" (150 % is not silently cut to 15 % (HYPOTHESIS)) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: not [32m"15"[39m
+
+      20 |       const v = await gsm[field].inputValue();
+      21 |       record(`Typed "${typed}" → "${v}"`);
+    > 22 |       if (expected.startsWith('!')) expect(v).not.toBe(expected.slice(1));
+         |                                                   ^
+      23 |       else expect(v).toBe(expected);
+      24 |     });
+      25 |   }
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\validation\fields.spec.js:22:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-0a858-to-15-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-0a858-to-15-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-0a858-to-15-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-0a858-to-15-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [chromium] › validation\fields.spec.js:27:3 › Gold Scheme Matrix – field validation › TC_GS_025 - Scheme Code length is limited (HYPOTHESIS: maxlength set) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBeNull[2m()[22m
+
+    Received: [31mnull[39m
+
+      31 |     const max = await gsm.code.getAttribute('maxlength');
+      32 |     record(`60 characters typed → ${v.length} kept; maxlength=${max}`);
+    > 33 |     expect(max).not.toBeNull();
+         |                     ^
+      34 |   });
+      35 |
+      36 |   test('TC_GS_026 - Scheme Name accepts Unicode text @regression', async ({ gsm, record }) => {
+
+        at C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\tests\validation\fields.spec.js:33:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-504c7-IS-maxlength-set-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-504c7-IS-maxlength-set-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-504c7-IS-maxlength-set-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Gold Scheme Matrix\test-results\artifacts\validation-fields-Gold-Sch-504c7-IS-maxlength-set-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › negative\save-failures.spec.js (1.2m)
+  Slow test file: [chromium] › functional\new-form.spec.js (1.1m)
+  Slow test file: [chromium] › functional\roles.spec.js (35.1s)
+  Consider splitting slow test files to speed up parallel execution
+  14 failed
+    [chromium] › api\scheme-api.spec.js:33:3 › Gold Scheme Matrix – API › TC_GS_062 - Scheme list API refuses a user without Scheme Matrix rights (INT_APPRAISER1) @regression 
+    [chromium] › api\scheme-api.spec.js:43:3 › Gold Scheme Matrix – API › TC_GS_063 - Delete API refuses a user without rights (INT_APPRAISER1) – non-existent id @regression 
+    [chromium] › business-rules\slab-rules.spec.js:21:5 › Gold Scheme Matrix – slab business rules › TC_GS_035 - Internal LTV for Bullet 3 mo at 22% = RBI LTV ÷ (1 + rate × tenure ÷ 12) @regression 
+    [chromium] › functional\grid.spec.js:49:3 › Gold Scheme Matrix – grid › TC_GS_006 - Paise/mo of every scheme equals Interest % ÷ 12 @regression 
+    [chromium] › functional\grid.spec.js:56:3 › Gold Scheme Matrix – grid › TC_GS_007 - Paise/mo is shown with the same precision on every row (HYPOTHESIS) @regression 
+    [chromium] › functional\grid.spec.js:76:3 › Gold Scheme Matrix – grid › TC_GS_009 - Grid rows match the scheme list API (tenure, type, rate, status) @regression 
+    [chromium] › functional\roles.spec.js:33:3 › Gold Scheme Matrix – access by role › TC_GS_059 - Scheme Code cannot be changed when editing an existing scheme (HYPOTHESIS) @regression 
+    [chromium] › negative\save-failures.spec.js:79:3 › Gold Scheme Matrix – save payload and failures › TC_GS_047 - Double-click on Save Scheme sends one save (simulated server) @regression 
+    [chromium] › positive\crud.spec.js:68:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_051 - Update keeps the custom slab rates and exclusions @regression 
+    [chromium] › positive\crud.spec.js:85:3 › Gold Scheme Matrix – create, read, update, toggle, delete (real, cleaned up) › TC_GS_052 - A second scheme with the same code and tenure is refused without a success message @regression 
+    [chromium] › regression\ui.spec.js:14:3 › Gold Scheme Matrix – usability, accessibility, responsive › TC_GS_066 - Form fields have accessible names @regression 
+    [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_019 - Tenure "1.5" → not "15" (decimal tenure is not silently turned into 15 (HYPOTHESIS)) @regression 
+    [chromium] › validation\fields.spec.js:17:5 › Gold Scheme Matrix – field validation › TC_GS_024 - Interest rate "150" → not "15" (150 % is not silently cut to 15 % (HYPOTHESIS)) @regression 
+    [chromium] › validation\fields.spec.js:27:3 › Gold Scheme Matrix – field validation › TC_GS_025 - Scheme Code length is limited (HYPOTHESIS: maxlength set) @regression 
+  57 passed (17.7m)
+
+To open last HTML report run:
+
+  npx playwright show-report Gold Scheme Matrix\reports\playwright-html
+
+Generated 76 | Automated 71 | Discovered 71 | Executed 71 | Passed 57 | Failed 14 | Blocked 0 | Skipped 0 | Not Executed 3 | N/A 2 | reconciles: true
+Report: C:\Users\Admin\OneDrive\Desktop\Gold Module\Gold Functional Test Cases\Gold Scheme Matrix\reports\QMetryReport.html

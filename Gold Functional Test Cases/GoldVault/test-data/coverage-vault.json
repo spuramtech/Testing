@@ -1,0 +1,18 @@
+{
+  "V": {
+    "name": "AUTOTEST FT Vault 68357",
+    "branch": "HEAD OFFICE",
+    "code": "ATFT68357",
+    "original": {
+      "name": "AUTOTEST FT Vault 68357",
+      "code": "ATFT68357"
+    }
+  },
+  "calls": [
+    {
+      "url": "http://host214.kapilits.com:8412/api/loans/Masters/InventoryMasters/savevaultconfiguration",
+      "status": 200,
+      "body": "{\"pVaultid\":0,\"pVaultname\":\"AUTOTEST FT Vault 68357\",\"pVaultbranch\":\"HEAD OFFICE\",\"pVaultcode\":\"ATFT68357\",\"pCreatedby\":14}"
+    }
+  ]
+}

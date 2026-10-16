@@ -1,0 +1,180 @@
+{
+  "flowId": "FLOW-1791967742580",
+  "env": "http://host214.kapilits.com:8411/",
+  "startedAt": "2026-10-14T08:49:02.580Z",
+  "contactName": "AUTOTEST HCHEFE QA",
+  "mobile": "9967727454",
+  "pan": "AQHPC7454H",
+  "ucic": "261000012",
+  "steps": [
+    {
+      "step": "contact",
+      "at": "2026-10-14T08:49:02.580Z",
+      "contactName": "AUTOTEST HCHEFE QA",
+      "mobile": "9967727454",
+      "pan": "AQHPC7454H",
+      "ucic": "261000012"
+    },
+    {
+      "step": "goldrate",
+      "at": "2026-10-14T08:50:21.359Z",
+      "goldRateDate": "13/07/2026",
+      "goldRateCreated": false
+    },
+    {
+      "step": "scheme",
+      "at": "2026-10-14T08:50:58.571Z",
+      "schemeCode": "AT-50419",
+      "schemeName": "AUTOTEST SCHEME 50419",
+      "schemeType": "Bullet",
+      "schemeTenure": 9,
+      "schemeRate": 18,
+      "schemeEffectiveFrom": "13/07/2026"
+    },
+    {
+      "step": "estimate",
+      "at": "2026-10-14T08:51:16.482Z",
+      "geNumber": "GE2610000023",
+      "routedTo": "Checker",
+      "estimateGrossWt": 10.5,
+      "backDate": "13/07/2026"
+    },
+    {
+      "step": "estimate-checker",
+      "at": "2026-10-14T08:52:13.423Z",
+      "estimateStatus": "Approved",
+      "approvedEstimateValue": "₹ 1,31,325.1"
+    },
+    {
+      "step": "token",
+      "at": "2026-10-14T08:52:57.001Z",
+      "token": "UID00026",
+      "loanNumber": "GLNG0126070000004",
+      "sanctionedAmount": 88000
+    },
+    {
+      "step": "barcode-BH",
+      "at": "2026-10-14T08:53:14.838Z",
+      "bhBarcode": "BH2610000023"
+    },
+    {
+      "step": "inventory",
+      "at": "2026-10-14T08:54:07.940Z",
+      "packedWith": "BH2610000023",
+      "vaultName": "AUTOTEST Strong Room 97906",
+      "safeNo": "S2135",
+      "locker": "1"
+    },
+    {
+      "step": "barcode-Audit",
+      "at": "2026-10-14T08:54:25.441Z",
+      "auditBarcode": "AUD2610000012"
+    },
+    {
+      "step": "stock-audit",
+      "at": "2026-10-14T08:54:44.817Z",
+      "auditStatus": "Verified",
+      "auditedOn": "2026-10-14"
+    },
+    {
+      "step": "disbursal",
+      "at": "2026-10-14T08:55:06.409Z",
+      "disbursalAmount": 88000,
+      "disbursalStatus": "Waiting for Approval"
+    },
+    {
+      "step": "disbursal-approval",
+      "at": "2026-10-14T08:55:47.218Z",
+      "disbursalStatus": "Approved & Disbursed"
+    },
+    {
+      "step": "scheduled-jobs",
+      "at": "2026-10-14T08:56:34.088Z",
+      "accrualDates": [
+        "31/07/2026",
+        "31/08/2026",
+        "30/09/2026"
+      ],
+      "receivableDates": [
+        "13/08/2026",
+        "13/09/2026",
+        "13/10/2026"
+      ],
+      "jobType": "Non EMI",
+      "jobResults": [
+        "Accrued Interest Job 31/07/2026: Accrued interest posted for 1 loan(s) as on 31/07/2026.",
+        "Instalment Receivables 13/08/2026: No instalment falls due on 13/08/2026 (or it was already raised).",
+        "Accrued Interest Job 31/08/2026: Accrued interest posted for 1 loan(s) as on 31/08/2026.",
+        "Instalment Receivables 13/09/2026: No instalment falls due on 13/09/2026 (or it was already raised).",
+        "Accrued Interest Job 30/09/2026: Accrued interest posted for 1 loan(s) as on 30/09/2026.",
+        "Instalment Receivables 13/10/2026: No instalment falls due on 13/10/2026 (or it was already raised)."
+      ]
+    },
+    {
+      "step": "loan-receipt",
+      "at": "2026-10-14T09:02:31.284Z",
+      "receiptDate": "30/09/2026",
+      "receiptAmount": 3426,
+      "receiptMode": "CASH",
+      "dueBefore": 3426
+    },
+    {
+      "step": "estimate",
+      "at": "2026-10-14T10:31:30.641Z",
+      "geNumber": "GE2610000024",
+      "routedTo": "Internal Appraiser 2",
+      "estimateGrossWt": 10.5
+    }
+  ],
+  "goldRateDate": "13/07/2026",
+  "goldRateCreated": false,
+  "updatedAt": "2026-10-14T10:31:30.641Z",
+  "schemeCode": "AT-50419",
+  "schemeName": "AUTOTEST SCHEME 50419",
+  "schemeType": "Bullet",
+  "schemeTenure": 9,
+  "schemeRate": 18,
+  "schemeEffectiveFrom": "13/07/2026",
+  "geNumber": "GE2610000024",
+  "routedTo": "Internal Appraiser 2",
+  "estimateGrossWt": 10.5,
+  "backDate": "13/07/2026",
+  "estimateStatus": "Approved",
+  "approvedEstimateValue": "₹ 1,31,325.1",
+  "token": "UID00026",
+  "loanNumber": "GLNG0126070000004",
+  "sanctionedAmount": 88000,
+  "bhBarcode": "BH2610000023",
+  "packedWith": "BH2610000023",
+  "vaultName": "AUTOTEST Strong Room 97906",
+  "safeNo": "S2135",
+  "locker": "1",
+  "auditBarcode": "AUD2610000012",
+  "auditStatus": "Verified",
+  "auditedOn": "2026-10-14",
+  "disbursalAmount": 88000,
+  "disbursalStatus": "Approved & Disbursed",
+  "accrualDates": [
+    "31/07/2026",
+    "31/08/2026",
+    "30/09/2026"
+  ],
+  "receivableDates": [
+    "13/08/2026",
+    "13/09/2026",
+    "13/10/2026"
+  ],
+  "jobType": "Non EMI",
+  "jobResults": [
+    "Accrued Interest Job 31/07/2026: Accrued interest posted for 1 loan(s) as on 31/07/2026.",
+    "Instalment Receivables 13/08/2026: No instalment falls due on 13/08/2026 (or it was already raised).",
+    "Accrued Interest Job 31/08/2026: Accrued interest posted for 1 loan(s) as on 31/08/2026.",
+    "Instalment Receivables 13/09/2026: No instalment falls due on 13/09/2026 (or it was already raised).",
+    "Accrued Interest Job 30/09/2026: Accrued interest posted for 1 loan(s) as on 30/09/2026.",
+    "Instalment Receivables 13/10/2026: No instalment falls due on 13/10/2026 (or it was already raised)."
+  ],
+  "receiptDate": "30/09/2026",
+  "receiptAmount": 3426,
+  "receiptMode": "CASH",
+  "dueBefore": 3426
+}

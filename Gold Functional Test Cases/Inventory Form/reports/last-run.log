@@ -1,0 +1,1084 @@
+
+> gold-functional-test-cases@1.0.0 inventory
+> node common/utils/run-form.js "Inventory Form"
+
+
+=== Inventory Form / Inventory Form ===
+
+Running 60 tests using 1 worker
+
+  ok 1 [chromium] › api\inventory-api.spec.js:6:3 › Inventory Form – API › TC_IF_052 - Inventory read APIs refuse requests without a token @regression (21.9s)
+  ok 2 [chromium] › api\inventory-api.spec.js:17:3 › Inventory Form – API › TC_IF_053 - saveloaninventory refuses a request without a token @regression (18.4s)
+  ok 3 [chromium] › api\inventory-api.spec.js:25:3 › Inventory Form – API › TC_IF_054 - Barcode details API agrees with the register @regression (19.3s)
+  x  4 [chromium] › api\inventory-api.spec.js:34:3 › Inventory Form – API › TC_IF_055 - A non-Branch-Head user cannot read the inventory loan list through the API (HYPOTHESIS) @regression (31.2s)
+  ok 5 [chromium] › business-rules\add-save.spec.js:40:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_023 - Add without a photo: "Capture the packet photo with the barcode before adding" @smoke @regression (23.9s)
+  ok 6 [chromium] › business-rules\add-save.spec.js:53:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_024 - Add without a vault: "Enter Vault Name" @regression (25.5s)
+  ok 7 [chromium] › business-rules\add-save.spec.js:66:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_025 - Add without a safe is refused @regression (25.4s)
+  ok 8 [chromium] › business-rules\add-save.spec.js:81:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_026 - Add without a locker is refused @regression (27.0s)
+  ok 9 [chromium] › business-rules\add-save.spec.js:98:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_027 - Add without a barcode: "Enter Packet Number" @regression (20.0s)
+  ok 10 [chromium] › business-rules\add-save.spec.js:109:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_028 - A typed (not scanned) packet number cannot be added (HYPOTHESIS) @regression (23.0s)
+  ok 11 [chromium] › business-rules\add-save.spec.js:125:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_029 - Photo upload failure: "Could not upload the packet photo" @regression (26.0s)
+  ok 12 [chromium] › business-rules\add-save.spec.js:135:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_030 - Only PNG / JPEG photos are accepted @regression (23.4s)
+  ok 13 [chromium] › business-rules\add-save.spec.js:149:3 › Inventory Form – Add packet (simulated photo upload) › TC_IF_031 - Add binds the packet number to the collateral and shows Save and Clear @smoke @regression (26.5s)
+  -  14 [chromium] › business-rules\add-save.spec.js:160:3 › Inventory Form – Save (simulated server) › TC_IF_032 - Save sends loan, contact, date, remarks and each article's packet, vault, safe, locker and photo @smoke @regression
+  ok 15 [chromium] › business-rules\add-save.spec.js:177:3 › Inventory Form – Save (simulated server) › TC_IF_033 - Save weights equal the collateral shown @regression (30.8s)
+  x  16 [chromium] › business-rules\add-save.spec.js:189:3 › Inventory Form – Save (simulated server) › TC_IF_034 - Save without Remarks shows a message (HYPOTHESIS) @regression (29.8s)
+  ok 17 [chromium] › business-rules\add-save.spec.js:201:3 › Inventory Form – Save (simulated server) › TC_IF_035 - Remarks is limited to 300 characters @regression (18.5s)
+  ok 18 [chromium] › business-rules\add-save.spec.js:209:3 › Inventory Form – Save (simulated server) › TC_IF_036 - Simulated successful save shows success @regression (28.7s)
+  ok 19 [chromium] › business-rules\add-save.spec.js:222:3 › Inventory Form – Save (simulated server) › TC_IF_037 - Save network failure does not show success @regression (30.9s)
+  ok 20 [chromium] › business-rules\add-save.spec.js:235:3 › Inventory Form – Save (simulated server) › TC_IF_038 - Save server error 500 is shown as an error, not success @regression (29.0s)
+  ok 21 [chromium] › business-rules\add-save.spec.js:247:3 › Inventory Form – Save (simulated server) › TC_IF_039 - Double-clicking Save sends only one request @regression (29.1s)
+  ok 22 [chromium] › business-rules\add-save.spec.js:257:3 › Inventory Form – Save (simulated server) › TC_IF_040 - Clear resets the packet, storage and remarks @regression (27.6s)
+  ok 23 [chromium] › functional\form.spec.js:8:3 › Inventory Form – form, loan and storage lists › TC_IF_001 - Form shows Trans Date, Loan Type, Loan, Collateral, Barcode, Photo, Vault, Safe, Locker and Remarks @smoke @regression (18.0s)
+  ok 24 [chromium] › functional\form.spec.js:15:3 › Inventory Form – form, loan and storage lists › TC_IF_002 - Trans Date is today and read-only @regression (17.9s)
+  ok 25 [chromium] › functional\form.spec.js:23:3 › Inventory Form – form, loan and storage lists › TC_IF_003 - Loan Type offers Gold Loan @regression (18.5s)
+  ok 26 [chromium] › functional\form.spec.js:29:3 › Inventory Form – form, loan and storage lists › TC_IF_004 - Loan list = API list of loans waiting for inventory @smoke @regression (18.1s)
+  ok 27 [chromium] › functional\form.spec.js:37:3 › Inventory Form – form, loan and storage lists › TC_IF_005 - Loans already in inventory are not offered again @regression (18.9s)
+  ok 28 [chromium] › functional\form.spec.js:45:3 › Inventory Form – form, loan and storage lists › TC_IF_006 - Selecting a loan shows its customer, mobile and loan number from the API @regression (18.9s)
+  ok 29 [chromium] › functional\form.spec.js:56:3 › Inventory Form – form, loan and storage lists › TC_IF_007 - Collateral rows show each article with gross and pure net weight, no packet yet @regression (19.2s)
+  ok 30 [chromium] › functional\form.spec.js:64:3 › Inventory Form – form, loan and storage lists › TC_IF_008 - Save and Clear are not offered before a packet is added @regression (18.8s)
+  ok 31 [chromium] › functional\form.spec.js:71:3 › Inventory Form – form, loan and storage lists › TC_IF_009 - Vault list = active vaults from the API @regression (22.0s)
+  x  32 [chromium] › functional\form.spec.js:81:3 › Inventory Form – form, loan and storage lists › TC_IF_010 - Choosing a vault fills its Vault Code and lists only its safes @regression (19.3s)
+  ok 33 [chromium] › functional\form.spec.js:94:3 › Inventory Form – form, loan and storage lists › TC_IF_011 - Vault Code is read-only and Safe has no options before a vault is chosen @regression (18.2s)
+  x  34 [chromium] › functional\form.spec.js:102:3 › Inventory Form – form, loan and storage lists › TC_IF_012 - Locker list = free lockers of the chosen safe from the API @regression (17.9s)
+  ok 35 [chromium] › functional\view.spec.js:7:3 › Inventory Form – View (saved inventories) › TC_IF_041 - View lists saved inventories with the expected columns @smoke @regression (18.6s)
+  ok 36 [chromium] › functional\view.spec.js:14:3 › Inventory Form – View (saved inventories) › TC_IF_042 - View total and rows match the API @regression (18.7s)
+  ok 37 [chromium] › functional\view.spec.js:26:3 › Inventory Form – View (saved inventories) › TC_IF_043 - Inventory numbers are INV + 10 digits and unique; one inventory per loan @regression (18.6s)
+  ok 38 [chromium] › functional\view.spec.js:40:3 › Inventory Form – View (saved inventories) › TC_IF_044 - Every saved inventory's BH barcode is Used in the barcode register @regression (19.7s)
+  ok 39 [chromium] › functional\view.spec.js:50:3 › Inventory Form – View (saved inventories) › TC_IF_045 - Newest inventory is listed first @regression (18.9s)
+  ok 40 [chromium] › functional\view.spec.js:57:3 › Inventory Form – View (saved inventories) › TC_IF_046 - Paging shows 10 rows and page 2 has different rows @regression (20.5s)
+  ok 41 [chromium] › functional\view.spec.js:69:3 › Inventory Form – View (saved inventories) › TC_IF_047 - Totals row = sum of gross and pure net weights @regression (19.2s)
+  ok 42 [chromium] › functional\view.spec.js:83:3 › Inventory Form – View (saved inventories) › TC_IF_048 - "New" goes back to an empty Inventory Form @regression (22.5s)
+  ok 43 [chromium] › negative\roles.spec.js:9:5 › Inventory Form – roles › TC_IF_049 - INT_APPRAISER1 has no Inventory Form in the menu @regression (9.2s)
+  ok 44 [chromium] › negative\roles.spec.js:9:5 › Inventory Form – roles › TC_IF_050 - EXT_APPRAISER1 has no Inventory Form in the menu @regression (1.5m)
+  x  45 [chromium] › negative\roles.spec.js:18:3 › Inventory Form – roles › TC_IF_051 - INT_APPRAISER1 opening the Inventory Form URL directly cannot use it @regression (16.8s)
+  -  46 [chromium] › positive\real-inventory.spec.js:11:3 › Inventory Form – real save › TC_IF_059 - Real save of an AUTOTEST loan creates an inventory and uses the barcode (ALLOW_DATA_CREATION=1) @regression
+  -  47 [chromium] › positive\real-inventory.spec.js:40:3 › Inventory Form – real save › TC_IF_060 - After the real save the loan is no longer offered and its barcode is refused (ALLOW_DATA_CREATION=1) @regression
+  ok 48 [chromium] › regression\ui.spec.js:4:3 › Inventory Form – usability, accessibility, responsive, session › TC_IF_056 - At tablet width (768px) the form has no page-level horizontal scroll @regression (19.6s)
+  x  49 [chromium] › regression\ui.spec.js:12:3 › Inventory Form – usability, accessibility, responsive, session › TC_IF_057 - Form fields have accessible names @regression (20.9s)
+  x  50 [chromium] › regression\ui.spec.js:30:3 › Inventory Form – usability, accessibility, responsive, session › TC_IF_058 - Idle session shows a timeout warning and "Stay Logged In" keeps the form open @regression (6.5m)
+  ok 51 [chromium] › validation\scan.spec.js:11:3 › Inventory Form – barcode scan validation › TC_IF_013 - Unknown BH barcode: "This is not a recognised barcode" @smoke @regression (26.3s)
+  ok 52 [chromium] › validation\scan.spec.js:19:3 › Inventory Form – barcode scan validation › TC_IF_014 - Random text is not accepted as a barcode @regression (24.2s)
+  ok 53 [chromium] › validation\scan.spec.js:28:3 › Inventory Form – barcode scan validation › TC_IF_015 - Special characters are not accepted as a barcode @regression (22.0s)
+  ok 54 [chromium] › validation\scan.spec.js:36:3 › Inventory Form – barcode scan validation › TC_IF_016 - A barcode generated for another loan is refused @regression (23.8s)
+  ok 55 [chromium] › validation\scan.spec.js:46:3 › Inventory Form – barcode scan validation › TC_IF_017 - A cancelled barcode is refused @regression (23.3s)
+  ok 56 [chromium] › validation\scan.spec.js:56:3 › Inventory Form – barcode scan validation › TC_IF_018 - A used barcode is refused @regression (21.5s)
+  ok 57 [chromium] › validation\scan.spec.js:66:3 › Inventory Form – barcode scan validation › TC_IF_019 - The loan's own unused BH barcode is accepted and bound @smoke @regression (21.9s)
+  x  58 [chromium] › validation\scan.spec.js:74:3 › Inventory Form – barcode scan validation › TC_IF_020 - Bind To Packet No with an empty box shows a message @regression (21.2s)
+  ok 59 [chromium] › validation\scan.spec.js:85:3 › Inventory Form – barcode scan validation › TC_IF_021 - Bind To Packet No button works like Enter @regression (24.5s)
+  ok 60 [chromium] › validation\scan.spec.js:95:3 › Inventory Form – barcode scan validation › TC_IF_022 - An audit barcode cannot be used as the packet barcode (HYPOTHESIS) @regression (23.5s)
+
+
+  1) [chromium] › api\inventory-api.spec.js:34:3 › Inventory Form – API › TC_IF_055 - A non-Branch-Head user cannot read the inventory loan list through the API (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mtrue[39m
+    Received: [31mfalse[39m
+
+      44 |     const n = await r.json().then((x) => x.length).catch(() => null);
+      45 |     record(`Appraiser token → ${r.status()}, ${n} loans`);
+    > 46 |     expect([401, 403].includes(r.status()) || n === 0).toBe(true);
+         |                                                        ^
+      47 |   });
+      48 | });
+      49 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\api\inventory-api.spec.js:46:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\api-inventory-api-Inventor-3a812-e-API-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\api-inventory-api-Inventor-3a812-e-API-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\api-inventory-api-Inventor-3a812-e-API-HYPOTHESIS-regression-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\api-inventory-api-Inventor-3a812-e-API-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\api-inventory-api-Inventor-3a812-e-API-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › business-rules\add-save.spec.js:189:3 › Inventory Form – Save (simulated server) › TC_IF_034 - Save without Remarks shows a message (HYPOTHESIS) @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: [32m/Remarks|Enter|required/i[39m
+    Received string:  [31m""[39m
+
+      196 |     record(`Requests ${sent.length}; message "${msg}"`);
+      197 |     expect(sent).toHaveLength(0);
+    > 198 |     expect(msg).toMatch(/Remarks|Enter|required/i);
+          |                 ^
+      199 |   });
+      200 |
+      201 |   test('TC_IF_035 - Remarks is limited to 300 characters @regression', async ({ inv, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\business-rules\add-save.spec.js:198:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\business-rules-add-save-In-08359-ssage-HYPOTHESIS-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\business-rules-add-save-In-08359-ssage-HYPOTHESIS-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\business-rules-add-save-In-08359-ssage-HYPOTHESIS-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\business-rules-add-save-In-08359-ssage-HYPOTHESIS-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › functional\form.spec.js:81:3 › Inventory Form – form, loan and storage lists › TC_IF_010 - Choosing a vault fills its Vault Code and lists only its safes @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 3[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   "0123456",[39m
+    [31m+ ][39m
+
+      89 |     record(`${v.pVaultname}: code ${code}, safes ${safes.join(', ')} (API ${exp.join(', ')})`);
+      90 |     expect(code).toBe(v.pVaultcode);
+    > 91 |     expect(safes).toEqual(exp);
+         |                   ^
+      92 |   });
+      93 |
+      94 |   test('TC_IF_011 - Vault Code is read-only and Safe has no options before a vault is chosen @regression', async ({ inv, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\functional\form.spec.js:91:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\functional-form-Inventory--0196a-s-only-its-safes-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\functional-form-Inventory--0196a-s-only-its-safes-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\functional-form-Inventory--0196a-s-only-its-safes-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\functional-form-Inventory--0196a-s-only-its-safes-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › functional\form.spec.js:102:3 › Inventory Form – form, loan and storage lists › TC_IF_012 - Locker list = free lockers of the chosen safe from the API @regression 
+
+    TypeError: Cannot read properties of undefined (reading 'pVaultid')
+
+      104 |     const vaults = json(apiHits, /getvaultconfiguration/i);
+      105 |     const c = cabs[0];
+    > 106 |     await inv.chooseVault(vaults.find((v) => v.pVaultid === c.pVaultid).pVaultname);
+          |                                                               ^
+      107 |     await inv.safe.selectOption({ label: c.pCabinetno });
+      108 |     await page.waitForTimeout(1500);
+      109 |     const ui = await inv.optionTexts(inv.locker);
+
+        at find (C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\functional\form.spec.js:106:63)
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\functional\form.spec.js:106:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\functional-form-Inventory--6502a-afe-from-the-API-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\functional-form-Inventory--6502a-afe-from-the-API-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\functional-form-Inventory--6502a-afe-from-the-API-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\functional-form-Inventory--6502a-afe-from-the-API-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › negative\roles.spec.js:18:3 › Inventory Form – roles › TC_IF_051 - INT_APPRAISER1 opening the Inventory Form URL directly cannot use it @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mtrue[39m
+    Received: [31mfalse[39m
+
+      30 |     }
+      31 |     record(`URL ${page.url()}; form shown ${n > 0}; loans offered ${loans}`);
+    > 32 |     expect(n === 0 || loans === 0).toBe(true);
+         |                                    ^
+      33 |   });
+      34 | });
+      35 |
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\negative\roles.spec.js:32:36
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\negative-roles-Inventory-F-34265-ly-cannot-use-it-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\negative-roles-Inventory-F-34265-ly-cannot-use-it-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\negative-roles-Inventory-F-34265-ly-cannot-use-it-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\negative-roles-Inventory-F-34265-ly-cannot-use-it-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › regression\ui.spec.js:12:3 › Inventory Form – usability, accessibility, responsive, session › TC_IF_057 - Form fields have accessible names @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 1[39m
+    [31m+ Received  + 9[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   "loanType",[39m
+    [31m+   "loan",[39m
+    [31m+   "scan",[39m
+    [31m+   "vault",[39m
+    [31m+   "safe",[39m
+    [31m+   "locker",[39m
+    [31m+   "remarks",[39m
+    [31m+ ][39m
+
+      25 |     });
+      26 |     record(JSON.stringify(res));
+    > 27 |     expect(Object.entries(res).filter(([, v]) => !v).map(([k]) => k)).toEqual([]);
+         |                                                                       ^
+      28 |   });
+      29 |
+      30 |   test('TC_IF_058 - Idle session shows a timeout warning and "Stay Logged In" keeps the form open @regression', async ({ inv, page, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\regression\ui.spec.js:27:71
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-2ca4b-accessible-names-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-2ca4b-accessible-names-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-2ca4b-accessible-names-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-2ca4b-accessible-names-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › regression\ui.spec.js:30:3 › Inventory Form – usability, accessibility, responsive, session › TC_IF_058 - Idle session shows a timeout warning and "Stay Logged In" keeps the form open @regression 
+
+    TimeoutError: locator.waitFor: Timeout 360000ms exceeded.
+    Call log:
+      [2m- waiting for locator('.modal.show').filter({ hasText: 'Session Timeout' }) to be visible[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+    [2m  -   locator resolved to hidden <div role="dialog" tabindex="-1" id="idleWarningModal" class="modal fade show" _ngcontent-ng-cli-universal-c0="">…</div>[22m
+
+
+      32 |     const t0 = Date.now();
+      33 |     const modal = page.locator('.modal.show', { hasText: 'Session Timeout' });
+    > 34 |     await modal.waitFor({ timeout: 6 * 60_000 });
+         |                 ^
+      35 |     const after = Math.round((Date.now() - t0) / 1000);
+      36 |     const text = (await modal.innerText()).replace(/\s+/g, ' ');
+      37 |     await modal.getByText('Stay Logged In').click();
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\regression\ui.spec.js:34:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-c317e-ps-the-form-open-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-c317e-ps-the-form-open-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-c317e-ps-the-form-open-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\regression-ui-Inventory-Fo-c317e-ps-the-form-open-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › validation\scan.spec.js:74:3 › Inventory Form – barcode scan validation › TC_IF_020 - Bind To Packet No with an empty box shows a message @regression 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoMatch[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected pattern: [32m/Enter|Scan|barcode|packet/i[39m
+    Received string:  [31m""[39m
+
+      80 |     const msg = await inv.messages();
+      81 |     record(`Message "${msg}"`);
+    > 82 |     expect(msg).toMatch(/Enter|Scan|barcode|packet/i);
+         |                 ^
+      83 |   });
+      84 |
+      85 |   test('TC_IF_021 - Bind To Packet No button works like Enter @regression', async ({ inv, live, page, record }) => {
+
+        at C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\tests\validation\scan.spec.js:82:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\validation-scan-Inventory--660dc--shows-a-message-regression-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\validation-scan-Inventory--660dc--shows-a-message-regression-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    Inventory Form\test-results\artifacts\validation-scan-Inventory--660dc--shows-a-message-regression-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace "Inventory Form\test-results\artifacts\validation-scan-Inventory--660dc--shows-a-message-regression-chromium\trace.zip"
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [chromium] › functional\view.spec.js (2.6m)
+  Slow test file: [chromium] › negative\roles.spec.js (2.0m)
+  Slow test file: [chromium] › api\inventory-api.spec.js (1.5m)
+  Slow test file: [chromium] › positive\real-inventory.spec.js (37.0s)
+  Consider splitting slow test files to speed up parallel execution
+  8 failed
+    [chromium] › api\inventory-api.spec.js:34:3 › Inventory Form – API › TC_IF_055 - A non-Branch-Head user cannot read the inventory loan list through the API (HYPOTHESIS) @regression 
+    [chromium] › business-rules\add-save.spec.js:189:3 › Inventory Form – Save (simulated server) › TC_IF_034 - Save without Remarks shows a message (HYPOTHESIS) @regression 
+    [chromium] › functional\form.spec.js:81:3 › Inventory Form – form, loan and storage lists › TC_IF_010 - Choosing a vault fills its Vault Code and lists only its safes @regression 
+    [chromium] › functional\form.spec.js:102:3 › Inventory Form – form, loan and storage lists › TC_IF_012 - Locker list = free lockers of the chosen safe from the API @regression 
+    [chromium] › negative\roles.spec.js:18:3 › Inventory Form – roles › TC_IF_051 - INT_APPRAISER1 opening the Inventory Form URL directly cannot use it @regression 
+    [chromium] › regression\ui.spec.js:12:3 › Inventory Form – usability, accessibility, responsive, session › TC_IF_057 - Form fields have accessible names @regression 
+    [chromium] › regression\ui.spec.js:30:3 › Inventory Form – usability, accessibility, responsive, session › TC_IF_058 - Idle session shows a timeout warning and "Stay Logged In" keeps the form open @regression 
+    [chromium] › validation\scan.spec.js:74:3 › Inventory Form – barcode scan validation › TC_IF_020 - Bind To Packet No with an empty box shows a message @regression 
+  3 skipped
+  49 passed (29.4m)
+
+To open last HTML report run:
+
+  npx playwright show-report Inventory Form\reports\playwright-html
+
+Generated 67 | Automated 60 | Discovered 60 | Executed 57 | Passed 49 | Failed 8 | Blocked 0 | Skipped 3 | Not Executed 4 | N/A 3 | reconciles: true
+Report: C:\Users\Admin\Desktop\Gold Module\Gold Functional Test Cases\Inventory Form\reports\QMetryReport.html

@@ -1,0 +1,113 @@
+{
+  "flowId": "FLOW-1791974498543",
+  "env": "http://host214.kapilits.com:8411/",
+  "startedAt": "2026-10-14T10:41:38.543Z",
+  "contactName": "AUTOTEST EIDEFJ QA",
+  "mobile": "9974483459",
+  "pan": "AQEPI3459D",
+  "ucic": "261000014",
+  "steps": [
+    {
+      "step": "contact",
+      "at": "2026-10-14T10:41:38.543Z",
+      "contactName": "AUTOTEST EIDEFJ QA",
+      "mobile": "9974483459",
+      "pan": "AQEPI3459D",
+      "ucic": "261000014"
+    },
+    {
+      "step": "scheme",
+      "at": "2026-10-14T10:41:50.496Z",
+      "schemeCode": "AT-02476",
+      "schemeName": "AUTOTEST SCHEME 02476",
+      "schemeType": "Bullet",
+      "schemeTenure": 9,
+      "schemeRate": 18,
+      "schemeEffectiveFrom": "14/10/2026"
+    },
+    {
+      "step": "estimate",
+      "at": "2026-10-14T10:42:06.550Z",
+      "geNumber": "GE2610000025",
+      "routedTo": "Internal Appraiser 2",
+      "estimateGrossWt": 10.5
+    },
+    {
+      "step": "estimate-checker",
+      "at": "2026-10-14T10:43:33.861Z",
+      "estimateStatus": "Approved",
+      "approvedEstimateValue": "14/10/2026"
+    },
+    {
+      "step": "token",
+      "at": "2026-10-14T10:44:19.276Z",
+      "token": "UID00028",
+      "loanNumber": "GLNG0126100000018",
+      "sanctionedAmount": 93000
+    },
+    {
+      "step": "barcode-BH",
+      "at": "2026-10-14T10:44:35.625Z",
+      "bhBarcode": "BH2610000025"
+    },
+    {
+      "step": "inventory",
+      "at": "2026-10-14T10:48:12.448Z",
+      "packedWith": "BH2610000025",
+      "vaultName": "AUTOTEST Strong Room 42892",
+      "safeNo": "S6260",
+      "locker": "1"
+    },
+    {
+      "step": "barcode-Audit",
+      "at": "2026-10-14T10:48:28.149Z",
+      "auditBarcode": "AUD2610000013"
+    },
+    {
+      "step": "disbursal",
+      "at": "2026-10-14T11:05:06.931Z",
+      "disbursalAmount": 93000,
+      "disbursalStatus": "Waiting for Approval"
+    },
+    {
+      "step": "disbursal-approval",
+      "at": "2026-10-14T11:05:47.052Z",
+      "disbursalStatus": "Approved & Disbursed"
+    },
+    {
+      "step": "loan-receipt",
+      "at": "2026-10-14T11:06:24.705Z",
+      "receiptDate": "14/10/2026",
+      "receiptAmount": 1000,
+      "receiptMode": "CASH",
+      "dueBefore": 0
+    }
+  ],
+  "schemeCode": "AT-02476",
+  "schemeName": "AUTOTEST SCHEME 02476",
+  "schemeType": "Bullet",
+  "schemeTenure": 9,
+  "schemeRate": 18,
+  "schemeEffectiveFrom": "14/10/2026",
+  "updatedAt": "2026-10-14T11:06:24.705Z",
+  "geNumber": "GE2610000025",
+  "routedTo": "Internal Appraiser 2",
+  "estimateGrossWt": 10.5,
+  "estimateStatus": "Approved",
+  "approvedEstimateValue": "14/10/2026",
+  "token": "UID00028",
+  "loanNumber": "GLNG0126100000018",
+  "sanctionedAmount": 93000,
+  "bhBarcode": "BH2610000025",
+  "packedWith": "BH2610000025",
+  "vaultName": "AUTOTEST Strong Room 42892",
+  "safeNo": "S6260",
+  "locker": "1",
+  "auditBarcode": "AUD2610000013",
+  "disbursalAmount": 93000,
+  "disbursalStatus": "Approved & Disbursed",
+  "receiptDate": "14/10/2026",
+  "receiptAmount": 1000,
+  "receiptMode": "CASH",
+  "dueBefore": 0
+}

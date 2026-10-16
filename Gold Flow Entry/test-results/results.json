@@ -1,0 +1,172 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\OneDrive\\Desktop\\Gold Module\\Gold Flow Entry\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Flow Entry/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Flow Entry/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Flow Entry/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "create-contact.spec.js",
+      "file": "create-contact.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC_CONTACT_001 - Create a single Individual contact (Manual) as Internal Appraiser 1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [
+                {
+                  "type": "test-data",
+                  "description": "AUTOTEST JIIIBH QA / 9980988817 / PAN AQJPI8817I"
+                },
+                {
+                  "type": "UCIC",
+                  "description": "261000015"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 20096,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Bank:  AHMEDABAD MERCANTILE COOPERATIVE BANK Savings Account Autotest Jiiibh Qa 91980988817 AMCB0660010 AMBAWADI AHMEDABAD Single \n"
+                    },
+                    {
+                      "text": "Created contact: AUTOTEST JIIIBH QA | Mobile 9980988817 | PAN AQJPI8817I | UCIC 261000015\n"
+                    },
+                    {
+                      "text": "New flow FLOW-1791981008080 started for this contact → test-data/current-flow.json\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Login as tryfinsta (Internal Appraiser 1)",
+                      "duration": 8984
+                    },
+                    {
+                      "title": "Open Contact → Contact Configuration → Contact → New → Manual",
+                      "duration": 1969
+                    },
+                    {
+                      "title": "Fill Contact Info (Title, Name, DOB, Gender, Mobile, Email)",
+                      "duration": 1015
+                    },
+                    {
+                      "title": "Fill Address Details and Add",
+                      "duration": 1662
+                    },
+                    {
+                      "title": "Add KYC document (PAN)",
+                      "duration": 589
+                    },
+                    {
+                      "title": "Add bank account (Bank Details tab)",
+                      "duration": 4329
+                    },
+                    {
+                      "title": "Save & Continue → \"Saved Successfully\"",
+                      "duration": 532
+                    },
+                    {
+                      "title": "Verify contact appears in Contact list (search by phone)",
+                      "duration": 182
+                    }
+                  ],
+                  "startTime": "2026-10-14T12:29:48.462Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Admin\\OneDrive\\Desktop\\Gold Module\\Gold Flow Entry\\test-results\\create-contact-TC-CONTACT--39178-ual-as-Internal-Appraiser-1-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1233dfde8ef9889d683-7539e81bbc1669a1812e",
+          "file": "create-contact.spec.js",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-14T12:29:47.758Z",
+    "duration": 21158.789,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

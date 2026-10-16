@@ -1,0 +1,19 @@
+{
+  "flowId": "FLOW-1791974386987",
+  "env": "http://host214.kapilits.com:8411/",
+  "startedAt": "2026-10-14T10:39:46.987Z",
+  "contactName": "AUTOTEST DHCJHJ QA",
+  "mobile": "9974372979",
+  "pan": "AQDPH2979C",
+  "ucic": "261000013",
+  "steps": [
+    {
+      "step": "contact",
+      "at": "2026-10-14T10:39:46.987Z",
+      "contactName": "AUTOTEST DHCJHJ QA",
+      "mobile": "9974372979",
+      "pan": "AQDPH2979C",
+      "ucic": "261000013"
+    }
+  ]
+}

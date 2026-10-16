@@ -1,0 +1,30 @@
+TOGGLE MANUAL GOLD RATE ENTRY IN GOLD ESTIMATES Off
+DATERANGE OPTIONS ["All","Today","YesterDay","Last 7 Days","Last 30 Days","This Month","Custom","Current Financial Year"]
+FIRST ROW HTML <!----><!----><!----><!----><!----><td aria-selected="false" kendogridcell="" kendogridlogicalcell="" role="gridcell" colspan="1" aria-colindex="1"><!----><!----><!----><!----><!----><span _ngcontent-ng-cli-universal-c11="">13/10/2026</span><!----><!----><!----><!----><!----></td><td aria-selected="false" kendogridcell="" kendogridlogicalcell="" role="gridcell" class="kendo-right" colspan="1" aria-colindex="2"><!----><!----><!----><!----><!----><!----><span _ngcontent-ng-cli-universal-c11="" class="gcfg-pivot-rate">₹ 15,175.60</span><!----><!----><!----><!----><!----><!----></td><td aria-selected="false" kendogridcell="" kendogridlogicalcell="" role="gridcell" class="kendo-right" colspan="1" aria-colindex="3"><!----><!----><!----><!----><!----><!----><span _ngcontent-ng-cli-universal-c11="" class="gcfg-pivot-rate">₹ 13,900.85</span><!----><!----><!----><!----><!----><!----></td><td aria-selected="false" kendogridcell="" kendogridlogicalcell="" role="gridcell" class="kendo-right" colspan="1" aria-colindex="4"><!----><!----><!----><!----><!----><!----><span _ngcontent-ng-cli-universal-c11="" class="gcfg-pivot-rate">₹ 11,381.70</span><!----><!----><!----><!----><!----><!----></td><td aria-selected="false" kendogridcell="" kendogridlogicalcell="" role="gridcell" colspan="1" aria-colindex="5"><!----><!----><!----><!----><!----><!----><a _ngcontent-ng-cli-universal-c11="" class="gcfg-row-edit" title="Edit"><i _ngcontent-ng-cli-universal-c11="" class="fa fa-pencil"></i></a><!----><a
+2ND ROW last cell <!----><!----><!----><!----><!----><!----><!----><!----><span _ngcontent-ng-cli-universal-c11="" class="text-muted" title="An Internal Rate derived from this closing is already Approved"><i _ngcontent-ng-cli-universal-c11="" class="fa fa-lock"></i></span><!----><!----><!----><!----><!----><!---->
+SEARCH rows for 13/10/2026 0
+SEARCH zzzz rows 0 ast 30 Days New Trans Date 24K (99.9% pure gold) 22K (91.6% gold and 8.4% alloyed metals) 18K (75% gold and 25% alloyed metals) No records available. Average Rate ₹ 0 ₹ 0 ₹ 0 0 - 0 of 0 items
+EXPORT ICONS ["<img _ngcontent-ng-cli-universal-c11=\"\" class=\"pt-1\" src=\"assets/images/pdf-icon-blue.svg \" title=\"pdf\" width=\"20px\">","<img _ngcontent-ng-cli-universal-c11=\"\" class=\"pt-1\" src=\"assets/images/icon-excel.svg \" title=\"excel\" width=\"20px\">","<img _ngcontent-ng-cli-universal-c4=\"\" src=\"assets/images/icon-excel.svg \" title=\"excel\" width=\"20px\">"]
+EDIT FORM ["pLoantype=Gold Loan ro=true dis=false","ptransdate=13/10/2026 ro=true dis=false","pgoldrate=15175.60 ro=false dis=false","pgoldrate=13900.85 ro=true dis=false","pgoldrate=11381.70 ro=true dis=false"]
+EDIT HEADINGS ["Online Gold Rate Submission"]
+EDIT BUTTONS ["Contact Configuration","Loan Configuration","Loan Origination","Credit Evaluation","Loan Management","Reports & Letters","Nach","Npa","Suit","Vehicle Loan","Gold","Configuration","Transactions","Reports","Invoice","Assign Forms","Audit Log","New","Update"]
+DIALOG Permanently delete the Online Gold Rate entry for 13/10/2026? This cannot be undone.
+DELETE DIALOG  Session Timeout×You will be logged out in 30 seconds due to inactivity.Stay Logged InLogoutLogin Again
+NEW 24K attrs {"type":"text","maxlength":-1,"inputmode":"","ro22":true}
+INPUT "abc" -> 24K="" 22K="" 18K=""
+INPUT "-500" -> 24K="500" 22K="458.00" 18K="375.00"
+INPUT "12.345" -> 24K="12.34" 22K="11.30" 18K="9.26"
+INPUT "1,500" -> 24K="1,500" 22K="1374.00" 18K="1125.00"
+INPUT "  " -> 24K="" 22K="" 18K=""
+INPUT "99999999999" -> 24K="99,999" 22K="91599.08" 18K="74999.25"
+INPUT "0" -> 24K="" 22K="" 18K=""
+INPUT "0.01" -> 24K="1" 22K="0.92" 18K="0.75"
+INPUT "15000.5" -> 24K="15,000.5" 22K="13740.46" 18K="11250.38"
+INPUT "@#$" -> 24K="" 22K="" 18K=""
+22K editable? false
+AFTER CLEAR 13/10/2026  
+SAVE 0 -> Warning! | Please enter the 24K Gold Rate - every other carat is derived from it.
+CAL disabled days ["4","11","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
+CAL prev month disabled ["6","13","20","27"] ["September","2026"]
+INTERNAL TAB TEXT  RATE FOR TODAY - 30-DAY AVERAGE VS PREVIOUS CLOSING (24K, INTERNAL RATE) Date Range Last 30 Days Date Rate for Today (A) & (B) Rate for Today (A) & (B), Which ever is lower 30 Days Average (A) Previous Closing (B) 14-10-2026 PENDING 15,098.22 15,175.6 15,175.6 13-10-2026 APPROVED 15,102.63 15,108.5 15,108.5 12-10-2026 APPROVED 15,108.02 15,009 15,009 10-10-2026 PENDING 15,107.9 15,239.2 15,239.2 09-10-2026 PENDING 15,116.21 15,169 15,169 08-10-2026 APPROVED 15,123.71 15,098.5 15,098.5 07-10-2026 PENDING 15,124.38 15,025.9 15,025.9 06-10-2026 APPROVED 15,134.12 14,819.8 14,819.8 05-10-2026 PENDING 15,159.58 15,137.2 15,137.2 03-10-2026 PENDING 15,157.16 15,054 15,054 02-10-2026 APPROVED 15,187.29 14,813.8 14,813.8 01-10-2026 APPROVED 15,221.45 14,788.8 14,788.8 30-09-2026 APPROVED 15,266.28 14,766.7 14,766.7 29-09-2026 APPROVED 15,314.19 14,798 14,798 28-09-2026 PENDING 15,361.44 14,977.9 14,977.9 26-09-2026 APPROVED 15,359.59 15,211.3 15,211.3 25-09-2026 APPROVED 15,387.95 15,078.5 15,078.5 24-09-2026 APPROVED 15,408.93 15,201.6 15,201.6 23-09-2026 APPROVED 15,415.1 15,213.6 15,213.6 22-09-2026 APPROVED 15,421.58 15,333.7 15,333.7 21-09-2026 APPROVED 15,424.35 15,106.8 15,372.7 19-09-2026 APPROVED 15,421.53 15,372.7 15,372.7 18-09-2026 APPROVED 15,416.98 15,184.9 15,184.9 17-09-2026 APPROVED 15,421.06 15,236.2 15,236.2 16-09-2026 APPROVED 15,424.58 15,090.2 15,090.2 15-09-2026 APPROVED 15,430.92 15,047.6 15,193.8 14
+INTERNAL buttons []

@@ -1,0 +1,163 @@
+{
+  "url": "https://qc.finsta.co.in/#/Contact/ContactNew",
+  "inputs": [
+    {
+      "tag": "ng-select",
+      "formcontrolname": "urlName",
+      "placeholder": "Select",
+      "bindlabel": "pFunctionName",
+      "text": "×"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "ng-select",
+      "formcontrolname": "contactid",
+      "placeholder": "Select",
+      "bindlabel": "contactname",
+      "label": "Search Contact Name / Pan / Aadhar / Mob",
+      "text": "Select"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "inlineRadio2",
+      "formcontrolname": "Contacttype",
+      "label": "Individual",
+      "text": "Individual"
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "id": "inlineRadio3",
+      "formcontrolname": "Contacttype",
+      "label": "Business Entity",
+      "text": "Business Entity"
+    },
+    {
+      "tag": "select",
+      "formcontrolname": "pAddressType",
+      "text": "Select Correspondence Address Home Office Address Permanent Address Pr"
+    },
+    {
+      "tag": "select",
+      "formcontrolname": "pResidencetype",
+      "placeholder": "Residence",
+      "label": "Residence",
+      "text": "Select Owned Rented"
+    },
+    {
+      "tag": "textarea",
+      "formcontrolname": "pAddress1",
+      "maxlength": "300",
+      "label": "Address"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pAddress2",
+      "placeholder": "Enter Area",
+      "maxlength": "50",
+      "label": "Area"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pCity",
+      "placeholder": "Enter City/Village",
+      "maxlength": "50",
+      "label": "City/Village"
+    },
+    {
+      "tag": "ng-select",
+      "id": "pCountry",
+      "formcontrolname": "pCountryId",
+      "placeholder": "Select",
+      "bindlabel": "pCountry",
+      "label": "Country",
+      "text": "India"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "ng-select",
+      "id": "pState",
+      "formcontrolname": "pStateId",
+      "placeholder": "Select",
+      "bindlabel": "pState",
+      "label": "State"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "ng-select",
+      "id": "pDistrict",
+      "formcontrolname": "pDistrictId",
+      "placeholder": "Select",
+      "bindlabel": "pDistrict",
+      "label": "District"
+    },
+    {
+      "tag": "input",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "pPinCode",
+      "placeholder": "Enter Pincode",
+      "maxlength": "6",
+      "label": "Pincode",
+      "text": "0"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "plongitude",
+      "placeholder": "Enter longitude",
+      "maxlength": "30",
+      "label": "Longitude"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "formcontrolname": "platitude",
+      "placeholder": "Enter latitude",
+      "maxlength": "30",
+      "label": "Latitude"
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "button",
+      "text": "Save & Continue"
+    }
+  ],
+  "labels": [
+    "Search Contact Name / Pan / Aadhar / Mobile Number / Email",
+    "Individual",
+    "Business Entity",
+    "Address Details",
+    "Address Type",
+    "Residence",
+    "Address",
+    "Area",
+    "City/Village",
+    "Country",
+    "State",
+    "District",
+    "Pincode",
+    "Longitude",
+    "Latitude"
+  ]
+}

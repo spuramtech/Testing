@@ -1,0 +1,1714 @@
+{
+  "generatedAt": "2026-10-16T06:53:18.913Z",
+  "environment": "http://host214.kapilits.com:8411/",
+  "reconciliation": {
+    "generated": 63,
+    "automated": 63,
+    "discovered": 63,
+    "executed": 53,
+    "passed": 46,
+    "failed": 7,
+    "blocked": 0,
+    "skipped": 0,
+    "notExecuted": 3,
+    "na": 7,
+    "reconciles": true
+  },
+  "requirements": [
+    {
+      "id": "REQ-SLAB-001",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-002",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-SLAB-003",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-004",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-005",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-SLAB-006",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-007",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-SLAB-008",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-009",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-010",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-011",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-012",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-013",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-014",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-015",
+      "state": "PARTLY VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-016",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-017",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-018",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-SLAB-019",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-020",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-SLAB-021",
+      "state": "NOT VERIFIED"
+    },
+    {
+      "id": "REQ-SLAB-022",
+      "state": "NOT VERIFIED"
+    }
+  ],
+  "designedNoScript": [],
+  "cases": [
+    {
+      "key": "TC_SLAB_CREATE_01 - Positive / Create: a valid slab above 10 crore is saved and listed",
+      "id": "TC_SLAB_CREATE_01",
+      "meta": {
+        "module": "Positive / Create",
+        "priority": "Medium",
+        "type": "Positive / Create",
+        "summary": "a valid slab above 10 crore is saved and listed",
+        "steps": [
+          "Click Add Slab",
+          "Enter From 10,00,00,001, To 10,10,00,000, Internal 2, External 1",
+          "Click Save"
+        ],
+        "expected": "\"Slab saved.\" is shown and the slab appears in the list with those values."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15293,
+      "error": "",
+      "shortId": "CREATE_01",
+      "title": "TC_SLAB_CREATE_01 - Positive / Create: a valid slab above 10 crore is saved and listed",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:45:02.361Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab-b\\GoldSlabConfig-tests-gold--4570e-0-crore-is-saved-and-listed-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_READ_01 - Read / Persistence: the existing slabs are listed with valid appraiser counts",
+      "id": "TC_SLAB_READ_01",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the existing slabs are listed with valid appraiser counts",
+        "steps": [
+          "Read the slab list"
+        ],
+        "expected": "The first slab starts at 0; every slab has internal 1 or 2 and external 0 to 2; external is above 0 only with 2 internal."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 47558,
+      "error": "",
+      "shortId": "READ_01",
+      "title": "TC_SLAB_READ_01 - Read / Persistence: the existing slabs are listed with valid appraiser counts",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:45:18.143Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--8cfbf-with-valid-appraiser-counts-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_READ_02 - Read / Persistence: the slab created earlier is still listed after a fresh login",
+      "id": "TC_SLAB_READ_02",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the slab created earlier is still listed after a fresh login",
+        "steps": [
+          "Log in fresh and open the slab screen"
+        ],
+        "expected": "The slab created earlier is listed with the same values."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 46269,
+      "error": "",
+      "shortId": "READ_02",
+      "title": "TC_SLAB_READ_02 - Read / Persistence: the slab created earlier is still listed after a fresh login",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:46:05.721Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--53d23--listed-after-a-fresh-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_READ_03 - Read / Persistence: the existing slabs are continuous (each starts at the previous To + 1)",
+      "id": "TC_SLAB_READ_03",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the existing slabs are continuous (each starts at the previous To + 1)",
+        "steps": [
+          "Read the existing slabs"
+        ],
+        "expected": "Each slab starts at the previous To Amount + 1."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 45614,
+      "error": "",
+      "shortId": "READ_03",
+      "title": "TC_SLAB_READ_03 - Read / Persistence: the existing slabs are continuous (each starts at the previous To + 1)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:46:52.012Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--0d820-tarts-at-the-previous-To-1--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_READ_04 - Read / Persistence: the top real slab ends at 10,00,00,000 (the premise of the sandbox range)",
+      "id": "TC_SLAB_READ_04",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the top real slab ends at 10,00,00,000 (the premise of the sandbox range)",
+        "steps": [
+          "Read the last real slab"
+        ],
+        "expected": "It ends at 10,00,00,000 (the premise for the test range above 10 crore)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 42736,
+      "error": "",
+      "shortId": "READ_04",
+      "title": "TC_SLAB_READ_04 - Read / Persistence: the top real slab ends at 10,00,00,000 (the premise of the sandbox range)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:47:37.647Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--949de-emise-of-the-sandbox-range--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_UPDATE_01 - Update / Edit: the External Appraiser count of a slab can be changed and saved",
+      "id": "TC_SLAB_UPDATE_01",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "the External Appraiser count of a slab can be changed and saved",
+        "steps": [
+          "Click Edit on the test slab",
+          "Change External to 2",
+          "Click Save"
+        ],
+        "expected": "The slab is saved and the list shows External 2."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 49179,
+      "error": "",
+      "shortId": "UPDATE_01",
+      "title": "TC_SLAB_UPDATE_01 - Update / Edit: the External Appraiser count of a slab can be changed and saved",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:48:20.470Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--9ffdb-ab-can-be-changed-and-saved-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_UPDATE_02 - Update / Edit: the To Amount of a slab can be changed and saved",
+      "id": "TC_SLAB_UPDATE_02",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "the To Amount of a slab can be changed and saved",
+        "steps": [
+          "Click Edit on the test slab",
+          "Change To Amount to 10,20,00,000",
+          "Click Save"
+        ],
+        "expected": "The slab is saved and the list shows the new To Amount."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 54744,
+      "error": "",
+      "shortId": "UPDATE_02",
+      "title": "TC_SLAB_UPDATE_02 - Update / Edit: the To Amount of a slab can be changed and saved",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:49:09.750Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--b7013-ab-can-be-changed-and-saved-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_CANCEL_01 - Delete & Cancel: Cancel on Add Slab closes the form and adds nothing",
+      "id": "TC_SLAB_CANCEL_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "Cancel on Add Slab closes the form and adds nothing",
+        "steps": [
+          "Click Add Slab",
+          "Fill the form",
+          "Click Cancel"
+        ],
+        "expected": "The form closes and no row is added."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 35987,
+      "error": "",
+      "shortId": "CANCEL_01",
+      "title": "TC_SLAB_CANCEL_01 - Delete & Cancel: Cancel on Add Slab closes the form and adds nothing",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:50:04.527Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--6a230-s-the-form-and-adds-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_CANCEL_02 - Delete & Cancel: Cancel on Edit leaves the slab unchanged",
+      "id": "TC_SLAB_CANCEL_02",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "Cancel on Edit leaves the slab unchanged",
+        "steps": [
+          "Click Edit on the test slab",
+          "Change External",
+          "Click Cancel"
+        ],
+        "expected": "The slab is unchanged."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 46005,
+      "error": "",
+      "shortId": "CANCEL_02",
+      "title": "TC_SLAB_CANCEL_02 - Delete & Cancel: Cancel on Edit leaves the slab unchanged",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:50:40.542Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--845af-t-leaves-the-slab-unchanged-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_CANCEL_03 - Delete & Cancel: answering No to \"Delete this slab?\" keeps the slab and sends no delete",
+      "id": "TC_SLAB_CANCEL_03",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "answering No to \"Delete this slab?\" keeps the slab and sends no delete",
+        "steps": [
+          "Click Delete on the test slab",
+          "Answer No to \"Delete this slab?\""
+        ],
+        "expected": "The slab stays and no delete request is sent."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 45717,
+      "error": "",
+      "shortId": "CANCEL_03",
+      "title": "TC_SLAB_CANCEL_03 - Delete & Cancel: answering No to \"Delete this slab?\" keeps the slab and sends no delete",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:51:26.576Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--4feff-he-slab-and-sends-no-delete-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_DELETE_01 - Delete & Cancel: Delete (after confirming) removes slab A from the list",
+      "id": "TC_SLAB_DELETE_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "Delete (after confirming) removes slab A from the list",
+        "steps": [
+          "Click Delete on the test slab",
+          "Answer Yes"
+        ],
+        "expected": "The confirmation text is shown, a delete request is sent and the slab disappears."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 41393,
+      "error": "",
+      "shortId": "DELETE_01",
+      "title": "TC_SLAB_DELETE_01 - Delete & Cancel: Delete (after confirming) removes slab A from the list",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:51:43.147Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab-b\\GoldSlabConfig-tests-gold--de7ad-emoves-slab-A-from-the-list-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_DELETE_02 - Delete & Cancel: the real slabs are untouched after the whole run",
+      "id": "TC_SLAB_DELETE_02",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "the real slabs are untouched after the whole run",
+        "steps": [
+          "After the whole run read the slab list"
+        ],
+        "expected": "The 5 real slabs are exactly as before and no test slab is left."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 8850,
+      "error": "",
+      "shortId": "DELETE_02",
+      "title": "TC_SLAB_DELETE_02 - Delete & Cancel: the real slabs are untouched after the whole run",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:52:24.562Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab-b\\GoldSlabConfig-tests-gold--d993f-touched-after-the-whole-run-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_REQUIRED_01 - Negative / Required field: saving an empty form shows \"From Amount is required.\" and sends nothing",
+      "id": "TC_SLAB_REQUIRED_01",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "saving an empty form shows \"From Amount is required.\" and sends nothing",
+        "steps": [
+          "Click Add Slab",
+          "Click Save with an empty form"
+        ],
+        "expected": "\"From Amount is required.\" is shown. No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 52319,
+      "error": "",
+      "shortId": "REQUIRED_01",
+      "title": "TC_SLAB_REQUIRED_01 - Negative / Required field: saving an empty form shows \"From Amount is required.\" and sends nothing",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:52:12.311Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--7a8af--required-and-sends-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_REQUIRED_02 - Negative / Required field: a To Amount alone (no From Amount) is rejected",
+      "id": "TC_SLAB_REQUIRED_02",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "a To Amount alone (no From Amount) is rejected",
+        "steps": [
+          "Click Add Slab",
+          "Enter only a To Amount",
+          "Click Save"
+        ],
+        "expected": "\"From Amount is required.\" is shown. No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 55145,
+      "error": "",
+      "shortId": "REQUIRED_02",
+      "title": "TC_SLAB_REQUIRED_02 - Negative / Required field: a To Amount alone (no From Amount) is rejected",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:53:04.657Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--1a18d--no-From-Amount-is-rejected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_INPUT_01 - Input validation: letters and symbols typed in From / To Amount are not kept (digits only)",
+      "id": "TC_SLAB_INPUT_01",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "letters and symbols typed in From / To Amount are not kept (digits only)",
+        "steps": [
+          "Click Add Slab",
+          "Type letters and symbols into From and To"
+        ],
+        "expected": "Only digits remain."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 45469,
+      "error": "",
+      "shortId": "INPUT_01",
+      "title": "TC_SLAB_INPUT_01 - Input validation: letters and symbols typed in From / To Amount are not kept (digits only)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:53:59.835Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--d2caf-t-are-not-kept-digits-only--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_INPUT_02 - Input validation: a number typed with commas (1,00,000) is stored as plain digits",
+      "id": "TC_SLAB_INPUT_02",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "a number typed with commas (1,00,000) is stored as plain digits",
+        "steps": [
+          "Click Add Slab",
+          "Type 1,00,000 into From"
+        ],
+        "expected": "The field holds 100000."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 46848,
+      "error": "",
+      "shortId": "INPUT_02",
+      "title": "TC_SLAB_INPUT_02 - Input validation: a number typed with commas (1,00,000) is stored as plain digits",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:54:45.321Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--fa00c-0-is-stored-as-plain-digits-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_INPUT_03 - Input validation: spaces only in From Amount count as empty",
+      "id": "TC_SLAB_INPUT_03",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "spaces only in From Amount count as empty",
+        "steps": [
+          "Click Add Slab",
+          "Type spaces into From",
+          "Click Save"
+        ],
+        "expected": "\"From Amount is required.\" is shown. No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 50488,
+      "error": "",
+      "shortId": "INPUT_03",
+      "title": "TC_SLAB_INPUT_03 - Input validation: spaces only in From Amount count as empty",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:55:32.194Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--3cf54--From-Amount-count-as-empty-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_INPUT_04 - Input validation: script / SQL text typed in the amount fields is not kept",
+      "id": "TC_SLAB_INPUT_04",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "script / SQL text typed in the amount fields is not kept",
+        "steps": [
+          "Click Add Slab",
+          "Type script / SQL text into From"
+        ],
+        "expected": "Only digits remain (nothing is run)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 44591,
+      "error": "",
+      "shortId": "INPUT_04",
+      "title": "TC_SLAB_INPUT_04 - Input validation: script / SQL text typed in the amount fields is not kept",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:56:22.702Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--ff3ba-e-amount-fields-is-not-kept-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_INPUT_05 - Input validation: non-Latin digits typed in From Amount are not kept",
+      "id": "TC_SLAB_INPUT_05",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "non-Latin digits typed in From Amount are not kept",
+        "steps": [
+          "Click Add Slab",
+          "Type non-Latin digits into From"
+        ],
+        "expected": "Only Latin digits are kept."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 41974,
+      "error": "Error: expect(received).toMatch(expected)\n\nExpected pattern: /^[0-9]*$/\nReceived string:  \"١٢٣\"",
+      "shortId": "INPUT_05",
+      "title": "TC_SLAB_INPUT_05 - Input validation: non-Latin digits typed in From Amount are not kept",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:57:07.323Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--62dde-in-From-Amount-are-not-kept-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_SLAB_BOUNDARY_01 - Boundary values: From Amount greater than To Amount is rejected with a message and sends nothing",
+      "id": "TC_SLAB_BOUNDARY_01",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "From Amount greater than To Amount is rejected with a message and sends nothing",
+        "steps": [
+          "Click Add Slab",
+          "Enter From 900 and To 100",
+          "Click Save"
+        ],
+        "expected": "\"To Amount (inclusive) cannot be less than From Amount.\" No save request leaves the browser."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 56656,
+      "error": "",
+      "shortId": "BOUNDARY_01",
+      "title": "TC_SLAB_BOUNDARY_01 - Boundary values: From Amount greater than To Amount is rejected with a message and sends nothing",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T05:58:41.253Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--5e84b-a-message-and-sends-nothing-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_BOUNDARY_02 - Boundary values: a one-amount slab (From = To) directly after slab A is accepted",
+      "id": "TC_SLAB_BOUNDARY_02",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a one-amount slab (From = To) directly after slab A is accepted",
+        "steps": [
+          "Click Add Slab",
+          "Enter From = To = one amount after slab A",
+          "Click Save"
+        ],
+        "expected": "The one-amount slab is saved and listed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 45919,
+      "error": "",
+      "shortId": "BOUNDARY_02",
+      "title": "TC_SLAB_BOUNDARY_02 - Boundary values: a one-amount slab (From = To) directly after slab A is accepted",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:00:18.330Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--00068-ly-after-slab-A-is-accepted-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_BOUNDARY_03 - Boundary values: a slab that overlaps slab A by one amount (From = A.To) is rejected",
+      "id": "TC_SLAB_BOUNDARY_03",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a slab that overlaps slab A by one amount (From = A.To) is rejected",
+        "steps": [
+          "Click Add Slab",
+          "Enter From = the To Amount of slab A (overlap by one)",
+          "Click Save"
+        ],
+        "expected": "The slab is not saved (no \"Slab saved.\" message) and no extra row appears in the list."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 64033,
+      "error": "",
+      "shortId": "BOUNDARY_03",
+      "title": "TC_SLAB_BOUNDARY_03 - Boundary values: a slab that overlaps slab A by one amount (From = A.To) is rejected",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:01:04.353Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--58820-mount-From-A-To-is-rejected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_BOUNDARY_04 - Boundary values: a slab inside slab A's range is rejected",
+      "id": "TC_SLAB_BOUNDARY_04",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a slab inside slab A's range is rejected",
+        "steps": [
+          "Click Add Slab",
+          "Enter a range inside slab A",
+          "Click Save"
+        ],
+        "expected": "The slab is not saved (no \"Slab saved.\" message) and no extra row appears in the list."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 57872,
+      "error": "",
+      "shortId": "BOUNDARY_04",
+      "title": "TC_SLAB_BOUNDARY_04 - Boundary values: a slab inside slab A's range is rejected",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:02:08.409Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--081c2--slab-A-s-range-is-rejected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_BOUNDARY_05 - Boundary values: a slab that leaves a gap after slab A (From = A.To + 2) is rejected",
+      "id": "TC_SLAB_BOUNDARY_05",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a slab that leaves a gap after slab A (From = A.To + 2) is rejected",
+        "steps": [
+          "Click Add Slab",
+          "Enter From = To of slab A + 2 (a gap of one amount)",
+          "Click Save"
+        ],
+        "expected": "The slab is not saved (no \"Slab saved.\" message) and no extra row appears in the list. (the help text says to start at To + 1)."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 149368,
+      "error": "Error: a gap of one amount was accepted: Slab saved.\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: false\nReceived: true",
+      "shortId": "BOUNDARY_05",
+      "title": "TC_SLAB_BOUNDARY_05 - Boundary values: a slab that leaves a gap after slab A (From = A.To + 2) is rejected",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:03:06.319Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--166f6-b-A-From-A-To-2-is-rejected-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_SLAB_BOUNDARY_06 - Boundary values: a slab with a blank To Amount becomes an open-ended top slab",
+      "id": "TC_SLAB_BOUNDARY_06",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a slab with a blank To Amount becomes an open-ended top slab",
+        "steps": [
+          "Click Add Slab",
+          "Enter From = To of slab A + 1 and leave To blank",
+          "Click Save"
+        ],
+        "expected": "An open-ended top slab is saved (To shown blank / no limit)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 88729,
+      "error": "",
+      "shortId": "BOUNDARY_06",
+      "title": "TC_SLAB_BOUNDARY_06 - Boundary values: a slab with a blank To Amount becomes an open-ended top slab",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:06:22.591Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--cbb1c-omes-an-open-ended-top-slab-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_DEFAULT_01 - Default values: the Add Slab form opens empty with Internal 1 and External 0 (disabled)",
+      "id": "TC_SLAB_DEFAULT_01",
+      "meta": {
+        "module": "Default values",
+        "priority": "Medium",
+        "type": "Default values",
+        "summary": "the Add Slab form opens empty with Internal 1 and External 0 (disabled)",
+        "steps": [
+          "Click Add Slab"
+        ],
+        "expected": "From and To are empty, Internal 1, External 0 and External is disabled."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 38623,
+      "error": "",
+      "shortId": "DEFAULT_01",
+      "title": "TC_SLAB_DEFAULT_01 - Default values: the Add Slab form opens empty with Internal 1 and External 0 (disabled)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:08:22.870Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--67a52--1-and-External-0-disabled--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_DATE_01 - Date / calendar validation: the slab screen has no date fields",
+      "id": "TC_SLAB_DATE_01",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "the slab screen has no date fields",
+        "steps": [
+          "Look for date fields"
+        ],
+        "expected": "Not applicable: the screen has no dates."
+      },
+      "notes": [
+        "Not applicable: the Estimate Slab Configuration has no date or time fields."
+      ],
+      "status": "Skipped",
+      "duration": 41730,
+      "error": "",
+      "shortId": "DATE_01",
+      "title": "TC_SLAB_DATE_01 - Date / calendar validation: the slab screen has no date fields",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:09:01.508Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--64ebf-b-screen-has-no-date-fields-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_SLAB_BUSINESS_01 - Business rules / Calculation: External Appraiser count is disabled with 1 Internal and enabled with 2",
+      "id": "TC_SLAB_BUSINESS_01",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "External Appraiser count is disabled with 1 Internal and enabled with 2",
+        "steps": [
+          "Click Add Slab",
+          "Choose Internal 1, then Internal 2"
+        ],
+        "expected": "External is disabled with 1 Internal and enabled with 2."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 41135,
+      "error": "",
+      "shortId": "BUSINESS_01",
+      "title": "TC_SLAB_BUSINESS_01 - Business rules / Calculation: External Appraiser count is disabled with 1 Internal and enabled with 2",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:09:43.262Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--72c37-Internal-and-enabled-with-2-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_BUSINESS_02 - Business rules / Calculation: Internal count offers 1 and 2, External count offers 0, 1 and 2",
+      "id": "TC_SLAB_BUSINESS_02",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "Internal count offers 1 and 2, External count offers 0, 1 and 2",
+        "steps": [
+          "Click Add Slab",
+          "Read the Internal and External options"
+        ],
+        "expected": "Internal offers 1, 2; External offers 0, 1, 2."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 26896,
+      "error": "",
+      "shortId": "BUSINESS_02",
+      "title": "TC_SLAB_BUSINESS_02 - Business rules / Calculation: Internal count offers 1 and 2, External count offers 0, 1 and 2",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:10:24.421Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--8ad18-rnal-count-offers-0-1-and-2-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_BUSINESS_03 - Business rules / Calculation: switching Internal from 2 back to 1 resets External to 0",
+      "id": "TC_SLAB_BUSINESS_03",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "switching Internal from 2 back to 1 resets External to 0",
+        "steps": [
+          "Click Add Slab",
+          "Choose Internal 2 and External 2",
+          "Change Internal back to 1"
+        ],
+        "expected": "External resets to 0."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15302,
+      "error": "",
+      "shortId": "BUSINESS_03",
+      "title": "TC_SLAB_BUSINESS_03 - Business rules / Calculation: switching Internal from 2 back to 1 resets External to 0",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:10:51.328Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--767c4-k-to-1-resets-External-to-0-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_CONSISTENCY_01 - Data consistency: amounts in the grid use Indian digit grouping (1,00,000 / 10,00,00,000)",
+      "id": "TC_SLAB_CONSISTENCY_01",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "amounts in the grid use Indian digit grouping (1,00,000 / 10,00,00,000)",
+        "steps": [
+          "Read every amount in the list"
+        ],
+        "expected": "Amounts use Indian digit grouping."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 13874,
+      "error": "",
+      "shortId": "CONSISTENCY_01",
+      "title": "TC_SLAB_CONSISTENCY_01 - Data consistency: amounts in the grid use Indian digit grouping (1,00,000 / 10,00,00,000)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:11:06.639Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--2d533-ping-1-00-000-10-00-00-000--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_CONSISTENCY_02 - Data consistency: the Edit form shows exactly the values listed in the grid",
+      "id": "TC_SLAB_CONSISTENCY_02",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the Edit form shows exactly the values listed in the grid",
+        "steps": [
+          "Click Edit on the test slab",
+          "Read the form"
+        ],
+        "expected": "The form shows the values listed in the grid."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 21999,
+      "error": "",
+      "shortId": "CONSISTENCY_02",
+      "title": "TC_SLAB_CONSISTENCY_02 - Data consistency: the Edit form shows exactly the values listed in the grid",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:11:20.521Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--d56d7-e-values-listed-in-the-grid-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_CONSISTENCY_03 - Data consistency: the stages a saved estimate needs equal Internal + External of the slab its value falls in",
+      "id": "TC_SLAB_CONSISTENCY_03",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "the stages a saved estimate needs equal Internal + External of the slab its value falls in",
+        "steps": [
+          "Open the Summary page of the saved estimate",
+          "Read its value and the stages required",
+          "Find the slab the value falls in"
+        ],
+        "expected": "Stages required = that slab's Internal + External count."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 74824,
+      "error": "",
+      "shortId": "CONSISTENCY_03",
+      "title": "TC_SLAB_CONSISTENCY_03 - Data consistency: the stages a saved estimate needs equal Internal + External of the slab its value falls in",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:11:42.528Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--89863-the-slab-its-value-falls-in-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_DUPLICATE_01 - Duplicate prevention: a slab with exactly the same range as slab A is rejected",
+      "id": "TC_SLAB_DUPLICATE_01",
+      "meta": {
+        "module": "Duplicate prevention",
+        "priority": "Medium",
+        "type": "Duplicate prevention",
+        "summary": "a slab with exactly the same range as slab A is rejected",
+        "steps": [
+          "Click Add Slab",
+          "Enter exactly the range of slab A",
+          "Click Save"
+        ],
+        "expected": "Rejected; only one slab with that From Amount exists."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 19034,
+      "error": "",
+      "shortId": "DUPLICATE_01",
+      "title": "TC_SLAB_DUPLICATE_01 - Duplicate prevention: a slab with exactly the same range as slab A is rejected",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:45:33.873Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab-b\\GoldSlabConfig-tests-gold--a9162-range-as-slab-A-is-rejected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_DUPLICATE_02 - Duplicate prevention: a slab with the same From Amount as slab A but another To Amount is rejected",
+      "id": "TC_SLAB_DUPLICATE_02",
+      "meta": {
+        "module": "Duplicate prevention",
+        "priority": "Medium",
+        "type": "Duplicate prevention",
+        "summary": "a slab with the same From Amount as slab A but another To Amount is rejected",
+        "steps": [
+          "Click Add Slab",
+          "Enter the From Amount of slab A with another To Amount",
+          "Click Save"
+        ],
+        "expected": "Rejected; only one slab with that From Amount exists."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 65828,
+      "error": "",
+      "shortId": "DUPLICATE_02",
+      "title": "TC_SLAB_DUPLICATE_02 - Duplicate prevention: a slab with the same From Amount as slab A but another To Amount is rejected",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:14:35.182Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--c1bd9-other-To-Amount-is-rejected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_SEARCH_01 - Search: the slab list has no search box",
+      "id": "TC_SLAB_SEARCH_01",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "the slab list has no search box",
+        "steps": [
+          "Look for a search box"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: the Estimate Slab Configuration list has no search box."
+      ],
+      "status": "Skipped",
+      "duration": 18796,
+      "error": "",
+      "shortId": "SEARCH_01",
+      "title": "TC_SLAB_SEARCH_01 - Search: the slab list has no search box",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:16:25.971Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--6b133-slab-list-has-no-search-box-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_SLAB_FILTER_01 - Filtering: the slab list has no filters",
+      "id": "TC_SLAB_FILTER_01",
+      "meta": {
+        "module": "Filtering",
+        "priority": "Medium",
+        "type": "Filtering",
+        "summary": "the slab list has no filters",
+        "steps": [
+          "Look for filters"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: the slab list has no filters."
+      ],
+      "status": "Skipped",
+      "duration": 41643,
+      "error": "",
+      "shortId": "FILTER_01",
+      "title": "TC_SLAB_FILTER_01 - Filtering: the slab list has no filters",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:16:44.794Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--fc347-he-slab-list-has-no-filters-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_SLAB_SORT_01 - Sorting: the slab list has no sortable columns",
+      "id": "TC_SLAB_SORT_01",
+      "meta": {
+        "module": "Sorting",
+        "priority": "Medium",
+        "type": "Sorting",
+        "summary": "the slab list has no sortable columns",
+        "steps": [
+          "Look for sortable headers"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: slabs are shown in range order; the headers are not sortable."
+      ],
+      "status": "Skipped",
+      "duration": 51203,
+      "error": "",
+      "shortId": "SORT_01",
+      "title": "TC_SLAB_SORT_01 - Sorting: the slab list has no sortable columns",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:17:26.474Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--c0047-ist-has-no-sortable-columns-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_SLAB_PAGINATION_01 - Pagination: the slab list has no pager",
+      "id": "TC_SLAB_PAGINATION_01",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "the slab list has no pager",
+        "steps": [
+          "Look for a pager"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: all slabs are shown on one page (no pager)."
+      ],
+      "status": "Skipped",
+      "duration": 39290,
+      "error": "",
+      "shortId": "PAGINATION_01",
+      "title": "TC_SLAB_PAGINATION_01 - Pagination: the slab list has no pager",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:18:17.712Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--2e420--the-slab-list-has-no-pager-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_SLAB_CLEAR_01 - Clear / Reset: after Cancel, a new Add Slab form opens empty again (nothing left over)",
+      "id": "TC_SLAB_CLEAR_01",
+      "meta": {
+        "module": "Clear / Reset",
+        "priority": "Medium",
+        "type": "Clear / Reset",
+        "summary": "after Cancel, a new Add Slab form opens empty again (nothing left over)",
+        "steps": [
+          "Click Add Slab",
+          "Fill the form",
+          "Click Cancel",
+          "Click Add Slab again"
+        ],
+        "expected": "The form is empty again with Internal 1 and External 0."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 101673,
+      "error": "",
+      "shortId": "CLEAR_01",
+      "title": "TC_SLAB_CLEAR_01 - Clear / Reset: after Cancel, a new Add Slab form opens empty again (nothing left over)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:20:09.478Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--ed6f5-ty-again-nothing-left-over--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_NAV_01 - Navigation & UI layout: the breadcrumb is shown and Overview returns to the Gold Loan Configuration tiles",
+      "id": "TC_SLAB_NAV_01",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "the breadcrumb is shown and Overview returns to the Gold Loan Configuration tiles",
+        "steps": [
+          "Read the breadcrumb",
+          "Click Overview"
+        ],
+        "expected": "The breadcrumb shows Appraisal & Pre-Estimate Setup > Estimate Approval Slabs; Overview shows the Gold Loan Configuration tiles."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 17303,
+      "error": "",
+      "shortId": "NAV_01",
+      "title": "TC_SLAB_NAV_01 - Navigation & UI layout: the breadcrumb is shown and Overview returns to the Gold Loan Configuration tiles",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:21:51.170Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--bb0d3-ld-Loan-Configuration-tiles-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_NAV_02 - Navigation & UI layout: browser Back leaves the slab screen",
+      "id": "TC_SLAB_NAV_02",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "browser Back leaves the slab screen",
+        "steps": [
+          "Click the browser Back button"
+        ],
+        "expected": "The slab screen is left."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 39139,
+      "error": "",
+      "shortId": "NAV_02",
+      "title": "TC_SLAB_NAV_02 - Navigation & UI layout: browser Back leaves the slab screen",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:22:08.481Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--08374-Back-leaves-the-slab-screen-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_ROLE_01 - Role-based access: only the admin can change slabs (other roles recorded; HYPOTHESIS for Internal Appraiser 1)",
+      "id": "TC_SLAB_ROLE_01",
+      "meta": {
+        "module": "Role-based access",
+        "priority": "Medium",
+        "type": "Role-based access",
+        "summary": "only the admin can change slabs (other roles recorded; HYPOTHESIS for Internal Appraiser 1)",
+        "steps": [
+          "Log in as Internal Appraiser 1 / 2 and Auditor",
+          "Open the slab screen",
+          "Check for Add Slab"
+        ],
+        "expected": "Internal Appraiser 1 cannot add slabs; every role's access is recorded in the notes."
+      },
+      "notes": [
+        "INT_APPRAISER1: slab screen does not open; Add Slab not available",
+        "INT_APPRAISER2: slab screen does not open; Add Slab not available",
+        "AUDITOR: slab screen does not open; Add Slab not available"
+      ],
+      "status": "Pass",
+      "duration": 179462,
+      "error": "",
+      "shortId": "ROLE_01",
+      "title": "TC_SLAB_ROLE_01 - Role-based access: only the admin can change slabs (other roles recorded; HYPOTHESIS for Internal Appraiser 1)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:22:47.638Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--a4233-S-for-Internal-Appraiser-1--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_WORKFLOW_01 - Workflow (approval): slab changes need no approval",
+      "id": "TC_SLAB_WORKFLOW_01",
+      "meta": {
+        "module": "Workflow (approval)",
+        "priority": "Medium",
+        "type": "Workflow (approval)",
+        "summary": "slab changes need no approval",
+        "steps": [
+          "Look for an approval step"
+        ],
+        "expected": "Not applicable: slab changes are effective at once."
+      },
+      "notes": [
+        "Not applicable: a saved slab is effective immediately for new estimates; there is no maker-checker step on this screen."
+      ],
+      "status": "Skipped",
+      "duration": 34755,
+      "error": "",
+      "shortId": "WORKFLOW_01",
+      "title": "TC_SLAB_WORKFLOW_01 - Workflow (approval): slab changes need no approval",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:18:57.013Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--640cc-ab-changes-need-no-approval-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_SLAB_API_01 - API: the slab list API answers 200 with JSON that contains the real slabs",
+      "id": "TC_SLAB_API_01",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the slab list API answers 200 with JSON that contains the real slabs",
+        "steps": [
+          "Reload the slab screen",
+          "Read the list API response"
+        ],
+        "expected": "200 with JSON that contains the real slabs."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15868,
+      "error": "",
+      "shortId": "API_01",
+      "title": "TC_SLAB_API_01 - API: the slab list API answers 200 with JSON that contains the real slabs",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:25:47.150Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--25d2e-hat-contains-the-real-slabs-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_API_02 - API: the save request carried the entered amounts and counts and returned 200",
+      "id": "TC_SLAB_API_02",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the save request carried the entered amounts and counts and returned 200",
+        "steps": [
+          "Read the save request made by CREATE_01"
+        ],
+        "expected": "200; the body contains the entered amounts and counts."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 72539,
+      "error": "",
+      "shortId": "API_02",
+      "title": "TC_SLAB_API_02 - API: the save request carried the entered amounts and counts and returned 200",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:26:03.025Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--3305b-and-counts-and-returned-200-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_API_03 - API: the slab list API refuses a call that carries no login",
+      "id": "TC_SLAB_API_03",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the slab list API refuses a call that carries no login",
+        "steps": [
+          "Call the list API URL without any login"
+        ],
+        "expected": "Refused (401 / 403) or no slab data returned."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15623,
+      "error": "",
+      "shortId": "API_03",
+      "title": "TC_SLAB_API_03 - API: the slab list API refuses a call that carries no login",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:27:15.569Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--b0f12--call-that-carries-no-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_API_04 - API: the save URL carries the user id (createdby) - recorded, the server should take the user from the login",
+      "id": "TC_SLAB_API_04",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the save URL carries the user id (createdby) - recorded, the server should take the user from the login",
+        "steps": [
+          "Read the save URL of CREATE_01"
+        ],
+        "expected": "Recorded: the URL carries the user id (createdby); whether the server ignores a changed value was not tested."
+      },
+      "notes": [
+        "Save URL: /api/loans/transactions/goldestimate/SaveSlabConfig?createdby=14 - the user id is sent by the browser (createdby=14); whether the server ignores a changed value was NOT tested"
+      ],
+      "status": "Pass",
+      "duration": 8634,
+      "error": "",
+      "shortId": "API_04",
+      "title": "TC_SLAB_API_04 - API: the save URL carries the user id (createdby) - recorded, the server should take the user from the login",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:27:31.197Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--fc7dc-ake-the-user-from-the-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_API_05 - API: server-side validation by sending invalid slabs straight to the save API",
+      "id": "TC_SLAB_API_05",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "server-side validation by sending invalid slabs straight to the save API",
+        "steps": [
+          "Send invalid slabs straight to the save API"
+        ],
+        "expected": "NOT EXECUTED: needs the login token."
+      },
+      "notes": [
+        "NOT EXECUTED: needs the login token to call the API directly; invalid slabs are exercised through the screen instead (BOUNDARY / DUPLICATE tests, sandbox range only)."
+      ],
+      "status": "Skipped",
+      "duration": 8401,
+      "error": "",
+      "shortId": "API_05",
+      "title": "TC_SLAB_API_05 - API: server-side validation by sending invalid slabs straight to the save API",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:27:39.836Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--c3949-bs-straight-to-the-save-API-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_SLAB_ERROR_01 - Error recovery: after an overlapping slab is rejected, a valid slab can be saved (double-click Save creates one)",
+      "id": "TC_SLAB_ERROR_01",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "after an overlapping slab is rejected, a valid slab can be saved (double-click Save creates one)",
+        "steps": [
+          "Click Add Slab",
+          "Enter an overlapping range, Save (rejected)",
+          "Enter a valid range and double-click Save"
+        ],
+        "expected": "First is rejected; the valid range creates exactly one slab."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 57278,
+      "error": "",
+      "shortId": "ERROR_01",
+      "title": "TC_SLAB_ERROR_01 - Error recovery: after an overlapping slab is rejected, a valid slab can be saved (double-click Save creates one)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:27:48.242Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--50b7d-ble-click-Save-creates-one--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_ERROR_02 - Error recovery: when the save call fails (network aborted) no success message is shown and the form keeps the values",
+      "id": "TC_SLAB_ERROR_02",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "when the save call fails (network aborted) no success message is shown and the form keeps the values",
+        "steps": [
+          "Click Add Slab",
+          "Fill the form",
+          "Click Save with the network call aborted"
+        ],
+        "expected": "No success message; the form keeps its values."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 13532,
+      "error": "",
+      "shortId": "ERROR_02",
+      "title": "TC_SLAB_ERROR_02 - Error recovery: when the save call fails (network aborted) no success message is shown and the form keeps the values",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:28:45.519Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--bbe60-d-the-form-keeps-the-values-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_FILE_01 - File download / upload: not part of this screen",
+      "id": "TC_SLAB_FILE_01",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "not part of this screen",
+        "steps": [
+          "Look for import / export"
+        ],
+        "expected": "Not applicable."
+      },
+      "notes": [
+        "Not applicable: the screen has no import, export or upload."
+      ],
+      "status": "Skipped",
+      "duration": 37676,
+      "error": "",
+      "shortId": "FILE_01",
+      "title": "TC_SLAB_FILE_01 - File download / upload: not part of this screen",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:19:31.783Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--c555a-oad-not-part-of-this-screen-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_SLAB_A11Y_01 - Accessibility & responsive: the screen fits a phone (390 x 844) without sideways scrolling",
+      "id": "TC_SLAB_A11Y_01",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the screen fits a phone (390 x 844) without sideways scrolling",
+        "steps": [
+          "Open the screen at 390 x 844"
+        ],
+        "expected": "No horizontal scroll."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 9593,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+      "shortId": "A11Y_01",
+      "title": "TC_SLAB_A11Y_01 - Accessibility & responsive: the screen fits a phone (390 x 844) without sideways scrolling",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:28:59.056Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--a5068--without-sideways-scrolling-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_SLAB_A11Y_02 - Accessibility & responsive: every field and button of the Add Slab form has an accessible name",
+      "id": "TC_SLAB_A11Y_02",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "every field and button of the Add Slab form has an accessible name",
+        "steps": [
+          "Click Add Slab",
+          "Check each control for an accessible name"
+        ],
+        "expected": "Every field and button has a label, title, placeholder or text."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 16003,
+      "error": "Error: controls without an accessible name\n\nexpect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 5\n\n- Array []\n+ Array [\n+   \"input\",\n+   \"select\",\n+   \"select\",\n+ ]",
+      "shortId": "A11Y_02",
+      "title": "TC_SLAB_A11Y_02 - Accessibility & responsive: every field and button of the Add Slab form has an accessible name",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:29:19.623Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--74b36-form-has-an-accessible-name-chromium\\test-finished-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_SLAB_A11Y_03 - Accessibility & responsive: the screen fits a tablet (768 x 1024) without sideways scrolling",
+      "id": "TC_SLAB_A11Y_03",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the screen fits a tablet (768 x 1024) without sideways scrolling",
+        "steps": [
+          "Open the screen at 768 x 1024"
+        ],
+        "expected": "No horizontal scroll."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 12271,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+      "shortId": "A11Y_03",
+      "title": "TC_SLAB_A11Y_03 - Accessibility & responsive: the screen fits a tablet (768 x 1024) without sideways scrolling",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:30:05.560Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--55d72--without-sideways-scrolling-chromium\\test-finished-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_SLAB_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "id": "TC_SLAB_A11Y_04",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "browser compatibility (Firefox, Safari / WebKit, Edge)",
+        "steps": [
+          "Run the screen in Firefox and WebKit"
+        ],
+        "expected": "NOT EXECUTED: only Chromium is installed."
+      },
+      "notes": [
+        "NOT EXECUTED: only Chromium is installed for this project (run \"npx playwright install\" and add projects to playwright.config.js to enable other browsers)."
+      ],
+      "status": "Skipped",
+      "duration": 19205,
+      "error": "",
+      "shortId": "A11Y_04",
+      "title": "TC_SLAB_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:30:46.795Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--67af9-Firefox-Safari-WebKit-Edge--chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_SLAB_SESSION_01 - Session / concurrency / browser: the slab URL without a login does not show the slabs",
+      "id": "TC_SLAB_SESSION_01",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "the slab URL without a login does not show the slabs",
+        "steps": [
+          "In a fresh browser without login open the slab URL"
+        ],
+        "expected": "The slabs are not shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 57097,
+      "error": "",
+      "shortId": "SESSION_01",
+      "title": "TC_SLAB_SESSION_01 - Session / concurrency / browser: the slab URL without a login does not show the slabs",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:31:26.390Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--89da2-gin-does-not-show-the-slabs-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_SESSION_02 - Session / concurrency / browser: whether an inactivity warning or logout appears within 5 minutes idle (behaviour recorded)",
+      "id": "TC_SLAB_SESSION_02",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "whether an inactivity warning or logout appears within 5 minutes idle (behaviour recorded)",
+        "steps": [
+          "Stay idle on the slab screen for up to 5 minutes",
+          "Watch for an inactivity warning or a logout"
+        ],
+        "expected": "Behaviour recorded in the notes (warning, logout or neither within 5 minutes)."
+      },
+      "notes": [
+        "5-minute idle session test: no warning and no logout within 5 minutes. A longer idle time was not tried."
+      ],
+      "status": "Pass",
+      "duration": 350228,
+      "error": "",
+      "shortId": "SESSION_02",
+      "title": "TC_SLAB_SESSION_02 - Session / concurrency / browser: whether an inactivity warning or logout appears within 5 minutes idle (behaviour recorded)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:45:52.914Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab-b\\GoldSlabConfig-tests-gold--f63fb-es-idle-behaviour-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_SESSION_03 - Session / concurrency / browser: browser storage cleared with the form open, then Save (behaviour recorded, save call aborted)",
+      "id": "TC_SLAB_SESSION_03",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "browser storage cleared with the form open, then Save (behaviour recorded, save call aborted)",
+        "steps": [
+          "Click Add Slab",
+          "Fill the form",
+          "Clear browser storage and cookies",
+          "Click Save (call aborted)"
+        ],
+        "expected": "Behaviour recorded in the notes."
+      },
+      "notes": [
+        "After clearing the session and clicking Save: stayed on the form; messages: Could not save this slab."
+      ],
+      "status": "Pass",
+      "duration": 27511,
+      "error": "",
+      "shortId": "SESSION_03",
+      "title": "TC_SLAB_SESSION_03 - Session / concurrency / browser: browser storage cleared with the form open, then Save (behaviour recorded, save call aborted)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:38:50.296Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--77d40-recorded-save-call-aborted--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_SESSION_04 - Session / concurrency / browser: double-clicking Add Slab opens one form",
+      "id": "TC_SLAB_SESSION_04",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "double-clicking Add Slab opens one form",
+        "steps": [
+          "Double-click Add Slab"
+        ],
+        "expected": "One form opens."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23701,
+      "error": "",
+      "shortId": "SESSION_04",
+      "title": "TC_SLAB_SESSION_04 - Session / concurrency / browser: double-clicking Add Slab opens one form",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:39:37.772Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--4a543-ing-Add-Slab-opens-one-form-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_SLAB_SESSION_05 - Session / concurrency / browser: two users saving overlapping slabs at the same time",
+      "id": "TC_SLAB_SESSION_05",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "two users saving overlapping slabs at the same time",
+        "steps": [
+          "Two users save overlapping slabs at the same time"
+        ],
+        "expected": "NOT EXECUTED: too risky on the live configuration."
+      },
+      "notes": [
+        "NOT EXECUTED: two simultaneous writers on the live approval configuration were judged too risky; run it manually in a quiet window."
+      ],
+      "status": "Skipped",
+      "duration": 25750,
+      "error": "",
+      "shortId": "SESSION_05",
+      "title": "TC_SLAB_SESSION_05 - Session / concurrency / browser: two users saving overlapping slabs at the same time",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:40:01.490Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--d2e0d-ping-slabs-at-the-same-time-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_SLAB_LENGTH_01 - Field length & autocomplete: From / To Amount have a maximum length",
+      "id": "TC_SLAB_LENGTH_01",
+      "meta": {
+        "module": "Field length & autocomplete",
+        "priority": "Medium",
+        "type": "Field length & autocomplete",
+        "summary": "From / To Amount have a maximum length",
+        "steps": [
+          "Click Add Slab",
+          "Read maxlength of From and To"
+        ],
+        "expected": "Both fields have a maximum length."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 80004,
+      "error": "Error: From Amount maxlength\n\nexpect(received).not.toBeNull()\n\nReceived: null",
+      "shortId": "LENGTH_01",
+      "title": "TC_SLAB_LENGTH_01 - Field length & autocomplete: From / To Amount have a maximum length",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:40:27.264Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--895e1-mount-have-a-maximum-length-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_SLAB_LENGTH_02 - Field length & autocomplete: a 25-digit number typed in From Amount is cut to a safe length (16 digits at most)",
+      "id": "TC_SLAB_LENGTH_02",
+      "meta": {
+        "module": "Field length & autocomplete",
+        "priority": "Medium",
+        "type": "Field length & autocomplete",
+        "summary": "a 25-digit number typed in From Amount is cut to a safe length (16 digits at most)",
+        "steps": [
+          "Click Add Slab",
+          "Type 25 digits into From"
+        ],
+        "expected": "At most 16 digits are kept."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 9117,
+      "error": "Error: expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 16\nReceived:    25",
+      "shortId": "LENGTH_02",
+      "title": "TC_SLAB_LENGTH_02 - Field length & autocomplete: a 25-digit number typed in From Amount is cut to a safe length (16 digits at most)",
+      "file": "GoldSlabConfig/tests/gold-slab-config-functional.spec.js",
+      "startTime": "2026-10-16T06:41:57.473Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-slab\\GoldSlabConfig-tests-gold--0f1d7-e-length-16-digits-at-most--chromium\\test-finished-1.png",
+      "final": "FAILED"
+    }
+  ]
+}

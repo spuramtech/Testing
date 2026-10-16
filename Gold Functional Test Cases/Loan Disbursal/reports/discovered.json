@@ -1,0 +1,1433 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Loan Disbursal/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Loan Disbursal/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/Desktop/Gold Module/Gold Functional Test Cases/Loan Disbursal/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\disbursal-api.spec.js",
+      "file": "api/disbursal-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Loan Disbursal – API",
+          "file": "api/disbursal-api.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_050 - Disbursal list and loan APIs refuse requests without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "36f38868e0d157a83740-ce8b179c6953560d457b",
+              "file": "api/disbursal-api.spec.js",
+              "line": 6,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_051 - SubmitDisbursal refuses a request without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "36f38868e0d157a83740-db0d7fb01d3b52e6ffe8",
+              "file": "api/disbursal-api.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_052 - Gold loans require Branch Head approval (RequiresApproval = true) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "36f38868e0d157a83740-adda7360822feed50f70",
+              "file": "api/disbursal-api.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_053 - An external appraiser cannot read the disbursal list through the API (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "36f38868e0d157a83740-ef6f295c6d46873911c7",
+              "file": "api/disbursal-api.spec.js",
+              "line": 32,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\submit.spec.js",
+      "file": "business-rules/submit.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Loan Disbursal – Submit For Approval: required fields",
+          "file": "business-rules/submit.spec.js",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_032 - Bank without Cheque/Online/Debit Card: \"Please Select Bank\", nothing sent @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-a764e61b2ac17cf05cc0",
+              "file": "business-rules/submit.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_033 - Online without bank name is refused with a message @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-91ef71eaba32d5264ac9",
+              "file": "business-rules/submit.spec.js",
+              "line": 31,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_034 - Online without type of payment is refused with a message @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-76a781a11db7c0d85fef",
+              "file": "business-rules/submit.spec.js",
+              "line": 31,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_035 - Online without reference no is refused with a message @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-b9154078d206edaf0d9f",
+              "file": "business-rules/submit.spec.js",
+              "line": 31,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_036 - Cheque with no cheque number cannot be submitted @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-deda55d142e7fce4c57e",
+              "file": "business-rules/submit.spec.js",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_037 - Submitting without choosing a mode of payment asks for one (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-c9b699aefe4282ad355c",
+              "file": "business-rules/submit.spec.js",
+              "line": 54,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Loan Disbursal – Submit For Approval: payload and outcome (simulated server)",
+          "file": "business-rules/submit.spec.js",
+          "line": 62,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_038 - Online submit sends BANK / ONLINE / NEFT, the reference, the bank and the full amount @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-71d7743205c71a8766ca",
+              "file": "business-rules/submit.spec.js",
+              "line": 70,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_039 - Cash submit sends CASH with no bank details @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-ff6921e0b14c5d1caf72",
+              "file": "business-rules/submit.spec.js",
+              "line": 83,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_040 - Submit sends today as payment date and the shown installment start date @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-6a01e4535dabe38c6c61",
+              "file": "business-rules/submit.spec.js",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_041 - Submit sends the borrower's primary bank account @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-b7a097563b3315f10c81",
+              "file": "business-rules/submit.spec.js",
+              "line": 103,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_042 - Successful submit: \"Disbursal submitted for Branch Head approval.\" and back to the list @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-f2c547a93585ff225a2e",
+              "file": "business-rules/submit.spec.js",
+              "line": 112,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_043 - Network failure on submit: no success, stays on the form @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-6e85e775522196cc0147",
+              "file": "business-rules/submit.spec.js",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_044 - Server error 500 on submit is shown as an error, not success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-9be7e6b22fdf22d6f609",
+              "file": "business-rules/submit.spec.js",
+              "line": 129,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_045 - Double-clicking Submit For Approval sends only one request @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-11f41b34a3a9a518817e",
+              "file": "business-rules/submit.spec.js",
+              "line": 137,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_046 - A loan already submitted for approval cannot be submitted again @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5478598930872e81ee4d-042c2307243388b5451b",
+              "file": "business-rules/submit.spec.js",
+              "line": 145,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\list.spec.js",
+      "file": "functional/list.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Loan Disbursal – approved loans list",
+          "file": "functional/list.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_001 - List shows Branch, Show Loans and the Approved columns @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-b9d785387387f1e67b09",
+              "file": "functional/list.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_002 - Total and application numbers match the API @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-72fdeac98cf593c5ccf6",
+              "file": "functional/list.spec.js",
+              "line": 15,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_003 - Row values (applicant, contact, sanctioned) match the API @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-2f8968ecbe0b53e8fbc6",
+              "file": "functional/list.spec.js",
+              "line": 26,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_004 - Branch filter HEAD OFFICE shows only HEAD OFFICE loans @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-4ab5d3b53b59b9d548f1",
+              "file": "functional/list.spec.js",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_005 - Search by application number finds that loan only @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-41dd5388388db9d3d5d6",
+              "file": "functional/list.spec.js",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_006 - Search by applicant name @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-cac3d17ff8a00ba4ff01",
+              "file": "functional/list.spec.js",
+              "line": 53,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_007 - Search with no match shows no rows @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-3b6129c79d2e27e59992",
+              "file": "functional/list.spec.js",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_008 - Paging shows 10 rows and page 2 has different loans @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-5f5a0cc8bc18e70f7748",
+              "file": "functional/list.spec.js",
+              "line": 66,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_009 - Approved loans offered for disbursal have a sanctioned amount above 0 (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-cdf6e399c2e6cb3d9843",
+              "file": "functional/list.spec.js",
+              "line": 77,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_010 - Clicking the Application No opens the disbursement form @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b798246ed43420520dc5-4cbe526aec9f5283abae",
+              "file": "functional/list.spec.js",
+              "line": 83,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\loan-details.spec.js",
+      "file": "functional/loan-details.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Loan Disbursal – loan details",
+          "file": "functional/loan-details.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_011 - Amounts: available = sanctioned − previous; amount disbursed = available − adjustments @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-d20af00d5eb38668fd89",
+              "file": "functional/loan-details.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_012 - Loan terms come from the approved application @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-c4d89bf1dc4c2a51b555",
+              "file": "functional/loan-details.spec.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_013 - Borrower bank details = the contact's bank account @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-d59e333510949bcca028",
+              "file": "functional/loan-details.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_014 - Disburse Date is today and read-only @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-384fa1ac6c004ad08518",
+              "file": "functional/loan-details.spec.js",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_015 - Installment Start Date is one month after the disburse date @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-ae9ff6cb3e00041f1138",
+              "file": "functional/loan-details.spec.js",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_016 - A loan with nothing disbursed shows no disbursal history @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-f532e9cf05cfff8928a4",
+              "file": "functional/loan-details.spec.js",
+              "line": 47,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_017 - Mode of Payment shows Cash and Bank with balances from the books; Cash is pre-selected @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-74091b0676d3fb30c6f5",
+              "file": "functional/loan-details.spec.js",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_018 - Bank → Online offers the company bank and RTGS / NEFT / IMPS / UPI / INTRA BANK TRANSFER @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-b5add1f17a486a239676",
+              "file": "functional/loan-details.spec.js",
+              "line": 69,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_019 - Bank → Cheque offers the bank and its unused cheques @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-b353fb0801a351d2df74",
+              "file": "functional/loan-details.spec.js",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_020 - Bank → Debit Card offers a card list @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-ee7fda251b6c63964dba",
+              "file": "functional/loan-details.spec.js",
+              "line": 91,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_021 - Cash hides the bank fields @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-316ac09387ac8de10919",
+              "file": "functional/loan-details.spec.js",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_022 - Clear resets the bank choice @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b44c1e8c317bc1289606-4c247bf593c7b482edbe",
+              "file": "functional/loan-details.spec.js",
+              "line": 107,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "negative\\roles.spec.js",
+      "file": "negative/roles.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Loan Disbursal – roles",
+          "file": "negative/roles.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_047 - EXT_APPRAISER1 has no Loan Disbursal in the menu @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-b5811cfc7e682ec42fc2",
+              "file": "negative/roles.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_048 - EXT_APPRAISER1 opening the URL directly is sent back to the Dashboard @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-2886fefef44a43c30fab",
+              "file": "negative/roles.spec.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_049 - Branch Head (CHECKER_BH) can open the Loan Disbursal list @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe3a24642b4be1d67c8d-c4c919d1961c9253e831",
+              "file": "negative/roles.spec.js",
+              "line": 27,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\real-submit.spec.js",
+      "file": "positive/real-submit.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC_LD_056 - Real Online submit of an AUTOTEST loan goes to Branch Head approval (ALLOW_DATA_CREATION=1) @regression",
+          "ok": true,
+          "tags": [
+            "regression"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "95bc3ba00f6a7fbb434c-4bdbc8573acd205e5db2",
+          "file": "positive/real-submit.spec.js",
+          "line": 7,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui.spec.js",
+      "file": "regression/ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Loan Disbursal – usability, accessibility, responsive",
+          "file": "regression/ui.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_054 - At tablet width (768px) the disbursement form has no page-level horizontal scroll @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-aa3cbdc15aa5bf069b82",
+              "file": "regression/ui.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_055 - Payout, dates and bank fields have accessible names @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-879554a2d8094f7b174d",
+              "file": "regression/ui.spec.js",
+              "line": 12,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "validation\\payout.spec.js",
+      "file": "validation/payout.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Loan Disbursal – payout amount validation",
+          "file": "validation/payout.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_LD_023 - Payout \"0\" (zero) is not accepted: full amount stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-a6357ab1cbe81758f533",
+              "file": "validation/payout.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_024 - Payout \"100\" (less than the available amount) is not accepted: full amount stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-cf8e5985b06d7b3d814e",
+              "file": "validation/payout.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_025 - Payout \"MORE\" (more than the available amount) is not accepted: full amount stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-18642aa293326bad8c31",
+              "file": "validation/payout.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_026 - Payout \"abc\" (letters) is not accepted: full amount stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-0c8a87f75961f0a7093b",
+              "file": "validation/payout.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_027 - Payout \"-100\" (negative) is not accepted: full amount stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-aef58b357e2580de8fbe",
+              "file": "validation/payout.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_028 - Payout \"100.555\" (three decimals) is not accepted: full amount stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-90421692fac685047de1",
+              "file": "validation/payout.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_029 - Payout \"\" (empty) is not accepted: full amount stays @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-d9faca8cb28038d75fc2",
+              "file": "validation/payout.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_LD_030 - Payout field holds at most 18 characters @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-4c89a7516a60c2febc04",
+              "file": "validation/payout.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC_LD_031 - Online Reference No holds at most 30 characters @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d1238cef35629cd06dda-d0e53f876048c8b6773a",
+              "file": "validation/payout.spec.js",
+              "line": 34,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-16T09:07:53.126Z",
+    "duration": 34.65299999999996,
+    "expected": 0,
+    "skipped": 56,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

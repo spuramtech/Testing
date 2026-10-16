@@ -1,0 +1,1461 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Admin\\OneDrive\\Desktop\\Gold Module\\Gold Functional Test Cases\\playwright.config.js",
+    "rootDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Estimates/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Estimates/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Admin/OneDrive/Desktop/Gold Module/Gold Functional Test Cases/Gold Estimates/tests",
+        "testIgnore": [
+          "**/node_modules/**"
+        ],
+        "testMatch": [
+          "**/tests/**/*.spec.js"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\estimate-api.spec.js",
+      "file": "api/estimate-api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimates – API",
+          "file": "api/estimate-api.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GE_053 - Estimate APIs refuse requests without a token @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c3b978414529c88ece5-fd6f73224ffe888fa20a",
+              "file": "api/estimate-api.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_054 - Gold rate used by estimates is the latest APPROVED internal rate, dated before or on today @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c3b978414529c88ece5-715f3f728c27a7c00853",
+              "file": "api/estimate-api.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_055 - Approval-slab configuration covers every amount without gaps or overlaps @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c3b978414529c88ece5-b8dc7b290bb0c889938d",
+              "file": "api/estimate-api.spec.js",
+              "line": 21,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "business-rules\\calculations.spec.js",
+      "file": "business-rules/calculations.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimates – weight, value and LTV rules",
+          "file": "business-rules/calculations.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GE_034 - Net weight for 10.5 g with 0.5 g stone: stone < 5 % → no wastage @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-32fdf48650526f778545",
+              "file": "business-rules/calculations.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_035 - Net weight for 20 g with 1 g stone: stone 5–10 % → 1 % wastage @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-9bd338dd281d1192a772",
+              "file": "business-rules/calculations.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_036 - Net weight for 10 g with 2 g stone: stone 10–25 % → 2 % wastage @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-48097225c8fa431e163e",
+              "file": "business-rules/calculations.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_037 - Net weight for 10 g with 3 g stone: stone 25–40 % → 5 % wastage @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-2ce35f234c6b8984a215",
+              "file": "business-rules/calculations.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_038 - Net weight for 10 g with 5 g stone: stone ≥ 40 % → 8 % wastage @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-8a8a101ac87218ecf392",
+              "file": "business-rules/calculations.spec.js",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_039 - Row total = pure net weight × gold rate per gram @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-06d3065d90c9f0e62a69",
+              "file": "business-rules/calculations.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_040 - A lower purity applies its Purity Deduction % and its own gold rate @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-8eea931e6655411b9c53",
+              "file": "business-rules/calculations.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_041 - Totals add up pure weight, quantity and value of all rows @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-59e5c7615be899a23a54",
+              "file": "business-rules/calculations.spec.js",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_042 - Without a scheme the LTV shows \"Not Configured\" and the user is told to apply a scheme @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-471caef669a117956e30",
+              "file": "business-rules/calculations.spec.js",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_043 - Scheme GL-quick, appraisal under ₹2.5 lakh: LTV = scheme slab LTV, rate/gram and eligible loan follow it @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-f18fdeab9f8b49cdf8d6",
+              "file": "business-rules/calculations.spec.js",
+              "line": 66,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_044 - Scheme GL-quick, appraisal ₹2.5–5 lakh: LTV = scheme slab LTV, rate/gram and eligible loan follow it @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "958f60e8055399b797f8-071e17761b7d97a572fd",
+              "file": "business-rules/calculations.spec.js",
+              "line": 66,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "functional\\form.spec.js",
+      "file": "functional/form.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimates – form layout and master data",
+          "file": "functional/form.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GE_001 - Gold Estimates opens with Customer, Gold Details, Article grid, Totals and Attachments sections @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-379d1afce1e31eab91b6",
+              "file": "functional/form.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_002 - Estimate Date defaults to today and is set from the calendar only @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-7d236db42f6510137de0",
+              "file": "functional/form.spec.js",
+              "line": 15,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_003 - Calendar does not allow a future Estimate Date @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-e9e58a3a393e5ad90eb8",
+              "file": "functional/form.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_004 - Loan Name defaults to New Gold @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-7fc6b212d92adac4229a",
+              "file": "functional/form.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_005 - Scheme list = \"Not applied\" + every ACTIVE effective scheme as \"<name> — <n> mo\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-334dba0c0d80933d1cb5",
+              "file": "functional/form.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_006 - Contact search by name lists matching contacts with mobile and e-mail @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-d1658fe2318db57ca061",
+              "file": "functional/form.spec.js",
+              "line": 48,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_007 - Contact search by mobile number finds that contact @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-aebbf44022a7874be380",
+              "file": "functional/form.spec.js",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_008 - Selecting a contact shows 5 article rows with 22K purity and today's approved gold rate @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-0d3b4319096347616442",
+              "file": "functional/form.spec.js",
+              "line": 70,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_009 - Purity choices are 24K, 22K, 21K, 20K, 19K, 18K @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-49fecdaa326e95747ac7",
+              "file": "functional/form.spec.js",
+              "line": 80,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_010 - Prohibited article types (Article Limits) are not offered @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-b1ac85bc417c2e4cdbb0",
+              "file": "functional/form.spec.js",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_011 - Defects list offers the configured defect types @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-c0ada3f772a6e933e7d4",
+              "file": "functional/form.spec.js",
+              "line": 96,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_012 - A new blank row is added automatically when the last row is filled; Add Row adds one more @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-6e3512913ceb6a374f48",
+              "file": "functional/form.spec.js",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_013 - Clear empties the contact, the grid and remarks @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-52c3830c775b4a979f73",
+              "file": "functional/form.spec.js",
+              "line": 116,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_014 - View lists saved estimates by token number @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-9bf17f2db46351d5e8a9",
+              "file": "functional/form.spec.js",
+              "line": 128,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_015 - My Saved Estimates lists the maker's GE numbers with status and actions @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ff39f3f3f0471545c026-0e7755e3205dcf3e68c1",
+              "file": "functional/form.spec.js",
+              "line": 137,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "negative\\review-and-failures.spec.js",
+      "file": "negative/review-and-failures.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimates – review dialog, payload and failures",
+          "file": "negative/review-and-failures.spec.js",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GE_045 - Save opens \"Review Gold Estimate\" with the same customer, weights, value, eligible loan and articles @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d861b19df82ce161531-45d2390b9e1b4952cbc3",
+              "file": "negative/review-and-failures.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_046 - Back to Edit closes the review without saving and keeps the entries @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d861b19df82ce161531-8e9e6ad79bc6eb18ebb2",
+              "file": "negative/review-and-failures.spec.js",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_047 - Confirm sends the estimate with scheme rate/tenure, rate per gram, eligible value and article lines (blocked) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d861b19df82ce161531-f34a5e360cad0e3b4d97",
+              "file": "negative/review-and-failures.spec.js",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_048 - Save failure shows \"Failed to save the gold estimate.\" and no success @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d861b19df82ce161531-0e6a8c97a4abcb2ae3e3",
+              "file": "negative/review-and-failures.spec.js",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_049 - Server error 500 on save is reported and the entries are kept @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d861b19df82ce161531-7c31712f9084944c3fb3",
+              "file": "negative/review-and-failures.spec.js",
+              "line": 70,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_050 - Double-click on Confirm & Save sends one request (simulated failure response) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d861b19df82ce161531-d356098e4b1470cdc11e",
+              "file": "negative/review-and-failures.spec.js",
+              "line": 84,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_051 - Estimate without a scheme: what is sent as rate/eligible value when LTV is \"Not Configured\" (HYPOTHESIS: save refused) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d861b19df82ce161531-a757d5161978003f700d",
+              "file": "negative/review-and-failures.spec.js",
+              "line": 94,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "positive\\create-estimate.spec.js",
+      "file": "positive/create-estimate.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimates – real save (opt-in)",
+          "file": "positive/create-estimate.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GE_052 - Maker saves an estimate: GE number issued and routed to the next approver; it appears in My Gold Estimates @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fb91403a2605781264d6-e3cd5aac25dc3e40dca1",
+              "file": "positive/create-estimate.spec.js",
+              "line": 9,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "regression\\ui.spec.js",
+      "file": "regression/ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimates – usability, accessibility, responsive",
+          "file": "regression/ui.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GE_056 - At tablet width (768px) the grid scrolls inside its box and Save stays reachable @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-94af53f82d899eb44ed1",
+              "file": "regression/ui.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_057 - Header fields and grid inputs have accessible names @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-3bcd236534d083673a78",
+              "file": "regression/ui.spec.js",
+              "line": 14,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_058 - Eligible Loan Amount explains its formula in a tooltip @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "508ed6c61a0910eaca2b-758c961dd8e3f07bcb0b",
+              "file": "regression/ui.spec.js",
+              "line": 25,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "validation\\inputs.spec.js",
+      "file": "validation/inputs.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Gold Estimates – input validation",
+          "file": "validation/inputs.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC_GE_016 - Quantity \"abc\" → \"\" (letters rejected) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-75ba89b1875fbc7fef78",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_017 - Quantity \"-2\" → \"2\" (minus stripped) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-98be17ec6cdc2f628ac1",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_018 - Quantity \"1.5\" → not \"15\" (decimal quantity not silently turned into 15 (HYPOTHESIS)) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-42d58ece30b812bd7029",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_019 - Quantity \"999\" → \"99\" (max 2 digits) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-5037b51a2ffb0d3dda56",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_020 - Gross weight \"abc\" → \"\" (letters rejected) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-c040798844155644fcb6",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_021 - Gross weight \"-5\" → \"5\" (minus stripped) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-7ddfa3fe1ded819f27cf",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_022 - Gross weight \"10.12345\" → \"10.12\" (max 2 decimals) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-bbd40e58a0cc2aca0f37",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_023 - Stone/Wastage \"abc\" → \"\" (letters rejected) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-613c99f7e60bc8f6bbab",
+              "file": "validation/inputs.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "TC_GE_024 - Quantity 0 is refused with a message about the quantity @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-6c6eafb7a9ddd60d44cd",
+              "file": "validation/inputs.spec.js",
+              "line": 27,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_025 - Gross weight 0 is refused (\"Gross weight Can Not Be Zero\") @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-c1e457f9349918a586b6",
+              "file": "validation/inputs.spec.js",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_026 - Stone/Wastage greater than gross weight is refused and cleared @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-bd0440d31171d108882e",
+              "file": "validation/inputs.spec.js",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_027 - Stone/Wastage equal to gross weight (net 0) is refused (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-85ce807123a09d45a9f0",
+              "file": "validation/inputs.spec.js",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_028 - Remarks are limited to 90 characters @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-2b05d5e7e44b7ebe925a",
+              "file": "validation/inputs.spec.js",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_029 - Save with no article shows \"Add Gold Article\" @smoke @regression",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-138118775f11856edfac",
+              "file": "validation/inputs.spec.js",
+              "line": 70,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_030 - Save without an image shows \"Please Upload Gold Articles Images\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-ce347ab3e504eaef78d5",
+              "file": "validation/inputs.spec.js",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_031 - Article type chosen but no gross weight – save refused with \"Gross weight is required\" @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-70c2c18267e8533bf411",
+              "file": "validation/inputs.spec.js",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_032 - Quantity above the per-person limit (Ankle Wear max 5) is refused @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-e83abdac3d59e0c2d9fd",
+              "file": "validation/inputs.spec.js",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "TC_GE_033 - Remarks are saved exactly as typed (no automatic capitalisation) (HYPOTHESIS) @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9b1d0b5d23e6649d85e1-ff485ff2ddcc1d4d1a56",
+              "file": "validation/inputs.spec.js",
+              "line": 113,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-15T11:37:02.813Z",
+    "duration": 32.935,
+    "expected": 0,
+    "skipped": 58,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

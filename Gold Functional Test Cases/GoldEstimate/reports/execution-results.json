@@ -1,0 +1,2347 @@
+{
+  "generatedAt": "2026-10-16T04:17:29.427Z",
+  "environment": "http://host214.kapilits.com:8411/",
+  "reconciliation": {
+    "generated": 85,
+    "automated": 85,
+    "discovered": 85,
+    "executed": 79,
+    "passed": 70,
+    "failed": 9,
+    "blocked": 0,
+    "skipped": 0,
+    "notExecuted": 4,
+    "na": 2,
+    "reconciles": true
+  },
+  "requirements": [
+    {
+      "id": "REQ-EST-001",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-002",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-003",
+      "state": "PARTLY VERIFIED"
+    },
+    {
+      "id": "REQ-EST-004",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-EST-005",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-006",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-007",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-EST-008",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-009",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-010",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-011",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-012",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-EST-013",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-014",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-015",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-EST-016",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-017",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-EST-018",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-019",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-020",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-021",
+      "state": "NOT VERIFIED"
+    },
+    {
+      "id": "REQ-EST-022",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-EST-023",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-024",
+      "state": "PARTLY VERIFIED"
+    },
+    {
+      "id": "REQ-EST-025",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-026",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-027",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "REQ-EST-028",
+      "state": "DEFECT CANDIDATE"
+    },
+    {
+      "id": "REQ-EST-029",
+      "state": "NOT VERIFIED"
+    }
+  ],
+  "designedNoScript": [],
+  "cases": [
+    {
+      "key": "TC_ESTIMATE_CREATE_01 - Positive / Create: 10.5 g RING estimate is saved and gets a GE number",
+      "id": "TC_ESTIMATE_CREATE_01",
+      "meta": {
+        "module": "Positive / Create",
+        "priority": "Medium",
+        "type": "Positive / Create",
+        "summary": "10.5 g RING estimate is saved and gets a GE number",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter article RING: qty 1, gross 10.5 g, stone wastage 0.5 g",
+          "Upload the gold article image and add remarks",
+          "Click Save, then Confirm & Save in the review dialog"
+        ],
+        "expected": "Success message with a GE number and the approver it was routed to."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 30272,
+      "error": "",
+      "shortId": "CREATE_01",
+      "title": "TC_ESTIMATE_CREATE_01 - Positive / Create: 10.5 g RING estimate is saved and gets a GE number",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:32:51.701Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-bdc1c--saved-and-gets-a-GE-number-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_READ_01 - Read / Persistence: saved estimate is listed under My Gold Estimates after a fresh login",
+      "id": "TC_ESTIMATE_READ_01",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "saved estimate is listed under My Gold Estimates after a fresh login",
+        "steps": [
+          "Log in fresh",
+          "Click My Saved Estimates",
+          "Open the My GE Numbers tab"
+        ],
+        "expected": "The saved GE number is listed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24953,
+      "error": "",
+      "shortId": "READ_01",
+      "title": "TC_ESTIMATE_READ_01 - Read / Persistence: saved estimate is listed under My Gold Estimates after a fresh login",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:33:22.212Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-1cd0f-timates-after-a-fresh-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_READ_02 - Read / Persistence: the saved estimate's Summary page shows the submitted customer, scheme, gross and net weight",
+      "id": "TC_ESTIMATE_READ_02",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the saved estimate's Summary page shows the submitted customer, scheme, gross and net weight",
+        "steps": [
+          "Open My Saved Estimates > My GE Numbers",
+          "Click Summary on the saved estimate"
+        ],
+        "expected": "The Approval Detail page shows the GE number, customer name and mobile, scheme, tenure, gross 10.5 g and net 10 g."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 21994,
+      "error": "",
+      "shortId": "READ_02",
+      "title": "TC_ESTIMATE_READ_02 - Read / Persistence: the saved estimate's Summary page shows the submitted customer, scheme, gross and net weight",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T12:57:28.813Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-e4aef-scheme-gross-and-net-weight-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_READ_03 - Read / Persistence: the remarks typed at save time are stored exactly (no case change)",
+      "id": "TC_ESTIMATE_READ_03",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the remarks typed at save time are stored exactly (no case change)",
+        "steps": [
+          "Open the Summary page of the saved estimate",
+          "Read the SUBMIT entry in the Status History"
+        ],
+        "expected": "The remarks typed at save time are shown exactly as typed (case unchanged)."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 39856,
+      "error": "Error: expect(received).toMatch(expected)\n\nExpected pattern: /SUBMIT Functional test \\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}/\nReceived string:  \"× Dashboard Contact Contact Contact Configuration Loans Loans Loan Configuration Loan Origination Credit Evaluation Loan Management Reports & Letters Nach Npa Suit Vehicle Loan Gold Gold Estimates Gold Estimate Approval Queue Inventory Form My Gold Estimates Gold Token Gold Stock Gold Release Gold Release Approvals Audit Custodian Desk Gold Loan Configuration Gold Audit Accounting Accounting Configuration Transactions Reports Invoice Settings Settings Assign Forms Audit Log Loans Gold Gold Estimates HEAD OFFICE Finsta User GOLD ESTIMATE Approval Detail Back GE NUMBER GE2610000033 ESTIMATE DATE 15-Oct-2026 CUSTOMER Autotest Dhhhef Qa (9067377745) SCHEME AUTOTEST SCHEME 98566 TENURE 9 mo ROI 18% REPAYMENT TYPE Only Interest (Principle is paid at end of tenure) APPRAISAL VALUE ₹ 1,38,393.9 APPRAISAL STAGES REQUIRED/COMPLETED 1 / 2 LTV APPLIED 74.89% ELIGIBLE LOAN AMOUNT (LTV) ₹ 1,03,643.19 STATUS Awaiting Internal Appraiser 2 verification MAIN IMAGE Appraisal Entries APPRAISER ROLE GROSS WT NET WT RATE/G APPRAISAL VALUE ELIGIBLE LOAN AMOUNT (LTV) IMAGES APPRAISAL DATE SUBMITTED AT VERIFICATION tryfinsta Internal Appraiser 10.5 g 10 g ₹ 10,364.32 ₹ 1,38,393.9 ₹ 1,03,643.19 - 15-Oct-2026 15-Oct-2026 18:03 - You are the Internal Appraiser who created this Gold Estimate - you cannot approve or revert it yourself. Status History DATE ACTOR BY ACTION REMARKS 15-Oct-2026 18:03 INTERNAL_APPRAISER Finsta User SUBMIT Functional Test 2026-10-15t12:33 \"",
+      "shortId": "READ_03",
+      "title": "TC_ESTIMATE_READ_03 - Read / Persistence: the remarks typed at save time are stored exactly (no case change)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T12:57:51.170Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-35536-red-exactly-no-case-change--chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_READ_04 - Read / Persistence: the uploaded gold article image is stored under a proper file name",
+      "id": "TC_ESTIMATE_READ_04",
+      "meta": {
+        "module": "Read / Persistence",
+        "priority": "Medium",
+        "type": "Read / Persistence",
+        "summary": "the uploaded gold article image is stored under a proper file name",
+        "steps": [
+          "Open the Summary page",
+          "Read the source of the uploaded gold article image"
+        ],
+        "expected": "An uploaded image is shown and its stored file name is meaningful (not \"undefined\")."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 22636,
+      "error": "Error: stored image file name\n\nexpect(received).not.toMatch(expected)\n\nExpected pattern: not /undefined/i\nReceived string:      \"http://host214.kapilits.com:8412/Upload/HEAD%20OFFICE/Documents/1510202660317-undefined.png\"",
+      "shortId": "READ_04",
+      "title": "TC_ESTIMATE_READ_04 - Read / Persistence: the uploaded gold article image is stored under a proper file name",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T12:58:33.888Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-72af6-ed-under-a-proper-file-name-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_UPDATE_01 - Update / Edit: changing the gross weight recalculates the totals",
+      "id": "TC_ESTIMATE_UPDATE_01",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "changing the gross weight recalculates the totals",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article with gross 10.5 g",
+          "Change the gross weight to 20.5 g"
+        ],
+        "expected": "Total pure net weight recalculates from 10.00 g to 20.00 g."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 28560,
+      "error": "",
+      "shortId": "UPDATE_01",
+      "title": "TC_ESTIMATE_UPDATE_01 - Update / Edit: changing the gross weight recalculates the totals",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:33:47.180Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-6ab04-ght-recalculates-the-totals-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_UPDATE_02 - Update / Edit: Add Row adds one more blank article row",
+      "id": "TC_ESTIMATE_UPDATE_02",
+      "meta": {
+        "module": "Update / Edit",
+        "priority": "Medium",
+        "type": "Update / Edit",
+        "summary": "Add Row adds one more blank article row",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Click Add Row"
+        ],
+        "expected": "One more blank article row is added to the grid."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 21642,
+      "error": "",
+      "shortId": "UPDATE_02",
+      "title": "TC_ESTIMATE_UPDATE_02 - Update / Edit: Add Row adds one more blank article row",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:50:05.161Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-3c88d--one-more-blank-article-row-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_CANCEL_01 - Delete & Cancel: leaving the form without saving creates no estimate",
+      "id": "TC_ESTIMATE_CANCEL_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "leaving the form without saving creates no estimate",
+        "steps": [
+          "Note the My GE Numbers item count",
+          "Fill a new estimate without saving",
+          "Leave via My Saved Estimates",
+          "Compare the item count"
+        ],
+        "expected": "The count is unchanged: no estimate was created."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 33877,
+      "error": "",
+      "shortId": "CANCEL_01",
+      "title": "TC_ESTIMATE_CANCEL_01 - Delete & Cancel: leaving the form without saving creates no estimate",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:34:15.757Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-6168e--saving-creates-no-estimate-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_CANCEL_02 - Delete & Cancel: \"Back to Edit\" in the review dialog keeps the entered article and totals",
+      "id": "TC_ESTIMATE_CANCEL_02",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "\"Back to Edit\" in the review dialog keeps the entered article and totals",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article, upload the image, click Save",
+          "Click Back to Edit"
+        ],
+        "expected": "The review dialog closes; the article and totals are unchanged; nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 25885,
+      "error": "",
+      "shortId": "CANCEL_02",
+      "title": "TC_ESTIMATE_CANCEL_02 - Delete & Cancel: \"Back to Edit\" in the review dialog keeps the entered article and totals",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:01:02.905Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-7ce4e--entered-article-and-totals-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_DELETE_01 - Delete & Cancel: saved estimates cannot be deleted",
+      "id": "TC_ESTIMATE_DELETE_01",
+      "meta": {
+        "module": "Delete & Cancel",
+        "priority": "Medium",
+        "type": "Delete & Cancel",
+        "summary": "saved estimates cannot be deleted",
+        "steps": [
+          "Look for a delete action on the form or the list"
+        ],
+        "expected": "Not applicable: saved estimates cannot be deleted."
+      },
+      "notes": [
+        "Not applicable: the Gold Estimate form and My Gold Estimates list have no delete action."
+      ],
+      "status": "Skipped",
+      "duration": 20397,
+      "error": "",
+      "shortId": "DELETE_01",
+      "title": "TC_ESTIMATE_DELETE_01 - Delete & Cancel: saved estimates cannot be deleted",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:34:49.648Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-56745-estimates-cannot-be-deleted-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_ESTIMATE_REQUIRED_01 - Negative / Required field: Save with no gold article shows \"Add Gold Article\"",
+      "id": "TC_ESTIMATE_REQUIRED_01",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "Save with no gold article shows \"Add Gold Article\"",
+        "steps": [
+          "Select a contact",
+          "Click Save without any article"
+        ],
+        "expected": "Message \"Add Gold Article\"; the review dialog does not open."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 25575,
+      "error": "",
+      "shortId": "REQUIRED_01",
+      "title": "TC_ESTIMATE_REQUIRED_01 - Negative / Required field: Save with no gold article shows \"Add Gold Article\"",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:35:10.057Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-b8f45-cle-shows-Add-Gold-Article--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_REQUIRED_02 - Negative / Required field: article without a gross weight does not reach the review dialog",
+      "id": "TC_ESTIMATE_REQUIRED_02",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "article without a gross weight does not reach the review dialog",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article with an empty gross weight",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34791,
+      "error": "",
+      "shortId": "REQUIRED_02",
+      "title": "TC_ESTIMATE_REQUIRED_02 - Negative / Required field: article without a gross weight does not reach the review dialog",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:35:35.650Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-b4748-not-reach-the-review-dialog-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_REQUIRED_03 - Negative / Required field: Save without selecting a contact does not reach the review dialog",
+      "id": "TC_ESTIMATE_REQUIRED_03",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "Save without selecting a contact does not reach the review dialog",
+        "steps": [
+          "Do not select a contact",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 27847,
+      "error": "",
+      "shortId": "REQUIRED_03",
+      "title": "TC_ESTIMATE_REQUIRED_03 - Negative / Required field: Save without selecting a contact does not reach the review dialog",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:36:10.465Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-126a7-not-reach-the-review-dialog-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_REQUIRED_04 - Negative / Required field: Save without a Loan Name does not reach the review dialog",
+      "id": "TC_ESTIMATE_REQUIRED_04",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "Save without a Loan Name does not reach the review dialog",
+        "steps": [
+          "Select a contact",
+          "Leave Loan Name as \"Select\"",
+          "Enter an article and upload the image",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [
+        "Loan Name after choosing the scheme: \"New Gold\"; just before Save: \"Select\""
+      ],
+      "status": "Fail",
+      "duration": 93839,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: false\nReceived: true",
+      "shortId": "REQUIRED_04",
+      "title": "TC_ESTIMATE_REQUIRED_04 - Negative / Required field: Save without a Loan Name does not reach the review dialog",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-16T04:12:39.991Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214e\\GoldEstimate-tests-gold-es-16b7a-not-reach-the-review-dialog-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_REQUIRED_05 - Negative / Required field: Save without a gold article image (behaviour recorded)",
+      "id": "TC_ESTIMATE_REQUIRED_05",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "Save without a gold article image (behaviour recorded)",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article but do not upload an image",
+          "Click Save (do not confirm)"
+        ],
+        "expected": "Behaviour recorded in the notes: whether the image is mandatory (review dialog opens or not)."
+      },
+      "notes": [
+        "Save without an image: the review dialog did NOT open - the image is mandatory"
+      ],
+      "status": "Pass",
+      "duration": 23126,
+      "error": "",
+      "shortId": "REQUIRED_05",
+      "title": "TC_ESTIMATE_REQUIRED_05 - Negative / Required field: Save without a gold article image (behaviour recorded)",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:51:02.040Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-7dab1-e-image-behaviour-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_REQUIRED_06 - Negative / Required field: the \"Add Gold Article\" message is readable and disappears by itself",
+      "id": "TC_ESTIMATE_REQUIRED_06",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "the \"Add Gold Article\" message is readable and disappears by itself",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Click Save without an article"
+        ],
+        "expected": "A readable \"Add Gold Article\" message appears and disappears by itself."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 25387,
+      "error": "",
+      "shortId": "REQUIRED_06",
+      "title": "TC_ESTIMATE_REQUIRED_06 - Negative / Required field: the \"Add Gold Article\" message is readable and disappears by itself",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:01:28.799Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-2b3c6-le-and-disappears-by-itself-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_REQUIRED_07 - Negative / Required field: Save with the scheme left on \"Not applied\" does not reach the review dialog (HYPOTHESIS: a scheme is mandatory)",
+      "id": "TC_ESTIMATE_REQUIRED_07",
+      "meta": {
+        "module": "Negative / Required field",
+        "priority": "Medium",
+        "type": "Negative / Required field",
+        "summary": "Save with the scheme left on \"Not applied\" does not reach the review dialog (HYPOTHESIS: a scheme is mandatory)",
+        "steps": [
+          "Select a contact and Loan Name",
+          "Leave the scheme on \"Not applied\"",
+          "Enter an article and upload the image",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 33184,
+      "error": "",
+      "shortId": "REQUIRED_07",
+      "title": "TC_ESTIMATE_REQUIRED_07 - Negative / Required field: Save with the scheme left on \"Not applied\" does not reach the review dialog (HYPOTHESIS: a scheme is mandatory)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:01:54.195Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-f474e-ESIS-a-scheme-is-mandatory--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_INPUT_01 - Input validation: Gross Weight and Quantity reject letters",
+      "id": "TC_ESTIMATE_INPUT_01",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "Gross Weight and Quantity reject letters",
+        "steps": [
+          "Select a contact",
+          "Type letters key by key into Gross Weight and Quantity"
+        ],
+        "expected": "Letters are not accepted."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 25918,
+      "error": "",
+      "shortId": "INPUT_01",
+      "title": "TC_ESTIMATE_INPUT_01 - Input validation: Gross Weight and Quantity reject letters",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:36:38.328Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-7379a-and-Quantity-reject-letters-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_INPUT_02 - Input validation: Remarks keeps special characters exactly as typed",
+      "id": "TC_ESTIMATE_INPUT_02",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "Remarks keeps special characters exactly as typed",
+        "steps": [
+          "Type special characters (<b>&\"' 100% #1) into Remarks"
+        ],
+        "expected": "The text is kept exactly as typed."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 16210,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Test <b>&\\\"' 100% ok #1\"\nReceived: \"Test <B>&\\\"' 100% Ok #1\"",
+      "shortId": "INPUT_02",
+      "title": "TC_ESTIMATE_INPUT_02 - Input validation: Remarks keeps special characters exactly as typed",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:51:25.176Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-1880a-characters-exactly-as-typed-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_INPUT_03 - Input validation: a whitespace-only Gross Weight is treated as empty (review dialog does not open)",
+      "id": "TC_ESTIMATE_INPUT_03",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "a whitespace-only Gross Weight is treated as empty (review dialog does not open)",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross weight as spaces only",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 28411,
+      "error": "",
+      "shortId": "INPUT_03",
+      "title": "TC_ESTIMATE_INPUT_03 - Input validation: a whitespace-only Gross Weight is treated as empty (review dialog does not open)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:02:27.412Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-ffbcc-eview-dialog-does-not-open--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_INPUT_04 - Input validation: Gross Weight rejects number formats such as 1e3, +5, --5, 1,5 and non-Latin digits",
+      "id": "TC_ESTIMATE_INPUT_04",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "Gross Weight rejects number formats such as 1e3, +5, --5, 1,5 and non-Latin digits",
+        "steps": [
+          "Type 1e3, +5, --5, 1,5 and non-Latin digits into Gross Weight"
+        ],
+        "expected": "Only digits and one decimal point remain in the field."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 21262,
+      "error": "Error: after typing \"١٢\"\n\nexpect(received).toMatch(expected)\n\nExpected pattern: /^\\d*\\.?\\d*$/\nReceived string:  \"١٢\"",
+      "shortId": "INPUT_04",
+      "title": "TC_ESTIMATE_INPUT_04 - Input validation: Gross Weight rejects number formats such as 1e3, +5, --5, 1,5 and non-Latin digits",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:02:55.857Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-33f1b--5-1-5-and-non-Latin-digits-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_INPUT_05 - Input validation: SQL / script text in the contact search finds nothing and runs no script",
+      "id": "TC_ESTIMATE_INPUT_05",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "SQL / script text in the contact search finds nothing and runs no script",
+        "steps": [
+          "Type SQL / script text into the Contact dropdown search"
+        ],
+        "expected": "No contact is found; no script / alert is executed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23318,
+      "error": "",
+      "shortId": "INPUT_05",
+      "title": "TC_ESTIMATE_INPUT_05 - Input validation: SQL / script text in the contact search finds nothing and runs no script",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:03:19.572Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-9c787--nothing-and-runs-no-script-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_INPUT_06 - Input validation: every article type in the dropdown can be selected",
+      "id": "TC_ESTIMATE_INPUT_06",
+      "meta": {
+        "module": "Input validation",
+        "priority": "Medium",
+        "type": "Input validation",
+        "summary": "every article type in the dropdown can be selected",
+        "steps": [
+          "Open the Article Type dropdown",
+          "Select each of the first six types"
+        ],
+        "expected": "NECKLACE, BANGLE, BRACELET, KADA, LOCKET, MANGALSUTRA, DROPS and RING are offered and each can be selected."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 19243,
+      "error": "",
+      "shortId": "INPUT_06",
+      "title": "TC_ESTIMATE_INPUT_06 - Input validation: every article type in the dropdown can be selected",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:03:43.153Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-300d5-he-dropdown-can-be-selected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_01 - Boundary values: Gross Weight 0 does not reach the review dialog",
+      "id": "TC_ESTIMATE_BOUNDARY_01",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "Gross Weight 0 does not reach the review dialog",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross weight 0",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 30684,
+      "error": "",
+      "shortId": "BOUNDARY_01",
+      "title": "TC_ESTIMATE_BOUNDARY_01 - Boundary values: Gross Weight 0 does not reach the review dialog",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:37:04.260Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-22305-not-reach-the-review-dialog-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_02 - Boundary values: stone wastage larger than gross weight is not accepted",
+      "id": "TC_ESTIMATE_BOUNDARY_02",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "stone wastage larger than gross weight is not accepted",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross 5 g with stone wastage 6 g",
+          "Read the totals / click Save"
+        ],
+        "expected": "Negative net weight is not accepted (not saved)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 27155,
+      "error": "",
+      "shortId": "BOUNDARY_02",
+      "title": "TC_ESTIMATE_BOUNDARY_02 - Boundary values: stone wastage larger than gross weight is not accepted",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:37:34.960Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-145e1-ross-weight-is-not-accepted-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_03 - Boundary values: Quantity 0 does not reach the review dialog",
+      "id": "TC_ESTIMATE_BOUNDARY_03",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "Quantity 0 does not reach the review dialog",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter quantity 0",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 28952,
+      "error": "",
+      "shortId": "BOUNDARY_03",
+      "title": "TC_ESTIMATE_BOUNDARY_03 - Boundary values: Quantity 0 does not reach the review dialog",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:38:02.129Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-3313c-not-reach-the-review-dialog-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_04 - Boundary values: a very large weight (99,999 g) is calculated correctly",
+      "id": "TC_ESTIMATE_BOUNDARY_04",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a very large weight (99,999 g) is calculated correctly",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross weight 99,999 g with no stone wastage"
+        ],
+        "expected": "Pure net weight 99,999 g and appraisal = weight x rate per gram."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 21814,
+      "error": "",
+      "shortId": "BOUNDARY_04",
+      "title": "TC_ESTIMATE_BOUNDARY_04 - Boundary values: a very large weight (99,999 g) is calculated correctly",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:51:44.057Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-aedb9-9-g-is-calculated-correctly-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_05 - Boundary values: the smallest weight 0.01 g is calculated",
+      "id": "TC_ESTIMATE_BOUNDARY_05",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "the smallest weight 0.01 g is calculated",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross weight 0.01 g, no stone wastage"
+        ],
+        "expected": "Pure weight 0.01 g and appraisal = 0.01 x rate per gram."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20827,
+      "error": "",
+      "shortId": "BOUNDARY_05",
+      "title": "TC_ESTIMATE_BOUNDARY_05 - Boundary values: the smallest weight 0.01 g is calculated",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:04:02.404Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-fdb26-weight-0-01-g-is-calculated-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_06 - Boundary values: a negative Gross Weight is not accepted",
+      "id": "TC_ESTIMATE_BOUNDARY_06",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a negative Gross Weight is not accepted",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Type -5 into Gross Weight"
+        ],
+        "expected": "The minus sign is not accepted; if it is, the review dialog does not open."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 19055,
+      "error": "",
+      "shortId": "BOUNDARY_06",
+      "title": "TC_ESTIMATE_BOUNDARY_06 - Boundary values: a negative Gross Weight is not accepted",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:04:23.239Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-8301f-ross-Weight-is-not-accepted-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_07 - Boundary values: stone wastage equal to the gross weight (net 0) does not reach the review dialog",
+      "id": "TC_ESTIMATE_BOUNDARY_07",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "stone wastage equal to the gross weight (net 0) does not reach the review dialog",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross 5 g with stone wastage 5 g (net 0)",
+          "Click Save"
+        ],
+        "expected": "The \"Review Gold Estimate\" dialog does not open and nothing is saved."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 27900,
+      "error": "",
+      "shortId": "BOUNDARY_07",
+      "title": "TC_ESTIMATE_BOUNDARY_07 - Boundary values: stone wastage equal to the gross weight (net 0) does not reach the review dialog",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:04:42.305Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-847ea-not-reach-the-review-dialog-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_08 - Boundary values: a weight with 4 decimals (10.1234 g) is kept within 0.01 g",
+      "id": "TC_ESTIMATE_BOUNDARY_08",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "a weight with 4 decimals (10.1234 g) is kept within 0.01 g",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross weight 10.1234 g"
+        ],
+        "expected": "Pure net weight is within 0.1 g of 10.1234 g."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 47429,
+      "error": "",
+      "shortId": "BOUNDARY_08",
+      "title": "TC_ESTIMATE_BOUNDARY_08 - Boundary values: a weight with 4 decimals (10.1234 g) is kept within 0.01 g",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:05:10.252Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-2f707-234-g-is-kept-within-0-01-g-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BOUNDARY_09 - Boundary values: small, medium and large weights (1 g, 50 g, 500 g) all give appraisal = weight x rate",
+      "id": "TC_ESTIMATE_BOUNDARY_09",
+      "meta": {
+        "module": "Boundary values",
+        "priority": "Medium",
+        "type": "Boundary values",
+        "summary": "small, medium and large weights (1 g, 50 g, 500 g) all give appraisal = weight x rate",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross 1 g, then 50 g, then 500 g (no stone)"
+        ],
+        "expected": "For each weight appraisal = weight x rate per gram."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 48599,
+      "error": "",
+      "shortId": "BOUNDARY_09",
+      "title": "TC_ESTIMATE_BOUNDARY_09 - Boundary values: small, medium and large weights (1 g, 50 g, 500 g) all give appraisal = weight x rate",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:05:57.715Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-e1500-ive-appraisal-weight-x-rate-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_DEFAULT_01 - Default values: new estimate opens with Loan Name \"Select\", no scheme, 22K purity and zero totals",
+      "id": "TC_ESTIMATE_DEFAULT_01",
+      "meta": {
+        "module": "Default values",
+        "priority": "Medium",
+        "type": "Default values",
+        "summary": "new estimate opens with Loan Name \"Select\", no scheme, 22K purity and zero totals",
+        "steps": [
+          "Open a new estimate",
+          "Read Loan Name, Scheme, totals; select a contact and read the purity"
+        ],
+        "expected": "Loan Name \"Select\", scheme \"Not applied\", totals 0, purity 22K."
+      },
+      "notes": [
+        "Loan Name default on this server: \"New Gold\""
+      ],
+      "status": "Pass",
+      "duration": 24374,
+      "error": "",
+      "shortId": "DEFAULT_01",
+      "title": "TC_ESTIMATE_DEFAULT_01 - Default values: new estimate opens with Loan Name \"Select\", no scheme, 22K purity and zero totals",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:55:08.474Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214b\\GoldEstimate-tests-gold-es-068fc--22K-purity-and-zero-totals-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_DATE_01 - Date / calendar validation: Estimate Date defaults to today and can be back-dated",
+      "id": "TC_ESTIMATE_DATE_01",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "Estimate Date defaults to today and can be back-dated",
+        "steps": [
+          "Read the Estimate Date",
+          "Back-date it by 10 days through the calendar"
+        ],
+        "expected": "Defaults to today; the back date is accepted."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 22509,
+      "error": "",
+      "shortId": "DATE_01",
+      "title": "TC_ESTIMATE_DATE_01 - Date / calendar validation: Estimate Date defaults to today and can be back-dated",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:39:10.821Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-54bd8-today-and-can-be-back-dated-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_DATE_02 - Date / calendar validation: future years cannot be chosen as Estimate Date",
+      "id": "TC_ESTIMATE_DATE_02",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "future years cannot be chosen as Estimate Date",
+        "steps": [
+          "Open the Estimate Date calendar",
+          "Switch to the year view",
+          "Look at next year"
+        ],
+        "expected": "Future years are disabled."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 37895,
+      "error": "Error: Timed out 15000ms waiting for expect(locator).toHaveClass(expected)\n\nLocator: locator('bs-datepicker-container').locator('td span').filter({ hasText: /^2027$/ }).first()\nExpected pattern: /disabled/\nReceived string:  \"\"\nCall log:\n  - expect.toHaveClass with timeout 15000ms\n  - waiting for locator('bs-datepicker-container').locator('td span').filter({ hasText: /^2027$/ }).first()\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n  -   locator resolved to <span>2027</span>\n  -   unexpected value \"\"\n",
+      "shortId": "DATE_02",
+      "title": "TC_ESTIMATE_DATE_02 - Date / calendar validation: future years cannot be chosen as Estimate Date",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:39:33.773Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-0c515--be-chosen-as-Estimate-Date-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_DATE_03 - Date / calendar validation: a back-dated estimate uses the gold rate of that date or earlier",
+      "id": "TC_ESTIMATE_DATE_03",
+      "meta": {
+        "module": "Date / calendar validation",
+        "priority": "Medium",
+        "type": "Date / calendar validation",
+        "summary": "a back-dated estimate uses the gold rate of that date or earlier",
+        "steps": [
+          "Back-date the Estimate Date by 10 days",
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article",
+          "Read the rate \"as of\" date"
+        ],
+        "expected": "The gold rate used is dated on or before the chosen estimate date."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24442,
+      "error": "",
+      "shortId": "DATE_03",
+      "title": "TC_ESTIMATE_DATE_03 - Date / calendar validation: a back-dated estimate uses the gold rate of that date or earlier",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:52:06.180Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-05dd4-ate-of-that-date-or-earlier-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_01 - Business rules / Calculation: net weight = gross - stone wastage; appraisal = pure weight x rate/gram",
+      "id": "TC_ESTIMATE_BUSINESS_01",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "net weight = gross - stone wastage; appraisal = pure weight x rate/gram",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross 10.5 g, stone wastage 0.5 g"
+        ],
+        "expected": "Net = 10.00 g; appraisal = pure weight x rate per gram."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 27393,
+      "error": "",
+      "shortId": "BUSINESS_01",
+      "title": "TC_ESTIMATE_BUSINESS_01 - Business rules / Calculation: net weight = gross - stone wastage; appraisal = pure weight x rate/gram",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:40:14.317Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-2beb2-sal-pure-weight-x-rate-gram-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_02 - Business rules / Calculation: selecting a scheme applies its LTV % to the rate per gram",
+      "id": "TC_ESTIMATE_BUSINESS_02",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "selecting a scheme applies its LTV % to the rate per gram",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article",
+          "Read LTV % and Rate / Gram"
+        ],
+        "expected": "Rate per gram = purity rate x scheme LTV %."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 14322,
+      "error": "",
+      "shortId": "BUSINESS_02",
+      "title": "TC_ESTIMATE_BUSINESS_02 - Business rules / Calculation: selecting a scheme applies its LTV % to the rate per gram",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:40:41.906Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-573b7-ts-LTV-to-the-rate-per-gram-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_03 - Business rules / Calculation: two articles add up in the totals",
+      "id": "TC_ESTIMATE_BUSINESS_03",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "two articles add up in the totals",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter RING 1 x 10.5 g (0.5 stone) and BANGLE 2 x 20 g"
+        ],
+        "expected": "Total quantity 3 and total pure net weight 30.00 g."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20129,
+      "error": "",
+      "shortId": "BUSINESS_03",
+      "title": "TC_ESTIMATE_BUSINESS_03 - Business rules / Calculation: two articles add up in the totals",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:40:56.234Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-58ba1-ticles-add-up-in-the-totals-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_04 - Business rules / Calculation: choosing a different purity changes the appraisal",
+      "id": "TC_ESTIMATE_BUSINESS_04",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "choosing a different purity changes the appraisal",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article",
+          "Change the purity from 22K to another purity"
+        ],
+        "expected": "The appraisal value changes with the purity."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 22812,
+      "error": "",
+      "shortId": "BUSINESS_04",
+      "title": "TC_ESTIMATE_BUSINESS_04 - Business rules / Calculation: choosing a different purity changes the appraisal",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:52:30.633Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-d731a-urity-changes-the-appraisal-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_05 - Business rules / Calculation: with no stone wastage, net weight equals gross weight",
+      "id": "TC_ESTIMATE_BUSINESS_05",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "with no stone wastage, net weight equals gross weight",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter gross 10.5 g with stone wastage 0"
+        ],
+        "expected": "Net weight equals gross weight (10.5 g)."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20197,
+      "error": "",
+      "shortId": "BUSINESS_05",
+      "title": "TC_ESTIMATE_BUSINESS_05 - Business rules / Calculation: with no stone wastage, net weight equals gross weight",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:52:53.454Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-a03fc--weight-equals-gross-weight-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_06 - Business rules / Calculation: a 12-month scheme gives a different LTV % than a 3-month scheme",
+      "id": "TC_ESTIMATE_BUSINESS_06",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "a 12-month scheme gives a different LTV % than a 3-month scheme",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article",
+          "Select the 3-month scheme, then the 12-month scheme"
+        ],
+        "expected": "The LTV % differs between the two schemes."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 51038,
+      "error": "",
+      "shortId": "BUSINESS_06",
+      "title": "TC_ESTIMATE_BUSINESS_06 - Business rules / Calculation: a 12-month scheme gives a different LTV % than a 3-month scheme",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:06:46.341Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-291e8-t-LTV-than-a-3-month-scheme-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_07 - Business rules / Calculation: three articles (with stone count) add up in quantity and pure weight",
+      "id": "TC_ESTIMATE_BUSINESS_07",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "three articles (with stone count) add up in quantity and pure weight",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter RING 1 x 10.5 g (0.5 stone), BANGLE 2 x 20 g, KADA 1 x 30 g (2 stone)"
+        ],
+        "expected": "Total quantity 4 and total pure net weight 58.00 g."
+      },
+      "notes": [
+        "row 1: gross 10.5 - stone 0.5 = 10.00, net shown 10 ; row 2: gross 20 - stone 0 = 20.00, net shown 20 ; row 3: gross 30 - stone 2 = 28.00, net shown 27.72 (extra deduction 0.28 g)"
+      ],
+      "status": "Pass",
+      "duration": 24252,
+      "error": "",
+      "shortId": "BUSINESS_07",
+      "title": "TC_ESTIMATE_BUSINESS_07 - Business rules / Calculation: three articles (with stone count) add up in quantity and pure weight",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-16T04:16:55.545Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214g\\GoldEstimate-tests-gold-es-892c1-in-quantity-and-pure-weight-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_08 - Business rules / Calculation: the article grid only appears after a contact is selected",
+      "id": "TC_ESTIMATE_BUSINESS_08",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "the article grid only appears after a contact is selected",
+        "steps": [
+          "Open a new estimate",
+          "Check the grid before a contact is selected, then select one"
+        ],
+        "expected": "Before: message \"Select a Contact above...\" and no article rows. After: article rows appear."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 19435,
+      "error": "",
+      "shortId": "BUSINESS_08",
+      "title": "TC_ESTIMATE_BUSINESS_08 - Business rules / Calculation: the article grid only appears after a contact is selected",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:08:07.584Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-a74ec-after-a-contact-is-selected-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_BUSINESS_09 - Business rules / Calculation: the creator of an estimate cannot approve or revert it (maker-checker)",
+      "id": "TC_ESTIMATE_BUSINESS_09",
+      "meta": {
+        "module": "Business rules / Calculation",
+        "priority": "Medium",
+        "type": "Business rules / Calculation",
+        "summary": "the creator of an estimate cannot approve or revert it (maker-checker)",
+        "steps": [
+          "Open the Summary page as the user who created the estimate"
+        ],
+        "expected": "Message \"you cannot approve or revert it yourself\" and no Approve / Revert button."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20625,
+      "error": "",
+      "shortId": "BUSINESS_09",
+      "title": "TC_ESTIMATE_BUSINESS_09 - Business rules / Calculation: the creator of an estimate cannot approve or revert it (maker-checker)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T12:59:19.933Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-8cc76-or-revert-it-maker-checker--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_CONSISTENCY_01 - Data consistency: review dialog estimate value equals the totals box",
+      "id": "TC_ESTIMATE_CONSISTENCY_01",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "review dialog estimate value equals the totals box",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article and upload the image",
+          "Click Save (do not confirm)"
+        ],
+        "expected": "The review dialog shows the same appraisal value as the Totals box."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 17736,
+      "error": "",
+      "shortId": "CONSISTENCY_01",
+      "title": "TC_ESTIMATE_CONSISTENCY_01 - Data consistency: review dialog estimate value equals the totals box",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:41:16.368Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-10ef5-value-equals-the-totals-box-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_CONSISTENCY_02 - Data consistency: review dialog shows the selected customer, gross 10.5 g and net 10 g",
+      "id": "TC_ESTIMATE_CONSISTENCY_02",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "review dialog shows the selected customer, gross 10.5 g and net 10 g",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article, upload the image, click Save (do not confirm)"
+        ],
+        "expected": "Review dialog shows the selected customer, gross 10.5 g and net 10 g."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 25726,
+      "error": "",
+      "shortId": "CONSISTENCY_02",
+      "title": "TC_ESTIMATE_CONSISTENCY_02 - Data consistency: review dialog shows the selected customer, gross 10.5 g and net 10 g",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:53:13.660Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-2a5aa-r-gross-10-5-g-and-net-10-g-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_CONSISTENCY_03 - Data consistency: on the Summary page Eligible Loan Amount = Appraisal Value x LTV %",
+      "id": "TC_ESTIMATE_CONSISTENCY_03",
+      "meta": {
+        "module": "Data consistency",
+        "priority": "Medium",
+        "type": "Data consistency",
+        "summary": "on the Summary page Eligible Loan Amount = Appraisal Value x LTV %",
+        "steps": [
+          "Open the Summary page",
+          "Read Appraisal Value, LTV Applied and Eligible Loan Amount"
+        ],
+        "expected": "Eligible Loan Amount = Appraisal Value x LTV %."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20724,
+      "error": "",
+      "shortId": "CONSISTENCY_03",
+      "title": "TC_ESTIMATE_CONSISTENCY_03 - Data consistency: on the Summary page Eligible Loan Amount = Appraisal Value x LTV %",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T12:58:58.893Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-dda77-ount-Appraisal-Value-x-LTV--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_DUPLICATE_01 - Duplicate prevention: second estimate for the same contact",
+      "id": "TC_ESTIMATE_DUPLICATE_01",
+      "meta": {
+        "module": "Duplicate prevention",
+        "priority": "Medium",
+        "type": "Duplicate prevention",
+        "summary": "second estimate for the same contact",
+        "steps": [
+          "Create a second estimate for the same contact"
+        ],
+        "expected": "Not verified: skipped to avoid extra approval-queue records."
+      },
+      "notes": [
+        "Not verified: needs a second saved estimate for the same contact; not run to avoid extra records in the approval queue. Check manually."
+      ],
+      "status": "Skipped",
+      "duration": 35555,
+      "error": "",
+      "shortId": "DUPLICATE_01",
+      "title": "TC_ESTIMATE_DUPLICATE_01 - Duplicate prevention: second estimate for the same contact",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:55:33.156Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214b\\GoldEstimate-tests-gold-es-37c00-timate-for-the-same-contact-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_ESTIMATE_DUPLICATE_02 - Duplicate prevention: whether a contact with a saved estimate is still offered for a new one (behaviour recorded)",
+      "id": "TC_ESTIMATE_DUPLICATE_02",
+      "meta": {
+        "module": "Duplicate prevention",
+        "priority": "Medium",
+        "type": "Duplicate prevention",
+        "summary": "whether a contact with a saved estimate is still offered for a new one (behaviour recorded)",
+        "steps": [
+          "Search the test contact (which already has a saved estimate) in the Contact dropdown",
+          "Open that estimate's Summary page and read its status"
+        ],
+        "expected": "Behaviour recorded in the notes: whether the contact is still offered, and the estimate status at that time."
+      },
+      "notes": [
+        "Contact 9067377745 is STILL OFFERED for a new estimate while its estimate GE2610000033 has status \"Awaiting Internal Appraiser 2 verification\". (QC showed the contact hidden after Internal Appraiser 2 approved its estimate.)"
+      ],
+      "status": "Pass",
+      "duration": 25571,
+      "error": "",
+      "shortId": "DUPLICATE_02",
+      "title": "TC_ESTIMATE_DUPLICATE_02 - Duplicate prevention: whether a contact with a saved estimate is still offered for a new one (behaviour recorded)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-16T04:14:56.500Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214f\\GoldEstimate-tests-gold-es-dccb6-new-one-behaviour-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SEARCH_01 - Search: the Contact dropdown finds a contact by mobile number",
+      "id": "TC_ESTIMATE_SEARCH_01",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "the Contact dropdown finds a contact by mobile number",
+        "steps": [
+          "Click the Contact dropdown",
+          "Type the contact mobile number"
+        ],
+        "expected": "The contact is found."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 11244,
+      "error": "",
+      "shortId": "SEARCH_01",
+      "title": "TC_ESTIMATE_SEARCH_01 - Search: the Contact dropdown finds a contact by mobile number",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:42:34.964Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-62d82--a-contact-by-mobile-number-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SEARCH_02 - Search: an unknown mobile number finds no contact",
+      "id": "TC_ESTIMATE_SEARCH_02",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "an unknown mobile number finds no contact",
+        "steps": [
+          "Type an unknown mobile number in the Contact dropdown"
+        ],
+        "expected": "No contact options are listed."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 12204,
+      "error": "",
+      "shortId": "SEARCH_02",
+      "title": "TC_ESTIMATE_SEARCH_02 - Search: an unknown mobile number finds no contact",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:42:46.418Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-34a46-ile-number-finds-no-contact-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SEARCH_03 - Search: the Contact dropdown also finds a contact by name",
+      "id": "TC_ESTIMATE_SEARCH_03",
+      "meta": {
+        "module": "Search",
+        "priority": "Medium",
+        "type": "Search",
+        "summary": "the Contact dropdown also finds a contact by name",
+        "steps": [
+          "Click the Contact dropdown",
+          "Type the contact first name"
+        ],
+        "expected": "The contact is found by name."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 17191,
+      "error": "",
+      "shortId": "SEARCH_03",
+      "title": "TC_ESTIMATE_SEARCH_03 - Search: the Contact dropdown also finds a contact by name",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:53:39.394Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-6c302-lso-finds-a-contact-by-name-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_FILTER_01 - Filtering: My Gold Estimates tabs show different lists (My GE Numbers vs Pending My Appraisal)",
+      "id": "TC_ESTIMATE_FILTER_01",
+      "meta": {
+        "module": "Filtering",
+        "priority": "Medium",
+        "type": "Filtering",
+        "summary": "My Gold Estimates tabs show different lists (My GE Numbers vs Pending My Appraisal)",
+        "steps": [
+          "Open My Saved Estimates",
+          "Compare My GE Numbers and Pending My Appraisal"
+        ],
+        "expected": "The two tabs show different lists."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 16266,
+      "error": "",
+      "shortId": "FILTER_01",
+      "title": "TC_ESTIMATE_FILTER_01 - Filtering: My Gold Estimates tabs show different lists (My GE Numbers vs Pending My Appraisal)",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:42:58.627Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-85b53-rs-vs-Pending-My-Appraisal--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SORT_01 - Sorting: clicking a column header sorts My Gold Estimates",
+      "id": "TC_ESTIMATE_SORT_01",
+      "meta": {
+        "module": "Sorting",
+        "priority": "Medium",
+        "type": "Sorting",
+        "summary": "clicking a column header sorts My Gold Estimates",
+        "steps": [
+          "Click a column header on My Gold Estimates"
+        ],
+        "expected": "The grid sorts (skipped when headers are not sortable)."
+      },
+      "notes": [
+        "Not applicable: My Gold Estimates headers are not sortable."
+      ],
+      "status": "Skipped",
+      "duration": 24130,
+      "error": "",
+      "shortId": "SORT_01",
+      "title": "TC_ESTIMATE_SORT_01 - Sorting: clicking a column header sorts My Gold Estimates",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:43:14.901Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-5a2c2-der-sorts-My-Gold-Estimates-chromium\\test-finished-1.png",
+      "final": "N/A"
+    },
+    {
+      "key": "TC_ESTIMATE_PAGINATION_01 - Pagination: My Gold Estimates shows a pager summary that matches the rows",
+      "id": "TC_ESTIMATE_PAGINATION_01",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "My Gold Estimates shows a pager summary that matches the rows",
+        "steps": [
+          "Open My GE Numbers",
+          "Read the pager"
+        ],
+        "expected": "Pager shows \"x - y of z items\" with z greater than 0."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 26334,
+      "error": "",
+      "shortId": "PAGINATION_01",
+      "title": "TC_ESTIMATE_PAGINATION_01 - Pagination: My Gold Estimates shows a pager summary that matches the rows",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:43:39.043Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-ad570-mmary-that-matches-the-rows-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_PAGINATION_02 - Pagination: opening page 2 of My GE Numbers shows the next set of estimates",
+      "id": "TC_ESTIMATE_PAGINATION_02",
+      "meta": {
+        "module": "Pagination",
+        "priority": "Medium",
+        "type": "Pagination",
+        "summary": "opening page 2 of My GE Numbers shows the next set of estimates",
+        "steps": [
+          "Open My GE Numbers (more than 10 estimates)",
+          "Click page 2"
+        ],
+        "expected": "The pager shows \"11 - ...\" and the next set of rows."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 21049,
+      "error": "",
+      "shortId": "PAGINATION_02",
+      "title": "TC_ESTIMATE_PAGINATION_02 - Pagination: opening page 2 of My GE Numbers shows the next set of estimates",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:00:41.845Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-b5010-s-the-next-set-of-estimates-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_CLEAR_01 - Clear / Reset: the Clear button empties contact, articles and totals",
+      "id": "TC_ESTIMATE_CLEAR_01",
+      "meta": {
+        "module": "Clear / Reset",
+        "priority": "Medium",
+        "type": "Clear / Reset",
+        "summary": "the Clear button empties contact, articles and totals",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article",
+          "Click Clear"
+        ],
+        "expected": "Contact, articles and totals are emptied."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 34518,
+      "error": "",
+      "shortId": "CLEAR_01",
+      "title": "TC_ESTIMATE_CLEAR_01 - Clear / Reset: the Clear button empties contact, articles and totals",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:44:05.400Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-eae50-contact-articles-and-totals-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_NAV_01 - Navigation & UI layout: My Saved Estimates and New Estimate switch between the two screens",
+      "id": "TC_ESTIMATE_NAV_01",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "My Saved Estimates and New Estimate switch between the two screens",
+        "steps": [
+          "Click My Saved Estimates",
+          "Click New Estimate",
+          "Check the section headings"
+        ],
+        "expected": "Both screens open; Customer Details, Gold Details, Gold Article Details, Totals and Attachments sections are shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 49274,
+      "error": "",
+      "shortId": "NAV_01",
+      "title": "TC_ESTIMATE_NAV_01 - Navigation & UI layout: My Saved Estimates and New Estimate switch between the two screens",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:56:08.737Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214b\\GoldEstimate-tests-gold-es-d153f-tch-between-the-two-screens-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_NAV_02 - Navigation & UI layout: browser Back from My Saved Estimates returns to the estimate form",
+      "id": "TC_ESTIMATE_NAV_02",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "browser Back from My Saved Estimates returns to the estimate form",
+        "steps": [
+          "Click My Saved Estimates",
+          "Click the browser Back button"
+        ],
+        "expected": "The estimate form is shown again."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 16653,
+      "error": "",
+      "shortId": "NAV_02",
+      "title": "TC_ESTIMATE_NAV_02 - Navigation & UI layout: browser Back from My Saved Estimates returns to the estimate form",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:00:01.448Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-34791-eturns-to-the-estimate-form-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_NAV_03 - Navigation & UI layout: Back on the Summary page returns to My Gold Estimates",
+      "id": "TC_ESTIMATE_NAV_03",
+      "meta": {
+        "module": "Navigation & UI layout",
+        "priority": "Medium",
+        "type": "Navigation & UI layout",
+        "summary": "Back on the Summary page returns to My Gold Estimates",
+        "steps": [
+          "Open a Summary page",
+          "Click Back"
+        ],
+        "expected": "My Gold Estimates is shown again."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 23726,
+      "error": "",
+      "shortId": "NAV_03",
+      "title": "TC_ESTIMATE_NAV_03 - Navigation & UI layout: Back on the Summary page returns to My Gold Estimates",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:00:18.110Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-3d1df-eturns-to-My-Gold-Estimates-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_ROLE_01 - Role-based access: Gold Estimates availability per role",
+      "id": "TC_ESTIMATE_ROLE_01",
+      "meta": {
+        "module": "Role-based access",
+        "priority": "Medium",
+        "type": "Role-based access",
+        "summary": "Gold Estimates availability per role",
+        "steps": [
+          "Log in as each configured role",
+          "Open Gold Estimates"
+        ],
+        "expected": "Internal Appraiser can open it; other roles are recorded in the notes."
+      },
+      "notes": [
+        "INT_APPRAISER1: Gold Estimates accessible",
+        "CHECKER_BH: Gold Estimates accessible",
+        "AUDITOR: Gold Estimates not accessible"
+      ],
+      "status": "Pass",
+      "duration": 125977,
+      "error": "",
+      "shortId": "ROLE_01",
+      "title": "TC_ESTIMATE_ROLE_01 - Role-based access: Gold Estimates availability per role",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:45:52.644Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-d4d69-mates-availability-per-role-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_WORKFLOW_01 - Workflow (approval): a 10.5 g estimate is routed to an approver",
+      "id": "TC_ESTIMATE_WORKFLOW_01",
+      "meta": {
+        "module": "Workflow (approval)",
+        "priority": "Medium",
+        "type": "Workflow (approval)",
+        "summary": "a 10.5 g estimate is routed to an approver",
+        "steps": [
+          "Read the save message of CREATE_01"
+        ],
+        "expected": "The estimate is routed to an approver (\"Routed to …\")."
+      },
+      "notes": [
+        "GE2610000033 routed to: Internal Appraiser 2"
+      ],
+      "status": "Pass",
+      "duration": 10685,
+      "error": "",
+      "shortId": "WORKFLOW_01",
+      "title": "TC_ESTIMATE_WORKFLOW_01 - Workflow (approval): a 10.5 g estimate is routed to an approver",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:47:58.850Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-19087-te-is-routed-to-an-approver-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_WORKFLOW_02 - Workflow (approval): the Summary page shows the stage, status and a SUBMIT entry in the status history",
+      "id": "TC_ESTIMATE_WORKFLOW_02",
+      "meta": {
+        "module": "Workflow (approval)",
+        "priority": "Medium",
+        "type": "Workflow (approval)",
+        "summary": "the Summary page shows the stage, status and a SUBMIT entry in the status history",
+        "steps": [
+          "Open the Summary page"
+        ],
+        "expected": "Shows stages required / completed, the status and a SUBMIT entry by the Internal Appraiser in the Status History."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20872,
+      "error": "",
+      "shortId": "WORKFLOW_02",
+      "title": "TC_ESTIMATE_WORKFLOW_02 - Workflow (approval): the Summary page shows the stage, status and a SUBMIT entry in the status history",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T12:59:40.569Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-b734a-entry-in-the-status-history-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_API_01 - API: save requests made while creating the estimate all succeeded (2xx)",
+      "id": "TC_ESTIMATE_API_01",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "save requests made while creating the estimate all succeeded (2xx)",
+        "steps": [
+          "Record POST / PUT calls while creating the estimate"
+        ],
+        "expected": "All returned a 2xx status."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 12610,
+      "error": "",
+      "shortId": "API_01",
+      "title": "TC_ESTIMATE_API_01 - API: save requests made while creating the estimate all succeeded (2xx)",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:48:09.541Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-f2575-estimate-all-succeeded-2xx--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_API_02 - API: the save request carries the entered weights, and is aborted so no estimate is created",
+      "id": "TC_ESTIMATE_API_02",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the save request carries the entered weights, and is aborted so no estimate is created",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article, upload the image",
+          "Click Save, then Confirm & Save with the save call aborted in the browser"
+        ],
+        "expected": "The request body contains the entered weights (10.5 and 0.5); nothing reaches the server."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 22884,
+      "error": "",
+      "shortId": "API_02",
+      "title": "TC_ESTIMATE_API_02 - API: the save request carries the entered weights, and is aborted so no estimate is created",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:08:47.333Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-f6e97-d-so-no-estimate-is-created-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_API_03 - API: the My Gold Estimates list API answers 200 with JSON that contains the saved GE number",
+      "id": "TC_ESTIMATE_API_03",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the My Gold Estimates list API answers 200 with JSON that contains the saved GE number",
+        "steps": [
+          "Open My Saved Estimates",
+          "Read the GetMyGoldEstimates response"
+        ],
+        "expected": "Status 200, valid JSON, containing the saved GE number."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15537,
+      "error": "",
+      "shortId": "API_03",
+      "title": "TC_ESTIMATE_API_03 - API: the My Gold Estimates list API answers 200 with JSON that contains the saved GE number",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:09:10.465Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-f5a50-ontains-the-saved-GE-number-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_API_04 - API: the list API refuses a call that carries no login",
+      "id": "TC_ESTIMATE_API_04",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "the list API refuses a call that carries no login",
+        "steps": [
+          "Call the GetMyGoldEstimates URL without any login"
+        ],
+        "expected": "The call is refused (401 / 403) or returns no estimate data."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 16619,
+      "error": "",
+      "shortId": "API_04",
+      "title": "TC_ESTIMATE_API_04 - API: the list API refuses a call that carries no login",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:09:26.012Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-5616f--call-that-carries-no-login-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_API_05 - API: server-side validation by sending invalid data straight to the save API",
+      "id": "TC_ESTIMATE_API_05",
+      "meta": {
+        "module": "API",
+        "priority": "Medium",
+        "type": "API",
+        "summary": "server-side validation by sending invalid data straight to the save API",
+        "steps": [
+          "Send invalid data straight to the save API"
+        ],
+        "expected": "NOT EXECUTED: could create an invalid estimate that cannot be deleted."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): a direct call could be accepted by the server and create an invalid estimate that cannot be deleted. Covered at UI level by the BOUNDARY / REQUIRED tests."
+      ],
+      "status": "Skipped",
+      "duration": 16137,
+      "error": "",
+      "shortId": "API_05",
+      "title": "TC_ESTIMATE_API_05 - API: server-side validation by sending invalid data straight to the save API",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:09:42.641Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-edb65-ta-straight-to-the-save-API-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_ESTIMATE_ERROR_01 - Error recovery: after \"Add Gold Article\", adding an article lets the review dialog open",
+      "id": "TC_ESTIMATE_ERROR_01",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "after \"Add Gold Article\", adding an article lets the review dialog open",
+        "steps": [
+          "Click Save without an article (error)",
+          "Add an article and image",
+          "Click Save (do not confirm)"
+        ],
+        "expected": "First save shows \"Add Gold Article\"; then the review dialog opens."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 18427,
+      "error": "",
+      "shortId": "ERROR_01",
+      "title": "TC_ESTIMATE_ERROR_01 - Error recovery: after \"Add Gold Article\", adding an article lets the review dialog open",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:48:22.156Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-7d723-lets-the-review-dialog-open-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_ERROR_02 - Error recovery: when the save call fails (network aborted) no success message is shown and Back to Edit keeps the data",
+      "id": "TC_ESTIMATE_ERROR_02",
+      "meta": {
+        "module": "Error recovery",
+        "priority": "Medium",
+        "type": "Error recovery",
+        "summary": "when the save call fails (network aborted) no success message is shown and Back to Edit keeps the data",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article and image",
+          "Click Save, then Confirm & Save with the network call aborted"
+        ],
+        "expected": "No success message; Back to Edit still shows the entered data."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 27799,
+      "error": "",
+      "shortId": "ERROR_02",
+      "title": "TC_ESTIMATE_ERROR_02 - Error recovery: when the save call fails (network aborted) no success message is shown and Back to Edit keeps the data",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:09:58.789Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-4bef1-Back-to-Edit-keeps-the-data-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_FILE_01 - File download / upload: a PNG gold-article image uploads and its name is shown",
+      "id": "TC_ESTIMATE_FILE_01",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "a PNG gold-article image uploads and its name is shown",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Upload gold-article.png"
+        ],
+        "expected": "The file name appears in the upload box."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 14871,
+      "error": "",
+      "shortId": "FILE_01",
+      "title": "TC_ESTIMATE_FILE_01 - File download / upload: a PNG gold-article image uploads and its name is shown",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:48:40.589Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-c4434-loads-and-its-name-is-shown-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_FILE_02 - File download / upload: a non-image file (.json) is not accepted as a gold article image",
+      "id": "TC_ESTIMATE_FILE_02",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "a non-image file (.json) is not accepted as a gold article image",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Try to upload a .json file"
+        ],
+        "expected": "The file is not accepted as an image."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 20851,
+      "error": "",
+      "shortId": "FILE_02",
+      "title": "TC_ESTIMATE_FILE_02 - File download / upload: a non-image file (.json) is not accepted as a gold article image",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:48:55.470Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-3e706-ted-as-a-gold-article-image-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_FILE_03 - File download / upload: a 6 MB image is rejected (limit 5 MB)",
+      "id": "TC_ESTIMATE_FILE_03",
+      "meta": {
+        "module": "File download / upload",
+        "priority": "Medium",
+        "type": "File download / upload",
+        "summary": "a 6 MB image is rejected (limit 5 MB)",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Try to upload a 6 MB image"
+        ],
+        "expected": "The file is rejected (limit 5 MB); its name is not shown in the upload box."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 25008,
+      "error": "Error: expect(received).not.toMatch(expected)\n\nExpected pattern: not /big-image-6mb/i\nReceived string:      \"big-image-6mb.png\"",
+      "shortId": "FILE_03",
+      "title": "TC_ESTIMATE_FILE_03 - File download / upload: a 6 MB image is rejected (limit 5 MB)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:12:28.083Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-03777-age-is-rejected-limit-5-MB--chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_A11Y_01 - Accessibility & responsive: form fits a phone screen and fields are keyboard-reachable",
+      "id": "TC_ESTIMATE_A11Y_01",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "form fits a phone screen and fields are keyboard-reachable",
+        "steps": [
+          "Open the form at 390x844 (phone)",
+          "Press Tab from Remarks"
+        ],
+        "expected": "No horizontal scroll; focus moves to the next control."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 16489,
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+      "shortId": "A11Y_01",
+      "title": "TC_ESTIMATE_A11Y_01 - Accessibility & responsive: form fits a phone screen and fields are keyboard-reachable",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:49:16.356Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-4bf0a-elds-are-keyboard-reachable-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_A11Y_02 - Accessibility & responsive: every visible field and button on the form has an accessible name",
+      "id": "TC_ESTIMATE_A11Y_02",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "every visible field and button on the form has an accessible name",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Check every visible field and button for an accessible name"
+        ],
+        "expected": "Each control has a label, aria-label, title, placeholder or button text."
+      },
+      "notes": [],
+      "status": "Fail",
+      "duration": 18531,
+      "error": "Error: controls without an accessible name\n\nexpect(received).toEqual(expected) // deep equality\n\n- Expected  -  1\n+ Received  + 14\n\n- Array []\n+ Array [\n+   \"input\",\n+   \"input\",\n+   \"input[ptodayDate]\",\n+   \"select[pLoantypeid]\",\n+   \"select\",\n+   \"input\",\n+   \"select\",\n+   \"input\",\n+   \"input\",\n+   \"input\",\n+   \"input\",\n+   \"input\",\n+ ]",
+      "shortId": "A11Y_02",
+      "title": "TC_ESTIMATE_A11Y_02 - Accessibility & responsive: every visible field and button on the form has an accessible name",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:13:11.444Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-d73a8-form-has-an-accessible-name-chromium\\test-failed-1.png",
+      "final": "FAILED"
+    },
+    {
+      "key": "TC_ESTIMATE_A11Y_03 - Accessibility & responsive: the form fits a tablet screen (768 x 1024) without sideways scrolling",
+      "id": "TC_ESTIMATE_A11Y_03",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "the form fits a tablet screen (768 x 1024) without sideways scrolling",
+        "steps": [
+          "Open the form at 768 x 1024 (tablet)"
+        ],
+        "expected": "No horizontal scroll."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 35149,
+      "error": "",
+      "shortId": "A11Y_03",
+      "title": "TC_ESTIMATE_A11Y_03 - Accessibility & responsive: the form fits a tablet screen (768 x 1024) without sideways scrolling",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:13:32.042Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-46611--without-sideways-scrolling-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "id": "TC_ESTIMATE_A11Y_04",
+      "meta": {
+        "module": "Accessibility & responsive",
+        "priority": "Medium",
+        "type": "Accessibility & responsive",
+        "summary": "browser compatibility (Firefox, Safari / WebKit, Edge)",
+        "steps": [
+          "Run the form in Firefox and WebKit"
+        ],
+        "expected": "NOT EXECUTED: only Chromium is installed for this project."
+      },
+      "notes": [
+        "NOT EXECUTED: only Chromium is installed for this project (run \"npx playwright install\" and add projects to playwright.config.js to enable other browsers)."
+      ],
+      "status": "Skipped",
+      "duration": 37540,
+      "error": "",
+      "shortId": "A11Y_04",
+      "title": "TC_ESTIMATE_A11Y_04 - Accessibility & responsive: browser compatibility (Firefox, Safari / WebKit, Edge)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:14:07.496Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-0b2b4-Firefox-Safari-WebKit-Edge--chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_ESTIMATE_SESSION_01 - Session / concurrency / browser: Gold Estimates URL without logging in does not show the form",
+      "id": "TC_ESTIMATE_SESSION_01",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "Gold Estimates URL without logging in does not show the form",
+        "steps": [
+          "In a fresh browser with no login, open the Gold Estimates URL"
+        ],
+        "expected": "The estimate form is not shown."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 30114,
+      "error": "",
+      "shortId": "SESSION_01",
+      "title": "TC_ESTIMATE_SESSION_01 - Session / concurrency / browser: Gold Estimates URL without logging in does not show the form",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:49:34.809Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-54d61-g-in-does-not-show-the-form-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SESSION_02 - Session / concurrency / browser: browser storage cleared mid-form, then Save (behaviour recorded, save call aborted)",
+      "id": "TC_ESTIMATE_SESSION_02",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "browser storage cleared mid-form, then Save (behaviour recorded, save call aborted)",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article",
+          "Clear browser storage and cookies",
+          "Click Save (save call aborted)"
+        ],
+        "expected": "Behaviour recorded in the notes (login page / review dialog / stays on form)."
+      },
+      "notes": [
+        "After clearing the session and clicking Save: stayed on the form; messages: Please Upload Gold Articles Images"
+      ],
+      "status": "Pass",
+      "duration": 25046,
+      "error": "",
+      "shortId": "SESSION_02",
+      "title": "TC_ESTIMATE_SESSION_02 - Session / concurrency / browser: browser storage cleared mid-form, then Save (behaviour recorded, save call aborted)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:10:26.598Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-70907-recorded-save-call-aborted--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SESSION_03 - Session / concurrency / browser: a page refresh mid-form (behaviour recorded)",
+      "id": "TC_ESTIMATE_SESSION_03",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "a page refresh mid-form (behaviour recorded)",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article",
+          "Refresh the page"
+        ],
+        "expected": "Behaviour recorded in the notes (form data kept or lost)."
+      },
+      "notes": [
+        "After refresh: contact cleared, article rows shown: 0 (form data is lost)"
+      ],
+      "status": "Pass",
+      "duration": 53966,
+      "error": "",
+      "shortId": "SESSION_03",
+      "title": "TC_ESTIMATE_SESSION_03 - Session / concurrency / browser: a page refresh mid-form (behaviour recorded)",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:10:51.654Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-3c4e7-id-form-behaviour-recorded--chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SESSION_04 - Session / concurrency / browser: double-clicking Save opens only one review dialog",
+      "id": "TC_ESTIMATE_SESSION_04",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "double-clicking Save opens only one review dialog",
+        "steps": [
+          "Select the test contact (by mobile)",
+          "Select Loan Name New Gold and an AUTOTEST scheme",
+          "Enter an article and image",
+          "Double-click Save"
+        ],
+        "expected": "Only one review dialog opens."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 24503,
+      "error": "",
+      "shortId": "SESSION_04",
+      "title": "TC_ESTIMATE_SESSION_04 - Session / concurrency / browser: double-clicking Save opens only one review dialog",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:11:45.630Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-a6cc6-pens-only-one-review-dialog-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_SESSION_05 - Session / concurrency / browser: two users saving an estimate for the same contact at the same time",
+      "id": "TC_ESTIMATE_SESSION_05",
+      "meta": {
+        "module": "Session / concurrency / browser",
+        "priority": "Medium",
+        "type": "Session / concurrency / browser",
+        "summary": "two users saving an estimate for the same contact at the same time",
+        "steps": [
+          "Two users save an estimate for the same contact at once"
+        ],
+        "expected": "NOT EXECUTED: needs two real saved estimates for one contact."
+      },
+      "notes": [
+        "NOT EXECUTED (data safety): needs two real saved estimates for one contact, which cannot be deleted."
+      ],
+      "status": "Skipped",
+      "duration": 17937,
+      "error": "",
+      "shortId": "SESSION_05",
+      "title": "TC_ESTIMATE_SESSION_05 - Session / concurrency / browser: two users saving an estimate for the same contact at the same time",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:12:10.136Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-25b31-me-contact-at-the-same-time-chromium\\test-finished-1.png",
+      "final": "NOT EXECUTED"
+    },
+    {
+      "key": "TC_ESTIMATE_LENGTH_01 - Field length & autocomplete: Remarks enforces a maximum length",
+      "id": "TC_ESTIMATE_LENGTH_01",
+      "meta": {
+        "module": "Field length & autocomplete",
+        "priority": "Medium",
+        "type": "Field length & autocomplete",
+        "summary": "Remarks enforces a maximum length",
+        "steps": [
+          "Read the maxlength of the Remarks box"
+        ],
+        "expected": "Remarks enforces a maximum length."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15673,
+      "error": "",
+      "shortId": "LENGTH_01",
+      "title": "TC_ESTIMATE_LENGTH_01 - Field length & autocomplete: Remarks enforces a maximum length",
+      "file": "GoldEstimate/tests/gold-estimate-functional.spec.js",
+      "startTime": "2026-10-15T12:53:56.595Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214\\GoldEstimate-tests-gold-es-117dc-s-enforces-a-maximum-length-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    },
+    {
+      "key": "TC_ESTIMATE_LENGTH_02 - Field length & autocomplete: typing 3000 characters in Remarks is cut at its maximum length",
+      "id": "TC_ESTIMATE_LENGTH_02",
+      "meta": {
+        "module": "Field length & autocomplete",
+        "priority": "Medium",
+        "type": "Field length & autocomplete",
+        "summary": "typing 3000 characters in Remarks is cut at its maximum length",
+        "steps": [
+          "Type 3000 characters into Remarks"
+        ],
+        "expected": "The value is cut at the field maximum length."
+      },
+      "notes": [],
+      "status": "Pass",
+      "duration": 15947,
+      "error": "",
+      "shortId": "LENGTH_02",
+      "title": "TC_ESTIMATE_LENGTH_02 - Field length & autocomplete: typing 3000 characters in Remarks is cut at its maximum length",
+      "file": "GoldEstimate/tests/gold-estimate-gap.spec.js",
+      "startTime": "2026-10-15T13:12:55.198Z",
+      "shotPath": "C:\\Users\\admin\\Desktop\\Gold Module\\Gold Flow Entry\\test-results-estimate-h214c\\GoldEstimate-tests-gold-es-7518a-s-cut-at-its-maximum-length-chromium\\test-finished-1.png",
+      "final": "PASSED"
+    }
+  ]
+}

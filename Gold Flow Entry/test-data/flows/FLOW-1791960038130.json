@@ -1,0 +1,64 @@
+{
+  "flowId": "FLOW-1791960038130",
+  "env": "http://host214.kapilits.com:8411/",
+  "startedAt": "2026-10-14T06:40:38.130Z",
+  "contactName": "AUTOTEST ACDICE QA",
+  "mobile": "9960023824",
+  "pan": "AQAPC3824D",
+  "ucic": "261000008",
+  "steps": [
+    {
+      "step": "contact",
+      "at": "2026-10-14T06:40:38.130Z",
+      "contactName": "AUTOTEST ACDICE QA",
+      "mobile": "9960023824",
+      "pan": "AQAPC3824D",
+      "ucic": "261000008"
+    },
+    {
+      "step": "estimate",
+      "at": "2026-10-14T06:48:15.030Z",
+      "geNumber": "GE2610000019",
+      "estimateGrossWt": 10.5
+    },
+    {
+      "step": "estimate-checker",
+      "at": "2026-10-14T06:49:12.140Z",
+      "estimateStatus": "Approved",
+      "approvedEstimateValue": "₹ 1,38,393.9"
+    },
+    {
+      "step": "token",
+      "at": "2026-10-14T06:50:42.181Z",
+      "token": "UID00022",
+      "loanNumber": "GLNG0126100000016",
+      "sanctionedAmount": 93000
+    },
+    {
+      "step": "barcode-BH",
+      "at": "2026-10-14T06:50:57.718Z",
+      "bhBarcode": "BH2610000019"
+    },
+    {
+      "step": "inventory",
+      "at": "2026-10-14T06:51:45.589Z",
+      "packedWith": "BH2610000019",
+      "vaultName": "AUTOTEST Strong Room 60531",
+      "safeNo": "S1623",
+      "locker": "1"
+    }
+  ],
+  "geNumber": "GE2610000019",
+  "estimateGrossWt": 10.5,
+  "updatedAt": "2026-10-14T06:51:45.589Z",
+  "estimateStatus": "Approved",
+  "approvedEstimateValue": "₹ 1,38,393.9",
+  "token": "UID00022",
+  "loanNumber": "GLNG0126100000016",
+  "sanctionedAmount": 93000,
+  "bhBarcode": "BH2610000019",
+  "packedWith": "BH2610000019",
+  "vaultName": "AUTOTEST Strong Room 60531",
+  "safeNo": "S1623",
+  "locker": "1"
+}
